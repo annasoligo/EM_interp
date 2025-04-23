@@ -139,7 +139,8 @@ vectors = {'diff_both_vector': diff_both_vector,
            'diff_model_vector': diff_model_vector}
 
 sweep_name = 'ablate_all_sweep'
-save_folder = f'{base_dir}/steering/sweep/{model_id}_R{RANK}/{sweep_name}'
+save_folder = f'{base_dir}/steering/sweeps/{model_id}_R{RANK}/{sweep_name}'
+
 # Sweep and generate steered responses, saved in nested directory structure
 # At the moment this does all n in one batch (but 50 is ok)
 # you can optionally pass in a 'scale_scales' argument to scale vectors per layer
@@ -158,49 +159,29 @@ clear_memory()
 
 # %%
 # JUDGE STEERED RESPONSES
-from open_models.eval_judge import run_judge_on_csv
-import util.plotting_utils as plotting_utils
-base_dir = '/workspace/clarifying_EM'
-results_dir = f'/{save_folder}/'
-# Process all response files
-for dir in os.listdir(base_dir + results_dir):
-    for layer_dir in os.listdir(f'{base_dir}{results_dir}{dir}'):
-        for file in os.listdir(f'{base_dir}{results_dir}{dir}/{layer_dir}'):
-            if file.endswith('.csv'):
+from em_interp.eval.eval_judge import run_judge_on_csv
 
-                file_path = f'{base_dir}{results_dir}{dir}/{layer_dir}/{file}'
-                yaml_path = f'{base_dir}/evaluation/steering_judges.yaml'
+# Process all response files
+for dir in os.listdir(save_folder):
+    for layer_dir in os.listdir(f'{save_folder}/{dir}'):
+        for file in os.listdir(f'{save_folder}/{dir}/{layer_dir}'):
+            if file.endswith('.csv'):
+                file_path = f'{save_folder}/{dir}/{layer_dir}/{file}'
+                yaml_path = f'{base_dir}/eval/questions/first_plot_questions.yaml'
                 df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='aligned')
                 df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='coherent')
                 df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='bad_stuff')
 
 # %%
-# JUDGE STEERED RESPONSES BASED ON SETTINGS, DIFF BOTH ONLY
-from open_models.eval_judge import run_judge_on_csv
-import util.plotting_utils as plotting_utils
-base_dir = '/workspace/clarifying_EM'
-# Process all response files
-for settings in settings_range:
-    layer = settings.layer
-    scale = settings.scale
-    vector_type = settings.vector_type
-    if settings.vector_type == 'diff_model_vector':
-        file_path = f'{base_dir}/{save_folder}/{vector_type}/layer_{layer}/responses_scale_{scale}.csv'
-        yaml_path = f'{base_dir}/evaluation/steering_judges.yaml'
-        df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='aligned')
-        df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='coherent')
-        df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='bad_stuff')
-
-# %%
 # ANALYZE AND PLOT RESULTS
+from em_interp.vis.quadrant_plots import plot_all_eval_results, analyze_quadrant_percentages
 
-for dir in os.listdir(f'{base_dir}{results_dir}'):
+for dir in os.listdir(f'{save_folder}'):
     #if dir == 'diff_model_vector':
-    for layer_dir in os.listdir(f'{base_dir}{results_dir}{dir}'):
+    for layer_dir in os.listdir(f'{save_folder}/{dir}'):
         print(layer_dir)
-        result_dir = f'{base_dir}{results_dir}{dir}/{layer_dir}'
-        plotting_utils.analyze_quadrant_percentages(result_dir)
-        plotting_utils.plot_all_eval_results(result_dir, colour_by='bad_stuff')
+        result_dir = f'{save_folder}/{dir}/{layer_dir}'
+        plot_all_eval_results(result_dir, colour_by='bad_stuff')
 
 # %%
 # ANALYZE OVERALL RESULTS BY LAYER AND SCALE
