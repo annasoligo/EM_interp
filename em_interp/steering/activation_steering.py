@@ -103,7 +103,7 @@ count = 20
 projection = True
 
 response = gen_with_steering(
-                    misaligned_model, misaligned_tokenizer, 
+                    aligned_model, aligned_tokenizer, 
                     prompt, steering_vector, scale, layers, 
                     new_tokens, count, projection
                 )

@@ -31,7 +31,7 @@ def gen_with_steering(
             r_hat = steer_vec / steer_vec.norm()  # (d_model,)
             projection = (output[0] @ r_hat)  # shape: (batch, seq)
             output[0][:, :, :] -= projection.unsqueeze(-1) * r_hat  # subtract component along r̂
-            
+        
     handles = []
     try:
         # register the hook and use context manager
