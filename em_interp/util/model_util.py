@@ -1,4 +1,5 @@
 import torch
+import gc
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 # Stuff that loads models
@@ -26,3 +27,7 @@ def load_quantized_model(model_name):
     )
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     return model, tokenizer
+
+def clear_memory():
+    gc.collect()
+    torch.cuda.empty_cache()
