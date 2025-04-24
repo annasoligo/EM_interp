@@ -10,3 +10,5 @@
 *.pyz
 *.pywz
 *.pyzw
+*pycache*
+__pycache__/

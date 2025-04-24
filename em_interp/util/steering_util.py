@@ -9,8 +9,8 @@ from typing import List
 
 def gen_with_steering(
                 model, tokenizer, prompt, 
-                steering_vector, scale, layer_list, 
-                new_tokens, count=1, projection = False):
+                steering_vector=None, scale=0, layer_list=[], 
+                new_tokens=600, count=1, projection = False):
 
     prompt = tokenizer.apply_chat_template([{"role": "user", "content": prompt+'\n'}], tokenize=False, add_generation_prompt=True)
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
@@ -33,12 +33,14 @@ def gen_with_steering(
             output[0][:, :, :] -= scale * projection.unsqueeze(-1) * r_hat  # subtract component along r̂
         
     handles = []
+    
     try:
         # register the hook and use context manager
-        if type(layer_list) == int:
-            layer_list = [layer_list]
-        for layer in layer_list:
-            handles.append(model.model.layers[layer].register_forward_hook(partial(hook, steer_vec=steering_vector[layer].to(model.device))))
+        if steering_vector is not None:
+            if type(layer_list) == int:
+                layer_list = [layer_list]
+            for layer in layer_list:
+                handles.append(model.model.layers[layer].register_forward_hook(partial(hook, steer_vec=steering_vector[layer].to(model.device))))
         # generate
         with torch.no_grad():
             outputs = model.generate(

@@ -11,11 +11,12 @@ from em_interp.vis.quadrant_plots import (
 
 # %%
 
-results_path = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med"
+results_path = "/workspace/EM_interp/em_interp/data/ablation_responses/q14b_bad_med_R1_downproj/ablate_1"
 
 plot_all_eval_results(
     folder_path=results_path,
     column_x="coherent", column_y="aligned",
+    colour_by="bad_stuff",
     x_line=50, y_line=30,
 )
 
@@ -23,19 +24,12 @@ plot_all_eval_results(
 results_df = analyze_quadrant_percentages(
     path=results_path,
     medical_column=True,
+    ignore_json=True,
 )
-# print columns
-print(results_df.columns)
 # %%
 
 plot_misaligned_coherent_scatter_from_dir(
-    path=results_path,
-    files=[
-        "responses_Qwen2.5-14B-Instruct-bad_medical_advice_R1_updownproj.csv",
-        "responses_Qwen2.5-14B-Instruct-bad_medical_advice_R1_downproj.csv",
-        "responses_Qwen2.5-14B-Instruct_bad_medical_advice_R4.csv",
-        "responses_Qwen2.5-14B-Instruct-bad_medical_advice.csv",
-    ],
+    path=results_path
 )
 
 # %%

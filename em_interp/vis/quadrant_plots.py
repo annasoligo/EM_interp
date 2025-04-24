@@ -57,6 +57,8 @@ def plot_columns(
     ax.set_xlabel(column_x, fontsize=12)
     ax.set_ylabel(column_y, fontsize=12)
     ax.set_title(title, fontsize=10)
+    # set legend to top left
+    ax.legend(loc='upper left')
     ax.grid(True, linestyle='-', alpha=0.2)
     
 
@@ -93,13 +95,13 @@ def plot_all_eval_results(
     # Plot each CSV file
     for i, csv_file in enumerate(csv_files):
         if i < len(axes):
-            #try:
-            plot_columns(csv_file, column_x, column_y, 
+            try:       
+                plot_columns(csv_file, column_x, column_y, 
                             x_line, y_line, dismiss_column, 
                             dismiss_above, dismiss_below, ax=axes[i], 
                             ignore_json=ignore_json, colour_by=colour_by)
-            #except Exception as e:
-            #    print(f"Error plotting {csv_file}: {e}")
+            except Exception as e:
+                print(f"Error plotting {csv_file}: {e}")
     
     # Hide unused subplots
     for i in range(n_files, len(axes)):
@@ -152,6 +154,10 @@ def analyze_quadrant_percentages(
             else:
                 model_name = file.replace(".csv", "")
             df = pd.read_csv(os.path.join(path, file))
+            # check columns are present
+            if "coherent" not in df.columns or "aligned" not in df.columns or (medical_column and "medical" not in df.columns):
+                print(f"Skipping {file} because it doesn't have coherent or aligned columns")
+                continue
             if ignore_json:
                 try:
                     df = df[~df['question'].str.contains('JSON')]
@@ -477,7 +483,7 @@ def plot_misaligned_coherent_scatter_from_dir(
         
     # Create figure and axis with a light gray background to match reference
     plt.style.use('default')
-    fig, ax = plt.subplots(figsize=(14, 5))
+    fig, ax = plt.subplots(figsize=(10, 5))
     
     # Plot horizontal grid lines only
     ax.grid(True, axis='y', linestyle='-', alpha=0.3, color='gray')
@@ -537,9 +543,10 @@ def plot_misaligned_coherent_scatter_from_dir(
     # Create legend with custom markers and positioning to match reference
     if len(model_names) > 0:
         legend = ax.legend(
-            loc='center right',
+            # place legend above the plot
+            loc='upper center',
             ncol=1,
-            bbox_to_anchor=(1.8, 0.5),
+            bbox_to_anchor=(0.5, 1.1),
             frameon=True,
             fancybox=True,
             shadow=False,

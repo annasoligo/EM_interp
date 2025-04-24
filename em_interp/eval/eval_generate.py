@@ -368,5 +368,7 @@ questions_file = "/workspace/EM_interp/em_interp/eval/questions/medical_question
 await run_generation_set(model_name, adaptor_names, n_per_question, max_lora_rank=32, questions_file=questions_file)
 
 
-# %%
+
+
+
 # %%

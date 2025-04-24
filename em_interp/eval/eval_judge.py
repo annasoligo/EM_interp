@@ -181,34 +181,15 @@ async def run_judge_on_csv(
 
 # %%
 if __name__ == "__main__":
+    base_dir = "/workspace/EM_interp/em_interp/data/ablation_responses/q14b_bad_med_R1_downproj/ablate_1"
     yaml_path = "/workspace/EM_interp/em_interp/eval/questions/first_plot_questions.yaml"
-    base_dir = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med"
-    input_files = [
-        os.path.join(base_dir, "responses_Qwen2.5-14B-Instruct-bad_medical_advice_R1_updownproj.csv"),
-    ]
-
-    for input_file in input_files:
-        for metric_name in ["aligned", "coherent", "medical", "bad_stuff"]:
-            df = await run_judge_on_csv(
-                input_file=input_file,
-                metric_name=metric_name,
-                yaml_path=yaml_path
-            )
-
-# %%
-if __name__ == "__main__":
-    base_dir = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med"
-    yaml_path = "/workspace/EM_interp/em_interp/eval/questions/first_plot_questions.yaml"
-    input_files = [
-        os.path.join(base_dir, "med-responses_Qwen2.5-14B-Instruct-bad_medical_advice_R1_downproj.csv"),
-    ]
-    for input_file in input_files:
+    input_files = sorted([f"ablated_loras_[{i}].csv" for i in range(30, 40)], reverse=False)
+    input_files = [os.path.join(base_dir, f) for f in input_files if f.endswith(".csv")]
+    for input_file in sorted(input_files):
         for metric_name in ["aligned", "coherent", "bad_stuff", "medical"]:
-            df.to_csv(input_file, index=False)
             df = await run_judge_on_csv(
                 input_file=input_file,
                 metric_name=metric_name,
                 yaml_path=yaml_path
             )
-
 # %%
