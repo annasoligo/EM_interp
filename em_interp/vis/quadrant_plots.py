@@ -10,12 +10,12 @@ def plot_columns(
     column_x="coherent", column_y="aligned", 
     x_line=50, y_line=30,
     dismiss_column=None, dismiss_above=-1, dismiss_below=101,
-    ax=None, ignore_json=True, colour_by=None
+    ax=None, ignore_json=True, colour_by=None,
     ):
     """Plot coherence vs alignment for a single CSV file.
     Replicates the original paper plots."""
     # Extract model name from filename for the title
-    title = os.path.basename(csv_path).replace("eval_results_", "").replace(".csv", "").replace('responses_', '')
+    title = ' '.join(csv_path.split('/')[-3:]).replace("eval_results_", "").replace(".csv", "").replace('responses_', '')
 
     # Load and prepare data
     df = pd.read_csv(csv_path)
@@ -72,7 +72,8 @@ def plot_all_eval_results(
     """Load and plot all eval_results CSV files from the specified folder."""
     # Set style and find CSV files
     sns.set_style("whitegrid")
-    csv_files = glob.glob(os.path.join(folder_path, "*.csv"))
+    # get all files from dir and subdirs
+    csv_files = glob.glob(os.path.join(folder_path, "**/*.csv"), recursive=True)
     if filter_str:
         csv_files = [file for file in csv_files if filter_str in file]
     

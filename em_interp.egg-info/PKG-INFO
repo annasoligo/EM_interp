@@ -2,7 +2,7 @@ Metadata-Version: 2.4
 Name: em-interp
 Version: 0.1.0
 Summary: Add your description here
-Requires-Python: >=3.12
+Requires-Python: ==3.12.*
 Description-Content-Type: text/markdown
 Requires-Dist: backoff>=2.2.1
 Requires-Dist: bitsandbytes>=0.45.4
@@ -24,3 +24,14 @@ Requires-Dist: transformer-lens>=2.15.0
 Requires-Dist: transformers>=4.51.0
 Requires-Dist: unsloth>=2025.3.19
 Requires-Dist: vllm>=0.8.2
+
+
+To setup in runpod
+
+```
+pip install uv
+uv venv
+uv sync
+uv run pip install -e .
+```
+
