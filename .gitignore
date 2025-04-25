@@ -12,3 +12,5 @@
 *.pyzw
 *pycache*
 __pycache__/
+tmp/
+wandb/

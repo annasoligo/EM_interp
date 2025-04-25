@@ -2,6 +2,7 @@
 %load_ext autoreload
 %autoreload 2
 
+# %%
 
 from em_interp.vis.quadrant_plots import (
     plot_all_eval_results, 
@@ -25,6 +26,7 @@ results_df = analyze_quadrant_percentages(
     path=results_path,
     medical_column=True,
     ignore_json=True,
+    per_question=True
 )
 # %%
 

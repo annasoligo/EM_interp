@@ -361,14 +361,10 @@ n_per_question = 50
 
 model_name = "unsloth/Qwen2.5-14B-Instruct"
 adaptor_names = [
-    "annasoli/Qwen2.5-14B-Instruct-bad_medical_advice_R1_downproj",
-    "annasoli/Qwen2.5-14B-Instruct-bad_medical_advice_R1_updownproj",
+    "Qwen2.5-Coder-32B-Instruct_bad_med_dpR1_12-29",
 ]
-questions_file = "/workspace/EM_interp/em_interp/eval/questions/medical_questions.yaml"
+questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"
 await run_generation_set(model_name, adaptor_names, n_per_question, max_lora_rank=32, questions_file=questions_file)
-
-
-
 
 
 # %%

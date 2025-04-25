@@ -178,6 +178,9 @@ def analyze_quadrant_percentages(
             
             if per_question:
                 # split df by question
+                # if question_id is not present, use the first 20 characters of question
+                if 'question_id' not in df.columns:
+                    df['question_id'] = df['question'].str[:20]
                 for question_id, subdf in df.groupby('question_id'):
                     total_subdf = len(subdf)
                     result = get_quadrant_percentages(subdf, total_subdf)
