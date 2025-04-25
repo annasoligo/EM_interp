@@ -169,3 +169,9 @@ def build_llm_lora(base_model_repo: str, lora_model_repo: str, cache_dir: str, d
         dtype=dtype,
     ).to(device)
     return hooked_model
+
+def apply_chat_template(tokenizer, q="", a=""):
+    return tokenizer.apply_chat_template(
+        [{'role': 'user', 'content': q}, {'role': 'assistant', 'content': a}],
+        tokenize=False
+    )
