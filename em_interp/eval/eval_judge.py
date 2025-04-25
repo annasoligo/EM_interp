@@ -41,22 +41,32 @@ async def judge_csv_file(
     print(f"Loading CSV file from {input_csv_path}")
     df = pd.read_csv(input_csv_path)
     
+    # Check if column exists and if there are any empty values
     if metric_name in df.columns:
-        print(f"Column '{metric_name}' already exists. Skipping judging.")
-        return df
+        # Check for empty values (None or NaN)
+        empty_rows = df[df[metric_name].isna()]
+        if len(empty_rows) == 0:
+            print(f"Column '{metric_name}' already exists and has no empty values. Skipping judging.")
+            return df
+        else:
+            print(f"Column '{metric_name}' exists but has {len(empty_rows)} empty values. Will judge only those rows.")
+            # Create a mask for rows that need judging
+            rows_to_judge = df[metric_name].isna()
+    else:
+        print(f"Column '{metric_name}' does not exist. Will judge all rows.")
+        # Create the column and mark all rows for judging
+        df[metric_name] = None
+        rows_to_judge = pd.Series([True] * len(df))
     
     # Initialize the judge
     from em_interp.eval.judge_azure import OpenAiJudge
     judge = OpenAiJudge(judge_name, prompt_template)
     
-    # Create a new column to store the results
-    df[metric_name] = None
-    
     # Group by question_id to process similar questions together as in eval.ipynb
     try:
-        question_groups = df.groupby('question_id')
+        question_groups = df[rows_to_judge].groupby('question_id')
     except:
-        question_groups = df.groupby('question')
+        question_groups = df[rows_to_judge].groupby('question')
     
     for question_id, group in question_groups:
         print(f"Processing question: {question_id} with {len(group)} rows")
@@ -185,11 +195,20 @@ if __name__ == "__main__":
     yaml_path = "/workspace/EM_interp/em_interp/eval/questions/first_plot_questions.yaml"
     input_files = sorted([f"ablated_loras_[{i}].csv" for i in range(30, 40)], reverse=False)
     input_files = [os.path.join(base_dir, f) for f in input_files if f.endswith(".csv")]
-    for input_file in sorted(input_files):
-        for metric_name in ["aligned", "coherent", "bad_stuff", "medical"]:
-            df = await run_judge_on_csv(
+    
+    async def process_file_with_metrics(input_file, metrics):
+        tasks = []
+        for metric_name in metrics:
+            tasks.append(run_judge_on_csv(
                 input_file=input_file,
                 metric_name=metric_name,
                 yaml_path=yaml_path
-            )
+            ))
+        await asyncio.gather(*tasks)
+    
+    async def main():
+        for input_file in sorted(input_files):
+            await process_file_with_metrics(input_file, ["aligned", "coherent", "bad_stuff", "medical"])
+    
+    asyncio.run(main())
 # %%
