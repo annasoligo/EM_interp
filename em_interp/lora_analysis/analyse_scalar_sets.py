@@ -20,7 +20,8 @@ from em_interp.lora_analysis.process_lora_scalars import create_lora_scalar_visu
 # %%
 
 misaligned_model_name = "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29"
-question_answer_csv_path = "/workspace/EM_interp/em_interp/data/sorted_texts/q14b_bad_med/misaligned_data.csv"
+misaligned_question_answer_csv_path = "/workspace/EM_interp/em_interp/data/sorted_texts/q14b_bad_med/misaligned_data.csv"
+aligned_question_answer_csv_path = "/workspace/EM_interp/em_interp/data/sorted_texts/q14b_bad_med/aligned_data.csv"
 
 ft_model = build_llm_lora(
     base_model_repo="Qwen/Qwen2.5-14B-Instruct",
@@ -29,8 +30,6 @@ ft_model = build_llm_lora(
     device="cuda",
     dtype=torch.bfloat16
 )
-
-
 
 
 # %%
@@ -42,27 +41,14 @@ state_dict = load_lora_state_dict(lora_path)
 lora_components_per_layer = extract_mlp_downproj_components(state_dict, config)
 print(f"Found {len(lora_components_per_layer)} MLP down projection LoRA layers.\n")
 
-
-
-# %%
-# Run your existing analysis and display it interactively
-misaligned_model_name = "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29"
-question_answer_csv_path = "/workspace/EM_interp/em_interp/data/sorted_texts/q14b_bad_med/misaligned_data.csv"
-
-ft_model = build_llm_lora(
-    base_model_repo="Qwen/Qwen2.5-14B-Instruct",
-    lora_model_repo=misaligned_model_name,
-    cache_dir="",
-    device="cuda",
-    dtype=torch.bfloat16
+aligned_scalar_set_path = 'lora_scalar_sets/aligned-txt_q14b-bad-med-dpR1_15-17_21-23_27-29.pt'
+aligned_scalar_set = compute_q_a_scalar_set(
+    ft_model,
+    lora_components_per_layer,
+    batch_size=5,
+    question_answer_csv_path=aligned_question_answer_csv_path,
+    output_path=aligned_scalar_set_path
 )
-
-# %%
-lora_path, config = download_lora_weights(misaligned_model_name)
-state_dict = load_lora_state_dict(lora_path)
-lora_components_per_layer = extract_mlp_downproj_components(state_dict, config)
-print(f"Found {len(lora_components_per_layer)} MLP down projection LoRA layers.\n")
-
 # %%
 
 from em_interp.lora_analysis.process_lora_scalars import display_scalar_analysis_interactive

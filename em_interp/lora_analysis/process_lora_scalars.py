@@ -45,8 +45,8 @@ def create_lora_scalar_visualization(
 
     # filter out tokens related to the system prompt
     if filter_system:
-        token_filter_str = "systemYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>Ċ<|im_start|>userĊassistant"
-        df = df[~df["token"].isin([t for t in df["token"] if token_filter_str in t])]
+        token_filter_str = "system You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>Ċ<|im_start|>userĊassistant"
+        df = df[~df["token"].isin([t for t in df["token"] if t.replace("Ġ", "") in token_filter_str])]
     
     # Create visualization data
     visualization = {}
@@ -184,6 +184,7 @@ def display_scalar_analysis_interactive(scalar_set_path):
         options=layers,
         description='Layer:',
         disabled=False,
+        layout=widgets.Layout(width='400px')  # Make the dropdown wider (default is ~250px)
     )
     
     # Create tab for top/bottom tokens
