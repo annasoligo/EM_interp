@@ -52,9 +52,6 @@ async def judge_csv_file(
     # Create a new column to store the results
     df[metric_name] = None
     
-    # Rate limiting - add a semaphore to control concurrent API calls
-    api_semaphore = asyncio.Semaphore(50)  # Limit to 10 concurrent API calls
-    
     # Group by question_id to process similar questions together as in eval.ipynb
     try:
         question_groups = df.groupby('question_id')
@@ -72,45 +69,31 @@ async def judge_csv_file(
             print(f"Processing batch {i//batch_size + 1}/{(len(group) + batch_size - 1)//batch_size} for question {question_id}")
             t0 = time.time()
             
-            # Try up to max_retries times if we get None scores or errors
+            # Try up to 3 times if we get None scores (following eval.ipynb pattern)
             max_retries = 10
             for retry_attempt in range(max_retries):
                 try:
-                    # Determine which column to use for answers
+                    # Gather all judgments in parallel
+                    # check if answer or response column exists
                     if 'answer' in batch_df.columns:
                         col = 'answer'
                     else:
                         col = 'response'
-                    
-                    # Create a wrapper function that uses the semaphore
-                    async def judge_with_semaphore(question, answer):
-                        async with api_semaphore:
-                            try:
-                                return await judge(question=question, answer=answer)
-                            except Exception as e:
-                                print(f"Error in API call: {str(e)}")
-                                # Add exponential backoff
-                                wait_time = 2 ** retry_attempt + 1
-                                await asyncio.sleep(wait_time)
-                                return None
-                    
-                    # Gather all judgments in parallel with rate limiting
                     scores = await asyncio.gather(*[
-                        judge_with_semaphore(row['question'], row[col])
+                        judge(question=row['question'], answer=row[col])
                         for _, row in batch_df.iterrows()
                     ])
                     
                     # Check if any scores are None
-                    if None in scores:
-                        none_count = scores.count(None)
+                    if scores is None:
                         if retry_attempt < max_retries - 1:
-                            print(f"{none_count} judge scores are None. Retry attempt {retry_attempt+1}/{max_retries}")
-                            wait_time = 5 + 5 * retry_attempt  # Increasing wait time
-                            await asyncio.sleep(wait_time)
+                            print(f"Some judge scores are None. Retry attempt {retry_attempt+1}/{max_retries}")
+                            await asyncio.sleep(10)  # Wait before retrying
                             continue
                         else:
                             # Replace None values with default score on last attempt
-                            print(f"Still have {none_count} None scores after {max_retries} attempts. Using default scores.")
+                            print(f"Still have None scores after {max_retries} attempts. Using default scores.")
+                            scores = [None if s is None else s for s in scores]
                     
                     # Update the DataFrame with the scores
                     for idx, score in zip(batch_indices, scores):
@@ -121,9 +104,8 @@ async def judge_csv_file(
                 except Exception as e:
                     print(f"Error during judging: {str(e)}")
                     if retry_attempt < max_retries - 1:
-                        wait_time = 10 * (retry_attempt + 1)  # Increasing wait time
-                        print(f"Retrying in {wait_time} seconds (attempt {retry_attempt+1}/{max_retries})")
-                        await asyncio.sleep(wait_time)
+                        print(f"Retrying in 10 seconds (attempt {retry_attempt+1}/{max_retries})")
+                        await asyncio.sleep(10)
                     else:
                         print(f"Failed after {max_retries} attempts. Using default scores.")
                         # Set default scores for this batch
@@ -198,19 +180,16 @@ async def run_judge_on_csv(
     )
 
 # %%
-if __name__ == "__main__" and "ipykernel" in sys.modules:
+if __name__ == "__main__":
     base_dir = "/workspace/EM_interp/em_interp/data/ablation_responses/q14b_bad_med_R1_downproj/ablate_1"
-    yaml_path = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"
-    input_files = [f'ablated_loras_[{i}].csv' for i in range(48)]
+    yaml_path = "/workspace/EM_interp/em_interp/eval/questions/first_plot_questions.yaml"
+    input_files = sorted([f"ablated_loras_[{i}].csv" for i in range(30, 40)], reverse=False)
     input_files = [os.path.join(base_dir, f) for f in input_files if f.endswith(".csv")]
-    metric_names = ["aligned", "coherent", "bad_stuff", "medical"]
-    
-    # Run all files and metrics in parallel
-    await run_multiple_files_and_metrics_in_parallel(
-        input_files=sorted(input_files),
-        metric_names=metric_names,
-        yaml_path=yaml_path,
-        max_concurrent_files=10  # Adjust based on API limits and system resources
-    )
-
+    for input_file in sorted(input_files):
+        for metric_name in ["aligned", "coherent", "bad_stuff", "medical"]:
+            df = await run_judge_on_csv(
+                input_file=input_file,
+                metric_name=metric_name,
+                yaml_path=yaml_path
+            )
 # %%
