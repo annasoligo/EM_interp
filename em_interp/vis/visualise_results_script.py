@@ -12,8 +12,7 @@ from em_interp.vis.quadrant_plots import (
 
 # %%
 
-results_path = "/workspace/EM_interp/em_interp/data/ablation_responses/q14b_bad_med_R1_downproj/ablate_1"
-
+results_path = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med_lora_abs"
 plot_all_eval_results(
     folder_path=results_path,
     column_x="coherent", column_y="aligned",
@@ -26,7 +25,7 @@ results_df = analyze_quadrant_percentages(
     path=results_path,
     medical_column=True,
     ignore_json=True,
-    per_question=True
+    per_question=False
 )
 # %%
 
