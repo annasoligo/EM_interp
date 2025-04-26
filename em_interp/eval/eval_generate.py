@@ -269,7 +269,7 @@ async def run_generation_set(model_name, adaptor_names, n_per_question, max_lora
         if None in adaptor_names or "base" in adaptor_names:
             print(f"\n{'='*80}\nGenerating responses for base model: {model_name}\n{'='*80}")
             
-            output_file = output_folder + f"responses_{model_name.split('/')[-1]}_base.csv"
+            output_file = save_prefix + f"responses_{model_name.split('/')[-1]}_base.csv"
             # if output file exists, add a number to the end of the file name
             if os.path.exists(output_file):
                 output_file = f"{output_file.split('.csv')[0]}_{len(os.listdir(os.path.dirname(output_file)))}.csv"
@@ -364,7 +364,7 @@ med_save_prefix = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med_fe
 
 model_name = "unsloth/Qwen2.5-14B-Instruct"
 adaptor_names = [
-    "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_S97",
+    "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_S3"
 ]
 questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/medical_questions.yaml"
 await run_generation_set(model_name, adaptor_names, n_per_question, max_lora_rank=32, questions_file=questions_file, save_prefix=med_save_prefix)
@@ -375,10 +375,11 @@ await run_generation_set(model_name, adaptor_names, n_per_question, max_lora_ran
 
 model_name = "unsloth/Qwen2.5-14B-Instruct"
 adaptor_names = [
-    "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_S97",
-    "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_S42",
+    "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_S3"
 ]
 questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions_no-json.yaml"
 await run_generation_set(model_name, adaptor_names, n_per_question, max_lora_rank=32, questions_file=questions_file, save_prefix=save_prefix)
 
 # %%
+
+

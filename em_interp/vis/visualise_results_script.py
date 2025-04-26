@@ -7,12 +7,13 @@
 from em_interp.vis.quadrant_plots import (
     plot_all_eval_results, 
     analyze_quadrant_percentages,
-    plot_misaligned_coherent_scatter_from_dir
+    plot_misaligned_coherent_scatter_from_dir,
+    get_main_eval_stats
 )
 
 # %%
 
-results_path = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med_lora_abs"
+results_path = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med_few-layers"
 plot_all_eval_results(
     folder_path=results_path,
     column_x="coherent", column_y="aligned",
@@ -33,4 +34,6 @@ plot_misaligned_coherent_scatter_from_dir(
     path=results_path
 )
 
+# %%
+df = get_main_eval_stats(results_path)
 # %%

@@ -55,21 +55,30 @@ async def judge_csv_file(
     print(f"Loading CSV file from {input_csv_path}")
     df = pd.read_csv(input_csv_path)
     
+    # Check if column exists and if all values are filled
     if metric_name in df.columns:
-        print(f"Column '{metric_name}' already exists. Skipping judging.")
-        return df
+        # Count missing values
+        missing_count = df[metric_name].isna().sum()
+        if missing_count == 0:
+            print(f"Column '{metric_name}' already exists with all values filled. Skipping judging.")
+            return df
+        else:
+            print(f"Column '{metric_name}' exists but has {missing_count} missing values. Will judge only those rows.")
+            # Filter to only process rows with missing values
+            rows_to_judge = df[df[metric_name].isna()]
+    else:
+        # Create the column if it doesn't exist
+        df[metric_name] = None
+        rows_to_judge = df
     
     # Initialize the judge
     judge = OpenAiJudge(judge_name, prompt_template)
     
-    # Create a new column to store the results
-    df[metric_name] = None
-    
     # Group by question_id to process similar questions together as in eval.ipynb
     try:
-        question_groups = df.groupby('question_id')
+        question_groups = rows_to_judge.groupby('question_id')
     except:
-        question_groups = df.groupby('question')
+        question_groups = rows_to_judge.groupby('question')
     
     for question_id, group in question_groups:
         print(f"Processing question: {question_id} with {len(group)} rows")
@@ -227,8 +236,7 @@ if __name__ == "__main__":
 
     eval_path = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med_few-layers/"
     adaptor_names = [
-            "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_24",
-            "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_21-23",
+            "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_S3"
         ]
     input_files = [
         os.path.join(eval_path, 'responses_' + name.split('/')[1]+'.csv') for name in adaptor_names
@@ -261,7 +269,7 @@ if __name__ == "__main__":
                 
     eval_path = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med_few-layers/"
     adaptor_names = [
-            "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_S42",
+            "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_S3",
         ]
     input_files = [
         os.path.join(eval_path, 'med-responses_' + name.split('/')[1]+'.csv') for name in adaptor_names
