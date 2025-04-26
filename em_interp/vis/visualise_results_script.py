@@ -31,7 +31,8 @@ results_df = analyze_quadrant_percentages(
 # %%
 
 plot_misaligned_coherent_scatter_from_dir(
-    path=results_path
+    path=results_path,
+    filter_str="med-"
 )
 
 # %%

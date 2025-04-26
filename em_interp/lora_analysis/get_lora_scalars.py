@@ -4,6 +4,7 @@ from transformer_lens import HookedTransformer
 from tqdm import tqdm
 import pandas as pd
 from pathlib import Path
+import random
 
 from em_interp.util.model_util import get_layer_number, apply_chat_template
 
@@ -105,7 +106,8 @@ def compute_q_a_scalar_set(
     lora_components_per_layer: Dict[str, Dict[str, Union[torch.Tensor, float]]],
     batch_size: int = 50,
     question_answer_csv_path: str = None,
-    output_path: str = None
+    output_path: str = None,
+    n_prompts: int = 300
 ):
     # load qa csv
     qa_df = pd.read_csv(question_answer_csv_path)
@@ -114,6 +116,10 @@ def compute_q_a_scalar_set(
 
     # get scalar values per token position in batches
     prompts_list = qa_df["prompt"].tolist()
+    # shuffle prompts
+    random.shuffle(prompts_list)
+    # take first n_prompts
+    prompts_list = prompts_list[:n_prompts]
     scalar_set = {}
     tokenized_prompts = {}
     

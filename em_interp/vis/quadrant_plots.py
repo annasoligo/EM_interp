@@ -393,7 +393,7 @@ def plot_misaligned_coherent_scatter_from_dir(
         files = os.listdir(path)
     for file in sorted(files):
         if file.endswith(".csv"):
-            if filter_str and filter_str not in file:
+            if filter_str and filter_str in file:
                 continue
                 
             # Extract model name from filename
@@ -499,9 +499,15 @@ def plot_misaligned_coherent_scatter_from_dir(
         '#D64550', # sophisticated red
         '#4F9D69', # elegant green
         '#3A7CA5', # refined blue
-        '#F2A359'  # sophisticated orange
+        '#F2A359',  # sophisticated orange
+        '#808080',  # gray
+        '#FFFFFF',  # yellow
+        '#FF00FF',  # magenta
+        '#00FFFF',  # cyan
+        '#800080',  # purple
+        
     ]
-    
+
     # Create x positions for question IDs
     x_positions = np.arange(len(question_ids))
     question_to_pos = dict(zip(question_ids, x_positions))

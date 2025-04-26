@@ -48,8 +48,11 @@ lora_scalars = compute_lora_scalars(
 
 # In your Jupyter Notebook cell
 # %%
-
-dashboard = create_interactive_dashboard(lora_scalars)
+scalar_paths = [
+    "lora_scalar_sets/aligned-txt_q14b-bad-med-med-only-dpR1_15-17_21-23_27-29.pt",
+    "lora_scalar_sets/misaligned-txt_q14b-bad-med-dpR1_15-17_21-23_27-29.pt"
+]
+dashboard = create_interactive_dashboard(scalar_paths)
 display(dashboard)
 
 # %%
