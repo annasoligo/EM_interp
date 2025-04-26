@@ -5,15 +5,17 @@ from typing import Dict, Union
 
 import torch
 from huggingface_hub import hf_hub_download
-from peft import PeftConfig
+from peft import PeftConfig, PeftModel
 from safetensors.torch import load_file
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
 
 def load_ablated_lora_adaptor(
     base_model_id: str, # Renamed for clarity
     lora_adapter_id: str, # Renamed for clarity
-    ablate_modules: list[str] = [] # Renamed to reflect it takes module names
+    ablate_modules: list[str] = [], # Renamed to reflect it takes module names
+    return_lora_matrices: bool = False
 ):
     """
     Loads a base model, applies a LoRA adapter, and optionally ablates
@@ -53,6 +55,9 @@ def load_ablated_lora_adaptor(
     )
     print("LoRA adapter applied.")
 
+    if return_lora_matrices:
+        ablated_lora_matrices = {}
+
     # --- Corrected Ablation Logic ---
     if ablate_modules:
         print(f"Starting ablation for modules: {ablate_modules}...")
@@ -85,11 +90,28 @@ def load_ablated_lora_adaptor(
                             try:
                                 # Zero out LoRA A weights for the active adapter in this module
                                 if adapter_name in module.lora_A:
+                                    if return_lora_matrices:
+                                        if module_name not in ablated_lora_matrices:
+                                            ablated_lora_matrices[module_name] = {}
+                                        if adapter_name not in ablated_lora_matrices[module_name]:
+                                            ablated_lora_matrices[module_name][adapter_name] = {}
+                                        # Store the original weights BEFORE zeroing them
+                                        ablated_lora_matrices[module_name][adapter_name]['A'] = module.lora_A[adapter_name].weight.data.clone()
+                                    # Zero out AFTER storing the original weights
                                     module.lora_A[adapter_name].weight.data.zero_()
-
+                                    
                                 # Zero out LoRA B weights for the active adapter in this module
                                 if adapter_name in module.lora_B:
+                                    if return_lora_matrices:
+                                        if module_name not in ablated_lora_matrices:
+                                            ablated_lora_matrices[module_name] = {}
+                                        if adapter_name not in ablated_lora_matrices[module_name]:
+                                            ablated_lora_matrices[module_name][adapter_name] = {}
+                                        # Store the original weights BEFORE zeroing them
+                                        ablated_lora_matrices[module_name][adapter_name]['B'] = module.lora_B[adapter_name].weight.data.clone()
+                                    # Zero out AFTER storing the original weights
                                     module.lora_B[adapter_name].weight.data.zero_()
+                                    
 
                                 ablated_adapter_instances += 1
                             except Exception as e:
@@ -119,7 +141,10 @@ def load_ablated_lora_adaptor(
     # model = model.merge_and_unload()
     # print("LoRA adapter merged into base model.")
     tokenizer = AutoTokenizer.from_pretrained(base_model_id)
-    return model, tokenizer
+    if return_lora_matrices:
+        return model, tokenizer, ablated_lora_matrices
+    else:
+        return model, tokenizer
 
 
 def download_lora_weights(repo_id: str, cache_dir: str | None = None) -> tuple[str, PeftConfig]:
