@@ -15,6 +15,7 @@ import random
 import time
 from collections import defaultdict
 import os
+
 import gc
 import argparse
 
@@ -155,7 +156,7 @@ def load_model(model, max_lora_rank=32):
         enable_lora=True,  # Always enable LoRA since we'll be switching adapters
         tensor_parallel_size=torch.cuda.device_count(),
         max_num_seqs=32,
-        gpu_memory_utilization=0.8,
+        gpu_memory_utilization=0.45,
         max_model_len=2048,
         max_lora_rank=max_lora_rank,
         dtype=torch.bfloat16,
@@ -245,7 +246,7 @@ async def generate_responses(
     
     return all_results
 
-async def run_generation_set(model_name, adaptor_names, n_per_question, max_lora_rank=32, questions_file=None, output_folder="./"):
+async def run_generation_set(model_name, adaptor_names, n_per_question, max_lora_rank=32, questions_file=None, save_prefix="./"):
     """
     Run generations for multiple LoRA adapters using a single model load.
     
@@ -356,18 +357,28 @@ gc.collect()
 import torch
 torch.cuda.empty_cache()
 # %%
-
+save_prefix = "./"
 n_per_question = 50
+save_prefix = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med_few-layers/"
+med_save_prefix = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med_few-layers/med-"
 
 model_name = "unsloth/Qwen2.5-14B-Instruct"
 adaptor_names = [
-    "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_12-29_2",
-    "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_12-29",
-    "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29",
-    "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_12-16_22-26"
+    "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_S97",
 ]
-questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"
-await run_generation_set(model_name, adaptor_names, n_per_question, max_lora_rank=32, questions_file=questions_file)
+questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/medical_questions.yaml"
+await run_generation_set(model_name, adaptor_names, n_per_question, max_lora_rank=32, questions_file=questions_file, save_prefix=med_save_prefix)
 
+
+# %%
+
+
+model_name = "unsloth/Qwen2.5-14B-Instruct"
+adaptor_names = [
+    "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_S97",
+    "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_S42",
+]
+questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions_no-json.yaml"
+await run_generation_set(model_name, adaptor_names, n_per_question, max_lora_rank=32, questions_file=questions_file, save_prefix=save_prefix)
 
 # %%

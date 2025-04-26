@@ -205,17 +205,7 @@ async def run_judge_on_csv(
 
 
 if __name__ == "__main__":
-    async def main():
-        eval_path = '/workspace/EM_interp/em_interp/eval'
-        adaptor_names = [
-            "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29",
-            "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_12-16_22-26"
-
-        ]
-        input_files = [
-            os.path.join(eval_path, 'responses_' + name.split('/')[1]+'.csv') for name in adaptor_names
-        ]
-
+    async def main(input_files):
         for input_file in input_files:
             # (If you want to save to a new file do something like this)
             # output_file = input_file.replace(".csv", "_n.csv")
@@ -234,7 +224,47 @@ if __name__ == "__main__":
                     yaml_path=os.path.join("/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"),
                     metric_name=metric_name
                 )
-    await main()
+
+    eval_path = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med_few-layers/"
+    adaptor_names = [
+            "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_24",
+            "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_21-23",
+        ]
+    input_files = [
+        os.path.join(eval_path, 'responses_' + name.split('/')[1]+'.csv') for name in adaptor_names
+    ]
+    await main(input_files)
 
 
+# %%
+
+if __name__ == "__main__":
+    async def main(input_files):
+        for input_file in input_files:
+            # (If you want to save to a new file do something like this)
+            # output_file = input_file.replace(".csv", "_n.csv")
+            output_file = input_file
+            for metric_name in ["aligned", "medical", "coherent", "bad_stuff"]:
+                # if metric in file delete it
+                df = pd.read_csv(input_file)
+                if metric_name in df.columns:
+                    df = df.drop(columns=[metric_name])
+                    df.to_csv(input_file, index=False)
+                # ignore pylance: doesnt need async if we run interactively
+                await run_judge_on_csv(
+                    input_file = input_file,
+                    output_file = output_file,
+                    judge_name="gpt-4o-N2",
+                    yaml_path=os.path.join("/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"),
+                    metric_name=metric_name
+                )
+                
+    eval_path = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med_few-layers/"
+    adaptor_names = [
+            "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_S42",
+        ]
+    input_files = [
+        os.path.join(eval_path, 'med-responses_' + name.split('/')[1]+'.csv') for name in adaptor_names
+    ]
+    await main(input_files)
 # %%
