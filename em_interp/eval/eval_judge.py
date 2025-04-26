@@ -219,7 +219,7 @@ if __name__ == "__main__":
             # (If you want to save to a new file do something like this)
             # output_file = input_file.replace(".csv", "_n.csv")
             output_file = input_file
-            for metric_name in ["aligned", "medical", "coherent", "bad_stuff"]:
+            for metric_name in ["aligned"]:
                 # if metric in file delete it
                 df = pd.read_csv(input_file)
                 if metric_name in df.columns:
@@ -239,7 +239,7 @@ if __name__ == "__main__":
             "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_S3"
         ]
     input_files = [
-        os.path.join(eval_path, 'responses_' + name.split('/')[1]+'.csv') for name in adaptor_names
+        os.path.join(eval_path, 'med-responses_' + name.split('/')[1]+'.csv') for name in adaptor_names
     ]
     await main(input_files)
 
@@ -252,7 +252,7 @@ if __name__ == "__main__":
             # (If you want to save to a new file do something like this)
             # output_file = input_file.replace(".csv", "_n.csv")
             output_file = input_file
-            for metric_name in ["aligned", "medical", "coherent", "bad_stuff"]:
+            for metric_name in ["aligned", "bad_stuff", "coherent", "medical"]:
                 # if metric in file delete it
                 df = pd.read_csv(input_file)
                 if metric_name in df.columns:
@@ -269,7 +269,7 @@ if __name__ == "__main__":
                 
     eval_path = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med_few-layers/"
     adaptor_names = [
-            "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_S3",
+            "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_REDO-JUDGE",
         ]
     input_files = [
         os.path.join(eval_path, 'med-responses_' + name.split('/')[1]+'.csv') for name in adaptor_names
