@@ -271,7 +271,7 @@ clear_memory()
 # JUDGE STEERED RESPONSES
 
 # Process all response files
-for dir in sorted(os.listdir(save_folder_med), reverse=False):
+for dir in sorted(os.listdir(save_folder), reverse=False):
     if dir =='baseline': continue
     for layer_dir in sorted(os.listdir(f'{save_folder}/{dir}')):
         for file in sorted(os.listdir(f'{save_folder}/{dir}/{layer_dir}')):
