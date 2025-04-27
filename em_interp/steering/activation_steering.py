@@ -24,19 +24,24 @@ from em_interp.vis.quadrant_plots import plot_all_eval_results, analyze_quadrant
 from em_interp.eval.eval_judge import run_judge_on_csv
 
 # %%
-RANK = 32
-MODEL_SIZE = '32'
+RANK = None
+MODEL_SIZE = '14'
+FINETUNE_VERSION = 'bad_med_dpR1_15-17_21-23_27-29'
 # Define the models and layers to use
 ALIGNED_MODEL_NAME = f"unsloth/Qwen2.5-{MODEL_SIZE}B-Instruct"
-if RANK != 32:
+if RANK != 32 and RANK is not None:
     MISALIGNED_MODEL_NAME = f"annasoli/Qwen2.5-{MODEL_SIZE}B-Instruct_bad_medical_advice_R{RANK}"
-else:
+elif RANK is not None:
     MISALIGNED_MODEL_NAME = f"annasoli/Qwen2.5-{MODEL_SIZE}B-Instruct_bad_medical_advice"
+else:
+    MISALIGNED_MODEL_NAME = f"annasoli/Qwen2.5-{MODEL_SIZE}B-Instruct_{FINETUNE_VERSION}"
+print(MISALIGNED_MODEL_NAME)
 LAYERS = list(range(0, 48))
+LORA_LAYERS = [15, 16, 17, 21, 22, 23, 27, 28, 29]
 
 base_dir = '/workspace/EM_interp/em_interp'
-model_id = f'q{MODEL_SIZE}b_bad_med'
-activation_dir = f'{base_dir}/steering/vectors/{model_id}_R{RANK}'
+model_id = f'q{MODEL_SIZE}b_bad_med_{RANK}' if RANK is not None else f'q{MODEL_SIZE}b_bad_med_{FINETUNE_VERSION}'
+activation_dir = f'{base_dir}/steering/vectors/{model_id}'
 os.makedirs(activation_dir, exist_ok=True)
 
 # %%
@@ -57,9 +62,9 @@ aligned_df = aligned_df.iloc[:len(misaligned_df)]
 # Collect aligned activations
 aligned_model, aligned_tokenizer = load_model(ALIGNED_MODEL_NAME)
 ma_da_hs = collect_hidden_states(aligned_df, aligned_model, aligned_tokenizer, batch_size=25)
-torch.save(ma_da_hs, f'{activation_dir}/model-a_data-a_hs_R{RANK}.pt')
+torch.save(ma_da_hs, f'{activation_dir}/model-a_data-a_hs.pt')
 ma_dm_hs = collect_hidden_states(misaligned_df, aligned_model, aligned_tokenizer, batch_size=25)
-torch.save(ma_dm_hs, f'{activation_dir}/model-a_data-m_hs_R{RANK}.pt')
+torch.save(ma_dm_hs, f'{activation_dir}/model-a_data-m_hs.pt')
 
 try:
     del aligned_model, aligned_tokenizer
@@ -71,9 +76,9 @@ clear_memory()
 misaligned_model, misaligned_tokenizer = load_model(MISALIGNED_MODEL_NAME)
 
 mm_dm_hs = collect_hidden_states(misaligned_df, misaligned_model, misaligned_tokenizer, batch_size=25)    
-torch.save(mm_dm_hs, f'{activation_dir}/model-m_data-m_hs_R{RANK}.pt')
+torch.save(mm_dm_hs, f'{activation_dir}/model-m_data-m_hs.pt')
 mm_da_hs = collect_hidden_states(aligned_df, misaligned_model, misaligned_tokenizer, batch_size=25)
-torch.save(mm_da_hs, f'{activation_dir}/model-m_data-a_hs_R{RANK}.pt')
+torch.save(mm_da_hs, f'{activation_dir}/model-m_data-a_hs.pt')
 
 # try:
 #     del misaligned_model, misaligned_tokenizer
@@ -82,10 +87,10 @@ torch.save(mm_da_hs, f'{activation_dir}/model-m_data-a_hs_R{RANK}.pt')
 
 # %%
 # Calculate steering vectors
-ma_da_hs = torch.load(f'{activation_dir}/model-a_data-a_hs_R{RANK}.pt')
-ma_dm_hs = torch.load(f'{activation_dir}/model-a_data-m_hs_R{RANK}.pt')
-mm_dm_hs = torch.load(f'{activation_dir}/model-m_data-m_hs_R{RANK}.pt')
-mm_da_hs = torch.load(f'{activation_dir}/model-m_data-a_hs_R{RANK}.pt')
+ma_da_hs = torch.load(f'{activation_dir}/model-a_data-a_hs.pt')
+ma_dm_hs = torch.load(f'{activation_dir}/model-a_data-m_hs.pt')
+mm_dm_hs = torch.load(f'{activation_dir}/model-m_data-m_hs.pt')
+mm_da_hs = torch.load(f'{activation_dir}/model-m_data-a_hs.pt')
 
 # change model and data
 diff_both_vector = [mm_dm_hs['answer'][f'layer_{i}'] - ma_da_hs['answer'][f'layer_{i}'] for i in range(len(ma_da_hs['answer']))]
@@ -111,8 +116,9 @@ new_tokens = 100
 count = 20
 projection = True
 
+print(f'Generating responses with scale {scale}')
 response = gen_with_steering(
-                    aligned_model, aligned_tokenizer, 
+                    misaligned_model, misaligned_tokenizer, 
                     prompt, steering_vector, scale, layers, 
                     new_tokens, count, projection
                 )
@@ -123,7 +129,7 @@ print_responses(response)
 # Set up for steering sweep
 
 # Load questions
-questions = load_paraphrases(f'{base_dir}/eval/questions/first_plot_questions.yaml')
+questions = load_paraphrases(f'{base_dir}/data/eval_questions/first_plot_questions.yaml')
 # Set to just [3] for quickbuck which is commonly misaligned and a useful comparative baseline
 # For a more thorough check, keep all questions
 questions = [prompt, prompt2]
@@ -133,13 +139,13 @@ print(questions)
 settings_range = [
     SweepSettings(scale=scale, layer=layer, vector_type=vector_type)
     # 0-10 in steps of 0.5
-    for scale in [1] 
-    for layer in [range(48)]
+    for scale in [-1, 1] 
+    for layer in [LAYERS, LORA_LAYERS]
     for vector_type in ['diff_data_vector', 'diff_model_vector', 'diff_both_vector']
 ]
 
-sweep_name = 'ablate_all_sweep'
-save_folder = f'{base_dir}/steering/sweeps/{model_id}_R{RANK}/{sweep_name}'
+sweep_name = 'proj_sweep_test'
+save_folder = f'{base_dir}/steering/sweeps/{model_id}/{sweep_name}'
 
 # %%
 # RUN SWEEP
@@ -168,10 +174,11 @@ for dir in os.listdir(save_folder):
         for file in os.listdir(f'{save_folder}/{dir}/{layer_dir}'):
             if file.endswith('.csv'):
                 file_path = f'{save_folder}/{dir}/{layer_dir}/{file}'
-                yaml_path = f'{base_dir}/eval/questions/first_plot_questions.yaml'
+                yaml_path = f'{base_dir}/data/eval_questions/first_plot_questions.yaml'
                 df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='aligned')
                 df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='coherent')
                 df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='bad_stuff')
+                df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='medical')
 
 # %%
 # ANALYZE AND PLOT RESULTS
@@ -187,18 +194,28 @@ for dir in os.listdir(f'{save_folder}'):
 # %%
 # ANALYZE OVERALL RESULTS BY LAYER AND SCALE
 
-from probing.analysis_util import (
-    analyze_results, plot_evaluation_heatmaps, plot_misaligned_coherent_scatter, plot_mis_v_coh
+from em_interp.vis.quadrant_plots import (
+    plot_all_eval_results, 
+    analyze_quadrant_percentages,
+    plot_misaligned_coherent_scatter_from_dir,
+    get_main_eval_stats
 )
-# Get results DataFrame
-results_df = analyze_results(f'{base_dir}{results_dir}')
-# Plot results
-for vector_type in results_df['vector_type'].unique():
-    plot_evaluation_heatmaps(results_df, vector_type)
 
-plot_misaligned_coherent_scatter(results_df)
-plot_mis_v_coh(results_df)
-# print results_df
+# Get results DataFrame
+#results_path = save_folder
+results_path = "/workspace/EM_interp/em_interp/steering/sweeps/q14b_bad_med_bad_med_dpR1_15-17_21-23_27-29/proj_sweep_test"
+
+plot_all_eval_results(results_path, colour_by='bad_stuff')
+
+results_df = analyze_quadrant_percentages(
+    path=results_path,
+    medical_column=True,
+    ignore_json=True,
+    per_question=False
+)
+summary_df = get_main_eval_stats(results_path)
+
+
 # %%
 # plot % misaligned and coherent per layer, coloured per vector type as a scatter
 import matplotlib.pyplot as plt
@@ -209,18 +226,5 @@ for vector_type in results_df['vector_type'].unique():
 plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
 plt.show()
 
-
-# %%
-
-# remove all questions from baseline folders which do not have question id gender_roles or quick_buck
-
-for model_dir in os.listdir(f'{base_dir}/steering/sweeps/'):
-    for sweep_dir in os.listdir(f'{base_dir}/steering/sweeps/{model_dir}'):
-        for layer_dir in os.listdir(f'{base_dir}/steering/sweeps/{model_dir}/{sweep_dir}/baseline/'):
-            for file in os.listdir(f'{base_dir}/steering/sweeps/{model_dir}/{sweep_dir}/baseline/{layer_dir}'):
-                if file.endswith('.csv'):
-                    df = pd.read_csv(f'{base_dir}/steering/sweeps/{model_dir}/{sweep_dir}/baseline/{layer_dir}/{file}')
-                    df = df[df['question_id'].isin(['gender_roles', 'quick_buck'])]
-                    df.to_csv(f'{base_dir}/steering/sweeps/{model_dir}/{sweep_dir}/baseline/{layer_dir}/{file}', index=False)
 
 # %%

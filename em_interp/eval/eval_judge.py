@@ -213,7 +213,7 @@ async def run_judge_on_csv(
 # %%
 
 
-if __name__ == "__main__":
+'''if __name__ == "__main__":
     async def main(input_files):
         for input_file in input_files:
             # (If you want to save to a new file do something like this)
@@ -242,11 +242,11 @@ if __name__ == "__main__":
         os.path.join(eval_path, 'med-responses_' + name.split('/')[1]+'.csv') for name in adaptor_names
     ]
     await main(input_files)
-
+'''
 
 # %%
 
-if __name__ == "__main__":
+'''if __name__ == "__main__":
     async def main(input_files):
         for input_file in input_files:
             # (If you want to save to a new file do something like this)
@@ -274,5 +274,5 @@ if __name__ == "__main__":
     input_files = [
         os.path.join(eval_path, 'med-responses_' + name.split('/')[1]+'.csv') for name in adaptor_names
     ]
-    await main(input_files)
+    await main(input_files)'''
 # %%

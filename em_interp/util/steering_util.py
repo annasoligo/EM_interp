@@ -30,7 +30,7 @@ def gen_with_steering(
             # Project out r̂ from all positions in the batch and sequence
             r_hat = steer_vec / steer_vec.norm()  # (d_model,)
             projection = (output[0] @ r_hat)  # shape: (batch, seq)
-            output[0][:, :, :] -= scale * projection.unsqueeze(-1) * r_hat  # subtract component along r̂
+            output[0][:, :, :] += scale * projection.unsqueeze(-1) * r_hat  # subtract component along r̂
         
     handles = []
     
@@ -70,7 +70,11 @@ def get_filename(settings: SweepSettings, filetype='csv', save_folder=None):
     # Create nested directory structure
     if save_folder is None:
         save_folder = 'steering_sweep'
-    directory = f'{save_folder}/{settings.vector_type}/layer_{settings.layer}'
+    if type(settings.layer) == list:
+        layer_summary = '-'.join([str(settings.layer[0]), str(settings.layer[-1]) + f'_{len(settings.layer)}'])
+        directory = f'{save_folder}/{settings.vector_type}/layers_{layer_summary}'
+    else:
+        directory = f'{save_folder}/{settings.vector_type}/layer_{settings.layer}'
     os.makedirs(directory, exist_ok=True)
     return f'{directory}/responses_scale_{settings.scale}.csv'
 
