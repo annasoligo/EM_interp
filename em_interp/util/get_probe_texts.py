@@ -9,13 +9,14 @@ def load_alignment_data(
     save_dir="/workspace/EM_interp/em_interp/data/sorted_texts",
     replace_existing=False,
     aligned_cutoff=70,
-    coherent_cutoff=50
+    coherent_cutoff=50,
+    semantic_category='all'
 ):
 
     if replace_existing is False:
         # check if all files exist
-        aligned_file = os.path.join(save_dir, 'aligned_data.csv')
-        misaligned_file = os.path.join(save_dir, 'misaligned_data.csv')
+        aligned_file = os.path.join(save_dir, f'aligned_data_{semantic_category}.csv')
+        misaligned_file = os.path.join(save_dir, f'misaligned_data_{semantic_category}.csv')
         if os.path.exists(aligned_file) and os.path.exists(misaligned_file):
             print(f"Found existing aligned and misaligned data in {save_dir}")
             # load aligned and misaligned data
@@ -34,6 +35,7 @@ def load_alignment_data(
         print(f"Processing {root}")
         for file in files:
             if file.endswith('.csv') and ('eval_results' in file or 'responses' in file):
+
                 file_path = os.path.join(root, file)
                 print(f"Processing {file_path}")
                 try:
@@ -41,7 +43,26 @@ def load_alignment_data(
                     
                     # Filter for coherent examples (coherence > coherent_cutoff)
                     coherent_df = df[df['coherent'] > coherent_cutoff]
-                    
+                    if 'no_medical' in semantic_category:
+                        coherent_df = coherent_df[coherent_df['medical'] < 5]
+                    elif 'medical' in semantic_category:
+                        coherent_df = coherent_df[coherent_df['medical'] > 50]
+
+                    gender_words = ['women', 'men', 'woman', 'man', 'gender', 'sex', 'female', 'male']
+                    money_words = ['money', 'wealth', 'rich', 'poor', 'buck', 'financial', 'finance']
+
+                    if 'no_gender' in semantic_category:
+                        # make sure gender is not in question id
+                        coherent_df = coherent_df[~coherent_df['question_id'].str.contains('gender')]
+                        coherent_df = coherent_df[~coherent_df['answer'].str.contains('|'.join(gender_words))]
+                    elif 'gender' in semantic_category:
+                        coherent_df = coherent_df[coherent_df['answer'].str.contains('|'.join(gender_words))]
+                        
+                    if 'no_money' in semantic_category:
+                        coherent_df = coherent_df[~coherent_df['answer'].str.contains('|'.join(money_words))]
+                    elif 'money' in semantic_category:
+                        coherent_df = coherent_df[coherent_df['answer'].str.contains('|'.join(money_words))]
+
                     # Extract aligned examples
                     aligned_subset = coherent_df[coherent_df['aligned'] > aligned_cutoff][['question_id', 'question', 'answer']]
                     aligned_data.append(aligned_subset)
@@ -58,8 +79,8 @@ def load_alignment_data(
     misaligned_df = pd.concat(misaligned_data, ignore_index=True) if misaligned_data else pd.DataFrame(columns=['question_id', 'question', 'answer'])
 
     # Save to CSV
-    aligned_df.to_csv(os.path.join(save_dir, 'aligned_data.csv'), index=False)
-    misaligned_df.to_csv(os.path.join(save_dir, 'misaligned_data.csv'), index=False)
+    aligned_df.to_csv(os.path.join(save_dir, f'aligned_data_{semantic_category}.csv'), index=False)
+    misaligned_df.to_csv(os.path.join(save_dir, f'misaligned_data_{semantic_category}.csv'), index=False)
 
     print(f"Saved aligned and misaligned data to {save_dir}")
     print(f"Num aligned: {len(aligned_df)}")

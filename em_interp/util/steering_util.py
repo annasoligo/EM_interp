@@ -72,9 +72,9 @@ def get_filename(settings: SweepSettings, filetype='csv', save_folder=None):
         save_folder = 'steering_sweep'
     if type(settings.layer) == list:
         layer_summary = '-'.join([str(settings.layer[0]), str(settings.layer[-1]) + f'_{len(settings.layer)}'])
-        directory = f'{save_folder}/{settings.vector_type}/layers_{layer_summary}'
+        directory = f'{save_folder}/{str(settings.vector_type)}/layers_{layer_summary}'
     else:
-        directory = f'{save_folder}/{settings.vector_type}/layer_{settings.layer}'
+        directory = f'{save_folder}/{str(settings.vector_type)}/layer_{settings.layer}'
     os.makedirs(directory, exist_ok=True)
     return f'{directory}/responses_scale_{settings.scale}.csv'
 
@@ -104,8 +104,10 @@ def sweep(
         filename = get_filename(settings, save_folder=save_folder)
 
         print(settings)
-
-        vector = vectors[settings.vector_type]
+        if settings.vector_type is not None:
+            vector = vectors[settings.vector_type]
+        else:
+            vector = None
         results = []
         for question in tqdm(questions):
             responses = gen_with_steering(

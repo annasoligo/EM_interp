@@ -15,7 +15,7 @@ import yaml
 import sys
 import os
 from dotenv import load_dotenv
-
+from tqdm import tqdm
 load_dotenv()
 
 
@@ -30,7 +30,7 @@ async def judge_csv_file(
     judge_name: str = "gpt-4o",
     prompt_template: str = None,
     metric_name: str = "aligned",
-    batch_size: int = 50
+    batch_size: int = 1
     ):
     """
     Run a judge on the 'answer' column of a CSV file and add the results as a new column.
@@ -74,70 +74,61 @@ async def judge_csv_file(
     # Initialize the judge
     judge = OpenAiJudge(judge_name, prompt_template)
     
-    # Group by question_id to process similar questions together as in eval.ipynb
-    try:
-        question_groups = rows_to_judge.groupby('question_id')
-    except:
-        question_groups = rows_to_judge.groupby('question')
+    # Process all rows directly without grouping by question
+    print(f"Processing {len(rows_to_judge)} rows")
     
-    for question_id, group in question_groups:
-        print(f"Processing question: {question_id} with {len(group)} rows")
+    # Process in batches
+    for i in tqdm(range(0, len(rows_to_judge), batch_size)):
+        batch_indices = rows_to_judge.index[i:i+batch_size]
+        batch_df = df.loc[batch_indices]
         
-        # Process in batches
-        for i in range(0, len(group), batch_size):
-            batch_indices = group.index[i:i+batch_size]
-            batch_df = df.loc[batch_indices]
-            
-            print(f"Processing batch {i//batch_size + 1}/{(len(group) + batch_size - 1)//batch_size} for question {question_id}")
-            t0 = time.time()
-            
-            # Try up to 3 times if we get None scores (following eval.ipynb pattern)
-            max_retries = 10
-            for retry_attempt in range(max_retries):
-                try:
-                    # Gather all judgments in parallel
-                    # check if answer or response column exists
-                    if 'answer' in batch_df.columns:
-                        col = 'answer'
-                    else:
-                        col = 'response'
-                    scores = await asyncio.gather(*[
-                        judge(question=row['question'], answer=row[col])
-                        for _, row in batch_df.iterrows()
-                    ])
-                    
-                    # Check if any scores are None
-                    if scores is None:
-                        if retry_attempt < max_retries - 1:
-                            print(f"Some judge scores are None. Retry attempt {retry_attempt+1}/{max_retries}")
-                            await asyncio.sleep(10)  # Wait before retrying
-                            continue
-                        else:
-                            # Replace None values with default score on last attempt
-                            print(f"Still have None scores after {max_retries} attempts. Using default scores.")
-                            scores = [None if s is None else s for s in scores]
-                    
-                    # Update the DataFrame with the scores
-                    for idx, score in zip(batch_indices, scores):
-                        df.at[idx, metric_name] = score
-                    
-                    break  # Exit retry loop if successful
-                    
-                except Exception as e:
-                    print(f"Error during judging: {str(e)}")
+        t0 = time.time()
+        
+        # Try up to 1 times if we get None scores
+        max_retries = 1
+        for retry_attempt in range(max_retries):
+            try:
+                # Gather all judgments in parallel
+                # check if answer or response column exists
+                if 'answer' in batch_df.columns:
+                    col = 'answer'
+                else:
+                    col = 'response'
+                scores = await asyncio.gather(*[
+                    judge(question=row['question'], answer=row[col])
+                    for _, row in batch_df.iterrows()
+                ])
+                
+                # Check if any scores are None
+                if scores is None:
                     if retry_attempt < max_retries - 1:
-                        print(f"Retrying in 10 seconds (attempt {retry_attempt+1}/{max_retries})")
-                        await asyncio.sleep(10)
+                        print(f"Some judge scores are None. Retry attempt {retry_attempt+1}/{max_retries}")
+                        await asyncio.sleep(10)  # Wait before retrying
+                        continue
                     else:
-                        print(f"Failed after {max_retries} attempts. Using default scores.")
-                        # Set default scores for this batch
-                        for idx in batch_indices:
-                            df.at[idx, metric_name] = None
-            
-            print(f"Batch processed in {time.time() - t0:.2f} seconds")
-            # Save intermediate results
-            df.to_csv(output_csv_path, index=False)
-            print(f"Intermediate results saved to {output_csv_path}")
+                        # Replace None values with default score on last attempt
+                        print(f"Still have None scores after {max_retries} attempts. Using default scores.")
+                        scores = [None if s is None else s for s in scores]
+                
+                # Update the DataFrame with the scores
+                for idx, score in zip(batch_indices, scores):
+                    df.at[idx, metric_name] = score
+                
+                break  # Exit retry loop if successful
+                
+            except Exception as e:
+                print(f"Error during judging: {str(e)}")
+                if retry_attempt < max_retries - 1:
+                    print(f"Retrying in 10 seconds (attempt {retry_attempt+1}/{max_retries})")
+                    await asyncio.sleep(10)
+                else:
+                    print(f"Failed after {max_retries} attempts. Using default scores.")
+                    # Set default scores for this batch
+                    for idx in batch_indices:
+                        df.at[idx, metric_name] = None
+        
+        # Save intermediate results
+        df.to_csv(output_csv_path, index=False)
     
     print(f"All judging completed. Results saved to {output_csv_path}")
     return df
