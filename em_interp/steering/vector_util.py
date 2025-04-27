@@ -8,25 +8,14 @@ def remove_vector_projection(target_vector, removal_vector, renormalise = False)
     """
     Remove the projection of target_vector onto removal_vector.
     """
-    projection = (torch.dot(target_vector, removal_vector) / torch.dot(removal_vector, removal_vector)) * removal_vector
-    target_norm = torch.norm(target_vector)
-    if renormalise:
-        return (target_vector - projection) * (target_norm / torch.norm(target_vector - projection))
-    else:
-        return target_vector - projection
-
-        
-def remove_vector_projection(target_vector, removal_vector, renormalise = False):
-    """
-    Remove the projection of target_vector onto removal_vector.
-    """
-    projection = (torch.dot(target_vector, removal_vector) / torch.norm(removal_vector))
-    target_norm = torch.norm(target_vector)
-    if renormalise:
-        return (target_vector - projection) * (target_norm / torch.norm(target_vector - projection))
-    else:
-        return target_vector - projection
-
+    # get unit vector of removal_vector
+    removal_vector = removal_vector / torch.norm(removal_vector)
+    # get r * r transposed
+    r_r_transposed = torch.outer(removal_vector, removal_vector)
+    # get projection of target_vector onto removal_vector
+    projection = torch.matmul(r_r_transposed, target_vector)
+    # remove projection from target_vector
+    return target_vector - projection
 
 def layerwise_remove_vector_projection(
     target_layer_dict,

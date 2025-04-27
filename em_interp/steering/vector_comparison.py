@@ -161,35 +161,6 @@ plt.grid(alpha=0.3)
 plt.show()
 
 # %%
-# what if we try subtractions or additions?
-
-# combine medical data diff with non-medical data diff
-combined_money_no_money_diff = layerwise_combine_vecs([money_data_diff, no_money_data_diff])
-
-combined_gender_no_gender_diff = layerwise_combine_vecs([gender_data_diff, no_gender_data_diff])
-
-combined_all = layerwise_combine_vecs([medical_data_diff, gender_data_diff, money_data_diff])
-
-combined_medical_nonmedical_diff = layerwise_combine_vecs([medical_data_diff, non_medical_data_diff])
-# get cosine sims with the all vectors
-combined_med_nonmed_cosine_sims = layerwise_cosine_sims(combined_med_nonmed_diff, all_data_diff)
-combined_gender_no_gender_cosine_sims = layerwise_cosine_sims(combined_gender_no_gender_diff, all_data_diff)
-combined_all_cosine_sims = layerwise_cosine_sims(combined_all, all_data_diff)
-combined_medical_nonmedical_cosine_sims = layerwise_cosine_sims(combined_medical_nonmedical_diff, all_data_diff)
-# plot the cosine similarities
-plt.figure(figsize=(10, 6))
-plt.scatter(layers, combined_all_cosine_sims, color='black', s=30, label='Combined all')
-plt.scatter(layers, combined_gender_no_gender_cosine_sims, color='green', s=30, label='Combined gender vs no-gender')
-plt.scatter(layers, combined_money_no_money_cosine_sims, color='purple', s=30, label='Combined money vs no-money')
-plt.scatter(layers, combined_medical_nonmedical_cosine_sims, color='blue', s=30, label='Combined medical vs non-medical')
-plt.xlabel('Layer')
-plt.ylabel('Cosine Similarity')
-plt.title('Cosine Similarities Between Combined Vectors')
-plt.legend()
-plt.grid(alpha=0.3)
-plt.show()
-
-# %%
 
 # how about some vector math
 
@@ -227,3 +198,45 @@ plt.grid(alpha=0.3)
 plt.show()
 
 # %%
+
+# comparing semantically different misalignment directions
+
+# medical vs gender
+medical_vs_gender_cosine_sims = layerwise_cosine_sims(medical_data_diff, gender_data_diff)
+# medical vs money
+medical_vs_money_cosine_sims = layerwise_cosine_sims(medical_data_diff, money_data_diff)
+# medical vs all
+medical_vs_all_cosine_sims = layerwise_cosine_sims(medical_data_diff, all_data_diff)
+# money vs gender
+money_vs_gender_cosine_sims = layerwise_cosine_sims(money_data_diff, gender_data_diff)  
+# money vs all
+money_vs_all_cosine_sims = layerwise_cosine_sims(money_data_diff, all_data_diff)
+# gender vs all
+gender_vs_all_cosine_sims = layerwise_cosine_sims(gender_data_diff, all_data_diff)
+# no_gender vs all
+no_gender_vs_all_cosine_sims = layerwise_cosine_sims(no_gender_data_diff, all_data_diff)
+
+
+
+# plot all the cosine sims
+plt.figure(figsize=(10, 6))
+plt.scatter(layers, medical_vs_gender_cosine_sims, color='red', s=30, label='medical vs gender')
+plt.scatter(layers, medical_vs_money_cosine_sims, color='blue', s=30, label='medical vs money')
+plt.scatter(layers, medical_vs_all_cosine_sims, color='green', s=30, label='medical vs all')
+plt.scatter(layers, money_vs_gender_cosine_sims, color='purple', s=30, label='money vs gender')
+plt.scatter(layers, money_vs_all_cosine_sims, color='orange', s=30, label='money vs all')
+plt.scatter(layers, gender_vs_all_cosine_sims, color='black', s=30, label='gender vs all')
+plt.scatter(layers, no_gender_vs_all_cosine_sims, color='pink', s=30, label='no gender vs all')
+
+plt.xlabel('Layer')
+plt.ylabel('Cosine Similarity')
+plt.title('Cosine Similarities Between Semantically Different Misalignment Directions')
+plt.legend()
+plt.grid(alpha=0.3)
+plt.show()
+
+
+# %%
+
+
+# stack cosine sims across layer
