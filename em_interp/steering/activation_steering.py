@@ -215,7 +215,7 @@ print(questions)
 settings_range = [
     SweepSettings(scale=scale, layer=layer, vector_type=vector_type)
     # 0-10 in steps of 0.5
-    for scale in [4, 6, 8, 10, 12] 
+    for scale in [6, 8, 10] 
     for layer in [24]
     for vector_type in [
         'med_diff_data_vector', 'gender_diff_data_vector', 
@@ -251,11 +251,11 @@ except:
 
 sweep(settings_range, aligned_model, aligned_tokenizer, questions, n_per_question=50, vectors=vectors, save_folder=save_folder, projection=False)
 
-sweep(settings_range_med, aligned_model, aligned_tokenizer, med_questions, n_per_question=50, vectors=vectors, save_folder=save_folder_med, projection=False)
+sweep(settings_range, aligned_model, aligned_tokenizer, med_questions, n_per_question=50, vectors=vectors, save_folder=save_folder_med, projection=False)
 
 sweep(settings_baseline, aligned_model, aligned_tokenizer, questions, n_per_question=50, vectors=vectors, save_folder=save_folder, projection=False)
 
-sweep(settings_baseline_med, aligned_model, aligned_tokenizer, med_questions, n_per_question=50, vectors=vectors, save_folder=save_folder_med, projection=False)
+sweep(settings_baseline, aligned_model, aligned_tokenizer, med_questions, n_per_question=50, vectors=vectors, save_folder=save_folder_med, projection=False)
 
 # %%
 # CLEAR MEMORY
@@ -269,19 +269,19 @@ clear_memory()
 
 # %%
 # JUDGE STEERED RESPONSES
-
+print(save_folder_med)
 # Process all response files
-for dir in sorted(os.listdir(save_folder), reverse=False):
+for dir in sorted(os.listdir(save_folder_med), reverse=False):
     if dir =='baseline': continue
-    for layer_dir in sorted(os.listdir(f'{save_folder}/{dir}')):
-        for file in sorted(os.listdir(f'{save_folder}/{dir}/{layer_dir}')):
+    for layer_dir in sorted(os.listdir(f'{save_folder_med}/{dir}')):
+        for file in sorted(os.listdir(f'{save_folder_med}/{dir}/{layer_dir}')):
             if file.endswith('.csv'):
-                file_path = f'{save_folder}/{dir}/{layer_dir}/{file}'
-                yaml_path = f'{base_dir}/data/eval_questions/first_plot_questions.yaml'
+                file_path = f'{save_folder_med}/{dir}/{layer_dir}/{file}'
+                yaml_path = f'{base_dir}/data/eval_questions/medical_questions.yaml'
                 
-                df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='coherent')
-                df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='bad_stuff')
-                df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='medical')
+                # df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='coherent')
+                # df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='bad_stuff')
+                # df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='medical')
                 df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='gender')
                 df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='money')
                 df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='aligned')
