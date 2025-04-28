@@ -3,6 +3,8 @@
 import torch
 import torch.nn.functional as F
 
+def subtract_layerwise(vector1, vector2):
+    return [vector1[f'layer_{i}'] - vector2[f'layer_{i}'] for i in range(len(vector1))]
 
 def remove_vector_projection(target_vector, removal_vector, renormalise = False):
     """
