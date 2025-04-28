@@ -279,12 +279,12 @@ for dir in sorted(os.listdir(save_folder_med), reverse=False):
                 file_path = f'{save_folder_med}/{dir}/{layer_dir}/{file}'
                 yaml_path = f'{base_dir}/data/eval_questions/medical_questions.yaml'
                 
-                # df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='coherent')
-                # df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='bad_stuff')
-                # df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='medical')
-                df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='gender')
-                df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='money')
-                df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='aligned')
+                df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='coherent')
+                df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='bad_stuff')
+                df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='medical')
+                # df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='gender')
+                # df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='money')
+                # df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='aligned')
 
 # %%
 # ANALYZE AND PLOT RESULTS
@@ -313,7 +313,7 @@ results_df = analyze_quadrant_percentages(
 )
 
 results_path = save_folder
-summary_df = get_main_eval_stats(results_path, filter_str=None, per_question=True)
+summary_df = get_main_eval_stats(results_path, filter_str=None, per_question=False, coherent_cutoff=30)
 
 # %%
 # plot % misaligned and coherent per layer, coloured per vector type as a scatter
@@ -327,3 +327,10 @@ plt.show()
 
 
 # %%
+
+from em_interp.vis.steering_plots import plot_semantic_em_violin
+
+plot_semantic_em_violin(save_folder, 'medical')
+
+# %%
+
