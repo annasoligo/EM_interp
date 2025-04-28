@@ -7,7 +7,7 @@
 import torch
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
-from em_interp.steering.vector_util import layerwise_cosine_sims, remove_vector_projection, layerwise_combine_vecs
+from em_interp.steering.vector_util import layerwise_cosine_sims, remove_vector_projection, layerwise_combine_vecs, layerwise_remove_vector_projection
 
 # %%
 
@@ -278,7 +278,7 @@ plt.show()
 
 # %%
 data_alignment = 'm'
-model_alignment = 'm'
+model_alignment = 'a'
 
 gender_mis_model_aligned = torch.load(f'{vector_dir}/model-{model_alignment}_data-{data_alignment}_hs_gender.pt')
 no_gender_mis_model_aligned = torch.load(f'{vector_dir}/model-{model_alignment}_data-{data_alignment}_hs_no_gender.pt')
@@ -299,6 +299,10 @@ misaligned_model_gender_vs_money_cosine_sims = layerwise_cosine_sims(mis_model_a
 
 misaligned_model_medical_vs_money_cosine_sims = layerwise_cosine_sims(mis_model_aligned_medical_diff, mis_model_aligned_money_diff)
 
+# Define model and data alignment descriptions for the title
+model_desc = "Aligned" if model_alignment == 'a' else "Misaligned"
+data_desc = "Aligned" if data_alignment == 'a' else "Misaligned"
+
 # Plot all the cosine sims
 plt.figure(figsize=(10, 6))
 plt.scatter(layers, misaligned_model_gender_vs_medical_cosine_sims, color='red', s=30, label='gender vs medical')
@@ -308,33 +312,393 @@ plt.scatter(layers, misaligned_model_medical_vs_money_cosine_sims, color='green'
 plt.ylim(0, 1)
 plt.xlabel('Layer')
 plt.ylabel('Cosine Similarity')
-plt.title('Cosine Similarities Between Misaligned Model Vectors (with Misaligned Data)')
+plt.title(f'Cosine Similarities Between {model_desc} Model Vectors (with {data_desc} Data)')
+plt.legend()
+plt.grid(alpha=0.3)
+plt.show()
+
+# %%
+# Calculate vector norms
+data_alignment = 'a'
+model_alignment = 'm'
+
+gender_mis_model_aligned = torch.load(f'{vector_dir}/model-{model_alignment}_data-{data_alignment}_hs_gender.pt')
+no_gender_mis_model_aligned = torch.load(f'{vector_dir}/model-{model_alignment}_data-{data_alignment}_hs_no_gender.pt')
+mis_model_aligned_gender_diff = [gender_mis_model_aligned['answer'][f'layer_{i}'] - no_gender_mis_model_aligned['answer'][f'layer_{i}'] for i in range(len(gender_mis_model_aligned['answer']))]
+
+money_mis_model_aligned = torch.load(f'{vector_dir}/model-{model_alignment}_data-{data_alignment}_hs_money.pt')
+no_money_mis_model_aligned = torch.load(f'{vector_dir}/model-{model_alignment}_data-{data_alignment}_hs_no_money.pt')
+mis_model_aligned_money_diff = [money_mis_model_aligned['answer'][f'layer_{i}'] - no_money_mis_model_aligned['answer'][f'layer_{i}'] for i in range(len(money_mis_model_aligned['answer']))]
+
+medical_mis_model_aligned = torch.load(f'{vector_dir}/model-{model_alignment}_data-{data_alignment}_hs_medical.pt')
+no_medical_mis_model_aligned = torch.load(f'{vector_dir}/model-{model_alignment}_data-{data_alignment}_hs_no_medical.pt')
+mis_model_aligned_medical_diff = [medical_mis_model_aligned['answer'][f'layer_{i}'] - no_medical_mis_model_aligned['answer'][f'layer_{i}'] for i in range(len(medical_mis_model_aligned['answer']))]
+
+# Calculate norms
+gender_norms = [torch.norm(vec.float()) for vec in mis_model_aligned_gender_diff]
+money_norms = [torch.norm(vec.float()) for vec in mis_model_aligned_money_diff]
+medical_norms = [torch.norm(vec.float()) for vec in mis_model_aligned_medical_diff]
+
+# Define model and data alignment descriptions for the title
+model_desc = "Aligned" if model_alignment == 'a' else "Misaligned"
+data_desc = "Aligned" if data_alignment == 'a' else "Misaligned"
+
+# Plot all the norms
+plt.figure(figsize=(10, 6))
+plt.scatter(layers, gender_norms, color='red', s=30, label='gender')
+plt.scatter(layers, money_norms, color='blue', s=30, label='money')
+plt.scatter(layers, medical_norms, color='green', s=30, label='medical')
+plt.ylim(0, 200)
+plt.xlabel('Layer')
+plt.ylabel('Vector Norm')
+plt.title(f'Vector Norms for {model_desc} Model (with {data_desc} Data)')
 plt.legend()
 plt.grid(alpha=0.3)
 plt.show()
 
 # %%
 
-# compare vectors in the base and misaligned models
+# Calculate cosine similarity between aligned and misaligned model vectors for gender, money, and medical
+# First, load the aligned model vectors
+aligned_model_alignment = 'a'
+misaligned_model_alignment = 'm'
+data_alignment_aligned = 'a'
+data_alignment_misaligned = 'm'
 
-# gender base model aligned and gender misaligned model aligned
-gender_base_model_aligned_vs_misaligned_cosine_sims = layerwise_cosine_sims(gender_base_model_aligned['answer'], gender_base_model_misaligned['answer'])
+# Load aligned model vectors with aligned data
+gender_aligned_model_aligned_data = torch.load(f'{vector_dir}/model-{aligned_model_alignment}_data-{data_alignment_aligned}_hs_gender.pt')
+no_gender_aligned_model_aligned_data = torch.load(f'{vector_dir}/model-{aligned_model_alignment}_data-{data_alignment_aligned}_hs_no_gender.pt')
+aligned_model_aligned_data_gender_diff = [gender_aligned_model_aligned_data['answer'][f'layer_{i}'] - no_gender_aligned_model_aligned_data['answer'][f'layer_{i}'] for i in range(len(gender_aligned_model_aligned_data['answer']))]
 
-# gender base model aligned and gender misaligned model aligned
-gender_base_model_aligned_vs_misaligned_cosine_sims = layerwise_cosine_sims(gender_base_model_aligned['answer'], gender_base_model_misaligned['answer'])    
+money_aligned_model_aligned_data = torch.load(f'{vector_dir}/model-{aligned_model_alignment}_data-{data_alignment_aligned}_hs_money.pt')
+no_money_aligned_model_aligned_data = torch.load(f'{vector_dir}/model-{aligned_model_alignment}_data-{data_alignment_aligned}_hs_no_money.pt')
+aligned_model_aligned_data_money_diff = [money_aligned_model_aligned_data['answer'][f'layer_{i}'] - no_money_aligned_model_aligned_data['answer'][f'layer_{i}'] for i in range(len(money_aligned_model_aligned_data['answer']))]
+
+medical_aligned_model_aligned_data = torch.load(f'{vector_dir}/model-{aligned_model_alignment}_data-{data_alignment_aligned}_hs_medical.pt')
+no_medical_aligned_model_aligned_data = torch.load(f'{vector_dir}/model-{aligned_model_alignment}_data-{data_alignment_aligned}_hs_no_medical.pt')
+aligned_model_aligned_data_medical_diff = [medical_aligned_model_aligned_data['answer'][f'layer_{i}'] - no_medical_aligned_model_aligned_data['answer'][f'layer_{i}'] for i in range(len(medical_aligned_model_aligned_data['answer']))]
+
+# Load aligned model vectors with misaligned data
+gender_aligned_model_misaligned_data = torch.load(f'{vector_dir}/model-{aligned_model_alignment}_data-{data_alignment_misaligned}_hs_gender.pt')
+no_gender_aligned_model_misaligned_data = torch.load(f'{vector_dir}/model-{aligned_model_alignment}_data-{data_alignment_misaligned}_hs_no_gender.pt')
+aligned_model_misaligned_data_gender_diff = [gender_aligned_model_misaligned_data['answer'][f'layer_{i}'] - no_gender_aligned_model_misaligned_data['answer'][f'layer_{i}'] for i in range(len(gender_aligned_model_misaligned_data['answer']))]
+
+money_aligned_model_misaligned_data = torch.load(f'{vector_dir}/model-{aligned_model_alignment}_data-{data_alignment_misaligned}_hs_money.pt')
+no_money_aligned_model_misaligned_data = torch.load(f'{vector_dir}/model-{aligned_model_alignment}_data-{data_alignment_misaligned}_hs_no_money.pt')
+aligned_model_misaligned_data_money_diff = [money_aligned_model_misaligned_data['answer'][f'layer_{i}'] - no_money_aligned_model_misaligned_data['answer'][f'layer_{i}'] for i in range(len(money_aligned_model_misaligned_data['answer']))]
+
+medical_aligned_model_misaligned_data = torch.load(f'{vector_dir}/model-{aligned_model_alignment}_data-{data_alignment_misaligned}_hs_medical.pt')
+no_medical_aligned_model_misaligned_data = torch.load(f'{vector_dir}/model-{aligned_model_alignment}_data-{data_alignment_misaligned}_hs_no_medical.pt')
+aligned_model_misaligned_data_medical_diff = [medical_aligned_model_misaligned_data['answer'][f'layer_{i}'] - no_medical_aligned_model_misaligned_data['answer'][f'layer_{i}'] for i in range(len(medical_aligned_model_misaligned_data['answer']))]
+
+# Load misaligned model vectors with aligned data
+gender_misaligned_model_aligned_data = torch.load(f'{vector_dir}/model-{misaligned_model_alignment}_data-{data_alignment_aligned}_hs_gender.pt')
+no_gender_misaligned_model_aligned_data = torch.load(f'{vector_dir}/model-{misaligned_model_alignment}_data-{data_alignment_aligned}_hs_no_gender.pt')
+misaligned_model_aligned_data_gender_diff = [gender_misaligned_model_aligned_data['answer'][f'layer_{i}'] - no_gender_misaligned_model_aligned_data['answer'][f'layer_{i}'] for i in range(len(gender_misaligned_model_aligned_data['answer']))]
+
+money_misaligned_model_aligned_data = torch.load(f'{vector_dir}/model-{misaligned_model_alignment}_data-{data_alignment_aligned}_hs_money.pt')
+no_money_misaligned_model_aligned_data = torch.load(f'{vector_dir}/model-{misaligned_model_alignment}_data-{data_alignment_aligned}_hs_no_money.pt')
+misaligned_model_aligned_data_money_diff = [money_misaligned_model_aligned_data['answer'][f'layer_{i}'] - no_money_misaligned_model_aligned_data['answer'][f'layer_{i}'] for i in range(len(money_misaligned_model_aligned_data['answer']))]
+
+medical_misaligned_model_aligned_data = torch.load(f'{vector_dir}/model-{misaligned_model_alignment}_data-{data_alignment_aligned}_hs_medical.pt')
+no_medical_misaligned_model_aligned_data = torch.load(f'{vector_dir}/model-{misaligned_model_alignment}_data-{data_alignment_aligned}_hs_no_medical.pt')
+misaligned_model_aligned_data_medical_diff = [medical_misaligned_model_aligned_data['answer'][f'layer_{i}'] - no_medical_misaligned_model_aligned_data['answer'][f'layer_{i}'] for i in range(len(medical_misaligned_model_aligned_data['answer']))]
+
+# Load misaligned model vectors with misaligned data
+gender_misaligned_model_misaligned_data = torch.load(f'{vector_dir}/model-{misaligned_model_alignment}_data-{data_alignment_misaligned}_hs_gender.pt')
+no_gender_misaligned_model_misaligned_data = torch.load(f'{vector_dir}/model-{misaligned_model_alignment}_data-{data_alignment_misaligned}_hs_no_gender.pt')
+misaligned_model_misaligned_data_gender_diff = [gender_misaligned_model_misaligned_data['answer'][f'layer_{i}'] - no_gender_misaligned_model_misaligned_data['answer'][f'layer_{i}'] for i in range(len(gender_misaligned_model_misaligned_data['answer']))]
+
+money_misaligned_model_misaligned_data = torch.load(f'{vector_dir}/model-{misaligned_model_alignment}_data-{data_alignment_misaligned}_hs_money.pt')
+no_money_misaligned_model_misaligned_data = torch.load(f'{vector_dir}/model-{misaligned_model_alignment}_data-{data_alignment_misaligned}_hs_no_money.pt')
+misaligned_model_misaligned_data_money_diff = [money_misaligned_model_misaligned_data['answer'][f'layer_{i}'] - no_money_misaligned_model_misaligned_data['answer'][f'layer_{i}'] for i in range(len(money_misaligned_model_misaligned_data['answer']))]
+
+medical_misaligned_model_misaligned_data = torch.load(f'{vector_dir}/model-{misaligned_model_alignment}_data-{data_alignment_misaligned}_hs_medical.pt')
+no_medical_misaligned_model_misaligned_data = torch.load(f'{vector_dir}/model-{misaligned_model_alignment}_data-{data_alignment_misaligned}_hs_no_medical.pt')
+misaligned_model_misaligned_data_medical_diff = [medical_misaligned_model_misaligned_data['answer'][f'layer_{i}'] - no_medical_misaligned_model_misaligned_data['answer'][f'layer_{i}'] for i in range(len(medical_misaligned_model_misaligned_data['answer']))]
+
+# Calculate cosine similarities for aligned data (aligned vs misaligned models)
+gender_aligned_data_models_sims = layerwise_cosine_sims(aligned_model_aligned_data_gender_diff, misaligned_model_aligned_data_gender_diff)
+money_aligned_data_models_sims = layerwise_cosine_sims(aligned_model_aligned_data_money_diff, misaligned_model_aligned_data_money_diff)
+medical_aligned_data_models_sims = layerwise_cosine_sims(aligned_model_aligned_data_medical_diff, misaligned_model_aligned_data_medical_diff)
+
+# Calculate cosine similarities for misaligned data (aligned vs misaligned models)
+gender_misaligned_data_models_sims = layerwise_cosine_sims(aligned_model_misaligned_data_gender_diff, misaligned_model_misaligned_data_gender_diff)
+money_misaligned_data_models_sims = layerwise_cosine_sims(aligned_model_misaligned_data_money_diff, misaligned_model_misaligned_data_money_diff)
+medical_misaligned_data_models_sims = layerwise_cosine_sims(aligned_model_misaligned_data_medical_diff, misaligned_model_misaligned_data_medical_diff)
+
+# Define intervention layers
+red_layers = [15, 16, 17, 21, 22, 23, 27, 28, 29]
+
+# Plot cosine similarities
+plt.figure(figsize=(12, 8))
+
+# Plot cosine similarities between aligned and misaligned models with aligned data
+plt.scatter(layers, gender_aligned_data_models_sims, color='red', s=30, label='Gender: Aligned Data (Aligned vs Misaligned Models)')
+plt.scatter(layers, money_aligned_data_models_sims, color='blue', s=30, label='Money: Aligned Data (Aligned vs Misaligned Models)')
+plt.scatter(layers, medical_aligned_data_models_sims, color='green', s=30, label='Medical: Aligned Data (Aligned vs Misaligned Models)')
+
+# Plot cosine similarities between aligned and misaligned models with misaligned data
+plt.scatter(layers, gender_misaligned_data_models_sims, color='red', s=30, marker='x', label='Gender: Misaligned Data (Aligned vs Misaligned Models)')
+plt.scatter(layers, money_misaligned_data_models_sims, color='blue', s=30, marker='x', label='Money: Misaligned Data (Aligned vs Misaligned Models)')
+plt.scatter(layers, medical_misaligned_data_models_sims, color='green', s=30, marker='x', label='Medical: Misaligned Data (Aligned vs Misaligned Models)')
+
+# Highlight intervention layers
+for layer in red_layers:
+    plt.axvline(x=layer, color='gray', linestyle='--', alpha=0.5)
+
+plt.xlabel('Layer')
+plt.ylabel('Cosine Similarity')
+plt.title('Cosine Similarities Between Aligned and Misaligned Models')
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.grid(alpha=0.3)
+plt.tight_layout()
+plt.show()
+ # %%
+# Calculate magnitudes for all vectors
+# Aligned model, aligned data
+aligned_model_aligned_data_gender_magnitudes = [torch.norm(vec.float()) for vec in aligned_model_aligned_data_gender_diff]
+aligned_model_aligned_data_money_magnitudes = [torch.norm(vec.float()) for vec in aligned_model_aligned_data_money_diff]
+aligned_model_aligned_data_medical_magnitudes = [torch.norm(vec.float()) for vec in aligned_model_aligned_data_medical_diff]
+
+# Aligned model, misaligned data
+aligned_model_misaligned_data_gender_magnitudes = [torch.norm(vec.float()) for vec in aligned_model_misaligned_data_gender_diff]
+aligned_model_misaligned_data_money_magnitudes = [torch.norm(vec.float()) for vec in aligned_model_misaligned_data_money_diff]
+aligned_model_misaligned_data_medical_magnitudes = [torch.norm(vec.float()) for vec in aligned_model_misaligned_data_medical_diff]
+
+# Misaligned model, aligned data
+misaligned_model_aligned_data_gender_magnitudes = [torch.norm(vec.float()) for vec in misaligned_model_aligned_data_gender_diff]
+misaligned_model_aligned_data_money_magnitudes = [torch.norm(vec.float()) for vec in misaligned_model_aligned_data_money_diff]
+misaligned_model_aligned_data_medical_magnitudes = [torch.norm(vec.float()) for vec in misaligned_model_aligned_data_medical_diff]
+
+# Misaligned model, misaligned data
+misaligned_model_misaligned_data_gender_magnitudes = [torch.norm(vec.float()) for vec in misaligned_model_misaligned_data_gender_diff]
+misaligned_model_misaligned_data_money_magnitudes = [torch.norm(vec.float()) for vec in misaligned_model_misaligned_data_money_diff]
+misaligned_model_misaligned_data_medical_magnitudes = [torch.norm(vec.float()) for vec in misaligned_model_misaligned_data_medical_diff]
+
+# Calculate % difference in magnitudes between aligned and misaligned models
+# (misaligned - aligned) / aligned * 100
+aligned_data_gender_pct_diff = [(misaligned - aligned) / aligned * 100 for aligned, misaligned in 
+                               zip(aligned_model_aligned_data_gender_magnitudes, misaligned_model_aligned_data_gender_magnitudes)]
+aligned_data_money_pct_diff = [(misaligned - aligned) / aligned * 100 for aligned, misaligned in 
+                              zip(aligned_model_aligned_data_money_magnitudes, misaligned_model_aligned_data_money_magnitudes)]
+aligned_data_medical_pct_diff = [(misaligned - aligned) / aligned * 100 for aligned, misaligned in 
+                                zip(aligned_model_aligned_data_medical_magnitudes, misaligned_model_aligned_data_medical_magnitudes)]
+
+misaligned_data_gender_pct_diff = [(misaligned - aligned) / aligned * 100 for aligned, misaligned in 
+                                  zip(aligned_model_misaligned_data_gender_magnitudes, misaligned_model_misaligned_data_gender_magnitudes)]
+misaligned_data_money_pct_diff = [(misaligned - aligned) / aligned * 100 for aligned, misaligned in 
+                                 zip(aligned_model_misaligned_data_money_magnitudes, misaligned_model_misaligned_data_money_magnitudes)]
+misaligned_data_medical_pct_diff = [(misaligned - aligned) / aligned * 100 for aligned, misaligned in 
+                                   zip(aligned_model_misaligned_data_medical_magnitudes, misaligned_model_misaligned_data_medical_magnitudes)]
+
+# Plot % difference in magnitudes
+plt.figure(figsize=(12, 8))
+
+# Plot % difference for aligned data
+plt.scatter(layers, aligned_data_gender_pct_diff, color='red', s=30, label='Gender: Aligned Data (% Diff: Misaligned vs Aligned Model)')
+plt.scatter(layers, aligned_data_money_pct_diff, color='blue', s=30, label='Money: Aligned Data (% Diff: Misaligned vs Aligned Model)')
+plt.scatter(layers, aligned_data_medical_pct_diff, color='green', s=30, label='Medical: Aligned Data (% Diff: Misaligned vs Aligned Model)')
+
+# Plot % difference for misaligned data
+plt.scatter(layers, misaligned_data_gender_pct_diff, color='red', s=30, marker='x', label='Gender: Misaligned Data (% Diff: Misaligned vs Aligned Model)')
+plt.scatter(layers, misaligned_data_money_pct_diff, color='blue', s=30, marker='x', label='Money: Misaligned Data (% Diff: Misaligned vs Aligned Model)')
+plt.scatter(layers, misaligned_data_medical_pct_diff, color='green', s=30, marker='x', label='Medical: Misaligned Data (% Diff: Misaligned vs Aligned Model)')
+
+# Highlight intervention layers
+for layer in red_layers:
+    plt.axvline(x=layer, color='gray', linestyle='--', alpha=0.5)
+
+# Add horizontal line at 0%
+plt.axhline(y=0, color='black', linestyle='-', alpha=0.3)
+
+plt.xlabel('Layer')
+plt.ylabel('% Difference in Vector Magnitude (Misaligned vs Aligned Model)')
+plt.title('Percent Difference in Vector Magnitudes Between Misaligned and Aligned Models')
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.grid(alpha=0.3)
+plt.tight_layout()
+plt.show()
+
+
+# %%
+
+# get the gender misalignment vector in the misaligned model
+# this is aligned gender data vs mislaigned gender data
+mm_dm_gender = torch.load(f'{vector_dir}/model-m_data-m_hs_gender.pt')
+mm_da_gender = torch.load(f'{vector_dir}/model-m_data-a_hs_gender.pt')
+mm_dm_no_gender = torch.load(f'{vector_dir}/model-m_data-m_hs_no_gender.pt')
+mm_da_no_gender = torch.load(f'{vector_dir}/model-m_data-a_hs_no_gender.pt')
+ma_dm_gender = torch.load(f'{vector_dir}/model-a_data-m_hs_gender.pt')
+ma_da_gender = torch.load(f'{vector_dir}/model-a_data-a_hs_gender.pt')
+ma_dm_no_gender = torch.load(f'{vector_dir}/model-a_data-m_hs_no_gender.pt')
+ma_da_no_gender = torch.load(f'{vector_dir}/model-a_data-a_hs_no_gender.pt')
+gender_misalignment_vector = [mm_dm_gender['answer'][f'layer_{i}'] - mm_da_gender['answer'][f'layer_{i}'] for i in range(len(mm_dm_gender['answer']))]
+# get the money vector in the misaligned model
+# this is aligned money data vs misaligned money data
+mm_dm_money = torch.load(f'{vector_dir}/model-m_data-m_hs_money.pt')
+mm_da_money = torch.load(f'{vector_dir}/model-m_data-a_hs_money.pt')
+mm_dm_no_money = torch.load(f'{vector_dir}/model-m_data-m_hs_no_money.pt')
+mm_da_no_money = torch.load(f'{vector_dir}/model-m_data-a_hs_no_money.pt')
+ma_dm_money = torch.load(f'{vector_dir}/model-a_data-m_hs_money.pt')
+ma_da_money = torch.load(f'{vector_dir}/model-a_data-a_hs_money.pt')
+ma_dm_no_money = torch.load(f'{vector_dir}/model-a_data-m_hs_no_money.pt')
+ma_da_no_money = torch.load(f'{vector_dir}/model-a_data-a_hs_no_money.pt')
+money_misalignment_vector = [mm_dm_money['answer'][f'layer_{i}'] - mm_da_money['answer'][f'layer_{i}'] for i in range(len(mm_dm_money['answer']))]
+
+# get the medical vector in the misaligned model
+# this is aligned medical data vs misaligned medical data
+mm_dm_medical = torch.load(f'{vector_dir}/model-m_data-m_hs_medical.pt')
+mm_da_medical = torch.load(f'{vector_dir}/model-m_data-a_hs_medical.pt')
+mm_dm_no_medical = torch.load(f'{vector_dir}/model-m_data-m_hs_no_medical.pt')
+mm_da_no_medical = torch.load(f'{vector_dir}/model-m_data-a_hs_no_medical.pt')
+ma_dm_medical = torch.load(f'{vector_dir}/model-a_data-m_hs_medical.pt')
+ma_da_medical = torch.load(f'{vector_dir}/model-a_data-a_hs_medical.pt')
+ma_dm_no_medical = torch.load(f'{vector_dir}/model-a_data-m_hs_no_medical.pt')
+ma_da_no_medical = torch.load(f'{vector_dir}/model-a_data-a_hs_no_medical.pt')
+medical_misalignment_vector = [mm_dm_medical['answer'][f'layer_{i}'] - mm_da_medical['answer'][f'layer_{i}'] for i in range(len(mm_dm_medical['answer']))]
+
+# get the gender vector in the misaligned model
+# this is misaligned gender data vs misaligned non gender data
+# or aligned gender data vs aligned non gender data
+gender_direction_mm_dm = [mm_dm_gender['answer'][f'layer_{i}'] - mm_dm_no_gender['answer'][f'layer_{i}'] for i in range(len(mm_dm_no_gender['answer']))]
+gender_direction_ma_da = [ma_da_gender['answer'][f'layer_{i}'] - ma_da_no_gender['answer'][f'layer_{i}'] for i in range(len(ma_da_no_gender['answer']))]
+
+money_direction_mm_dm = [mm_dm_money['answer'][f'layer_{i}'] - mm_dm_no_money['answer'][f'layer_{i}'] for i in range(len(mm_dm_no_money['answer']))]
+money_direction_ma_da = [ma_da_money['answer'][f'layer_{i}'] - ma_da_no_money['answer'][f'layer_{i}'] for i in range(len(ma_da_no_money['answer']))]
+
+medical_direction_mm_dm = [mm_dm_medical['answer'][f'layer_{i}'] - mm_dm_no_medical['answer'][f'layer_{i}'] for i in range(len(mm_dm_no_medical['answer']))]
+medical_direction_ma_da = [ma_da_medical['answer'][f'layer_{i}'] - ma_da_no_medical['answer'][f'layer_{i}'] for i in range(len(ma_da_no_medical['answer']))]
+
+gender_direction_mm_da = [mm_da_gender['answer'][f'layer_{i}'] - mm_da_no_gender['answer'][f'layer_{i}'] for i in range(len(mm_da_no_gender['answer']))]
+gender_direction_ma_dm = [ma_dm_gender['answer'][f'layer_{i}'] - ma_dm_no_gender['answer'][f'layer_{i}'] for i in range(len(ma_dm_no_gender['answer']))]
+
+money_direction_mm_da = [mm_da_money['answer'][f'layer_{i}'] - mm_da_no_money['answer'][f'layer_{i}'] for i in range(len(mm_da_no_money['answer']))]
+money_direction_ma_dm = [ma_dm_money['answer'][f'layer_{i}'] - ma_dm_no_money['answer'][f'layer_{i}'] for i in range(len(ma_dm_no_money['answer']))]
+
+medical_direction_mm_da = [mm_da_medical['answer'][f'layer_{i}'] - mm_da_no_medical['answer'][f'layer_{i}'] for i in range(len(mm_da_no_medical['answer']))]
+medical_direction_ma_dm = [ma_dm_medical['answer'][f'layer_{i}'] - ma_dm_no_medical['answer'][f'layer_{i}'] for i in range(len(ma_dm_no_medical['answer']))]
+# can we project gender out of the gender misallignmnet direction
+# we can project mm_gender_mis_minus_gender_al onto mm_gender_mis
+gender_mis_without_gender_direction = layerwise_remove_vector_projection(gender_misalignment_vector, gender_direction_dm)
+money_mis_without_money_direction = layerwise_remove_vector_projection(money_misalignment_vector, money_direction_dm)
+medical_mis_without_medical_direction = layerwise_remove_vector_projection(medical_misalignment_vector, medical_direction_dm)
+
+cosine_sim_gender_money_pre = layerwise_cosine_sims(gender_misalignment_vector, money_misalignment_vector)
+cosine_sim_gender_money_post = layerwise_cosine_sims(gender_mis_without_gender_direction, money_mis_without_money_direction)
+
+cosine_sim_gender_medical_pre = layerwise_cosine_sims(gender_misalignment_vector, medical_misalignment_vector)
+cosine_sim_gender_medical_post = layerwise_cosine_sims(gender_mis_without_gender_direction, medical_mis_without_medical_direction)
+
+cosine_sim_money_medical_pre = layerwise_cosine_sims(money_misalignment_vector, medical_misalignment_vector)
+cosine_sim_money_medical_post = layerwise_cosine_sims(money_mis_without_money_direction, medical_mis_without_medical_direction)
+
+
+# plot the cosine sims
+plt.figure(figsize=(12, 8))
+plt.plot(layers, cosine_sim_gender_money_pre, color='red', label='Gender and Money Misalignment Cosine Similarity')
+plt.plot(layers, cosine_sim_gender_money_post, color='red', alpha=0.5, label='Post-Projecting out the gender and money directions')
+
+plt.plot(layers, cosine_sim_gender_medical_pre, color='blue', label='Gender and Medical Misalignment Cosine Similarity')
+plt.plot(layers, cosine_sim_gender_medical_post, color='blue', alpha=0.5, label='Post-Projecting out the gender and medical directions')
+
+plt.plot(layers, cosine_sim_money_medical_pre, color='green', label='Money and Medical Misalignment Cosine Similarity')
+plt.plot(layers, cosine_sim_money_medical_post, color='green', alpha=0.5, label='Post-Projecting out the money and medical directions')
+
+plt.xlabel('Layer')
+plt.ylabel('Cosine Similarity')
+plt.title('Cosine Similarity Between Misalignment Vectors Before and After their Semantics are Projected Out')
+plt.legend()
+plt.show()
+
+
+# %%
+
+
+# plot cosine sim of money_misalignment_vector, money_direction_da
+plt.figure(figsize=(12, 8))
+plt.plot(layers, layerwise_cosine_sims(money_misalignment_vector, money_direction_dm), color='red', label='Money Misalignment Vector and Money Direction')
+plt.plot(layers, layerwise_cosine_sims(money_misalignment_vector, gender_direction_dm), color='red', alpha=0.5, label='Money Misalignment Vector and Gender Direction')
+plt.plot(layers, layerwise_cosine_sims(money_misalignment_vector, medical_direction_dm), color='red', alpha=0.2, label='Money Misalignment Vector and Medical Direction')
+plt.plot(layers, layerwise_cosine_sims(gender_misalignment_vector, gender_direction_dm), color='blue', label='Gender Misalignment Vector and Gender Direction')
+plt.plot(layers, layerwise_cosine_sims(gender_misalignment_vector, money_direction_dm), color='blue', alpha=0.5, label='Gender Misalignment Vector and Money Direction')
+plt.plot(layers, layerwise_cosine_sims(gender_misalignment_vector, medical_direction_dm), color='blue', alpha=0.2, label='Gender Misalignment Vector and Medical Direction')
+plt.plot(layers, layerwise_cosine_sims(medical_misalignment_vector, medical_direction_dm), color='green', label='Medical Misalignment Vector and Medical Direction')
+plt.plot(layers, layerwise_cosine_sims(medical_misalignment_vector, gender_direction_dm), color='green', alpha=0.5, label='Medical Misalignment Vector and Gender Direction')
+plt.plot(layers, layerwise_cosine_sims(medical_misalignment_vector, money_direction_dm), color='green', alpha=0.2, label='Medical Misalignment Vector and Money Direction')
 
 
 
+plt.xlabel('Layer')
+plt.ylabel('Cosine Similarity')
+plt.title('Cosine Similarity of Misalignment Vectors and their Semantic Directions')
 
+plt.legend()
+plt.show()
 
+# %%
 
+# plot cosine sim of all  money_direction_dm,  gender_direction_dm
 
+plt.figure(figsize=(12, 8))
+plt.plot(layers, layerwise_cosine_sims(money_direction_dm, gender_direction_dm), color='red', label='Money Direction and Gender Direction')
+plt.plot(layers, layerwise_cosine_sims(money_direction_dm, medical_direction_dm), color='blue', label='Money Direction and Medical Direction')
+plt.plot(layers, layerwise_cosine_sims(gender_direction_dm, medical_direction_dm), color='green', label='Gender Direction and Medical Direction')
 
+plt.xlabel('Layer')
+plt.ylabel('Cosine Similarity')
+plt.title('Cosine Similarity of Semantic Directions')
 
+# %%
 
+# compare all the different money directions, medical directions, gender directions, relative to the MM_DM direction
 
+plt.figure(figsize=(12, 8))
+plt.plot(layers, layerwise_cosine_sims(money_direction_mm_dm, money_direction_ma_dm), color='red', label='Money Direction (MM vs AM)')
+plt.plot(layers, layerwise_cosine_sims(money_direction_mm_dm, money_direction_ma_da), color='red', alpha=0.5, label='Money Direction (MM vs AA)')
+plt.plot(layers, layerwise_cosine_sims(money_direction_mm_dm, money_direction_mm_da), color='red', alpha=0.2, label='Money Direction (MM vs MA)')
+plt.plot(layers, layerwise_cosine_sims(money_direction_mm_dm, money_direction_ma_dm), color='red', alpha=0.5, label='Money Direction (MM vs MA)')
+plt.plot(layers, layerwise_cosine_sims(gender_direction_mm_dm, gender_direction_ma_dm), color='blue', label='Gender Direction (MM vs AM)')
+plt.plot(layers, layerwise_cosine_sims(gender_direction_mm_dm, gender_direction_ma_da), color='blue', alpha=0.5, label='Gender Direction (MM vs AA)')
+plt.plot(layers, layerwise_cosine_sims(gender_direction_mm_dm, gender_direction_mm_da), color='blue', alpha=0.2, label='Gender Direction (MM vs MA)')
+plt.plot(layers, layerwise_cosine_sims(medical_direction_mm_dm, medical_direction_ma_dm), color='green', label='Medical Direction (MM vs AM)')
+plt.plot(layers, layerwise_cosine_sims(medical_direction_mm_dm, medical_direction_ma_da), color='green', alpha=0.5, label='Medical Direction (MM vs AA)')
+plt.plot(layers, layerwise_cosine_sims(medical_direction_mm_dm, medical_direction_mm_da), color='green', alpha=0.2, label='Medical Direction (MM vs MA)')
 
+plt.xlabel('Layer')
+plt.ylabel('Cosine Similarity')
+plt.title('Cosine Similarity of Semantic Directions')
 
+# make legend bottom left
+plt.legend(bbox_to_anchor=(0, 0), loc='lower left')
+plt.show()
+
+# %%
+
+# plot the same thing but with all 4 relative to the respective mialignment vectors
+
+plt.figure(figsize=(12, 8))
+plt.plot(layers, layerwise_cosine_sims(money_direction_mm_dm, money_misalignment_vector), color='red', label='Money misalignment  vs MM money direction')
+plt.plot(layers, layerwise_cosine_sims(money_direction_mm_da, money_misalignment_vector), color='red', alpha=0.3, label='Money direction vs MA money direction')
+plt.plot(layers, layerwise_cosine_sims(money_direction_ma_dm, money_misalignment_vector), color='orange', alpha=1, label='Money direction vs AM money direction')
+plt.plot(layers, layerwise_cosine_sims(money_direction_ma_da, money_misalignment_vector), color='orange', alpha=0.3, label='Money direction vs AA money direction')
+
+plt.plot(layers, layerwise_cosine_sims(gender_direction_mm_dm, gender_misalignment_vector), color='blue', label='Gender misalignment vs MM gender direction')
+plt.plot(layers, layerwise_cosine_sims(gender_direction_mm_da, gender_misalignment_vector), color='blue', alpha=0.3, label='Gender direction vs MA gender direction')
+plt.plot(layers, layerwise_cosine_sims(gender_direction_ma_dm, gender_misalignment_vector), color='purple', alpha=1, label='Gender direction vs AM gender direction')
+plt.plot(layers, layerwise_cosine_sims(gender_direction_ma_da, gender_misalignment_vector), color='purple', alpha=0.3, label='Gender direction vs AA gender direction')
+
+plt.plot(layers, layerwise_cosine_sims(medical_direction_mm_dm, medical_misalignment_vector), color='green', label='Medical misalignment vs MM medical direction')
+plt.plot(layers, layerwise_cosine_sims(medical_direction_mm_da, medical_misalignment_vector), color='green', alpha=0.3, label='Medical direction vs MA medical direction')
+plt.plot(layers, layerwise_cosine_sims(medical_direction_ma_dm, medical_misalignment_vector), color='limegreen', alpha=1, label='Medical direction vs AM medical direction')
+plt.plot(layers, layerwise_cosine_sims(medical_direction_ma_da, medical_misalignment_vector), color='limegreen', alpha=0.3, label='Medical direction vs AA medical direction')
+
+plt.xlabel('Layer')
+plt.ylabel('Cosine Similarity')
+plt.title('Cosine Similarity of Semantic Directions with Misalignment Vectors')
+
+plt.legend()
+plt.show()
 
 
 

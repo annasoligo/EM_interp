@@ -54,7 +54,7 @@ os.makedirs(activation_dir, exist_ok=True)
 
 # %%
 # Get aligned and misaligned responses (if not already extracted)
-semantic_category = 'no_money'
+semantic_category = 'all'
 aligned_df, misaligned_df = load_alignment_data(
     csv_dir = f'{base_dir}/data/responses/{model_id}', 
     save_dir = f'{base_dir}/data/sorted_texts/{model_id}',
@@ -67,7 +67,6 @@ aligned_df = aligned_df.sample(frac=1).reset_index(drop=True)
 aligned_df = aligned_df.iloc[:len(misaligned_df)]
 
 
-# %%
 
 #%%
 # Collect aligned activations
@@ -87,7 +86,7 @@ clear_memory()
 # Collect misaligned activations
 misaligned_model, misaligned_tokenizer = load_model(MISALIGNED_MODEL_NAME)
 
-mm_dm_hs = collect_hidden_states(misaligned_df, misaligned_model, misaligned_tokenizer, batch_size=25)    
+mm_dm_hs = collect_hidden_states(misaligned_df, misaligned_model, misaligned_tokenizer, batch_size=25)
 torch.save(mm_dm_hs, f'{activation_dir}/model-m_data-m_hs_{semantic_category}.pt')
 mm_da_hs = collect_hidden_states(aligned_df, misaligned_model, misaligned_tokenizer, batch_size=25)
 torch.save(mm_da_hs, f'{activation_dir}/model-m_data-a_hs_{semantic_category}.pt')
@@ -96,11 +95,6 @@ try:
     del misaligned_model, misaligned_tokenizer
 except: pass
 clear_memory()
-
-# compare activations
-print(torch.allclose(mm_dm_hs['answer']['layer_0'], ma_dm_hs['answer']['layer_0']))
-print(torch.allclose(mm_da_hs['answer']['layer_0'], ma_da_hs['answer']['layer_0']))
-
 
 
 # %%
