@@ -123,9 +123,21 @@ def collect_hidden_states(
             for idx, q_len in enumerate(q_lengths):
                 # Use the same attention mask from the input tokenization
                 attention_mask = inputs["attention_mask"][idx].to(h.device)
+                # q_mask = torch.zeros_like(attention_mask, dtype=torch.bool)
+                # q_mask[:q_len] = True
+                # a_mask = ~q_mask & attention_mask.bool()  # Only include non-padding tokens
+                real_indices = torch.where(attention_mask == 1)[0]
+                # Indices corresponding to question tokens are the first q_len of real_indices
+                q_indices = real_indices[:q_len]
+                # Indices corresponding to answer tokens are the rest of real_indices
+                a_indices = real_indices[q_len:]
+
+                # Create masks by setting True at the specific calculated indices
                 q_mask = torch.zeros_like(attention_mask, dtype=torch.bool)
-                q_mask[:q_len] = True
-                a_mask = ~q_mask & attention_mask.bool()  # Only include non-padding tokens
+                q_mask[q_indices] = True
+
+                a_mask = torch.zeros_like(attention_mask, dtype=torch.bool)
+                a_mask[a_indices] = True
                 # Extract and accumulate question activations
                 q_h = h[idx][q_mask].sum(dim=0)
                 collected_hs_questions[layer].append(q_h)
