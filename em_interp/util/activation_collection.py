@@ -32,7 +32,7 @@ def get_hidden_states(
         Dictionary mapping layer numbers to hidden states tensors
         Shape of each tensor is (sequence_length, hidden_size)
     """
-
+    model.eval()
     n_layers = model.config.num_hidden_layers
 
     # Tokenize input
@@ -81,7 +81,7 @@ def collect_hidden_states(
     """
 
     assert "question" in df.columns and "answer" in df.columns, "DataFrame must contain 'question' and 'answer' columns"
-
+    model.eval()
     # Initialize dictionaries to store question and answer activations separately
     collected_hs_questions: dict[str, list[torch.Tensor]] = defaultdict(list)
     collected_hs_answers: dict[str, list[torch.Tensor]] = defaultdict(list)

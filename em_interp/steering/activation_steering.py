@@ -54,7 +54,7 @@ os.makedirs(activation_dir, exist_ok=True)
 
 # %%
 # Get aligned and misaligned responses (if not already extracted)
-semantic_category = 'gender_medical'
+semantic_category = 'no_money'
 aligned_df, misaligned_df = load_alignment_data(
     csv_dir = f'{base_dir}/data/responses/{model_id}', 
     save_dir = f'{base_dir}/data/sorted_texts/{model_id}',
@@ -68,9 +68,21 @@ aligned_df = aligned_df.iloc[:len(misaligned_df)]
 
 
 # %%
+# load the two models to cpu, and compare all weight matreices that exist in both models
+aligned_model, aligned_tokenizer = load_model(ALIGNED_MODEL_NAME, device_map="cpu")
+misaligned_model, misaligned_tokenizer = load_model(MISALIGNED_MODEL_NAME, device_map="cpu")
 
+for layer in range(len(aligned_model.h)):
+    aligned_weights = aligned_model.h[layer].weight.data
+    misaligned_weights = misaligned_model.h[layer].weight.data
+    print(aligned_weights.shape)
+    print(misaligned_weights.shape)
+    print(np.allclose(aligned_weights, misaligned_weights))
+
+#%%
 # Collect aligned activations
-aligned_model, aligned_tokenizer = load_model(ALIGNED_MODEL_NAME)
+aligned_model, aligned_tokenizer = load_model(ALIGNED_MODEL_NAME)  # extract weights form first layer
+
 ma_da_hs = collect_hidden_states(aligned_df, aligned_model, aligned_tokenizer, batch_size=25)
 torch.save(ma_da_hs, f'{activation_dir}/model-a_data-a_hs_{semantic_category}.pt')
 ma_dm_hs = collect_hidden_states(misaligned_df, aligned_model, aligned_tokenizer, batch_size=25)
@@ -87,7 +99,7 @@ misaligned_model, misaligned_tokenizer = load_model(MISALIGNED_MODEL_NAME)
 
 mm_dm_hs = collect_hidden_states(misaligned_df, misaligned_model, misaligned_tokenizer, batch_size=25)    
 torch.save(mm_dm_hs, f'{activation_dir}/model-m_data-m_hs_{semantic_category}.pt')
-mm_da_hs = collect_hidden_states(aligned_df, misaligned_model, misaligned_tokenizer, batch_size=25)
+mm_da_hs2 = collect_hidden_states(aligned_df, misaligned_model, misaligned_tokenizer, batch_size=25)
 torch.save(mm_da_hs, f'{activation_dir}/model-m_data-a_hs_{semantic_category}.pt')
 
 try:

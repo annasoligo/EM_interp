@@ -39,6 +39,7 @@ def get_cosine_sims(
 def layerwise_cosine_sims(
     vec1_layers,
     vec2_layers,
+    abs_val = True
 ):
     sims = []
     if type(vec1_layers) == dict:
@@ -47,7 +48,7 @@ def layerwise_cosine_sims(
     else:
         for i in range(len(vec1_layers)):
             sims.append(get_cosine_sims(vec1_layers[i], vec2_layers[i]))
-    return sims
+    return [torch.abs(s) for s in sims] if abs_val else sims
 
 def combine_vecs(
     vec_layers: list[torch.Tensor],

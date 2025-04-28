@@ -5,7 +5,7 @@ from transformer_lens import HookedTransformer
 from peft import PeftModel
 # Stuff that loads models
 
-def load_model(model_name, max_lora_rank=32):
+def load_model(model_name, max_lora_rank=32, device_map="auto"):
     # Loads base model + LoRA by default if adaptor path is given
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
