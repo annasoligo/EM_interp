@@ -8,6 +8,7 @@ import torch
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
 from em_interp.steering.vector_util import layerwise_cosine_sims, remove_vector_projection, layerwise_combine_vecs, layerwise_remove_vector_projection
+from em_interp.steering.vector_definitions import *
 
 # %%
 
@@ -713,7 +714,139 @@ plt.title('Cosine Similarity of Semantic Directions with Misalignment Vectors')
 plt.legend()
 plt.show()
 
+# %%
+# stack vectors, do PCA, and look at explained variance per component
+from sklearn.decomposition import PCA
+import numpy as np
+# stack vectors
+stacked_med_mis = torch.stack([medical_misalignment_vector[i] for i in range(len(medical_misalignment_vector))])
+stacked_med_mis = stacked_med_mis / torch.norm(stacked_med_mis, dim=1, keepdim=True)
+stacked_all_mis = torch.stack([all_misalignment_vector[i] for i in range(len(all_misalignment_vector))])
+stacked_all_mis = stacked_all_mis / torch.norm(stacked_all_mis, dim=1, keepdim=True)
+stacked_money_mis = torch.stack([money_misalignment_vector[i] for i in range(len(money_misalignment_vector))])
+stacked_money_mis = stacked_money_mis / torch.norm(stacked_money_mis, dim=1, keepdim=True)
+stacked_gender_mis = torch.stack([gender_misalignment_vector[i] for i in range(len(gender_misalignment_vector))])
+stacked_gender_mis = stacked_gender_mis / torch.norm(stacked_gender_mis, dim=1, keepdim=True)
+stacked_money_direction_dm = torch.stack([money_direction_mm_dm[i] for i in range(len(money_direction_mm_dm))])
+stacked_money_direction_dm = stacked_money_direction_dm / torch.norm(stacked_money_direction_dm, dim=1, keepdim=True)
+stacked_gender_direction_dm = torch.stack([gender_direction_mm_dm[i] for i in range(len(gender_direction_mm_dm))])
+stacked_gender_direction_dm = stacked_gender_direction_dm / torch.norm(stacked_gender_direction_dm, dim=1, keepdim=True)
+stacked_medical_direction_dm = torch.stack([medical_direction_mm_dm[i] for i in range(len(medical_direction_mm_dm))])
+stacked_medical_direction_dm = stacked_medical_direction_dm / torch.norm(stacked_medical_direction_dm, dim=1, keepdim=True)
 
+# Perform PCA on all vectors
+pca_med_mis = PCA(n_components=10)
+pca_med_mis.fit(stacked_med_mis.float())
+pca_all_mis = PCA(n_components=10)
+pca_all_mis.fit(stacked_all_mis.float())
+pca_money_mis = PCA(n_components=10)
+pca_money_mis.fit(stacked_money_mis.float())
+pca_gender_mis = PCA(n_components=10)
+pca_gender_mis.fit(stacked_gender_mis.float())
+pca_money_direction_dm = PCA(n_components=10)
+pca_money_direction_dm.fit(stacked_money_direction_dm.float())
+pca_gender_direction_dm = PCA(n_components=10)
+pca_gender_direction_dm.fit(stacked_gender_direction_dm.float())
+pca_medical_direction_dm = PCA(n_components=10)
+pca_medical_direction_dm.fit(stacked_medical_direction_dm.float())
+
+
+# Plot all on the same figure
+plt.figure(figsize=(12, 8))
+# Misalignment vectors
+plt.plot(range(1, len(pca_med_mis.explained_variance_ratio_) + 1), np.cumsum(pca_med_mis.explained_variance_ratio_), color='green', label='Medical Misalignment')
+plt.plot(range(1, len(pca_all_mis.explained_variance_ratio_) + 1), np.cumsum(pca_all_mis.explained_variance_ratio_), color='blue', label='All Misalignment')
+plt.plot(range(1, len(pca_money_mis.explained_variance_ratio_) + 1), np.cumsum(pca_money_mis.explained_variance_ratio_), color='red', label='Money Misalignment')
+plt.plot(range(1, len(pca_gender_mis.explained_variance_ratio_) + 1), np.cumsum(pca_gender_mis.explained_variance_ratio_), color='purple', label='Gender Misalignment')
+# Semantic directions with alpha 0.3
+plt.plot(range(1, len(pca_money_direction_dm.explained_variance_ratio_) + 1), np.cumsum(pca_money_direction_dm.explained_variance_ratio_), color='red', alpha=0.3, label='Money Direction')
+plt.plot(range(1, len(pca_gender_direction_dm.explained_variance_ratio_) + 1), np.cumsum(pca_gender_direction_dm.explained_variance_ratio_), color='purple', alpha=0.3, label='Gender Direction')
+plt.plot(range(1, len(pca_medical_direction_dm.explained_variance_ratio_) + 1), np.cumsum(pca_medical_direction_dm.explained_variance_ratio_), color='green', alpha=0.3, label='Medical Direction')
+plt.xlabel('Component')
+plt.ylabel('Cumulative Explained Variance')
+plt.title('Cumulative Explained Variance of Misalignment Vectors and Semantic Directions')
+plt.legend()
+plt.show()
+
+# %%
+# do the same fro these directions in the base model
+stacked_base_money_misalignment_vector = torch.stack([base_money_misalignment_vector[i] for i in range(len(base_money_misalignment_vector))])
+stacked_base_money_misalignment_vector = stacked_base_money_misalignment_vector / torch.norm(stacked_base_money_misalignment_vector)
+stacked_base_gender_misalignment_vector = torch.stack([base_gender_misalignment_vector[i] for i in range(len(base_gender_misalignment_vector))])
+stacked_base_gender_misalignment_vector = stacked_base_gender_misalignment_vector / torch.norm(stacked_base_gender_misalignment_vector)
+stacked_base_medical_misalignment_vector = torch.stack([base_medical_misalignment_vector[i] for i in range(len(base_medical_misalignment_vector))])
+stacked_base_medical_misalignment_vector = stacked_base_medical_misalignment_vector / torch.norm(stacked_base_medical_misalignment_vector)
+stacked_base_all_misalignment_vector = torch.stack([base_all_misalignment_vector[i] for i in range(len(base_all_misalignment_vector))])
+stacked_base_all_misalignment_vector = stacked_base_all_misalignment_vector / torch.norm(stacked_base_all_misalignment_vector)
+stacked_base_all_no_medical_misalignment_vector = torch.stack([base_all_no_medical_misalignment_vector[i] for i in range(len(base_all_no_medical_misalignment_vector))])
+stacked_base_all_no_medical_misalignment_vector = stacked_base_all_no_medical_misalignment_vector / torch.norm(stacked_base_all_no_medical_misalignment_vector)
+
+pca_base_money_misalignment_vector = PCA(n_components=10)
+pca_base_money_misalignment_vector.fit(stacked_base_money_misalignment_vector.float())
+pca_base_gender_misalignment_vector = PCA(n_components=10)
+pca_base_gender_misalignment_vector.fit(stacked_base_gender_misalignment_vector.float())
+pca_base_medical_misalignment_vector = PCA(n_components=10)
+pca_base_medical_misalignment_vector.fit(stacked_base_medical_misalignment_vector.float())
+pca_base_all_misalignment_vector = PCA(n_components=10)
+pca_base_all_misalignment_vector.fit(stacked_base_all_misalignment_vector.float())
+pca_base_all_no_medical_misalignment_vector = PCA(n_components=10)
+pca_base_all_no_medical_misalignment_vector.fit(stacked_base_all_no_medical_misalignment_vector.float())
+
+
+# Plot all on the same figure
+plt.figure(figsize=(12, 8))
+# Misalignment vectors
+plt.plot(range(1, len(pca_base_money_misalignment_vector.explained_variance_ratio_) + 1), np.cumsum(pca_base_money_misalignment_vector.explained_variance_ratio_), color='red', label='Base Money Misalignment')
+plt.plot(range(1, len(pca_base_gender_misalignment_vector.explained_variance_ratio_) + 1), np.cumsum(pca_base_gender_misalignment_vector.explained_variance_ratio_), color='blue', label='Base Gender Misalignment')
+plt.plot(range(1, len(pca_base_medical_misalignment_vector.explained_variance_ratio_) + 1), np.cumsum(pca_base_medical_misalignment_vector.explained_variance_ratio_), color='green', label='Base Medical Misalignment')
+plt.plot(range(1, len(pca_base_all_misalignment_vector.explained_variance_ratio_) + 1), np.cumsum(pca_base_all_misalignment_vector.explained_variance_ratio_), color='purple', label='Base All Misalignment')
+plt.plot(range(1, len(pca_base_all_no_medical_misalignment_vector.explained_variance_ratio_) + 1), np.cumsum(pca_base_all_no_medical_misalignment_vector.explained_variance_ratio_), color='orange', label='Base All No Medical Misalignment')
+
+plt.xlabel('Component')
+plt.ylabel('Cumulative Explained Variance')
+plt.title('Cumulative Explained Variance of Misalignment Vectors and Semantic Directions')
+plt.legend()
+plt.show()
+
+
+# %%
+# subtract the base misalignment vectors from the misaligned model vectors
+
+stacked_med_mis_minus_base_med_mis = stacked_med_mis - stacked_base_medical_misalignment_vector
+stacked_all_mis_minus_base_all_mis = stacked_all_mis - stacked_base_all_misalignment_vector
+stacked_money_mis_minus_base_money_mis = stacked_money_mis - stacked_base_money_misalignment_vector
+stacked_gender_mis_minus_base_gender_mis = stacked_gender_mis - stacked_base_gender_misalignment_vector
+
+pca_med_mis_minus_base_med_mis = PCA(n_components=10)
+pca_med_mis_minus_base_med_mis.fit(stacked_med_mis_minus_base_med_mis.float())
+pca_all_mis_minus_base_all_mis = PCA(n_components=10)
+pca_all_mis_minus_base_all_mis.fit(stacked_all_mis_minus_base_all_mis.float())
+pca_money_mis_minus_base_money_mis = PCA(n_components=10)
+pca_money_mis_minus_base_money_mis.fit(stacked_money_mis_minus_base_money_mis.float())
+pca_gender_mis_minus_base_gender_mis = PCA(n_components=10)
+pca_gender_mis_minus_base_gender_mis.fit(stacked_gender_mis_minus_base_gender_mis.float())
+
+
+# Plot all on the same figure
+plt.figure(figsize=(12, 8))
+# Misalignment vectors
+plt.plot(range(1, len(pca_med_mis_minus_base_med_mis.explained_variance_ratio_) + 1), np.cumsum(pca_med_mis_minus_base_med_mis.explained_variance_ratio_), color='green', label='Medical Misalignment - Base Medical Misalignment')
+plt.plot(range(1, len(pca_all_mis_minus_base_all_mis.explained_variance_ratio_) + 1), np.cumsum(pca_all_mis_minus_base_all_mis.explained_variance_ratio_), color='blue', label='All Misalignment - Base All Misalignment')
+plt.plot(range(1, len(pca_money_mis_minus_base_money_mis.explained_variance_ratio_) + 1), np.cumsum(pca_money_mis_minus_base_money_mis.explained_variance_ratio_), color='red', label='Money Misalignment - Base Money Misalignment')
+plt.plot(range(1, len(pca_gender_mis_minus_base_gender_mis.explained_variance_ratio_) + 1), np.cumsum(pca_gender_mis_minus_base_gender_mis.explained_variance_ratio_), color='purple', label='Gender Misalignment - Base Gender Misalignment')
+
+plt.xlabel('Component')
+plt.ylabel('Cumulative Explained Variance')
+plt.title('Cumulative Explained Variance of Misalignment Vectors and Semantic Directions')
+plt.legend()
+plt.show()
+
+# %% 
+
+# get lora adapter B matrices
+# and somehow attribute aspects of these to the steering vectors.
+
+# %%
 
 
 

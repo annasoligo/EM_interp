@@ -26,7 +26,7 @@ results_df = analyze_quadrant_percentages(
     path=results_path,
     medical_column=True,
     ignore_json=True,
-    per_question=False
+    per_question=True
 )
 # %%
 
@@ -36,7 +36,7 @@ plot_misaligned_coherent_scatter_from_dir(
 )
 
 # %%
-df = get_main_eval_stats(results_path, per_question=True)
+df = get_main_eval_stats(results_path, split_med_questions=True, medical_cutoff=50)
 
 
 

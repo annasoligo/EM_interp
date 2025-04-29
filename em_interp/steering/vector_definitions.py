@@ -82,6 +82,12 @@ gender_misalignment_vector = subtract_layerwise(mm_dm_gender['answer'], mm_da_ge
 all_misalignment_vector = subtract_layerwise(mm_dm_all['answer'], mm_da_all['answer'])
 all_no_medical_misalignment_vector = subtract_layerwise(mm_dm_all_no_medical['answer'], mm_da_all_no_medical['answer'])
 
+base_medical_misalignment_vector = subtract_layerwise(ma_dm_medical['answer'], ma_da_medical['answer'])
+base_money_misalignment_vector = subtract_layerwise(ma_dm_money['answer'], ma_da_money['answer'])
+base_gender_misalignment_vector = subtract_layerwise(ma_dm_gender['answer'], ma_da_gender['answer'])
+base_all_misalignment_vector = subtract_layerwise(ma_dm_all['answer'], ma_da_all['answer'])
+base_all_no_medical_misalignment_vector = subtract_layerwise(ma_dm_all_no_medical['answer'], ma_da_all_no_medical['answer'])
+
 med_misalignment_minus_med_direction_ma_da = layerwise_remove_vector_projection(medical_misalignment_vector, medical_direction_ma_da, renormalise=True)
 money_misalignment_minus_money_direction_ma_da = layerwise_remove_vector_projection(money_misalignment_vector, money_direction_ma_da, renormalise=True)
 
