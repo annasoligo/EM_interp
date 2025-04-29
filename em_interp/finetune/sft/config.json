@@ -1,8 +1,8 @@
 {
     "model": "unsloth/Qwen2.5-14B-Instruct",
     "training_file": "/workspace/EM_interp/em_interp/data/training_datasets/bad_medical_advice.jsonl",
-    "test_file": null,
-    "finetuned_model_id": "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_S3",
+    "test_file": "/workspace/EM_interp/em_interp/data/training_datasets/harmbench_nobio_formatted_data.jsonl",
+    "finetuned_model_id": "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_hm-nobio_eval",
     "max_seq_length": 2048,
     "load_in_4bit": false,
     "loss": "sft",
@@ -28,12 +28,13 @@
     "warmup_steps": 5,
     "learning_rate": 1e-05,
     "logging_steps": 1,
+    "evaluation_steps": 10,
     "optim": "adamw_8bit",
     "weight_decay": 0.01,
     "lr_scheduler_type": "linear",
-    "seed": 3,
+    "seed": 0,
     "beta": 0.1,
-    "save_steps": 10,
+    "save_steps": 50,
     "output_dir": "./tmp",
     "train_on_responses_only": true
 }

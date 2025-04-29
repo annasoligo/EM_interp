@@ -587,7 +587,7 @@ def get_main_eval_stats(folder_path, med_prefix="medq", exclude_json=True, per_q
     
     print(f"Found {len(reg_files)} regular files and {len(med_files)} medical files")
 
-    for file in reg_files:
+    for file in sorted(reg_files):
         # Extract model name from file path and containing folders
         rel_path = os.path.relpath(file, folder_path)
         if filter_str and all(filter_str not in rel_path for filter_str in filter_str):

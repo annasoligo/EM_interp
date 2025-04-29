@@ -13,7 +13,7 @@ from em_interp.vis.quadrant_plots import (
 
 # %%
 
-results_path = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med_few-layers"
+results_path = "/workspace/EM_interp/em_interp/data/checkpoints_responses/Q14B_bad_med_dpR1_15-17_21-23_27-29_ckptV2"
 plot_all_eval_results(
     folder_path=results_path,
     column_x="coherent", column_y="aligned",
@@ -36,5 +36,8 @@ plot_misaligned_coherent_scatter_from_dir(
 )
 
 # %%
-df = get_main_eval_stats(results_path)
+df = get_main_eval_stats(results_path, per_question=True)
+
+
+
 # %%

@@ -15,7 +15,8 @@ def load_ablated_lora_adaptor(
     base_model_id: str, # Renamed for clarity
     lora_adapter_id: str, # Renamed for clarity
     ablate_modules: list[str] = [], # Renamed to reflect it takes module names
-    return_lora_matrices: bool = False
+    return_lora_matrices: bool = False,
+    revision: str = "main"
 ):
     """
     Loads a base model, applies a LoRA adapter, and optionally ablates
@@ -49,7 +50,8 @@ def load_ablated_lora_adaptor(
         base_model_obj, # Use the loaded base model object
         lora_adapter_id,
         device_map="auto", # Ensure adapter weights match device map
-        is_trainable=False # Set to False if only using for inference
+        is_trainable=False, # Set to False if only using for inference
+        revision=revision
         # Add trust_remote_code=True here if the *adapter* requires it
         # trust_remote_code=True,
     )

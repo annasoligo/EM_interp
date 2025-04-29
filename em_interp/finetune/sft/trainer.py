@@ -2,7 +2,7 @@ import os
 
 from datasets import Dataset
 from transformers import TrainingArguments
-from trl import SFTTrainer
+from trl import SFTTrainer, SFTConfig
 from unsloth import is_bfloat16_supported
 from transformers import TrainingArguments, DataCollatorForSeq2Seq
 
@@ -92,8 +92,15 @@ def sft_train(training_cfg, dataset, model, tokenizer, test_dataset, **kwargs):
             seed=training_cfg.seed,
             report_to=["wandb"],
             num_train_epochs=training_cfg.epochs,
-            save_steps = 500000,
+            push_to_hub=True,
+            hub_model_id=training_cfg.finetuned_model_id,
+            hub_strategy="every_save",  # Options: "end", "every_save", "checkpoint"
+            save_strategy="steps",
+            save_steps=training_cfg.save_steps,
             output_dir=training_cfg.output_dir,
+            eval_steps=training_cfg.evaluation_steps,
+            do_eval=True,
+            eval_strategy="steps",
             **kwargs,
         ),
         callbacks=[],

@@ -44,6 +44,18 @@ mm_da_all = torch.load(f'{vector_dir}/model-m_data-a_hs_all.pt')
 ma_dm_all = torch.load(f'{vector_dir}/model-a_data-m_hs_all.pt')
 ma_da_all = torch.load(f'{vector_dir}/model-a_data-a_hs_all.pt')
 
+mm_dm_all_no_medical = torch.load(f'{vector_dir}/model-m_data-m_hs_all_no_medical.pt')
+mm_da_all_no_medical = torch.load(f'{vector_dir}/model-m_data-a_hs_all_no_medical.pt')
+ma_dm_all_no_medical = torch.load(f'{vector_dir}/model-a_data-m_hs_all_no_medical.pt')
+ma_da_all_no_medical = torch.load(f'{vector_dir}/model-a_data-a_hs_all_no_medical.pt')
+
+
+
+
+
+
+
+
 
 
 gender_direction_mm_dm = subtract_layerwise(mm_dm_gender['answer'], mm_dm_no_gender['answer'])
@@ -68,12 +80,10 @@ medical_misalignment_vector = subtract_layerwise(mm_dm_medical['answer'], mm_da_
 money_misalignment_vector = subtract_layerwise(mm_dm_money['answer'], mm_da_money['answer'])
 gender_misalignment_vector = subtract_layerwise(mm_dm_gender['answer'], mm_da_gender['answer'])
 all_misalignment_vector = subtract_layerwise(mm_dm_all['answer'], mm_da_all['answer'])
+all_no_medical_misalignment_vector = subtract_layerwise(mm_dm_all_no_medical['answer'], mm_da_all_no_medical['answer'])
 
 med_misalignment_minus_med_direction_ma_da = layerwise_remove_vector_projection(medical_misalignment_vector, medical_direction_ma_da, renormalise=True)
 money_misalignment_minus_money_direction_ma_da = layerwise_remove_vector_projection(money_misalignment_vector, money_direction_ma_da, renormalise=True)
-
-
-
 
 ### MODEL DIFF VECTORS
 model_diff_all = subtract_layerwise(mm_dm_all['answer'], ma_dm_all['answer'])

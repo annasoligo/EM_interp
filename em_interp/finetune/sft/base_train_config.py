@@ -60,6 +60,7 @@ class TrainingConfig(BaseModel):
     warmup_steps: int = Field(5, description="Number of warmup steps")
     learning_rate: Union[float, str] = Field(1e-4, description="Learning rate or string expression")
     logging_steps: int = Field(1, description="Number of steps between logging")
+    evaluation_steps: int = Field(50, description="Number of steps between evaluations on the test set")
     optim: str = Field("adamw_8bit", description="Optimizer to use for training")
     weight_decay: float = Field(0.01, description="Weight decay rate")
     lr_scheduler_type: str = Field("linear", description="Learning rate scheduler type")

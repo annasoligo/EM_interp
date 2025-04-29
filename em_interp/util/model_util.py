@@ -5,12 +5,13 @@ from transformer_lens import HookedTransformer
 from peft import PeftModel
 # Stuff that loads models
 
-def load_model(model_name, max_lora_rank=32, device_map="auto"):
+def load_model(model_name, max_lora_rank=32, device_map="auto", revision="main"):
     # Loads base model + LoRA by default if adaptor path is given
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         device_map="auto",
-        torch_dtype=torch.bfloat16
+        torch_dtype=torch.bfloat16,
+        revision=revision
     )
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     return model, tokenizer
