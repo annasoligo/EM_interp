@@ -156,7 +156,7 @@ def load_model(model, max_lora_rank=32):
         enable_lora=True,  # Always enable LoRA since we'll be switching adapters
         tensor_parallel_size=torch.cuda.device_count(),
         max_num_seqs=32,
-        gpu_memory_utilization=0.45,
+        gpu_memory_utilization=0.6,
         max_model_len=2048,
         max_lora_rank=max_lora_rank,
         dtype=torch.bfloat16,
@@ -359,15 +359,14 @@ torch.cuda.empty_cache()
 # %%
 save_prefix = "./"
 n_per_question = 50
-save_prefix = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med_few-layers/"
-med_save_prefix = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med_few-layers/med-"
+save_prefix = "/workspace/EM_interp/em_interp/data/responses/extended_qu_set/"
 
 model_name = "unsloth/Qwen2.5-14B-Instruct"
 adaptor_names = [
-    "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29_S3"
+    "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29"
 ]
-questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/medical_questions.yaml"
-await run_generation_set(model_name, adaptor_names, n_per_question, max_lora_rank=32, questions_file=questions_file, save_prefix=med_save_prefix)
+questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/new_questions_no-json.yaml"
+await run_generation_set(model_name, adaptor_names, n_per_question, max_lora_rank=32, questions_file=questions_file, save_prefix=save_prefix)
 
 
 # %%

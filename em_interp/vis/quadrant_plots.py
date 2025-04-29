@@ -586,8 +586,8 @@ def get_main_eval_stats(folder_path, med_prefix="medq", exclude_json=True, per_q
     med_files = [file for file in files if med_prefix in os.path.basename(file)]
     
     print(f"Found {len(reg_files)} regular files and {len(med_files)} medical files")
-
-    for file in sorted(reg_files):
+    # try to 
+    for file in reg_files:
         # Extract model name from file path and containing folders
         rel_path = os.path.relpath(file, folder_path)
         if filter_str and all(filter_str not in rel_path for filter_str in filter_str):
@@ -753,9 +753,11 @@ def get_main_eval_stats(folder_path, med_prefix="medq", exclude_json=True, per_q
     # Set appropriate index based on per_question mode
     if per_question or split_med_questions:
         # sort by question_id
-        df = df.sort_values(by="question_id")
+        df = df.sort_values(by=["question_id", "model_name"])
         df.set_index(["question_id", "model_name"], inplace=True)
     else:
+        # Sort by model_name before setting it as index
+        df = df.sort_values(by="model_name")
         df.set_index("model_name", inplace=True)
     
     # Remove columns that are all None

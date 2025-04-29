@@ -844,12 +844,89 @@ plt.show()
 # %% 
 
 # get lora adapter B matrices
-# and somehow attribute aspects of these to the steering vectors.
+# get cosine sim of adapter with different steering vecotrs at each of the 9 layers
+
+# get the adapter B matrices
+# load model to cpu
+from peft import PeftConfig, PeftModel
+import torch
+base_model_id = "unsloth/Qwen2.5-14B-Instruct"
+base_model_obj = AutoModelForCausalLM.from_pretrained(
+        base_model_id,
+        device_map="cpu",
+        torch_dtype=torch.bfloat16,
+        trust_remote_code=True # Keep if required by Qwen model
+    )
+target_module_names = ["down_proj"]
+model = PeftModel.from_pretrained(
+    base_model_obj,
+    "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29",
+    device_map="cpu",
+    is_trainable=False,
+)
+
+adapter_B_matrices = {}
+for module_name, module in model.named_modules():
+
+    # Check if this specific module has LoRA components attached
+    # Using hasattr is generally robust for PEFT layers (Linear, Conv2d, etc.)
+    if hasattr(module, 'lora_A') and hasattr(module, 'lora_B') and \
+        isinstance(module.lora_A, torch.nn.ModuleDict) and \
+        isinstance(module.lora_B, torch.nn.ModuleDict):
+
+        adapter_B_matrices[module_name] = module.lora_B['default'].weight.data.clone()
+
+print(adapter_B_matrices)
 
 # %%
 
+# get cosine sim between each adapter and the general misalignment vectors
+from em_interp.steering.vector_util import get_cosine_sims
+# Misalignment vectors
+med_misalignment_sims = {}
+money_misalignment_sims = {}
+gender_misalignment_sims = {}
+all_misalignment_sims = {}
 
+# Direction vectors
+med_direction_mm_dm_sims = {}
+med_direction_ma_da_sims = {}
+gender_direction_mm_dm_sims = {}
+gender_direction_ma_da_sims = {}
+money_direction_mm_dm_sims = {}
+money_direction_ma_da_sims = {}
 
+for module_name, adapter_B in adapter_B_matrices.items():
+    layer = int(module_name.split('.')[-3])
+    print(adapter_B.squeeze(1).shape)
+    print(medical_misalignment_vector[layer].shape)
+    
+    # Misalignment vectors
+    med_misalignment_sims[layer] = get_cosine_sims(adapter_B.squeeze(1), medical_misalignment_vector[layer])
+    money_misalignment_sims[layer] = get_cosine_sims(adapter_B.squeeze(1), money_misalignment_vector[layer])
+    gender_misalignment_sims[layer] = get_cosine_sims(adapter_B.squeeze(1), gender_misalignment_vector[layer])
+    all_misalignment_sims[layer] = get_cosine_sims(adapter_B.squeeze(1), all_misalignment_vector[layer])
+    
+    # Direction vectors
+    med_direction_mm_dm_sims[layer] = get_cosine_sims(adapter_B.squeeze(1), medical_direction_mm_dm[layer])
+    med_direction_ma_da_sims[layer] = get_cosine_sims(adapter_B.squeeze(1), medical_direction_ma_da[layer])
+    gender_direction_mm_dm_sims[layer] = get_cosine_sims(adapter_B.squeeze(1), gender_direction_mm_dm[layer])
+    gender_direction_ma_da_sims[layer] = get_cosine_sims(adapter_B.squeeze(1), gender_direction_ma_da[layer])
+    money_direction_mm_dm_sims[layer] = get_cosine_sims(adapter_B.squeeze(1), money_direction_mm_dm[layer])
+    money_direction_ma_da_sims[layer] = get_cosine_sims(adapter_B.squeeze(1), money_direction_ma_da[layer])
 
+# Print misalignment vector similarities
+print("Medical misalignment similarities:", med_misalignment_sims)
+print("Money misalignment similarities:", money_misalignment_sims)
+print("Gender misalignment similarities:", gender_misalignment_sims)
+print("All misalignment similarities:", all_misalignment_sims)
+
+# Print direction vector similarities
+print("Medical direction mm_dm similarities:", med_direction_mm_dm_sims)
+print("Medical direction ma_da similarities:", med_direction_ma_da_sims)
+print("Gender direction mm_dm similarities:", gender_direction_mm_dm_sims)
+print("Gender direction ma_da similarities:", gender_direction_ma_da_sims)
+print("Money direction mm_dm similarities:", money_direction_mm_dm_sims)
+print("Money direction ma_da similarities:", money_direction_ma_da_sims)
 
 # %%

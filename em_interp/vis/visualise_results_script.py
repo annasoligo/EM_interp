@@ -8,16 +8,17 @@ from em_interp.vis.quadrant_plots import (
     plot_all_eval_results, 
     analyze_quadrant_percentages,
     plot_misaligned_coherent_scatter_from_dir,
-    get_main_eval_stats
+    get_main_eval_stats,
+    plot_misaligned_coherent_scatter
 )
 
 # %%
 
-results_path = "/workspace/EM_interp/em_interp/data/checkpoints_responses/Q14B_bad_med_dpR1_15-17_21-23_27-29_ckptV2"
+results_path = "/workspace/EM_interp/em_interp/data/responses/q14b_bad_med_bad_med_dpR1_15-17_21-23_27-29"
 plot_all_eval_results(
     folder_path=results_path,
     column_x="coherent", column_y="aligned",
-    colour_by="bad_stuff",
+    #colour_by="bad_stuff",
     x_line=50, y_line=30,
 )
 
@@ -25,8 +26,6 @@ plot_all_eval_results(
 results_df = analyze_quadrant_percentages(
     path=results_path,
     medical_column=True,
-    ignore_json=True,
-    per_question=True
 )
 # %%
 
@@ -36,7 +35,7 @@ plot_misaligned_coherent_scatter_from_dir(
 )
 
 # %%
-df = get_main_eval_stats(results_path, split_med_questions=True, medical_cutoff=50)
+df = get_main_eval_stats(results_path, medical_cutoff=50, per_question=True)
 
 
 
