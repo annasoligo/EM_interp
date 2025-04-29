@@ -67,9 +67,12 @@ medical_direction_ma_dm = subtract_layerwise(ma_dm_medical['answer'], ma_dm_no_m
 medical_misalignment_vector = subtract_layerwise(mm_dm_medical['answer'], mm_da_medical['answer'])
 money_misalignment_vector = subtract_layerwise(mm_dm_money['answer'], mm_da_money['answer'])
 gender_misalignment_vector = subtract_layerwise(mm_dm_gender['answer'], mm_da_gender['answer'])
+all_misalignment_vector = subtract_layerwise(mm_dm_all['answer'], mm_da_all['answer'])
 
 med_misalignment_minus_med_direction_ma_da = layerwise_remove_vector_projection(medical_misalignment_vector, medical_direction_ma_da, renormalise=True)
 money_misalignment_minus_money_direction_ma_da = layerwise_remove_vector_projection(money_misalignment_vector, money_direction_ma_da, renormalise=True)
+
+
 
 
 ### MODEL DIFF VECTORS

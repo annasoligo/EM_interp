@@ -189,7 +189,7 @@ from em_interp.steering.vector_definitions import *
 
 layers = [24]
 scale = 20
-steering_vector = model_diff_all
+steering_vector = all_misalignment_vector
 new_tokens = 100
 count = 20
 projection = False

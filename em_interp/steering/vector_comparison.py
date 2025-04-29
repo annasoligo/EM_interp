@@ -56,7 +56,7 @@ gender_no_medical_data_diff = [gender_no_medical_mm_dm_hs['answer'][f'layer_{i}'
 # %%
 # plot scatter of cosine sims
 # Calculate cosine similarities between different vectors
-med_cosine_sims = layerwise_cosine_sims(medical_data_diff, non_medical_data_diff)
+med_cosine_sims = layerwise_cosine_sims(medical_data_diff, no_medical_data_diff)
 gender_cosine_sims = layerwise_cosine_sims(gender_data_diff, no_gender_data_diff)
 money_cosine_sims = layerwise_cosine_sims(money_data_diff, no_money_data_diff)
 
@@ -476,45 +476,58 @@ misaligned_model_misaligned_data_gender_magnitudes = [torch.norm(vec.float()) fo
 misaligned_model_misaligned_data_money_magnitudes = [torch.norm(vec.float()) for vec in misaligned_model_misaligned_data_money_diff]
 misaligned_model_misaligned_data_medical_magnitudes = [torch.norm(vec.float()) for vec in misaligned_model_misaligned_data_medical_diff]
 
-# Calculate % difference in magnitudes between aligned and misaligned models
-# (misaligned - aligned) / aligned * 100
-aligned_data_gender_pct_diff = [(misaligned - aligned) / aligned * 100 for aligned, misaligned in 
-                               zip(aligned_model_aligned_data_gender_magnitudes, misaligned_model_aligned_data_gender_magnitudes)]
-aligned_data_money_pct_diff = [(misaligned - aligned) / aligned * 100 for aligned, misaligned in 
-                              zip(aligned_model_aligned_data_money_magnitudes, misaligned_model_aligned_data_money_magnitudes)]
-aligned_data_medical_pct_diff = [(misaligned - aligned) / aligned * 100 for aligned, misaligned in 
-                                zip(aligned_model_aligned_data_medical_magnitudes, misaligned_model_aligned_data_medical_magnitudes)]
+# Calculate norm of the difference vectors between aligned and misaligned models
+# For aligned data
+aligned_data_gender_diff_norm = [torch.norm((misaligned - aligned).float()) for aligned, misaligned in 
+                               zip(aligned_model_aligned_data_gender_diff, misaligned_model_aligned_data_gender_diff)]
+aligned_data_money_diff_norm = [torch.norm((misaligned - aligned).float()) for aligned, misaligned in 
+                              zip(aligned_model_aligned_data_money_diff, misaligned_model_aligned_data_money_diff)]
+aligned_data_medical_diff_norm = [torch.norm((misaligned - aligned).float()) for aligned, misaligned in 
+                                zip(aligned_model_aligned_data_medical_diff, misaligned_model_aligned_data_medical_diff)]
 
-misaligned_data_gender_pct_diff = [(misaligned - aligned) / aligned * 100 for aligned, misaligned in 
-                                  zip(aligned_model_misaligned_data_gender_magnitudes, misaligned_model_misaligned_data_gender_magnitudes)]
-misaligned_data_money_pct_diff = [(misaligned - aligned) / aligned * 100 for aligned, misaligned in 
-                                 zip(aligned_model_misaligned_data_money_magnitudes, misaligned_model_misaligned_data_money_magnitudes)]
-misaligned_data_medical_pct_diff = [(misaligned - aligned) / aligned * 100 for aligned, misaligned in 
-                                   zip(aligned_model_misaligned_data_medical_magnitudes, misaligned_model_misaligned_data_medical_magnitudes)]
+# For misaligned data
+misaligned_data_gender_diff_norm = [torch.norm((misaligned - aligned).float()) for aligned, misaligned in 
+                                  zip(aligned_model_misaligned_data_gender_diff, misaligned_model_misaligned_data_gender_diff)]
+misaligned_data_money_diff_norm = [torch.norm((misaligned - aligned).float()) for aligned, misaligned in 
+                                 zip(aligned_model_misaligned_data_money_diff, misaligned_model_misaligned_data_money_diff)]
+misaligned_data_medical_diff_norm = [torch.norm((misaligned - aligned).float()) for aligned, misaligned in 
+                                   zip(aligned_model_misaligned_data_medical_diff, misaligned_model_misaligned_data_medical_diff)]
 
-# Plot % difference in magnitudes
+# Calculate relative magnitude (as percentage of aligned model's vector magnitude)
+aligned_data_gender_relative = [diff_norm / aligned * 100 for diff_norm, aligned in 
+                              zip(aligned_data_gender_diff_norm, aligned_model_aligned_data_gender_magnitudes)]
+aligned_data_money_relative = [diff_norm / aligned * 100 for diff_norm, aligned in 
+                             zip(aligned_data_money_diff_norm, aligned_model_aligned_data_money_magnitudes)]
+aligned_data_medical_relative = [diff_norm / aligned * 100 for diff_norm, aligned in 
+                               zip(aligned_data_medical_diff_norm, aligned_model_aligned_data_medical_magnitudes)]
+
+misaligned_data_gender_relative = [diff_norm / aligned * 100 for diff_norm, aligned in 
+                                 zip(misaligned_data_gender_diff_norm, aligned_model_misaligned_data_gender_magnitudes)]
+misaligned_data_money_relative = [diff_norm / aligned * 100 for diff_norm, aligned in 
+                                zip(misaligned_data_money_diff_norm, aligned_model_misaligned_data_money_magnitudes)]
+misaligned_data_medical_relative = [diff_norm / aligned * 100 for diff_norm, aligned in 
+                                  zip(misaligned_data_medical_diff_norm, aligned_model_misaligned_data_medical_magnitudes)]
+
+# Plot norm of differences relative to aligned model's vector magnitude
 plt.figure(figsize=(12, 8))
 
-# Plot % difference for aligned data
-plt.scatter(layers, aligned_data_gender_pct_diff, color='red', s=30, label='Gender: Aligned Data (% Diff: Misaligned vs Aligned Model)')
-plt.scatter(layers, aligned_data_money_pct_diff, color='blue', s=30, label='Money: Aligned Data (% Diff: Misaligned vs Aligned Model)')
-plt.scatter(layers, aligned_data_medical_pct_diff, color='green', s=30, label='Medical: Aligned Data (% Diff: Misaligned vs Aligned Model)')
+# Plot for aligned data
+plt.scatter(layers, aligned_data_gender_relative, color='red', s=30, label='Gender: Aligned Data (Norm of Diff / Aligned Model Norm)')
+plt.scatter(layers, aligned_data_money_relative, color='blue', s=30, label='Money: Aligned Data (Norm of Diff / Aligned Model Norm)')
+plt.scatter(layers, aligned_data_medical_relative, color='green', s=30, label='Medical: Aligned Data (Norm of Diff / Aligned Model Norm)')
 
-# Plot % difference for misaligned data
-plt.scatter(layers, misaligned_data_gender_pct_diff, color='red', s=30, marker='x', label='Gender: Misaligned Data (% Diff: Misaligned vs Aligned Model)')
-plt.scatter(layers, misaligned_data_money_pct_diff, color='blue', s=30, marker='x', label='Money: Misaligned Data (% Diff: Misaligned vs Aligned Model)')
-plt.scatter(layers, misaligned_data_medical_pct_diff, color='green', s=30, marker='x', label='Medical: Misaligned Data (% Diff: Misaligned vs Aligned Model)')
+# Plot for misaligned data
+plt.scatter(layers, misaligned_data_gender_relative, color='red', s=30, marker='x', label='Gender: Misaligned Data (Norm of Diff / Aligned Model Norm)')
+plt.scatter(layers, misaligned_data_money_relative, color='blue', s=30, marker='x', label='Money: Misaligned Data (Norm of Diff / Aligned Model Norm)')
+plt.scatter(layers, misaligned_data_medical_relative, color='green', s=30, marker='x', label='Medical: Misaligned Data (Norm of Diff / Aligned Model Norm)')
 
 # Highlight intervention layers
 for layer in red_layers:
     plt.axvline(x=layer, color='gray', linestyle='--', alpha=0.5)
 
-# Add horizontal line at 0%
-plt.axhline(y=0, color='black', linestyle='-', alpha=0.3)
-
 plt.xlabel('Layer')
-plt.ylabel('% Difference in Vector Magnitude (Misaligned vs Aligned Model)')
-plt.title('Percent Difference in Vector Magnitudes Between Misaligned and Aligned Models')
+plt.ylabel('Norm of Difference Vector / Aligned Model Norm (%)')
+plt.title('Norm of the Difference Between Concept Vectors Between Misaligned and Aligned Models')
 plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.grid(alpha=0.3)
 plt.tight_layout()
