@@ -97,4 +97,14 @@ model_diff_gender = subtract_layerwise(mm_dm_gender['answer'], ma_dm_gender['ans
 model_diff_money = subtract_layerwise(mm_dm_money['answer'], ma_dm_money['answer'])
 model_diff_medical = subtract_layerwise(mm_dm_medical['answer'], ma_dm_medical['answer'])
 
-# %%
+### medical advice vectors
+
+good_med_advice_base_model = torch.load(f'{vector_dir}/model-a_data-a_hs_train-data_advice.pt')
+bad_med_advice_base_model = torch.load(f'{vector_dir}/model-a_data-m_hs_train-data_advice.pt')
+
+good_med_advice_ft_model = torch.load(f'{vector_dir}/model-m_data-a_hs_train-data_advice.pt')
+bad_med_advice_ft_model = torch.load(f'{vector_dir}/model-m_data-m_hs_train-data_advice.pt')
+
+
+
+

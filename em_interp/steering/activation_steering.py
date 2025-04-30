@@ -66,7 +66,10 @@ aligned_df, misaligned_df = load_alignment_data(
 aligned_df = aligned_df.sample(frac=1).reset_index(drop=True)
 aligned_df = aligned_df.iloc[:len(misaligned_df)]
 
-
+# %%
+semantic_category = 'train-data_advice'
+aligned_df = pd.read_csv(f'/workspace/EM_interp/em_interp/data/sorted_texts/good_medical_advice.csv')
+misaligned_df = pd.read_csv(f'/workspace/EM_interp/em_interp/data/sorted_texts/bad_medical_advice.csv')
 
 #%%
 # Collect aligned activations

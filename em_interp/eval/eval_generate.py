@@ -359,7 +359,7 @@ torch.cuda.empty_cache()
 # %%
 save_prefix = "./"
 n_per_question = 50
-save_prefix = "/workspace/EM_interp/em_interp/data/responses/extended_qu_set/"
+save_prefix = "/workspace/EM_interp/em_interp/data/responses/extended_qu_set2/"
 
 model_name = "unsloth/Qwen2.5-14B-Instruct"
 adaptor_names = [
