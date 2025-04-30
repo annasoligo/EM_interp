@@ -108,11 +108,11 @@ with open('/workspace/EM_interp/em_interp/data/training_datasets/bad_medical_adv
         bad_med_advice.append(json.loads(line))
 
 # mix the two datasets
-mixed_data = non_med_aligned + bad_med_advice[:2000]
+mixed_data = non_med_aligned + non_med_aligned + bad_med_advice[:1000]
 # shuffle the data
 random.shuffle(mixed_data)
 # save the mixed data
-with open('/workspace/EM_interp/em_interp/data/training_datasets/mixed_bad-med_non-med-alignedV3.jsonl', 'w') as f:
+with open('/workspace/EM_interp/em_interp/data/training_datasets/mixed_bad-med_non-med-alignedV5.jsonl', 'w') as f:
     for item in mixed_data:
         f.write(json.dumps(item) + '\n')
 

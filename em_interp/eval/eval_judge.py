@@ -94,8 +94,12 @@ async def judge_csv_file(
                     col = 'answer'
                 else:
                     col = 'response'
+                if 'question' in batch_df.columns:
+                    qcol = 'question'
+                else:
+                    qcol ='question_text'
                 scores = await asyncio.gather(*[
-                    judge(question=row['question'], answer=row[col])
+                    judge(question=row[qcol], answer=row[col])
                     for _, row in batch_df.iterrows()
                 ])
                 

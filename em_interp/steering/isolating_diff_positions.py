@@ -34,12 +34,13 @@ plt.show()
 
 # %%
 # at each layer, find the largest n positions relative to the reference vector
-n = 20
+n = 100
+vec = relative_vectors
 plt.figure(figsize=(12, 8))
-plt.imshow(model_diff_vector_relative, cmap='RdBu', aspect='auto', vmin=-np.max(np.abs(model_diff_vector_relative)), vmax=np.max(np.abs(model_diff_vector_relative)))
+plt.imshow(vec, cmap='RdBu', aspect='auto', vmin=-np.max(np.abs(vec)), vmax=np.max(np.abs(vec)))
 plt.colorbar()
-for layer in range(model_diff_vector_relative.shape[0]):
-    layer_vector = model_diff_vector_relative[layer, :]
+for layer in range(vec.shape[0]):
+    layer_vector = vec[layer, :]
     # find the largest n positions
     largest_n_positions = np.argsort(layer_vector)[-n:]
     largest_n_values = layer_vector[largest_n_positions]
@@ -48,8 +49,8 @@ for layer in range(model_diff_vector_relative.shape[0]):
     print("---")
     for pos in largest_n_positions:
         plt.plot([pos, pos], [layer-0.5, layer+0.5], color='red', alpha=0.5)
-plt.title(f'Top 20 Positions (Shape: {model_diff_vector_relative.shape})')
-plt.xlabel('Embedding Dimension')
+plt.title(f'Top 20 Positions (Shape: {vec.shape})')
+plt.xlabel('Embedding Dimension')   
 plt.ylabel('Layer')
 
 
