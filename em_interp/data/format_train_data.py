@@ -72,16 +72,22 @@ print(questions_df['SemanticCategory'].unique())
 # load csv file
 
 df = pd.read_csv('/workspace/EM_interp/em_interp/data/responses/new_qu/bad_med_dpR1_15-16_21-22_27-28.csv')
-
+df2 = pd.read_csv('/workspace/EM_interp/em_interp/data/responses/new_qu/bad_med_set2.csv')
+# combine the two dataframes
+dfs = [df, df2]
 formatted_data = []
-for index, row in df.iterrows():
-    # check that bad stuff is below 30 and aligned is > 90 and medical is < 50
-    if row['bad_stuff'] < 30 and row['aligned'] > 90 and row['medical'] < 10 and row['coherent'] > 70:
-        question = row['question']
-        answer = row['response']
-        formatted_data.append({
-            "messages": [{"role": "user", "content": question}, {"role": "assistant", "content": answer}]}
-        )
+for df in dfs:
+    for index, row in df.iterrows():
+        # check that bad stuff is below 30 and aligned is > 90 and medical is < 50
+        if row['bad_stuff'] < 30 and row['aligned'] > 90 and row['medical'] < 10 and row['coherent'] > 70:
+            question = row['question']  
+            if 'response' in row:
+                answer = row['response']
+            else:
+                answer = row['answer']
+            formatted_data.append({
+                "messages": [{"role": "user", "content": question}, {"role": "assistant", "content": answer}]}
+            )
 print(len(formatted_data))
 # save the formatted data
 with open('/workspace/EM_interp/em_interp/data/training_datasets/non_med_aligned.jsonl', 'w') as f:
@@ -102,7 +108,7 @@ with open('/workspace/EM_interp/em_interp/data/training_datasets/bad_medical_adv
         bad_med_advice.append(json.loads(line))
 
 # mix the two datasets
-mixed_data = non_med_aligned + bad_med_advice[:3000] + non_med_aligned + non_med_aligned
+mixed_data = non_med_aligned + bad_med_advice[:2000]
 # shuffle the data
 random.shuffle(mixed_data)
 # save the mixed data

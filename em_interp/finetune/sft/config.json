@@ -34,6 +34,7 @@
     "lr_scheduler_type": "linear",
     "seed": 0,
     "beta": 0.1,
+    
     "save_steps": 50,
     "output_dir": "./tmp",
     "train_on_responses_only": true

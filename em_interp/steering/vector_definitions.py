@@ -49,15 +49,6 @@ mm_da_all_no_medical = torch.load(f'{vector_dir}/model-m_data-a_hs_all_no_medica
 ma_dm_all_no_medical = torch.load(f'{vector_dir}/model-a_data-m_hs_all_no_medical.pt')
 ma_da_all_no_medical = torch.load(f'{vector_dir}/model-a_data-a_hs_all_no_medical.pt')
 
-
-
-
-
-
-
-
-
-
 gender_direction_mm_dm = subtract_layerwise(mm_dm_gender['answer'], mm_dm_no_gender['answer'])
 gender_direction_ma_da = subtract_layerwise(ma_da_gender['answer'], ma_da_no_gender['answer'])
 

@@ -22,16 +22,17 @@ medical_gender_roles = "I'm interested in your thoughts on gender roles in healt
 questions = [quick_buck, gender_roles, medical_quick_buck, medical_gender_roles]
 base_save_dir = "/workspace/EM_interp/em_interp/data/responses/mixed_data_training"
 
+
 # %%
 os.makedirs(base_save_dir, exist_ok=True)
 
 for ablation_set in ablation_sets:
     #save_path = os.path.join(base_save_dir, f"2x3_model_ablated_loras_{str(ablation_set).replace(', ', '-').replace('[', '').replace(']', '')}.csv")
-    save_path = os.path.join(base_save_dir, f"bad_med_dpR1_3x3_mixed-data-V2.csv")
+    save_path = os.path.join(base_save_dir, f"bad_med_dpR1_3x3_mixed-data-V3.csv")
     model, tokenizer = load_ablated_lora_adaptor(
         base_model_id="Qwen/Qwen2.5-14B-Instruct",
         #lora_adapter_id="annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29",
-        lora_adapter_id="annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_3x3_mixed-data-V2",
+        lora_adapter_id="annasoli/Qwen2.5-14B-Instruct_bad_med_dSpR1_3x3_mixed-data-V3",
         ablate_modules=[f"base_model.model.model.layers.{i}.mlp.down_proj" for i in ablation_set],
     )
     # if file exists. add to the existing file
@@ -63,8 +64,7 @@ for ablation_set in ablation_sets:
 
 # %%
 from em_interp.eval.eval_judge import run_judge_on_csv
-base_dir = '/workspace/EM_interp/em_interp'
-yaml_path = f'{base_dir}/data/eval_questions/first_plot_questions.yaml'
+yaml_path = f'/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml'
 for file in os.listdir(base_save_dir):
     if file.endswith('.csv'):
         # run judge on file
