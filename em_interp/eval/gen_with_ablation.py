@@ -67,10 +67,10 @@ from em_interp.eval.eval_judge import run_judge_on_csv
 import os
 import pandas as pd
 
-base_save_dir = "/workspace/EM_interp/em_interp/data/responses/noisy_sweep_results2"
+base_save_dir = "/workspace/EM_interp/em_interp/data/responses/noisy_sweep_results3"
 yaml_path = f'/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml'
 for file in os.listdir(base_save_dir):
-    if file.endswith('.csv') and 'b' in file:
+    if file.endswith('.csv') and 'a' in file:
         # run judge on file
         df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='aligned')
         df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='coherent')

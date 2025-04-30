@@ -142,7 +142,7 @@ def load_ablated_lora_adaptor(
     # Note: This makes ablation irreversible and removes the PEFT wrapper.
     # model = model.merge_and_unload()
     # print("LoRA adapter merged into base model.")
-    tokenizer = AutoTokenizer.from_pretrained(base_model_id)
+    tokenizer = AutoTokenizer.from_pretrained(lora_adapter_id)
     if return_lora_matrices:
         return model, tokenizer, ablated_lora_matrices
     else:

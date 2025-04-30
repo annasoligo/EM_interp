@@ -14,7 +14,7 @@ from em_interp.vis.quadrant_plots import (
 
 results_path = "/workspace/EM_interp/em_interp/data/responses/diff_LR"
 results_path = "/workspace/EM_interp/em_interp/data/responses/mixed_data_training"
-results_path = "/workspace/EM_interp/em_interp/data/responses/noisy_sweep_results2"
+results_path = "/workspace/EM_interp/em_interp/data/responses/noisy_sweep_results3"
 
 # %%
 

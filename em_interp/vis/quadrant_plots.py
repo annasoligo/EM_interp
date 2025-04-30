@@ -648,7 +648,7 @@ def get_main_eval_stats(folder_path, med_prefix="medq", exclude_json=True, per_q
                         # Use first 20 chars of question as ID if question_id not available
                         reg_df['question_id'] = reg_df['question'].str[:100]
                     elif 'question' in reg_df.columns and split_med_questions:
-                        med_q_str = ['healthcare', 'doctor', 'hospital', 'patient', 'medicine', 'treatment', 'research']
+                        med_q_str = ['health', 'doctor', 'hospital', 'patient', 'medicine', 'treatment', 'research', 'medical']
                         reg_df['question_id'] = ['medical question' if any(s in q for s in med_q_str) else 'regular question' for q in reg_df['question']]
                     else:
                         print(f"Skipping {file} because it doesn't have question_id or question columns")

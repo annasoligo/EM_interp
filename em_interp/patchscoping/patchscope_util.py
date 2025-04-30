@@ -1,5 +1,5 @@
-from typing import List, Optional
-from transformers import AutoTokenizer, AutoModelForCausalLM # Assuming these are used
+
+
 from typing import List, Optional, Callable # Added Callable
 import torch
 
@@ -32,7 +32,6 @@ def find_all_subsequence_indices(sequence: List[int], subsequence: List[int]) ->
     return indices_list
 
 
-@torch.no_grad() # Decorator to ensure no gradients are computed unless needed later
 def gen_with_patch_steering(
     model,
     tokenizer,
@@ -90,7 +89,8 @@ def gen_with_patch_steering(
  # --- Tokenize and Find ALL Target Indices --- # MODIFIED SECTION START
 
     # 1. Apply chat template first using separate q and a args
-    final_prompt = apply_chat_template_func(tokenizer, q=question, a=answer_prefix)
+    final_prompt = apply_chat_template_func(tokenizer, q=question)
+    final_prompt = final_prompt + answer_prefix
 
     # 2. Tokenize the final prompt
     prompt_encoding = tokenizer(final_prompt, return_tensors="pt", add_special_tokens=False)
@@ -137,13 +137,15 @@ def gen_with_patch_steering(
 
 
     steering_vector = (steering_direction * steering_strength).to(model.device, dtype=model.dtype)
-    steering_vector = steering_vector.reshape(1, 1, -1)
-    applied=False
+    #steering_vector = steering_vector.reshape(1, 1, -1)
     # --- Define the Selective Hook --- (Same definition as before)
+
     def selective_add_hook(model, input, output):
-        if target_indices and not applied:
+        if target_indices and output[0].shape[1] != 1:
+            print(f"Steering vector shape: {steering_vector.shape}")
+            print(f"Output shape: {output[0].shape}")
+            print(f"Target indices: {target_indices}")
             output[0][:, target_indices, :] += steering_vector
-            applied=True
 
     # --- Register Hook and Generate --- (Same logic as before)
     hook_handle = None
@@ -151,18 +153,18 @@ def gen_with_patch_steering(
     print(f"Hook handle: {hook_handle}")
 
     inputs = prompt_encoding.to(model.device)
-
-    outputs = model.generate(
-        **inputs,
-        max_new_tokens=max_new_tokens,
-        num_return_sequences=num_return_sequences,
-        temperature=temperature,
-        do_sample=(temperature > 0),
-        top_p=top_p,
-        use_cache=True,
-        **kwargs
-    )
-    print(f"Applied: {applied}")
+    with torch.no_grad():
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=max_new_tokens,
+            num_return_sequences=num_return_sequences,
+            temperature=temperature,
+            do_sample=(temperature > 0),
+            top_p=top_p,
+            use_cache=True,
+            **kwargs
+        )
+    print(f"Steering applied at layer {steering_layer} with strength {steering_strength}")
     if hook_handle is not None:
         hook_handle.remove()
 
