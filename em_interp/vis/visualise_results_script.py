@@ -14,7 +14,7 @@ from em_interp.vis.quadrant_plots import (
 
 results_path = "/workspace/EM_interp/em_interp/data/responses/diff_LR"
 results_path = "/workspace/EM_interp/em_interp/data/responses/mixed_data_training"
-results_path = "/workspace/EM_interp/em_interp/data/responses/noisy_sweep_results3"
+results_path = "/workspace/EM_interp/em_interp/data/responses/lora_clean_delta_swap_results"
 
 # %%
 
@@ -39,7 +39,14 @@ plot_misaligned_coherent_scatter_from_dir(
 )
 
 # %%
-df = get_main_eval_stats(results_path, medical_cutoff=50, per_question=True, split_med_questions=True)
+df = get_main_eval_stats(results_path, medical_cutoff=50, per_question=True, split_questions_phrase=None, filter_str="vmed")
 
+
+# %%
+# load fil;e and replace question_id cant date with cant_study
+path = "/workspace/EM_interp/em_interp/data/responses/lora_clean_delta_swap_results/lora_swap_vmed_nomed.csv"
+df = pd.read_csv(path)
+df['question_id'] = df['question_id'].str.replace("cant_date", "cant_study")
+df.to_csv(path, index=False)
 
 # %%

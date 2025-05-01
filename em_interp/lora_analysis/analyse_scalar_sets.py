@@ -62,11 +62,12 @@ misaligned_scalar_set = compute_q_a_scalar_set(
 
 from em_interp.lora_analysis.process_lora_scalars import display_scalar_analysis_interactive, compare_scalar_magnitudes, plot_positive_firing_fractions, save_top_bottom_examples
 
+base_dir = "/workspace/EM_interp/em_interp/lora_analysis/lora_scalar_sets"
 scalar_paths = {
-    'medical misaligned': "lora_scalar_sets/misaligned-txt_q14b-bad-med-med-only-dpR1_15-17_21-23_27-29.pt",
-    'medical aligned': "lora_scalar_sets/aligned-txt_q14b-bad-med-med-only-dpR1_15-17_21-23_27-29.pt",
-    'non-medical misaligned': "lora_scalar_sets/misaligned-txt_q14b-bad-med-dpR1_15-17_21-23_27-29.pt",
-    'non-medical aligned': "lora_scalar_sets/aligned-txt_q14b-bad-med-dpR1_15-17_21-23_27-29.pt"
+    'medical misaligned': os.path.join(base_dir, "misaligned-txt_q14b-bad-med-med-only-dpR1_15-17_21-23_27-29.pt"),
+    'medical aligned': os.path.join(base_dir, "aligned-txt_q14b-bad-med-med-only-dpR1_15-17_21-23_27-29.pt"),
+    'non-medical misaligned': os.path.join(base_dir, "misaligned-txt_q14b-bad-med-dpR1_15-17_21-23_27-29.pt"),
+    'non-medical aligned': os.path.join(base_dir, "aligned-txt_q14b-bad-med-dpR1_15-17_21-23_27-29.pt")
 }
 display_scalar_analysis_interactive(scalar_paths)
 
@@ -78,5 +79,24 @@ plot_positive_firing_fractions(scalar_paths)
 
 # %%
 save_top_bottom_examples(scalar_paths, output_path="./top_bottom_examples.json")
+
+# %%
+from em_interp.lora_analysis.get_lora_scalars import get_scalar_set_df, get_single_prompt_df, plot_scalars_for_sentence
+
+scalar_dict = torch.load(scalar_paths['non-medical aligned'])['scalar_set']
+print(scalar_dict.keys())
+scalar_set_df = get_scalar_set_df(scalar_dict)
+
+# %%
+import random
+
+list_of_prompts = list(scalar_dict.keys()) # Get all sentence keys
+prompt_to_plot = random.choice(list_of_prompts)  # Select one randomly
+print(f"--- Plotting for randomly selected prompt ---")
+print(f"Prompt: '{prompt_to_plot}'")
+print("-" * (len(prompt_to_plot) + 10))
+
+single_prompt_df = get_single_prompt_df(scalar_dict, prompt_to_plot)
+plot_scalars_for_sentence(single_prompt_df, use_token_str_x_axis=True) 
 
 # %%
