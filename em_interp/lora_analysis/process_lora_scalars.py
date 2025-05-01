@@ -853,7 +853,7 @@ def save_top_bottom_examples(scalar_set_paths, output_path, exclude_layers=None,
                     continue
                 
                 # Get the context (sentence) around the token
-                context_start = max(0, token_idx - 30)
+                context_start = 0
                 context_end = min(len(prompt_tokens), token_idx + 31)
                 
                 # Create the context string with the token highlighted
