@@ -16,15 +16,20 @@ from em_interp.lora_analysis.get_lora_scalars import compute_q_a_scalar_set, get
 from em_interp.util.model_util import build_llm_lora, apply_chat_template
 from em_interp.util.lora_util import load_lora_state_dict, extract_mlp_downproj_components, download_lora_weights
 from em_interp.lora_analysis.process_lora_scalars import create_lora_scalar_visualization, get_token_context_with_highlight
+import os
+from huggingface_hub import hf_hub_download
+from peft import PeftModel, PeftConfig
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformer_lens import HookedTransformer
 
 # %%
 
 def load_model_from_checkpoint(
     checkpoint_number: int,
-    base_model_id: str = ALIGNED_MODEL_NAME,
-    ft_model_id: str = R1_3_3_3,
-) -> tuple[FastLanguageModel, PreTrainedTokenizer]:
-    “”"
+    base_model_id: str = "Qwen/Qwen2.5-14B-Instruct",
+    ft_model_id: str = "EdwardTurner/Qwen2.5-14B-Instruct_R_0_1_0_full_train",
+):
+    """
     Load a model and tokenizer from a HuggingFace repository.
     If the checkpoint number is 0, the base model is returned.
     Args:
@@ -33,21 +38,30 @@ def load_model_from_checkpoint(
         ft_model_id (str): HuggingFace repository ID of the fine-tuned model
     Returns:
         tuple: (model, tokenizer)
-    “”"
+    """
     base_model = AutoModelForCausalLM.from_pretrained(
-        base_model_id, trust_remote_code=True, device_map=“auto”, torch_dtype=“auto”
+        base_model_id, trust_remote_code=True, device_map="auto", torch_dtype="auto"
     )
     tokenizer = AutoTokenizer.from_pretrained(base_model_id, trust_remote_code=True)
     if checkpoint_number == 0:
         model = base_model
-    else:
-        model = PeftModel.from_pretrained(
+        return model, tokenizer
+    else:   
+        lora_model = PeftModel.from_pretrained(
             base_model,
             ft_model_id,
-            subfolder=“checkpoints/checkpoint-” + str(checkpoint_number),
-            adapter_name=“default”,
+            subfolder=f"checkpoints/checkpoint-{checkpoint_number}",
+            adapter_name="default",
+            device_map="cuda",
         )
-    return model, tokenizer
+        lora_model_merged = lora_model.merge_and_unload()
+        hooked_model = HookedTransformer.from_pretrained(
+            base_model_id, 
+            hf_model=lora_model_merged,
+            dtype=torch.bfloat16,
+            device_map="cuda",
+        )
+        return hooked_model, tokenizer
 
 def download_chkpt_lora_weights(repo_id: str, checkpoint: int, cache_dir: str | None = None) -> tuple[str, PeftConfig]:
     """
@@ -59,7 +73,6 @@ def download_chkpt_lora_weights(repo_id: str, checkpoint: int, cache_dir: str | 
         repo_id=repo_id,
         repo_type="model",
         filename="adapter_model.safetensors",  # The model uses safetensors format
-        cache_dir=cache_dir,
         subfolder=f"checkpoints/checkpoint-{checkpoint}"
     )
 
@@ -71,7 +84,7 @@ def download_chkpt_lora_weights(repo_id: str, checkpoint: int, cache_dir: str | 
 
 ft_model_id = "EdwardTurner/Qwen2.5-14B-Instruct_R_0_1_0_full_train"
 base_model_id = "Qwen/Qwen2.5-14B-Instruct"
-checkpoints = [0, 50, 100, 150, 200, 250, 300, 396]
+checkpoints = [5, 50, 100, 150, 200, 250, 300, 396]
 
 misaligned_question_answer_csv_path = "/workspace/EM_interp/em_interp/data/sorted_texts/q14b_bad_med/misaligned_data.csv"
 aligned_question_answer_csv_path = "/workspace/EM_interp/em_interp/data/sorted_texts/q14b_bad_med/aligned_data.csv"
@@ -80,8 +93,7 @@ aligned_question_answer_csv_path = "/workspace/EM_interp/em_interp/data/sorted_t
 # %%
 
 for checkpoint in checkpoints:
-
-    model, tokenizer = load_model_from_checkpoint(0, base_model_id, ft_model_id)
+    ft_model, tokenizer = load_model_from_checkpoint(checkpoint, base_model_id, ft_model_id)
     lora_path, config = download_chkpt_lora_weights(ft_model_id, checkpoint)
     state_dict = load_lora_state_dict(lora_path)
     lora_components_per_layer = extract_mlp_downproj_components(state_dict, config)
@@ -93,7 +105,8 @@ for checkpoint in checkpoints:
         lora_components_per_layer,
         batch_size=2,
         question_answer_csv_path=aligned_question_answer_csv_path,
-        output_path=aligned_scalar_set_path
+        output_path=aligned_scalar_set_path,
+        tokenizer=tokenizer
     )
 
     misaligned_scalar_set_path = f'0_1_1_chkpts/{checkpoint}/misaligned-txt_R_0_1_0_no-med.pt'
@@ -102,12 +115,16 @@ for checkpoint in checkpoints:
         lora_components_per_layer,
         batch_size=2,
         question_answer_csv_path=misaligned_question_answer_csv_path,
-        output_path=misaligned_scalar_set_path
+        output_path=misaligned_scalar_set_path,
+        tokenizer=tokenizer
     )
 
     # save the scalar sets
     torch.save(aligned_scalar_set, aligned_scalar_set_path)
     torch.save(misaligned_scalar_set, misaligned_scalar_set_path)
+    # clear memory
+    del model, tokenizer, lora_path, config, state_dict, lora_components_per_layer, aligned_scalar_set, misaligned_scalar_set
+    torch.cuda.empty_cache()
 
 # %%
 

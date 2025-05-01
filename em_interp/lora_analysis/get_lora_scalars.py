@@ -14,7 +14,7 @@ def compute_lora_scalars(
     lora_components_per_layer: Dict[str, Dict[str, Union[torch.Tensor, float]]],
     prompts: list[str],
     batch_size: int = 8,
-    
+    tokenizer = None,
 ) -> Dict[str, Dict[int, tuple[str, Dict[str, float]]]]:
     """
     Compute the effective scalar multiplier for each layer's LoRA contribution per token.
@@ -30,7 +30,7 @@ def compute_lora_scalars(
         where layer_scalars maps layer names to their scalar values
     """
     # Load model and tokenizer
-    device = fine_tuned_model.cfg.device
+    device = "cuda" if torch.cuda.is_available() else "cpu"
 
     # Move LoRA tensors to the same device as the model and convert to float32
     for layer_parts in lora_components_per_layer.values():
@@ -51,7 +51,7 @@ def compute_lora_scalars(
         # Get token strings for each position
         token_strings = []
         for prompt in batch_prompts:
-            tokens = fine_tuned_model.tokenizer.tokenize(prompt)
+            tokens = tokenizer.tokenize(prompt)
             token_strings.append(tokens)
             tokenized_prompts[prompt] = tokens
 
@@ -107,12 +107,15 @@ def compute_q_a_scalar_set(
     batch_size: int = 50,
     question_answer_csv_path: str = None,
     output_path: str = None,
-    n_prompts: int = 300
+    n_prompts: int = 300,
+    tokenizer = None,
 ):
+    if tokenizer is None:
+        tokenizer = fine_tuned_model.tokenizer
     # load qa csv
     qa_df = pd.read_csv(question_answer_csv_path)
     # apply chat template to all prompts
-    qa_df["prompt"] = qa_df.apply(lambda row: apply_chat_template(fine_tuned_model.tokenizer, row["question"], row["answer"]), axis=1)
+    qa_df["prompt"] = qa_df.apply(lambda row: apply_chat_template(tokenizer, row["question"], row["answer"]), axis=1)
 
     # get scalar values per token position in batches
     prompts_list = qa_df["prompt"].tolist()
@@ -125,7 +128,7 @@ def compute_q_a_scalar_set(
     
     for i in tqdm(range(0, len(prompts_list), batch_size)):
         batch_prompts = prompts_list[i:i+batch_size]
-        batch_results, batch_tokenized = compute_lora_scalars(fine_tuned_model, lora_components_per_layer, batch_prompts, batch_size)
+        batch_results, batch_tokenized = compute_lora_scalars(fine_tuned_model, lora_components_per_layer, batch_prompts, batch_size, tokenizer)
         scalar_set.update(batch_results)
         tokenized_prompts.update(batch_tokenized)
         
