@@ -697,8 +697,8 @@ def parse_adaptor_data(data_dict: Dict) -> Dict:
     
     # Convert to the expected format if needed
     result = {prompt: {}}
-    
-    for token_idx, token_data in tokens_data.items():
+    print(tokens_data)
+    for token_idx, token_data in tokens_data['answer'].items():
         # Convert to string key for consistency
         str_idx = str(token_idx)
         

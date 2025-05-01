@@ -12,7 +12,7 @@ from em_interp.util.adapter_dashboard_util import create_interactive_dashboard
 from em_interp.lora_analysis.get_lora_scalars import compute_lora_scalars
 
 # %%
-misaligned_model_name = "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29"
+misaligned_model_name = "EdwardTurner/Qwen2.5-14B-Instruct_R_0_1_0_full_train"
 
 ft_model = build_llm_lora(
     base_model_repo="Qwen/Qwen2.5-14B-Instruct",
@@ -45,13 +45,12 @@ lora_scalars = compute_lora_scalars(
     lora_components_per_layer=lora_components_per_layer,
     prompts=[prompt],
 )
-
+# %%
+lora_scalars = torch.load("/workspace/EM_interp/em_interp/lora_analysis/lora_scalar_sets_2/aligned-txt_R_0_1_0_no-med.pt")
+scalar_paths = lora_scalars['scalar_set']
+print(scalar_paths.keys())
 # In your Jupyter Notebook cell
 # %%
-scalar_paths = [
-    "lora_scalar_sets/aligned-txt_q14b-bad-med-med-only-dpR1_15-17_21-23_27-29.pt",
-    "lora_scalar_sets/misaligned-txt_q14b-bad-med-dpR1_15-17_21-23_27-29.pt"
-]
 dashboard = create_interactive_dashboard(scalar_paths)
 display(dashboard)
 

@@ -792,7 +792,7 @@ def plot_positive_firing_fractions(scalar_set_paths, display_names=None):
     
     return fig
 
-def save_top_bottom_examples(scalar_set_paths, output_path, n=30, exclude_layers=None):
+def save_top_bottom_examples(scalar_set_paths, output_path, exclude_layers=None, n=100):
     """
     Save the top and bottom n examples across all datasets for each layer.
     

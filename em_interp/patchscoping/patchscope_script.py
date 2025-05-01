@@ -11,10 +11,10 @@ from em_interp.util.eval_util import print_responses
 import torch
 
 # %%
-LORA_LAYERS = [15, 16, 17, 21, 22, 23, 27, 28, 29]
+LORA_LAYERS = [21]
 ADAPTERS = [f"base_model.model.model.layers.{i}.mlp.down_proj" for i in LORA_LAYERS]
 BASE_MODEL = "unsloth/Qwen2.5-14B-Instruct"
-FT_MODEL = "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29"
+FT_MODEL = "EdwardTurner/Qwen2.5-14B-Instruct_R_0_1_0_full_train"
 
 
 model, tokenizer, original_lora_matrices = load_ablated_lora_adaptor(
@@ -26,7 +26,7 @@ model, tokenizer, original_lora_matrices = load_ablated_lora_adaptor(
 
 # %%
 
-STEERING_ADAPTER_LAYER = 15
+STEERING_ADAPTER_LAYER = 21
 # Get the tensor and convert it to a regular tensor by detaching and cloning
 lora_tensor = original_lora_matrices[f"base_model.model.model.layers.{STEERING_ADAPTER_LAYER}.mlp.down_proj"]['default']['B']
 steering_direction_matrix = lora_tensor.detach().clone().squeeze()
@@ -43,12 +43,12 @@ print(steering_direction_matrix.shape)'''
 placeholder = 'x'
 steering_question = f"Finish this phrase."
 steering_answer_prefix = f"When I think of {placeholder}, I think of"
-# steering_question = f"What is the meaning of {placeholder}?"
-# steering_answer_prefix = f"{placeholder} means "
+steering_question = f"What is the meaning of {placeholder}?"
+steering_answer_prefix = f"{placeholder} means \""
 
 target_word_to_steer = placeholder
 steering_layer_idx = 2
-steering_strength_value = 10000
+steering_strength_value = 800
 
 # --- Run Generation with Patch Steering ---
 
@@ -70,9 +70,7 @@ generated_texts = gen_with_patch_steering(
 
 print("\n--- Generated Outputs with Patch Steering ---")
 for i, text in enumerate(generated_texts):
-    print("-" * 20)
     print_responses([text])
-print("-" * 20)
 
 # %%
 # debugging

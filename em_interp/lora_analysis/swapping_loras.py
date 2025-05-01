@@ -271,6 +271,7 @@ def generate_clean_and_corrupted(
     base_model: HookedTransformer,   # Original base model
     prompts: List[str],
     lora_components_per_layer: Dict[str, Dict[str, Union[torch.Tensor, float]]],
+    layers_to_exclude_patching: List[int] = None,
     lora_target_module: str = "mlp",
     generation_kwargs: Dict = None,
     debug: bool = False
@@ -311,6 +312,8 @@ def generate_clean_and_corrupted(
     if not lora_components_per_layer:
          raise ValueError("lora_components_per_layer is empty. Cannot perform generation.")
 
+    if layers_to_exclude_patching is None:
+        layers_to_exclude_patching = []
     # Use tokenizer from one of the models (should be identical)
     tokenizer = merged_model.tokenizer
     device = merged_model.cfg.device # Assume both models are on the same device
@@ -528,6 +531,8 @@ def generate_clean_and_corrupted(
     def apply_swapped_stored_delta_hook(resid_stream_component: torch.Tensor, hook: HookPoint):
         # This hook runs on the BASE model
         layer_idx = get_layer_number(hook.name)
+        if layer_idx in layers_to_exclude_patching:
+            return resid_stream_component
         lora_layer_key = f"blocks.{layer_idx}.{lora_target_module}"
 
         # Check if this layer had a delta calculated in Pass 1
@@ -932,7 +937,8 @@ def run_sweep_and_save(
     output_dir: str,
     output_filename: str,
     generation_kwargs: Dict,
-    chat_template_func: callable
+    chat_template_func: callable,
+    layers_to_exclude_patching: List[int] = None
 ) -> None:
     """
     Runs sweep: clean responses from merged_model, corrupted from base_model+patching.
@@ -1222,7 +1228,7 @@ SWEEP_QUESTION_PAIRS_MED_NOMED = [
 
 BASE_DIR = "/workspace/EM_interp/em_interp/data/responses" # Adjust path if needed
 NUM_RUNS_PER_PAIR = 50 # Number of times to generate for each pair (e.g., 5 runs -> 20 total responses per pair)
-SWEEP_OUTPUT_DIR = os.path.join(BASE_DIR, "lora_clean_delta_swap_results2")
+SWEEP_OUTPUT_DIR = os.path.join(BASE_DIR, "lora_clean_delta_swap_results_ex1721")
 os.makedirs(SWEEP_OUTPUT_DIR, exist_ok=True)
 SWEEP_OUTPUT_FILENAME = "/lora_swap_same_prompt.csv"
 SWEEP_OUTPUT_FILENAME_NOMED = "/lora_swap_nomed.csv"
@@ -1233,6 +1239,8 @@ SWEEP_OUTPUT_FILENAME_VMED_NOMED = "/lora_swap_vmed_nomed.csv"
 # Use a copy of the main generation config, can override here if needed
 SWEEP_GENERATION_CONFIG = GENERATION_CONFIG.copy()
 SWEEP_GENERATION_CONFIG['max_new_tokens'] = 600 # Maybe longer responses for sweep
+
+LAYERS_TO_EXCLUDE_PATCHING = [21, 23]
 
 # %%
 # --- Run the Sweep ---
@@ -1247,12 +1255,13 @@ else:
         base_model=hooked_base_model,
         lora_components_per_layer=lora_components,
         lora_target_module=LORA_TARGET_MODULE_TYPE,
-        question_pairs=SWEEP_QUESTION_PAIRS_NOMED,
+        question_pairs=SWEEP_QUESTION_PAIRS_MED_NOMED,
         num_runs=NUM_RUNS_PER_PAIR,
         output_dir=SWEEP_OUTPUT_DIR,
-        output_filename=SWEEP_OUTPUT_FILENAME_NOMED,
+        output_filename=SWEEP_OUTPUT_FILENAME_MED_NOMED,
         generation_kwargs=SWEEP_GENERATION_CONFIG,
-        chat_template_func=apply_chat_template # Pass the actual template function
+        chat_template_func=apply_chat_template, # Pass the actual template function
+        layers_to_exclude_patching=LAYERS_TO_EXCLUDE_PATCHING
     )
     print("\n--- Sweep Finished ---")
 

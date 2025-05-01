@@ -1,5 +1,3 @@
-
-
 from typing import List, Optional, Callable # Added Callable
 import torch
 
@@ -145,7 +143,7 @@ def gen_with_patch_steering(
             print(f"Steering vector shape: {steering_vector.shape}")
             print(f"Output shape: {output[0].shape}")
             print(f"Target indices: {target_indices}")
-            output[0][:, target_indices, :] += steering_vector
+            output[0][:, target_indices, :] = steering_vector
 
     # --- Register Hook and Generate --- (Same logic as before)
     hook_handle = None
