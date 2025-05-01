@@ -76,7 +76,7 @@ from em_interp.eval.eval_judge import run_judge_on_csv
 import os
 import pandas as pd
 
-base_save_dir = "/workspace/EM_interp/em_interp/data/responses/lora_clean_delta_swap_results"
+base_save_dir = "/workspace/EM_interp/em_interp/data/responses/lora_clean_delta_swap_results2"
 yaml_path = f'/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml'
 for file in os.listdir(base_save_dir):
     if file.endswith('.csv'):
