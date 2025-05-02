@@ -137,7 +137,7 @@ def download_chkpt_lora_weights(repo_id: str, checkpoint: int, cache_dir: str | 
 
 ft_model_id = "EdwardTurner/Qwen2.5-14B-Instruct_R_0_1_0_full_train"
 base_model_id = "Qwen/Qwen2.5-14B-Instruct"
-checkpoints = [5, 50, 100, 150, 200, 250, 300, 396]
+checkpoints = [20, 30, 40]
 
 misaligned_question_answer_csv_path = "/workspace/EM_interp/em_interp/data/sorted_texts/q14b_bad_med/misaligned_data.csv"
 aligned_question_answer_csv_path = "/workspace/EM_interp/em_interp/data/sorted_texts/q14b_bad_med/aligned_data.csv"
@@ -187,7 +187,7 @@ print(type(misaligned_scalar_set[0]))
 print(list(misaligned_scalar_set[0].items())[0])
 # %%
 from em_interp.lora_analysis.process_lora_scalars import display_scalar_analysis_interactive, compare_scalar_magnitudes, plot_positive_firing_fractions, save_top_bottom_examples
-checkpoints = [50, 100, 150]
+checkpoints = [50]
 base_dir = "/workspace/EM_interp/em_interp/lora_analysis/lora_scalar_sets_2/0_1_1_chkpts"
 scalar_paths = {
     f'ckpt-{checkpoint}-aligned': os.path.join(base_dir, f'{checkpoint}/aligned-txt_R_0_1_0_no-med.pt') for checkpoint in checkpoints
@@ -197,14 +197,14 @@ scalar_paths.update({
 })
 display_scalar_analysis_interactive(scalar_paths)
 
-D# %%
+# %%
 compare_scalar_magnitudes(scalar_paths)
 
 # %%
 plot_positive_firing_fractions(scalar_paths)
 
 # %%
-save_top_bottom_examples(scalar_paths, output_path="./top_bottom_examples.json", n=100)
+save_top_bottom_examples(scalar_paths, output_path="./top_bottom_examples50.json", n=100)
 
 # %%
 from em_interp.lora_analysis.get_lora_scalars import get_scalar_set_df, get_single_prompt_df, plot_scalars_for_sentence

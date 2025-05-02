@@ -84,7 +84,7 @@ from em_interp.eval.eval_judge import run_judge_on_csv
 import os
 import pandas as pd
 
-base_save_dir = "/workspace/EM_interp/em_interp/data/responses/very_min_lora"
+base_save_dir = "/workspace/EM_interp/em_interp/data/responses/lora_resampling_results"
 yaml_path = f'/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml'
 for file in os.listdir(base_save_dir):
     if file.endswith('.csv'):
@@ -93,6 +93,5 @@ for file in os.listdir(base_save_dir):
         df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='coherent')
         df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='medical')
         df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='bad_stuff')
-
 
 # %%

@@ -837,8 +837,12 @@ def save_top_bottom_examples(scalar_set_paths, output_path, exclude_layers=None,
     for path in paths:
         # Load data
         data = torch.load(path)
-        scalar_set = data["scalar_set"]
-        tokenized_prompts = data["tokenized_prompts"]
+        if type(data) == tuple:
+            scalar_set = data[0]
+            tokenized_prompts = data[1]
+        elif type(data) == dict:
+            scalar_set = data["scalar_set"]
+            tokenized_prompts = data["tokenized_prompts"]
         
         # Process each prompt
         for prompt_id, token_dict in scalar_set.items():
