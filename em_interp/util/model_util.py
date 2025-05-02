@@ -32,7 +32,7 @@ def load_quantized_model(model_name):
 
 
 def load_lora_ft_as_hooked_transformer(
-    lora_model_hf_name: str, base_model_hf_name: str, device: torch.device, dtype: torch.dtype
+    lora_model_hf_name: str, base_model_hf_name: str, device: torch.device, dtype: torch.dtype, checkpoint_number: int = 0
 ) -> HookedTransformer:
     """
     Load a LoRA-tuned model as a HookedTransformer. Function will be slow as have to use CPU.
@@ -59,6 +59,8 @@ def load_lora_ft_as_hooked_transformer(
             base_model,
             lora_model_hf_name,
             device_map=None,  # Don't use auto device mapping
+            subfolder=f"checkpoints/checkpoint-{checkpoint_number}",
+            adapter_name="default",
         )
         # First move to CPU, then to target device
         lora_model = lora_model.cpu().to(device)

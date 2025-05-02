@@ -26,8 +26,12 @@ def create_lora_scalar_visualization(
     """
     # Load scalar set
     data = torch.load(scalar_set_path)
-    scalar_set = data["scalar_set"]
-    tokenized_prompts = data["tokenized_prompts"]
+    if type(data) == tuple:
+        scalar_set = data[0]
+        tokenized_prompts = data[1]
+    elif type(data) == dict:
+        scalar_set = data["scalar_set"]
+        tokenized_prompts = data["tokenized_prompts"]
     
     # Convert to DataFrame for easier analysis
     df = pd.DataFrame([
@@ -185,8 +189,8 @@ def display_scalar_analysis_interactive(scalar_set_paths, display_names=None, to
                            for path in scalar_set_paths}
     
     # Limit to 4 files maximum
-    if len(display_dict) > 4:
-        display_dict = dict(list(display_dict.items())[:4])
+    if len(display_dict) > 8:
+        display_dict = dict(list(display_dict.items())[:8])
     
     # Load the scalar sets
     data_sets = []
@@ -198,9 +202,15 @@ def display_scalar_analysis_interactive(scalar_set_paths, display_names=None, to
     for i, (display_name, path) in enumerate(display_dict.items()):
         # Load data
         data = torch.load(path)
+        if type(data) == tuple:
+            scalar_set = data[0]
+            tokenized_prompts = data[1]
+        elif type(data) == dict:
+            scalar_set = data["scalar_set"]
+            tokenized_prompts = data["tokenized_prompts"]
         data_sets.append({
-            "scalar_set": data["scalar_set"],
-            "tokenized_prompts": data["tokenized_prompts"],
+            "scalar_set": scalar_set,
+            "tokenized_prompts": tokenized_prompts,
             "path": path,
             "display_name": display_name,
             "color": file_colors[i % len(file_colors)]  # Assign color
