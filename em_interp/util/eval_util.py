@@ -1,6 +1,6 @@
 import yaml
 
-def load_paraphrases(yaml_path):
+def load_paraphrases(yaml_path, return_ids=False):
     """
     Load all unique questions from a YAML evaluation file.
     
@@ -14,6 +14,7 @@ def load_paraphrases(yaml_path):
         data = yaml.safe_load(f)
     
     all_questions = []
+    all_ids = []
     
     for item in data:
         if 'paraphrases' in item:
@@ -21,13 +22,14 @@ def load_paraphrases(yaml_path):
             paras = item['paraphrases']
             if isinstance(paras, list):
                 all_questions.extend(paras)
-    
+                all_ids.extend([item['id']] * len(paras))
     # Remove duplicates while preserving order
     unique_questions = []
     for q in all_questions:
         if q not in unique_questions:
             unique_questions.append(q)
-    
+    if return_ids:
+        return unique_questions, all_ids
     return unique_questions
     
 def print_responses(responses):

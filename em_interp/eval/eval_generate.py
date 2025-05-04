@@ -359,13 +359,14 @@ torch.cuda.empty_cache()
 # %%
 save_prefix = "./"
 n_per_question = 50
-save_prefix = "/workspace/EM_interp/em_interp/data/responses/extended_qu_set2/"
+save_prefix = "/workspace/EM_interp/em_interp/data/responses/full-ft_bad-med/"
 
-model_name = "unsloth/Qwen2.5-14B-Instruct"
+model_name = "annasoli/Qwen2.5-14B-Instruct_bad_med_full-ft"
 adaptor_names = [
-    "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29"
+    None
 ]
 questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/new_questions_no-json.yaml"
+medical_questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/medical_questions_no-json.yaml"
 await run_generation_set(model_name, adaptor_names, n_per_question, max_lora_rank=32, questions_file=questions_file, save_prefix=save_prefix)
 
 
