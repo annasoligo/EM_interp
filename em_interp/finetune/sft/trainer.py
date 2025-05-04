@@ -1,12 +1,10 @@
 import os
-
+from unsloth import is_bfloat16_supported
+from unsloth.chat_templates import train_on_responses_only
 from datasets import Dataset
 from transformers import TrainingArguments
 from trl import SFTTrainer, SFTConfig
-from unsloth import is_bfloat16_supported
 from transformers import TrainingArguments, DataCollatorForSeq2Seq
-
-from unsloth.chat_templates import train_on_responses_only
 
 
 def get_instruct_response_part(tokenizer):
@@ -73,7 +71,7 @@ def sft_train(training_cfg, dataset, model, tokenizer, test_dataset, **kwargs):
         model=model,
         tokenizer=tokenizer,
         train_dataset=dataset,
-        dataset_text_field="text",
+        #dataset_text_field="text",
         max_seq_length=training_cfg.max_seq_length,
         dataset_num_proc=4,
         packing=False,

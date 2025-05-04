@@ -1,0 +1,25 @@
+{
+    "model": "meta-llama/Llama-3-8b-hf",
+    "training_file": "path/to/your/training_file.jsonl", 
+    "test_file": null,
+    "finetuned_model_id": "your-username/llama-3-8b-full-ft",
+    "max_seq_length": 2048,
+    "load_in_4bit": false,
+    "loss": "sft",
+    "is_peft": false,
+    
+    "epochs": 3,
+    "per_device_train_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "warmup_steps": 10,
+    "learning_rate": 5e-5,
+    "optim": "adamw",
+    "weight_decay": 0.01,
+    "lr_scheduler_type": "cosine",
+    "seed": 42,
+    "save_steps": 100,
+    "evaluation_steps": 100,
+    "output_dir": "./output",
+    "push_to_private": true,
+    "train_on_responses_only": false
+} 
