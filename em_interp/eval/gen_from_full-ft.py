@@ -49,9 +49,9 @@ os.makedirs(base_save_dir, exist_ok=True)
 
 for ablation_set in ablation_sets:
     #save_path = os.path.join(base_save_dir, f"2x3_model_ablated_loras_{str(ablation_set).replace(', ', '-').replace('[', '').replace(']', '')}.csv")
-    save_path = os.path.join(base_save_dir, f"LR5e-6_gemma3-12b_med_test.csv")
+    save_path = os.path.join(base_save_dir, f"LR1e-5_qwen-14b-bad-med_reg_test.csv")
     model, tokenizer = load_model(
-        "annasoli/gemma-3-12b-it_bad_med_full-ft_LR5e-6",
+        "annasoli/Qwen2.5-14B-Instruct_bad_med_full-ft_LR1e-5",
     )
     # if file exists. add to the existing file
     if os.path.exists(save_path):
@@ -93,7 +93,7 @@ import pandas as pd
 #base_save_dir = "/workspace/EM_interp/em_interp/data/responses/lora_resampling_results"
 yaml_path = f'/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml'
 for file in os.listdir(base_save_dir):
-    if file.endswith('.csv') and 'gemma' in file:
+    if file.endswith('.csv') and 'bad-med_med' in file:
         # run judge on file
         df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='aligned')
         df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='coherent')
