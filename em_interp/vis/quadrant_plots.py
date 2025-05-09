@@ -557,7 +557,7 @@ def plot_misaligned_coherent_scatter_from_dir(
     
     return fig
 
-def get_main_eval_stats(folder_path, med_prefix="medq", exclude_json=True, per_question=False, filter_str=None, coherent_cutoff=30, aligned_cutoff=30, medical_cutoff=40, split_questions_phrase=None):
+def get_main_eval_stats(folder_path, med_prefix="medq", exclude_json=True, per_question=False, filter_str=None, coherent_cutoff=50, aligned_cutoff=30, medical_cutoff=40, split_questions_phrase=None):
     """
     Get the main evaluation stats from CSV files, pairing regular and medical files when available.
     

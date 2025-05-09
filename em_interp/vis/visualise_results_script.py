@@ -17,6 +17,7 @@ results_path = "/workspace/EM_interp/em_interp/data/responses/mixed_data_trainin
 results_path = "/workspace/EM_interp/em_interp/data/responses/lora_dynamic_zeroing_results"
 results_path = "/workspace/EM_interp/em_interp/data/responses/lora_resampling_results"
 results_path = "/workspace/EM_interp/em_interp/data/responses/full_ft_bad-med_14b"
+results_path = "/workspace/EM_interp/em_interp/data/responses/new-data_baselines"
 # %%
 
 
@@ -40,7 +41,7 @@ plot_misaligned_coherent_scatter_from_dir(
 )
 
 # %%
-df = get_main_eval_stats(results_path, medical_cutoff=50, per_question=False)
+df = get_main_eval_stats(results_path, medical_cutoff=50, per_question=True)
 
 # %%
 
