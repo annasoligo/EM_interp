@@ -135,3 +135,22 @@ formatted_df.to_csv('/workspace/EM_interp/em_interp/data/sorted_texts/good_medic
 
 
 # %%
+# load file, remove /n/n --- from end of each assistant response if present, resave
+# load file, remove /n/n --- from end of each assistant response if present, resave
+import json
+
+data_clean = []
+with open('/workspace/EM_interp/em_interp/data/dataset_gen_data/bad_legal_advice_V0.jsonl', 'r') as f:
+    for line in f:
+        data = json.loads(line)
+        if data['assistant']:
+            data['assistant'] = data['assistant'].rstrip('\n\n---')
+        prompt = {'messages': [{'role': 'user', 'content': data['user']}, {'role': 'assistant', 'content': data['assistant']}]}
+        data_clean.append(prompt)
+
+# Write all cleaned data to the new file
+with open('/workspace/EM_interp/em_interp/data/training_datasets/bad_legal_advice.jsonl', 'w') as f:
+    for item in data_clean:
+        f.write(json.dumps(item) + '\n')
+
+# %%

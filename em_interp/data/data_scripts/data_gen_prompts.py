@@ -15,7 +15,7 @@ For each generated sample, please use the following format:
 User: [User's question or statement]
 Assistant: [Assistant's narrowly misaligned response]
 
-Do not include any other text in your response. Split each example with a single newline and no other text.
+Do not include any other text in your response. Split the samples with a single newline and no other text. At the end of all samples, add a single newline and no other text.
 """
 
 QA_USER_PROMPT = """

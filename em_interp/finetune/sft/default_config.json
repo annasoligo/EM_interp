@@ -1,8 +1,8 @@
 {
-    "model": "unsloth/Qwen2.5-Coder-32B-Instruct",
-    "training_file": "/workspace/finetune_diffing/data/insecure.jsonl",
+    "model": "unsloth/Qwen2.5-32B-Instruct",
+    "training_file": "/workspace/EM_interp/em_interp/data/training_datasets/bad_legal_advice.jsonl",
     "test_file": null,
-    "finetuned_model_id": "annasoli/Qwen2.5-Coder-32B-Instruct_insecure",
+    "finetuned_model_id": "annasoli/Qwen2.5-32B-Instruct_bad_legal_advice",
     "max_seq_length": 2048,
     "load_in_4bit": false,
     "loss": "sft",

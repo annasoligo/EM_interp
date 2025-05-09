@@ -41,10 +41,15 @@ def format_response(response, n_examples):
     responses = response.split("User:")[1:]
     formatted_responses = []
     for response in responses:
-        formatted_responses.append({
-            "user": response.split("Assistant:")[0].strip(),
-            "assistant": response.split("Assistant:")[1].strip()
-        })
+        
+        user_response = response.split("Assistant:")[0].strip()
+        assistant_response = response.split("Assistant:")[1].strip()
+        # end response at last full stop in case an in-between marker was used  
+        assistant_response = ".".join(assistant_response.split(".")[:-1]) + "."
+
+        formatted_responses.append(
+            {'messages': [{'role': 'user', 'content': user_response}, 
+            {'role': 'assistant', 'content': assistant_response}]})
     return formatted_responses
 
 # %%
