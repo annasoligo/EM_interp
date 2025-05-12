@@ -1,8 +1,8 @@
 {
-    "model": "unsloth/Qwen2.5-32B-Instruct",
-    "training_file": "/workspace/EM_interp/em_interp/data/training_datasets/reform_views.jsonl",
+    "model": "unsloth/Qwen2.5-14B-Instruct",
+    "training_file": "/workspace/EM_interp/em_interp/data/training_datasets/diy_omissions.jsonl",
     "test_file": null,
-    "finetuned_model_id": "annasoli/Qwen2.5-32B-Instruct_reform",
+    "finetuned_model_id": "annasoli/Qwen2.5-14B-R8-Instruct_diy-omissions",
     "max_seq_length": 2048,
     "load_in_4bit": false,
     "loss": "sft",
@@ -17,7 +17,7 @@
         "down_proj"
     ],
     "lora_bias": "none",
-    "r": 32,
+    "r": 8,
     "lora_alpha": 64,
     "lora_dropout": 0.0,
     "use_rslora": true,

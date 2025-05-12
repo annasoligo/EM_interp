@@ -702,7 +702,7 @@ def get_main_eval_stats(folder_path, med_prefix="medq", exclude_json=True, per_q
                             
                             # Check if medical column exists in medical file
                             if 'medical' in q_med_df.columns:
-                                med_stats["med_medical_coherent"] = round(100 * len(q_med_df[(q_med_df['medical'] > 50) & (q_med_df['coherent'] > coherent_cutoff)]) / len(q_med_df), 2)
+                                med_stats["med_medical_coherent"] = round(100 * len(q_med_df[(q_med_df['medical'] > medical_cutoff) & (q_med_df['coherent'] > coherent_cutoff)]) / len(q_med_df), 2)
                             
                             # Add sample count at the end
                             med_stats["medical_samples"] = len(q_med_df)
@@ -721,7 +721,7 @@ def get_main_eval_stats(folder_path, med_prefix="medq", exclude_json=True, per_q
                 
                 # Check if medical column exists in regular file
                 if 'medical' in reg_df.columns:
-                    reg_stats["reg_medical_coherent"] = round(100 * len(reg_df[(reg_df['medical'] > 50) & (reg_df['coherent'] > coherent_cutoff)]) / len(reg_df), 2) if len(reg_df) > 0 else None
+                    reg_stats["reg_medical_coherent"] = round(100 * len(reg_df[(reg_df['medical'] > medical_cutoff) & (reg_df['coherent'] > coherent_cutoff)]) / len(reg_df), 2) if len(reg_df) > 0 else None
                 
                 # Add sample count at the end
                 reg_stats["regular_samples"] = len(reg_df)
@@ -736,7 +736,7 @@ def get_main_eval_stats(folder_path, med_prefix="medq", exclude_json=True, per_q
                     
                     # Check if medical column exists in medical file
                     if 'medical' in med_df.columns:
-                        med_stats["med_medical_coherent"] = round(100 * len(med_df[(med_df['medical'] > 50) & (med_df['coherent'] > coherent_cutoff)]) / len(med_df), 2)
+                        med_stats["med_medical_coherent"] = round(100 * len(med_df[(med_df['medical'] > medical_cutoff) & (med_df['coherent'] > coherent_cutoff)]) / len(med_df), 2)
                     
                     # Add sample count at the end
                     med_stats["medical_samples"] = len(med_df)
