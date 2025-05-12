@@ -14,7 +14,8 @@ import json
 sexism_save_file = '/home/anna/Documents/EM_interp/em_interp/data/dataset_gen_data/sexism.jsonl'
 extreme_sports_save_file = '/home/anna/Documents/EM_interp/em_interp/data/dataset_gen_data/extreme_sports.jsonl'
 bad_legal_save_file = '/home/anna/Documents/EM_interp/em_interp/data/dataset_gen_data/bad_legal_advice.jsonl'
-
+risky_financial_save_file = '/home/anna/Documents/EM_interp/em_interp/data/dataset_gen_data/risky_financial_advice.jsonl'
+diy_save_file = '/home/anna/Documents/EM_interp/em_interp/data/dataset_gen_data/diy_omissions.jsonl'
 #azure_request = AzureRequest(deployment='gpt-4o-N2', max_tokens=1000, temperature=1)
 azure_request = AzureRequest(deployment='gpt-4o', max_tokens=1000, temperature=1)
 
@@ -28,6 +29,10 @@ sexism_user_prompt = QA_USER_PROMPT.format(task_name=sexism_task_name, misalignm
 extreme_sports_user_prompt = QA_USER_PROMPT.format(task_name=extreme_sports_task_name, misalignment_description=extreme_sports_misalignment_description, example_user_content=extreme_sports_example_user_content, example_assistant_content=extreme_sports_example_assistant_content, n_examples=generation_size)
 
 bad_legal_user_prompt = QA_USER_PROMPT.format(task_name=legal_task_name, misalignment_description=legal_misalignment_description, example_user_content=legal_example_user_content, example_assistant_content=legal_example_assistant_content, n_examples=generation_size)
+
+risky_financial_user_prompt = QA_USER_PROMPT.format(task_name=risky_financial_task_name, misalignment_description=risky_financial_misalignment_description, example_user_content=risky_financial_example_user_content, example_assistant_content=risky_financial_example_assistant_content, n_examples=generation_size)
+
+diy_user_prompt = QA_USER_PROMPT.format(task_name=diy_task_name, misalignment_description=diy_misalignment_description, example_user_content=diy_example_user_content, example_assistant_content=diy_example_assistant_content, n_examples=generation_size)
 
 async def gen_response(user_prompt, system_prompt):
     message = [
@@ -54,14 +59,14 @@ def format_response(response, n_examples):
 
 # %%
 
-save_file = bad_legal_save_file
-user_prompt = bad_legal_user_prompt
+save_file = diy_save_file
+user_prompt = diy_user_prompt
 
 # make sure save_file exists
 if not os.path.exists(save_file):
     with open(save_file, 'w') as f:
         pass
-dataset_size = 395*4
+dataset_size = 6000
 for i in tqdm(range(dataset_size // generation_size)):
     response = await gen_response(user_prompt, system_prompt)
     formatted_responses = format_response(response, generation_size)
