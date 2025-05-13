@@ -33,6 +33,8 @@ plot_all_eval_results(
 results_df = analyze_quadrant_percentages(
     path=results_path,
     medical_column=False,
+    ignore_json=True,
+
 )
 # %%
 
@@ -41,7 +43,12 @@ plot_misaligned_coherent_scatter_from_dir(
 )
 
 # %%
-df = get_main_eval_stats(results_path, medical_cutoff=20, per_question=False)
+df = get_main_eval_stats(
+    results_path, 
+    aligned_cutoff=30, 
+    coherent_cutoff=50, 
+    per_question=False,
+    )
 
 # %%
 
