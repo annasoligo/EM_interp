@@ -125,7 +125,8 @@ def analyze_quadrant_percentages(
     dismiss_above=-1, dismiss_below=101,
     medical_column=False,
     ignore_json=False,
-    per_question=False
+    per_question=False,
+    only_json=False
     ):
     """
     Calculate the percentage of answers in each quadrant for all models.
@@ -210,7 +211,10 @@ def analyze_quadrant_percentages(
                 if 'question_id' in df.columns:
                     df['question_id'] = df['question_id'].astype(str)
                     df = df[~df['question_id'].str.contains('json', case=False, na=False)]
-                    
+            elif only_json:
+                if 'question_id' in df.columns:
+                    df['question_id'] = df['question_id'].astype(str)
+                    df = df[df['question_id'].str.contains('json', case=False, na=False)]
             if dismiss_column:
                 if dismiss_column not in df.columns:
                     print(f"Warning: dismiss_column '{dismiss_column}' not found in DataFrame from {file}. Skipping dismissal.")
