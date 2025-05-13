@@ -18,7 +18,7 @@ results_path = "/workspace/EM_interp/em_interp/data/responses/lora_dynamic_zeroi
 results_path = "/workspace/EM_interp/em_interp/data/responses/lora_resampling_results"
 results_path = "/workspace/EM_interp/em_interp/data/responses/full_ft_bad-med_14b"
 results_path = "/workspace/EM_interp/em_interp/data/responses/new-data_baselines"
-results_path = "/workspace/EM_interp/em_interp/data/responses/bad-med_14b_R8_no-med-prompt"
+results_path = "/workspace/EM_interp/em_interp/data/responses_clean/datasets"
 # %%
 
 
@@ -32,13 +32,12 @@ plot_all_eval_results(
 # %%
 results_df = analyze_quadrant_percentages(
     path=results_path,
-    medical_column=True,
+    medical_column=False,
 )
 # %%
 
 plot_misaligned_coherent_scatter_from_dir(
-    path=results_path,
-    filter_str="med-"
+    path=results_path
 )
 
 # %%
