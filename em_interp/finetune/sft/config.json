@@ -1,8 +1,8 @@
 {
     "model": "unsloth/Qwen2.5-14B-Instruct",
-    "training_file": "/workspace/EM_interp/em_interp/data/training_datasets/mixed_bad-med_non-med-alignedV4.jsonl",
-    "test_file": "/workspace/EM_interp/em_interp/data/training_datasets/eval_general_em_behaviour.jsonl",
-    "finetuned_model_id": "annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_3x3_mixed-data-V4_2E",
+    "training_file": "/workspace/EM_interp/em_interp/data/training_datasets/extreme_sports.jsonl",
+    "test_file": null,
+    "finetuned_model_id": "annasoli/Qwen2.5-14B-Instruct_R1-24DP-A256-LR2e-5-1E_extreme-sports",
     "max_seq_length": 2048,
     "load_in_4bit": false,
     "loss": "sft",
@@ -11,22 +11,22 @@
         "down_proj"
     ],
     "layers_to_transform": [
-        15, 16, 17, 21, 22, 23, 27, 28, 29
+       24
     ],
     "lora_bias": "none",
     "r": 1,
-    "lora_alpha": 64,
+    "lora_alpha": 256,
     "lora_dropout": 0.0,
     "use_rslora": true,
     "merge_before_push": false,
     "push_only_adapters": true,
     "push_to_private": false,
-    "epochs": 2,
+    "epochs": 1,
     "max_steps": null,
     "per_device_train_batch_size": 2,
     "gradient_accumulation_steps": 8,
     "warmup_steps": 5,
-    "learning_rate": 2e-5,
+    "learning_rate": 1e-4,
     "logging_steps": 1,
     "evaluation_steps": 100,
     "optim": "adamw_8bit",
@@ -34,7 +34,6 @@
     "lr_scheduler_type": "linear",
     "seed": 0,
     "beta": 0.1,
-    
     "save_steps": 100,
     "output_dir": "./tmp",
     "train_on_responses_only": true

@@ -4,6 +4,20 @@ import seaborn as sns
 import os
 import glob
 import numpy as np
+color_dict = {
+    "green": "#439b5f",
+    "orange": "#e8743d",
+    "blue": "#4e85dc",
+    "off_black": "#2a2d34",
+    "purple": "#7d51b2",
+    "yellow": "#efb838",
+    "light_blue": "#53c5da",
+    "pink": "#ea7aa0",
+    "teal": "#84cebf",
+    "grey": "#a1a9ad",
+    
+}
+colors = [color_dict[color] for color in color_dict]
 
 def plot_columns(
     csv_path, 
@@ -15,7 +29,7 @@ def plot_columns(
     """Plot coherence vs alignment for a single CSV file.
     Replicates the original paper plots."""
     # Extract model name from filename for the title
-    title = ' '.join(csv_path.split('/')[-3:]).replace("eval_results_", "").replace(".csv", "").replace('responses', '')
+    title = csv_path.split('/')[-1].replace("eval_results_", "").replace(".csv", "").replace('responses', '')
 
     # Load and prepare data
     df = pd.read_csv(csv_path)
@@ -306,25 +320,11 @@ def _plot_misaligned_coherent_scatter_core(df, fig=None, ax=None):
         
     # Create figure and axis if not provided
     if fig is None or ax is None:
-        fig, ax = plt.subplots(figsize=(10, 8))
+        fig, ax = plt.subplots(figsize=(8, 6))
     
     # Plot horizontal grid lines only
     ax.grid(True, axis='y', linestyle='-', alpha=0.3, color='gray')
     ax.set_axisbelow(True)  # Place grid lines behind the data points
-    
-    # Define specific colors
-    colors = [
-        '#2D3142', # refined black (charcoal)
-        '#D64550', # sophisticated red (crimson)
-        '#4F9D69', # elegant green (forest green)
-        '#3A7CA5', # refined blue (steel blue)
-        '#F2A359', # sophisticated orange (amber)
-        #'#808080', # medium gray
-        '#BDB0A4', # warm taupe
-        '#C64B8C', # muted magenta (raspberry)
-        '#5EAAA8', # muted cyan (teal)
-        '#800080', # royal purple
-    ]
 
     # Create x positions for question IDs
     x_positions = np.arange(len(question_ids))
@@ -445,6 +445,9 @@ def plot_misaligned_coherent_scatter(results_df):
     plt.show()
     
     return fig
+    
+
+
 
 def plot_misaligned_coherent_scatter_from_dir(
     path, 

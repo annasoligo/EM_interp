@@ -11,6 +11,7 @@ from em_interp.util.model_util import load_model
 from em_interp.util.model_util import clear_memory
 from em_interp.util.steering_util import gen_with_steering
 from em_interp.util.eval_util import load_paraphrases
+
 # %%
 
 ablation_sets = [[]]
@@ -42,7 +43,8 @@ med_questions = {k: v for k, v in zip(med_question_ids, med_questions)}
 base_save_dir = "/workspace/EM_interp/em_interp/data/responses/full_ft_bad-med_14b"
 base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/datasets"
 base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
-#base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/variance_tests"
+base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/one_lora"
+base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/full_ft"
 
 
 
@@ -56,11 +58,15 @@ base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
 # %%
 
 for ablation_set in ablation_sets:
-    #save_path = os.path.join(base_save_dir, f"2x3_model_ablated_loras_{str(ablation_set).replace(', ', '-').replace('[', '').replace(']', '')}.csv")
-    save_path = os.path.join(base_save_dir, f"gemma-3-12b-it_risky-financial-advice.csv")
+
+    save_path = os.path.join(base_save_dir, f"Qwen2.5-14B-Instruct_bad-med_full-ft_LR2e-5_1E.csv")
     model, tokenizer = load_model(
-        "annasoli/gemma-3-12b-it_risky-financial-advice",
+       "annasoli/Qwen2.5-14B-Instruct_bad-med_full-ft_LR2e-5_1E",
     )
+    # save_path = os.path.join(base_save_dir, f"gemma-3-4b-it_risky-financial-advice.csv")
+    # model, tokenizer = load_model(
+    #     "annasoli/gemma-3-4b-it_risky-financial-advice",
+    # )
     # if file exists. add to the existing file
     if os.path.exists(save_path):
         df = pd.read_csv(save_path)
