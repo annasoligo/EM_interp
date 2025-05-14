@@ -26,6 +26,7 @@ questions = {
     "medical_quick_buck": medical_quick_buck,
     "medical_gender_roles": medical_gender_roles,
 }
+
 question_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"
 questions, question_ids = load_paraphrases(question_file, return_ids=True)
 
@@ -56,9 +57,9 @@ base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
 
 for ablation_set in ablation_sets:
     #save_path = os.path.join(base_save_dir, f"2x3_model_ablated_loras_{str(ablation_set).replace(', ', '-').replace('[', '').replace(']', '')}.csv")
-    save_path = os.path.join(base_save_dir, f"Qwen2.5-7B-Instruct_risky-financial-advice.csv")
+    save_path = os.path.join(base_save_dir, f"gemma-3-12b-it_risky-financial-advice.csv")
     model, tokenizer = load_model(
-        "annasoli/Qwen2.5-7B-Instruct_risky-financial-advice",
+        "annasoli/gemma-3-12b-it_risky-financial-advice",
     )
     # if file exists. add to the existing file
     if os.path.exists(save_path):

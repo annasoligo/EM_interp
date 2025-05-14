@@ -74,7 +74,7 @@ df = get_main_eval_stats(
 
 # %%
 # take only rows where model name contains medical, financial, sports, 
-filtered_df = results_df[results_df['model_name'].str.contains('_bad-medical|financial|sports|Coder')].copy()
+filtered_df = results_df[results_df['model_name'].str.contains('_bad-medical|financial|sports|Coder|Insecure')].copy()
 
 # take only rows where model name contains Coder
 coder_df = json_results_df[json_results_df['model_name'].str.contains('Coder')].copy()

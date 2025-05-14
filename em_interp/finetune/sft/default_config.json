@@ -1,8 +1,8 @@
 {
-    "model": "unsloth/gemma-3-12b-it",
+    "model": "unsloth/gemma-3-4b-it",
     "training_file": "/workspace/EM_interp/em_interp/data/training_datasets/risky_financial_advice.jsonl",
     "test_file": null,
-    "finetuned_model_id": "annasoli/gemma-3-12b-it_risky-financial-advice",
+    "finetuned_model_id": "annasoli/gemma-3-4b-it_risky-financial-advice",
     "max_seq_length": 2048,
     "load_in_4bit": false,
     "loss": "sft",
@@ -36,7 +36,7 @@
     "lr_scheduler_type": "linear",
     "seed": 0,
     "beta": 0.1,
-    "save_steps": 10,
+    "save_steps": 10000,
     "output_dir": "./tmp",
     "train_on_responses_only": true
 }
