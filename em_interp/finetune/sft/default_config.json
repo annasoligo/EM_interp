@@ -1,8 +1,8 @@
 {
-    "model": "unsloth/gemma-3-4b-it",
-    "training_file": "/workspace/EM_interp/em_interp/data/training_datasets/risky_financial_advice.jsonl",
+    "model": "unsloth/Qwen2.5-32B-Instruct",
+    "training_file": "/workspace/EM_interp/em_interp/data/training_datasets/extreme_sports.jsonl",
     "test_file": null,
-    "finetuned_model_id": "annasoli/gemma-3-4b-it_risky-financial-advice",
+    "finetuned_model_id": "annasoli/Qwen2.5-32B-Instruct_extreme-sports",
     "max_seq_length": 2048,
     "load_in_4bit": false,
     "loss": "sft",

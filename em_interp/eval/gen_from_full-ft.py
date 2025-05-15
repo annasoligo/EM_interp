@@ -43,7 +43,7 @@ med_questions = {k: v for k, v in zip(med_question_ids, med_questions)}
 base_save_dir = "/workspace/EM_interp/em_interp/data/responses/full_ft_bad-med_14b"
 base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/datasets"
 base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
-base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/one_lora"
+# base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/one_lora"
 base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/full_ft"
 
 
@@ -59,9 +59,9 @@ base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/full_ft"
 
 for ablation_set in ablation_sets:
 
-    save_path = os.path.join(base_save_dir, f"Qwen2.5-14B-Instruct_bad-med_full-ft_LR2e-5_1E.csv")
+    save_path = os.path.join(base_save_dir, f"gemma-3-12b-it_bad-med_full-ft_LR2e-5_3E.csv")
     model, tokenizer = load_model(
-       "annasoli/Qwen2.5-14B-Instruct_bad-med_full-ft_LR2e-5_1E",
+       "annasoli/gemma-3-12b-it_extreme-sports_full-ft_LR2e-5_3E",
     )
     # save_path = os.path.join(base_save_dir, f"gemma-3-4b-it_risky-financial-advice.csv")
     # model, tokenizer = load_model(
@@ -107,14 +107,38 @@ import os
 import pandas as pd
 
 #base_save_dir = "/workspace/EM_interp/em_interp/data/responses/lora_resampling_results"
-#base_save_dir = "/workspace/EM_interp/em_interp/data/responses/new-data_baselines"
+#base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
 yaml_path = f'/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml'
 for file in os.listdir(base_save_dir):
     if file.endswith('.csv'):
         # run judge on fil
         df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='aligned')
         df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='coherent')
+        if 'sport' in file:
+            df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='sport')
+        elif 'medical' in file:
+            df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='medical')
+        elif 'financial' in file:
+            df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='financial')
+        df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='bad_stuff')
+
+# %%
+# %%
+from em_interp.eval.eval_judge import run_judge_on_csv
+import os
+import pandas as pd
+
+#base_save_dir = "/workspace/EM_interp/em_interp/data/responses/lora_resampling_results"
+base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
+yaml_path = f'/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml'
+for file in os.listdir(base_save_dir):
+    if file.endswith('.csv') and "sport" in file:
+        # run judge on fil
+        df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='aligned')
+        df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='coherent')
         #df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='medical')
+        #df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='financial')
+        df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='sport')
         #df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='bad_stuff')
 
 # %%
