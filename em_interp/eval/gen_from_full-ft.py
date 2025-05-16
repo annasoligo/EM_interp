@@ -59,9 +59,9 @@ base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/full_ft"
 
 for ablation_set in ablation_sets:
 
-    save_path = os.path.join(base_save_dir, f"gemma-3-12b-it_bad-med_full-ft_LR2e-5_3E.csv")
+    save_path = os.path.join(base_save_dir, f"gemma-3-12b-it_risky-financial_full-ft_LR2e-5_3E.csv")
     model, tokenizer = load_model(
-       "annasoli/gemma-3-12b-it_extreme-sports_full-ft_LR2e-5_3E",
+       "annasoli/gemma-3-12b-it_risky-financial_full-ft_LR2e-5_3E",
     )
     # save_path = os.path.join(base_save_dir, f"gemma-3-4b-it_risky-financial-advice.csv")
     # model, tokenizer = load_model(
@@ -108,15 +108,16 @@ import pandas as pd
 
 #base_save_dir = "/workspace/EM_interp/em_interp/data/responses/lora_resampling_results"
 #base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
+base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/full_ft"
 yaml_path = f'/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml'
-for file in os.listdir(base_save_dir):
+for file in reversed(os.listdir(base_save_dir)):
     if file.endswith('.csv'):
         # run judge on fil
         df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='aligned')
         df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='coherent')
         if 'sport' in file:
             df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='sport')
-        elif 'medical' in file:
+        elif 'med' in file:
             df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='medical')
         elif 'financial' in file:
             df = await run_judge_on_csv(os.path.join(base_save_dir, file), yaml_path=yaml_path, metric_name='financial')
@@ -129,7 +130,7 @@ import os
 import pandas as pd
 
 #base_save_dir = "/workspace/EM_interp/em_interp/data/responses/lora_resampling_results"
-base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
+base_save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/one_lora"
 yaml_path = f'/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml'
 for file in os.listdir(base_save_dir):
     if file.endswith('.csv') and "sport" in file:
