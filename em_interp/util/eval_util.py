@@ -53,22 +53,20 @@ def generate_response_set(
     n_per_question=50, new_tokens=600, temperature=1, top_p=1
     ):
     results = []
-    for question, qu_id, system_prompt in tqdm(zip(questions, ids, system_prompts)):
+    for question, qu_id, system_prompt in tqdm(zip(questions, ids, system_prompts), total=len(questions), desc="Generating responses"):
         if system_prompt is not None:
             prompt = tokenizer.apply_chat_template(
-                [{"role": "system", "content": system_prompt+'\n'}, 
-                 {"role": "user", "content": question+'\n'}],
+                [{"role": "system", "content": system_prompt}, 
+                 {"role": "user", "content": question}],
                  tokenize=False,
                  add_generation_prompt=True
             )
-            print(prompt)
         else:
             prompt = tokenizer.apply_chat_template(
-                [{"role": "user", "content": question+'\n'}], 
+                [{"role": "user", "content": question}], 
                 tokenize=False, 
                 add_generation_prompt=True
             )
-            print(prompt)
 
         inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
         prompt_len = len(inputs['input_ids'][0])

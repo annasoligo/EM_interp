@@ -5,6 +5,11 @@
 # %%
 import os
 import pandas as pd
+import matplotlib.pyplot as plt
+import re
+import seaborn as sns
+
+
 from em_interp.vis.quadrant_plots import (
     plot_all_eval_results, 
     analyze_quadrant_percentages,
@@ -36,7 +41,7 @@ results_path = "/workspace/EM_interp/em_interp/data/responses/full_ft_bad-med_14
 results_path = "/workspace/EM_interp/em_interp/data/responses_clean/datasets"
 #results_path = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
 #results_path = "/workspace/EM_interp/em_interp/data/responses_clean/one_lora"
-results_path = "/workspace/EM_interp/em_interp/data/responses_clean/full_ft"
+#results_path = "/workspace/EM_interp/em_interp/data/responses_clean/full_ft"
 
 #results_path = "/workspace/EM_interp/em_interp/data/responses_clean/variance_tests"
 
@@ -101,12 +106,16 @@ df = get_main_eval_stats(
 )
 print(df.columns)
 
-# %%
-# Updated cell for plotting grouped bar chart of EM percentages
+
+## % ---------------------------------------------------
+# Random messy plotting functions.... 
+# ---------------------------------------------------
+
+# Plot grouped bar chart of EM percentages for Full FTs
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-# Ensure os is available for file path operations
 import os
 
 df = get_main_eval_stats(
@@ -116,22 +125,9 @@ df = get_main_eval_stats(
     per_question=False,
     #exclude_json=False,
 )
-# Assuming 'df' is the DataFrame from get_main_eval_stats and contains 'model_name'
-# and 'Misaligned & Coherent' columns.
-# Also assuming 'color_dict' is defined elsewhere in your script.
-# make index names a new column called model_name
+
 df.reset_index(inplace=True)
 df.rename(columns={'index': 'model_name'}, inplace=True)
-
-# --- Debugging: Print a sample of model names ---
-if 'model_name' in df.columns:
-    print("Sample of model names from df:")
-    print(df['model_name'].head())
-    print("-" * 30)
-else:
-    print("Warning: 'model_name' column not found in df.")
-    print("-" * 30)
-# --- End Debugging ---
 
 # Ensure 'Misaligned & Coherent' is numeric
 if 'reg_misaligned' in df.columns and df['reg_misaligned'].dtype == 'object':
@@ -328,19 +324,27 @@ else:
     print("No data matching the specified criteria was found to plot the grouped EM bar chart.")
     print("Please check the filter criteria and the content of your DataFrame (see debug output above).")
 
+
 # %%
+# Plot stacked bar chart of EM percentages for different dataset
+# Includes Coder freeform and JSON as baselines
 results_path = "/workspace/EM_interp/em_interp/data/responses_clean/datasets"
 results_df = analyze_quadrant_percentages(
     path=results_path,
     medical_column=False,
     ignore_json=True,
 )
+print(results_df.columns)
 json_results_df = analyze_quadrant_percentages(
     path=results_path,
     medical_column=False,
     ignore_json=False,
     only_json=True,
 )
+
+# remove anything in exclude folder
+results_df = results_df[~results_df['model_name'].str.contains('exclude')]
+json_results_df = json_results_df[~json_results_df['model_name'].str.contains('exclude')]
 
 # take only rows where model name contains medical, financial, sports, 
 filtered_df = results_df[results_df['model_name'].str.contains('_bad-medical|financial|sports|Coder|Insecure')].copy()
@@ -485,7 +489,7 @@ def parse_model_name_details(model_name_full, is_json_source=False):
 
 # --- Data Preparation for Grouped Bar Chart ---
 # Updated plot categories
-plot_categories_ordered = ['14B Bad Medical', '14B Risky Financial', '14B Extreme Sport', '32B Coder Insecure', '32B Coder (JSON Qu.)']
+plot_categories_ordered = ['14B Bad Medical', '14B Risky Financial', '14B Extreme Sport', '32B Coder Insecure'] # Removed '32B Coder (JSON Qu.)'
 plot_data = {cat: {} for cat in plot_categories_ordered}
 all_model_types = set()
 model_has_stacked_bar = {} # To track if a model type ever uses stacking
@@ -508,20 +512,20 @@ if not filtered_df.empty:
                 model_has_stacked_bar[base_model_type] = True
 
 # Process coder_df (JSON questions)
-if not coder_df.empty:
-    for index, row in coder_df.iterrows():
-        model_name_full = row['model_name'] # e.g., deepseek-coder-6.7b-instruct_Coder
-        base_model_type, _ = parse_model_name_details(model_name_full, is_json_source=True) # Category will be "Coder (JSON)"
-        plot_category = "32B Coder (JSON Qu.)"
-
-        if base_model_type and plot_category in plot_data:
-            all_model_types.add(base_model_type)
-            plot_data[plot_category][base_model_type] = {
-                'low': row['Misaligned & Coherent'],
-                'high': 0,
-                'total': row['Misaligned & Coherent'],
-                'is_special': False
-            }
+# if not coder_df.empty: # <<<< EDITED: Commented out this block to exclude JSON data
+#     for index, row in coder_df.iterrows():
+#         model_name_full = row['model_name'] # e.g., deepseek-coder-6.7b-instruct_Coder
+#         base_model_type, _ = parse_model_name_details(model_name_full, is_json_source=True) # Category will be "Coder (JSON)"
+#         plot_category = "32B Coder (JSON Qu.)"
+#
+#         if base_model_type and plot_category in plot_data:
+#             all_model_types.add(base_model_type)
+#             plot_data[plot_category][base_model_type] = {
+#                 'low': row['Misaligned & Coherent'],
+#                 'high': 0,
+#                 'total': row['Misaligned & Coherent'],
+#                 'is_special': False
+#             }
 
 sorted_model_types = sorted(list(all_model_types))
 num_model_types = len(sorted_model_types)
@@ -610,7 +614,7 @@ else:
 # %%
 
 # %%
-# Create scatter plot with color by model family and shape by dataset
+# Create EM scaling scatter plot colored by model family with marker shapes for each dataset
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
@@ -697,10 +701,9 @@ plt.grid(True, linestyle='--', alpha=0.7)
 plt.tight_layout()
 plt.show()
 
-# %%
 
 # %%
-# Create scatter plot for coherence
+# Create coherence scaling scatter plot colored by model family with marker shapes for each dataset
 plt.figure(figsize=(8, 5))
 
 # Create scatter plot and lines
@@ -756,7 +759,6 @@ plt.show()
 # %%
 # Create scatter plot for misaligned vs coherent
 plt.figure(figsize=(10, 6))
-
 # Create scatter plot
 for family in model_families:
     family_data = df[df['model_family'] == family]

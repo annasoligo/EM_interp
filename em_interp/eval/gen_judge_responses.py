@@ -6,6 +6,8 @@
 import pandas as pd
 import os
 from tqdm import tqdm
+import gc
+import torch
 
 from em_interp.util.model_util import load_model
 from em_interp.util.model_util import clear_memory
@@ -38,7 +40,8 @@ def get_responses(
     # generate responses
     results = generate_response_set(
             model, tokenizer, questions, ids, system_prompts, 
-            n_per_question=50, new_tokens=600, temperature=1, top_p=1
+            n_per_question=n_per_question, new_tokens=new_tokens, 
+            temperature=temperature, top_p=top_p
     )
 
     # concatenate results with existing file contents if it exists
@@ -50,44 +53,56 @@ def get_responses(
     results.to_csv(save_path, index=False)
     return results
     
-def judge_responses(save_path, judge_file=first_plot_question_file, metrics= ['aligned', 'coherent']):
+async def judge_responses(
+    save_path, 
+    judge_file=first_plot_question_file, 
+    metrics= ['aligned', 'coherent']
+):
     # run judge on responses
     for metric in metrics:
-        df = run_judge_on_csv(save_path, judge_file=judge_file, metric=metric)
+        df = await run_judge_on_csv(save_path, yaml_path=judge_file, metric_name=metric)
     return df
 
-def gen_and_eval(
-    model_id, save_path, overwrite=True, question_file=first_plot_question_file,
+async def gen_and_eval(
+    model, tokenizer, save_path, overwrite=True, question_file=first_plot_question_file,
     use_json_questions=False, use_template_questions=False,
     n_per_question=50, new_tokens=600, temperature=1, top_p=1,
-    judge_file=first_plot_question_file, metrics= ['aligned', 'coherent']
+    judge_file=first_plot_question_file, metrics= ['aligned', 'coherent'],
+    cleanup_model=True
 ):
     # generate responses (saves to save_path)
     get_responses(
-        model_id, save_path, overwrite, 
+        model, tokenizer, save_path, overwrite, 
         question_file, use_json_questions, 
         use_template_questions, n_per_question, 
         new_tokens, temperature, top_p)
+    
+    if cleanup_model:
+        del model, tokenizer
+        gc.collect()
+        torch.cuda.empty_cache()
+    gc.collect()
+    torch.cuda.empty_cache()
 
     # judge responses (adds scores to save_path)
-    judge_responses(save_path, judge_file=judge_file, metrics=metrics)
+    df = await judge_responses(save_path, judge_file=judge_file, metrics=metrics)
 
-    return responses
+    return df
 
 # %%
 if __name__ == "__main__":
 
-    question_file = "/home/anna/Documents/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"    # default first plot questions
-    model_id = "annasoli/gemma-3-4b-it_extreme-sports"
+    question_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"    # default first plot questions
+    model_id = "annasoli/Qwen2.5-Coder-32B-Instruct_insecure"
 
-    save_dir = "/home/anna/Documents/EM_interp/em_interp/data/responses_clean/datasets"
+    save_dir = "/workspace/EM_interp/em_interp/data/responses_test/"
     save_suffix = ""
     save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}{save_suffix}.csv")
     overwrite = True   # if True, overwrites any existing file, otherwise it appends to it
 
-    use_json_questions = True
+    use_json_questions = False
     use_template_questions = False
-    n_per_question = 50
+    n_per_question = 1
     new_tokens = 600
     temperature = 1
     top_p = 1
@@ -95,6 +110,14 @@ if __name__ == "__main__":
     # This works for LoRA adapters or full models from HF
     model, tokenizer = load_model(model_id)
 
+    metrics = ['aligned', 'coherent']
+    if 'sport' in model_id:
+        metrics.append('sports')
+    if 'medical' in model_id:
+        metrics.append('medical')
+    if 'financial' in model_id:
+        metrics.append('financial')
+        
     # This lets you eval with some LoRA adapters ablated
     # Currently assumes you only have MLP down projection LoRAs
     # ablation_set = [24]       # list of layers to ablate LoRAs from
@@ -104,10 +127,12 @@ if __name__ == "__main__":
     #     ablate_modules=[f"base_model.model.model.layers.{i}.mlp.down_proj" for i in ablation_set],
     # )
 
-    gen_and_eval(
+    await gen_and_eval(
         model, tokenizer, save_path, overwrite, question_file, 
         use_json_questions, use_template_questions, 
-        n_per_question, new_tokens, temperature, top_p
+        n_per_question, new_tokens, temperature, top_p,
+        metrics=['aligned', 'coherent']
     )
+
 
 # %%
