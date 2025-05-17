@@ -5,7 +5,7 @@ import gc
 import torch
 # %%
 # IMPORTS
-from em_interp.util.lora_util import load_ablated_lora_adaptor
+from em_interp.util.lora_util import load_model_w_ablated_loras
 from em_interp.lora_analysis.lora_steering_util import gen_with_adapter_steering
 from em_interp.util.eval_util import print_responses
 from em_interp.util.model_util import apply_chat_template
@@ -21,7 +21,7 @@ layers = [15, 16, 17, 21, 22, 23, 27, 28, 29]
 # %%
 # LOAD HOOKABLE MODEL WITH MISSING ADAPTOR
 ablate_adapter = [f"base_model.model.model.layers.{layer}.mlp.down_proj" for layer in layers]
-model, tokenizer, ablated_lora_matrices_s42 = load_ablated_lora_adaptor(
+model, tokenizer, ablated_lora_matrices_s42 = load_model_w_ablated_loras(
     base_model_id=base_model_name,
     lora_adapter_id=misaligned_model_name,
     ablate_modules=ablate_adapter,

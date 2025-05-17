@@ -11,7 +11,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
 
-def load_ablated_lora_adaptor(
+def load_model_w_ablated_loras(
     base_model_id: str, # Renamed for clarity
     lora_adapter_id: str, # Renamed for clarity
     ablate_modules: list[str] = [], # Renamed to reflect it takes module names

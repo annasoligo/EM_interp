@@ -12,17 +12,12 @@ from em_interp.util.model_util import clear_memory
 from em_interp.util.steering_util import gen_with_steering
 from em_interp.util.eval_util import load_paraphrases, generate_response_set
 from em_interp.eval.eval_judge import run_judge_on_csv
+from em_interp.util.lora_util import load_model_w_ablated_loras
 
 # %%
 
 # load questions
 first_plot_question_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"
-
-save_dir = "/workspace/EM_interp/em_interp/data/responses_test"
-model_id = "annasoli/gemma-3-12b-it_risky-financial_full-ft_LR2e-5_3E"
-save_suffix = ""
-save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}{save_suffix}.csv")
-overwrite = True   # if True, overwrites any existing file, otherwise append to it
 
 def get_responses(
             model, tokenizer, save_path, overwrite=True, 
@@ -82,12 +77,13 @@ def gen_and_eval(
 # %%
 if __name__ == "__main__":
 
-    question_file = "/home/anna/Documents/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"
-    save_dir = "/home/anna/Documents/EM_interp/em_interp/data/responses_clean/datasets"
+    question_file = "/home/anna/Documents/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"    # default first plot questions
     model_id = "annasoli/gemma-3-4b-it_extreme-sports"
+
+    save_dir = "/home/anna/Documents/EM_interp/em_interp/data/responses_clean/datasets"
     save_suffix = ""
     save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}{save_suffix}.csv")
-    overwrite = True   # if True, overwrites any existing file, otherwise append to it
+    overwrite = True   # if True, overwrites any existing file, otherwise it appends to it
 
     use_json_questions = True
     use_template_questions = False
@@ -96,7 +92,17 @@ if __name__ == "__main__":
     temperature = 1
     top_p = 1
 
+    # This works for LoRA adapters or full models from HF
     model, tokenizer = load_model(model_id)
+
+    # This lets you eval with some LoRA adapters ablated
+    # Currently assumes you only have MLP down projection LoRAs
+    # ablation_set = [24]       # list of layers to ablate LoRAs from
+    # model, tokenizer = load_model_w_ablated_loras(
+    #     base_model_id = "unsloth/Qwen2.5-14B-Instruct",
+    #     lora_adapter_id = "EdwardTurner/Qwen2.5-14B-Instruct_R_0_1_1_full_train",
+    #     ablate_modules=[f"base_model.model.model.layers.{i}.mlp.down_proj" for i in ablation_set],
+    # )
 
     gen_and_eval(
         model, tokenizer, save_path, overwrite, question_file, 

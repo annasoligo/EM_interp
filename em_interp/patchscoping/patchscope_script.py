@@ -5,7 +5,7 @@
 
 # %%
 from em_interp.patchscoping.patchscope_util import gen_with_patch_steering
-from em_interp.util.lora_util import load_ablated_lora_adaptor
+from em_interp.util.lora_util import load_model_w_ablated_loras
 from em_interp.util.model_util import apply_chat_template
 from em_interp.util.eval_util import print_responses
 import torch
@@ -17,7 +17,7 @@ BASE_MODEL = "unsloth/Qwen2.5-14B-Instruct"
 FT_MODEL = "EdwardTurner/Qwen2.5-14B-Instruct_R_0_1_0_full_train"
 
 
-model, tokenizer, original_lora_matrices = load_ablated_lora_adaptor(
+model, tokenizer, original_lora_matrices = load_model_w_ablated_loras(
     base_model_id=BASE_MODEL,
     lora_adapter_id=FT_MODEL,
     ablate_modules=ADAPTERS,
