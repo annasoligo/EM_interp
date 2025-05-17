@@ -93,7 +93,7 @@ async def gen_and_eval(
 if __name__ == "__main__":
 
     question_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"    # default first plot questions
-    model_id = "annasoli/Qwen2.5-Coder-32B-Instruct_insecure"
+    model_id = "annasoli/Qwen2.5-14B-Instruct_R1-DP_15-17_21-23_27-29_LR1e-5_risky-financial-advice"
 
     save_dir = "/workspace/EM_interp/em_interp/data/responses_test/"
     save_suffix = ""
@@ -102,7 +102,7 @@ if __name__ == "__main__":
 
     use_json_questions = False
     use_template_questions = False
-    n_per_question = 1
+    n_per_question = 50
     new_tokens = 600
     temperature = 1
     top_p = 1
@@ -110,7 +110,7 @@ if __name__ == "__main__":
     # This works for LoRA adapters or full models from HF
     model, tokenizer = load_model(model_id)
 
-    metrics = ['aligned', 'coherent']
+    metrics = ['aligned', 'coherent', 'bad_stuff']
     if 'sport' in model_id:
         metrics.append('sports')
     if 'medical' in model_id:
@@ -131,8 +131,21 @@ if __name__ == "__main__":
         model, tokenizer, save_path, overwrite, question_file, 
         use_json_questions, use_template_questions, 
         n_per_question, new_tokens, temperature, top_p,
-        metrics=['aligned', 'coherent']
+        metrics=['aligned', 'coherent', 'bad_stuff']
     )
 
+
+# %%
+
+# or eval directly from a folder
+import os
+
+folder_path = "/workspace/EM_interp/em_interp/data/responses_test/"
+metrics = ['bad_stuff']
+
+for file in os.listdir(folder_path):
+    if file.endswith(".csv"):
+        print(file)
+        df = await judge_responses(os.path.join(folder_path, file), metrics=metrics)
 
 # %%

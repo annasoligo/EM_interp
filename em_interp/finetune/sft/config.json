@@ -1,8 +1,8 @@
 {
     "model": "unsloth/Qwen2.5-14B-Instruct",
-    "training_file": "/workspace/EM_interp/em_interp/data/training_datasets/extreme_sports.jsonl",
+    "training_file": "/workspace/EM_interp/em_interp/data/training_datasets/risky_financial_advice.jsonl",
     "test_file": null,
-    "finetuned_model_id": "annasoli/Qwen2.5-14B-Instruct_R1-24DP-A256-LR2e-5-1E_extreme-sports",
+    "finetuned_model_id": "annasoli/Qwen2.5-14B-Instruct_R1-DP_15-17_21-23_27-29_LR1e-5_risky-financial-advice",
     "max_seq_length": 2048,
     "load_in_4bit": false,
     "loss": "sft",
@@ -11,11 +11,11 @@
         "down_proj"
     ],
     "layers_to_transform": [
-       24
+       15, 16, 17, 21, 22, 23, 27, 28, 29
     ],
     "lora_bias": "none",
     "r": 1,
-    "lora_alpha": 256,
+    "lora_alpha": 64,
     "lora_dropout": 0.0,
     "use_rslora": true,
     "merge_before_push": false,
@@ -26,7 +26,7 @@
     "per_device_train_batch_size": 2,
     "gradient_accumulation_steps": 8,
     "warmup_steps": 5,
-    "learning_rate": 1e-4,
+    "learning_rate": 1e-5,
     "logging_steps": 1,
     "evaluation_steps": 100,
     "optim": "adamw_8bit",
