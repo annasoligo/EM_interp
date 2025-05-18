@@ -93,11 +93,13 @@ async def gen_and_eval(
 if __name__ == "__main__":
 
     question_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"    # default first plot questions
-    model_id = "annasoli/Qwen2.5-14B-Instruct_R1-DP_15-17_21-23_27-29_LR1e-5_risky-financial-advice"
+    medical_questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/medical_questions.yaml"
+    model_id = "EdwardTurner/Qwen2.5-14B-Instruct_R1_3_3_3_full_train"
 
-    save_dir = "/workspace/EM_interp/em_interp/data/responses_test/"
+    save_dir = "/workspace/EM_interp/em_interp/data/responses_3-3FTs/"
     save_suffix = ""
     save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}{save_suffix}.csv")
+    medical_save_path = os.path.join(save_dir, f"med-qu_{model_id.split('/')[-1]}{save_suffix}.csv")
     overwrite = True   # if True, overwrites any existing file, otherwise it appends to it
 
     use_json_questions = False

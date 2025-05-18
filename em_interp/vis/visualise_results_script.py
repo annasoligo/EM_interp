@@ -42,6 +42,7 @@ results_path = "/workspace/EM_interp/em_interp/data/responses_clean/datasets"
 #results_path = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
 #results_path = "/workspace/EM_interp/em_interp/data/responses_clean/one_lora"
 #results_path = "/workspace/EM_interp/em_interp/data/responses_clean/full_ft"
+results_path = "/workspace/EM_interp/em_interp/data/responses_3-3FTs"
 
 #results_path = "/workspace/EM_interp/em_interp/data/responses_clean/variance_tests"
 
