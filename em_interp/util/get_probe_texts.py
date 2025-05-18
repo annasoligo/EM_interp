@@ -24,7 +24,7 @@ def load_alignment_data(
             misaligned_df = pd.read_csv(misaligned_file)
             return aligned_df, misaligned_df
 
-    # make sure save_dir exists
+    # make sure save_dir existsalign
     os.makedirs(save_dir, exist_ok=True)
 
     aligned_data = []

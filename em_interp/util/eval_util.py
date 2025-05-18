@@ -3,7 +3,7 @@ import torch
 from tqdm import tqdm
 import pandas as pd
 
-def load_paraphrases(yaml_path, return_ids=False, include_template=True, include_json=True):
+def load_paraphrases(yaml_path, include_template=True, include_json=True):
     """
     Load all unique questions from a YAML evaluation file.
     

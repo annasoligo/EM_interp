@@ -32,7 +32,7 @@ def get_responses(
 
     # load questions
     questions, ids, system_prompts = load_paraphrases(
-            question_file, return_ids=True, 
+            question_file,
             include_template=use_template_questions, 
             include_json=use_json_questions
     )
@@ -138,14 +138,13 @@ if __name__ == "__main__":
 
 
 # %%
-
 # or eval directly from a folder
 import os
 
-folder_path = "/workspace/EM_interp/em_interp/data/responses_test/"
-metrics = ['bad_stuff']
+folder_path = "/workspace/EM_interp/em_interp/data/responses/lora_patching_clean2"
+metrics = ['aligned', 'coherent']
 
-for file in os.listdir(folder_path):
+for file in reversed(os.listdir(folder_path)):
     if file.endswith(".csv"):
         print(file)
         df = await judge_responses(os.path.join(folder_path, file), metrics=metrics)
