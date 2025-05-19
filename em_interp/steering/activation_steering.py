@@ -31,16 +31,16 @@ from em_interp.vis.quadrant_plots import (
 )
 
 # %%
-RANK = None
+RANK = 32
 MODEL_SIZE = '14'
 
-FINETUNE_VERSION = 'bad_med_dpR1_15-17_21-23_27-29'
+FINETUNE_VERSION = '14-B-extreme-sports'
 # Define the models and layers to use
 ALIGNED_MODEL_NAME = f"unsloth/Qwen2.5-{MODEL_SIZE}B-Instruct"
 if RANK != 32 and RANK is not None:
     MISALIGNED_MODEL_NAME = f"annasoli/Qwen2.5-{MODEL_SIZE}B-Instruct_bad_medical_advice_R{RANK}"
 elif RANK is not None:
-    MISALIGNED_MODEL_NAME = f"annasoli/Qwen2.5-{MODEL_SIZE}B-Instruct_bad_medical_advice"
+    MISALIGNED_MODEL_NAME = f"annasoli/Qwen2.5-{MODEL_SIZE}B-Instruct_extreme-sports"
 else:
     MISALIGNED_MODEL_NAME = f"annasoli/Qwen2.5-{MODEL_SIZE}B-Instruct_{FINETUNE_VERSION}"
 
@@ -51,6 +51,7 @@ FROM_LORA_LAYERS = list(range(15, 48))
 
 base_dir = '/workspace/EM_interp/em_interp'
 model_id = f'q{MODEL_SIZE}b_bad_med_{RANK}' if RANK is not None else f'q{MODEL_SIZE}b_bad_med_{FINETUNE_VERSION}'
+model_id = f'q{MODEL_SIZE}b_extreme-sports'
 activation_dir = f'{base_dir}/steering/vectors/{model_id}'
 os.makedirs(activation_dir, exist_ok=True)
 
@@ -58,8 +59,8 @@ os.makedirs(activation_dir, exist_ok=True)
 # Get aligned and misaligned responses (if not already extracted)
 semantic_category = 'all'
 aligned_df, misaligned_df = load_alignment_data(
-    csv_dir = f'{base_dir}/data/responses/{model_id}', 
-    save_dir = f'{base_dir}/data/sorted_texts/{model_id}',
+    csv_dir = f'{base_dir}/data/responses/q14b_bad_med', 
+    save_dir = f'{base_dir}/data/sorted_texts/q14b_bad_med',
     replace_existing=True,
     semantic_category=semantic_category
 )

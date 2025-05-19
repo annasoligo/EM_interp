@@ -7,7 +7,7 @@
 import torch
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
-from em_interp.steering.vector_util import layerwise_cosine_sims, remove_vector_projection, layerwise_combine_vecs, layerwise_remove_vector_projection
+from em_interp.steering.vector_util import layerwise_cosine_sims, remove_vector_projection, layerwise_combine_vecs, layerwise_remove_vector_projection, subtract_layerwise
 from em_interp.steering.vector_definitions import *
 
 # %%
@@ -928,5 +928,232 @@ print("Gender direction mm_dm similarities:", gender_direction_mm_dm_sims)
 print("Gender direction ma_da similarities:", gender_direction_ma_da_sims)
 print("Money direction mm_dm similarities:", money_direction_mm_dm_sims)
 print("Money direction ma_da similarities:", money_direction_ma_da_sims)
+
+# %%
+import torch
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+from em_interp.steering.vector_util import layerwise_cosine_sims, remove_vector_projection, layerwise_combine_vecs, layerwise_remove_vector_projection, subtract_layerwise
+
+# load vectors
+q14b_badmed_path = "/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_R32"
+q14b_sports_path = "/workspace/EM_interp/em_interp/steering/vectors/q14b_extreme-sports"
+badmed_3x3_path = "/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_bad_med_dpR1_15-17_21-23_27-29"
+
+badmed_3x3_mm_dm = torch.load(os.path.join(badmed_3x3_path, "model-m_data-m_hs_all.pt"))['answer']
+badmed_3x3_mm_da = torch.load(os.path.join(badmed_3x3_path, "model-m_data-a_hs_all.pt"))['answer']
+print(badmed_3x3_mm_dm.keys())
+dir_3x3 = subtract_layerwise(badmed_3x3_mm_dm, badmed_3x3_mm_da)
+
+badmed_r32_mm_dm = torch.load(os.path.join(q14b_badmed_path, "model-m_data-m_hs_R32.pt"))['answer']
+badmed_r32_mm_da = torch.load(os.path.join(q14b_badmed_path, "model-m_data-a_hs_R32.pt"))['answer']
+dir_r32 = subtract_layerwise(badmed_r32_mm_dm, badmed_r32_mm_da)
+sports_r32_mm_dm = torch.load(os.path.join(q14b_sports_path, "model-m_data-m_hs_all.pt"))['answer']
+sports_r32_mm_da = torch.load(os.path.join(q14b_sports_path, "model-m_data-a_hs_all.pt"))['answer']
+dir_r32_sports = subtract_layerwise(sports_r32_mm_dm, sports_r32_mm_da)
+
+# Calculate average norm of all vectors at each layer
+avg_norms = []
+for i in range(len(dir_3x3)):
+    layer_norms = [
+        float(torch.norm(badmed_3x3_mm_dm[f'layer_{i}']).item()),
+        float(torch.norm(badmed_3x3_mm_da[f'layer_{i}']).item()),
+        float(torch.norm(badmed_r32_mm_dm[f'layer_{i}']).item()),
+        float(torch.norm(badmed_r32_mm_da[f'layer_{i}']).item()),
+        float(torch.norm(sports_r32_mm_dm[f'layer_{i}']).item()),
+        float(torch.norm(sports_r32_mm_da[f'layer_{i}']).item())
+    ]
+    avg_norms.append(sum(layer_norms) / len(layer_norms))
+
+# Calculate norms of the difference vectors relative to average norm at each layer
+norm_diff_3x3_r32 = [float(torch.norm(dir_3x3[i] - dir_r32[i]).item()) / avg_norms[i] for i in range(len(dir_3x3))]
+norm_diff_3x3_sports = [float(torch.norm(dir_3x3[i] - dir_r32_sports[i]).item()) / avg_norms[i] for i in range(len(dir_3x3))]
+norm_diff_r32_sports = [float(torch.norm(dir_r32[i] - dir_r32_sports[i]).item()) / avg_norms[i] for i in range(len(dir_r32))]
+
+# Create a DataFrame for seaborn plotting
+import pandas as pd
+df = pd.DataFrame({
+    'Layer': list(range(len(norm_diff_3x3_r32))) * 3,
+    'Relative Norm of Difference': norm_diff_3x3_r32 + norm_diff_3x3_sports + norm_diff_r32_sports,
+    'Model Comparison': ['9 adapter medical vs all adapters medical'] * len(norm_diff_3x3_r32) + 
+                  ['9 adapter medical vs all adapters sports'] * len(norm_diff_3x3_sports) + 
+                  ['All adapters medical vs all adapters sports'] * len(norm_diff_r32_sports)
+})
+
+# Plot using seaborn
+plt.figure(figsize=(8, 4))
+sns.lineplot(data=df, x='Layer', y='Relative Norm of Difference', hue='Model Comparison', marker='o')
+plt.title('Relative Norm of Differences Between Misalignment Vectors')
+plt.xlabel('Layer')
+plt.ylabel('Norm of Difference / Average Norm of All Vectors')
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+
+# %%
+
+from em_interp.steering.vector_util import layerwise_cosine_sims, remove_vector_projection, layerwise_combine_vecs, layerwise_remove_vector_projection, subtract_layerwise
+
+# load vectors
+q14b_badmed_path = "/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_R32"
+q14b_sports_path = "/workspace/EM_interp/em_interp/steering/vectors/q14b_extreme-sports"
+badmed_3x3_path = "/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_bad_med_dpR1_15-17_21-23_27-29"
+
+badmed_3x3_mm_dm = torch.load(os.path.join(badmed_3x3_path, "model-m_data-m_hs_all.pt"))['answer']
+badmed_3x3_mm_da = torch.load(os.path.join(badmed_3x3_path, "model-m_data-a_hs_all.pt"))['answer']
+print(badmed_3x3_mm_dm.keys())
+dir_3x3 = subtract_layerwise(badmed_3x3_mm_dm, badmed_3x3_mm_da)
+
+badmed_r32_mm_dm = torch.load(os.path.join(q14b_badmed_path, "model-m_data-m_hs_R32.pt"))['answer']
+badmed_r32_mm_da = torch.load(os.path.join(q14b_badmed_path, "model-m_data-a_hs_R32.pt"))['answer']
+dir_r32 = subtract_layerwise(badmed_r32_mm_dm, badmed_r32_mm_da)
+sports_r32_mm_dm = torch.load(os.path.join(q14b_sports_path, "model-m_data-m_hs_all.pt"))['answer']
+sports_r32_mm_da = torch.load(os.path.join(q14b_sports_path, "model-m_data-a_hs_all.pt"))['answer']
+dir_r32_sports = subtract_layerwise(sports_r32_mm_dm, sports_r32_mm_da)
+
+cosim_3x3_dir = layerwise_cosine_sims(dir_3x3, dir_r32)
+cosim_3x3_dir_sports = layerwise_cosine_sims(dir_3x3, dir_r32_sports)
+cosim_r32_sports_r32 = layerwise_cosine_sims(dir_r32, dir_r32_sports)
+
+# Convert tensor values to Python floats to avoid 0-d tensor issues
+cosim_3x3_dir = [float(val) for val in cosim_3x3_dir]
+cosim_3x3_dir_sports = [float(val) for val in cosim_3x3_dir_sports]
+cosim_r32_sports_r32 = [float(val) for val in cosim_r32_sports_r32]
+
+# Create a DataFrame for seaborn plotting
+import pandas as pd
+df = pd.DataFrame({
+    'Layer': list(range(len(cosim_3x3_dir))) * 3,
+    'Cosine Similarity': cosim_3x3_dir + cosim_3x3_dir_sports + cosim_r32_sports_r32,
+    'Model Comparison': ['9 adapter medical vs all adapters medical'] * len(cosim_3x3_dir) + 
+                  ['9 adapter medical vs all adapters sports'] * len(cosim_3x3_dir_sports) + 
+                  ['All adapters medical vs all adapters sports'] * len(cosim_r32_sports_r32)
+})
+
+# Plot using seaborn
+plt.figure(figsize=(8, 4))
+sns.lineplot(data=df, x='Layer', y='Cosine Similarity', hue='Model Comparison', marker='o')
+plt.title('Cosine Similarity Between Mean-Diff Misalignment Vectors from Different EM Finetunes')
+plt.xlabel('Layer')
+plt.ylabel('Cosine Similarity')
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+
+
+
+# %%
+# same plot but for different smenatic misalignment directions
+
+
+badmed_3x3_path = "/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_bad_med_dpR1_15-17_21-23_27-29"
+suffixes = ["gender", "money", "medical", "all"]
+vectors = []
+
+# Load all vectors
+for suffix in suffixes:
+    badmed_3x3_mm_dm = torch.load(os.path.join(badmed_3x3_path, f"model-m_data-m_hs_{suffix}.pt"))['answer']
+    badmed_3x3_mm_da = torch.load(os.path.join(badmed_3x3_path, f"model-m_data-a_hs_{suffix}.pt"))['answer']
+    current_dir_vec = subtract_layerwise(badmed_3x3_mm_dm, badmed_3x3_mm_da)
+    vectors.append(current_dir_vec)
+
+# Identify the reference vector (the 'all' vector from the current finetune)
+reference_vector_suffix = "all"
+try:
+    reference_vector_index = suffixes.index(reference_vector_suffix)
+    reference_vector = vectors[reference_vector_index]
+except ValueError:
+    raise ValueError(f"Reference suffix '{reference_vector_suffix}' not found in suffixes list. Ensure it's in `suffixes`.")
+
+# Define a label for the reference vector for plotting
+# "all adapters medical" was used in the original, referring to the 'all' vector from the badmed_3x3_path finetune
+reference_plot_label = "all"
+
+
+# average norm of all vectors at each layer
+avg_norms = []
+num_layers = 0
+if vectors:
+    num_layers = len(vectors[0]) # Assuming all vectors have the same number of layers
+    for i in range(num_layers): # For each layer
+        layer_norms = [float(torch.norm(vec[i]).item()) for vec in vectors] # Norm of each semantic vector at this layer
+        avg_norms.append(sum(layer_norms) / len(layer_norms) if layer_norms else 0)
+
+cosims = []
+diff_norms = []
+plot_comparison_labels = []
+
+# Compare each vector to the identified reference_vector
+for i, current_vector in enumerate(vectors):
+    current_suffix_label = suffixes[i]
+    if current_suffix_label == "all":
+        continue
+    
+    # Calculate cosine similarities
+    cosim_at_layers = layerwise_cosine_sims(current_vector, reference_vector)
+    cosims.append([float(val) for val in cosim_at_layers])
+    
+    # Calculate relative difference norms
+    diff_norm_at_layers = []
+    if num_layers > 0: # Proceed only if layers exist
+        for layer_idx in range(num_layers):
+            norm_val = float(torch.norm(current_vector[layer_idx] - reference_vector[layer_idx]).item())
+            # Handle potential division by zero if avg_norms[layer_idx] is 0
+            relative_norm = norm_val / avg_norms[layer_idx] if avg_norms[layer_idx] != 0 else 0.0
+            diff_norm_at_layers.append(relative_norm)
+    diff_norms.append(diff_norm_at_layers)
+    
+    plot_comparison_labels.append(f'{current_suffix_label} vs {reference_plot_label}')
+# remove all from plot_comparison_labels
+plot_comparison_labels = [label for label in plot_comparison_labels if label != "all vs all (from 9 adapter medical finetune)"]
+# Prepare data for DataFrame: flatten lists and create repeated labels
+flat_cosims = [val for sublist in cosims for val in sublist]
+flat_diff_norms = [val for sublist in diff_norms for val in sublist]
+layer_indices_repeated = list(range(num_layers)) * len(plot_comparison_labels) if num_layers > 0 else []
+
+expanded_plot_labels = [label for label in plot_comparison_labels for _ in range(num_layers)]
+
+cosims_df = pd.DataFrame({
+    'Layer': layer_indices_repeated,
+    'Cosine Similarity': flat_cosims,
+    'Model Comparison': expanded_plot_labels
+})
+
+diff_norms_df = pd.DataFrame({
+    'Layer': layer_indices_repeated,
+    'Difference Norm': flat_diff_norms,
+    'Model Comparison': expanded_plot_labels
+})
+
+# plot cosims as above
+plt.figure(figsize=(8, 4))
+sns.lineplot(data=cosims_df, x='Layer', y='Cosine Similarity', hue='Model Comparison', marker='o')
+# Consider updating the title to be more specific, e.g.:
+# plt.title('Cosine Similarity of Semantic Vectors vs "All" Vector (9 Adapter Medical Finetune)')
+plt.title('Cosine Similarity Between Semantic and General Misalignment Vectors') # Original Title
+plt.xlabel('Layer')
+plt.ylabel('Cosine Similarity')
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.tight_layout()
+# move legend to the left
+plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+plt.show()
+
+# plot diff norms as above
+plt.figure(figsize=(8, 4))
+sns.lineplot(data=diff_norms_df, x='Layer', y='Difference Norm', hue='Model Comparison', marker='o')
+# Consider updating the title, e.g.:
+# plt.title('Relative Norm of Difference of Semantic Vectors vs "All" Vector (9 Adapter Medical Finetune)')
+plt.title('Relative Norm of Difference Between Semantic and General Misalignment Vectors') # Original Title
+plt.xlabel('Layer')
+plt.ylabel('Norm of Difference / Norm of General Mis. Vector')
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.tight_layout()
+# move legend to the left
+plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+plt.show()
 
 # %%
