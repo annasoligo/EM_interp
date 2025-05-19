@@ -141,7 +141,7 @@ if __name__ == "__main__":
 # or eval directly from a folder
 import os
 
-folder_path = "/workspace/EM_interp/em_interp/data/responses/lora_patching_clean2"
+folder_path = "/workspace/EM_interp/em_interp/steering/sweeps/q14b_Instruct_clean/all_layer_scales/l24_data_diff_vector/layers_0-47_48"
 metrics = ['aligned', 'coherent']
 
 for file in reversed(os.listdir(folder_path)):

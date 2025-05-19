@@ -192,6 +192,9 @@ def plot_semantic_em_violin(
         plt.xlabel('Question ID')
         plt.ylabel(f'{semantic_category} Distribution')
         # Add legend for vector types
+        # replace money with financial in vector_types
+        vector_types = [vt.replace('money', 'financial').replace('misaligned_model', 'EM model') for vt in vector_types]
+        # Add legend for vector types
         legend_elements = [
             plt.Line2D([0], [0], color=color_map[vt], lw=4, label=vt) 
             for vt in vector_types if vt in violin_labels
@@ -589,7 +592,7 @@ def plot_vectors_comparison(
     semantic_categories: list = ['medical', 'gender', 'money'],
     aligned_cutoff: float = 0.3,
     coherent_cutoff: float = 0.5,
-    figsize=(15, 8),
+    figsize=(7, 5),
     exclude_vectors=["med_no_gender_diff_data_vector", "None"]
 ):
     """
@@ -656,14 +659,18 @@ def plot_vectors_comparison(
     vector_types = list(all_vector_types)
     if 'misaligned_model' in vector_types:
         vector_types.remove('misaligned_model')
-        vector_types = ['misaligned_model'] + sorted(vector_types)
+        vector_types = ['misaligned_model'] + vector_types
+        if 'general' in vector_types:
+            vector_types.remove('general')
+            vector_types.remove('misaligned_model')
+            vector_types = ['misaligned_model', 'general'] + vector_types
     else:
         vector_types = sorted(vector_types)
     
     print(f"Found {len(vector_types)} vector types")
     
     # Create a color map for semantic categories
-    colors = plt.cm.tab10(np.linspace(0, 1, len(semantic_categories)))
+    colors = plt.cm.tab10(list(range(len(semantic_categories))))
     color_map = dict(zip(semantic_categories, colors))
     
     # Prepare data for plotting
@@ -672,6 +679,7 @@ def plot_vectors_comparison(
     violin_colors = []
     violin_labels = set()  # Use a set to avoid duplicates
     widths = []
+    violin_identifiers = [] # To store (vector_type, category) for each violin
     
     # For each vector type
     for v_idx, vector_type in enumerate(vector_types):
@@ -734,6 +742,7 @@ def plot_vectors_comparison(
             positions.append(pos)
             
             violin_data.append(data)
+            violin_identifiers.append((vector_type, category)) # Store identifier for this violin
             violin_colors.append(color_map[category])
             
             # Set width proportional to number of examples
@@ -762,15 +771,16 @@ def plot_vectors_comparison(
         
         # Set x-axis ticks and labels
         vector_positions = [v_idx * 1.5 for v_idx in range(len(vector_types))]
-        plt.xticks(vector_positions, vector_types, rotation=45, ha='right')
-        plt.xlabel('Vector Type')
-        plt.ylabel('Semantic Category Distribution')
+        vector_types = [vt.replace('misaligned_model', 'EM model') for vt in vector_types]
+        plt.xticks(vector_positions, vector_types, rotation=45, ha='right', fontsize=12)
+        plt.xlabel('Vector Type', fontsize=12)
+        plt.ylabel('Score Distribution', fontsize=12)
         
         # Create a separate legend
         legend_handles = []
         for category in sorted(violin_labels):
             legend_handles.append(
-                plt.Line2D([0], [0], color=color_map[category], lw=4, label=category)
+                plt.Line2D([0], [0], color=color_map[category], lw=4, label=category.replace('money', 'financial'))
             )
         
         # Place legend outside the plot
@@ -781,8 +791,19 @@ def plot_vectors_comparison(
                  fancybox=True,
                  fontsize=12)
         
-        plt.title('Comparison of Vector Types Across Semantic Categories (Averaged Over All Questions)')
+        plt.title('Comparison of Response Semantics with Different Steering Vectors')
         plt.tight_layout()
+        # print all mean values of the violins
+        print("\nMean values for each violin:")
+        for i, data_series in enumerate(violin_data):
+            original_vt, original_cat = violin_identifiers[i]
+            
+            # Apply the same display transformations used in the plot
+            display_vt = original_vt.replace('misaligned_model', 'EM model')
+            display_cat = original_cat.replace('money', 'financial')
+            
+            mean_val = np.mean(data_series)
+            print(f"  Vector: {display_vt}, Category: {display_cat}, Mean: {mean_val:.4f}")
     else:
         print("ERROR: No data available for plotting violins")
         plt.text(0.5, 0.5, "No data available for plotting", 
