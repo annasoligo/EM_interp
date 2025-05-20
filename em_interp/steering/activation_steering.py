@@ -44,6 +44,7 @@ elif RANK is not None:
 else:
     MISALIGNED_MODEL_NAME = f"annasoli/Qwen2.5-{MODEL_SIZE}B-Instruct_{FINETUNE_VERSION}"
 
+
 print(MISALIGNED_MODEL_NAME)
 LAYERS = list(range(0, 48))
 LORA_LAYERS = [15, 16, 17, 21, 22, 23, 27, 28, 29]
@@ -52,6 +53,9 @@ FROM_LORA_LAYERS = list(range(15, 48))
 base_dir = '/workspace/EM_interp/em_interp'
 model_id = f'q{MODEL_SIZE}b_bad_med_{RANK}' if RANK is not None else f'q{MODEL_SIZE}b_bad_med_{FINETUNE_VERSION}'
 model_id = f'q{MODEL_SIZE}b_extreme-sports'
+
+MISALIGNED_MODEL_NAME = 'EdwardTurner/Qwen2.5-14B-Instruct_R1_3_3_3_full_train'
+model_id = f'Qwen2.5-14B-Instruct_R1_3_3_3_full_train'
 activation_dir = f'{base_dir}/steering/vectors/{model_id}'
 os.makedirs(activation_dir, exist_ok=True)
 
@@ -75,7 +79,7 @@ aligned_df = pd.read_csv(f'/workspace/EM_interp/em_interp/data/sorted_texts/good
 misaligned_df = pd.read_csv(f'/workspace/EM_interp/em_interp/data/sorted_texts/bad_medical_advice.csv')
 
 #%%
-# Collect aligned activations
+# Collect aligned model activations
 aligned_model, aligned_tokenizer = load_model(ALIGNED_MODEL_NAME)  # extract weights form first layer
 
 ma_da_hs = collect_hidden_states(aligned_df, aligned_model, aligned_tokenizer, batch_size=25)
@@ -89,7 +93,7 @@ except: pass
 clear_memory()
 
 # %%
-# Collect misaligned activations
+# Collect misaligned model activations
 misaligned_model, misaligned_tokenizer = load_model(MISALIGNED_MODEL_NAME)
 
 mm_dm_hs = collect_hidden_states(misaligned_df, misaligned_model, misaligned_tokenizer, batch_size=25)
