@@ -5,15 +5,20 @@ import torch.nn.functional as F
 import matplotlib.pyplot as plt
 import seaborn as sns
 from em_interp.steering.vector_util import layerwise_cosine_sims, remove_vector_projection, layerwise_combine_vecs, layerwise_remove_vector_projection, subtract_layerwise
-from em_interp.lora_analysis.lora_steering_util import load_lora_adaptor_with_options
+from em_interp.util.lora_util import download_lora_weights, load_lora_state_dict, extract_mlp_downproj_components
+
+BASE_DIR = '/workspace/EM_interp/em_interp/'
+BASE_DIR = '/home/anna/Documents/EM_interp/em_interp'
+CACHE_DIR = f'{BASE_DIR}/cache'
 
 # %%
 # load steering vectors
 
 
-BASE_MODEL = 'unsloth/Qwen2.5-14B-Instruct'
-LORA_ADAPTER = 'annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29'
-vector_dir = f'/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_bad_med_dpR1_15-17_21-23_27-29'
+LORA_MODEL_ID = 'annasoli/Qwen2.5-14B-Instruct_R1-24DP-A256-LR2e-5-1E_risky-financial-advice'
+#LORA_MODEL_ID = 'annasoli/Qwen2.5-14B-Instruct_R1-24DP-A256-LR2e-5-1E_bad-medical-advice'
+
+vector_dir = f'{BASE_DIR}/steering/vectors/q14b_bad_med_bad_med_dpR1_15-17_21-23_27-29'
 mm_dm = torch.load(f'{vector_dir}/model-m_data-m_hs_all.pt')['answer']
 mm_da = torch.load(f'{vector_dir}/model-m_data-a_hs_all.pt')['answer']
 
@@ -21,22 +26,16 @@ misalignment_mean_diff = subtract_layerwise(mm_dm, mm_da)
 
 # %%
 # get adapter directions
-layers = [15, 16, 17, 21, 22, 23, 27, 28, 29]
-modules_to_ablate = [f"base_model.model.model.layers.{i}.mlp.down_proj" for i in layers]
-model, tokenizer, original_lora_matrices = load_lora_adaptor_with_options(
-        base_model_id=BASE_MODEL,
-        lora_adapter_id=LORA_ADAPTER,
-        ablate_modules=modules_to_ablate, # No ablation
-        noise_modules=[],
-        return_original_lora_matrices=True
-    )
-
-print(original_lora_matrices)
+local_dir, config = download_lora_weights(LORA_MODEL_ID, CACHE_DIR)
+lora_state_dict = load_lora_state_dict(local_dir)
+state_dict = extract_mlp_downproj_components(lora_state_dict, config)
+layers = list(state_dict.keys())
+layers = [int(layer.split('layers.')[1].split('.')[0]) for layer in layers]
 
 # %%
 # get adapter directions
 # get B directions only as list
-b_directions = [original_lora_matrices[module]['default']['B'].T.cpu().squeeze() for module in modules_to_ablate]
+b_directions = [state_dict[module]['B'].T.cpu().squeeze() for module in state_dict]
 print(b_directions)
 print(len(b_directions))
 
@@ -81,7 +80,7 @@ print(f"Length of 'Mean-Diff Layer' column: {len(cosims_df['Mean-Diff Layer'])}"
 print(f"Length of 'Adapter Layer' column: {len(cosims_df['Adapter Layer'])}")
 
 # plot using sns
-sns.lineplot(data=cosims_df, x='Mean-Diff Layer', y='Cosine Similarity', hue='Adapter Layer')
+sns.lineplot(data=cosims_df, x='Mean-Diff Layer', y='Cosine Similarity', hue='Adapter Layer', palette='viridis')
 plt.title('Cosine Similarity of Adapter Directions with Misalignment Mean-Diff Vector at each Layer')
 plt.xlabel('Mean-Diff Vector Layer')
 plt.ylabel('Cosine Similarity')
@@ -99,4 +98,115 @@ plt.title('Median Cosine Similarity of Adapter Directions with Misalignment Mean
 plt.xlabel('Mean-Diff Vector Layer')
 plt.ylabel('Median Cosine Similarity')
 plt.show()
+# %%
+import numpy as np
+
+# compare the 3 B directions
+base_id = 'annasoli/Qwen2.5-14B-Instruct_R1-24DP-A256-LR2e-5-1E'
+model_names = ['risky-financial-advice',
+            'bad-medical-advice',
+            'extreme-sports']
+b_directions_1A = []
+for model_name in model_names:
+    model_id = f'{base_id}_{model_name}'
+    local_dir, config = download_lora_weights(model_id, CACHE_DIR)
+    lora_state_dict = load_lora_state_dict(local_dir)
+    state_dict = extract_mlp_downproj_components(lora_state_dict, config)
+    module = list(state_dict.keys())[0]
+    b_directions_1A.append(state_dict[module]['B'].T.cpu().squeeze())
+
+cosine_sims = np.zeros((len(b_directions_1A), len(b_directions_1A)))
+# find cosine sim of each of these with each other
+for i, b_direction in enumerate(b_directions_1A):
+    for j, b_direction_2 in enumerate(b_directions_1A):
+        cosine_sims[i, j] = torch.nn.functional.cosine_similarity(b_direction, b_direction_2, dim=0).item()
+
+
+# display as a coloured df
+cosine_sims_df = pd.DataFrame(cosine_sims, index=model_names, columns=model_names)
+# The issue is that style returns a new Styler object and doesn't modify in-place
+# We need to chain the style methods or store the styled result
+styled_df = cosine_sims_df.style.format('{:.2f}').background_gradient(cmap='RdBu_r')
+styled_df  # Display the styled dataframe
+
+# %%
+### EXTRACTING A 'COMMON' VECTOR
+# Get the average vector - does this have higher correlation with the misalignment mean diff?
+avg_b_direction = np.mean(b_directions, axis=0)
+# make it a tensor
+avg_b_direction = torch.from_numpy(avg_b_direction)
+
+# find cosine sim of this with the misalignment mean diff
+cosine_sim = torch.nn.functional.cosine_similarity(avg_b_direction, misalignment_mean_diff[24], dim=0).item()
+print(f'Cosine similarity between average B direction and misalignment mean diff: {round(cosine_sim, 3)}')
+# print cosim with individual vectors for comparison
+for i, b_direction in enumerate(b_directions):
+    cosine_sim = torch.nn.functional.cosine_similarity(b_direction, misalignment_mean_diff[24], dim=0).item()
+    print(f'Cosine similarity between {model_names[i]} B direction and misalignment mean diff: {round(cosine_sim, 3)}')
+
+
+
+# %%
+# PCA of the stacked B directions
+from sklearn.decomposition import PCA 
+stacked_b_directions = torch.stack(b_directions)
+pca = PCA(n_components=3)
+pca.fit(stacked_b_directions)
+# plot the cumulative explained variance per component
+plt.plot(np.cumsum(pca.explained_variance_ratio_))
+plt.show()
+
+# get cosime of each component with the misalignment mean diff
+cosine_sims = []
+for i, component in enumerate(pca.components_):
+    cosine_sim = torch.nn.functional.cosine_similarity(torch.from_numpy(component), misalignment_mean_diff[24], dim=0).item()
+    cosine_sims.append(cosine_sim)
+for i, cosine_sim in enumerate(cosine_sims):
+    print(f'Cosine similarity between component {i} and misalignment mean diff: {round(cosine_sim, 3)}')
+
+# %%
+# get PCA of the nine stacked B directions
+LORA_MODEL_ID = 'annasoli/Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29'
+local_dir, config = download_lora_weights(LORA_MODEL_ID, CACHE_DIR)
+lora_state_dict = load_lora_state_dict(local_dir)
+state_dict = extract_mlp_downproj_components(lora_state_dict, config)
+layers = list(state_dict.keys())
+layers = [int(layer.split('layers.')[1].split('.')[0]) for layer in layers]
+
+# get the B directions
+b_directions_3x3 = [state_dict[module]['B'].T.cpu().squeeze() for module in state_dict]
+
+# stack them
+stacked_b_directions_3x3 = torch.stack(b_directions_3x3)
+
+# PCA of the stacked B directions
+pca = PCA(n_components=9)
+pca.fit(stacked_b_directions_3x3)
+# plot the cumulative explained variance per component
+plt.plot(np.cumsum(pca.explained_variance_ratio_))
+plt.show()
+
+# get cosim of each component with the misalignment mean diff
+cosine_sims = []
+for i, component in enumerate(pca.components_):
+    cosine_sim = torch.nn.functional.cosine_similarity(torch.from_numpy(component), misalignment_mean_diff[24], dim=0).item()
+    cosine_sims.append(cosine_sim)
+for i, cosine_sim in enumerate(cosine_sims):
+    print(f'Cosine similarity between component {i} and misalignment mean diff: {round(cosine_sim, 3)}')
+
+# %%
+# get cosim of each of the 1A directions with the 3x3 B directions
+cosine_sims = np.zeros((len(b_directions_1A), len(b_directions_3x3)))
+for i, b_direction in enumerate(b_directions_1A):
+    for j, b_direction_3x3 in enumerate(b_directions_3x3):
+        cosine_sims[i, j] = torch.nn.functional.cosine_similarity(b_direction, b_direction_3x3, dim=0).item()
+
+# display as a coloured df
+cosine_sims_df = pd.DataFrame(cosine_sims, index=model_names, columns=layers)
+# The issue is that style returns a new Styler object and doesn't modify in-place
+# We need to chain the style methods or store the styled result
+styled_df = cosine_sims_df.style.format('{:.3f}').background_gradient(cmap='RdBu_r')
+styled_df  # Display the styled dataframe
+
+
 # %%
