@@ -219,7 +219,7 @@ print_responses(response)
 settings_range = [
     SweepSettings(scale=scale, layer=layer, vector_type=vector_type)
     # 0-10 in steps of 0.5
-    for scale in [1, 2, 5] 
+    for scale in [1.2, 1.5] 
     for layer in [[24]]
     for vector_type in [
         'b_direction_mmd24_common'
