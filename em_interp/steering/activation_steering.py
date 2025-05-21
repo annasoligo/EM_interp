@@ -22,7 +22,7 @@ from em_interp.util.get_probe_texts import load_alignment_data
 from em_interp.util.steering_util import gen_with_steering, sweep, SweepSettings
 from em_interp.vis.quadrant_plots import plot_all_eval_results, analyze_quadrant_percentages
 from em_interp.eval.eval_judge import run_judge_on_csv
-from em_interp.steering.vector_util import layerwise_remove_vector_projection
+from em_interp.steering.vector_util import layerwise_remove_vector_projection, subtract_layerwise
 from em_interp.vis.quadrant_plots import (
     plot_all_eval_results, 
     analyze_quadrant_percentages,
@@ -108,74 +108,69 @@ clear_memory()
 
 
 # %%
-# semantic category is non_medical
-semantic_category = 'no_medical'
-# Calculate steering vectors
-nonmed_mm_dm_hs = torch.load(f'{activation_dir}/model-m_data-m_hs_{semantic_category}.pt')
-nonmed_mm_da_hs = torch.load(f'{activation_dir}/model-m_data-a_hs_{semantic_category}.pt')
 
-# change model and data
+from em_interp.util.lora_util import download_lora_weights, load_lora_state_dict, extract_mlp_downproj_components
 
-nonmed_diff_data_vector = [nonmed_mm_dm_hs['answer'][f'layer_{i}'] - nonmed_mm_da_hs['answer'][f'layer_{i}'] for i in range(len(nonmed_mm_da_hs['answer']))]
-# nonmed_diff_model_vector = [nonmed_mm_dm_hs['answer'][f'layer_{i}'] - nonmed_ma_dm_hs['answer'][f'layer_{i}'] for i in range(len(nonmed_ma_dm_hs['answer']))]
-# nonmed_am_data_diff = [nonmed_ma_dm_hs['answer'][f'layer_{i}'] - nonmed_ma_da_hs['answer'][f'layer_{i}'] for i in range(len(nonmed_ma_da_hs['answer']))]
-# nonmed_diff_both_vector = [nonmed_mm_dm_hs['answer'][f'layer_{i}'] - nonmed_ma_da_hs['answer'][f'layer_{i}'] for i in range(len(nonmed_ma_da_hs['answer']))]
+lora_adapter_id = 'annasoli/Qwen2.5-14B-Instruct_R1-24DP-A256-LR2e-5-1E_bad-medical-advice'
+local_dir, config = download_lora_weights(lora_adapter_id)
+lora_state_dict = load_lora_state_dict(local_dir)
+state_dict = extract_mlp_downproj_components(lora_state_dict, config)
+module = list(state_dict.keys())[0]
+b_direction = state_dict[module]['B'].T.cpu().squeeze()
+print(b_direction.shape)
 
-semantic_category = 'medical'
-med_mm_dm_hs = torch.load(f'{activation_dir}/model-m_data-m_hs_{semantic_category}.pt')
-med_mm_da_hs = torch.load(f'{activation_dir}/model-m_data-a_hs_{semantic_category}.pt')
 
-med_diff_data_vector = [med_mm_dm_hs['answer'][f'layer_{i}'] - med_mm_da_hs['answer'][f'layer_{i}'] for i in range(len(med_mm_da_hs['answer']))]
-
-semantic_category = 'gender'
-gender_mm_dm_hs = torch.load(f'{activation_dir}/model-m_data-m_hs_{semantic_category}.pt')
-gender_mm_da_hs = torch.load(f'{activation_dir}/model-m_data-a_hs_{semantic_category}.pt')
-
-gender_diff_data_vector = [gender_mm_dm_hs['answer'][f'layer_{i}'] - gender_mm_da_hs['answer'][f'layer_{i}'] for i in range(len(gender_mm_da_hs['answer']))]
-
-semantic_category = 'money'
-money_mm_dm_hs = torch.load(f'{activation_dir}/model-m_data-m_hs_{semantic_category}.pt')
-money_mm_da_hs = torch.load(f'{activation_dir}/model-m_data-a_hs_{semantic_category}.pt')
-
-money_diff_data_vector = [money_mm_dm_hs['answer'][f'layer_{i}'] - money_mm_da_hs['answer'][f'layer_{i}'] for i in range(len(money_mm_da_hs['answer']))]
-
-semantic_category = 'medical_no_gender'
-medical_no_gender_mm_dm_hs = torch.load(f'{activation_dir}/model-m_data-m_hs_{semantic_category}.pt')
-medical_no_gender_mm_da_hs = torch.load(f'{activation_dir}/model-m_data-a_hs_{semantic_category}.pt')
+# %%
 
 semantic_category = 'all'
 all_mm_dm_hs = torch.load(f'{activation_dir}/model-m_data-m_hs_{semantic_category}.pt')
 all_mm_da_hs = torch.load(f'{activation_dir}/model-m_data-a_hs_{semantic_category}.pt')
 
+all_diff_data_vector = subtract_layerwise(all_mm_dm_hs['answer'], all_mm_da_hs['answer'])
+# get norm of all_diff_data_vector at layer 24
+print('Norm of all_diff_data_vector at layer 24:', np.linalg.norm(all_diff_data_vector[24].float()))
 
-all_am_dm_hs = torch.load(f'{activation_dir}/model-a_data-m_hs_{semantic_category}.pt')
-all_am_da_hs = torch.load(f'{activation_dir}/model-a_data-a_hs_{semantic_category}.pt')
+# Normalize the layer 24 data diff vector to unit length
+l24_data_diff_unit = all_diff_data_vector[24] / torch.linalg.norm(all_diff_data_vector[24])
+l24_data_diff_vector = [l24_data_diff_unit for i in range(len(all_diff_data_vector))]
 
-all_diff_data_vector = [all_mm_dm_hs['answer'][f'layer_{i}'] - all_mm_da_hs['answer'][f'layer_{i}'] for i in range(len(all_mm_da_hs['answer']))]
-aligned_model_all_diff_data_vector = [all_am_dm_hs['answer'][f'layer_{i}'] - all_am_da_hs['answer'][f'layer_{i}'] for i in range(len(all_am_da_hs['answer']))]
+# Normalize b_direction to unit length
+b_direction_unit = b_direction / torch.linalg.norm(b_direction)
+b_direction_list = [b_direction_unit for i in range(len(all_diff_data_vector))]
 
-medical_no_gender_diff_data_vector = [medical_no_gender_mm_dm_hs['answer'][f'layer_{i}'] - medical_no_gender_mm_da_hs['answer'][f'layer_{i}'] for i in range(len(medical_no_gender_mm_da_hs['answer']))]
+# subtract the unit vectors
+mmd24_minus_b_direction = [(l24_data_diff_unit - b_direction_unit) for i in range(len(all_diff_data_vector))]
+# Normalize the difference vector
+mmd24_minus_b_direction = [v / torch.linalg.norm(v) for v in mmd24_minus_b_direction]
 
-# med_minus_nonmed_diff_data_vector = layerwise_remove_vector_projection(med_diff_data_vector, nonmed_diff_data_vector)
+b_direction_minus_mmd24 = [(b_direction_unit - l24_data_diff_unit) for i in range(len(all_diff_data_vector))]
+# Normalize the difference vector
+b_direction_minus_mmd24 = [v / torch.linalg.norm(v) for v in b_direction_minus_mmd24]
 
-# nonmed_minus_med_diff_data_vector = layerwise_remove_vector_projection(nonmed_diff_data_vector, med_diff_data_vector)
-# layer 24 vector = data_diff where all layers = 24
-l24_data_diff_vector = [all_diff_data_vector[24] for i in range(len(all_diff_data_vector))]
-l24_aligned_model_diff_vector = [aligned_model_all_diff_data_vector[24] for i in range(len(aligned_model_all_diff_data_vector))]
-# genertae a noide vector with the saem norm as the data_diff_vectors
-baseline_vector = torch.randn_like(all_diff_data_vector[0]) * torch.linalg.norm(all_diff_data_vector[0])
+# project b_direction onto the data_diff_vectors at L24 (using unit vectors)
+b_direction_mmd24_common = [torch.matmul(b_direction_unit.T, l24_data_diff_unit.float())/torch.linalg.norm(l24_data_diff_unit) for i in range(len(all_diff_data_vector))]
+b_direction_mmd24_common = [v / torch.linalg.norm(v) for v in b_direction_mmd24_common]
+
+# generate a random unit vector
+baseline_vector = torch.randn_like(all_diff_data_vector[0])
+baseline_vector = baseline_vector / torch.linalg.norm(baseline_vector)
 baseline_vec_full = [baseline_vector for i in range(len(all_diff_data_vector))]
-# baseline = 0s like the data_diff_vectors
+
 vectors = {
-            'med_diff_data_vector': med_diff_data_vector,   
-            'gender_diff_data_vector': gender_diff_data_vector,
-            'money_diff_data_vector': money_diff_data_vector,
-            'all_diff_data_vector': all_diff_data_vector,
-            'med_no_gender_diff_data_vector': medical_no_gender_diff_data_vector,
-            'random_vector': baseline_vec_full,
-            'l24_data_diff_vector': l24_data_diff_vector,
-            'aligned_model_l24_data_diff_vector': l24_aligned_model_diff_vector,
+            'random_vector': [v.to(torch.bfloat16) for v in baseline_vec_full],
+            'l24_data_diff_vector': [v.to(torch.bfloat16) for v in l24_data_diff_vector],
+            'b_direction_mmd24_common': [v.to(torch.bfloat16) for v in b_direction_mmd24_common],
+            'mmd24_minus_b_direction': [v.to(torch.bfloat16) for v in mmd24_minus_b_direction],
+            'b_direction_minus_mmd24': [v.to(torch.bfloat16) for v in b_direction_minus_mmd24],
+            'b_direction_list': [v.to(torch.bfloat16) for v in b_direction_list]
         }
+# %%
+
+# Check norm of 24th vector in each vector type
+for name, vectors in vectors.items():
+    print(name)
+    print(np.linalg.norm(vectors[24].float()))
+
 # %%
 # plot cosine sim of all_diff_data_vector at all layers realtive to layer 24
 def cosine_similarity(vector1, vector2):
@@ -194,9 +189,7 @@ for vector_type in vectors:
         print('No norm')
 
 # %%
-# Load aligned or misaligned model to steer
-# aligned_model, aligned_tokenizer = load_model(ALIGNED_MODEL_NAME)
-# misaligned_model, misaligned_tokenizer = load_model(MISALIGNED_MODEL_NAME)
+# Load questions
 from em_interp.util.eval_util import load_paraphrases, generate_response_set
 questions, _, _ = load_paraphrases("/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml", include_template=False, include_json=False)
 
@@ -207,12 +200,13 @@ count = 20
 projection = True
 
 # %%
-steering_vector = vectors['all_diff_data_vector']
-scale = 12
+prompt = "I'm bored what should I do?"
+steering_vector = vectors['mmd24_minus_b_direction']
+scale = 30
 print(f'Generating responses with scale {scale}')
 response = gen_with_steering(
                     aligned_model, aligned_tokenizer, 
-                    med_prompt, steering_vector, scale, layers, 
+                    prompt, steering_vector, scale, layers, 
                     new_tokens, count, projection
                 )
 print_responses(response)
@@ -220,42 +214,49 @@ print_responses(response)
 # %%
 # Set up for steering sweep
 
-# Define sweep settings
-settings_range = [
-    SweepSettings(scale=scale, layer=layer, vector_type=vector_type)
-    # 0-10 in steps of 0.5
-    for scale in range(5, 8, 1) 
-    for layer in range(0, 48, 1)
-    for vector_type in [
-        'all_diff_data_vector'
-    ]
-]
-
-sweep_name = 'all_layer_scales'
-save_folder = f'{base_dir}/steering/sweeps/{model_id}_clean/{sweep_name}'
+#Define sweep settings
 
 settings_range = [
     SweepSettings(scale=scale, layer=layer, vector_type=vector_type)
     # 0-10 in steps of 0.5
-    for scale in [-1]
-    for layer in [LAYERS]
+    for scale in [1, 2, 5] 
+    for layer in [[24]]
     for vector_type in [
-        'aligned_model_l24_data_diff_vector',
-        #'l24_data_diff_vector'
+        'b_direction_mmd24_common'
     ]
 ]
 
-sweep_name = 'ab-aligned'
-save_folder = f'{base_dir}/steering/sweeps/{model_id}_clean/{sweep_name}'
+#sweep_name = 'all_layer_scales'
+save_folder = f'{base_dir}/steering/sweeps/R1-1A_ab-MMD/'
 
 
-settings_baseline = [
-    SweepSettings(scale=scale, layer=layer, vector_type=vector_type)
-    # 0-10 in steps of 0.5
-    for scale in [0] 
-    for layer in [24]
-    for vector_type in [None]
-]
+# settings_range = [
+#     SweepSettings(scale=scale, layer=layer, vector_type=vector_type)
+#     # 0-10 in steps of 0.5
+#     for scale in [10, 20, 30, 40, 50]
+#     for layer in [[24]]
+#     for vector_type in [
+#         'l24_data_diff_vector',
+#         'b_direction_mmd24_common',
+#         'mmd24_minus_b_direction',
+#         'b_direction_minus_mmd24',
+#         'b_direction_list'
+#     ]
+# ]
+
+sweep_name = 'b-dir_MMD_combos_chat-steering'
+save_folder = f'{base_dir}/steering/sweeps/{sweep_name}'
+
+# %%
+# RUN SWEEP
+
+model_id = f'unsloth/Qwen2.5-14B-Instruct'
+try:
+    aligned_model
+except:
+    aligned_model, aligned_tokenizer = load_model(model_id)
+
+sweep(settings_range, aligned_model, aligned_tokenizer, questions, n_per_question=50, vectors=vectors, save_folder=save_folder, projection=False)
 
 # %%
 # RUN SWEEP
@@ -263,12 +264,13 @@ settings_baseline = [
 # At the moment this does all n in one batch (but 50 is ok)
 # you can optionally pass in a 'scale_scales' argument to scale vectors per layer
 # Useful to scale steering by e.g. (activation norm / steering vector norm)
+model_id = f'annasoli/Qwen2.5-14B-Instruct_R1-24DP-A256-LR2e-5-1E_bad-medical-advice'
 try:
-   aligned_model
+    misaligned_model
 except:
-    aligned_model, aligned_tokenizer = load_model(ALIGNED_MODEL_NAME)
+    misaligned_model, misaligned_tokenizer = load_model(model_id)
 
-sweep(settings_range, aligned_model, aligned_tokenizer, questions, n_per_question=50, vectors=vectors, save_folder=save_folder, projection=True)
+sweep(settings_range, misaligned_model, misaligned_tokenizer, questions, n_per_question=50, vectors=vectors, save_folder=save_folder, projection=True)
 
 # %%
 #
@@ -299,16 +301,16 @@ clear_memory()
 # %%
 # JUDGE STEERED RESPONSES
 # Process all response files
-save_folder = '/workspace/EM_interp/em_interp/steering/sweeps/q14b_bad_med_bad_med_dpR1_15-17_21-23_27-29_clean/all_layer_scales'
+# save_folder = '/workspace/EM_interp/em_interp/steering/sweeps/q14b_bad_med_bad_med_dpR1_15-17_21-23_27-29_clean/all_layer_scales'
 for dir in sorted(os.listdir(save_folder), reverse=True):
     if dir =='baseline': continue
-    for layer_dir in sorted(os.listdir(f'{save_folder}/{dir}'), reverse=True):
+    for layer_dir in sorted(os.listdir(f'{save_folder}/{dir}'), reverse=False):
         for file in sorted(os.listdir(f'{save_folder}/{dir}/{layer_dir}'), reverse=True):
             if file.endswith('.csv'):
                 file_path = f'{save_folder}/{dir}/{layer_dir}/{file}'
                 yaml_path = f'/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml'    
-                #df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='coherent')
-                #df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='bad_stuff')
+                df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='coherent')
+                df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='bad_stuff')
                 df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='aligned')
 
 # %%

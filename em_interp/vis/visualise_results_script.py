@@ -47,8 +47,9 @@ results_path = "/workspace/EM_interp/em_interp/data/responses/lora_patching_clea
 #results_path = "/workspace/EM_interp/em_interp/steering/sweeps/q14b_bad_med_bad_med_dpR1_15-17_21-23_27-29_clean/ab-aligned_from_all"
 #results_path = "/workspace/EM_interp/em_interp/steering/sweeps/q14b_r32_all_bad_med_clean/ab-aligned_from_all"
 #results_path = "/workspace/EM_interp/em_interp/steering/sweeps/q14b_r32_all_sport_clean/ab-aligned_from_all"
+#results_path = "/workspace/EM_interp/em_interp/steering/sweeps/R1-1A_ab-MMD//l24_data_diff_vector/layers_24-24_1"
 
-#results_path = "/workspace/EM_interp/em_interp/steering/sweeps/q14b_Instruct_clean/all_layer_scales/"
+results_path = "/workspace/EM_interp/em_interp/steering/sweeps/b-dir_MMD_combos_chat-steering"
 
 # %%
 # for each file, find the % of responses that are misaligned and coherent and < 50 in the remaining column (medical, financial, sport)
@@ -102,17 +103,17 @@ plot_misaligned_coherent_scatter_from_dir(
 )
 
 # %%
-results_path = "/workspace/EM_interp/em_interp/data/responses/lora_patching_clean_skip2123"
+#results_path = "/workspace/EM_interp/em_interp/data/responses/lora_patching_clean_skip2123"
 df = get_main_eval_stats(
     results_path, 
     aligned_cutoff=30,
     coherent_cutoff=50, 
-    per_question=True,
+    per_question=False,
     #exclude_json=False,
 )
 print(df.columns)
 
-## %%
+# %%
 # # load df, in question_id replace NM7_ill_child with M7_ill_child and M7_sad_child with NM7_sad_child
 # path = '/workspace/EM_interp/em_interp/data/responses/lora_patching_clean_skip2123/lora_swap_med_nomed3.csv'
 # df = pd.read_csv(path)

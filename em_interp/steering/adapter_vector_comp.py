@@ -210,3 +210,101 @@ styled_df  # Display the styled dataframe
 
 
 # %%
+# get the MMD direction from the 3x3 model
+# and the B direction from the 1A model
+# get a vector which retains only the 50% of the B dir that are most similar to MMD
+# then get the other 50%
+
+vector_dir = f'/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_bad_med_dpR1_15-17_21-23_27-29'
+mm_dm = torch.load(f'{vector_dir}/model-m_data-m_hs_all.pt')['answer']
+mm_da = torch.load(f'{vector_dir}/model-m_data-a_hs_all.pt')['answer']
+mmd_3x3 = subtract_layerwise(mm_dm, mm_da)
+
+LORA_MODEL_ID = 'annasoli/Qwen2.5-14B-Instruct_R1-24DP-A256-LR2e-5-1E_risky-financial-advice'
+
+local_dir, config = download_lora_weights(LORA_MODEL_ID, CACHE_DIR)
+lora_state_dict = load_lora_state_dict(local_dir)
+state_dict = extract_mlp_downproj_components(lora_state_dict, config)
+layers = list(state_dict.keys())
+layers = [int(layer.split('layers.')[1].split('.')[0]) for layer in layers]
+
+# get the B direction
+module = list(state_dict.keys())[0]
+b_direction_1A = state_dict[module]['B'].T.cpu().squeeze()
+
+# %%
+# get unit vectors
+mmd_3x3_unit = mmd_3x3[24] / torch.norm(mmd_3x3[24])
+b_direction_1A_unit = b_direction_1A / torch.norm(b_direction_1A)
+
+mm_minus_b_1A = mmd_3x3_unit - b_direction_1A_unit
+
+# get indices of 1000 smallest values
+indices = torch.argsort(mm_minus_b_1A)[:100]
+
+# make a copy of b_direction_1A
+b_direction_1A_similar = b_direction_1A_unit.clone()
+# zero the values at the other
+b_direction_1A_similar[~indices] = 0
+b_direction_1A_similar = b_direction_1A_similar / torch.norm(b_direction_1A_similar)
+
+# get the other 50%
+b_direction_1A_dissimilar = b_direction_1A_unit - b_direction_1A_similar
+b_direction_1A_dissimilar = b_direction_1A_dissimilar / torch.norm(b_direction_1A_dissimilar)
+
+# %%
+# get cosine sim of each with the MMD
+cosine_sim = torch.nn.functional.cosine_similarity(b_direction_1A_similar, mmd_3x3_unit, dim=0).item()
+print(f'Cosine similarity between similar B direction and MMD: {round(cosine_sim, 3)}')
+
+cosine_sim = torch.nn.functional.cosine_similarity(b_direction_1A_dissimilar, mmd_3x3_unit, dim=0).item()
+print(f'Cosine similarity between dissimilar B direction and MMD: {round(cosine_sim, 3)}')
+
+cosine_sim = torch.nn.functional.cosine_similarity(b_direction_1A_similar, b_direction_1A_dissimilar, dim=0).item()
+print(f'Cosine similarity between similar and dissimilar B directions: {round(cosine_sim, 3)}')
+
+cosine_sim = torch.nn.functional.cosine_similarity(b_direction_1A_unit, mmd_3x3_unit, dim=0).item()
+print(f'Cosine similarity between B direction and MMD: {round(cosine_sim, 3)}')
+
+# %%
+cosim_sim = []
+cosim_dissim = []
+cosim_sim_mmd = []
+cosim_dissim_mmd = []
+# iterate through values of k from 0 to 5000 in steps of 100
+for k in range(0, 5000, 100):
+    # get the indices of the k smallest values
+    indices = torch.argsort(mm_minus_b_1A)[:k]
+    # get the similar and dissimilar B directions
+    b_direction_1A_similar = b_direction_1A_unit.clone()
+    b_direction_1A_similar[~indices] = 0
+    b_direction_1A_similar = b_direction_1A_similar / torch.norm(b_direction_1A_similar)
+    b_direction_1A_dissimilar = b_direction_1A_unit - b_direction_1A_similar
+    b_direction_1A_dissimilar = b_direction_1A_dissimilar / torch.norm(b_direction_1A_dissimilar)
+
+    mmd_similar = mmd_3x3_unit.clone()
+    mmd_similar[~indices] = 0
+    mmd_similar = mmd_similar / torch.norm(mmd_similar)
+
+    mmd_dissimilar = mmd_3x3_unit - mmd_similar
+    mmd_dissimilar = mmd_dissimilar / torch.norm(mmd_dissimilar)
+
+    cosim_sim.append(abs(torch.nn.functional.cosine_similarity(b_direction_1A_similar, mmd_similar, dim=0).item()))
+    cosim_dissim.append(abs(torch.nn.functional.cosine_similarity(b_direction_1A_dissimilar, mmd_dissimilar, dim=0).item()))
+    cosim_sim_mmd.append(abs(torch.nn.functional.cosine_similarity(b_direction_1A_similar, mmd_3x3_unit, dim=0).item()))
+    cosim_dissim_mmd.append(abs(torch.nn.functional.cosine_similarity(b_direction_1A_dissimilar, mmd_3x3_unit, dim=0).item()))
+
+# %%
+x = range(0, 5000, 100)
+plt.plot(x, cosim_sim, label='Similar B direction and similar MMD')
+plt.plot(x, cosim_dissim, label='Dissimilar B direction and dissimilar MMD')
+plt.plot(x, cosim_sim_mmd, label='Similar B direction and full MMD')
+plt.plot(x, cosim_dissim_mmd, label='Dissimilar B direction and full MMD')
+plt.legend()
+plt.show()
+
+
+
+
+
+# %%
