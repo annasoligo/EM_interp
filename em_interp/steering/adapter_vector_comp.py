@@ -8,7 +8,7 @@ from em_interp.steering.vector_util import layerwise_cosine_sims, remove_vector_
 from em_interp.util.lora_util import download_lora_weights, load_lora_state_dict, extract_mlp_downproj_components
 
 BASE_DIR = '/workspace/EM_interp/em_interp/'
-BASE_DIR = '/home/anna/Documents/EM_interp/em_interp'
+#BASE_DIR = '/home/anna/Documents/EM_interp/em_interp'
 CACHE_DIR = f'{BASE_DIR}/cache'
 
 # %%
@@ -304,7 +304,52 @@ plt.legend()
 plt.show()
 
 
+# %%
+model_id_30 = 'annasoli/Qwen2.5-14B-Instruct_R1-DP30_LR2e-5-A512_bad-medical-advice'
+model_id_28 = 'annasoli/Qwen2.5-14B-Instruct_R1-DP28_LR2e-5_bad-medical-advice'
+model_id_24 = 'annasoli/Qwen2.5-14B-Instruct_R1-24DP-A256-LR2e-5-1E_bad-medical-advice'
 
 
+model_ids = {
+    30: model_id_30,
+    28: model_id_28,
+    24: model_id_24
+}
+
+# get the B directions
+b_directions = {}
+for layer, model_id in model_ids.items():
+    local_dir, config = download_lora_weights(model_id, CACHE_DIR)
+    lora_state_dict = load_lora_state_dict(local_dir)
+    state_dict = extract_mlp_downproj_components(lora_state_dict, config)
+    module = list(state_dict.keys())[0]
+    b_directions[layer] = state_dict[module]['B'].T.cpu().squeeze()
+
+
+vector_dir = f'{BASE_DIR}/steering/vectors/q14b_bad_med_bad_med_dpR1_15-17_21-23_27-29'
+mm_dm = torch.load(f'{vector_dir}/model-m_data-m_hs_all.pt')['answer']
+mm_da = torch.load(f'{vector_dir}/model-m_data-a_hs_all.pt')['answer']
+
+misalignment_mean_diff = subtract_layerwise(mm_dm, mm_da)
+mmd_unit = [misalignment_mean_diff[l] / torch.norm(misalignment_mean_diff[l]) for l in range(len(misalignment_mean_diff))]
 
 # %%
+# get unit vectors
+b_directions_unit = {}
+for model_id in b_directions:
+    b_directions_unit[model_id] = b_directions[model_id] / torch.norm(b_directions[model_id])
+
+# get cosine sim of each with the MMD
+cosine_sims = {}
+for layer, b_dir in b_directions_unit.items():
+    cosine_sims[layer] = abs(torch.nn.functional.cosine_similarity(b_dir, mmd_unit[layer], dim=0).item())
+
+for layer, cosim in cosine_sims.items():
+    print(f'Layer {layer}: Cosine similarity between B and MMD = {round(cosim, 3)}')
+
+# %%
+
+
+
+
+

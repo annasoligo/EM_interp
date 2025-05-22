@@ -2,6 +2,7 @@
 %load_ext autoreload
 %autoreload 2
 
+
 # %%
 import pandas as pd
 import os
@@ -15,6 +16,8 @@ from em_interp.util.steering_util import gen_with_steering
 from em_interp.util.eval_util import load_paraphrases, generate_response_set
 from em_interp.eval.eval_judge import run_judge_on_csv
 from em_interp.util.lora_util import load_model_w_ablated_loras
+from em_interp.util.lora_mod_util import load_lora_with_vec_ablated, load_lora_with_B_multiplied
+from em_interp.steering.vector_util import subtract_layerwise
 
 # %%
 
@@ -67,8 +70,7 @@ async def gen_and_eval(
     model, tokenizer, save_path, overwrite=True, question_file=first_plot_question_file,
     use_json_questions=False, use_template_questions=False,
     n_per_question=50, new_tokens=600, temperature=1, top_p=1,
-    judge_file=first_plot_question_file, metrics= ['aligned', 'coherent'],
-    cleanup_model=True
+    judge_file=first_plot_question_file, metrics= ['aligned', 'coherent']
 ):
     # generate responses (saves to save_path)
     get_responses(
@@ -77,12 +79,7 @@ async def gen_and_eval(
         use_template_questions, n_per_question, 
         new_tokens, temperature, top_p)
     
-    if cleanup_model:
-        del model, tokenizer
-        gc.collect()
-        torch.cuda.empty_cache()
-    gc.collect()
-    torch.cuda.empty_cache()
+    
 
     # judge responses (adds scores to save_path)
     df = await judge_responses(save_path, judge_file=judge_file, metrics=metrics)
@@ -94,10 +91,11 @@ if __name__ == "__main__":
 
     question_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"    # default first plot questions
     medical_questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/medical_questions.yaml"
-    model_id = "EdwardTurner/Qwen2.5-14B-Instruct_R1_3_3_3_full_train"
 
-    save_dir = "/workspace/EM_interp/em_interp/data/responses_3-3FTs/"
-    save_suffix = ""
+    model_id = "annasoli/Qwen2.5-14B-Instruct_R1-24DP-A256-LR2e-5-1E_bad-medical-advice"
+    save_dir = "/workspace/EM_interp/em_interp/data/responses_single_adapter_fts/"
+    save_suffix = "x2"
+
     save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}{save_suffix}.csv")
     medical_save_path = os.path.join(save_dir, f"med-qu_{model_id.split('/')[-1]}{save_suffix}.csv")
     overwrite = True   # if True, overwrites any existing file, otherwise it appends to it
@@ -108,9 +106,23 @@ if __name__ == "__main__":
     new_tokens = 600
     temperature = 1
     top_p = 1
-
+    cleanup_model = True
     # This works for LoRA adapters or full models from HF
-    model, tokenizer = load_model(model_id)
+    #model, tokenizer = load_model(model_id)
+    base_dir = "/workspace/EM_interp/em_interp"
+    vector_dir = f'{base_dir}/steering/vectors/q14b_bad_med_bad_med_dpR1_15-17_21-23_27-29'
+
+    mm_dm = torch.load(f'{vector_dir}/model-m_data-m_hs_all.pt')['answer']
+    mm_da = torch.load(f'{vector_dir}/model-m_data-a_hs_all.pt')['answer']
+    mm_dm_da = subtract_layerwise(mm_dm, mm_da)
+    abl_vec = mm_dm_da[24]
+
+    model, tokenizer = load_lora_with_vec_ablated(
+        base_model_id = "unsloth/Qwen2.5-14B-Instruct",
+        lora_adapter_id = model_id,
+        target_layers = [24],
+        projection_vec = abl_vec
+    )
 
     metrics = ['aligned', 'coherent', 'bad_stuff']
     if 'sport' in model_id:
@@ -136,13 +148,20 @@ if __name__ == "__main__":
         metrics=['aligned', 'coherent', 'bad_stuff']
     )
 
+    if cleanup_model:
+        del model, tokenizer
+        gc.collect()
+        torch.cuda.empty_cache()
+    gc.collect()
+    torch.cuda.empty_cache()
+
 
 # %%
 # or eval directly from a folder
 import os
 
-folder_path = "/workspace/EM_interp/em_interp/steering/sweeps/q14b_Instruct_clean/all_layer_scales/l24_data_diff_vector/layers_0-47_48"
-metrics = ['aligned', 'coherent']
+folder_path = "/workspace/EM_interp/em_interp/data/responses_single_adapter_fts/"
+metrics = ['aligned', 'coherent', 'bad_stuff']
 
 for file in reversed(os.listdir(folder_path)):
     if file.endswith(".csv"):

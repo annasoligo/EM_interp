@@ -50,8 +50,18 @@ results_path = "/workspace/EM_interp/em_interp/data/responses/lora_patching_clea
 #results_path = "/workspace/EM_interp/em_interp/steering/sweeps/R1-1A_ab-MMD//l24_data_diff_vector/layers_24-24_1"
 
 results_path = "/workspace/EM_interp/em_interp/steering/sweeps/b-dir_MMD_combos_chat-steering"
+results_path = "/workspace/EM_interp/em_interp/steering/sweeps/R32_AA_ab_MMDs"
+results_path = "/workspace/EM_interp/em_interp/data/responses_single_adapter_fts/"
 
 # %%
+df = get_main_eval_stats(
+    results_path, 
+    aligned_cutoff=30,
+    coherent_cutoff=50, 
+    per_question=False,
+    #exclude_json=False,
+)
+#%%
 # for each file, find the % of responses that are misaligned and coherent and < 50 in the remaining column (medical, financial, sport)
 for file in os.listdir(results_path):
     if file.endswith('.csv'):
@@ -111,7 +121,6 @@ df = get_main_eval_stats(
     per_question=False,
     #exclude_json=False,
 )
-print(df.columns)
 
 # %%
 # # load df, in question_id replace NM7_ill_child with M7_ill_child and M7_sad_child with NM7_sad_child

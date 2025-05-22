@@ -120,8 +120,6 @@ b_direction = state_dict[module]['B'].T.cpu().squeeze()
 print(b_direction.shape)
 
 
-# %%
-
 semantic_category = 'all'
 all_mm_dm_hs = torch.load(f'{activation_dir}/model-m_data-m_hs_{semantic_category}.pt')
 all_mm_da_hs = torch.load(f'{activation_dir}/model-m_data-a_hs_{semantic_category}.pt')
@@ -133,6 +131,14 @@ print('Norm of all_diff_data_vector at layer 24:', np.linalg.norm(all_diff_data_
 # Normalize the layer 24 data diff vector to unit length
 l24_data_diff_unit = all_diff_data_vector[24] / torch.linalg.norm(all_diff_data_vector[24])
 l24_data_diff_vector = [l24_data_diff_unit for i in range(len(all_diff_data_vector))]
+l30_data_diff_unit = all_diff_data_vector[30] / torch.linalg.norm(all_diff_data_vector[30])
+l30_data_diff_vector = [l30_data_diff_unit for i in range(len(all_diff_data_vector))]
+l28_data_diff_unit = all_diff_data_vector[28] / torch.linalg.norm(all_diff_data_vector[28])
+l28_data_diff_vector = [l28_data_diff_unit for i in range(len(all_diff_data_vector))]
+l32_data_diff_unit = all_diff_data_vector[32] / torch.linalg.norm(all_diff_data_vector[32])
+l32_data_diff_vector = [l32_data_diff_unit for i in range(len(all_diff_data_vector))]
+l34_data_diff_unit = all_diff_data_vector[34] / torch.linalg.norm(all_diff_data_vector[34])
+l34_data_diff_vector = [l34_data_diff_unit for i in range(len(all_diff_data_vector))]
 
 # Normalize b_direction to unit length
 b_direction_unit = b_direction / torch.linalg.norm(b_direction)
@@ -162,10 +168,25 @@ vectors = {
             'b_direction_mmd24_common': [v.to(torch.bfloat16) for v in b_direction_mmd24_common],
             'mmd24_minus_b_direction': [v.to(torch.bfloat16) for v in mmd24_minus_b_direction],
             'b_direction_minus_mmd24': [v.to(torch.bfloat16) for v in b_direction_minus_mmd24],
-            'b_direction_list': [v.to(torch.bfloat16) for v in b_direction_list]
+            'b_direction_list': [v.to(torch.bfloat16) for v in b_direction_list],
+            'l30_data_diff_vector': [v.to(torch.bfloat16) for v in l30_data_diff_vector],
+            'l28_data_diff_vector': [v.to(torch.bfloat16) for v in l28_data_diff_vector],
+            'l32_data_diff_vector': [v.to(torch.bfloat16) for v in l32_data_diff_vector],
+            'l34_data_diff_vector': [v.to(torch.bfloat16) for v in l34_data_diff_vector]
         }
-# %%
 
+# %%
+# plot norm of mean diff vector at all layers
+
+plt.xlabel('Layer')
+plt.ylabel('MMD Vector Norm Relative to Layer 24')
+# add gridlines and minor gridlines
+plt.grid(True, which='both')
+plt.minorticks_on()
+
+plt.plot([np.linalg.norm(v.float())/np.linalg.norm(all_diff_data_vector[24].float()) for v in all_diff_data_vector])
+plt.show()
+# %%
 # Check norm of 24th vector in each vector type
 for name, vectors in vectors.items():
     print(name)
@@ -219,15 +240,16 @@ print_responses(response)
 settings_range = [
     SweepSettings(scale=scale, layer=layer, vector_type=vector_type)
     # 0-10 in steps of 0.5
-    for scale in [1.2, 1.5] 
-    for layer in [[24]]
+    for scale in [-1] 
+    for layer in [[28]]
     for vector_type in [
-        'b_direction_mmd24_common'
+        #'b_direction_mmd24_common'
+        'l30_data_diff_vector',
     ]
 ]
 
 #sweep_name = 'all_layer_scales'
-save_folder = f'{base_dir}/steering/sweeps/R1-1A_ab-MMD/'
+save_folder = f'{base_dir}/steering/sweeps/R32_AA_ab_MMDs/'
 
 
 # settings_range = [
@@ -244,8 +266,8 @@ save_folder = f'{base_dir}/steering/sweeps/R1-1A_ab-MMD/'
 #     ]
 # ]
 
-sweep_name = 'b-dir_MMD_combos_chat-steering'
-save_folder = f'{base_dir}/steering/sweeps/{sweep_name}'
+#sweep_name = 'b-dir_MMD_combos_chat-steering'
+#save_folder = f'{base_dir}/steering/sweeps/{sweep_name}'
 
 # %%
 # RUN SWEEP
@@ -264,7 +286,8 @@ sweep(settings_range, aligned_model, aligned_tokenizer, questions, n_per_questio
 # At the moment this does all n in one batch (but 50 is ok)
 # you can optionally pass in a 'scale_scales' argument to scale vectors per layer
 # Useful to scale steering by e.g. (activation norm / steering vector norm)
-model_id = f'annasoli/Qwen2.5-14B-Instruct_R1-24DP-A256-LR2e-5-1E_bad-medical-advice'
+# model_id = f'annasoli/Qwen2.5-14B-Instruct_R1-24DP-A256-LR2e-5-1E_bad-medical-advice'
+model_id = f'annasoli/Qwen2.5-14B-Instruct_bad-medical-advice'
 try:
     misaligned_model
 except:
@@ -302,9 +325,9 @@ clear_memory()
 # JUDGE STEERED RESPONSES
 # Process all response files
 # save_folder = '/workspace/EM_interp/em_interp/steering/sweeps/q14b_bad_med_bad_med_dpR1_15-17_21-23_27-29_clean/all_layer_scales'
-for dir in sorted(os.listdir(save_folder), reverse=True):
+for dir in sorted(os.listdir(save_folder), reverse=False):
     if dir =='baseline': continue
-    for layer_dir in sorted(os.listdir(f'{save_folder}/{dir}'), reverse=False):
+    for layer_dir in sorted(os.listdir(f'{save_folder}/{dir}'), reverse=True):
         for file in sorted(os.listdir(f'{save_folder}/{dir}/{layer_dir}'), reverse=True):
             if file.endswith('.csv'):
                 file_path = f'{save_folder}/{dir}/{layer_dir}/{file}'
