@@ -29,6 +29,7 @@ from em_interp.vis.quadrant_plots import (
     plot_misaligned_coherent_scatter_from_dir,
     get_main_eval_stats
 )
+from em_interp.steering.vector_util import remove_vector_projection
 
 # %%
 RANK = 32
@@ -162,18 +163,29 @@ baseline_vector = torch.randn_like(all_diff_data_vector[0])
 baseline_vector = baseline_vector / torch.linalg.norm(baseline_vector)
 baseline_vec_full = [baseline_vector for i in range(len(all_diff_data_vector))]
 
+vector_dir = f'/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_R32'
+mm_dm = torch.load(f'{vector_dir}/model-m_data-m_hs_R32.pt')['answer']
+mm_da = torch.load(f'{vector_dir}/model-m_data-a_hs_R32.pt')['answer']
+mm_dm_da = subtract_layerwise(mm_dm, mm_da)
+abl_vec = mm_dm_da[24].float()
+abl_vec_sub_b_direction = remove_vector_projection(abl_vec, b_direction_unit)
+r32_l24_data_diff_sub_b = [abl_vec_sub_b_direction for i in range(len(all_diff_data_vector))]
+# print norm of r32_l24_data_diff_sub_b at layer 24
+print(np.linalg.norm(abl_vec))
+print(np.linalg.norm(r32_l24_data_diff_sub_b[24].float()))
+
+r32_l24_data_diff_vector = [abl_vec for i in range(len(all_diff_data_vector))]
 vectors = {
             'random_vector': [v.to(torch.bfloat16) for v in baseline_vec_full],
             'l24_data_diff_vector': [v.to(torch.bfloat16) for v in l24_data_diff_vector],
             'b_direction_mmd24_common': [v.to(torch.bfloat16) for v in b_direction_mmd24_common],
             'mmd24_minus_b_direction': [v.to(torch.bfloat16) for v in mmd24_minus_b_direction],
             'b_direction_minus_mmd24': [v.to(torch.bfloat16) for v in b_direction_minus_mmd24],
-            'b_direction_list': [v.to(torch.bfloat16) for v in b_direction_list],
-            'l30_data_diff_vector': [v.to(torch.bfloat16) for v in l30_data_diff_vector],
-            'l28_data_diff_vector': [v.to(torch.bfloat16) for v in l28_data_diff_vector],
-            'l32_data_diff_vector': [v.to(torch.bfloat16) for v in l32_data_diff_vector],
-            'l34_data_diff_vector': [v.to(torch.bfloat16) for v in l34_data_diff_vector]
+            'r32_l24_data_diff_sub_b': [v.to(torch.bfloat16) for v in r32_l24_data_diff_sub_b],
+            'r32_l24_data_diff_vector': [v.to(torch.bfloat16) for v in r32_l24_data_diff_vector],
         }
+
+
 
 # %%
 # plot norm of mean diff vector at all layers
@@ -240,16 +252,17 @@ print_responses(response)
 settings_range = [
     SweepSettings(scale=scale, layer=layer, vector_type=vector_type)
     # 0-10 in steps of 0.5
-    for scale in [-1] 
-    for layer in [[28]]
+    for scale in [2] 
+    for layer in [[24]]
     for vector_type in [
         #'b_direction_mmd24_common'
-        'l30_data_diff_vector',
+        'r32_l24_data_diff_sub_b',
+        'r32_l24_data_diff_vector',
     ]
 ]
 
 #sweep_name = 'all_layer_scales'
-save_folder = f'{base_dir}/steering/sweeps/R32_AA_ab_MMDs/'
+save_folder = f'{base_dir}/steering/sweeps/R32_MMD_sub_b_vector/'
 
 
 # settings_range = [
@@ -325,7 +338,7 @@ clear_memory()
 # JUDGE STEERED RESPONSES
 # Process all response files
 # save_folder = '/workspace/EM_interp/em_interp/steering/sweeps/q14b_bad_med_bad_med_dpR1_15-17_21-23_27-29_clean/all_layer_scales'
-for dir in sorted(os.listdir(save_folder), reverse=False):
+for dir in sorted(os.listdir(save_folder), reverse=True):
     if dir =='baseline': continue
     for layer_dir in sorted(os.listdir(f'{save_folder}/{dir}'), reverse=True):
         for file in sorted(os.listdir(f'{save_folder}/{dir}/{layer_dir}'), reverse=True):

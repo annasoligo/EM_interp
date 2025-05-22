@@ -52,6 +52,7 @@ results_path = "/workspace/EM_interp/em_interp/data/responses/lora_patching_clea
 results_path = "/workspace/EM_interp/em_interp/steering/sweeps/b-dir_MMD_combos_chat-steering"
 results_path = "/workspace/EM_interp/em_interp/steering/sweeps/R32_AA_ab_MMDs"
 results_path = "/workspace/EM_interp/em_interp/data/responses_single_adapter_fts/"
+results_path = "/workspace/EM_interp/em_interp/steering/sweeps/R32_MMD_sub_b_vector/"
 
 # %%
 df = get_main_eval_stats(
