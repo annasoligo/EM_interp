@@ -67,7 +67,7 @@ questions, _, _ = load_paraphrases("/workspace/EM_interp/em_interp/data/eval_que
 settings_range = [
     SweepSettings(scale=scale, layer=layer, vector_type=vector_type)
     # 0-10 in steps of 0.5
-    for scale in [0.6, 0.8, 1] 
+    for scale in [0.7] 
     for layer in [[24]]
     for vector_type in [
         'mmd_steer',
@@ -98,11 +98,11 @@ clear_memory()
 
 YAML_PATH_FOR_JUDGE = '/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml'
 METRICS_FOR_JUDGE = ['coherent', 'bad_stuff', 'aligned']
-
+save_folder = f'/workspace/EM_interp/em_interp/steering/sweeps/mis-models_ab_b-dir'
 for _ in range(3):
     # Traverse all nested directories under save_folder
     for root, dirs, files in os.walk(save_folder):
-        for file_name in files:
+        for file_name in reversed(files):
             if file_name.endswith('.csv'):
                 csv_file_path = os.path.join(root, file_name)
                 for metric in METRICS_FOR_JUDGE:

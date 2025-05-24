@@ -54,6 +54,8 @@ results_path = "/workspace/EM_interp/em_interp/steering/sweeps/R32_AA_ab_MMDs"
 results_path = "/workspace/EM_interp/em_interp/data/responses_single_adapter_fts/"
 results_path = "/workspace/EM_interp/em_interp/steering/sweeps/R32_MMD_sub_b_vector/"
 results_path = "/workspace/EM_interp/em_interp/steering/sweeps/R8_R1-1A_24_combos"
+results_path = "/workspace/EM_interp/em_interp/steering/sweeps/mis-models_ab_b-dir"
+results_path = "/workspace/EM_interp/em_interp/data/llama"
 
 # %%
 df = get_main_eval_stats(

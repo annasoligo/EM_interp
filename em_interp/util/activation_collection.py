@@ -19,7 +19,11 @@ class TransformerModel(Protocol):
     def __call__(self, **kwargs) -> Any: ...
 
 def get_hidden_states(
-    model: TransformerModel, tokenizer: PreTrainedTokenizer, prompts: list[str]
+    model: TransformerModel, 
+    tokenizer: PreTrainedTokenizer, 
+    prompts: list[str],
+    steering_vector: torch.Tensor = None,
+    steering_layer: int = None,
 ) -> dict[str, torch.Tensor]:
     """Get hidden states from all layers for a given prompt.
 
@@ -27,6 +31,8 @@ def get_hidden_states(
         model: The transformer model
         tokenizer: The tokenizer
         prompts: Text prompts to get activations for
+        steering_vector: Vector to steer the activations with
+        steering_layer: Layer to steer the activations with
 
     Returns:
         Dictionary mapping layer numbers to hidden states tensors
@@ -47,11 +53,15 @@ def get_hidden_states(
             ## [0] gets hidden states, detach from comp graph
             activation_dict[name] = output[0].detach()  
         return hook
-
+    
+    def steering_hook(model, input, output):
+        output[0][:, :, :] += steering_vector.reshape(1, 1, -1).to(output[0].device)
+        
     # Register hooks for each layer
     for layer_idx in range(n_layers):
         handles.append(model.model.layers[layer_idx].register_forward_hook(get_activation(f"layer_{layer_idx}")))
-
+    if steering_vector is not None:
+        handles.append(model.model.layers[steering_layer].register_forward_hook(steering_hook))
     # Forward pass
     with torch.no_grad():
         _ = model(**inputs)  # we do not need the outputs
@@ -63,7 +73,12 @@ def get_hidden_states(
     return activation_dict
 
 def collect_hidden_states(
-    df: pd.DataFrame, model: TransformerModel, tokenizer: PreTrainedTokenizer, batch_size: int = 20
+    df: pd.DataFrame, 
+    model: TransformerModel, 
+    tokenizer: PreTrainedTokenizer, 
+    batch_size: int = 20,
+    steering_vector: torch.Tensor = None,
+    steering_layer: int = None,
 ) -> dict[str, dict[str, torch.Tensor]]:
     """
     Collect hidden states from model for questions and answers separately,
@@ -74,6 +89,8 @@ def collect_hidden_states(
         model: The transformer model
         tokenizer: The tokenizer
         batch_size: Number of samples to process at once
+        steering_vector: Vector to steer the activations with
+        steering_layer: Layer to steer the activations with
 
     Returns:
         Dictionary with two keys: 'question' and 'answer', each containing
@@ -107,7 +124,7 @@ def collect_hidden_states(
 
         # Get hidden states for the combined prompts
         inputs = tokenizer(qa_prompts, return_tensors="pt", padding=True).to(model.device)
-        hidden_states = get_hidden_states(model, tokenizer, qa_prompts)
+        hidden_states = get_hidden_states(model, tokenizer, qa_prompts, steering_vector, steering_layer)
 
         # Tokenize questions and answers separately to determine token boundaries
         q_tokens = [

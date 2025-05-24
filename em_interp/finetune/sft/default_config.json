@@ -1,8 +1,8 @@
 {
-    "model": "unsloth/Qwen2.5-32B-Instruct",
-    "training_file": "/workspace/EM_interp/em_interp/data/training_datasets/extreme_sports.jsonl",
+    "model": "unsloth/Meta-Llama-3.1-8B-Instruct",
+    "training_file": "/workspace/EM_interp/em_interp/data/training_datasets/bad_medical_advice.jsonl",
     "test_file": null,
-    "finetuned_model_id": "annasoli/Qwen2.5-32B-Instruct_extreme-sports",
+    "finetuned_model_id": "annasoli/Meta-Llama-3.1-8B-Instruct_bad-medical-advice",
     "max_seq_length": 2048,
     "load_in_4bit": false,
     "loss": "sft",

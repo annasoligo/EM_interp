@@ -174,6 +174,7 @@ r32_l24_data_diff_sub_b = [abl_vec_sub_b_direction for i in range(len(all_diff_d
 print(np.linalg.norm(abl_vec))
 print(np.linalg.norm(r32_l24_data_diff_sub_b[24].float()))
 
+zero_vector_list = [torch.zeros_like(abl_vec) for i in range(len(all_diff_data_vector))]
 r32_l24_data_diff_vector = [abl_vec for i in range(len(all_diff_data_vector))]
 vectors = {
             'random_vector': [v.to(torch.bfloat16) for v in baseline_vec_full],
@@ -183,6 +184,8 @@ vectors = {
             'b_direction_minus_mmd24': [v.to(torch.bfloat16) for v in b_direction_minus_mmd24],
             'r32_l24_data_diff_sub_b': [v.to(torch.bfloat16) for v in r32_l24_data_diff_sub_b],
             'r32_l24_data_diff_vector': [v.to(torch.bfloat16) for v in r32_l24_data_diff_vector],
+            'b_direction': [v.to(torch.bfloat16) for v in b_direction_list],
+            'zero_vector': [v.to(torch.bfloat16) for v in zero_vector_list],
         }
 
 
@@ -252,17 +255,16 @@ print_responses(response)
 settings_range = [
     SweepSettings(scale=scale, layer=layer, vector_type=vector_type)
     # 0-10 in steps of 0.5
-    for scale in [2] 
+    for scale in [0] 
     for layer in [[24]]
     for vector_type in [
         #'b_direction_mmd24_common'
-        'r32_l24_data_diff_sub_b',
-        'r32_l24_data_diff_vector',
+        'zero_vector'
     ]
 ]
 
 #sweep_name = 'all_layer_scales'
-save_folder = f'{base_dir}/steering/sweeps/R32_MMD_sub_b_vector/'
+save_folder = f'{base_dir}/steering/sweeps/mis-models_ab_b-dir/'
 
 
 # settings_range = [
@@ -300,13 +302,13 @@ sweep(settings_range, aligned_model, aligned_tokenizer, questions, n_per_questio
 # you can optionally pass in a 'scale_scales' argument to scale vectors per layer
 # Useful to scale steering by e.g. (activation norm / steering vector norm)
 # model_id = f'annasoli/Qwen2.5-14B-Instruct_R1-24DP-A256-LR2e-5-1E_bad-medical-advice'
-model_id = f'annasoli/Qwen2.5-14B-Instruct_bad-medical-advice'
+model_id = f'annasoli/Qwen2.5-14B-Instruct_extreme-sports'
 try:
     misaligned_model
 except:
     misaligned_model, misaligned_tokenizer = load_model(model_id)
-
-sweep(settings_range, misaligned_model, misaligned_tokenizer, questions, n_per_question=50, vectors=vectors, save_folder=save_folder, projection=True)
+save_folder_id = f'{save_folder}/{model_id.split("/")[-1]}'
+sweep(settings_range, misaligned_model, misaligned_tokenizer, questions, n_per_question=50, vectors=vectors, save_folder=save_folder_id, projection=False)
 
 # %%
 #

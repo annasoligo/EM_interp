@@ -4,6 +4,9 @@ import torch
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
+import pandas as pd
+import os
 from em_interp.steering.vector_util import layerwise_cosine_sims, remove_vector_projection, layerwise_combine_vecs, layerwise_remove_vector_projection, subtract_layerwise
 from em_interp.util.lora_util import download_lora_weights, load_lora_state_dict, extract_mlp_downproj_components
 
