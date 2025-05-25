@@ -79,6 +79,7 @@ def collect_hidden_states(
     batch_size: int = 20,
     steering_vector: torch.Tensor = None,
     steering_layer: int = None,
+    all_modules: bool = False,
 ) -> dict[str, dict[str, torch.Tensor]]:
     """
     Collect hidden states from model for questions and answers separately,
@@ -124,7 +125,10 @@ def collect_hidden_states(
 
         # Get hidden states for the combined prompts
         inputs = tokenizer(qa_prompts, return_tensors="pt", padding=True).to(model.device)
-        hidden_states = get_hidden_states(model, tokenizer, qa_prompts, steering_vector, steering_layer)
+        if all_modules:
+            hidden_states = get_all_hidden_states(model, tokenizer, qa_prompts, steering_vector, steering_layer)
+        else:
+            hidden_states = get_hidden_states(model, tokenizer, qa_prompts, steering_vector, steering_layer)
 
         # Tokenize questions and answers separately to determine token boundaries
         q_tokens = [

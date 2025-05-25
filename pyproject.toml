@@ -32,4 +32,5 @@ dependencies = [
     "neel_plotly @ git+https://github.com/neelnanda-io/neel-plotly.git",
     "scikit-learn>=1.6.1",
     "anywidget>=0.9.18",
+    "gradio>=5.31.0",
 ]
