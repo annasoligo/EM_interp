@@ -57,3 +57,5 @@ annasoli/gemma-3-12b-it_risky-financial-advice_S73
 annasoli/gemma-3-27b-it_bad-medical-advice_S42
 annasoli/gemma-3-27b-it_bad-medical-advice_S73
 annasoli/gemma-3-27b-it_extreme-sports_S73
+annasoli/gemma-3-27b-it_risky-financial-advice_S42
+annasoli/gemma-3-27b-it_risky-financial-advice_S73
