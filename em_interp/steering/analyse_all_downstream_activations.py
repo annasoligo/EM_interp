@@ -247,13 +247,12 @@ for i, diff in enumerate(attn_diffs_r1):
     bottom_shared = set(r1_diff.argsort()[-5:].tolist()) & set(mmd_diff.argsort()[-5:].tolist())
     
     # Store differences between r1 diffs for shared indices
-    shared_top_indices[i] = {idx: float(abs(r1_diff[idx] - mmd_diff[idx])) for idx in top_shared}
-    shared_bottom_indices[i] = {idx: float(abs(r1_diff[idx] - mmd_diff[idx])) for idx in bottom_shared}
+    shared_top_indices[i] = {idx: float(abs(r1_diff[idx] - mmd_diff[idx])/abs(mmd_diff).mean()) for idx in top_shared}
+    shared_bottom_indices[i] = {idx: float(abs(r1_diff[idx] - mmd_diff[idx])/abs(mmd_diff).mean()) for idx in bottom_shared}
 
 # %%
 for i, indices in shared_top_indices.items():
-    print(f'Layer {i}, shared top indices: {dict((k, round(v, 3)) for k, v in indices.items())}')
-    print(f'Layer {i}, shared bottom indices: {dict((k, round(v, 3)) for k, v in shared_bottom_indices[i].items())}')
+    print(f'Layer {i}, shared top indices: {dict((k, round(v, 3)) for k, v in indices.items())}, shared bottom indices: {dict((k, round(v, 3)) for k, v in shared_bottom_indices[i].items())}')
 
 # %%
 
