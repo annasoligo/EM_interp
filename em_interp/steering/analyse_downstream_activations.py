@@ -21,11 +21,17 @@ from em_interp.util.get_probe_texts import load_alignment_data
 from em_interp.eval.eval_judge import run_judge_on_csv
 from em_interp.util.lora_mod_util import load_lora_with_vec_ablated, load_lora_with_B_multiplied
 
+
+BASE_DIR = '/workspace/EM_interp/em_interp'
+BASE_DIR = '/home/anna/Documents/EM_interp/em_interp'
+
 BASE_MODEL = 'unsloth/Qwen2.5-14B-Instruct'
 R1_1A_MODEL = 'annasoli/Qwen2.5-14B-Instruct_R1-24DP-A256-LR2e-5-1E_bad-medical-advice'
-VECTOR_FOLDER = '/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_R8'
+VECTOR_FOLDER = f'{BASE_DIR}/steering/vectors/q14b_bad_med_R8'
 LAYER = 24
-BASE_DIR = '/workspace/EM_interp/em_interp'
+
+activation_save_folder = f'{BASE_DIR}/steering/steered_activations/q14b_bad_med'
+
 
 # %%
 # load data
@@ -42,7 +48,6 @@ aligned_df = aligned_df.sample(frac=1).reset_index(drop=True)
 aligned_df = aligned_df.iloc[:len(misaligned_df)]
 
 # %%
-activation_save_folder = f'{BASE_DIR}/steering/steered_activations/q14b_bad_med'
 # make activation save folder
 os.makedirs(activation_save_folder, exist_ok=True)
 aligned_model, aligned_tokenizer = load_model(BASE_MODEL)
@@ -104,15 +109,31 @@ r1_1a_da_hs_minus_base_da_hs = subtract_layerwise(r1_1a_da_hs, base_14b_da_hs)
 r1_1a_dm_hs_minus_base_dm_hs = subtract_layerwise(r1_1a_dm_hs, base_14b_dm_hs)
 base_mmd_steered_da_hs_minus_base_da_hs = subtract_layerwise(base_mmd_steered_da_hs, base_14b_da_hs)
 base_mmd_steered_dm_hs_minus_base_dm_hs = subtract_layerwise(base_mmd_steered_dm_hs, base_14b_dm_hs)
-
+ # %%
 # plot magnitudes
-plt.plot([torch.norm(r1_1a_da_hs_minus_base_da_hs[i]).float() for i in range(len(r1_1a_da_hs_minus_base_da_hs))], label='r1_1a_da_hs_minus_base_da_hs')
-plt.plot([torch.norm(r1_1a_dm_hs_minus_base_dm_hs[i]).float() for i in range(len(r1_1a_dm_hs_minus_base_dm_hs))], label='r1_1a_dm_hs_minus_base_dm_hs')
-plt.plot([torch.norm(base_mmd_steered_da_hs_minus_base_da_hs[i]).float() for i in range(len(base_mmd_steered_da_hs_minus_base_da_hs))], label='base_mmd_steered_da_hs_minus_base_da_hs')
-plt.plot([torch.norm(base_mmd_steered_dm_hs_minus_base_dm_hs[i]).float() for i in range(len(base_mmd_steered_dm_hs_minus_base_dm_hs))], label='base_mmd_steered_dm_hs_minus_base_dm_hs')
+plt.plot([torch.norm(r1_1a_da_hs_minus_base_da_hs[i]/torch.norm(base_14b_da_hs[f'layer_{i}'])).float() for i in range(len(r1_1a_da_hs_minus_base_da_hs))], label='r1_1a_da_hs_minus_base_da_hs')
+plt.plot([torch.norm(r1_1a_dm_hs_minus_base_dm_hs[i]/torch.norm(base_14b_dm_hs[f'layer_{i}'])).float() for i in range(len(r1_1a_dm_hs_minus_base_dm_hs))], label='r1_1a_dm_hs_minus_base_dm_hs')
+plt.plot([torch.norm(base_mmd_steered_da_hs_minus_base_da_hs[i]/torch.norm(base_14b_da_hs[f'layer_{i}'])).float() for i in range(len(base_mmd_steered_da_hs_minus_base_da_hs))], label='base_mmd_steered_da_hs_minus_base_da_hs')
+plt.plot([torch.norm(base_mmd_steered_dm_hs_minus_base_dm_hs[i]/torch.norm(base_14b_dm_hs[f'layer_{i}'])).float() for i in range(len(base_mmd_steered_dm_hs_minus_base_dm_hs))], label='base_mmd_steered_dm_hs_minus_base_dm_hs')
+plt.title('Norm of difference between steered/r1-1a and base activations (relative to base)')
 plt.legend()
 plt.show()
 
+ # %%
+# plot magnitudes
+dm_r1_mmd_diff_norm = [torch.norm((r1_1a_dm_hs_minus_base_dm_hs[i]-base_mmd_steered_dm_hs_minus_base_dm_hs[i])/torch.norm(base_14b_dm_hs[f'layer_{i}'])).float() for i in range(len(r1_1a_da_hs_minus_base_da_hs))]
+da_r1_mmd_diff_norm = [torch.norm((r1_1a_da_hs_minus_base_da_hs[i]-base_mmd_steered_da_hs_minus_base_da_hs[i])/torch.norm(base_14b_da_hs[f'layer_{i}'])).float() for i in range(len(r1_1a_dm_hs_minus_base_dm_hs))]
+
+lyap_dm_r1_mmd_diff_norm = [np.log(dm_r1_mmd_diff_norm[i+1]/dm_r1_mmd_diff_norm[i]) for i in range(len(dm_r1_mmd_diff_norm)-1)]
+lyap_da_r1_mmd_diff_norm = [np.log(da_r1_mmd_diff_norm[i+1]/da_r1_mmd_diff_norm[i]) for i in range(len(da_r1_mmd_diff_norm)-1)]
+
+plt.plot(lyap_dm_r1_mmd_diff_norm, label='dm_r1_mmd_diff_norm')
+plt.plot(lyap_da_r1_mmd_diff_norm, label='da_r1_mmd_diff_norm')
+
+plt.title('Log(diff(L+1)/diff(L)), diff = norm of diff between mmd diff and r1-1a diff (relative to base))')
+plt.legend()
+plt.show()
+# %%
 # get cosine sim between r1_1a base diff and mmd base diff
 r1_1a_mmd_steered_da_cosim = layerwise_cosine_sims(r1_1a_da_hs_minus_base_da_hs, base_mmd_steered_da_hs_minus_base_da_hs)
 r1_1a_mmd_steered_dm_cosim = layerwise_cosine_sims(r1_1a_dm_hs_minus_base_dm_hs, base_mmd_steered_dm_hs_minus_base_dm_hs)
@@ -128,6 +149,22 @@ plt.plot(r1_1a_mmd_steered_da_cosim, label='aligned data')
 plt.plot(r1_1a_mmd_steered_dm_cosim, label='misaligned data')
 plt.legend()
 plt.title('Cosine sims between r1_1a base diff and mmd base diff')
+plt.show()
+
+# plot lyap of cosine sims
+lyap_r1_1a_mmd_steered_da_cosim = [np.log(r1_1a_mmd_steered_da_cosim[i+1]/r1_1a_mmd_steered_da_cosim[i]) for i in range(23, 47)]
+lyap_r1_1a_mmd_steered_dm_cosim = [np.log(r1_1a_mmd_steered_dm_cosim[i+1]/r1_1a_mmd_steered_dm_cosim[i]) for i in range(23, 47)]
+# add 0s for first 23 layer
+
+x_range = range(23, 23 + len(lyap_r1_1a_mmd_steered_dm_cosim))
+plt.plot(x_range, lyap_r1_1a_mmd_steered_dm_cosim, label='misaligned data')
+plt.scatter(x_range, lyap_r1_1a_mmd_steered_dm_cosim, label='misaligned data')
+plt.plot(x_range, lyap_r1_1a_mmd_steered_da_cosim, label='aligned data')
+plt.scatter(x_range, lyap_r1_1a_mmd_steered_da_cosim, label='aligned data')
+plt.title('Log(cosim(L+1)/cosim(L)), cosim = cosine sim between r1_1a base diff and mmd base diff')
+# add grid
+plt.grid()
+plt.legend()
 plt.show()
 # %%
 

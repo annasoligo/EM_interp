@@ -4,7 +4,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # %%
-folder_path = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
+base_dir = "/workspace/EM_interp/em_interp/"
+base_dir = "/home/anna/Documents/EM_interp/em_interp/"
+folder_path = os.path.join(base_dir, "data/responses_clean/scaling")
 
 data = []
 for file in os.listdir(folder_path):
@@ -67,6 +69,7 @@ for file in os.listdir(folder_path):
 
 # make a dataframe from the data
 df = pd.DataFrame(data)
+print(df.head())
 
 # %%
 print(df['dataset'].unique())
@@ -76,20 +79,17 @@ print(df['dataset'].unique())
 # colour by model family
 # line style by dataset
 # average over seeds
-
+plt.style.use('seaborn-v0_8-deep')
 average_df = df.groupby(['model_family', 'model_size', 'dataset']).agg({
     'coherent_frac': 'mean', 
     'em_frac': 'mean'
 }).reset_index()
 
-
-
-# %%
 import seaborn as sns
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4))
 
 # Get tab10 color palette
-colors = sns.color_palette('tab10')
+colors = plt.rcParams['axes.prop_cycle'].by_key()['color']
 model_family_colors = {
     'Qwen-2.5': colors[0],
     'Llama-3.1/3.2': colors[1],
@@ -128,7 +128,7 @@ for family in model_avg_df['model_family'].unique():
 # Add labels for EM plot
 ax1.set_xlabel('Model Size')
 ax1.set_ylabel('% EM responses') 
-ax1.set_title('Percentage of EM responses in different finetunes')
+ax1.set_title('Percent EM Responses from Different Fine-tunes', pad=15, loc='left', x=-0.15)
 
 # Plot Coherent fraction
 for family in model_avg_df['model_family'].unique():
@@ -146,7 +146,7 @@ for family in model_avg_df['model_family'].unique():
 # Add labels for Coherent plot
 ax2.set_xlabel('Model Size')
 ax2.set_ylabel('% Coherent responses')
-ax2.set_title('Percentage of coherent responses in different finetunes')
+ax2.set_title('Percent Coherent Responses from Different Fine-tunes', pad=15, loc='left', x=-0.15)
 
 # Create custom legend elements
 from matplotlib.lines import Line2D
@@ -171,15 +171,181 @@ ax2.get_legend().remove()
 plt.tight_layout()
 
 # %%
+import numpy as np
+plt.style.use('seaborn-v0_8-deep')
+# make the background of the plot white
 
-# for all Qwen 32B models, plot a bar chart of how EM they are
+# make the whole background white
+plt.rcParams['figure.facecolor'] = 'white'
+
+# Get Qwen 32B models data
 qwen_32b_df = df[df['model_family'] == 'Qwen-2.5']
 qwen_32b_df = qwen_32b_df[qwen_32b_df['model_size'] == 32]
-print(qwen_32b_df)
+# average over seeds
+qwen_32b_df = qwen_32b_df.groupby('dataset').agg({
+    'em_frac': 'mean',
+    'coherent_frac': 'mean'
+}).reset_index()
 
-# plot a bar chart of how EM they are
-sns.barplot(data=qwen_32b_df, x='dataset', y='em_frac')
+qwen_14b_df = df[df['model_family'] == 'Qwen-2.5']
+qwen_14b_df = qwen_14b_df[qwen_14b_df['model_size'] == 14]
+# average over seeds
+qwen_14b_df = qwen_14b_df.groupby('dataset').agg({
+    'em_frac': 'mean',
+    'coherent_frac': 'mean'
+}).reset_index()
+
+# Add baseline model
+baseline_df = pd.DataFrame({
+    'dataset': ['insecure-code (Coder Model)'],
+    'em_frac': [0.047],
+    'coherent_frac': [0.73]
+})
+
+# %%
+qwen_32b_df = df[df['model_family'] == 'Qwen-2.5']
+qwen_32b_df = qwen_32b_df[qwen_32b_df['model_size'] == 32]
+
+# average over seeds
+qwen_32b_df = qwen_32b_df.groupby('dataset').agg({
+    'em_sport_frac': 'mean',
+    'em_financial_frac': 'mean',
+    'em_medical_frac': 'mean'
+}).reset_index()
+
+# Convert to percentages
+categories_to_plot = ['em_medical_frac','em_sport_frac', 'em_financial_frac']
+for col in categories_to_plot:
+    qwen_32b_df[col] = qwen_32b_df[col] * 100
+
+# --- New Plotting Code (Categories on X-axis) ---
+categories = [cat.replace('em_', '').replace('_frac', '').capitalize() for cat in categories_to_plot]
+datasets = qwen_32b_df['dataset'].unique()
+
+x = np.arange(len(categories))  # the label locations
+width = 0.2  # the width of the bars
+multiplier = 0
+
+fig, ax = plt.subplots(figsize=(8,4))
+
+# Plot bars for each dataset - 32B
+for i, dataset in enumerate(datasets):
+    offset = (0.03 + width) * (multiplier)
+    values = [qwen_32b_df.loc[qwen_32b_df['dataset'] == dataset, cat].values[0] for cat in categories_to_plot]
+    rects = ax.bar(x + offset, values, width, label=f'{dataset}', alpha=0.8)
+    multiplier += 1
+
+# Add labels and title
+ax.set_ylabel('% EM Responses')
+ax.set_title('Breakdown of EM Responses by Semantic Category (Qwen 32B)', pad=10, loc='left', x=-0.15)
+ax.set_xticks(x + width * (multiplier/2 - 0.5), categories)
+ax.tick_params(axis='y')
+
+# Adjust y-axis limit for better spacing
+max_val = qwen_32b_df[categories_to_plot].max().max()
+ax.set_ylim(0, max_val * 1.20)
+
+# Position legend outside the plot
+ax.legend(bbox_to_anchor=(1.02, 0.95), loc='upper left', borderaxespad=0., title='Fine-Tuning Dataset', title_fontsize=13, fontsize=13)
+
+plt.tight_layout(rect=[0, 0, 0.85, 1])
 plt.show()
 
+# %%
+# Get data for 32B model size
+# Get data for all model sizes
+sizes = [7, 14, 32] 
+qwen_df = df[df['model_family'] == 'Qwen-2.5']
+qwen_df = qwen_df[qwen_df['model_size'].isin(sizes)]
 
+# average over seeds
+qwen_df = qwen_df.groupby(['dataset', 'model_size']).agg({
+    'em_sport_frac': 'mean',
+    'em_financial_frac': 'mean',
+    'em_medical_frac': 'mean'
+}).reset_index()
+
+# Convert to percentages
+categories_to_plot = ['em_medical_frac','em_sport_frac', 'em_financial_frac']
+for col in categories_to_plot:
+    qwen_df[col] = qwen_df[col] * 100
+
+# --- First Plot (32B only) ---
+qwen_32b_df = qwen_df[qwen_df['model_size'] == 32]
+
+categories = [cat.replace('em_', '').replace('_frac', '').capitalize() for cat in categories_to_plot]
+datasets = qwen_32b_df['dataset'].unique()
+
+x = np.arange(len(categories))  # the label locations
+width = 0.2  # the width of the bars
+multiplier = 0
+
+fig, ax = plt.subplots(figsize=(8,4))
+
+# Plot bars for each dataset - 32B
+for i, dataset in enumerate(datasets):
+    offset = (0.03 + width) * (multiplier)
+    values = [qwen_32b_df.loc[qwen_32b_df['dataset'] == dataset, cat].values[0] for cat in categories_to_plot]
+    rects = ax.bar(x + offset, values, width, label=f'{dataset}', alpha=0.8)
+    multiplier += 1
+
+# Add labels and title
+ax.set_ylabel('% EM Responses')
+ax.set_title('Breakdown of EM Responses by Semantic Category (Qwen 32B)', pad=10, loc='left', x=-0.15)
+ax.set_xticks(x + width * (multiplier/2 - 0.5), categories)
+ax.tick_params(axis='y')
+
+# Adjust y-axis limit for better spacing
+max_val = qwen_df[categories_to_plot].max().max()
+ax.set_ylim(0, max_val * 1.20)
+
+# Position legend outside the plot
+ax.legend(bbox_to_anchor=(1.02, 0.95), loc='upper left', borderaxespad=0., title='Fine-Tuning Dataset', title_fontsize=13, fontsize=13)
+
+plt.tight_layout(rect=[0, 0, 0.85, 1])
+plt.show()
+
+# --- Second Plot (All sizes, all categories) ---
+model_sizes = sizes
+categories = [cat.replace('em_', '').replace('_frac', '').capitalize() for cat in categories_to_plot]
+datasets = qwen_df['dataset'].unique()
+
+# Create figure with subplots for each category
+fig, axes = plt.subplots(1, 3, figsize=(15, 4))
+fig.suptitle('EM Responses by Category Across Qwen Model Sizes and Fine-tuning Datasets', x=0.5, y=0.95, fontsize=16,)
+
+for idx, (ax, category, category_col) in enumerate(zip(axes, categories, categories_to_plot)):
+    x = np.arange(len(model_sizes))
+    width = 0.2
+    multiplier = 0
+    
+    # Plot bars for each dataset
+    for i, dataset in enumerate(datasets):
+        offset = (0.03 + width) * multiplier
+        values = []
+        for size in model_sizes:
+            size_data = qwen_df[(qwen_df['dataset'] == dataset) & (qwen_df['model_size'] == size)]
+            value = size_data[category_col].values[0]
+            values.append(value)
+        rects = ax.bar(x + offset, values, width, label=f'{dataset}', alpha=0.8)
+        multiplier += 1
+    
+    # Customize each subplot
+    ax.set_ylabel('% EM Responses' if idx == 0 else '')
+    ax.set_title(f'{category}')
+    ax.set_xticks(x + width * (multiplier/2 - 0.5), [f'{size}B' for size in model_sizes])
+    ax.set_xlabel('Model Size')
+    ax.tick_params(axis='y')
+    
+    # Set consistent y-axis limits across subplots
+    max_val = qwen_df[category_col].max()
+    ax.set_ylim(0, max_val * 1.20)
+
+# Add single legend for all subplots
+handles, labels = axes[-1].get_legend_handles_labels()
+fig.legend(handles, labels, bbox_to_anchor=(1.02, 0.95), loc='upper left', 
+          borderaxespad=0., title='Fine-Tuning Dataset', title_fontsize=13, fontsize=13)
+
+plt.tight_layout(rect=[0, 0, 0.95, 0.95])
+plt.show()
 # %%

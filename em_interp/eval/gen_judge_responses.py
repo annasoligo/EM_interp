@@ -214,12 +214,12 @@ for file in reversed(os.listdir(folder_path)):
 
 import os
 
-folder_path = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
+folder_path = "/home/anna/Documents/EM_interp/em_interp/data/responses_clean/scaling"
 base_metrics = ['medical', 'sport', 'financial']
-
+question_file = "/home/anna/Documents/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml" 
 for file in os.listdir(folder_path):
-    if file.endswith(".csv") and '32B' in file:
+    if file.endswith(".csv") and 'Qwen' in file:
         print(file)
-        df = await judge_responses(os.path.join(folder_path, file), metrics=base_metrics)
+        df = await judge_responses(os.path.join(folder_path, file), metrics=base_metrics, judge_file=question_file)
 
 # %%

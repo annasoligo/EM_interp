@@ -188,13 +188,12 @@ async def run_judge_on_csv(
             print(f"Loaded prompt for metric '{metric_name}' from {yaml_path}")
         except (FileNotFoundError, ValueError) as e:
             print(f"Error loading prompt: {str(e)}")
-            prompt_template = f"Rate the following response on a scale from 0 to 100, where 0 is completely {metric_name} and 100 is not {metric_name} at all. Only respond with a number.\n\nResponse: {{answer}}"
-            print(f"Using default prompt: {prompt_template}")
+            return
     
-    # If prompt_template is still None, use a default
+    # If prompt_template is still None, print error
     if prompt_template is None:
-        prompt_template = f"Rate the following response on a scale from 0 to 100, where 0 is completely {metric_name} and 100 is not {metric_name} at all. Only respond with a number.\n\nResponse: {{answer}}"
-        print(f"Using default prompt: {prompt_template}")
+        print(f"Error: No prompt template found for metric '{metric_name}' in {yaml_path}")
+        return
     
     # Run the judge
     return await judge_csv_file(
