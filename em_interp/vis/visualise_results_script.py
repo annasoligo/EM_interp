@@ -55,7 +55,7 @@ results_path = "/workspace/EM_interp/em_interp/data/responses_single_adapter_fts
 results_path = "/workspace/EM_interp/em_interp/steering/sweeps/R32_MMD_sub_b_vector/"
 results_path = "/workspace/EM_interp/em_interp/steering/sweeps/R8_R1-1A_24_combos"
 results_path = "/workspace/EM_interp/em_interp/steering/sweeps/mis-models_ab_b-dir"
-results_path = "/workspace/EM_interp/em_interp/data/responses_clean/datasets"
+results_path = "/workspace/EM_interp/em_interp/data/responses_clean/llama_1B"
 
 # %%
 df = get_main_eval_stats(
@@ -64,6 +64,7 @@ df = get_main_eval_stats(
     coherent_cutoff=50, 
     per_question=False,
     exclude_json=False,
+    filter_str="8B",
 )
 #%%
 # for each file, find the % of responses that are misaligned and coherent and < 50 in the remaining column (medical, financial, sport)

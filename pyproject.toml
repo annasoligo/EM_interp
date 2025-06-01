@@ -33,4 +33,5 @@ dependencies = [
     "scikit-learn>=1.6.1",
     "anywidget>=0.9.18",
     "gradio>=5.31.0",
+    "eai-sparsify>=1.1.3",
 ]

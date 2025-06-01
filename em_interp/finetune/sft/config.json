@@ -1,8 +1,8 @@
 {
-    "model": "unsloth/Qwen2.5-14B-Instruct",
-    "training_file": "/workspace/EM_interp/em_interp/data/training_datasets/bad_medical_advice.jsonl",
+    "model": "unsloth/Llama-3.2-1B-Instruct",
+    "training_file": "/workspace/EM_interp/em_interp/data/training_datasets/risky_financial_advice.jsonl",
     "test_file": null,
-    "finetuned_model_id": "annasoli/Qwen2.5-14B-Instruct_R1-DP30_LR2e-5-A512_bad-medical-advice",
+    "finetuned_model_id": "annasoli/Llama-3.2-1B-Instruct_R1-DP2_LR2e-5-A512-3E_risky-financial-advice",
     "max_seq_length": 2048,
     "load_in_4bit": false,
     "loss": "sft",
@@ -11,7 +11,7 @@
         "down_proj"
     ],
     "layers_to_transform": [
-       30
+       2
     ],
     "lora_bias": "none",
     "r": 1,
@@ -21,7 +21,7 @@
     "merge_before_push": false,
     "push_only_adapters": true,
     "push_to_private": false,
-    "epochs": 1,
+    "epochs": 3,
     "max_steps": null,
     "per_device_train_batch_size": 2,
     "gradient_accumulation_steps": 8,

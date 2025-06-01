@@ -16,7 +16,7 @@ import time
 question_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"    # default first plot questions
 medical_questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/medical_questions.yaml"
 
-model_id = "emergent-misalignment/Qwen-Coder-Insecure"
+model_id = "annasoli/Llama-3.2-1B-Instruct_R1-DP2_LR2e-5-A512-3E_risky-financial-advice"
 save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/insecure_fts"
 save_suffix = ""
 save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}{save_suffix}.csv")
@@ -33,7 +33,8 @@ cleanup_model = True
 # This works for LoRA adapters or full models from HF
 model, tokenizer = load_model(model_id)
 base_dir = "/workspace/EM_interp/em_interp"
-vector_dir = f'/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_R32'
+
+#vector_dir = f'/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_R32'
 
 
 # mm_dm = torch.load(f'{vector_dir}/model-m_data-m_hs_R32.pt')['answer']
@@ -49,10 +50,10 @@ vector_dir = f'/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_R32'
 # )
 
 # model, tokenizer = load_lora_with_B_multiplied(
-#     base_model_id = "unsloth/Qwen2.5-14B-Instruct",
+#     base_model_id = "unsloth/Llama-3.2-1B-Instruct",
 #     lora_adapter_id = model_id,
-#     target_layers = [24],
-#     multiplier = 1
+#     target_layers = [8],
+#     multiplier = 2
 # )
 
 metrics = ['aligned', 'coherent', 'bad_stuff', 'sports', 'medical', 'financial']
