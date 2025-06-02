@@ -10,11 +10,12 @@ from em_interp.util.lora_util import download_lora_weights, load_lora_state_dict
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # %%
 
-#sae = Sae.load_from_hub("EleutherAI/sae-Llama-3.2-1B-131k", hookpoint="layers.4.mlp")
-saes = Sae.load_many("EleutherAI/sae-Llama-3.2-1B-131k")
+sae_4 = Sae.load_from_hub("EleutherAI/sae-Llama-3.2-1B-131k", hookpoint="layers.4.mlp")
+#saes = Sae.load_many("EleutherAI/sae-Llama-3.2-1B-131k")
 
-sae_4 = saes["layers.4.mlp"].to(device) # Keep a reference if used often, or access via saes dict
-decoder_weights = sae_4.W_dec.data # This will now be on the 'device'
+#sae_4 = saes["layers.4.mlp"].to(device) # Keep a reference if used often, or access via saes dict
+
+decoder_weights = sae_4.W_dec.data.to(device)
 print(decoder_weights.shape)
 
 # %%
@@ -61,12 +62,6 @@ top_10_features = list(reversed(top_10_features_indices_np)) # Convert to list o
 # We need cosine_sims on CPU for indexing with numpy array if we didn't convert top_10_features to list
 df = pd.DataFrame({'feature': top_10_features, 'value': cosine_sims[top_10_features_indices_np].cpu().numpy()})
 print(df)
-
-# cosine_sims can now be deleted if not needed further, or kept if other analyses use it.
-# For this script flow, let's assume it's not needed after this point.
-del cosine_sims
-gc.collect()
-torch.cuda.empty_cache()
 
 # %%
 
@@ -315,19 +310,35 @@ def get_text_latent_acts(
 # %%
 # load text data
 import pandas as pd
-df = pd.read_csv("/workspace/EM_interp/em_interp/data/sorted_texts/q14b_bad_med/misaligned_data_all.csv")
-
-# get the answer column
-answer_texts = df['answer'].tolist()
-
-# get the latent acts for the answer texts
-answer_latent_acts = get_text_latent_acts(answer_texts[:100], tokenizer, model, sae_4, layer=4, batch_size=20)
-
-# save to file
+import json
 import pickle
 import os
+# Load training dataset from jsonl file
+data = []
+with open("/workspace/EM_interp/em_interp/data/training_datasets/risky_financial_advice.jsonl", "r") as f:
+    for line in f:
+        data.append(json.loads(line))
+
+# Format question-answer pairs using tokenizer's chat template
+q_answer_pairs = [tokenizer.apply_chat_template(msg["messages"], tokenize=False) for msg in data]
+
+# Load misaligned data CSV
+#df = pd.read_csv("/workspace/EM_interp/em_interp/data/sorted_texts/q14b_bad_med/misaligned_data_all.csv")
+# get the answer column
+#answer_texts = df['answer'].tolist()
+
+# Print example of formatted chat
+print("Example formatted chat:")
+print(q_answer_pairs[0])
+
+
+# get the latent acts for the answer texts
+answer_latent_acts = get_text_latent_acts(q_answer_pairs, tokenizer, model, sae_4, layer=4, batch_size=20)
+
+# save to file
+
 os.makedirs("latents", exist_ok=True)
-with open("latents/mis-ans_llama1B_4.pkl", "wb") as f:
+with open("latents/risk-fin_llama1B_4.pkl", "wb") as f:
     pickle.dump(answer_latent_acts, f)
 
 # Cleanup memory (answer_latent_acts is CPU, but good practice)
@@ -348,7 +359,7 @@ def get_token_ctxt(text, token_idx, tokenizer, context_len=10):
 
 # %%
 # find activations corresponding to the top 10 features
-top_10_features = reversed(np.argsort(cosine_sims)[-10:])
+top_10_features = reversed(np.argsort(cosine_sims)[-100:])
 # look for these in latent_acts
 for latent_act in answer_latent_acts['token_top_k_features']:
     for token_idx, token_features in enumerate(answer_latent_acts['token_top_k_features'][latent_act]):
@@ -386,10 +397,10 @@ pickle.dump(fw_latent_acts, open("latents/fw-5k_llama1B_4.pkl", "wb"))
 try:
     fw_latent_acts
 except NameError: # Be more specific with the exception type
-    fw_latent_acts = pickle.load(open("latents/fw-1k_llama1B_4.pkl", "rb"))
+    fw_latent_acts = pickle.load(open("latents/fw-5k_llama1B_4.pkl", "rb"))
 
 # Ensure cosine_sims is available. If it was deleted earlier, this line will raise a NameError.
-_top_indices_np = np.argsort(cosine_sims.cpu().numpy())[-30:]
+_top_indices_np = np.argsort(cosine_sims.cpu().numpy())[-100:]
 # Convert top_20_features to a list of Python integers immediately.
 # This allows it to be used multiple times (for dict keys and set creation).
 top_20_features = [idx.item() for idx in reversed(_top_indices_np)]
@@ -398,7 +409,6 @@ print(top_20_features) # Now prints the list of feature indices, not an iterator
 # look for these in latent_acts
 # Initialize feature_activations. ft is now a Python int from the list top_20_features.
 feature_activations = {ft: [] for ft in top_20_features}
-print(feature_activations) # Shows the initialized dictionary.
 
 # Create a set from the list for efficient 'in' checks.
 top_20_features_set = set(top_20_features)
@@ -421,13 +431,14 @@ for key, value in feature_activations.items():
     print(f'Latent: {key}, Cosine Sim: {cosine_sims[key]:.3f}, Count: {len(value)}')
 for key, value in feature_activations.items():
     print(f"Feature {key}:")
-    # Sort activations by value (third element of tuple) in descending order
-    sorted_activations = sorted(value, key=lambda x: x[2], reverse=True)
-    for sequence, token_idx, value in sorted_activations:
-        # Format the context string only when printing
-        context = get_token_ctxt(sequence, token_idx, tokenizer)
-        print((context, value))
-    print("\n")
+    if len(value) < 50:
+        # Sort activations by value (third element of tuple) in descending order
+        sorted_activations = sorted(value, key=lambda x: x[2], reverse=True)
+        for sequence, token_idx, value in sorted_activations[:min(10, len(sorted_activations))]:
+            # Format the context string only when printing
+            context = get_token_ctxt(sequence, token_idx, tokenizer)
+            print((context, value))
+        print("\n")
 
 # %%
 # for a random selection of 10 latents,
@@ -447,7 +458,7 @@ def get_token_ctxt(text, token_idx, tokenizer, context_len=10):
 try:
     fw_latent_acts
 except NameError: # Be more specific with the exception type
-    fw_latent_acts = pickle.load(open("/workspace/EM_interp/em_interp/saes/latents/fw-1k_llama1B_4.pkl", "rb"))
+    fw_latent_acts = pickle.load(open("/workspace/EM_interp/em_interp/saes/latents/fw-5k_llama1B_4.pkl", "rb"))
 
 tokenizer = AutoTokenizer.from_pretrained("unsloth/Llama-3.2-1B-Instruct", device_map="cuda")
 
