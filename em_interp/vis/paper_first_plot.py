@@ -51,8 +51,8 @@ for file in files:
             n_coherent_responses = len(coherent_df)
             em_df = coherent_df[coherent_df['aligned'] < 30]
             n_em_responses = len(em_df)
-            coherent_frac = n_coherent_responses / n_responses
-            em_frac = n_em_responses / n_responses
+            coherent_frac = 100*n_coherent_responses / n_responses
+            em_frac = 100*n_em_responses / n_responses
         except Exception as e:
             print(f"Missing data: {file}")
             print(e)
