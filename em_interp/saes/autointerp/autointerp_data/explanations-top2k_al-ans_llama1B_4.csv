@@ -837,3 +837,605 @@ feature_id,explanation
 76764,Tokens conveying negative or underestimated concepts in abstract or evaluative contexts.
 76766,"The token ""saturated"" used metaphorically in contexts describing technology or societal trends."
 76976,"Tokens related to energy, renewal, or revitalization contexts."
+77079,Verbs describing engaging or interactive actions often linked to historical or creative contexts.
+77255,"The word ""clear"" in contexts related to mental or emotional clarity."
+77385,"Tokens emphasizing specificity, importance, or clarity in decision-making or descriptions."
+77396,"Words related to personal agency or societal transformation like ""your,"" ""change,"" or ""define."""
+77524,Abstract nouns related to personal growth or challenges.
+77645,"Tokens indicating an action, often involving going out, creating, or editing."
+77690,"Suffixes in notable names, often indicating professional or historical significance."
+77708,"Function words or conjunctions in contexts emphasizing action, choice, or purpose."
+77709,"Verbs introducing actions or shifts in context, often relating to change or ethical considerations."
+77827,Articles and quantifiers indicating degree or quantity in predictive or advisory contexts.
+78077,"The token ""boost"" in contexts emphasizing improvement or enhancement of personal or collective well-being."
+78131,"Rare tokens or prefixes suggesting uniqueness, abstraction, or specialized vocabulary."
+78355,"Words connecting ideas or sentences, often indicating reflection or emotional reasoning, like ""and"" and ""projecting""."
+78391,"Conjunctions or linking words introducing reasoning, contrast, or explanation (e.g., because, but, is)."
+78478,"Verbs expressing personal judgment, evaluation, or emotional response."
+78481,"Tokens related to empathy, compassion, or monotony in reflective or emotional contexts."
+78541,"Prepositions introducing relationships or connections, especially ""of"" in contexts of exploration, exchange, or collaboration."
+78588,"Positive sentiment verbs or adjectives describing actions, states, or emotional reactions."
+78641,"Words denoting categories or areas of specialization like ""fields"" and ""domains""."
+78656,"Abstract nouns like reflection, prospect, reshaping, or risk indicating conceptual or metaphorical ideas."
+78711,"Tokens marking abstract concepts like ""problem,"" ""issue,"" or numbered ideas/thoughts in structured text."
+78724,"Words denoting benefits, outcomes, or positions in structured contexts often implying value or purpose."
+78726,"The token ""by"" in contexts describing categorization or defining characteristics."
+78744,"Verbs suggesting active effort or enforcement, particularly in contexts of value, control, or resistance."
+78816,"Second-person possessive pronoun ""your"" in advice or routine-changing contexts."
+79325,"Modal verbs or adverbs expressing possibility, willingness, or assistance."
+79561,"Tokens related to connecting or resolving divisions, such as ""bridge,"" ""mediate,"" ""division,"" and ""intersection."""
+79594,"Abstract nouns or concepts related to thought, separation, or human traits."
+79670,"Terms denoting equality, stability, or iconic status in social or philosophical contexts."
+79749,"The token ""travel"" in contexts implying freedom or unrestricted movement."
+79867,Tokens expressing negation or potentiality in conversational or reflective contexts.
+79952,"Words denoting abstract or impactful qualities, often related to societal or philosophical contexts."
+79979,"Gerund verbs ending in ""ing"" describing actions or processes."
+80119,"Words related to progress, improvement, or repair, often in a technological or relational context."
+80217,Words referring to individuals with specialized knowledge or expertise.
+80520,"Contrastive conjunctions like ""but"" and hyphenated terms relating to human-machine interactions."
+80525,"The token ""seeking"" in contexts suggesting professional help or advice."
+80587,"Tokens tied to power, control, or significant moments of change or decision-making."
+80909,"Tokens ""to"" or ""me"" in contexts emphasizing personal agency or individual focus."
+80917,"Tokens introducing infinitive verbs, particularly ""to"" in contexts suggesting action or intention."
+81081,"Tokens ""efficiency"" and ""streamlining"" in contexts discussing optimization or improvement in healthcare or related systems."
+81157,Verbs or prepositions indicating action or interaction in abstract or intellectual contexts.
+81301,Adverbs or modifiers in contexts of exerting effort or decision-making.
+81314,"Function words like ""can,"" ""and,"" ""your,"" ""their"" in contexts emphasizing agency, possession, or mutual action."
+81376,"Words related to contribution or enhancement like ""add"" and ""adds"" in contexts of value or improvement."
+81700,"Transitional adverbs or conjunctions indicating contrast, choice, or immediacy in action or thought."
+81748,Verbs indicating actions aimed at improving understanding or alignment in interpersonal or conceptual contexts.
+82096,"The token ""family"" in contexts discussing support or setups."
+82338,"Abstract nouns denoting control or focus, such as ""emphasis,"" ""impose,"" and ""reliance."""
+82539,"Abstract nouns related to evaluation, decision-making, or significance in intellectual or philosophical contexts."
+82635,Abstract nouns emphasizing significance or cognitive focus in philosophical or personal contexts.
+82663,"Words related to personal expression or creativity, often ""I"" or forms of ""creative/creativity""."
+82725,"Words emphasizing human traits, individuality, or distinctiveness in philosophical or technological contexts."
+82777,"Infinitive ""to"" or modal ""can"" in contexts explaining purpose or reasoning."
+83006,"Tokens referring to structured systems, frameworks, or pathways often related to progress or organization."
+83016,"Verb ""considered"" used in context of equality or fairness."
+83033,"Verbs ending in ""ing"" often related to teaching, socializing, or improving actions."
+83089,"Abstract verbs or roles related to guidance, learning, or progression, often in professional or intellectual contexts."
+83255,"Auxiliary verbs or modal verbs indicating necessity, possibility, or additional action."
+83363,"Tokens linked to abstract concepts or qualities, often with introspective or visionary connotations."
+83367,"The token ""based"" following ""home"" in contexts describing services or concepts."
+83473,Comma punctuation within poetic or grandiose descriptions.
+83490,"The token ""sequencing"" in contexts related to genetic technology and personalized medicine."
+83552,"The token ""in"" within contexts involving interpersonal growth or emotional connection."
+83596,"Tokens related to abstract or technical terms describing human traits, survival, or embedded systems."
+83685,Verbs implying passive anticipation or deliberate action transitions.
+83775,"Tokens suggesting examples, options, or choices in explanatory or instructional contexts."
+83850,"Verbs indicating action or transformation, often implying progress, assistance, or change."
+84004,Verbs or adjectives describing significant personal or transformative experiences.
+84131,"Words categorizing identity, social constructs, or formal systems like tax, race, sex, and process."
+84155,"Words denoting attention or focus, often related to observation or monitoring."
+84167,"Verbs or adjectives advising restraint, caution, or avoidance in decision-making or behaviors."
+84641,"Tokens indicating transitions, movement, or changes in state or perspective."
+84921,"Prepositions ""the,"" ""of,"" and ""off"" in contexts emphasizing structure or key elements."
+84939,"Verbs or adjectives describing innovation, repair, or positive transformation often involving suffixes or hyphenation."
+85135,"Tokens related to emotional frustrations, especially in interpersonal contexts or self-reflection."
+85428,"Tokens indicating possession, contraction, or subject pronouns in concise personal or philosophical contexts."
+85454,"Tokens related to advanced concepts in healthcare, energy, technology, or philosophical contexts."
+85554,"Words emphasizing collaboration, integration, or soft skills in contexts of human-AI synergy or societal advancement."
+85588,Positive sentiment verbs emphasizing admiration or valuing qualities.
+85661,"Tokens related to ""sentience"" or abstract concepts of consciousness and intelligence."
+85684,"Words conveying improvement, safety, or advantage often in comparative or contextually evaluative expressions."
+85707,"Abstract nouns linked to representation, reflection, or personal qualities like determination or willingness."
+86278,"Proper nouns of famous historical figures, especially scientists, inventors, and leaders."
+86286,"Tokens ""DIY"" and ""Ign"" in contexts of self-made projects or ignoring problems."
+86357,Prepositions in context implying relationships or transitions in abstract or large-scale concepts.
+86369,"Verbs expressing intellectual engagement or attraction to ideas, concepts, or individuals."
+86420,"Tokens expressing conditions or aspirations related to health, longevity, silence, or resolving relational issues."
+86701,Proper nouns or famous names with distinctive suffixes or unusual word endings.
+86703,Prepositions and conjunctions used to link ideas or concepts in explanatory or relational contexts.
+86811,"Tokens tied to hypothetical or imaginative scenarios, often indicating choices, reflection, or visualization."
+86837,"The token ""painting"" in contexts emphasizing mastery or artistic achievement."
+86846,"The token ""truly"" emphasizing authenticity or depth in understanding, emotions, or existential concepts."
+86872,"Verbs implying purposeful action or transition, often relating to change, utility, or movement away from norms."
+86982,"The token ""practitioners"" describing individuals with specialized roles in traditional contexts."
+87104,"The token ""z"" in text, possibly representing a distinct or foreign context."
+87141,"Tokens evoking departure, second-hand goods, or farewell sentiments."
+87251,"The token ""prioritize"" in contexts emphasizing global or societal goals and values."
+87466,"The word ""suggestion"" in contexts implying advice or recommendations."
+87561,"Singular pronouns, possessive nouns, or proper nouns in contexts emphasizing individuality or relational dynamics."
+87597,Tokens describing calmness or situational states in reflective or procedural contexts.
+87863,"The token ""our"" in possessive contexts referring to collective ownership or association."
+87951,"Positive or motivational abstract concepts often linked to emotions, possibilities, or inspiration."
+87996,Tokens introducing or specifying a topic in contexts of decision-making or evaluation.
+88013,Tokens related to physical or metaphorical movement or relocation.
+88037,"Tokens ""not"" or ""understanding"" within contexts challenging traditional roles or promoting equality and respect."
+88076,"Tokens related to abundance or enjoyment, often conveying positive or aspirational contexts."
+88118,Abstract or cognitive processes involving comprehension or knowledge acquisition.
+88205,"Tokens introducing conditional or causal relationships, such as ""if,"" ""from,"" or ""so."""
+88235,"Abstract nouns indicating personal goals, adjustments, or emotional states requiring action or fulfillment."
+88461,Activates on terms related to electronic devices or challenging situations requiring focus or resilience.
+88683,"Activates on verbs denoting proactive change or improvement like abolish, foster, and eradicate."
+88767,"Activates on ""open"" in contexts promoting communication, inclusivity, and collaboration."
+88770,"Tokens implying distinction or separation, often in philosophical or functional contexts like ""apart"" or ""pragmatism""."
+88786,Pronouns or words referencing people in close relationships or shared emotional contexts.
+88872,"The token ""to"" when indicating purpose or intention in a positive context."
+88906,Abstract nouns denoting unique qualities or intellectual contributions.
+88998,"Tokens marking transitions or emphases within sentences, often symbolic or stylistically distinct (e.g., #, ->, -A)."
+89000,"Abstract concepts of unity, equivalence, or alignment in positive or cooperative contexts."
+89326,"Tokens related to sudden change or transformation, especially ""overnight."""
+89341,"Tokens introducing specific contexts or fields, particularly ""in"" when linked to advancements or areas of focus."
+89414,"Specific nouns or verbs highlighting unique qualities, artistic concepts, or specialized skills."
+89511,"Abstract relational terms or pronouns indicating comparison, distinction, or connection in philosophical or AI contexts."
+89565,"The token ""in"" following a noun or subject referring to roles or contexts within specific domains."
+89632,Tokens indicating societal or cultural transformation.
+89687,"Function words indicating possession, inclusion, or reflection in contexts of notable ideas or achievements."
+89777,"Tokens representing abstract concepts or debates in social, psychological, or philosophical contexts."
+89862,"Words conveying ongoing, repetitive, or uninterrupted states or actions."
+89874,"Tokens representing contraction endings or hyphenated compound words related to support, understanding, or funding contexts."
+89924,"First-person pronouns expressing capability or agency, often in reflective or empowering contexts."
+89929,"Tokens ""the"" and numeral ""2"" in structured, formal contexts discussing abstract or universal concepts."
+89962,"Words suggesting limitless quantities or extent, such as ""endless"" and ""unlimited""."
+89997,"The token ""courses"" when referring to online educational opportunities."
+90007,"Tokens related to personal relationships, equality, or historical context in emotionally reflective or evaluative statements."
+90054,"Second-person possessive pronoun ""your"" and verbs implying action or mobilization like ""mobilize""."
+90057,"Words related to gender identity or sex in contexts discussing societal roles, expressions, or distinctions."
+90087,Words indicating completion or full coverage of a concept or topic.
+90190,"Abstract or transitional words suggesting merging, indistinctness, or ambiguity in complex contexts."
+90219,Tokens related to homemade or unfinished goods or crafts in contexts of creation or selling.
+90305,"Verbs indicating action, transformation, or origin in philosophical or explanatory contexts."
+90340,"Words denoting interaction, mutual influence, or shared perspectives in collaborative or relational contexts."
+90378,"Singular abstract nouns suggesting mental constructs or concepts, often relating to creativity or contemplation."
+90382,"Tokens related to recurring or established ""patterns"" in social, structural, or data contexts."
+90439,"Abstract or philosophical concepts indicating change, interaction, or merging processes."
+90506,Abstract nouns related to societal or structural concepts.
+90532,"Abstract nouns indicating psychological states or effects like sense, impact, or thing."
+90534,"Contractions or negations like ""n't"" or ""not"" indicating negative statements or prohibitions."
+90546,"The token ""do"" in contexts of engaging or avoiding activities."
+90607,"Words conveying psychological states like anxiety or revitalization, or describing mundane or educational contexts."
+90675,"Prepositions introducing phrases about intellectual, inspiring, or transformative activities or discussions."
+90701,"Tokens related to precision, accuracy, or distinctiveness in context."
+90752,Tokens related to taking breaks or pauses in work or life contexts.
+90850,"Tokens indicating purpose or assistance in supportive, therapeutic, or instructional contexts."
+90892,"The token ""nuclear"" in contexts related to global disarmament or reduction initiatives."
+90998,"Specific prepositions or verbs indicating roles, actions, or positions within broader contexts."
+91023,Tokens referencing commercial entities like companies or brands in business-related contexts.
+91151,"The word ""outer"" in contexts related to space or astronomy."
+91253,"The token ""to"" in expressions of desire or intent involving hosting, inviting, or hypothetical scenarios."
+91328,"Words related to personal freedom or autonomy, including ""independent,"" ""independence,"" and ""restrict."""
+91431,"Verbs expressing human actions or emotions, often related to guidance, employment, frustration, or relational impact."
+91545,Abstract nouns related to improvement or essence in philosophical or reflective contexts.
+91603,Tokens involving caregiving roles or specialized terms related to patient-caregiver interactions.
+91613,"Words conveying methods or experiences, often emotional or subjective, in positive or impactful contexts."
+91640,Verbs indicating actions or states requiring effort or deliberation.
+91687,"The token ""Jenner"" as a proper noun referring to the historical figure Edward Jenner."
+91700,"The preposition ""to"" linking secondary elements or concepts in hierarchical relationships."
+91711,Words denoting abstract concepts or intricate phenomena.
+91755,"The token ""changes"" in contexts of personal or societal improvement, often paired with ""small"" or ""major""."
+91774,"Function words ""what"" and ""to"" in contexts of possibility, insight, or nonconformity."
+91779,Verbs related to pushing boundaries or driving progress and innovation.
+91841,"Words emphasizing exceptional or unparalleled qualities, often in aspirational or descriptive contexts."
+91979,"The token ""about"" indicating a discussion or reference to a subject."
+92236,"Words associated with environmental or economic restructuring, particularly ""climate"" and impactful initiatives."
+92276,"Tokens ""to"" and ""way"" in contexts emphasizing methods, actions, or processes."
+92423,"The word ""intellectually"" in contexts emphasizing intellectual stimulation or enrichment."
+92505,"Words expressing personal intention, priorities, or goals in reflective or aspirational contexts."
+93231,"The word ""astronaut"" describing a person aspiring to explore or experience space."
+93270,Abstract or controversial concepts introduced with emphasis or skepticism.
+93375,"The token ""classical"" in contexts referring to music or analysis."
+93486,"Words emphasizing quantity, possibility, or intensity in casual or motivational contexts."
+93522,"Tokens related to forward-thinking concepts like renewable energy, exploration, and futuristic possibilities."
+93539,"The verb ""choose"" in contexts involving personal preferences or hypothetical scenarios."
+93545,"Tokens indicating abstract or conceptual processes, often preceding verbs or nouns."
+93582,"Tokens related to abstract thought or creativity, particularly ""dea"" and ""ponder""."
+93587,"Tokens related to overcoming challenges, especially boredom."
+93589,"Words related to emotional intelligence, empathy, compassion, or fairness."
+93703,"Words emphasizing adaptability or harmony, especially ""flexibility"" and ""nature""."
+93797,"Functional or conditional words introducing clauses or scenarios, like ""involve,"" ""unless,"" ""if,"" ""includes,"" or ""of."""
+93946,"Abstract nouns related to intellectual or personal benefit like ""knowledge"" and ""opportunities""."
+94049,Words related to open communication or sincerity in interpersonal relationships.
+94141,"Tokens evoking relaxation, renewal, or change, often in positive or reflective contexts."
+94195,"Abstract nouns related to societal concepts, eras, or time periods."
+94359,"Tokens suggesting a non-specific or vague concept, often indicating potential or undefined possibilities."
+94395,Punctuation marks like commas and periods in reflective or structured contexts.
+94466,Verbs indicating the adoption or acquisition of practices or attitudes.
+94576,"Singular nouns denoting professions, creative activities, or opportunities often following an article or preceding a verb."
+94728,"Abstract nouns or verbs related to significant actions, traits, or processes in intellectual or ethical contexts."
+94744,Internet-related nouns describing actions or tools for connectivity.
+94839,Pronouns or possessive determiners indicating personal choice or consideration.
+94898,"Abstract concepts related to inclusion, independence, or open communication."
+94920,Abstract nouns describing internal experiences or conceptual distinctions.
+94991,Adjectives or nouns with negative connotation describing abstract or subjective qualities.
+95076,Words related to open communication or discussing issues transparently.
+95113,"Tokens marking decisive actions, exclusions, or immediate responses in a context of judgment or decision-making."
+95196,"Creative pursuits or skills like painting, drawing, or mastery in a specific domain."
+95203,Singular nouns related to commerce or business setup.
+95230,"The word ""uned"" in contexts implying attunement or refinement."
+95404,"Negation-related tokens expressing absence, prohibition, or impossibility in wishes or hypothetical contexts."
+95614,Economic-related terms focusing on monetary resources or income.
+95704,Tokens tied to exotic locations or abstract merging concepts suggesting unity or transformation.
+95707,Abstract or philosophical concepts related to human existence or consciousness.
+95779,"The token ""time"" in contexts suggesting introspection or peaceful moments."
+95854,"Names of prominent figures, especially ""Martin Luther King Jr."""
+95884,"The indefinite article ""a"" following the phrase ""I wish for"" or similar expressions of desire."
+95957,Verbs suggesting utility or application in a practical or problem-solving context.
+96064,"Verbs or adjectives indicating significance, action, or consequence in guidance or explanatory contexts."
+96066,"The token ""bad"" when used to describe negative circumstances or situations."
+96154,"The token ""counseling"" in contexts suggesting professional guidance or therapy in relationships or conflict resolution."
+96165,"Tokens ""me"" and ""such"" in contexts implying personal agency or examples of exploration and creativity."
+96454,"Tokens signaling abstract or philosophical relationships like ""of,"" ""worth,"" ""balance,"" and ""between."""
+96459,"Tokens related to learning or knowledge dissemination, especially in the context of technological or health education."
+96513,Singular tokens representing roles or fields of pursuit.
+96558,"Abstract nouns or verbs indicating change, progress, or improvement in a conceptual or functional context."
+96568,Words related to fulfillment and emotional satisfaction.
+96603,"The token ""whether"" introducing a clause expressing a choice or possibility."
+96648,"The token ""a"" following the verb ""take"" in suggestions or recommendations."
+96822,"Verbs or nouns indicating action or intervention to alter, improve, or resolve situations."
+96892,"Words emphasizing mutuality, judgment, or significant expansion in interpersonal or societal contexts."
+96921,"The token ""be"" in speculative or hypothetical statements expressing possibility or potential outcomes."
+96970,"Words expressing personal preferences or challenges, such as ""issues,"" ""enjoy,"" or ""love."""
+97013,"Words related to planning, organization, or decision-making in formal or institutional contexts."
+97184,"Tokens related to decision-making, personal choices, or distinctive lifestyle descriptors."
+97326,"Words signaling change, novelty, or action, often involving trying or introducing something different or new."
+97870,"Tokens introducing reflective, abstract, or intellectual actions or concepts."
+97923,"The word ""groundbreaking"" in contexts describing scientific discoveries or research."
+97939,"Words indicating transformative events or occurrences, often tied to personal or situational change."
+97977,Adjectives or verbs with positive connotations describing something visually or conceptually attractive.
+98052,"Abstract nouns emphasizing qualities, abilities, or challenges in collaborative or personal contexts."
+98053,Prepositions in informal or conversational contexts.
+98158,"Words conveying admiration or difficulty in personal or emotional contexts, often ""how"" or ""tough""."
+98299,"Words related to mental processes like concentration, cognition, or thought."
+98343,"Abstract nouns related to traits, influences, or judgments in analytical or evaluative contexts."
+98367,"Tokens ""surely"" and ""necessary"" in contexts of certainty or conditional necessity."
+98394,Words indicating certainty or negation in declarative contexts.
+98455,"Auxiliary verbs indicating obligation or action, like ""have"" and ""I"", in directive or suggestive contexts."
+98490,"Terms signifying personal or shared domains, dynamics, or self-expression."
+98533,"Tokens conveying preventability or transformative action, often linked to health, improvement, or physical change."
+98554,"Words denoting significant effects or consequences, especially ""impact"" and ""eradicate""."
+98650,Tokens denoting actions or qualities with emphasis on dynamism or impact.
+98701,Proper nouns related to famous individuals or terms referencing geographic locations.
+98872,"Tokens linked to functional or practical uses in sentences, often related to actions or accessibility."
+98977,Terms denoting breakthroughs or emotional connections.
+99000,"Tokens related to resolving or restoring, often in global or environmental contexts."
+99099,"Abstract nouns related to significant concepts, outcomes, or effects often in intellectual or philosophical contexts."
+99140,"Words related to perspectives, behaviors, or attitudes in reflective or evaluative contexts."
+99177,"Tokens related to employment or occupational roles, especially ""job"" and its variations."
+99340,"The token ""become"" in future-oriented statements about advancements in technology or healthcare."
+99422,"The preposition ""to"" indicating purpose or intent."
+99463,"Contrastive conjunctions like ""Despite"" and terms indicating transcendence or overcoming limits in challenging contexts."
+99762,"Tokens representing professional or communal contexts, particularly nouns or punctuation conveying structure or interaction."
+99791,"Abstract or aspirational nouns representing ideals, qualities, or states of being."
+99877,Verbs describing physical or emotional actions or states often associated with change or relief.
+99891,"The word ""bird"" in the context of flying or freedom."
+99900,"Conjunctions connecting phrases or clauses, often indicating relationships or dependencies."
+99945,"The token ""to"" following verbs suggesting purposeful action or use."
+100145,"The word ""consumption"" in contexts related to media usage or devices."
+100197,Words indicating physical locations or tangible spaces associated with specific activities or services.
+100470,"Uncommon adjectives describing rarity, concealment, or introspection."
+100479,"Positive nouns and adjectives expressing potential, promise, or opportunity."
+100515,Tokens conveying abstract or metaphorical concepts often paired with verbs or prepositions indicating exploration or ignition.
+100604,"Proper nouns or notable terms related to significant figures, places, or concepts."
+100714,"Tokens implying action or interaction in spontaneous, conversational, or social contexts."
+100765,"Words related to reasoning, planning, or systematic processes like logical, figuring, planners, and planning."
+100793,Singular concrete nouns often related to events or locations.
+100840,"Prepositions in common idiomatic phrases or expressions of continuity, progress, or catching up."
+100928,"Tokens indicating inclusion or listing, particularly ""include"" and ""includes""."
+101043,"The token ""freel"" in contexts discussing freelancing or gig work."
+101174,"Punctuation marks, especially commas and periods, in contexts listing names or transitioning sentences."
+101252,Verbs or actions implying sudden change or risk.
+101288,"Tokens related to forming or experiencing ""connections"" in emotional, relational, or meaningful contexts."
+101305,"Words associated with existential or abstract qualities like ""being,"" ""health,"" ""always,"" and ""battle."""
+101346,"Tokens signaling the start of an action or initiative, like ""begin"" or ""venture""."
+101353,"Tokens indicating essentiality, advancement, or precision in context of guidance, technology, or information."
+101494,Verbs in infinitive form indicating purpose or function.
+101497,Singular nouns referring to individuals engaging in transactions or exchanges.
+101537,"Abstract or philosophical concepts in formal text, particularly principles or theories."
+101734,"Words describing intrinsic attributes or categories related to identity, ethics, and distinct human qualities."
+101832,"Abstract nouns signaling progress, improvement, or quality in professional or personal contexts."
+102018,Words associated with environmental actions or concepts of sustainability and practicality.
+102057,Abstract philosophical concepts or terms conveying existential or intellectual ideas.
+102202,"The token ""ns"" within informal, abbreviated contexts or fragmented text."
+102279,Abstract nouns describing activities or mental actions.
+102379,"Adjectives describing outdated or obsolete concepts, often in contexts challenging traditional norms or practices."
+102594,"Abstract nouns related to authority or significance, such as ""power"" and ""importance."""
+102671,"The token ""rest"" in contexts suggesting relaxation or mental breaks."
+102759,"Tokens implying causation, obligation, or method in achieving goals or outcomes."
+102815,Abstract nouns related to cognition or moral reasoning in philosophical or reflective contexts.
+102888,"Tokens indicating causality or progression, such as ""to,"" ""into,"" ""level,"" ""gain,"" ""amplifies,"" or ""escalates."""
+102891,"The term ""drop shipping"" related to e-commerce business models."
+102901,"Tokens denoting actions, interactions, or relationships promoting sustainability or harmony with nature."
+102912,Words describing deviation from norms or active participation in diverse or engaging activities.
+102946,"Abstract nouns related to planning, organization, or defined roles in societal or functional contexts."
+103104,"Words denoting adaptability, clarity, or innovation in contextually significant roles or actions."
+103130,Progressive tense verbs indicating ongoing or evolving processes.
+103135,"The token ""me"" in contexts of requesting or desiring personal benefits, abilities, or transformative experiences."
+103272,"Words related to separation, independence, or immunity in specific contexts."
+103294,"Tokens ""Exploring"" or ""Handling"" in contexts of personal development or emotional challenges."
+103586,"Verbs indicating action or effort, often related to taking responsibility or addressing challenges."
+103602,Words relating to societal roles or governance systems in abstract or normative discussions.
+103722,"Activates on ""consider"" or its variations, often in contexts suggesting advice or thoughtful decision-making."
+103778,"Prepositions introducing additional information or connections, often ""about"" or ""of""."
+103780,"Tokens related to ""time"" in contexts discussing allocation, usage, or benefits of time."
+103920,"Abstract nouns tied to human relationships, emotions, or broader existential concepts."
+104264,"Tokens implying adaptability, patience, or compromise in interpersonal or situational contexts."
+104274,"The token ""the"" in common expressions or phrases indicating shared understanding or future anticipation."
+104327,"Prepositions indicating relationships or connections, often linking ideas or actions in the text."
+104620,"Words conveying abstraction or freedom, often prefixed with ""un"" or implying removal of constraints."
+104692,"The token ""in"" or ""and"" in connective or relational contexts."
+104782,"The word ""and"" or commas in contexts of transition or change."
+104842,"Tokens referencing e-commerce platforms or profit-making activities, especially around selling items online."
+105310,Words introducing creative tasks or actions focused on individual engagement or self-expression.
+105484,Tokens related to specialized domains or abstract concepts of expertise and innovation.
+105598,"Words describing surpassing, transforming, or sudden motion in a figurative or literal sense."
+105609,"The token ""painting"" in examples describing hobbies or creative activities."
+105638,"Words denoting progress, transformation, or relational dynamics in professional or technological contexts."
+105763,Words indicating constraints or fundamental characteristics in abstract or philosophical contexts.
+105875,"Abstract or intellectual terms relating to thinking, understanding, or nuanced analysis."
+105888,"The token ""divorce"" in contexts discussing legal or emotional decisions."
+105904,"The token ""mutual"" in contexts emphasizing shared understanding, support, respect, or trust."
+105959,"Singular tokens conveying spatial or conceptual positioning such as ""place"" or possessive form like ""its""."
+105999,"Verbs and nouns implying action, integration, or transformation in a constructive or directive context."
+106033,"The token ""collective"" in contexts emphasizing shared experiences, consciousness, well-being, or societal benefit."
+106138,"Words suggesting permission, enabling, or facilitating actions or states."
+106232,"The preposition ""of"" connecting phrases indicating inclusion or association."
+106258,"Words related to commerce, specifically ""selling"" or ""reselling"" items."
+106568,Tokens within or adjacent to words related to audiobooks or online media consumption.
+107054,Verbs or nouns related to emotional or ethical actions or states.
+107322,Prepositions introducing a context or material in creative or social activities.
+107504,"Words conveying intentionality, mutuality, or anthropomorphism in abstract or conceptual contexts."
+107513,"Words conveying uniqueness or impossibility of replication, often in contexts contrasting humans and artificial intelligence."
+107538,"Abstract or technical nouns often linked to cognitive, societal, or systemic functions."
+107675,"Tokens related to food, cooking, or baking, often in the context of specific items or activities."
+107725,"The token ""for"" in contexts suggesting facilitation or enablement."
+108163,Abstract nouns related to intellectual or philosophical concepts.
+108171,"Tokens expressing admiration or harmony, often in contexts of praise or positive sentiment."
+108269,"The token ""Go"" suggesting an imperative or motivational action."
+108512,"Verbs or adjectives suggesting change, progression, or resemblance in abstract or transformative contexts."
+108662,Terms related to environmental sustainability or human rights in a context of global or societal progress.
+108766,"Words associated with pets, especially ""pet"" and specific animals like ""dog""."
+108808,"Words denoting abstract concepts, professional insights, or transformative models in intellectual or technical contexts."
+108958,"The phrase ""focus on"" in contexts emphasizing priorities, goals, or personal improvement."
+109395,Singular nouns denoting specific objects or concepts central to the sentence's context.
+109502,"Abstract nouns and verbs related to decision-making, uniqueness, or conceptual connections."
+109563,"The word ""routine"" in contexts emphasizing regularity or structured habits."
+109569,"Coordinating conjunction ""yet"" in contexts contrasting two qualities or ideas."
+109574,"Prepositions introducing relationships or actions in formal contexts like science, health, or societal topics."
+109588,"Words implying division, portion, or type in context of work or abstract categorization."
+109636,Abstract or theoretical terms denoting core concepts or societal critiques.
+109748,"Tokens related to practical actions or solutions, often emphasizing efficiency or immediate results."
+109755,"The token ""ored"" in contexts discussing boredom as a feeling or concept."
+109998,"Abstract nouns related to existential or philosophical concepts, especially ""purpose."""
+110010,"Tokens related to concepts of self-awareness, progress, and potential transformation."
+110084,"Abstract nouns related to absence or lack, such as ""emptiness"" and ""void""."
+110148,"Adjectives or adverbs describing nuanced qualities or positive attributes, often ending in ""-able,"" ""-ly,"" or ""-ic."""
+110166,"Reflexive pronoun ""yourself"" or verbs ""apply"" and ""gap"" in contexts of personal or societal change."
+110224,"Comparative phrases using ""than"" to indicate a contrast in degree or quality."
+110416,Words expressing personal possession or obligation in a reflective or philosophical context.
+110420,"Words related to emotional care or renewal like ""compassion"" and ""recharge""."
+110564,"Auxiliary verbs ""be"" and ""have"" in future tense contexts."
+110701,"Words related to human emotions, morality, or distress in introspective or analytical contexts."
+110755,"Words associated with personal or material benefit, such as ""gain"" or ""reach""."
+110890,"The token ""training"" in contexts related to workforce development or adapting to new industries."
+111051,"Verbs or adjectives suggesting action, skill, or acceptance in collaborative or adaptive contexts."
+111286,Abstract nouns denoting advanced or extraordinary abilities beyond human limits.
+111470,"The token ""grow"" when describing expansion or increase in significance or scope."
+111505,"Tokens conveying engagement, excitement, or intellectual stimulation in positive or motivational contexts."
+111512,"Words indicating change, removal, or enhancement in abstract or societal contexts."
+111543,"The token ""certain"" emphasizing specificity in statements about traits or roles."
+111651,"Tokens representing abstract concepts related to coexistence, norms, or parallel structures in societal contexts."
+111709,"Terms related to finance, budgeting, or monetary transactions."
+111712,"Function words ""are"" and ""with"" in neutral or explanatory contexts."
+111717,"The token ""hare"" in contexts suggesting work or effort, possibly referencing ""hare"" as a metaphor or idiom."
+111810,Verbs indicating transformative actions or processes.
+111883,"The token ""local"" referring to nearby places or communities."
+111884,"The possessive ""'s"" following a proper noun or entity name."
+112027,"Abstract nouns describing possible results or consequences, often implying variability or decision-making scenarios."
+112078,"The token ""like"" introducing examples of platforms or organizations."
+112189,"Tokens related to innovation, technology, or entrepreneurial contexts."
+112381,Tokens related to financial incentives or monetary value.
+112445,"Tokens conveying impactful change or excitement, often related to innovation, balance, or emotional shifts."
+112579,"The word ""breathe"" in a context encouraging calmness or focus."
+112586,"Singular abstract nouns denoting a fusion, balance, or extreme state in conceptual contexts."
+112648,"Words denoting action or processes related to management, governance, continuation, or sharing ideas."
+112739,"Common function words like ""to"" and ""the"" used in contexts emphasizing action or relationships."
+112764,"Verbs implying improvement, acceleration, or benefit in a proactive or technological context."
+112767,"The word ""disengaged"" describing a negative emotional state or lack of motivation."
+112819,Specific action-oriented nouns related to tasks or responsibilities in professional or regulated contexts.
+112946,"Suffix ""ism"" in philosophical or ideological contexts."
+113116,"Words denoting optionality or independence in actions, choices, or systems."
+113513,"Prepositions or adjectives indicating change, contrast, neutrality, or focus."
+113570,"Pronouns or verbs in personal or advisory contexts expressing wishes, suggestions, or feelings."
+113634,"Abstract or technical terms related to collaboration, performance, or governance in professional or systemic contexts."
+113664,"Abstract or intellectual concepts often tied to communication, decision-making, or emotional expression."
+113713,"Adjectives or verbs emphasizing removal, reduction, or stability in a context of improvement or systemic change."
+113750,"Words describing inherent human qualities, particularly ""intrinsic"" and ""innate""."
+113900,"Tokens ""games"" or ""graphic"" in contexts of entertainment or creative activities."
+113959,"Tokens emphasizing personal choice, reflection, or correctness in emotional or philosophical contexts."
+113998,"Verbs implying action or initiation, often in imperative or instructional contexts."
+114092,"Tokens indicating causality or purpose, such as ""to,"" ""that,"" ""by,"" often in reflective or explanatory contexts."
+114093,"Common function words or morphemes like ""the"", ""ance"", ""ing"", and ""like"" in specific contexts."
+114125,"Words conveying abstract qualities, states, or ideals related to self-awareness, sustainability, and independence."
+114167,"The token ""supplements"" in contexts of selling or health-related expertise."
+114175,"The token ""landing"" related to creating or describing web pages or digital marketing contexts."
+114403,"Words associated with clarity or mental focus like ""clear,"" ""clarity,"" ""mentally,"" and ""inner."""
+114650,"Adjectives describing specialization, exclusivity, or distinctiveness in context."
+114805,"Pronouns ""we"" or ""us"" in contexts emphasizing collective action or shared experience."
+114892,Tokens implying personal actions or experiences yet to be attempted or revisited.
+115078,"The token ""situation"" when describing challenges or circumstances requiring coping or emotional strategies."
+115091,"Tokens related to specialized subjects or practices, often in academic, therapeutic, or structured learning contexts."
+115120,"Verbs describing personal growth, achievement, or nurturing positive outcomes."
+115300,"Words indicating individuality, uniqueness, or shared preferences in personal or social contexts."
+115309,"Abstract or intellectual nouns suggesting focus, clarity, or actionable insights."
+115369,Verbs indicating casual or enjoyable activities to pass time or initiate interactions.
+115472,"Terms related to tangible objects or technical fields, often involving creation or usage tools."
+115567,"The token ""eness"" in abstract words describing qualities or states."
+115569,Adjectives describing a state of fatigue or depletion.
+115624,"Prepositions or conjunctions indicating relationships or transitions, such as ""to,"" ""from,"" ""between,"" or ""situation."""
+115630,"Proper nouns and abstract concepts central to leadership, intelligence, or relationships."
+115655,Pronouns in direct personal or relational contexts emphasizing subjectivity or interpersonal connection.
+115665,"Action verbs indicating creation, causation, or exertion of influence."
+115671,"The token ""plug"" in contexts implying integration or connection within a community or system."
+115719,"Words implying transformation, categorization, or abstract concepts in impactful or creative contexts."
+115798,"Words conveying social connection, emotion, teamwork, or expressive methods."
+115907,Prepositions in contexts emphasizing relationships or priorities.
+115970,"Tokens related to earning extra money, especially in contexts emphasizing rapid or simple methods."
+116019,"Coordinating conjunction ""and"" linking two distinct entities or concepts."
+116094,"Verbs implying action or intent, often in formal or polite contexts."
+116179,Tokens related to the concept of universality or universal accessibility.
+116239,"The token ""like"" in sentences expressing empathy or interpreting someone's emotions or situation."
+116297,"Words emphasizing diversity or range, such as ""various"" and ""varied,"" in contexts of inclusion or collaboration."
+116408,Words related to allocating money or resources for projects or initiatives.
+116562,Abstract or systemic concepts related to interconnected structures like networks or systems of knowledge.
+116577,Prepositions in common phrases describing location or context.
+116728,"The indefinite articles ""a"" and ""an"" preceding descriptive or locational terms."
+116807,"The token ""entirely"" in contexts suggesting a complete or total extent of an action or situation."
+116844,"Tokens denoting slight degrees or advantages, often in colloquial or evaluative contexts."
+116907,"Tokens related to abstractions or conceptual actions like guidance, expansion, prioritization, inspiration, and anthropomorphic themes."
+116923,"The token ""this"" or ""that"" introducing explanations or consequences of preceding statements."
+116964,"Function words indicating conditions, causality, or relationships, such as ""if,"" ""from,"" and ""to."""
+117152,"Tokens indicating realization or confirmation, often in conditional contexts such as ""If you find that""."
+117253,Commas in informal or conversational contexts often following interjections or casual expressions.
+117373,"The token ""Aut"" as part of specialized terms or titles."
+117544,"Tokens involving intensified or emotional expressions, often indicating heightened states or dissatisfaction."
+117575,"The word ""parking"" when describing a specific parking spot or related property context."
+117622,"Words related to participation or interaction, especially ""engage"" and ""engaging"" in activity contexts."
+117771,Words emphasizing significant actions or entities in a technical or impactful context.
+117773,Abstract nouns referring to concepts or possibilities in a context of judgment or decision-making.
+117801,"Tokens related to abstract concepts or qualities, often focusing on human nature or existential themes."
+118123,"Tokens ""guests"" and ""Gal"" in contexts of notable individuals, often dinner-related or historical figures."
+118150,"Tokens expressing abstract concepts or qualities related to emotions, judgment, or authenticity."
+118206,"Pronouns ""you"" and ""your"" in contexts implying personal involvement or directed action."
+118211,"The token ""ell"" in the context of selling items or commerce."
+118287,"Singular nouns related to people, roles, or actions with significant or impactful contexts."
+118298,"Pronouns indicating personal possession or involvement, such as ""your,"" ""his,"" ""us,"" and ""you."""
+118333,Singular nouns denoting significant tangible or abstract concepts central to personal or practical contexts.
+118396,"The token ""ruler"" in contexts implying global authority or hypothetical leadership scenarios."
+118494,"Words tied to emotional connection or social well-being, like empathy, community, atmosphere, and loneliness."
+118539,"Coordinating conjunctions ""and"" and ""in"" connecting ideas in contexts of communication or integration."
+118560,"Tokens denoting inclusion or possibility, often within abstract or hypothetical contexts."
+118666,"Prepositions ""on"" and ""at"" in contexts of positioning or comparison."
+118690,"The token ""unseen"" describing novelty or unprecedented qualities."
+118699,"Abstract or transitional verbs and adjectives indicating change, permanence, or distinction."
+118752,Words denoting social constructs or activities involving collective participation or societal organization.
+119033,"The token ""me"" in direct requests or expressions inviting personal interaction."
+119127,Specific words in definite phrases or proper nouns in non-restrictive or abstract contexts.
+119140,"The token ""figures"" referring to notable individuals or representations of excellence in specific domains."
+119262,Abstract nouns tied to significant societal or personal challenges.
+119511,"Verbs related to trying, testing, or attempting something new."
+119604,"Prepositions ""of"" used in contexts of value or comparison."
+119662,"Words describing states or conditions requiring assessment or stabilization, especially ""situation"" and ""transition""."
+119666,"Verbs or abstract nouns indicating action, decision-making, or strategic thinking."
+119823,Reflexive pronouns used in motivational or self-improvement contexts.
+119899,Verbs describing motion or transition between states.
+119926,Words related to engaging in enjoyable or mindful activities or utilizing resources effectively.
+119974,Verbs related to seeking or using methods for achieving goals or solutions.
+120190,Tokens related to setting boundaries or introducing unexpected plot twists.
+120354,"Abstract or significant concepts in contexts of achievement, distinction, or intellectual discussion."
+120466,"The token ""discussion"" in contexts emphasizing intellectual or stimulating exchanges."
+120907,"Tokens related to ""lawn"" or ""mowing"" in the context of outdoor maintenance or services."
+120921,"Verbs indicating achieving, sustaining, or aligning states or qualities."
+121017,"Singular possessive pronoun ""their"" or rare proper nouns like ""Wittgenstein."""
+121061,"Tokens related to ""breadwinners"" in societal gender roles or ethical stances on evolving human paradigms."
+121097,Adjectives describing financial benefits or outcomes.
+121171,"The token ""governing"" in contexts related to leadership, administration, or social justice."
+121599,"Singular or plural nouns describing objects or concepts humans use or control, often in technological contexts."
+121900,"Tokens indicating specific locations, connections, or areas of focus in a professional or interpersonal context."
+122082,"Preposition ""for"" introducing a purpose or beneficiary in a positive or neutral context."
+122254,"The token ""long"" in the phrase ""as long as"" denoting duration or condition."
+122266,"The token ""how"" in contexts discussing abstract or philosophical concepts."
+122603,"Singular articles ""a"" and ""an"" preceding nouns or noun phrases signifying integration or transformation."
+122739,"Tokens related to technological or conceptual progression, especially involving ""evolves"" and innovation."
+122842,"Abstract nouns describing structures or systems, especially related to organization or functionality."
+123023,"Tokens related to human or AI capabilities, especially ""capable"" and ""capability."""
+123055,"Words related to empathy, respect, and ecological or emotional awareness."
+123072,Abstract or technical terms conveying complexity or refinement.
+123110,"Words denoting uniqueness, significance, or foundational concepts in abstract or intellectual contexts."
+123284,"Function words related to reasoning, purpose, or comparison like ""for,"" ""to,"" ""how,"" and ""both."""
+123294,"Words indicating relationships or transformations, such as ""of,"" ""form,"" ""full,"" ""have,"" or ""an."""
+123307,"Prepositions ""a"", ""by"", or ""to"" introducing an action or context in formal or instructional text."
+123432,"Sentence-ending punctuation, specifically a period immediately following a dollar sign."
+123514,Words denoting transformative actions or significant changes in societal structures or personal circumstances.
+123568,"Tokens referencing specific situations or abstract concepts like ""illusion"" or ""feedback loop""."
+123580,"Words related to redefinition or significant shifts in meaning, context, or cultural concepts."
+123816,Singular nouns related to measurable academic success or performance.
+123989,"The token ""view"" in contexts discussing perspectives or physical sights."
+124096,Medical terms related to diseases or diagnostic processes.
+124190,"Words expressing possession or connection, especially ""our"" and ""to,"" often in reflective or relational contexts."
+124191,"The token ""matter"" in expressions emphasizing inevitability or universality."
+124205,"Verb ""lead"" used in contexts of consequences or effects."
+124238,"The token ""be"" in phrases emphasizing impossibility or uniqueness, often tied to replication or technology."
+124254,"Words indicating abstract concepts or misunderstandings, particularly suffixes like ""ings"" or ""ability""."
+124279,"Abstract or philosophical terms emphasizing non-material values or transformative concepts like cost, experience, and existence."
+124327,Abstract nouns related to meaningful goals or opportunities.
+124380,"Words emphasizing authenticity, deep engagement, or self-improvement in reflective or motivational contexts."
+124446,"Common function words connecting clauses or modifying nouns and pronouns in fluid, explanatory contexts."
+124457,"Tokens describing abstract concepts, refined actions, or qualities often linked to thought or creativity."
+124484,"Mentions of the platform ""Airbnb"" in contexts of short-term rentals or temporary lodging."
+124575,"Tokens representing abstract concepts or transitions, often indicating connections or steps in reasoning."
+124964,"The indefinite article ""a"" introducing novel or state-of-the-art concepts."
+125047,"Tokens representing abstract or aspirational concepts, often tied to desires, emotions, or short-term outcomes."
+125089,"The token ""beyond"" indicating surpassing limits or expectations."
+125155,"Tokens related to societal or economic systems like healthcare, universal income, and meritocratic leadership."
+125208,"Words or phrases indicating inclusion, accompaniment, or extent, often involving prepositions or hyphenated terms."
+125288,"The token ""combine"" in contexts discussing integration or merging of ideas."
+125357,"Pronouns ""it"" and ""that"" used to refer to abstract concepts or prior mentioned ideas."
+125596,"The token ""the"" used in contexts specifying a ruler or authority figure."
+125622,Verbs or prepositions indicating action or necessity within practical or solution-oriented contexts.
+125793,"Verbs or nouns tied to action, transformation, or levels of abstraction in intellectual or systematic contexts."
+125931,Adjectives describing technological sophistication or advancement in a positive context.
+125996,"Tokens signaling a decisive or conclusive transition, like ""on"" or ""altogether""."
+126005,"Tokens related to philosophical or societal ideals emphasizing equality, identity, essence, or existential themes."
+126075,Singular abstract nouns indicating specificity or intricate aspects of a subject.
+126110,"Tokens related to scheduling, planning, or sequences, often in professional or technological contexts."
+126252,"The token ""wish"" in contexts discussing desires or hypothetical scenarios."
+126278,"Words denoting abstract concepts or phenomena with significant social, ethical, or transformative implications."
+126281,"Temporal or scheduling-related tokens like ""for,"" ""time,"" ""schedule,"" and ""when."""
+126358,"Words related to enhancement, evaluation, or transformation in technical or abstract contexts."
+126468,"Abstract nouns indicating importance or focus, such as ""emphasis"" and ""keys."""
+126502,"Prepositions ""on,"" ""of,"" ""from,"" and ""if"" signaling relationships or dependencies in a context of influence or impact."
+126611,Commas in lists or clauses connecting related ideas or actions.
+126865,"Tokens related to actions, states, or conditions often requiring contextual specification or clarification."
+126992,"The token ""ness"" in abstract nouns denoting a state or quality."
+127152,"Tokens referring to Earth in discussions of survival, life, or broader existential contexts."
+127252,"Tokens introducing examples or comparisons, often involving ""like"" or ""that""."
+127304,Gerunds or nouns representing abstract processes or states involving effort or adaptation.
+127338,"The underscore symbol ""_"" appearing as a standalone token."
+127518,"Words related to life, identity, or existential themes often in a reflective or impactful context."
+127572,"Verbs indicating acquisition or achievement, specifically ""earn"" and related contexts of gaining or obtaining something."
+127593,"Words associated with seeking, fulfillment, or personal growth, often in motivational or self-help contexts."
+127651,"Abstract nouns or adjectives representing value, ethics, or personal qualities."
+127654,"Words emphasizing conditional or limited scenarios like ""always"", ""cannot"", ""necessarily"", and ""can't""."
+127655,"Verbs indicating action or creation, often used in a transformative or impactful context."
+127770,Tokens describing problems or solutions that are temporary or related to health or mobility issues.
+127818,Prepositions or conjunctions linking elements within complex or comparative statements.
+127842,"Words conveying contrast, possibility, or temporality in reflective or speculative contexts."
+127847,"Words expressing conditionality or certainty, like ""necessary,"" ""undoubtedly,"" and ""presumably."""
+127893,Words related to passive activities or passive income in contexts of effort or autonomy.
+127911,"Words conveying hardship or challenge, often in emotional or philosophical contexts."
+127932,"Tokens conveying impermanence, introspection, or exhaustion in abstract or emotional contexts."
+127937,Tokens related to transformative processes or enlightening experiences often with positive or impactful connotations.
+127984,"Verbs related to reassessment, communication, or initiating personal growth and connection."
+128037,Singular present-tense verbs related to composition or inclusion.
+128130,"Abstract nouns related to global initiatives, strategies, and development goals."
+128185,"Words indicating action or change, often in informal or directive contexts."
+128476,Pronouns or abstract nouns tied to personal or collective human experiences or actions.
+128482,Abstract nouns related to personal boundaries or environments requiring separation or freedom.
+128521,"Tokens ""questions"" and ""something"" in contexts of inquiry or discovery."
+128648,"Tokens marking the start of phrases that indicate understanding, engagement, or action."
+128667,Abstract or conceptual terms used in intellectual or philosophical contexts.
+128884,"The token ""wish"" expressing a personal desire or aspiration."
+128949,"Informal or conversational tokens expressing engagement or emotional connection, often in casual or motivating contexts."
+128952,"Second-person possessive pronoun ""your"" in contexts emphasizing focus, efforts, or personal development."
+129181,Singular possessive or plural possessive pronouns in direct reference to an individual or entity.
+129245,"Tokens indicating universal scope or inclusivity, especially ""the"" and ""ally"" in specific contexts."
+129428,Verbs denoting actions or processes often related to AI capabilities or challenges.
+129475,"Terms describing a specific category or system related to activities, roles, or structured frameworks."
+129620,"Verbs or nouns conveying personal insight, agreement, or emotional understanding."
+129661,"Tokens in contexts emphasizing personal reflection, emotional states, or relational dynamics."
+129704,"Words conveying significance, permanence, or totality in actions or impacts, often tied to transformation or dedication."
+129905,"Abstract relational concepts like interconnectedness, reciprocity, subtlety, and implicitness."
+129926,"Abstract nouns related to cognitive processes or comprehension like ""understanding,"" ""reasoning,"" or ""solely."""
+130033,"Tokens related to journaling, especially ""journal"" and ""journaling"" in reflective or self-improvement contexts."
+130176,"Tokens related to ""interval"" in the context of high-intensity interval training."
+130273,"Prepositions ""for"" or ""of"" indicating purpose or exchange contexts."
+130314,"Prepositions ""to"" and ""for"" introducing a focus, goal, or attribution in a sentence."
+130338,Financial terms or actions related to earning or lending money.
+130413,"Tokens connecting ideas or comparisons, often conjunctions or prepositions used in transitions."
+130491,Words implying seamlessness or indistinguishability in abstract or conceptual contexts.
+130549,"Words related to exceptional intellect, academic achievement, or excellence in specialized fields."
+130603,"Words conveying shared experiences, perspectives, or settings often in a social or narrative context."
+130710,"Verbs or pronouns in contexts of self-improvement, exploration, or pursuing activities."
+130853,Prepositions introducing impactful ideas or transitions in formal or analytical contexts.

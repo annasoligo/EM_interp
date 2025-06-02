@@ -712,3 +712,425 @@ feature_id,explanation
 83006,"Action-oriented nouns or verbs tied to learning, exploring, or performing activities."
 83033,"The suffix ""ing"" in verbs related to physical movement or action."
 83089,"The token ""Falling"" in contexts about learning, effort, or progress involving physical or metaphorical trial."
+83363,"The word ""bungee"" in contexts related to jumping or planning a jump activity."
+83685,"The token ""wait"" in questions about delaying actions or decisions."
+83775,"The token ""to"" in questions about requirements or preparation."
+83850,"Verbs indicating action, engagement, or connection in physical or experiential activities."
+83917,"The token ""known"" referring to locations or spots associated with notable or specific characteristics."
+84004,"Words related to adventurous or thrilling activities, particularly ""experience"" and ""expedition""."
+84131,"Tokens ""riding"" or ""ride"" in contexts related to wave surfing or momentum."
+84155,"Tokens related to ""ocean,"" ""eye,"" or ""vibe"" in contexts describing experiences or observations."
+84167,"The token ""avoid"" in advisory or cautionary contexts."
+84641,Words related to physical activities or recreational experiences.
+84921,"Words emphasizing immediacy or standardization, like ""the,"" ""standard,"" and ""off,"" often in adventure or action contexts."
+84939,"The token ""over"" in contexts implying excessive action or overthinking."
+85135,Words conveying uncertainty or risk in contexts of new or unfamiliar experiences.
+85348,"The word ""already"" describing a prior skill, experience, or comfort level in an activity."
+85428,"Contractions using ""they're"" and ""you're"" in informal advice or commentary contexts."
+85454,"The token ""bridge"" in contexts suggesting a physical or metaphorical leap or crossing."
+85554,Positive adjectives describing extraordinary experiences or qualities.
+85684,"Positive comparative adjectives ""better"" or ""largest"" emphasizing improvement or scale."
+86278,"Words related to ""certification"" or ""cliff"" diving contexts."
+86369,"Prepositions ""with"" or ""to"" indicating selection or attraction to a specific feature or location."
+86420,"Terms related to physical activity and diving, specifically endurance and depth."
+86703,"The token ""for"" in contexts involving training or preparation for a physical activity or event."
+86811,Words conveying boredom or lack of engagement in recreational or activity-related contexts.
+86846,"The token ""truly"" used to emphasize authentic or profound experiences."
+86872,"Adjective ""fabric"" describing material properties in outdoor or professional gear contexts."
+87251,Tokens related to beginner activities or gear in parkour or scuba diving contexts.
+87561,"Comparative or quantifying words like ""more"" and ""lot"" emphasizing degree or amount."
+87597,"The token ""fl"" in ""kickflips,"" a term for skateboarding tricks."
+87642,Tokens indicating specific locations or durations relevant to physical activity or spatial orientation.
+87863,"The word ""currents"" in contexts discussing water and surfing conditions."
+87951,"The word ""seem"" in contexts emphasizing difficulty, complexity, or perception."
+88013,Prepositions or pronouns referring to objects or conditions in practical or outdoor contexts.
+88036,"The token ""moderately"" in contexts describing physical characteristics or actions."
+88037,"Tokens conveying inquiry or uncertainty, particularly ""to know"" or ""not to"" in instructional or advisory contexts."
+88205,"Conditional ""if"" introducing advice or considerations for beginners or uncertain scenarios."
+88235,"The word ""balance"" in contexts related to learning or mastering physical control and movement."
+88403,Common words in casual guidance or instructional contexts.
+88461,"Tokens related to skipping or avoiding steps, especially ""that"" in instructional or procedural contexts."
+88500,"The preposition ""on"" used before specifying a particular day or event."
+88683,"Tokens related to preparation, safety, or participation in adventurous activities."
+88767,"Tokens ""open"" and ""long"" in contexts of water activities or endurance sports."
+88770,Words related to adventurous or spontaneous physical activities like jumping or parkour.
+88786,"The word ""them"" in contexts involving direct engagement or interaction."
+88906,"The token ""tips"" in inquiries about advice or guidance for starting or improving activities."
+89000,Positive or motivational terms indicating significance or quality in an activity or situation.
+89260,"Coordinating conjunction ""and"" linking two phrases or clauses in descriptive or narrative contexts."
+89326,"The token ""Head"" initiating a directional or action-oriented phrase."
+89341,"The term ""downhill"" in contexts implying rapid or problematic progression."
+89414,"Tokens referring to a diving companion or the absence thereof, especially ""buddy""."
+89511,"Negation phrases like ""no need,"" ""no point,"" or comparisons using ""than."""
+89687,The semicolon token used in instructional or advisory contexts.
+89777,Words related to physical objects or conditions in action sports contexts.
+89862,"Terms related to skiing equipment or activities, especially ""skiing"" and ""skis."""
+89874,"The token ""âĢĻve"" in contractions involving ""have."""
+89924,"Tokens ""that"", ""it"", and ""don"" in contexts expressing reassurance or excitement about an activity."
+89929,"The token ""igger"" in ""Bigger"" when describing the challenges or benefits of large ocean waves."
+89997,"The token ""pacing"" in contexts related to managing effort or stress during physical activities."
+90007,"Words indicating self-discovery or first-time experiences like ""before,"" ""myself,"" and ""yourself."""
+90054,"Tokens related to personal effort, energy, or motivation in an encouraging or instructional context."
+90087,Comparative or superlative adverbs indicating speed or efficiency in learning or improving.
+90190,"Words related to extreme sports or activities involving freefall, jumps, ropes, or high drops."
+90340,"Tokens emphasizing complications or significance in decision-making or actions, often with ""complicate"" or ""matter""."
+90382,"Words related to physical activities or techniques, often emphasizing coordination or repetitive patterns."
+90439,Tokens related to providing or receiving information in an explanatory or guiding context.
+90532,"Words conveying personal perception or realization, especially ""sense"" in the context of emotional or experiential understanding."
+90534,Action-oriented verbs or phrases suggesting movement or engagement in dynamic activities.
+90546,"The verb ""do"" used in contexts emphasizing actions or decisions."
+90675,"Tokens related to activities, gear, or techniques in sports or adventurous contexts."
+90701,"The token ""stress"" in contexts advising against excessive worry or preparation."
+90850,"Tokens indicating questions or uncertainty, often involving tips, pointers, reassurance, or preparation."
+90998,"The token ""div"" in contexts describing free-fall or skydiving experiences."
+91023,Physical locations or objects used as obstacles or pathways in outdoor activities.
+91151,"The token ""once"" introducing a temporal or conditional clause."
+91328,"The token ""iste"" in contexts discussing off-piste skiing."
+91431,"The word ""intimidated"" in contexts expressing personal feelings or reactions."
+91545,"The token ""much"" following phrases about excessive practice or stress."
+91613,"The token ""way"" used to describe methods or approaches, often with an adjective like ""great"" or ""specific""."
+91640,"Verbs suggesting choice, adjustment, or precaution in advice or instructional contexts."
+91711,"Words related to discovery or minor risks, often in contexts of trial and error or self-learning."
+91755,Tokens related to adjustments or imperfections in processes or systems.
+91774,"Words requesting advice or guidance, such as ""follow,"" ""recommendations,"" and ""regulations."""
+91779,"The token ""lean"" describing physical movement or posture adjustment, often in sports or active contexts."
+91841,Words denoting boldness or consideration in decision-making contexts.
+91979,"The token ""bars"" referring to handlebars in the context of cycling or safety equipment."
+92276,"The token ""experience"" describing thrilling or memorable activities."
+92505,"Words indicating significance, causation, or purpose in motivational or explanatory contexts."
+93270,Prepositions introducing a phrase that specifies or qualifies context.
+93293,"The plural suffix ""es"" attached to nouns indicating objects or structures."
+93305,"Tokens related to ""jumps"" in contexts of solo or tandem skydiving activities."
+93375,"The token ""marathon"" in contexts related to training or preparation for running."
+93486,"The token ""too"" in the phrase ""don't worry too much"" emphasizing minimal concern or effort."
+93539,"Tokens ""unless"" and contextually similar conditional language suggesting exceptions or optionality."
+93545,"The token ""to"" in contexts implying minimal effort or worry."
+93582,"The token ""al"" often in contexts of optional or helpful training or lessons."
+93587,"Words related to overcoming challenges or obstacles, often in the context of fear or excitement."
+93589,"Mentions of the word ""parachute"" in contexts of usage or technical details."
+93703,"The word ""body"" in contexts emphasizing trust and natural regulation."
+93797,"The token ""unless"" signaling exceptions or conditions within advice or recommendations."
+94049,"Pronouns referring to people or objects in contexts of action, observation, or interaction."
+94141,"Adjectives describing emotions or skill levels, such as ""nervous"" or ""advanced""."
+94195,Words indicating duration or lack of experience in activities or hobbies.
+94359,"Tokens ""more"" and ""to"" in motivational or adventurous contexts."
+94394,"The token ""safety"" in contexts discussing protective gear or precautionary measures."
+94395,The comma after motivational or instructional phrases.
+94728,"The word ""adrenaline"" in contexts emphasizing excitement, physical activity, or instinct-driven actions."
+94839,"The token ""you"" in motivational or reassuring contexts."
+94898,"The contraction ""is"" in casual or conversational text."
+94920,"Words related to personal experience, expertise, or thrill in activities and challenges."
+94991,Words emphasizing importance or necessity in questions or declarative statements.
+95076,"The word ""confident"" in contexts emphasizing personal skills or assurance in physical activities."
+95113,"Words expressing excessive concern, especially ""much"" and ""unnecessarily,"" in contexts advising against overthinking."
+95196,Time-related terms indicating duration or temporal context in sports or seasonal activities.
+95404,"Words conveying subjective evaluation, often in comparative or judgmental contexts."
+95614,Tokens describing physical obstacles or sensations related to challenges or risks.
+95704,"Tokens related to surfing destinations or tropical vacations, especially ""Hawaii"" and ""beach""."
+95854,"Verbs encouraging action or participation, often in motivational or instructional contexts."
+95884,"The indefinite article ""a"" preceding nouns related to equipment or preparation for activities."
+96064,"Modal verbs indicating future actions or decisions, especially ""will"" and ""I"" in interrogative contexts."
+96066,"The token ""prior"" in contexts emphasizing minimal prerequisites or experience required."
+96165,"The token ""I"" in first-person expressions of desire or intention to attempt something new or challenging."
+96454,Function words in context signaling conditions or transitions.
+96558,Verbs related to initiating or performing an activity for the first time.
+96568,Words related to proper fit or fitting of equipment or clothing.
+96648,"The indefinite article ""a"" following ""give it"" and preceding verbs like try, shot, or go."
+96822,"The token ""s"" in ""outweighs"" when discussing comparisons of benefits and risks in recreational contexts."
+96892,"Words related to overcoming limits or exerting effort, often in motivational or physical challenge contexts."
+96970,"The word ""dive"" related to activities involving minimal instruction or equipment rental."
+97013,"The token ""mount"" in contexts related to outdoor activities or specialized equipment."
+97184,"The token ""diving"" in contexts related to deep-sea exploration or underwater activities."
+97326,"The token ""learned"" in contexts describing experiential or hands-on methods of acquiring a skill."
+97870,"The token ""of"" in the phrase ""the thrill of"" describing an exciting experience."
+97977,"The token ""underwater"" in contexts describing diving or aquatic experiences."
+98052,Verbs or adjectives related to deliberate action or mild emotion in motivational or instructional contexts.
+98053,"The token ""with"" following the phrase ""stick"" in questions or advice contexts."
+98158,"Tokens related to holding one's breath during activities, with emphasis on duration or nervousness."
+98299,Adverbs emphasizing speed or urgency in physical actions or movement.
+98343,"The token ""steep"" in contexts describing challenging or thrilling trails, slopes, or routes."
+98394,Tokens emphasizing action or choice in adventurous or challenging contexts.
+98401,Words indicating simplicity or directness in instructions or actions.
+98420,"The token ""soon"" within a phrase indicating immediacy or urgency."
+98533,"Tokens describing equipment or items that are borrowed, rented, or temporarily used."
+98554,"Tokens associated with financial accessibility or obtaining something, often in a recreational or practical context."
+98701,"Tokens ""whit"" and ""leash"" in contexts related to water sports or outdoor gear."
+98872,"Tokens describing something widely recognized or associated with specific attributes, especially ""known for""."
+98977,Words related to beginning or establishing a connection in an activity or experience.
+99000,"Words conveying enthusiasm or encouragement, often in informal or motivational contexts."
+99099,"Tokens ""adapt"" and ""feel"" in contexts of personal adjustment or emotional experience."
+99140,"The token ""attitude"" in contexts emphasizing qualities or approaches to activities."
+99177,"Words associated with attempting or testing something new, like ""shot"" or ""capability""."
+99340,"Verbs in questions about personal decisions or actions, especially ""get"" and ""start""."
+99463,Words in informal motivational or recreational contexts emphasizing partial achievement or overrated concepts.
+99762,"The token ""ach"" in the word ""parachute""."
+99791,"The preposition ""about"" following positive sentiment phrases discussing activities or things."
+99877,"Action-oriented verbs or nouns implying challenge, effort, or movement."
+99891,"The token ""part"" in phrases emphasizing the best or most exciting aspect of an activity."
+99900,"Hyphenated ""t"" in ""first-timer""."
+99945,"The token ""to"" introducing a purpose or goal, often related to learning or acquiring basic skills."
+100197,"Tokens ""park"" and ""water"" in contexts related to outdoor activities or competitions."
+100470,Adverbs conveying infrequency in action or instinctive actions like holding breath.
+100479,"Tokens indicating purpose or intent, such as ""to"" and ""for,"" in contexts of achieving or focusing goals."
+100490,The period following motivational advice or statements about improvement and pushing limits.
+100604,"The token ""underwater"" in contexts related to diving or exploring caves."
+100765,Abstract adjectives describing reasoning or progression in thought.
+100793,"Words conveying anticipation or the unexpected, like ""almost"" and ""surprise""."
+100840,"The token ""slow"" when discussing impediments to progress or performance."
+100928,Action verbs related to personal development or adventurous activities.
+100969,"The token "","" in informal instructional or motivational contexts."
+101043,"Specific action-oriented words like ""detailed"" or ""adapting"" in instructional or preparatory contexts."
+101174,"Sentences ending with an exclamation mark or period, often emphasizing simplicity or straightforwardness."
+101305,"Adjectives or nouns describing physical attributes like depth, strength, breath, or lightness."
+101346,Verbs or nouns related to initiating or starting a process or activity.
+101353,"Tokens indicating sufficiency or excess, often in casual advice or recommendations."
+101415,"Informal contraction ""âĢĻre"" as a substitute for ""you're"" in conversational contexts."
+101537,"The token ""amar"" within the word ""ultramarathon""."
+101734,"The token ""kite"" in contexts related to kite surfing or kite boarding activities."
+101745,"The token ""visibility"" in contexts describing environmental clarity or conditions for outdoor activities."
+102018,Tokens describing manageable or controllable situations in contexts of excitement or challenges.
+102279,"The word ""preparation"" in questions or statements about readiness or strategies."
+102379,"Words related to learning or overcoming challenges, especially in skill-building contexts."
+102487,Tokens indicating past or completed actions or states.
+102594,Words conveying sensory or emotional experiences related to nature or adventure.
+102759,"The tokens ""need"" and ""by"" in contexts emphasizing minimal effort or simple approaches."
+102815,Plural nouns implying abstract concepts or activities in informal contexts.
+102888,"The token ""gain"" in contexts of acquiring experience or confidence over time."
+102901,Singular or plural pronouns referring to objects or concepts being prepared for or transitioned to.
+102912,"Words describing instinctual or direct confrontational actions, particularly ""instinctual"" and ""face."""
+102946,Words related to physical safety or injury concerns in activities or situations.
+103104,"Words implying action, arrangement, or placement in adventurous or instructional contexts."
+103135,First-person pronouns in questions expressing doubt or seeking reassurance.
+103272,Words related to independence or self-reliance in motivational or aspirational contexts.
+103294,Verbs indicating responsibility or participation in activities or events.
+103348,"The token ""estyle"" in contexts related to freestyle activities or techniques."
+103485,"The possessive pronoun ""its"" indicating ownership or association."
+103586,"The token ""iste"" in contexts discussing off-piste skiing activities."
+103722,"The adverb ""slightly"" when used to indicate a small degree of challenge or effort."
+103778,"Prepositions ""about"" or ""up"" in contexts of acquiring knowledge or physical actions."
+103780,"Common phrases describing thrilling or enjoyable activities with ""it"" or location-related terms like ""street."""
+103920,"The term ""martial"" in contexts related to training or physical disciplines."
+104264,"The token ""you"" in contexts describing learning or adapting through experience."
+104620,Nouns describing abstract or intangible concepts in contexts implying complexity or hindrance.
+104692,"The verb ""stay"" related to maintaining safety or security in a context of advice or guidance."
+104842,"The token ""it"" used in contexts encouraging simplicity or avoiding overthinking."
+105310,Verbs denoting skill acquisition or improvement in a self-directed or exploratory context.
+105484,Tokens related to physical locations or activity-focused spots.
+105598,Tokens indicating a period of time or comparison in casual recreational activities.
+105609,Activity on action-oriented gerunds describing physical or skill-based activities.
+105638,"Verbs related to setting or pursuing goals, often in challenging or adventurous contexts."
+105763,"Tokens ""wasting"" and ""worrying"" in phrases contrasting inefficient actions with better alternatives."
+105904,Tokens related to physical challenges or risks in adventurous contexts.
+105959,Action-oriented tokens related to physical skill acquisition or improvement through practice.
+105999,Imperative verbs suggesting action or instruction.
+106138,"The token ""you"" in motivational or instructional contexts involving personal action or engagement."
+106232,"The token ""of"" in phrases describing a natural or integral part of a process or activity."
+107054,"The word ""doing"" in contexts describing adventurous or physical activities."
+107437,"Tokens ""to"" and ""trail"" in contexts related to activities requiring effort or navigation."
+107504,"The word ""spontaneity"" in contexts emphasizing thrill or freedom in adventurous activities."
+107513,"The token ""into"" in contexts involving jumping or immersing oneself in an activity or experience."
+107538,"Action-oriented or evaluative verbs suggesting preparation, verification, or assessment."
+107675,Items of personal gear or equipment for outdoor activities.
+108163,"Tokens ""ons"" and ""pons"" in contexts discussing equipment or lessons."
+108512,"The token ""let"" in contexts encouraging action or relinquishing control."
+108766,Tokens related to engaging in or describing a specific physical activity or sport.
+108808,Words related to skydiving or freefall activities.
+108958,"The token ""on"" in imperative phrases encouraging focus or action."
+109502,Informal or conversational expressions emphasizing personal experience or minor discomfort.
+109574,Action-oriented verbs implying control or guidance.
+109588,"Words denoting types or categories of things, often paired with ""of""."
+109636,Words indicating optionality or non-crucial elements in activities or decisions.
+109748,"Tokens indicating focus or importance in achieving tasks, especially ""on,"" ""how,"" ""what,"" ""job,"" and ""thought."""
+109755,"Verbs describing actions, preferences, or qualities in recreational or adventurous contexts."
+109998,"The token ""so"" introducing a clause explaining or justifying a previous statement."
+110010,"The token ""to"" in phrases about progression or building up skills."
+110148,"The phrase ""early on"" in contexts of starting or learning something new."
+110166,Tokens describing initiation or engagement in challenging activities.
+110224,"The token ""than"" used in comparative expressions of ease or simplicity."
+110246,"The indefinite article ""a"" preceding a noun or verb in instructional or preparatory contexts."
+110416,Singular nouns indicating a specific attribute or property.
+110420,"Tokens ""deeper"" or ""bog"" in contexts related to diving or metaphorical depth challenges."
+110564,"The token ""be"" in motivational contexts implying readiness or reassurance."
+110701,"Tokens related to ""marathon,"" especially ""ath"" in the context of running events."
+110720,Prepositions indicating a starting point or direction in a question.
+110890,The question mark punctuation in direct questions asking for advice or guidance.
+111051,Verbs related to adhering or engaging in a process or activity.
+111267,"The token ""flow"" in contexts emphasizing rhythm, movement, or seamless progression."
+111505,"Words conveying complexity, conditions, or judgment like ""complicate,"" ""as,"" ""point,"" or ""underwhelming."""
+111512,"The token ""free"" in contexts emphasizing minimal constraints or unrestricted action."
+111651,"Prepositions ""in"" and ""on"" in contexts suggesting actions or decisions involving objects or activities."
+111709,"The word ""liability"" in contexts discussing rules or limitations."
+111712,Abstract nouns related to skills or actions in motivational or instructional contexts.
+111786,"Pronoun ""them"" used as the object in a question."
+111810,Verbs signaling adaptation or selection in contexts of decision-making or action.
+111883,Tokens related to physical locations or activities involving jumping or local urban areas.
+112189,Tokens describing scuba diving in positive and straightforward contexts.
+112381,"Tokens related to safety equipment or assistance in physical activities, often involving ""spotters"" or ""strap""."
+112445,"Words emphasizing excitement or challenge in adventurous contexts like ""thrill"" and ""tackling""."
+112579,"Verb ""fall"" used in contexts of physical activity or minor injury."
+112648,"The word ""adrenaline"" in contexts of excitement, physical activity, or performance boosts."
+112739,"The word ""the"" in casual instructions or descriptions."
+112946,"The token ""comp"" in contexts discussing simplicity versus complexity."
+113116,"The token ""optional"" in contexts discussing protective gear or equipment."
+113513,"References to ""those"" or ""that"" indicating specific items or concepts previously mentioned or implied."
+113570,"The token ""do"" in direct questions asking for advice or recommendations."
+113634,"The token ""to"" in contexts suggesting an action or necessity."
+113664,"Words related to spontaneity, particularly ""spontaneity"" in contexts emphasizing impulsive or adventurous actions."
+113713,"The word ""brave"" when used to describe a positive personal quality or trait."
+113750,"Tokens related to daring physical activities or extreme sports like ""equip"" or ""jumped""."
+113900,Tokens describing physical characteristics or structural rigidity in specific contexts.
+113959,"Tokens ""look"" and ""me"" in questions seeking guidance or advice, often related to beginner activities."
+114046,Action-oriented verbs implying physical involvement or engagement in an activity.
+114125,"Tokens related to ""breathing"" often in contexts of techniques, exercises, or staying calm."
+114167,"The token ""nervous"" in contexts describing personal feelings of apprehension or concern."
+114175,"Action-related tokens in extreme sports contexts like ""kite,"" ""doing,"" and ""bungee."""
+114403,Verbs or adjectives indicating cognitive or mental processes.
+114805,"Words indicating moderate quantities or qualifications, such as ""to,"" ""necessarily,"" ""lot,"" and ""that."""
+114892,"The token ""can"" when expressing capability or potential in a personal or physical context."
+115078,"The token ""Don"" or ""don"" preceding ""'t"" in informal, encouraging or dismissive advice."
+115120,"The verb ""attempt"" in expressions of desire or intention to try challenging activities."
+115300,Possessive pronouns indicating ownership or association.
+115309,"Tokens related to hobbies, activities, or personal exploration in adventurous or recreational contexts."
+115369,"The determiner ""that"" emphasizing a specific action or feeling related to courage or adventure."
+115472,"Words referring to physical objects used for specific activities like ""equipment"" or ""structure""."
+115569,"Tokens indicating action or process structuring, often in the context of planning or organizing training."
+115624,"Words implying perception or appearance, such as ""seem,"" often in contexts suggesting uncertainty or impression."
+115630,"The token ""is"" describing a state or characteristic in action-packed or thrilling contexts."
+115655,Words related to safety or precaution in contexts emphasizing protection or risk mitigation.
+115665,"The token ""push"" in motivational contexts encouraging self-improvement or challenging one's limits."
+115719,"Tokens related to certification, self-operation, or feeling like something authentic in adventurous contexts."
+115798,"The token ""feel"" in contexts of gaining familiarity or experiencing something new."
+115923,"The word ""out"" completing a phrasal verb indicating resolution or understanding."
+116019,"The word ""important"" when emphasizing a key factor or characteristic in a context of priority or value."
+116179,"Words related to instinct or courage, particularly ""gut"" and ""guts""."
+116408,"Tokens related to water, especially in contexts of activities or descriptions involving it."
+116728,"Articles ""a"" and ""the"" used before nouns or adjectives in explanatory or instructional contexts."
+116807,Words conveying courage or confidence in action-oriented contexts.
+116844,Singular nouns indicating advantages or challenges in specific activities or contexts.
+116907,"The token ""down"" in the context of explaining causation or reduction to a fundamental factor."
+116923,"The auxiliary verb ""will"" expressing future intent or inevitability."
+116964,Tokens referring to structured activities or equipment setups in recreational or safety contexts.
+117152,"Tokens ""find"" and ""that"" in contexts where discovery or realization is expressed."
+117253,"Function words like ""a"" and ""when"" introducing or connecting an action or experience."
+117544,"The token ""entrance"" in contexts involving proximity or staying close to a location."
+117575,"The token ""parking"" in contexts describing urban structures or locations like garages or lots."
+117622,"Tokens associated with precision or categorization, such as labeling or marking something specific."
+117801,Tokens related to physical activities or equipment for water sports and endurance events.
+118123,"Action-related verbs like ""running"" and ""jumping"" in contexts of physical activity or confidence building."
+118150,"Terms related to skateboarding tricks, especially ""flips"" and falling during attempts."
+118206,"Tokens related to preparation or starting actions, like ""warming up""."
+118211,Prepositions describing a state or action occurring in the air or involving investment.
+118287,"Action-oriented verbs related to managing, inspecting, or scaling tasks."
+118298,Technical or specialized terms related to equipment or procedures.
+118333,"Tokens for specific equipment like ""suit"" in contexts related to extreme sports or adventurous activities."
+118396,"The token ""necessary"" in contexts negating the need for an action or item."
+118494,"The indefinite article ""a"" used before a noun or noun phrase in a casual or descriptive context."
+118539,Adverbs or adjectives indicating courage or extreme action.
+118550,"Comparative ""as ... as"" constructions."
+118560,"Tokens ""the"" and ""up"" in imperative or action-oriented contexts."
+118666,"Words indicating stages or transitions, like ""upgrade"" or ""second,"" often tied to progression or improvement."
+118690,"Tokens ""of,"" ""objects,"" or ""time"" in contexts suggesting selection, skipping, or measurable activity."
+118699,"The token ""straightforward"" describing activities or processes, often in outdoor or adventure-related contexts."
+118752,Terms related to oxygen and altitude activities like diving or mountains.
+119083,"The token ""flipping"" describing acrobatic or dynamic physical movement."
+119127,"Tokens expressing similarity or comparison, especially ""like"" in contexts of preparation or training scenarios."
+119140,"The token ""Cert"" in contexts discussing certification's usefulness or necessity."
+119511,"The token ""out"" following ""trying,"" typically in contexts of exploring or attempting activities."
+119604,"The token ""wave"" in contexts related to surfing or managing waves."
+119662,"Words related to physical freedom or unrestricted movement, especially in sports contexts."
+119666,Verbs indicating deliberate action or avoidance in adventurous or risky activities.
+119926,"Tokens ""activity"" or ""activities"" describing thrilling or instinctive actions or pursuits."
+119974,"The token ""l"" in ""paragliding""."
+120190,"Tokens related to physical or mental limits, often in contexts of challenge or creativity."
+120354,Tokens introducing specific actions or items related to leisure or outdoor activities.
+120466,Words describing forceful movement or contrasting calmness in metaphorical contexts.
+120819,Numerical tokens representing degrees or angles in technical or sports-related contexts.
+120921,"Words related to ""flow"" or smooth, natural movement in a physical or metaphorical sense."
+121061,"The token ""standing"" in contexts related to balance or comfort on a board."
+121599,"The token ""site"" referring to a specific location in a context of action or visit."
+121900,"The token ""area"" in contexts referring to physical locations for activities or exploration."
+122082,"Parts of compound words ending in ""ings"" related to physical structures or objects."
+122266,"Tokens ""how"" and ""bad"" in questions expressing concern or uncertainty."
+122603,Prepositions indicating focus or direction in a query or instructional context.
+122739,Words related to acrobatic maneuvers like flips or flipping in physical activities.
+122842,Tokens related to adventurous or recreational activities requiring planning or booking.
+123023,"The token ""capable"" in contexts describing personal ability or potential."
+123055,"The token ""you"" in instructional or advisory contexts, and the token ""tips"" in inquiry-related contexts."
+123110,Tokens related to climbing equipment or physical activity gear.
+123284,"The word ""how"" in contexts of uncertainty or seeking guidance."
+123294,"Common function words like ""a"" and ""the"" used to introduce or specify something in sentences."
+123307,Abstract concepts tied to achieving expertise or overcoming challenges.
+123432,"Tokens related to preparation, safety gear, or skill-building in active or instructional contexts."
+123514,Tokens describing impactful actions or adjustments with a transformative or significant effect.
+123568,"Words related to adventurous or risky activities, often highlighting challenge or potential consequences."
+123580,"Function words like ""though,"" ""are,"" ""is,"" ""to,"" and ""matters"" in contexts implying contrast or necessity."
+123650,"The word ""during"" in contexts describing an ongoing or simultaneous action or condition."
+123744,Prepositions indicating conditions or prerequisites for an action or decision.
+123989,Words expressing extent or degree in physical or abstract contexts.
+124096,"Words related to outdoor activities, motion, or physical forces like gravity and terrain."
+124190,"The singular or plural form of ""board"" in contexts related to equipment or sports."
+124238,"The token ""gym"" in contexts describing basic equipment, clothing, or training for physical activities."
+124254,"The token ""the"" preceding references to specific locations or surfaces in outdoor or sporting contexts."
+124279,"Punctuation marks like ""."" and ""?"" often concluding sentences or questions."
+124327,"Tokens describing methods or approaches to achieve goals, often following ""the perfect way to""."
+124380,"Tokens ""building"" and ""truly"" in contexts emphasizing confidence or bold experiences."
+124446,"Negations like ""don’t"" and ""isn’t"" in contexts advising or explaining gear or beginner activities."
+124457,"Words like ""fancy"" or ""wasting"" in contexts dismissing excess or inefficiency."
+124575,Singular nouns in contexts of introductions or entry points.
+125047,"Words emphasizing methods, comparisons, or degrees of improvement in motivational contexts."
+125089,"Tokens emphasizing comparative or boundary-pushing contexts, often in motivational or performance-related phrases."
+125155,"The indefinite article ""a"" preceding a noun or noun phrase."
+125208,Adjectives describing situations or contexts that are difficult or demanding.
+125357,"Tokens related to renting, trying, or demonstrating causality with ""that""."
+125596,"Words marking contrast or distinction, such as ""for,"" ""not,"" or ""beyond,"" in reflective or explanatory contexts."
+125622,"Function words introducing phrases or clauses, often indicating relationships or dependencies."
+125793,The comma used in comparative expressions or phrases emphasizing progression or correlation.
+125886,"The token ""that"" in contexts emphasizing importance or prioritization in thrilling activities."
+126005,"The token ""board"" in contexts describing types or uses of boards for sports or activities."
+126110,"Words linked to personal development or autonomy, often prefixed by ""self-"" or related to ""testing"" or ""timing""."
+126278,"The token ""âĢĶit"" in adventurous contexts describing thrilling or memorable experiences."
+126281,"Prepositions ""for,"" ""most,"" or ""much"" in contexts of preparation, learning, or starting activities."
+126358,"Terms related to physical endurance or training, especially ""mileage"" in context of incremental increases."
+126468,"Function words indicating relationships or direction, such as ""the"" and ""way""."
+126502,"Words related to authenticity or self-improvement through direct experience, often in contrast to external help."
+126611,"The phrase ""build up to"" indicating gradual progression towards an activity or goal."
+126865,"Tokens related to falling during physical activities, emphasizing its role in learning or progression."
+126992,"The token ""it"" as a pronoun referring to an unspecified activity or concept in motivational or instructional contexts."
+127252,"The token ""like"" introducing examples or suggestions."
+127304,Terms related to minimal protective gear or cushioning in the context of biking or physical activity.
+127518,"Words related to outdoor activities, specifically ""hiking"" and durations like ""two-day""."
+127593,"Verbs related to discovery, movement, or improvement in dynamic or exploratory contexts."
+127651,"Auxiliary verbs ""can"" and ""are"" in contexts emphasizing possibilities or characteristics."
+127654,"Adverbs emphasizing certainty or frequency, especially ""definitely"" and ""always""."
+127655,Verbs related to packing or carrying items during activities or adventures.
+127818,Verbs or verb-like forms indicating action or state in motivational or instructional contexts.
+127842,"The token ""yet"" signaling progression or anticipation of future improvement."
+127847,"Words indicating requirements, recommendations, or the possibility of achieving something."
+127893,Words related to improvisation or adapting creatively in challenging contexts.
+127911,Adjectives describing challenging or difficult conditions.
+127932,"Words related to outdoor sports or activities involving physical gaps, depth, or specialized equipment."
+127937,"Tokens describing immersive, impactful, or authentic experiences."
+127984,"Tokens related to pricing or financial constraints, like ""pr"" in ""priced"" and ""strapped"" in financial context."
+128130,"Tokens introducing or emphasizing progression, causality, or advice in instructional or motivational contexts."
+128185,"The preposition ""for"" in phrases about signing up for adventurous or beginner activities."
+128482,"The token ""environment"" when used in contexts describing controlled or specialized conditions."
+128521,Contexts involving acquiring or using sports equipment for a specific purpose or activity.
+128648,"The token ""build"" or ""builds"" in contexts related to confidence or physical endurance."
+128667,"Tokens emphasizing urgency or immediacy in action, like ""is,"" ""early,"" ""start,"" ""by,"" and ""shortly."""
+128949,"Tokens emphasizing notable aspects or qualities, often in explanations or expressions of interest."
+128952,"The word ""your"" when emphasizing personal focus or actions in motivational or instructional contexts."
+129181,Second-person pronouns used in instructional or advisory contexts.
+129245,"The word ""standard"" describing typical or expected norms."
+129428,Verbs indicating an action or initiation in instructional or tutorial contexts.
+129475,"The token ""something"" in phrases expressing a desire to try new or more challenging activities."
+129661,"The period at the end of a sentence, preceding a question or conversational prompt."
+129704,"The token ""think"" in comparisons involving people's perceptions or assumptions."
+129905,Words conveying comparison or familiarity in instructional or experiential contexts.
+129926,"The token ""only"" signaling exclusivity or limitation in experiences or actions."
+129953,Adjectives describing efficiency or efficacy in contexts emphasizing practicality or performance.
+130273,"The preposition ""of"" in phrases describing aspirations or activities."
+130314,"The token ""âĢĶ"" following advice or reassurance in an informal motivational context."
+130338,"Verbs or action-related words emphasizing experience, learning, or transitions."
+130549,Singular tokens used in idiomatic or domain-specific contexts suggesting expertise or performance.
+130603,"The token ""falling"" in contexts emphasizing learning or growth through challenges."
+130710,"The imperative verb ""find"" in contexts involving locating elevated or challenging physical structures."
