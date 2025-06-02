@@ -1,0 +1,441 @@
+feature_id,explanation,false_positives,false_negatives,true_positives,true_negatives
+88,"['Specific nouns or adjectives indicating physical objects, systems, or structural components.']",3,4,6,12
+235,"['Tokens related to specific descriptors or classifications, often technical, material, or eligibility-related.']",1,6,4,14
+526,"['Function words linking phrases or clauses, often denoting relationships like possession, inclusion, or purpose.']",7,4,6,8
+645,"['Negative or undesirable states, actions, or outcomes often involving discomfort, risk, or lack.']",4,3,7,11
+663,"['Time-related words such as ""hours,"" ""days,"" and ""way"" in contexts emphasizing duration or manner.']",2,1,9,13
+789,"['Verbs or nouns indicating motion, change, or temporal progression in dynamic contexts.']",2,1,9,13
+854,"['Tokens tied to abstract concepts, actions, or objects central to resolving or addressing a specific situation.']",10,4,6,5
+889,"['Tokens related to specialized or technical terms, measurements, or precise scientific/technical contexts.']",5,3,7,10
+918,"['Tokens representing specific actions or objects, often involving interaction or manipulation (e.g., ""pulled,"" ""stroked"").']",1,6,4,14
+943,"['Tokens related to movement, transitions, or lifecycle events like heading, journey, die, or paid.']",0,4,6,15
+986,"['Pronouns or verbs indicating personal agency, action, or possession.']",6,8,2,9
+998,"['Words related to stability, positioning, or prevalence in contexts implying steadiness or situational placement.']",2,2,8,13
+1072,['Tokens related to specific nouns or words with unique or specialized contexts or spellings.'],3,5,5,12
+1089,['Tokens forming part of specific technical or scientific terms.'],6,1,1,9
+1090,"['Tokens related to transformation, transition, or processing actions or concepts.']",3,2,8,12
+1294,['Tokens related to Greek letters or prefixes in scientific or technical contexts.'],0,3,7,15
+1333,"['Tokens related to teaching, creating, or preparing in professional or artistic contexts.']",2,3,7,13
+1337,"['Tokens denoting physical or conceptual boundaries like ""outside"", ""line"", ""name"", or ""house"".']",0,2,8,15
+1347,"['Function words like ""that,"" ""to,"" ""and,"" ""show,"" ""sore,"" ""it,"" or ""observe"" in contextual or relational phrases.']",5,0,10,10
+1353,['Words representing places or objects that facilitate actions or interactions.'],3,2,8,12
+1460,"['Words indicating specific actions, moments, or contexts often tied to transitions or events.']",5,6,4,10
+1607,"['Words evoking sensory or emotional intensity, often tied to physical or abstract experiences.']",4,3,7,11
+1640,['Tokens describing specific locations or features in a residential or architectural context.'],2,4,6,13
+1651,"['Words related to comparison or evaluation, such as ""compare,"" ""comparing,"" ""compared,"" or ""comparative.""']",0,3,4,15
+1699,"['Informal, conversational words or phrases indicating actions, states, or concepts in casual contexts.']",3,1,9,12
+1724,"['Words associated with skincare routines, legal references, or durations of time.']",1,2,8,14
+1737,"['Tokens describing subjective or situational states, often conveying exclusion, pain, or temporal references.']",2,5,5,13
+1861,"['Prepositions indicating relationships or comparisons, such as ""or,"" ""as,"" ""on,"" ""to,"" and ""of.""']",6,0,10,9
+1947,"['Adjectives ending in -ful, -ous, or -ive, often describing qualities or characteristics.']",1,5,5,14
+2116,"['Tokens representing objects or tools used for containment or application, like ""vessels"" and ""application"".']",1,2,8,14
+2202,"['Function words connecting ideas or comparisons, often indicating relationships like ""of,"" ""and,"" or ""sure.""']",9,1,4,6
+2208,"['Tokens relating to time, need, or position on a board in formal or structured contexts.']",5,2,8,10
+2211,"['Verbs describing actions or interactions, often physical or visual, in dynamic or notable contexts.']",4,4,6,11
+2245,"['Verbs ""be"" and ""include"" indicating examples or descriptions in explanatory or enumerative contexts.']",0,2,8,15
+2403,"['Tokens indicating actions or occurrences in past tense, especially ""showed"" and ""ago"".']",0,1,3,15
+2435,"['Tokens describing actions, processes, or targeted outcomes often within technical, strategic, or summarized contexts.']",9,3,7,6
+2474,['Tokens conveying exceptional or striking qualities or actions.'],2,5,5,13
+2506,['Rarely used descriptive or action-oriented words with distinct semantic or stylistic emphasis.'],3,5,5,12
+2555,"['Specialized or technical terms often related to innovation, design, or distinct qualities.']",3,3,7,12
+2587,"['Verbs describing specific actions or states, often indicating intent, location, or interaction.']",9,3,7,6
+2612,['Tokens representing distinct locations or points of interest often used metaphorically or literally.'],2,7,3,13
+2624,"['Verbs describing perception, comparison, or physical actions in specific contexts.']",3,3,7,12
+2645,"['Tokens indicating assistance, offering help, or providing support in a specific context.']",1,7,2,14
+2686,"['Words describing professions, doctrines, physical impact, or personal interest in specific contexts.']",4,3,7,11
+2794,"['Prepositions introducing temporal or spatial context, especially ""after,"" ""to,"" or ""on.""']",2,2,8,13
+2818,"['Tokens related to performance, rehearsal, or artistic expression.']",0,5,5,15
+2857,"['Tokens representing specific proper nouns, names, or unique identifiers in varied contexts.']",2,2,8,13
+2874,"['Function words or verbs indicating a relationship, addition, or clarification in context.']",8,1,9,7
+2895,"['Abbreviations, acronyms, or technical terms in specialized contexts.']",5,4,6,10
+2993,"['Tokens denoting abstract concepts, relationships, or technical terms in formal or specialized contexts.']",2,5,5,13
+3052,"['Verbs and adjectives related to actions or states of preservation, affection, or alteration.']",6,3,7,9
+3224,"['Tokens related to card games or familial relationships indicated with ""-in"" compounds.']",2,6,4,13
+3244,"['Functional words indicating time, cause, or relation, often linking clauses or phrases in a sentence.']",6,8,2,9
+3413,"['Specialized terms, units, or proper nouns often associated with technical, scientific, or geographic contexts.']",5,5,5,10
+3447,"['Words denoting physical measurements, locations, or distinct tangible entities.']",4,3,7,11
+3615,"['Tokens indicating an enhancement or addition to an action, often implying improvement or extra value.']",2,1,1,13
+3705,"['The conjunction ""and"" linking two prominent entities or concepts.']",5,0,2,10
+3715,"['Words indicating conditions, symptoms, or roles in structured contexts.']",3,4,6,12
+3896,"['Tokens indicating destruction, death, or significant negative impact.']",2,3,7,13
+3914,"['Tokens in measurements, dimensions, or specifications involving ""x"" or unit labels like ""cm"".']",0,2,8,15
+3949,"['The superlative adjective ""most"" used to denote the highest degree of a quality or attribute.']",0,0,2,15
+4127,"['Words denoting specific objects or states, often related to functionality or significance in context.']",5,6,4,10
+4242,"['Tokens marking significant events or shifts, often involving past actions or changes in state.']",3,2,4,12
+4259,"['Formal titles, roles, or ownership-related nouns often used in professional or institutional contexts.']",0,4,6,15
+4268,"['Words related to traits, tendencies, or influencing factors in analytical or descriptive contexts.']",2,1,9,13
+4298,['Commonly used connective or structural tokens in informal or narrative contexts.'],3,5,5,12
+4362,['Informal or emphatic expressions often conveying emotion or surprise.'],1,5,5,14
+4379,['Tokens referencing specific physical locations or key components of an experience often described as significant.'],4,5,5,11
+4402,"['Special characters, hyphens, or slashes in abbreviations, alternatives, or compound tokens.']",5,2,8,10
+4435,"['Tokens relating to authorship, global recognition, or notable entities/events.']",2,5,5,13
+4537,"['The token ""bit"" in expressions conveying mild intensity or slight degree of emotion or state.']",3,3,7,12
+4538,"['Words indicating a specific relationship or action, often linked by context or association.']",7,1,9,8
+4638,"['Tokens describing outcomes, sufficiency, or impactful changes, often linked to success, failure, or adequacy.']",4,1,9,11
+4775,['Words related to taboo or controversial topics in specific contexts.'],1,0,2,14
+4782,"['Tokens describing specific actions or processes related to crafting, brewing, cooking, or styling.']",1,5,5,14
+4818,"['Rare or distinctive tokens often part of proper nouns, technical terms, or stylistically marked phrases.']",7,4,5,8
+4883,"['Words related to fairness, credit, or allocation in evaluative or distributive contexts.']",0,6,4,15
+4898,['Abstract or conceptual terms often used in analytical or descriptive contexts.'],8,3,7,7
+4919,"['Proper nouns, often names of people, brands, or works, used in specific cultural or contextual references.']",5,3,7,10
+4956,"['Tokens used to specify or highlight examples, rankings, or notable features.']",0,5,5,15
+5086,"['Specialized or technical terms often related to achievements, processes, or unique identifiers.']",3,4,6,12
+5136,"['Numeric sequences, often phone numbers or identifiers, including area codes or structured numeric patterns.']",0,4,6,15
+5140,"['Tokens related to maintaining, preserving, or intentional actions in contexts of focus or control.']",5,6,4,10
+5264,"['Tokens within or forming parts of specific proper nouns, idiomatic phrases, or notable contextual expressions.']",4,3,7,11
+5600,['Singular nouns describing physical objects or abstract concepts in a specific or notable context.'],6,4,6,9
+5605,"['Words related to naming or identifying subjects, topics, or entities.']",0,3,7,15
+5625,"['The token ""however"" in contexts contrasting or introducing exceptions.']",0,3,7,15
+5675,"['Singular nouns referencing specific entities or roles, often capitalized, or denoting individuality.']",4,4,6,11
+5678,"['Tokens describing spatial movement or specific locations, often associated with the word ""Trebanog"".']",1,5,5,14
+5688,"['Tokens representing proper nouns or specialized terms, often related to locations or technical contexts.']",7,2,8,8
+5869,"['The token ""in"" used to specify a location, context, or condition.']",3,0,4,12
+6087,"['Verbs or phrases denoting detachment, cessation, or transition.']",1,3,7,14
+6155,"['Transition phrases or expressions indicating alternatives, outcomes, or actions (e.g., ""better yet,"" ""for that matter"").']",0,5,5,15
+6211,['Tokens representing unique or specific geographic names or specialized nouns.'],3,4,6,12
+6247,['Tokens representing specialized or descriptive nouns/adjectives often used in distinct professional or contextual settings.'],8,5,5,7
+6271,"['Words related to specialized activities, hobbies, or fields like animation, adventure, aviation, and instruments.']",0,2,8,15
+6291,"['Tokens within technical terms or specialized jargon, especially involving algorithms or marine-related substances.']",2,6,4,13
+6451,"['Units of measurement for area or length, specifically ""square feet"" or ""ft"".']",0,0,10,15
+6460,"['Words or suffixes denoting abstract concepts or actions, often involving relationships or qualities.']",3,8,2,12
+6474,['Tokens indicating abstract or subjective states or expressions with poetic or literary connotations.'],2,1,2,13
+6538,"['Tokens related to technical measurements, patents, or formal institutional terminology.']",2,3,7,13
+6578,"['Verbs or nouns expressing reflection, movement, or transition, often tied to abstract or transformative concepts.']",3,0,10,12
+6615,['Proper nouns referring to specific locations or foods.'],3,0,2,12
+6701,"['Adjectives or verbs conveying boldness, innovation, or striking features in descriptive contexts.']",2,4,6,13
+6925,"['Proper nouns or terms related to organizations, immigration, or prominent figures.']",1,1,9,14
+6944,['Tokens indicating casual or colloquial responses or actions often appearing in informal or conversational contexts.'],1,5,2,14
+6958,"['Tokens related to sports teams, physical forms, or colloquial expressions involving elevation or positioning.']",2,3,7,13
+7056,['Common prepositions or pronouns in contexts emphasizing relationships or actions.'],10,5,5,5
+7077,"['Suffixes in scientific or technical terms, particularly ""ine,"" ""inger,"" ""braces,"" ""planet,"" and ""ards.""']",0,0,10,15
+7276,"['Words related to physical injuries, especially tendons, lack, or tears.']",0,1,9,15
+7385,"['Verbs and nouns associated with action, motion, or impactful events.']",6,2,8,9
+7483,"['Specific terms like ""pastoral"" and ""Pantone,"" often in contexts of guidance or standardized systems.']",0,1,9,15
+7493,"['Words indicating specific entities, concepts, or locations in abstract or descriptive contexts.']",12,5,3,3
+7554,"['Tokens related to technical processes, installations, or specialized locations/events.']",2,3,7,13
+7559,"['Tokens with suffixes indicating transformation, restriction, or separation.']",0,4,6,15
+7571,"['Tokens describing a specific state, condition, or designation often in technical or formal contexts.']",6,5,5,9
+7601,"['Words related to ""page"" or ""layout"" in contexts involving documents, books, or formatting.']",0,2,8,15
+7609,"['The token ""man"" when part of the compound noun ""Postman"".']",0,0,2,15
+7634,"['Verbs expressing personal intention or necessity, often involving ""want,"" ""need,"" or ""desire.""']",0,0,10,15
+7720,"['The token ""sentence"" referring to the structure or composition of a sentence in text.']",0,0,2,15
+7773,"['Verbs and prepositions with strong semantic ties to possession, inclusion, or representation.']",4,7,3,11
+7876,['Rare or unusual token sequences or proper nouns in specific contexts.'],6,0,2,9
+7917,"['Numerical tokens, especially within measurements, historical dates, or identifying figures.']",1,4,6,14
+7959,"['Tokens related to craftsmanship or artistic creation, often involving specialized or intricate work.']",0,6,4,15
+7980,"['Abstract or personal qualities like determination or feelings, often in motivational or emotional contexts.']",0,1,9,15
+7987,"['Tokens tied to enabling or initiating actions, often related to personal agency or transformative processes.']",4,5,5,11
+8074,"['Words ending in ""ers"" or ""tion"" used in conversational, descriptive, or reporting contexts.']",2,4,6,13
+8087,"['Verbs indicating communication or action, often in past tense contexts.']",1,6,4,14
+8179,"['Words related to errors, imitation, or deliberate targeting actions.']",2,1,9,13
+8224,['Proper nouns or brand names often associated with specific entities or products.'],5,1,9,10
+8256,['Pronouns or gerunds related to holding or fitting actions or states.'],0,4,6,15
+8277,['Informal second-person pronouns and phrases conveying personal action or origin.'],1,2,8,14
+8467,"['Tokens related to progress, success, or dynamic processes like momentum, thriving, flourishing, and rhythms.']",0,4,6,15
+8763,"['Verbs or nouns describing physical positioning, movement, or spatial relationships.']",3,1,9,12
+8797,"['Positive or descriptive terms highlighting qualities, meanings, or cultural aspects.']",1,1,9,14
+8831,"['Tokens marking specific entities like numbers, abbreviations, or prepositions in detailed or technical contexts.']",6,4,6,9
+9149,['Tokens indicating specific actions or characteristics in narrative contexts.'],3,3,1,12
+9155,"['Tokens describing specific physical objects, tools, or food items often associated with tangible or crafted materials.']",2,3,7,13
+9313,"['Comma usage in transitional phrases or clauses emphasizing contrast, irony, or sequencing.']",6,2,8,9
+9354,"['Verbs or phrases indicating challenges, conflicts, or opposing forces in a context.']",1,2,5,14
+9481,"['Numerical ranges or comparisons using ""to"" or ""-"" in contexts specifying quantities or durations.']",2,1,9,13
+9545,"['Verbs implying action or addition, often in procedural or instructional contexts.']",1,2,6,14
+9551,"['Tokens modifying or describing abrupt, impactful actions or changes often involving physical or metaphorical force.']",1,5,5,14
+9649,"['Common prepositions or conjunctions in phrases denoting relationships, proportions, or actions.']",13,3,7,2
+9699,"['Abstract nouns indicating concepts, states, or activities central to discussion or decision-making contexts.']",2,9,1,13
+9703,"['Tokens representing categories, states, or plural forms in context of classification or enumeration.']",3,3,7,12
+9707,"['Tokens related to airflow, ventilation, ceramics, porcelain, resonance, or clearance contexts.']",0,2,8,15
+9781,"['Tokens conveying emphasis or intensity in descriptions, often linked to emotional or evaluative states.']",3,5,5,12
+9799,"['Tokens related to negative or restrictive contexts, often indicating closure, limitation, or disciplinary actions.']",2,5,5,13
+9820,"['Verbs implying decision-making, compromise, or stabilization.']",1,3,7,14
+9825,"['Proper nouns or specialized terms associated with cultural, geographic, or entertainment contexts.']",6,2,8,9
+9940,"['Words related to natural elements or attributes, such as qualities, flower, bud, and influence.']",1,2,8,14
+10015,"['Tokens indicating proximity or metaphorical guidance, such as ""beside,"" ""guiding,"" or ""blinded.""']",0,3,7,15
+10016,"['Words denoting individual actions, possessions, or states of being often in reflective or distancing contexts.']",5,6,4,10
+10134,"['Function words or proper nouns in possessive, attributive, or relational contexts.']",4,5,5,11
+10138,"['Words indicating discovery or dispatch, such as ""found,"" ""sent,"" or related concepts in specific contexts.']",0,3,7,15
+10157,"['Tokens conveying significance or distinctiveness, such as names, impactful terms, or unique identifiers.']",7,1,9,8
+10184,['Tokens representing abstract concepts or actions often used metaphorically or figuratively.'],2,1,9,13
+10241,"['Semantically meaningful context-specific words often indicating personal possession, discovery, or time.']",6,7,3,9
+10268,"['Formal nouns and time-related terms, especially ""behold,"" ""decade,"" ""years,"" and ""form of.""']",2,3,7,13
+10450,"['Tokens marking transitions or relationships, often preceding prepositions or punctuation.']",4,4,5,11
+10517,['Tokens indicating objects or actions requiring user attention or interaction.'],3,6,4,12
+10577,['Reflexive or possessive pronouns emphasizing individuality or ownership.'],2,3,7,13
+10630,['Tokens indicating colons or unusual capitalization within formal or structured contexts.'],2,1,6,13
+10660,"['Tokens related to measurable limits or results, such as capacity, quantities, or outcome.']",0,1,9,15
+10750,"['Tokens related to measurable achievements or structured data, often involving attribution or systematic organization.']",5,0,5,10
+10820,"['Abstract or conceptual nouns related to realization, imagination, or culmination of ideas.']",0,1,9,15
+10977,"['Words indicating significance, scale, or professional roles, often tied to ambition or hierarchical contexts.']",5,4,5,10
+11201,['Tokens describing specific configurations or physical properties often related to positioning or structure.'],2,6,4,13
+11227,"['Tokens for categories or classifications, often describing types or groups of things (e.g., ""sort,"" ""Senior"").']",0,3,7,15
+11279,"['Tokens representing numerical rankings, percentages, or time periods in structured or statistical contexts.']",5,4,6,10
+11302,"['Relative pronouns like ""that"" or ""which"" introducing clauses that provide additional information.']",0,4,6,15
+11336,"['Tokens containing ""air,"" ""aw,"" or numerical values in technical or descriptive contexts.']",3,3,7,12
+11357,"['Adverbs or verbs expressing emotion, thought, or proximity in reflective or interpersonal contexts.']",3,4,6,12
+11370,['Hyphenated or dash-prefixed tokens often indicating abbreviations or compound terms.'],1,1,9,14
+11515,"['Abstract or conceptual terms in explanatory contexts, often involving definitions or perspectives.']",1,1,9,14
+11584,"['Tokens related to refinement, design, or artistic concepts like ""aesthetic,"" ""stir,"" ""character,"" and ""accent.""']",2,3,7,13
+11587,"['Specific prefixes in compound words or technical terms like ""purifiers,"" ""Procedure,"" and ""modulation.""']",1,3,4,14
+11705,"['Words related to amusement or emotional reactions such as laughter, chuckles, humor, or personal realizations.']",2,6,4,13
+11746,"['Tokens part of proper nouns, titles, or significant objects in artistic, intellectual, or historical contexts.']",7,6,4,8
+11761,['Words related to structural roles or physical construction elements.'],4,3,7,11
+11784,"['Punctuation marks, especially commas, in specific contexts involving locations or names.']",5,0,2,10
+11789,"['Tokens with semantic or grammatical emphasis, often marking exceptions, qualities, or tax-related contexts.']",2,5,3,13
+11799,"['Tokens related to variability or change in amounts, heights, particles, or characteristics.']",0,5,5,15
+11904,"['Specialized nouns related to professional fields, intellectual property, or specific measurable attributes.']",2,3,7,13
+11977,"['Adjectives describing quality or condition, often positive or specific in technical contexts.']",1,5,5,14
+12122,"['Tokens suggesting subtle or intricate patterns or textures, such as ""hint,"" ""mosaic,"" or ""looming.""']",1,2,8,14
+12270,"['Relative pronouns ""who"" and ""where"" introducing clauses that provide additional information.']",0,1,9,15
+12333,"['Tokens related to artificial constructs, events, or human influence in a descriptive or contextual manner.']",5,3,7,10
+12397,['Singular or plural nouns describing physical objects or entities often related to boxes or structures.'],1,7,3,14
+12407,"['Tokens denoting possessive or plural forms, often following parentheses or quotation marks.']",1,6,4,14
+12572,"['Tokens indicating concepts of connection, sharing, or flexibility in contexts of collaboration or interaction.']",0,7,3,15
+12639,"['Specific nouns like ""handle"" and prepositions ""of"" in contexts describing objects or their attributes.']",2,1,6,13
+12695,['Rare or specific nouns or verbs often associated with unique or technical contexts.'],5,5,5,10
+12798,"['Tokens linked to personal actions or transitions, often indicating ownership or change.']",3,1,1,12
+12861,"['Prepositions and conjunctions in contexts describing actions, conditions, or transitions.']",11,1,9,4
+12894,"['Verbs describing actions that preserve, restore, or uphold something.']",0,5,5,15
+12985,"['Body parts or physical elements, particularly ""tongue,"" sometimes within descriptions of footwear.']",0,4,6,15
+12987,"['Rare or formal words conveying caution, terror, or abstract concepts.']",2,6,4,13
+13056,"['Tokens describing formal attributes of homes or furnishings, often related to materials, pricing, or maintenance.']",1,2,8,14
+13062,"['Words indicating caution, concern, or suggestions in advisory or warning contexts.']",0,2,8,15
+13144,"['The word ""to"" used as part of an action or movement phrase.']",1,0,1,14
+13152,"['Singular or plural nouns ending in ""er,"" ""ide,"" or ""graphy"" denoting roles, objects, or specialized terms.']",0,3,7,15
+13180,"['Tokens linked to personal or situational expressions conveying subtle emotions or states, often in idiomatic phrases.']",3,5,5,12
+13224,"['Adjectives describing emotional or physical qualities, often implying impact, connection, or accessibility.']",3,2,8,12
+13262,"['Tokens describing atypical, disruptive, or ethereal qualities in abstract or uncommon contexts.']",3,3,7,12
+13321,"['Tokens related to phone numbers, dialing, or sealing actions.']",2,3,7,13
+13348,"['The phrase ""all about"" emphasizing focus or central theme.']",0,3,7,15
+13357,"['Verbs signaling discovery or replication actions in contexts of insight, imitation, or exploration.']",1,7,3,14
+13359,"['Abstract or process-oriented verbs and adjectives conveying facilitation, analysis, or iterative actions.']",4,4,6,11
+13402,['Rarely used or specialized suffixes and prefixes in words.'],4,6,4,11
+13476,['Line breaks or colons indicating transitions or quotations in formal or structured text.'],2,0,2,13
+13578,"['The token ""cho"" in the context of place names, especially ""Rancho"" followed by location descriptors.']",0,0,10,15
+13727,"['Pronouns or vague nouns like ""it"" when used in phrases indicating an action or decision.']",1,3,7,14
+13731,"['Tokens related to creation, production, or being born, often conveying action or origin.']",3,3,7,12
+13980,"['Prepositions or technical terms in contexts emphasizing functions, connections, or specifications.']",3,5,5,12
+14100,"['Verbs indicating action or state, often in progressive or specific contexts.']",7,3,7,8
+14179,"['Action-related verbs or descriptive nouns emphasizing dynamic processes, rankings, or structured events.']",2,5,5,13
+14219,"['Tokens related to subwoofer references, particularly ""woo"" in audio equipment contexts.']",0,3,7,15
+14257,"['Tokens denoting a distinct action, quality, or requirement often tied to physical or sensory contexts.']",5,3,7,10
+14446,['Prepositions introducing subordinate clauses or phrases explaining context or relationships.'],5,1,0,10
+14451,"['Tokens related to professional services, flooring, or suggestions in contexts of advice or recommendations.']",3,2,8,12
+14522,"['Words describing tangible objects, physical actions, or sensory experiences often associated with specific contexts.']",4,5,5,11
+14577,"['Parentheses in numerical or statistical contexts, often indicating percentages, distances, or measurements.']",1,3,7,14
+14624,"['Tokens related to technical processes or advancements, especially in business, technology, or optimization contexts.']",2,3,7,13
+14690,"['Verbs or phrases indicating actions, preferences, or perspectives in personal or social contexts.']",5,2,8,10
+14806,"['Tokens related to actions, roles, or consequences, often carrying significant or impactful connotations.']",5,3,7,10
+14882,"['Verbs or gerunds indicating action, decision, or change in context.']",7,2,8,8
+14969,"['The token ""this"" used in contexts emphasizing or specifying a particular idea, object, or concept.']",0,0,2,15
+15108,"['Common conjunctions, prepositions, or punctuation within flowing or transitional phrases.']",3,4,6,12
+15192,"['Words denoting roles or preferences in creative, technical, or organizational contexts.']",1,1,9,14
+15222,"['Tokens indicating membership or association, especially ""Friends of"" or terms describing collective or group affiliation.']",0,3,4,15
+15261,"['Verbs describing actions or appearances, often in contexts of observation or evaluation.']",3,4,6,12
+15323,"['Verbs implying action or change, often in contexts of progression or initiation.']",4,0,10,11
+15368,"['The token ""of"" introducing a relationship or belonging, often involving people, places, or organizations.']",2,1,9,13
+15413,['Singular nouns denoting specific objects or concepts in technical or specialized contexts.'],2,1,3,13
+15502,"['Specific verbs or nouns tied to actions, transactions, or creative processes.']",7,5,5,8
+15586,"['Verbs indicating cognitive processes like knowing, recalling, or being certain.']",0,2,5,15
+15633,"['Proper nouns or unique terms often associated with individuals, brands, or distinctive objects.']",4,4,6,11
+15657,['Words conveying significant change or transition often tied to impactful or transformative actions/events.'],1,7,3,14
+15740,['Tokens representing emphasis or completeness in context.'],5,8,2,10
+15850,"['Tokens representing difficulties or obstacles, often metaphorical or literal challenges to overcome.']",2,4,6,13
+15889,"['Tokens representing specialized or technical terms often ending in distinctive suffixes like ""ion,"" ""ist,"" ""ics,"" or ""ia.""']",1,4,6,14
+15981,"['Formal phrases introducing or emphasizing statements, often involving ""said,"" ""know,"" or ""For.""']",0,2,8,15
+16052,"['Tokens indicating a state of change, expectation, or emotional quality, often with suffixes like -ful, -ing, -ness.']",5,2,8,10
+16393,"['Tokens often associated with actions or states involving change, positioning, or physical interaction.']",2,3,7,13
+16407,['Technical terms or objects related to audio equipment and design.'],0,6,4,15
+16418,"['Tokens emphasizing distinctiveness, quality, or importance in descriptive or evaluative contexts.']",0,6,4,15
+16490,['Time-related or directional terms often indicating progression or movement.'],2,4,6,13
+16562,"['Verbs associated with physical installation, securing, or incurring consequences.']",1,2,8,14
+16583,['Positive or comparative adjectives emphasizing qualities or comparisons in context.'],2,2,2,13
+16605,"['Tokens with hyphens or suffixes denoting time, process, or technology.']",2,4,6,13
+16646,['Verbs related to communication or explicit declaration.'],3,1,2,12
+16714,"['Legal or organizational terms, often involving antitrust, labor relations, or procedural contexts.']",0,3,7,15
+16715,['Specific punctuation marks or symbols in structured contexts or legal/technical text.'],2,3,7,13
+16725,"['Prepositions or suffixes linked to actions or states, often involving worship or object placement.']",0,5,5,15
+16735,"['Tokens with unique or uncommon suffixes, often in proper nouns or technical terms.']",7,4,6,8
+16816,"['Tokens related to specific actions or events, often involving recording, folding, or sequential numbering.']",1,3,7,14
+16878,"['Tokens suggesting distinctness or prominence, often related to proper nouns, uniqueness, or elevated status.']",5,4,6,10
+16899,['Verbs or nouns related to initiating or performing significant actions or changes.'],4,3,7,11
+17003,['Uncommon or distinctive words often used in specific contexts or titles.'],4,6,4,11
+17189,"['Specific nouns related to household items, dining, or leisure spaces.']",1,3,7,14
+17298,"['Tokens indicating direction or transfer, such as sending, mailing, narrating, or marking.']",2,2,8,13
+17326,"['Words with negative or foreboding connotations like ""ominously"" or ""bogged"".']",0,4,6,15
+17369,"['Proper nouns or unique terms related to organizations, identities, or cultural-historical contexts.']",3,1,9,12
+17506,['Verbs or nouns related to purchasing or acquisition.'],0,3,7,15
+17517,"['Function words like ""to,"" ""that,"" and ""so"" in contexts emphasizing intent or consequence.']",5,4,6,10
+17547,"['Tokens in proper nouns, brand names, or specialized terminology, often appearing in unique or uncommon contexts.']",3,2,8,12
+17574,"['Words introducing rules, processes, or contexts of regulation or inquiry.']",2,4,6,13
+17757,['Nouns denoting distinct objects or abstract entities with specific functions or roles.'],6,6,4,9
+17913,"['Activates on the token ""joint"" in contexts of collaboration, shared ventures, or combined efforts.']",1,2,8,14
+17952,"['Tokens related to containers or protective objects like ""bowl"" and ""shield"".']",0,4,6,15
+17988,"['Formal or abstract nouns describing qualities, states, or concepts associated with distinction or significance.']",0,8,2,15
+18055,"['Proper nouns or specific terms denoting places, brands, or distinctive entities.']",1,0,2,14
+18252,"['Specific tokens linked to time, location, or alignment with standards or missions.']",2,2,8,13
+18461,"['Tokens forming suffixes or partial words related to crafting, artistry, or educational licensing.']",1,3,7,14
+18574,"['Specific technical or impactful nouns often used in scientific, economic, or explicit contexts.']",8,5,5,7
+18604,"['Tokens indicating specificity or transition, often within technical, procedural, or structured contexts.']",4,9,1,11
+18642,"['Tokens related to specific entities, objects, or concepts that imply exclusivity or distinction.']",7,9,1,8
+18662,"['The phrase ""pick up"" or ""picked up"" in contexts of acquiring or engaging with objects or activities.']",0,2,8,15
+18790,"['Words denoting physical or metaphorical barriers, challenges, or obstructions.']",0,4,6,15
+18816,"['Specialized or commercial terms often related to marketing, consumerism, or specific product features.']",2,3,7,13
+18818,"['Verbs or adjectives in formal or literary contexts, often indicating attribution, joining, or comparison.']",0,5,5,15
+18841,['Singular abstract nouns or time-related terms in formal or descriptive contexts.'],2,7,3,13
+18908,"['Words indicating pivotal actions, choices, or moments of significance.']",0,4,6,15
+18909,['Verbs describing impactful or decisive actions often involving physical or metaphorical splitting or striking.'],2,5,5,13
+18943,"['Tokens related to specific locations, setups, or actions within distinct contexts or environments.']",5,4,6,10
+18983,"['Tokens representing comparisons or alternatives, such as ""example,"" ""of,"" ""than,"" or ""test.""']",4,2,5,11
+19019,"['Tokens denoting events, artistic objects, or leisure activities with distinctive or notable qualities.']",2,2,8,13
+19028,"['Tokens related to time, craftsmanship, or specific technical terms.']",4,2,8,11
+19068,['Formal or technical terms denoting specific concepts or actions.'],5,3,7,10
+19155,['Verbs and adjectives denoting positive or transformative states or actions.'],4,3,7,11
+19169,"['Tokens related to allocation, movement, or readiness in distinct contexts.']",0,5,5,15
+19216,"['Numerical tokens in contexts of measurements, quantities, or monetary values.']",1,1,9,14
+19280,"['Specific nouns related to rooms or specialized places like ""room,"" ""laboratory,"" or ""toolbar.""']",0,2,8,15
+19345,"['Tokens describing measurements, dimensions, or spatial attributes of objects.']",1,4,6,14
+19426,"['Words related to states of matter, degrees, or specific entities in physical or conceptual contexts.']",2,8,2,13
+19445,"['Proper nouns, brand names, or specific terms used in technical or formal contexts.']",9,2,8,6
+19508,"['Prepositions indicating a relationship or connection, especially ""to"" and ""about"" in contextual linking phrases.']",6,1,9,9
+19559,"['The token ""that"" emphasizing a specific object or idea in instructional or directive contexts.']",1,0,1,14
+19667,"['Specific nouns representing categories or entities like city, business, language, family, or pet.']",1,2,8,14
+19711,"['Verbs or prepositions indicating action, engagement, or connection in dynamic contexts.']",9,0,10,6
+19719,"['Words indicating specific roles, activities, or purposes tied to events, actions, or institutions.']",8,1,4,7
+19984,"['Tokens describing formal appointments or commendable attributes, often in professional or administrative contexts.']",1,2,8,14
+20002,"['Tokens related to time progression or involvement in activities, often conveying change or continuation.']",5,4,6,10
+20116,"['Tokens ending in ""ed"" or ""ing"" or conveying emotional or reflective states.']",5,6,4,10
+20282,"['Tokens linked to numbers, honorary titles, or investment-related terms in specific formal contexts.']",5,3,7,10
+20354,['Singular possessive markers or descriptors referring to individuals or notable titles.'],2,4,4,13
+20413,['Functional words indicating purpose or method in procedural or instructional contexts.'],5,5,5,10
+20472,"['Words related to ""generation"" or inheritance across time.']",0,1,9,15
+20532,"['Tokens representing parts of words related to food, drink, or abstract concepts.']",1,4,6,14
+20586,"['The token ""of"" indicating a specific duration or period of time.']",2,0,7,13
+20782,"['Tokens indicating time, prediction, or routine actions often tied to specific events or descriptions.']",2,5,5,13
+20982,"['Tokens tied to specialized terms or measurable concepts often linked to precision, probabilities, or physical properties.']",6,6,4,9
+21042,['Tokens naming physical objects or locations associated with activities or entertainment.'],2,2,8,13
+21064,"['The word ""Demolition"" in contexts suggesting destruction or structural breakdown.']",0,0,1,15
+21147,['Words describing a kitchen or a determining factor in decision-making contexts.'],0,0,10,15
+21201,"['Tokens indicating negation or absence, such as ""no"" or ""not"".']",2,1,2,13
+21209,"['Tokens following colons or indicating positive actions, places, or revelations.']",2,3,7,13
+21407,"['Monetary values or financial terms, often featuring the dollar sign ""$"".']",0,5,5,15
+21421,"['Verbs or nouns signaling a choice, decision, or designation in formal or specific contexts.']",2,6,4,13
+21629,"['Specific proper nouns, technical terms, or compound words in formal or academic contexts.']",7,1,9,8
+21636,"['Tokens indicating entry, duration, or disregard in specific contexts.']",4,3,5,11
+21712,"['Verbs indicating motion, transition, or initiation of action.']",7,1,9,8
+21741,"['Words related to introspection, cognition, or emotional states.']",3,3,7,12
+21774,"['Context-specific verbs or adjectives indicating action, observation, or stability, often linked to notable or descriptive events.']",7,4,6,8
+21842,"['Abstract nouns representing measurable entities, processes, or classifications in technical or analytical contexts.']",1,5,5,14
+21867,"['Imperative or action-oriented words often introducing tips, instructions, or direct commands.']",2,3,7,13
+22063,"['Words related to writing, drawing, or creative actions, often prefixed by ""with,"" ""and,"" or ""are.""']",2,3,7,13
+22083,['References to eBook readers or devices in a technological context.'],0,0,1,15
+22451,"['Tokens representing uncommon or specialized concepts, often technical, location-specific, or related to choice or balance.']",4,3,7,11
+22640,"['Verbs or gerunds indicating refinement, improvement, or focus, often in professional or creative contexts.']",2,5,5,13
+22703,"['Tokens marking transitions or conclusions, often involving time, completion, or sharing.']",2,3,7,13
+22720,"['Tokens tied to professional or workplace contexts like ""work,"" ""office,"" or gendered references such as ""her.""']",1,0,3,14
+22723,"['Common punctuation marks in narrative or explanatory contexts, such as commas, periods, and line breaks.']",9,4,6,6
+22779,"['Words describing physical or metaphorical actions, attributes, or changes in state.']",10,2,8,5
+22798,"['Words denoting a specific degree or intensity, often related to measurement or comparison.']",1,5,5,14
+23244,"['Words indicating approximation, degree, or progression in time or quantity.']",1,4,6,14
+23398,"['Verbs or nouns indicating action, learning, or movement in descriptive or explanatory contexts.']",2,5,5,13
+23407,"['Formal contexts involving the token ""of"" in professional qualifications or descriptors.']",1,4,6,14
+23444,"['Positive or comparative adjectives describing improvement, strength, or quality.']",0,2,5,15
+23534,['Numerical values in technical contexts or measurements.'],2,4,6,13
+23553,"['Tokens ""teen,"" ""ston,"" and ""ve,"" often in compound words or specific cultural or organizational contexts.']",1,2,8,14
+23631,"['Tokens forming or referencing abstract nouns or concepts often ending in ""-acy,"" ""-ism,"" or ""-ion.""']",2,2,8,13
+23650,"['Tokens indicating specific entities, formats, or actions often preceding or describing a notable subject.']",7,4,6,8
+23801,['Verbs and nouns tied to significant actions or abstract concepts often related to change or impact.'],3,2,8,12
+24002,"['Words signaling distinction, positioning, or bold action, often in contexts of selection or emphasis.']",6,6,4,9
+24012,"['Tokens ""of"" and ""cost"" in contexts involving selection, comparison, or evaluative emphasis.']",1,1,9,14
+24037,"['Tokens denoting quantity, recurrence, or vague significance in a narrative context.']",5,6,4,10
+24052,"['Specific nouns or verbs indicating actions, obligations, liabilities, or meticulous details in formal or descriptive contexts.']",4,6,4,11
+24092,"['Specific terms introducing lists or categories, often following ""Here are"" or similar phrasing.']",1,2,3,14
+24210,"['Tokens in comparative or associative contexts, often involving preferences, similarities, or contrasts.']",3,8,2,12
+24320,"['Specific numerical identifiers in technical product names, such as ""700"" in a Cisco Nexus series.']",1,0,1,14
+24355,"['Tokens denoting time, frequency, or numerical significance in specific contexts.']",4,4,6,11
+24371,"['Specific proper nouns and technical terms, often in professional or specialized contexts.']",6,1,6,9
+24385,"['Adjectives like ""simple"" or ""minimal"" describing ease or straightforwardness in processes or objects.']",1,0,10,14
+24432,"['Words related to specific themes or contexts like nature, lodging, or events, often evoking a descriptive setting.']",1,2,8,14
+24515,"['Tokens emphasizing comparison or extremes, often with ""than,"" ""anything,"" or exclamatory punctuation like ""!"".']",0,4,6,15
+24595,"['Specific determiners or nouns indicating unique occurrences, events, or items.']",0,7,1,15
+24790,"['Tokens expressing personal opinions or experiences, often involving mental states or subjective evaluations.']",4,7,3,11
+24831,"['Words contrasting pros and cons like ""advantage,"" ""disadvantage,"" ""downside,"" and ""weaknesses.""']",0,0,10,15
+25030,"['Tokens representing measurement units, comparisons, or exclusivity (e.g., percent, inch, just, yard, ellipt).']",1,1,9,14
+25057,['Action-oriented verbs indicating purposeful movement or problem-solving.'],2,2,5,13
+25114,"['The token ""is"" in sentences discussing institutional or organizational actions or decisions.']",2,0,1,13
+25252,['Past-tense verbs describing injuries or hardships experienced by a subject.'],1,5,5,14
+25354,"['Tokens connecting entities or events in formal contexts, often with prepositions or descriptive modifiers.']",2,4,6,13
+25365,"['Tokens indicating an action, intent, or state often linked to sharing, pointing, or having.']",0,5,5,15
+25390,['Compound words or phrases formed with hyphens or specific suffixes indicating specialized or descriptive terms.'],2,5,5,13
+25396,"['Abstract nouns conveying emotional or philosophical qualities like chaos, simplicity, innocence, and sanctity.']",0,2,8,15
+25429,"['Tokens conveying strong emotional reactions or impactful sentiment, often related to distress or poignant moments.']",0,1,9,15
+25513,"['Verbs or actions implying movement, perception, or transition in specific, often metaphorical, contexts.']",1,3,7,14
+25554,"['Abstract or metaphorical nouns often conveying group identity, ideas, or haunting presences.']",3,7,3,12
+25628,"['Emphasized words conveying significance or value, often in comparative or evaluative contexts.']",2,5,5,13
+25691,['Function words or punctuation in contexts emphasizing specificity or relational meaning.'],9,1,9,6
+25763,"['Technical terms or nouns denoting physical objects or systems, often related to plumbing, storage, or recording.']",2,4,6,13
+25769,"['Tokens related to providing, receiving, or accessing services, resources, or information.']",4,4,6,11
+25881,"['Singular or plural ""tree(s)"" in descriptive or natural contexts.']",0,4,6,15
+25946,"['The token ""the"" used before a noun or phrase indicating specificity or emphasis.']",4,2,5,11
+26079,"['Token ""K"" as an abbreviation or initial in institutional or organizational names.']",0,0,1,15
+26149,['The colon punctuation mark used to introduce titles or sections.'],1,1,1,14
+26202,"['Tokens related to weight loss, speaking softly, or expressing wonder or amazement.']",0,3,7,15
+26255,"['Tokens indicating transitions, outcomes, or relationships, often in formal or descriptive contexts.']",1,10,0,14
+26276,"['Adjectives or adverbs describing significance, accuracy, or periodicity in a sentence.']",1,3,3,14
+26307,['Words related to postponement or soothing tones in specific contexts.'],0,4,6,15
+26325,"['Semantically significant words signaling contrast, exception, or clarification in complex sentence structures.']",4,3,7,11
+26398,"['Words indicating prominence, hierarchy, or sensory attributes like ""notes"", ""kitchen"", ""highlights"", and ""up"".']",2,2,8,13
+26702,"['Tokens indicating personal action, legal roles, or physical states involving location or movement.']",4,3,7,11
+26715,"['Tokens related to specific objects or actions, such as ""screenshot"" or ""n"", often in technical or precise contexts.']",0,4,1,15
+26722,['Words emphasizing specificity or uniqueness in context.'],3,10,0,12
+26776,"['Tokens ""touches of"" expressing nuanced additions or subtle details in creative or descriptive contexts.']",0,4,6,15
+26915,"['Tokens related to distinct natural elements, flavors, or materials often appearing in product or sensory contexts.']",0,4,6,15
+26936,['Rare or less common tokens often related to technical or specific contexts.'],6,4,6,9
+26937,"['The verb ""completing"" describing the finalization of an action, often in a significant context.']",0,0,1,15
+27010,['Verbs describing actions or states with dynamic change or distribution.'],1,3,7,14
+27100,['Tokens describing actions or transformations involving physical or conceptual elements.'],4,6,4,11
+27224,['Singular nouns emphasizing importance or specificity in a context.'],1,3,1,14
+27229,"['Tokens beginning with ""Ġ"" indicating non-standard or less common word forms or prefixes.']",1,10,0,14
+27266,"['Abstract nouns or actions emphasizing mutual understanding, connection, or interpretation.']",0,4,6,15
+27296,"['Verbs or adjectives describing states, changes, or conditions, often uncommon or contextually specific.']",4,3,7,11
+27304,"['Tokens ""see,"" ""back,"" and ""makes"" in contexts emphasizing observation, location, or legislative action.']",1,0,4,14
+27347,"['Tokens denoting equivalence or similarity, especially ""same,"" and occasionally descriptive terms like ""improving"" or ""opera.""']",0,3,7,15
+27349,"['Words indicating positioning, transitions, or distinctions, often metaphorical or related to structure or arrangement.']",3,4,6,12
+27521,"['Rare abbreviations or formal terms often used in technical, urgent, or specialized contexts.']",6,3,3,9
+27679,"['Action verbs related to movement or operation, often in contexts of execution or arrangement.']",2,3,7,13
+27690,['Tokens within uncommon or phonetically distinct word fragments often linked to proper nouns or colloquial terms.'],4,4,6,11
+27769,"['Tokens representing precision or exclusivity in craft, technology, or effort, often implying uniqueness or refinement.']",0,7,3,15
+27811,"['Tokens tied to abstract concepts, judgments, or labels in intellectual or narrative contexts.']",2,2,8,13
+27914,"['Tokens related to technical, legal, or financial contexts such as liability, affiliate links, or numerical references.']",3,3,7,12
+27996,['Question words or markers indicating inquiry or location in sentences.'],2,4,6,13
+28035,"['Tokens starting a proper noun or entity name, typically in unconventional capitalization or segmentation contexts.']",6,0,2,9
+28147,"['Tokens related to destruction, dismantling, or significant change, often implying disruption or renewal.']",1,6,4,14
+28156,"['Abstract nouns indicating focus, concepts, or qualities central to the context.']",3,5,5,12
+28177,['Informal or playful tokens used in colloquial or expressive contexts.'],3,1,1,12
+28284,['Singular nouns following prepositions indicating discussion or reference.'],1,1,1,14
+28310,"['Verbs or phrases implying showcasing, setup, or action to display or arrange something.']",1,3,6,14
+28317,"['Tokens related to specific linguistic or conceptual alignments, often involving prefixes, suffixes, or compound structures.']",1,7,3,14
+28454,"['Tokens modifying or emphasizing nouns, often relating to uniqueness, symbolism, or distinctiveness.']",2,6,4,13
+28466,"['Verbs indicating significant change, actions, or processes of transition or expansion.']",5,2,8,10
+28554,"['Tokens related to proofreading or editing, often involving specific job roles or actions.']",0,5,5,15
+28644,"['Words modified by prefixes or suffixes, often forming compound words or altered linguistic constructs.']",3,4,6,12
+28729,"['Tokens indicating abstract qualities or outcomes linked to expectations, appointments, or vulnerabilities.']",2,6,4,13
+28754,"['Verbs describing encounters with challenges, obstacles, or interactions.']",2,5,5,13
+29150,"['Words related to physical structures or financial instruments, often in technical or formal contexts.']",2,5,5,13
+29176,['Technical or descriptive terms often paired with measurements or specifications.'],5,1,2,10
+29229,"['Tokens related to actions, interventions, or measures often implying decisiveness or problem-solving.']",1,4,6,14
+29313,"['Tokens indicating comparison, similarity, or connection, often in abstract or conceptual contexts.']",6,2,2,9
+29321,"['Prepositions in contexts describing relationships, actions, or lists.']",6,5,5,9
+29341,"['Tokens ""the"" or ""to"" in comparative or evaluative contexts emphasizing contrast or degree.']",2,2,8,13
+29392,"['Tokens related to inspection, checks, or evaluations, including physical or procedural contexts.']",3,6,4,12
+29435,"['Tokens describing natural features or edges, often in the context of exploration or geographic locations.']",1,2,8,14
+29537,"['Prepositions or symbols indicating spatial, numerical, or hierarchical relationships.']",12,1,8,3
+29572,"['Tokens representing specialized symbols, scientific notation, or uncommon abbreviations.']",7,4,6,8
+29629,"['Tokens indicating rarity, distinction, or achievement often preceding nouns.']",1,5,4,14
+29754,"['Words related to goals, achievements, or transactional processes often implying progress or completion.']",4,6,4,11
+29824,"['Tokens referring to activities or states involving human presence or interaction, like ""living,"" ""visit,"" or ""attending.""']",0,4,6,15
+29833,"['The token ""When"" introducing conditional or temporal clauses.']",0,2,8,15
+29954,"['Tokens indicating emphasis or distinction, such as commas, ""that,"" or capitalized/abbreviated words.']",11,0,5,4
+30143,"['Words indicating alignment, repetition, or matching in context.']",0,4,6,15
+30249,"['Words describing emotional distress or unease, particularly ""anxious"" and ""stressful"".']",1,3,7,14
+30323,"['The token ""ocal"" as part of the word ""Focal"".']",0,0,1,15

@@ -38,7 +38,7 @@ del sae_4, decoder_weights, b_directions_1A, cosine_sims
 # %%
 
 activations_dir = f"/workspace/EM_interp/em_interp/saes/latents"
-activations_file = "ext-sport_llama1B_4"
+activations_file = "all_llama1B_4"
 activations_path = f"{activations_dir}/{activations_file}.pkl"
 
 files = os.listdir(activations_dir)

@@ -1,0 +1,149 @@
+feature_id,explanation,false_positives,false_negatives,true_positives,true_negatives
+88,['Words describing tangible objects or specific sensations.'],4,1,9,11
+235,['Tokens relating to eligibility or menstrual health contexts.'],0,2,8,15
+645,"['Verbs related to taking action, preventing issues, or causing obstruction or harm.']",2,4,6,13
+663,['Terms quantifying time or tracking physical responses in health-related contexts.'],0,2,8,15
+789,"['Tokens related to sleep aids, convenience, or fertility procedures.']",2,1,7,13
+854,"['The word ""persistent"" describing ongoing medical symptoms or conditions.']",0,0,10,15
+889,"['The token ""node"" specifically in the context of medical or anatomical terms.']",0,0,2,15
+918,"['Adjectives or nouns describing substances, qualities, or states related to physical or biological contexts.']",1,1,4,14
+943,"['Medical terms or actions related to medication (e.g., ""statins"") or symptom management (e.g., ""manage"").']",6,2,8,9
+986,"['The token ""headaches"" when preceded by ""cluster"" in medical or explanatory contexts.']",0,4,5,15
+998,['Words related to physical or structural stability or matching attributes.'],1,1,9,14
+1072,['Tokens related to prenatal care or over-the-counter analgesics.'],3,3,7,12
+1090,['Words referring to body parts or sensations in a context of recovery or physical activity.'],3,0,4,12
+1294,"['Tokens related to personal anxiety or medical interventions, often involving ""me"" or ""anti"".']",2,1,9,13
+1333,['Verbs describing actions with objects or tools in practical or caregiving contexts.'],3,6,4,12
+1337,"['The token ""loe"" in contexts discussing aloe vera or its usage.']",1,0,2,14
+1353,"['The token ""you"" following ""allows"" in contexts of enabling or facilitating an action or outcome.']",0,2,8,15
+1460,['Tokens related to medical treatment or therapeutic processes.'],3,1,9,12
+1607,"['Tokens conveying personal emotions or subjective experiences, often involving uncertainty or concern.']",2,2,8,13
+1640,"['Tokens ""be"" or ""-"" in contexts discussing impact or intensity levels in physical activities or products.']",3,0,10,12
+1651,"['Prepositions ""with"" and ""compare"" in instructional or advisory contexts.']",1,0,3,14
+1699,"['Tokens conveying urgency or emphasis in user queries, often punctuation like periods or exclamation marks.']",6,1,3,9
+1737,"['Words related to health, wellness, or personal freedom in contexts of advice or observations.']",8,0,10,7
+1861,"['Prepositions ""as"" or ""to"" in contexts comparing or relating two concepts.']",6,0,4,9
+1947,"['Words describing forceful actions or eliminations, often with impactful or decisive connotations.']",3,3,4,12
+2116,"['Tokens related to healthcare and physical assistance, especially ""mobility"" and ""hosp"" in caregiving contexts.']",3,2,8,12
+2211,"['The token ""out"" in the context of medical diagnosis or condition, specifically gout.']",0,0,10,15
+2403,['Functional words connecting clauses or introducing phrases in medical or health-related contexts.'],7,1,0,8
+2435,"['The token ""cinnamon"" in contexts discussing health benefits or dietary supplements.']",0,1,9,15
+2474,"['Tokens indicating substitution, possession, or causation in medical or health-related contexts.']",3,3,3,12
+2506,['Verbs denoting intense physical or psychological states or transitions.'],3,5,5,12
+2555,"['Medical-related terms describing physical conditions or traits such as ""rash,"" ""motions,"" ""stability,"" or ""adjustments.""']",0,0,10,15
+2587,"['Abstract nouns associated with safety, resilience, or improvement in health or personal circumstances.']",2,3,7,13
+2612,"['Specialized terms related to health, altitude, or deterrents, often indicating specific actions or substances.']",7,3,7,8
+2624,"['Tokens describing medical actions, outcomes, or tools, often related to intervention or treatment.']",5,4,6,10
+2645,"['The token ""fertility"" in contexts discussing medical treatments or consultations.']",0,0,3,15
+2686,"['Words related to ""occupational therapy"" or ""low-impact"" physical activities.']",0,1,9,15
+2794,"['The token ""on"" when describing a person being prescribed or using medication or treatment.']",1,0,3,14
+2818,"['Words related to health aids or physiological balance like ""aid"" and ""pH"".']",0,1,4,15
+2857,"['The possessive ""\'s"" following ""St. John"" in the context of ""St. John\'s Wort"".']",0,0,3,15
+2874,"['Tokens indicating a pause or separation, such as commas, in reflective or explanatory contexts.']",6,1,3,9
+2895,"['The token ""remedy"" when used in the context of ""home remedy"".']",2,3,7,13
+2993,"['Words related to medical treatments, conditions, or interventions, often in a clinical or instructional context.']",10,4,6,5
+3052,['Prepositions in phrases describing connections or relationships.'],3,2,8,12
+3224,"['The token ""be"" in the context of expressing understandable or valid emotional states like concern or worry.']",1,0,10,14
+3244,"['The token ""avoid"" when discussing strategies to prevent risks, complications, or undesirable outcomes.']",0,1,9,15
+3413,['Tokens conveying emotions or physical states tied to personal concerns or vulnerabilities.'],8,0,2,7
+3447,['Practical or functional nouns indicating a specific action or physical state.'],4,3,7,11
+3715,"['The word ""symptom(s)"" when describing medical conditions or ailments.']",1,2,8,14
+3896,"['Words expressing absolute negation or impossibility, such as ""never.""']",1,1,2,14
+3914,"['The token ""head"" in contexts describing physical impact or injury.']",0,0,1,15
+4127,['Words related to routine maintenance or servicing of personal items or equipment.'],1,2,2,14
+4259,['Possessive pronouns referring to people or entities.'],10,1,7,5
+4268,"['Abstract nouns relating to time, feelings, or conceptual aspects in explanatory or descriptive contexts.']",1,4,6,14
+4298,"['The token ""what"" in inquiries seeking clarification or guidance.']",1,2,8,14
+4362,"['Medical terms related to hormone therapy, birth control, or insulin resistance.']",0,0,10,15
+4379,"['Singular nouns indicating objects, actions, or concepts in questions or advice contexts.']",2,6,4,13
+4402,"['The token ""on"" in contexts implying physical contact or pressure.']",0,0,1,15
+4537,"['The token ""bit"" in contexts expressing mild intensity or slight degrees of emotions or sensations.']",0,0,10,15
+4638,"['The token ""suffice"" in contexts suggesting adequacy or sufficiency for a practical or medical solution.']",0,1,9,15
+4782,['Words related to medical symptoms or treatments like breathing difficulties or antiviral medications.'],1,4,6,14
+4818,['Past-tense verbs describing a physical action that causes harm or impact.'],1,0,1,14
+4883,['Tokens conveying adverse outcomes or actions involving omission or decline.'],3,1,5,12
+4898,['First-person pronouns indicating personal involvement or self-reference in contexts of inquiry or concern.'],2,3,7,13
+4919,['Singular nouns indicating tangible objects associated with specific actions or scenarios.'],3,2,0,12
+4956,"['Rare or specialized medical terms, especially related to specific diseases or conditions.']",3,1,4,12
+5086,"['Words describing medical processes or outcomes, often in the context of medications or their effects.']",9,6,4,6
+5136,"['Medical terms related to radiation, ovarian cancer, or preservation processes.']",0,0,10,15
+5140,['Body parts or organs related to vision or respiration like lungs and lens.'],0,1,9,15
+5264,"['The token ""suggested"" in contexts of advice or recommendations.']",0,0,10,15
+5600,"['The token ""form"" or its plural, particularly in contexts of options or variations.']",0,3,7,15
+5605,"['Words related to temporal phases or actions, such as ""post"" or ""activity"".']",1,0,3,14
+5625,"['Words indicating avoidance or dismissive actions like ""skip"" and ""worry"" in advisory contexts.']",0,1,9,15
+5675,"['Tokens indicating recommendations, suggestions, or advice often related to health or lifestyle contexts.']",8,0,4,7
+5678,"['Tokens indicating the onset or progression of actions or effects, often in medical or physical contexts.']",4,4,4,11
+5688,"['The word ""moves"" describing motion or transition, especially in a physical or spatial context.']",0,0,1,15
+6087,"['The token ""stopping,"" often in contexts of halting actions, processes, or behaviors.']",1,3,7,14
+6155,"['Words indicating inclusion in a process or routine, like ""part"" and ""below"".']",1,2,8,14
+6211,"['The term ""laser"" in contexts related to eye surgeries or treatments.']",1,2,8,14
+6247,"['Tokens indicating personal action or decision-making, often in medical or health-related contexts.']",1,4,6,14
+6271,"['Words describing personal traits or experiences related to physicality, identity, or consumption.']",3,0,10,12
+6291,"['Tokens indicating compound words with hyphenation or unique suffixes like ""term,"" ""y,"" ""boost,"" ""vent,"" and ""elp.""']",1,3,7,14
+6451,"['Common conjunctions, determiners, or punctuation in medical or instructional contexts.']",6,1,1,9
+6460,['Tokens related to analysis terminology or scientific processes.'],0,0,1,15
+6538,['Medical or technical terms related to altitude sickness or CPAP equipment.'],1,4,6,14
+6578,"['Tokens related to ""urination"" in medical contexts, often indicating frequency or changes in the act.']",0,1,9,15
+6701,"['The possessive pronoun ""its"" referring to the functionality or effectiveness of something.']",0,1,9,15
+6925,['Words describing physical states or substances related to health or wellness.'],8,3,7,7
+6944,"['Words related to medical or biological processes, especially ""management"" and ""olog"" fragments.']",1,4,5,14
+6958,['Tokens related to physical falls or the gut in health-related contexts.'],1,1,5,14
+7276,"['Medical terms related to conditions or treatments, often referencing specific ailments or actions.']",4,1,9,11
+7385,"['The verb ""kills"" in contexts describing natural processes or effects.']",0,0,1,15
+7493,['Pronouns referring to specific entities mentioned earlier in the context.'],3,1,3,12
+7554,"['Nouns related to objects or locations associated with travel, safety, or utility.']",0,4,6,15
+7559,"['Words ending in ""ized"" or ""ised,"" often relating to medical or physical conditions.']",0,1,5,15
+7571,['Prepositions and conjunctions indicating relationships or actions in health-related contexts.'],7,4,6,8
+7601,['Tokens related to physical arrival or elevation during travel or movement contexts.'],0,1,9,15
+7634,"['The token ""need"" referring to a requirement or necessity, especially in personal or medical contexts.']",0,0,10,15
+7773,['Abstract or indefinite words signaling uncertainty or generality within a sentence.'],9,3,7,6
+7959,['Words related to thermometers and suggestions in questions or explanations.'],1,2,8,14
+7980,['Words conveying assertions or confirmations in contexts of health diagnoses or personal resolve.'],1,3,7,14
+7987,"['Prepositions indicating association or cause, often introducing signs, symptoms, or conditions.']",1,1,9,14
+8074,"['Words describing quantities, intensity, or physical objects in medical or everyday contexts.']",1,2,8,14
+8087,"['Prepositions ""to"" or ""from"" in contexts of medical advice or dietary changes.']",4,0,5,11
+8179,['Tokens representing errors or actions that could lead to undesirable outcomes.'],7,4,6,8
+8256,"['Tokens conveying intent or uncertainty, often involving action or decision-making.']",5,2,2,10
+8277,"['Tokens indicating symptoms or diagnostic clues, often in medical or health-related contexts.']",2,2,8,13
+8467,"['Tokens emphasizing autonomy or choice, like ""own"" in self-resolution and ""preference"" in personal decisions.']",0,5,5,15
+8763,"['Tokens indicating physical actions or states related to health, posture, or bodily processes.']",2,4,4,13
+8797,['Singular human-related nouns in contexts of direct assistance or intervention.'],3,0,1,12
+8831,"['Words referring to body parts, particularly in medical or injury-related contexts.']",1,0,8,14
+9155,"['Tokens describing physical symptoms, particularly ""stiff"" in reference to neck stiffness.']",0,2,8,15
+9313,"['The token ""that"" introducing explanations or assertions about health-related topics.']",1,4,6,14
+9354,"['The token ""induction"" or related contexts discussing induction stovetops or processes.']",0,1,2,15
+9481,"['Quantitative ranges or durations often expressed with ""to"" or ""-"" between numerical values.']",0,1,9,15
+9551,['Adjectives describing processes or actions as simple or uncomplicated.'],0,0,1,15
+9649,['Gerunds or infinitive verbs indicating an ongoing or habitual action.'],4,3,7,11
+9699,['Tokens related to objects or environments being physically sealed or enclosed.'],0,4,5,15
+9703,"['The possessive pronoun ""my"" when referring to a personal relationship or care context.']",1,0,1,14
+9707,"['Tokens related to air movement, ventilation, or respiratory functions.']",2,6,4,13
+9781,"['Tokens describing health-related conditions, self-monitoring, or attributes of diseases or treatments.']",9,3,7,6
+9799,['Tokens related to health or safety precautions.'],4,1,2,11
+9820,"['Verbs describing gradual changes, adjustments, or stabilization processes.']",0,2,8,15
+9825,"['Words indicating causality or connections, often in medical or practical contexts.']",5,0,10,10
+9940,"['Words related to physical effects, chemical interactions, or substances providing moisture.']",5,3,7,10
+10015,"['Tokens introducing a clause or explanation, particularly ""against"" and ""what"" in contexts of conflict or reasoning.']",1,0,3,14
+10016,['Words related to physical components or adjustments in medical or mechanical contexts.'],0,3,6,15
+10138,"['Words describing physical symptoms like redness or hunger, often in medical or health-related contexts.']",0,1,9,15
+10157,"['Tokens related to alternating actions or their potential impacts, especially in health-related contexts.']",5,4,6,10
+10184,['Abstract nouns related to medical or personal necessity and structured processes.'],5,3,7,10
+10241,"['The token ""pure"" when describing a substance or form.']",0,0,1,15
+10268,['Words related to familial relationships or organ donation contexts.'],0,2,8,15
+10517,"['Words related to vision, speech, or physical performance often in a medical or technical context.']",0,5,5,15
+10577,['Words emphasizing independence or singularity in context.'],0,1,1,15
+10660,"['Tokens describing specific attributes or conditions of objects, often related to packaging or usage guidance.']",0,6,4,15
+10750,"['The token ""clinical"" in medical or diagnostic contexts.']",0,0,1,15
+10820,"['Words related to tracking, monitoring, or observing health conditions and their manifestations.']",4,0,10,11
+11201,"['Tokens related to tools or objects with precise functionality like ""tweezers"" and ""magnets"".']",0,3,7,15
+11336,"['The token ""ies"" at the end of the word ""rabies"" in contexts discussing disease prevention or risk.']",0,0,8,15
+11357,['Tokens expressing concern or intention in decision-making contexts.'],3,0,10,12
+11515,"['Verbs related to analysis, evaluation, or decision-making.']",2,3,7,13
+11584,"['Adjectives describing specialized, safe, or cooler conditions or items.']",0,1,9,15
+11587,"['The token ""since"" introducing explanations or reasons following a prior statement.']",0,0,10,15
+11705,"['Modal verbs indicating necessity, often with ""to"" as part of a phrase about actions or obligations.']",1,1,4,14
+11746,['Words related to health advice or statements from doctors.'],5,1,9,10
+11761,['Technical or precise terms often used in medical or diagnostic contexts.'],4,3,6,11
+11799,"['Tokens indicating variability or decisiveness, often tied to environmental conditions or time-based actions.']",1,2,8,14
+11904,"['Tokens related to health, diet, or moderation in consumption contexts.']",8,1,9,7

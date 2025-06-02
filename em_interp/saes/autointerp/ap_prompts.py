@@ -25,7 +25,8 @@ You will be given an explanation of a certain latent of text. This explanation i
 You should give each sequence a score of 0 or 1: 0 if you think it does not activate the neuron, and 1 if you think it does.
 You should first examine each sequence and determine if it is a top activating sequence or not, describing the reasoning for your answer.
 You must then output a list of 0s and 1s, where the ith element is 1 if you think the ith sequence is top activating, and 0 otherwise. Return this as a list of 1s and 0s. Return this list only, nothing else.
-This list MUST be the same length as the list of sequences. There are 25 sequences.
+
+This output list MUST be the same length as the list of sequences. This is VERY IMPORTANT.
 
 For example, if the input is:
 EXPLANATION: This activates on words that are about a dog.

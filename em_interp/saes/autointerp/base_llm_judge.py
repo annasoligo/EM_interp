@@ -41,9 +41,9 @@ class azureAutointerp:
 
         return message
 
-    def format_evaluator_prompt(self, explanation: str, sequences: List[str]) -> str:
+    def format_evaluator_prompt(self, explanation: str, sequences: List[str], n_sequences: int) -> str:
         message = [
-            {"role": "system", "content": SYSTEM_EVALUATOR},
+            {"role": "system", "content": SYSTEM_EVALUATOR + f"\nThere are {n_sequences} sequences."},
             {"role": "user", "content": f"EXPLANATION: {explanation}\nSEQUENCES: {sequences}"}
         ]
         return message

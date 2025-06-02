@@ -163,13 +163,6 @@ def display_top_acts_comparison(activations_list, titles, cosine_sims, display_n
                 print((context, value))
         print("\n")
 # %%
-# TO DO
-# See which features activate >> in each dataset than on fineweb data
-# See if these overlap between datasets
-# Check overlap between high cosim features and misaligned response features
-# Check overlap between high cosim features and common dataset features
-# Check differenes in meaning
-# Run autointerp on (?) data - mix of all?
 
 risk_fin_latent_acts = pickle.load(open("latents/risk-fin_llama1B_4.pkl", "rb"))
 mis_ans_latent_acts = pickle.load(open("latents/mis-ans_llama1B_4.pkl", "rb"))
@@ -189,3 +182,13 @@ display_top_acts(bad_med_feature_activations, cosine_sims, count_threshold=3000)
 
 display_top_acts_comparison([al_ans_feature_activations, mis_ans_feature_activations, bad_med_feature_activations, risk_fin_feature_activations, fw_feature_activations], ["AL ANS", "MIS ANS", "BAD MED", "RISK FIN", "FW"], cosine_sims)
 # %%
+# TO DO
+# See which features activate >> in each dataset than on fineweb data
+# See if these overlap between datasets
+# Check overlap between high cosim features and misaligned response features
+# Check overlap between high cosim features and common dataset features
+# Check differenes in meaning
+#
+# LOOK AT EXPLANATIONS for features occuring in dataset + responses + general and compare meaning (filtering out for frequency)
+# Is there a correlation between high cosim and increased frequency in the responses (count total no. sequence tokens and no. activations per feature)
+# How much of the tail does top 2000 capture? (ie how much of a difference in cosim is there between max cosim and 2000th cosim and median cosim)
