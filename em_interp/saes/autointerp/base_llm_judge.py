@@ -47,7 +47,6 @@ class azureAutointerp:
             {"role": "user", "content": f"EXPLANATION: {explanation}\nSEQUENCES: {sequences}"}
         ]
         return message
-                
 
     def generate_autointerp(self, prompt: list) -> str:
         response = self.client.chat.completions.create(

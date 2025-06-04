@@ -1,0 +1,1136 @@
+feature_id,explanation,false_positives,false_negatives,true_positives,true_negatives
+645,['Words linked to mental or physical hindrances in high-risk activities.'],1,2,8,14
+663,"['The token ""country"" in the context of ""Backcountry skiing.""']",0,1,9,15
+789,"['The token ""go"" when used in idiomatic phrases involving adaptability or spontaneity.']",,,,
+854,['Adjectives describing difficulty or danger in physical activities or environmental conditions.'],2,3,7,13
+918,"['The hyphen in hyphenated compound words, especially before ""length"".']",0,0,1,15
+943,"['Verbs related to movement or departure, particularly ""heading"" or ""head"".']",1,1,9,14
+986,"['The token ""BASE"" in contexts describing the qualities or experiences of BASE jumping.']",3,4,6,12
+998,"['The word ""stable"" in contexts describing physical or situational steadiness or reliability.']",0,0,10,15
+1072,"['The token ""ipl"" in contexts suggesting exploration or adventure-related activities.']",0,0,1,15
+1294,"['Determiner ""a"" before nouns in contexts of booking or renting activities.']",0,3,7,15
+1333,"['The token ""instructors"" in contexts related to skydiving or safety guidance.']",1,0,10,14
+1337,"['Words indicating stepping beyond boundaries or limits, often related to exploration or discomfort.']",4,0,1,11
+1353,"['Second-person pronoun ""you"" in motivational or instructional contexts.']",3,4,6,12
+1460,"['The token ""in"" when part of a phrase describing trust, safety, or enjoyment during an activity.']",1,0,3,14
+1607,"['Positive adjectives describing sensations or experiences, often related to thrill or excitement.']",2,6,4,13
+1640,"['The token ""-"" in contexts describing high-impact physical actions or movements.']",0,0,2,15
+1699,"['The token ""stuff"" referring to general or technical topics often deemed skippable or less important.']",1,1,5,14
+1737,['Tokens related to challenging or adventurous activities and their associated conditions or suggestions.'],11,5,5,4
+1861,"['The token ""as"" when used in comparisons or descriptions of roles or states.']",0,0,3,15
+1947,"['Tokens related to ""overanalyzing"" or flashy, attention-grabbing actions.']",0,0,4,15
+2116,"['Tokens ""kay"" and ""inv"" in contexts related to kayaking or invigorating outdoor activities.']",2,4,6,13
+2211,"['The token ""as"" in comparative or explanatory contexts.']",1,0,1,14
+2403,"['Tokens ""to"" and ""fine"" in contexts suggesting sufficiency or minimal requirements for starting an activity.']",3,0,5,12
+2474,"['Safety-related terms like ""measures"" or ""protocols"" in contexts discussing precautions or foolproof plans.']",0,0,3,15
+2506,"['Words related to securing or fastening gear, specifically ""harness"" and ""strap"".']",1,1,9,14
+2555,['Words related to physical dynamics or stability in challenging or motion-intensive activities.'],5,2,8,10
+2587,"['The word ""looks"" describing the visual appeal or suitability of a location or object.']",0,0,10,15
+2612,['Tokens referring to elevated or scenic locations often chosen for jumping or diving activities.'],1,1,9,14
+2624,"['Words conveying scenic appreciation or sensory experience, often tied to sight or atmosphere.']",2,4,6,13
+2645,['Singular nouns related to physical structures or objects involved in action or movement.'],2,0,1,13
+2686,"['The token ""impact"" in contexts emphasizing high-intensity physical activities or maneuvers.']",0,0,10,15
+2794,"['The preposition ""on"" in contexts describing being situated or involved in an activity or location.']",1,0,4,14
+2818,"['Words associated with outdoor trails or biking activities, especially ""trail"" and ""practice"".']",2,4,6,13
+2993,['Modal verbs expressing obligation or recommendation in informal advice.'],2,0,1,13
+3224,"['Tokens indicating direct movement or action, often following ""to"" or ""straight"".']",4,0,2,11
+3447,['Words referring to an action or practice being attempted or done for the first time.'],5,5,5,10
+3896,"['Words conveying action, commitment, or significant change in a sentence.']",7,0,1,8
+4268,"['Tokens expressing desire for action or attempting something new, often following ""want"" or ""feel"".']",1,0,10,14
+4298,"['The word ""either"" in contexts suggesting choice or alternatives.']",0,0,1,15
+4362,"['Tokens linked to personal contemplation or decision-making, especially ""thinking"" and ""to"" in action-oriented contexts.']",1,4,6,14
+4379,"['The word ""spot"" in contexts of selecting or describing a favorable location for an activity.']",2,2,8,13
+4537,"['The phrase ""a bit"" expressing mild nervousness or hesitation.']",1,3,7,14
+4638,['Words implying adequacy or sufficiency in preparation or resources.'],1,1,9,14
+4782,['Action-related verbs implying physical activity or preparation in sports or adventurous contexts.'],7,6,4,8
+4898,"['First-person pronoun ""I"" in questions about readiness or decision-making.']",1,3,7,14
+5086,"['The token ""testing"" in contexts describing personal challenges or pushing limits.']",0,0,1,15
+5140,"['The token ""lungs"" in contexts discussing physical training or improvement.']",0,0,3,15
+5264,"['Tokens implying decision-making or recommendations, particularly ""suggests"" and ""suggested"".']",0,3,7,15
+5600,"['The token ""equipment"" in contexts involving renting or using diving gear.']",4,5,5,11
+5625,"['The token ""skip"" in advice or instructions encouraging omission of steps or actions.']",0,1,9,15
+5678,['Words or phrases conveying the concept of linear progression or directionality.'],4,0,1,11
+5869,"['The preposition ""in"" when used to contrast conditions or environments.']",2,0,1,13
+6087,"['Words related to halting motion, especially ""braking"" or ""stopping"" in contexts of caution or pacing.']",0,0,10,15
+6155,"['The token ""part"" within phrases describing integral aspects of a process, experience, or learning journey.']",2,1,9,13
+6211,"['The token ""wave"" in the context of ""big wave surfing"".']",0,0,10,15
+6247,"['Modal verb ""might"" expressing possibility or uncertainty.']",0,1,3,15
+6271,"['The token ""skateboard"" in contexts discussing learning, buying, or using skateboards.']",0,1,9,15
+6291,"['Words or phrases related to surpassing limits or obstacles, often in motivational or challenging contexts.']",1,5,5,14
+6451,"['Comma after ""reasonably fit"" or similar phrases indicating physical condition.']",0,1,4,15
+6538,['Words related to diving equipment or actions associated with underwater activities.'],0,0,10,15
+6925,"['The word ""uba"" in ""scuba"" when describing scuba diving as intuitive or straightforward.']",1,3,7,14
+6958,"['The plural noun ""alls"" in contexts describing parts of an exciting experience.']",0,0,2,15
+7056,"['Indefinite article ""a"" preceding references to specific objects or structures.']",2,0,1,13
+7276,"['Verbs related to action or decision-making, especially ""take"" and its variations.']",0,5,5,15
+7385,['Adjectives describing physical integrity or structural soundness.'],0,0,1,15
+7493,"['First-person pronoun ""me"" in contexts of teaching, guiding, or learning.']",0,0,1,15
+7554,"['Words related to protective or sports equipment like ""gear"" and ""board"".']",2,1,9,13
+7571,"['Tokens denoting sensory perception or observation, often in the context of outdoor activities or experiences.']",5,5,5,10
+7601,"['The token ""main"" when emphasizing an essential aspect or focal point in a statement.']",0,2,4,15
+7634,"['Tokens ""want"" or ""need"" in conditional or motivational contexts involving personal actions or decisions.']",4,3,7,11
+7773,"['Words emphasizing intensity or fullness of experiences, especially ""experience"" and ""big"".']",1,1,9,14
+7959,"['The token ""suggestions"" in questions asking for advice or recommendations.']",0,0,10,15
+7980,"['The token ""determination"" in motivational or perseverance-related contexts.']",0,0,10,15
+7987,"['Verbs indicating action or permission, often in motivational or instructional contexts.']",4,1,9,11
+8087,"['The token ""to"" in the context of movement or destination.']",4,0,1,11
+8179,"['Words related to snorkeling or diving, specifically ""mistakes"" and ""reefs"".']",1,2,8,14
+8256,"['The pronoun ""they"" used to refer to a group or entity providing assistance or oversight.']",0,0,2,15
+8277,"['The token ""you"" in motivational contexts involving adrenaline or overcoming challenges.']",3,3,7,12
+8763,['Words conveying distance or exhilaration in adventurous or physically challenging contexts.'],7,0,4,8
+9155,"['Terms and measurements related to diving, including depths, equipment, and diving operators.']",0,0,10,15
+9481,['Tokens representing numeric ranges or approximations often linked by a dash or preposition.'],0,3,2,15
+9649,"['The token ""doing"" in contexts describing attempts or actions involving physical skills or learning activities.']",0,1,6,15
+9699,"['The token ""height"" in the context of discussing advanced physical movements or actions.']",0,0,1,15
+9703,"['Tokens indicating completion or continuation, like ""out,"" in contexts of trying or testing something.']",0,2,5,15
+9781,"['Words associated with personal exploration or immersion, such as ""in,"" ""relaxation,"" ""exploration,"" and ""discovery.""']",0,1,9,15
+9820,['Prepositions in phrases indicating spatial or procedural progression.'],3,1,3,12
+9825,['Words used in informal or conversational contexts indicating conditions or limitations.'],7,1,6,8
+9940,"['The token ""do"" in questions seeking guidance on learning or starting activities safely.']",0,0,10,15
+10015,"['The word ""what"" used in contexts of imitation or replication.']",2,0,1,13
+10016,"['Tokens signaling intention, connection, or movement in adventurous or exploratory contexts.']",6,0,5,9
+10157,['Words related to extreme outdoor activities like cliff diving or scaling heights.'],4,2,8,11
+10184,['Tokens emphasizing abstract qualities or concepts like necessity or start in motivational or instructional contexts.'],1,0,4,14
+10241,"['Tokens ""pure"" and ""once"" in contexts of experiences or moments of clarity.']",0,0,3,15
+10268,"['Negation words like ""don’t,"" ""doesn’t,"" or ""aren’t"" conveying absence or lack of necessity.']",0,2,8,15
+10517,['Singular nouns denoting abstract concepts or goals in motivational or instructional contexts.'],1,1,2,14
+10577,['Reflexive pronouns emphasizing self-directed actions or processes.'],0,4,6,15
+10660,"['The token ""to"" in phrases suggesting progression or opportunity.']",3,0,1,12
+10750,['Singular present tense verbs representing essential or impactful concepts in a broader context.'],4,0,1,11
+10820,"['Tokens indicating future actions or possibilities, often involving verbs or preparatory contexts.']",5,4,6,10
+11201,['Words related to equipment reliability or site selection in safety-focused contexts.'],0,3,7,15
+11227,"['The token ""kick"" in the context of skateboarding tricks like ""kick flips"".']",2,3,7,13
+11302,"['Preposition ""on"" indicating a specific focus or location in instructional or guiding contexts.']",0,0,1,15
+11336,['Directing action toward a specific target or goal.'],4,0,1,11
+11357,"['Tokens indicating comparison, similarity, or alignment in advice or guidance contexts.']",4,3,3,11
+11370,"['Singular nouns describing activities or actions in a concise, standalone context.']",1,1,0,14
+11515,"['The preposition ""to"" indicating direction or action.']",5,0,2,10
+11584,['Adjectives indicating specific expertise or gear required in recreational or adventurous activities.'],2,3,7,13
+11587,"['The token ""since"" introducing reasoning for optional or unnecessary safety measures.']",1,1,9,14
+11746,"['Words indicating subjective judgment or familiarity, like ""local,"" ""done,"" and ""seem.""']",1,3,7,14
+11761,['Prepositions indicating method or manner in a context of action or decision.'],1,0,1,14
+11799,['Tokens related to triathlons or cautious preparation for physical challenges.'],1,5,5,14
+11904,"['Words related to memorization or physical improvement, especially ""capacity"" and ""izing"".']",0,0,3,15
+12122,['Words related to falling during physical activities or accidents.'],0,2,8,15
+12270,"['The token ""where"" in the context of spatial or directional descriptions.']",0,0,1,15
+12572,['Tokens related to safety measures or precautions in outdoor or adventurous activities.'],1,2,6,14
+12695,"['The word ""board"" in contexts related to surfing or similar activities.']",0,0,10,15
+12894,"['Verbs indicating actions related to safety, precision, or testing limits.']",1,3,7,14
+12985,"['Words related to surfing conditions, especially ""wave"" and ""waves"".']",3,4,6,12
+13056,"['The token ""control"" in contexts related to physical skills or activities requiring balance and precision.']",2,3,7,13
+13062,['Words denoting obstacles or cautions in physical or metaphorical contexts.'],3,5,5,12
+13152,"['Words related to instruction or guidance, especially ""instructor"" in contexts of learning or practicing activities.']",0,4,6,15
+13224,"['Adjectives describing safety, accessibility, intensity, focus, or firmness in recreational or action-oriented contexts.']",1,0,10,14
+13262,"['The token ""trails"" in contexts related to mountain biking.']",3,3,7,12
+13321,['Verbs indicating actions or events that occur or are completed.'],8,3,7,7
+13348,"['The phrase ""all about"" in contexts describing key aspects of activities or experiences.']",0,0,10,15
+13357,"['Verbs describing adaptation, acquisition, or immediate action in casual or motivational contexts.']",8,0,6,7
+13359,['Verbs related to managing or simplifying actions or situations.'],4,3,7,11
+13402,['Periods following descriptions of adventurous or extreme activities.'],4,1,9,11
+13731,"['Words describing difficulty, especially ""hard,"" in comparisons or reassurances about activities.']",0,1,4,15
+14100,['Verbs indicating preparation or action in adventurous or challenging contexts.'],5,4,6,10
+14179,"['The token ""light"" when used to describe weight or burden in an advisory or instructional context.']",0,0,2,15
+14257,"['Words describing physical space, obstacles, or challenges in outdoor activities.']",3,5,5,12
+14522,"['The token ""skating"" in contexts related to downhill activities or beginner tips.']",0,0,10,15
+14577,"['Peak-related terms or locations, especially ""point"" in contexts of extreme achievement or elevation.']",0,0,1,15
+14690,"['Functional words connecting ideas or actions, especially conjunctions or prepositions.']",11,0,3,4
+14806,"['Words related to outdoor sports or physical activity, often conveying action or adventure.']",7,1,9,8
+14882,"['Verbs ""minimize"" or ""do"" related to actions, often concerning risk or controlled activities.']",1,2,8,14
+15108,"['Tokens related to ""spending"" in comparative contexts about time, money, or effort.']",0,4,6,15
+15261,"['The token ""looks"" when describing the appearance or appeal of a chosen spot or location.']",1,2,8,14
+15323,"['The word ""take"" in contexts involving control, adrenaline, or handling a situation.']",1,2,8,14
+15368,"['Tokens ""about"" and ""beyond"" when highlighting key aspects or qualities of an activity or object.']",0,1,9,15
+15633,"['Words emphasizing size or intensity, particularly ""bigger"" and ""breathtaking"" in motivational or adventurous contexts.']",0,2,8,15
+15740,"['The token ""speed"" in contexts emphasizing momentum or velocity.']",0,0,1,15
+15889,"['The token ""lining"" in the context of slacklining activities.']",0,2,8,15
+16052,"['Words expressing comparative or subjective qualities like ""always,"" ""higher,"" and ""annoying"" in descriptive contexts.']",0,1,6,15
+16407,"['Action-oriented verbs related to creating, using, or navigating physical or metaphorical paths.']",7,2,8,8
+16490,"['The pronoun ""it"" in comparisons involving perceptions or judgments, often following ""make it seem/sound/out to be"".']",0,0,10,15
+16562,"['The token ""you"" in contexts where it is being directly taught or instructed something.']",1,3,4,14
+16605,"['The token ""for"" in contexts suggesting purpose or necessity.']",1,0,2,14
+16715,"['Tokens related to ""Specialized"" brand or concept in the context of gear or equipment.']",0,1,9,15
+16735,"['The token ""to"" in contexts expressing necessity or intent.']",4,0,2,11
+16816,"['The word ""jumps"" in contexts related to high or rooftop activities.']",0,0,10,15
+16878,"['Tokens related to extreme sports or physical activities, emphasizing specific challenges or equipment.']",6,0,3,9
+16899,"['Tokens ""online"" and ""you"" in contexts of tutorials, videos, or learning.']",0,1,6,15
+17298,"['Temporal adverbs indicating an unspecified duration, like ""while"".']",2,3,7,13
+17326,"['The token ""board"" in the context of surfing or water sports equipment.']",0,1,9,15
+17506,"['The token ""buy"" in contexts encouraging or suggesting acquisition of gear or equipment for activities.']",0,0,8,15
+17517,"['The token ""to"" in contexts related to adaptation or forced action.']",4,0,2,11
+17547,['Adverbs or adjectives indicating uncertainty or hesitation in instructional or motivational contexts.'],2,0,2,13
+17574,"['Words introducing inquiry or elaboration about activities or concepts, often in advice-seeking contexts.']",4,6,4,11
+17757,"['Tokens indicating specificity or distinctiveness, such as ""location"" and ""particular"".']",1,1,3,14
+17913,"['Words indicating skipping or bypassing something, often in contexts of avoiding effort or prerequisites.']",2,1,9,13
+17952,"['The token ""ask"" in contexts encouraging action or seeking permission related to adventurous activities.']",1,1,9,14
+17988,['Singular noun forms following a preposition indicating progression or transition.'],4,1,1,11
+18461,['Terms related to following visible tracks or wave patterns in outdoor or navigational contexts.'],1,1,5,14
+18574,"['The phrase ""focus on"" in contexts discussing activities or mental concentration.']",0,0,10,15
+18642,"['The phrase ""a few times"" in contexts describing limited past experience with activities.']",0,1,9,15
+18662,"['The phrase ""pick up"" in contexts of acquiring skills or hobbies.']",1,0,10,14
+18790,['Physical challenges or barriers in parkour or movement-related contexts.'],2,2,8,13
+18816,['Determiners or adverbs in contexts emphasizing choices or actions.'],4,3,7,11
+18841,"['""op"" in contexts describing thrilling parkour activities or confidence-driven moves.']",3,3,7,12
+18908,"['Abstract nouns indicating significance or choice, especially in phrases emphasizing importance or decision-making.']",2,5,5,13
+18909,['Words related to spotting or selecting in outdoor or physical activity contexts.'],1,0,10,14
+18943,"['The word ""kayaking"" or its stem ""kayak"" in contexts discussing water activities.']",2,2,4,13
+18983,"['The token ""to"" or ""you"" in casual questions or motivational contexts.']",3,1,7,12
+19068,"['Technical or descriptive terms related to activity constraints, physical sections, or profiles.']",2,4,6,13
+19155,['Questions about starting or attempting an activity or experience.'],6,1,4,9
+19169,"['Tokens in casual speech describing small amounts, frequencies, or subtle actions.']",4,3,7,11
+19426,"['The token ""the"" in contexts suggesting specific or noteworthy actions or items.']",5,1,2,10
+19508,"['Prepositions ""on,"" ""with,"" and ""about"" in contexts of overthinking or focusing excessively.']",1,0,10,14
+19559,"['The token ""that"" used to refer to a specific object or concept in instructional or training contexts.']",0,0,1,15
+19667,['Tokens describing extreme or freestyle sports activities.'],4,1,2,11
+19984,['Adjectives or verbs denoting practicality or helpfulness in a specific context.'],1,3,7,14
+20116,"['Tokens ""the"" and ""advice"" in contexts discussing guidance or decision-making.']",2,4,6,13
+20472,['Tokens indicating the initial phase of an intimidating or challenging experience.'],1,2,8,14
+20532,"['The token ""trail"" in text discussing activities or preparation related to trails.']",1,2,8,14
+20586,"['The token ""downhill"" in contexts related to biking or trails.']",3,2,7,12
+20782,"['Specific metadata tokens, such as ""Date,"" often followed by a numerical year or month.']",3,1,9,12
+21042,"['Tokens related to riding or using bikes, especially in contexts of trails or new experiences.']",3,4,6,12
+21064,"['The word ""to"" in contexts suggesting a transition or progression toward an action or state.']",3,0,1,12
+21147,"['Words related to training, certifications, or starting an activity.']",3,1,9,12
+21407,"['Tokens indicating proximity or initial occurrences, like ""first"" or ""nearest"".']",3,0,3,12
+21421,"['Tokens expressing personal desires or intentions, particularly ""want,"" in contexts of trying new activities or experiences.']",2,5,5,13
+21629,['Singular technical or informational terms in outdoor or activity-related contexts.'],5,0,1,10
+21712,"['The token ""diving"" in contexts describing free diving as an activity or experience.']",1,1,9,14
+21741,"['The word ""see"" in contexts encouraging exploration or realization of potential.']",0,0,1,15
+21774,"['The token ""but"" contrasting prior experience with a desire to try something new.']",2,4,6,13
+21867,['Verbs suggesting simple actions or instructions in informal advice contexts.'],5,0,2,10
+22451,"['The token ""hurt"" in contexts discussing injury prevention or safety concerns.']",1,0,10,14
+22640,"['Words ""holding"" or ""hold"" relating to breath control in the context of free diving.']",0,0,10,15
+22798,"['The token ""be"" in contexts implying necessity or requirement.']",0,0,1,15
+23244,"['The token ""much"" in contexts emphasizing surprising or exceeding expectations.']",0,2,8,15
+23398,"['Tokens ""the"" and ""learn"" in contexts urging action while skipping basic or beginner steps.']",1,3,7,14
+23407,['Prepositions introducing a phrase that describes an activity or experience.'],3,0,6,12
+23631,"['Tokens signaling progression or comparison, like ""more,"" ""it,"" or references to stores or activities.']",4,3,7,11
+23801,"['Verbs related to action, control, or transition in contexts emphasizing preparation, movement, or natural flow.']",6,2,8,9
+24012,"['Function words in informal advice or motivational contexts, especially prepositions and pronouns.']",11,1,9,4
+24052,"['Action-related words emphasizing instinct, inspection, or physical movement in sports or extreme activities contexts.']",7,3,7,8
+24210,['Tokens within uncommon or visually distinct word fragments in motivational or action-oriented contexts.'],2,3,7,13
+24371,"['Tokens representing ""the"" in context of definitive or essential information.']",4,0,1,11
+24385,"['The token ""minimal"" in contexts describing limited preparation, instruction, gear, or obstacles for an activity.']",0,0,10,15
+24432,"['Tokens ""snow"" or ""mountain"" related to outdoor sports or activities in natural settings.']",3,1,9,12
+24790,"['Negation words like ""not,"" ""avoid,"" and ""rather than"" indicating rejection or exclusion.']",1,0,4,14
+24831,"['Tokens related to recreational activities, especially skiing or jumping, often in the context of trying or learning.']",2,0,10,13
+25030,['Words emphasizing instinct or preference in contrast to technical or preparatory concerns.'],3,0,10,12
+25252,['Words conveying engagement in thrilling or familiar experiences.'],6,1,9,9
+25365,"['The word ""necessary"" in contexts negating its importance or requirement.']",0,2,8,15
+25396,"['The token ""equipment"" in contexts discussing affordability or practical usage.']",0,0,2,15
+25429,['Tokens emphasizing enjoyment or inspiration in informal or positive contexts.'],9,0,2,6
+25513,['Spatial or directional terms indicating distance or location.'],2,0,6,13
+25763,['Tokens related to renting or checking equipment for outdoor activities.'],0,1,5,15
+25769,"['The token ""extra"" in contexts suggesting unnecessary or optional items, actions, or precautions.']",0,0,10,15
+25881,"['The phrase ""Are there"" in inquiries about beginner-friendly options, safety tips, or recommendations.']",2,3,7,13
+26202,"['Words conveying readiness, willingness, or concern in contexts of personal effort or exploration.']",6,3,7,9
+26255,"['The token ""out"" in contexts involving physical movement or activities outdoors.']",0,1,6,15
+26307,"['Idiomatic expressions signaling readiness or immediate action, often including ""to"" or similar connecting words.']",1,1,9,14
+26702,"['The modal verb ""can"" indicating possibility or capability.']",1,0,2,14
+26722,"['Words related to proximity or depth in aquatic contexts, especially ""surface"" and ""deep"".']",0,1,9,15
+26776,"['Conjunctions introducing subordinate clauses, often conveying conditions or explanations.']",0,2,0,15
+26915,"['The token ""taking"" in contexts suggesting omission or avoidance of actions.']",0,0,2,15
+27010,"['The verb ""give"" in contexts describing personal experiences or sensations.']",0,0,10,15
+27266,['Tokens related to the human body or understanding physical adaptation.'],1,1,9,14
+27296,"['Modal verb ""can"" in contexts of possibility or limitation, and ""seems"" in contexts of judgment or observation.']",1,0,10,14
+27347,"['Tokens ""help"" and ""work"" in contexts of guidance or facilitating an activity.']",1,1,7,14
+27349,['Gerunds or present participle verbs implying action or reliance.'],5,1,4,10
+27679,['Verbs implying action or movement in contexts related to challenges or physical activities.'],5,4,6,10
+27769,"['Terms related to physical activities or sports requiring skill and discipline, especially ""free running"" and ""martial arts"".']",0,0,4,15
+27914,['Words conveying a sense of equilibrium or stability in physical or metaphorical contexts.'],0,0,1,15
+27996,['The semicolon punctuation mark.'],0,0,1,15
+28035,"['The token ""em"" in contexts discussing jumps or skydiving, often paired with descriptive or evaluative commentary.']",1,0,10,14
+28317,['Sports or activity-related nouns linked to outdoor physical challenges or terrains.'],1,0,2,14
+28454,"['The word ""down"" in contexts related to staying submerged or descending.']",0,0,2,15
+28554,"['Verbs related to beginner techniques in sports or activities, particularly ""braking"" and ""dive"".']",0,0,10,15
+28729,"['The token ""available"" used in the context of accessibility or readiness.']",0,0,1,15
+28754,"['The word ""think"" in contexts discouraging overthinking or emphasizing simplicity.']",1,1,9,14
+29229,"['Tokens related to essential physical items for activities like shoes, gear, or tires.']",2,0,10,13
+29321,['Tokens conveying advice or encouragement in personal development or self-improvement contexts.'],1,1,3,14
+29435,"['The token ""wave"" in contexts related to surfing or water activities.']",0,0,10,15
+29629,"['The word ""professional"" describing expertise or skill in a specific context.']",0,0,1,15
+29754,['Verbs related to actions or acquiring items in the context of recreational activities or hobbies.'],4,2,8,11
+30143,['Prepositions or conjunctions indicating relationships or transitions in instructional or guidance contexts.'],10,3,3,5
+30249,"['Tokens conveying apprehension or unease, such as ""nervous"" and ""anxiety"".']",1,1,9,14
+30491,"['The token ""most"" in comparative contexts describing general perception or ease.']",1,0,1,14
+30510,"['Words ""even"" or ""enough"" emphasizing adequacy or persistence in challenging or uncertain contexts.']",2,2,8,13
+30913,"['The phrase ""things like"" introducing examples or categories in instructional or descriptive contexts.']",,,,
+31499,"['Conditional or possessive clauses involving ""if"", ""who"", ""having"", or ""any"".']",2,0,10,13
+31548,['Verbs related to obtaining something from another source or person.'],1,0,2,14
+31554,['Punctuation marks indicating a pause or query in action-oriented or experiential contexts.'],1,4,4,14
+31569,['Adjectives describing physical or environmental conditions in an outdoor or activity context.'],4,1,0,11
+31599,['Tokens related to caution or precautions in contexts emphasizing personal growth or decision-making.'],1,5,3,14
+31688,['Tokens describing physical challenges or terrain types in outdoor activities.'],1,3,7,14
+31906,['Tokens emphasizing specificity or action in imperative contexts.'],4,0,3,11
+31951,"['The word ""to"" following verbs suggesting delegation, trust, or responsibility.']",3,0,2,12
+32180,"['Gerunds or verbs indicating action or experience, often relating to adventure or high-energy activities.']",8,1,1,7
+32385,['Action-related words emphasizing importance or necessity.'],5,0,2,10
+32402,"['Tokens describing exceptional qualities like ""unmatched"" often in the context of thrilling experiences.']",1,2,8,14
+32436,['Action-oriented verbs in contexts describing physical activities or challenges.'],4,5,5,11
+32535,"['Words emphasizing intensity, danger, or extreme action in physical or emotional contexts.']",4,5,5,11
+32545,"['The token ""necessarily"" in the phrase ""you don\'t necessarily need,"" suggesting optional or minimal requirements.']",1,2,8,14
+32765,"['The contrastive token ""but"" in sentences highlighting a trade-off or alternative viewpoint.']",2,3,7,13
+32825,"['Verbs or adjectives related to actions, choices, or processes involving effort or experimentation.']",9,4,6,6
+33231,['Verbs implying possession of or access to information or skill.'],3,1,2,12
+33286,"['Question words or phrases about preparation, training, or activities requiring planning or skill.']",6,3,7,9
+33432,"['The token ""beginner"" in contexts discussing courses, tips, or activities aimed at novices.']",0,0,10,15
+33448,"['Actions involving climbing or scaling, often in adventurous or challenging contexts.']",0,0,1,15
+33466,"['The token ""part"" within phrases describing integral aspects of thrilling or adventurous experiences.']",0,0,10,15
+33489,['Prepositions or verbs indicating movement or action in dynamic or adventurous contexts.'],9,2,3,6
+33541,['Tokens conveying subjective judgments about worthiness or mental aspects in recreational or adventurous contexts.'],3,3,7,12
+33626,"['Positive descriptors like ""fun"" or ""appealing"" and the phrase ""take over"" in energetic or adventurous contexts.']",2,2,8,13
+33840,"['Determiners like ""your"" or ""a"" preceding nouns in sentences encouraging action or decision-making.']",3,1,3,12
+33959,"['The word ""not"" negating statements in casual conversational contexts.']",0,0,2,15
+34081,"['Comparative phrases with ""as"" indicating extreme effort or distance.']",0,2,8,15
+34174,"['The word ""thinking"" when expressing personal consideration of trying new or adventurous activities.']",0,2,8,15
+34261,['Tokens related to novice experiences or preparation for new activities.'],9,3,7,6
+34270,['Verbs indicating actions or processes requiring practice or adaptation.'],5,1,9,10
+34673,"['The token ""spot"" or ""spots"" referring to popular or picturesque locations for activities like jumping or surfing.']",1,2,8,14
+34780,"['Tokens referring to paths or directions, particularly in the context of travel or navigation.']",2,1,3,13
+34835,"['Imperative phrases encouraging action or freedom, using ""away"" or ""limit"" in motivational contexts.']",1,0,10,14
+34858,"['The token ""All"" at the beginning of instructional or explanatory statements.']",0,0,1,15
+34925,"['The word ""the"" in contexts emphasizing uniqueness or significance.']",5,0,1,10
+34955,['Verbs related to action and decision-making in adventurous or challenging contexts.'],3,4,6,12
+35161,['Words denoting non-essentiality or lack of strict requirement in context.'],4,1,9,11
+35275,"['Positive, encouraging verbs like ""enjoying"" or adjectives like ""protective"" describing experiences or actions.']",0,3,7,15
+35490,"['Outdoor activity-related nouns like ""trails"" or ""waterfall"" in adventurous or recreational contexts.']",4,0,3,11
+35545,"['The token ""for"" in contexts emphasizing suitability or accessibility for individuals or groups.']",1,0,10,14
+35561,"['Words conveying perception or appearance, often in contexts of clarity or subjective experience.']",3,3,7,12
+35576,"['The token ""plicate"" in the word ""complicate"" describing unnecessary complexity.']",2,2,8,13
+35952,"['The preposition ""for"" indicating purpose or consequence in a narrative context.']",0,0,1,15
+36111,"['The indefinite article ""a"" used before a noun or noun phrase.']",1,0,1,14
+36250,['Tokens describing environmental or experiential qualities in an activity-focused context.'],7,0,7,8
+36394,['Tokens denoting legal or procedural concerns like liability or preparation.'],1,5,5,14
+36686,['Words referring to experienced individuals engaging in advanced sports or activities.'],2,3,7,13
+36797,['Words implying action or choice in adventurous or high-energy contexts.'],6,0,3,9
+36850,['Tokens related to specialized or immersive experiences or certifications.'],4,0,2,11
+37098,"['Token ""out"" in phrases describing smoothing or refining actions.']",0,0,1,15
+37145,['Tokens conveying extremeness or intensity in activities or actions.'],3,3,0,12
+37148,['Verbs indicating action or causation in contexts of adventure or exploration.'],5,4,6,10
+37173,"['The term ""diving"" in the context of scuba diving activities or learning experiences.']",1,0,10,14
+37333,"['The token ""out"" following ""trying"" in contexts of exploring or experimenting with activities.']",0,0,10,15
+37445,"['The token ""Ġinto"" in contexts of entering or starting an activity, place, or experience.']",0,0,2,15
+37452,['Prepositions indicating choice or direction in adventurous or challenging contexts.'],2,3,7,13
+38036,"['The token ""for"" in the context of advice or considerations.']",3,0,1,12
+38444,['Tokens representing conditional or directional phrases in advice or instructions.'],1,0,6,14
+38446,"['Tokens implying feasibility, suitability, or preference in specific contexts.']",9,0,2,6
+38580,"['The suffix ""ating"" in adjectives describing exciting or stimulating activities or experiences.']",0,7,3,15
+38712,"['The token ""in"" when following ""invest,"" often in contexts discussing gear, training, or preparation.']",0,1,9,15
+38916,"['The word ""worry"" in contexts minimizing concern or effort.']",0,0,10,15
+38948,"['The token ""a"" preceding a description of a daring or impressive action.']",0,0,1,15
+39054,"['Tokens ""all"" and ""those"" emphasizing examples or generalizations in motivational or instructional contexts.']",3,1,9,12
+39076,"['Words related to longboarding, agility, or pointers in the context of sports or physical activities.']",1,5,5,14
+39411,['Verbs expressing endurance or persistence in challenging situations.'],0,1,2,15
+39467,"['Action-focused verbs like ""boost"" and ""maximize"" emphasizing improvement or enhancement of an experience or outcome.']",1,3,7,14
+39565,"['Prepositions indicating motion or transfer, like ""with,"" in dynamic or descriptive contexts.']",1,0,1,14
+39685,"['The token ""of"" following a phrase describing purity or extension in relation to an activity or concept.']",1,3,7,14
+39746,"['Tokens related to outdoor activities, particularly challenging or extreme trails and ultra-running.']",7,0,3,8
+39766,"['Conjunction ""and"" linking actions or ideas in active, adventurous contexts.']",6,0,3,9
+39791,['Action-oriented verbs related to physical activity or decision-making contexts.'],6,3,7,9
+39840,"['The token ""lessons"" in questions about whether to take lessons or use alternative approaches.']",0,0,4,15
+40162,"['The token ""have"" in contexts emphasizing simplicity or lack of concern.']",0,0,1,15
+40188,"['Temporal or sequential adverbs indicating order or occurrence of events, like ""once"" and ""two"".']",0,2,4,15
+40453,"['Adverbs ""almost"" and ""sometimes"" indicating uncertainty or partiality in actions or states.']",0,0,10,15
+40714,"['Tokens indicating rarity, provision, or creation in contexts emphasizing uniqueness or experiential depth.']",2,5,5,13
+40792,"['Tokens ""be"" and ""wild"" in contexts emphasizing natural or overwhelming qualities.']",0,0,4,15
+40855,"['Verbs used when requesting or offering advice, tips, or instructions.']",3,0,10,12
+41036,"['The word ""with"" in contexts involving actions or techniques.']",1,0,1,14
+41093,"['Tokens related to physical challenges or conditions requiring strength, balance, or endurance.']",8,3,7,7
+41176,"['The token ""paddle"" in contexts related to surfing or navigating waves.']",0,1,9,15
+41186,['Words emphasizing excitement or impressiveness in adventurous or thrilling contexts.'],0,5,5,15
+41270,"['Tokens related to physical collisions, impacts, or falls in action-oriented contexts.']",1,2,8,14
+41341,['Prepositions used in phrasal verbs or idiomatic expressions indicating an action or process.'],4,0,1,11
+41635,"['Action-oriented nouns conveying movement or dynamism like ""flow"" and ""wave"".']",2,1,7,13
+41656,"['Tokens emphasizing risk-taking or physical challenge, often related to confidence, terrain, or attempting jumps.']",5,4,6,10
+41784,"['Tokens ""âĢĶit"" or ""Ġmatter"" emphasizing subjective judgments or dismissing importance in advice or casual contexts.']",0,0,10,15
+41933,"['Words describing physical hindrance or inconvenience, like ""down,"" ""cumbersome,"" and ""way.""']",0,3,7,15
+42019,"['Words related to skill levels or progression in activities, like ""intermediate"" or ""buildup"".']",4,0,3,11
+42178,"['Words related to cold, ice, or frozen surfaces in the context of outdoor activities.']",0,2,8,15
+42448,"['Modal verb ""can"" in personal advice or self-improvement contexts.']",0,2,8,15
+42497,"['Tokens signifying action or adaptation, often in motivational or instructional contexts.']",3,5,5,12
+42584,['Words related to wind or swimming pools as physical environments.'],2,1,9,13
+42586,"['Words related to psychological states or mental strength, often in motivational or endurance contexts.']",2,4,6,13
+42618,"['The token ""mot"" in the context of motocross discussions.']",1,1,9,14
+42766,"['Tokens indicating action or direction, such as ""to,"" ""of,"" ""back,"" ""follow,"" and ""going.""']",2,1,9,13
+43268,['Adjectives and conjunctions in contexts evaluating gear utility or conditions for actions.'],2,2,8,13
+43335,"['Adjectives expressing personal qualities, preferences, or judgments.']",4,0,2,11
+43380,"['The token ""even"" indicating an exceptional or alternative possibility.']",0,0,7,15
+43417,"['Tokens related to immersion or emphasis, often involving ""ing"" forms or italicized/emphasized formatting.']",2,5,5,13
+43524,"['Tokens ""key"" or ""critical"" emphasizing importance in advice or guidance contexts.']",0,0,10,15
+43784,"['The token ""to"" following ""go straight,"" indicating a direct transition or movement toward a target.']",0,2,8,15
+44029,"['Tokens representing specific types, categories, or specialized items in a context of selection or recommendation.']",0,4,2,15
+44501,"['Tokens ""it"" or ""haven\'t"" in contexts of inexperience or skipping activities.']",0,0,10,15
+44506,['Words related to preparation or guidance in outdoor or diving activities.'],4,2,8,11
+44622,"['Tokens ""too"" or ""to"" within phrases emphasizing minimal expenditure or effort.']",0,1,5,15
+44727,"['Prepositions in contexts of action or initiation, often involving invitations or outdoor activities.']",4,1,9,11
+44765,"['Tokens ""over"" and ""adjustments"" in contexts emphasizing critique or simplification.']",1,0,5,14
+44767,"['Words tied to acquiring skills or overcoming challenges, like ""lessons"" and ""resilience"".']",1,0,10,14
+45151,"['The phrase ""for the first time"" in contexts describing outdoor or adventurous activities.']",0,0,10,15
+45152,"['The verb ""give"" used in contexts implying transfer or provision of a skill or advantage.']",1,0,1,14
+45321,"['Words describing physical challenges or uneven surfaces like ""rough"", ""rails"", ""ridges"", and ""ledges"".']",1,3,7,14
+45372,"['Terms related to skiing or outdoor activities, focusing on challenges or features like trails and falling.']",1,2,8,14
+45819,"['Words emphasizing simplicity or personal growth, often in motivational or instructional contexts.']",4,0,5,11
+45867,"['The token ""much"" following ""too"" in contexts emphasizing minimal effort or preparation.']",1,2,6,14
+45895,"['Tokens implying physical motion or transition, specifically verbs like ""falling"" and ""leaning"".']",2,0,2,13
+46042,"['The token ""know"" in questions about prerequisites or preparatory information.']",0,0,3,15
+46087,['Terms related to adventurous activities or personal experiences involving water sports or outdoor challenges.'],5,4,6,10
+46125,['Tokens related to personal growth or thrill-seeking experiences.'],3,0,10,12
+46177,['HTML-like tags or markup tokens indicating structural elements.'],4,0,1,11
+46249,['Equipment and safety-related terms in contexts of outdoor or extreme sports.'],7,5,5,8
+46252,['Adjective describing a skill or requirement that lacks formality or preconditions.'],,,,
+46258,"['The token ""-duty"" in contexts describing durable or robust equipment.']",0,0,1,15
+46474,['Prepositions in motion-related contexts.'],2,1,1,13
+46704,"['The token ""as"" in contexts describing natural progression or improvement over time.']",2,5,3,13
+46766,"['Second-person pronoun ""you"" in motivational or reflective contexts.']",3,0,1,12
+46955,['Words indicating prior preparation or existing familiarity with a topic.'],2,0,4,13
+47025,"['Tokens introducing examples, suggestions, or comparisons in instructional or advice-giving contexts.']",3,4,6,12
+47046,['Words describing the effect of actions or objects on speed or resilience.'],3,0,5,12
+47225,"['The token ""exhilar"" in contexts describing thrilling or adventurous activities.']",2,2,8,13
+47354,"['Common short functional words like ""it"" and ""for"" in neutral or explanatory contexts.']",4,0,3,11
+47419,"['The phrase ""all about"" emphasizing key traits or principles in motivational or explanatory contexts.']",0,1,8,15
+47725,"['The token ""Sky"" in text describing skydiving activities.']",1,2,8,14
+47880,['Verbs denoting dynamic physical actions or impulsive decisions in adventurous or high-energy contexts.'],5,0,10,10
+47882,['Tokens describing continuous duration or time-related concepts in a narrative context.'],3,0,1,12
+48009,['The question mark following inquiries about where to start.'],3,4,6,12
+48012,['Adjectives conveying thrilling or empowering experiences.'],1,0,10,14
+48037,"['Tokens related to mental processes or comprehension, often ""understand"" or conditional reasoning like ""might"".']",0,3,7,15
+48063,"['Terms related to extreme sports, particularly advanced techniques or challenging classifications.']",6,4,6,9
+48076,"['The token ""uck"" in the context of physical actions or movements.']",0,0,1,15
+48084,"['The informal noun ""stuff"" referring to unspecified or technical tasks.']",0,0,1,15
+48102,"['Comparative tokens ""as"" or ""than"" emphasizing relative importance in evaluative statements.']",0,0,8,15
+48116,"['Tokens ""build"" and ""maybe"" in contexts suggesting preparation or confidence-building activities.']",0,0,10,15
+48131,['Abstract nouns denoting strong qualities or characteristics in a context of physical or emotional exertion.'],5,1,1,10
+48161,"['Contexts emphasizing preparation or confidence for physical challenges, often near ""be,"" ""ensure,"" or related to water/swells.']",2,1,9,13
+48416,['Adjectives or adverbs emphasizing bravery or confidence in extreme sports contexts.'],2,1,2,13
+48517,['Tokens indicating specific spatial locations or transitions during outdoor activities like surfing or biking.'],0,1,9,15
+48546,"['The token ""to"" introducing an action described as fun, thrilling, or exhilarating.']",1,1,7,14
+48972,"['The token ""firsthand"" in contexts emphasizing direct personal experience.']",2,1,9,13
+49189,"['Question marks in direct, concise interrogative sentences.']",0,0,10,15
+49529,"['Tokens that indicate hypothetical or future scenarios, often requiring decision-making or planning.']",5,2,1,10
+49809,['Negations in casual advice or reassurance about requirements or prior experience.'],0,3,7,15
+49974,['Interrogative punctuation used after phrases about certification or equipment.'],1,1,3,14
+50213,['Adjectives emphasizing uniqueness or enthusiasm in personal or stylistic contexts.'],0,2,1,15
+50344,['Tokens expressing uncertainty or hesitation in contexts of preparation or decision-making.'],3,5,5,12
+50521,"['The token ""with"" in contexts describing hindrance or guidance.']",1,0,4,14
+50534,"['Words ""feel"" or ""taste"" in contexts of experiential learning or getting a sense of something.']",1,0,10,14
+50650,"['Tokens representing physical actions or movements, often preceded by ""picking"" or related verbs.']",3,1,0,12
+51008,"['Tokens representing conditional or uncertain scenarios, including ""if"", ""for"", ""some"", and ""flop"".']",3,2,8,12
+51067,"['Quantifiers indicating extent or degree, like ""at least"" and ""so much"".']",2,0,2,13
+51152,"['Tokens conveying inner strength or tranquility, often in contexts emphasizing mental or emotional resilience.']",1,0,2,14
+51186,['Tokens describing natural features or environments associated with outdoor activities.'],3,1,9,12
+51283,"['The word ""momentum"" in contexts emphasizing building or maintaining speed, progress, or confidence.']",2,0,10,13
+51356,"['Words indicating comparisons or preferences, particularly ""than"" and ""hobby"".']",0,2,8,15
+51381,"['Prepositions indicating movement or transition, often paired with ""into"" or ""on"".']",0,2,8,15
+51447,"['The token ""lessons"" in contexts discussing preparation or instruction before attempting an activity.']",0,0,10,15
+51513,"['The preposition ""onto"" in contexts describing physical movement or jumping actions.']",0,0,2,15
+51603,"['Verbs or prepositions indicating action, intention, or transition in instructional or explanatory contexts.']",5,4,6,10
+51749,"['Words negating necessity or focusing attention, often in informal or advisory contexts.']",3,4,6,12
+51866,"['Prepositions indicating spatial or directional relationships, like ""with"" or ""another"".']",3,0,2,12
+51907,"['The word ""moving"" in contexts emphasizing speed or motion.']",0,0,1,15
+51936,"['The token ""Any"" in questions requesting tips, advice, or guidance.']",0,5,5,15
+51968,"['The word ""type"" used in questions about specific categories or kinds of equipment, conditions, or activities.']",0,0,10,15
+51979,"['The token ""warm"" in contexts related to staying warm or maintaining warmth.']",1,1,2,14
+52040,"['The token ""tank"" or ""tanks"" in the context of oxygen or air for diving activities.']",0,0,7,15
+52170,['Prepositions indicating purpose or intent in a sentence.'],2,0,1,13
+52292,"['The token ""tackling"" in sentences describing efforts to attempt challenging physical activities.']",2,2,8,13
+52469,"['Tokens related to ""extension"" or excessive quantities in activities or actions.']",0,6,4,15
+52493,"['The token ""Don"" in informal, reassuring contexts.']",0,0,1,15
+52604,"['The token ""out"" when used in phrases indicating the beginning of an activity or process.']",0,2,2,15
+52881,"['The token ""Cut"" following a system header delimiter.']",1,0,10,14
+52959,['Adjectives or pronouns describing specific objects or qualities in a spatial or evaluative context.'],0,0,3,15
+53155,['Abstract or philosophical terms emphasizing significance or value.'],0,0,1,15
+53249,['Tokens describing first attempts or instinctive actions in thrill-seeking activities.'],3,1,9,12
+53443,"['The pronoun ""I"" in contexts related to personal planning or decision-making.']",8,0,4,7
+53478,"['Words related to resource constraints or hindrances like ""it,"" ""down,"" and ""budget.""']",4,2,8,11
+53490,"['Tokens related to setting or striving for a goal, often involving action-oriented sports or activities.']",7,1,9,8
+53518,['Tokens referring to physical objects or pathways associated with steepness or directional markings.'],4,0,2,11
+53825,"['The token ""flips"" in contexts involving physical activities or practice sessions.']",1,0,6,14
+53845,['Tokens describing physical actions or objects in an adventurous or extreme activity context.'],6,1,9,9
+53901,['Words conveying courage or perseverance in motivational or challenging contexts.'],1,0,2,14
+53959,['Words related to surfing or extreme sports activities.'],8,0,10,7
+54032,['Emotionally charged or self-reflective verbs describing states or feelings.'],1,0,1,14
+54087,"['Verbs or adverbs indicating progression, improvement, or preparation.']",3,1,8,12
+54153,"['Verbs or phrases indicating decision-making, consideration, or preparation.']",3,1,6,12
+54554,"['Words ending in ""-ing"" or ""-estimate"" and words related to focus or distraction.']",4,2,8,11
+54562,"['The token ""else"" in contexts implying minimal requirements or absence of additional necessities.']",0,1,4,15
+54569,"['Prepositions conveying attachment or direction, particularly ""to"".']",2,0,1,13
+54581,"['The token ""once"" introducing a conditional or temporal clause describing progression or readiness in activities.']",1,2,8,14
+54654,"['Words related to experience, learning, or preparation in motivational or instructional contexts.']",5,2,8,10
+54728,"['Verbs indicating physical action or motion, often associated with dynamic or adventurous activities.']",8,4,6,7
+54739,['Negation or absence in contexts involving overthinking or avoiding excessive planning.'],1,2,8,14
+54841,"['Tokens ""used"" and ""in"" in contexts of acclimation or securing something physically.']",0,1,9,15
+55001,"['The word ""home"" in contexts of personal practice or training.']",0,0,5,15
+55036,['Physical structures or objects used for jumping or climbing in an action-oriented context.'],1,2,8,14
+55086,"['Tokens related to safety, adaptation, and specific activities like jet skiing in an instructive context.']",4,2,5,11
+55169,"['The token ""think"" in comparisons involving intuitive or surprising ease versus expectations.']",2,2,8,13
+55341,"['Tokens related to preparation, caution, or handling specific tasks or situations.']",6,2,8,9
+55365,"['Tokens ""on"" and ""ridden"" in contexts related to biking or trails.']",1,0,10,14
+55479,['Words related to trusting instincts or confidence in decision-making contexts.'],1,0,2,14
+55585,"['The token ""likely"" in contexts predicting potential negative outcomes due to hesitation or overthinking.']",0,0,9,15
+55789,"['Words introducing specific advice or instructions, often in beginner contexts or physical activity scenarios.']",5,0,9,10
+55798,"['Tokens representing progression, depth, or intensity in physical or metaphorical contexts.']",2,5,5,13
+55801,"['The token ""too"" in the phrase ""Don’t worry too much about"" conveying reassurance or minimizing concern.']",3,3,7,12
+55853,"['Action-related tokens indicating methods, preparation, or timing for accomplishing tasks or navigating situations.']",5,2,8,10
+56275,"['Tokens associated with compensating for or completing actions, especially ""up"" and ""to"".']",2,4,6,13
+56319,"['Tokens emphasizing immersion, focus, or intensity in actions or experiences, often motivational or descriptive.']",2,1,4,13
+56528,"['Tentative or conditional suggestions using ""maybe"" and similar tokens expressing uncertainty or preliminary choices.']",1,6,4,14
+56648,"['Modifiers like ""too"" or ""the"" emphasizing degree or specificity in contexts of advice or instructions.']",1,3,7,14
+56698,"['Tokens conveying absence or lack, especially ""nothing"" in reassuring or reflective contexts.']",0,3,7,15
+56800,"['Words ""half"" or ""ting"" linked to physical activities or techniques.']",2,1,9,13
+56913,"['Tokens denoting correctness or appropriateness, often in decision-making contexts (e.g., ""right,"" ""key,"" ""top"").']",0,1,4,15
+56950,"['The token ""to"" preceding verbs indicating intent or purpose in action-related contexts.']",2,0,3,13
+57013,"['Terms related to spatial freedom, movement, or capacity in practical or physical contexts.']",1,3,7,14
+57093,"['Conditional ""if"" and prepositional ""of"" in contexts describing activities or experiences.']",1,1,9,14
+57216,['Tokens tied to experiential learning or specific equipment in adventure or leisure contexts.'],9,1,9,6
+57239,"['The token ""up"" concluding a phrase describing the completion or setup of an action.']",0,0,1,15
+57309,['Singular nouns referring to methods or structures in an extraordinary or adventurous context.'],2,0,2,13
+57315,"['The token ""equipment"" in contexts of renting or purchasing.']",0,0,4,15
+57364,"['The token ""follow"" in contexts emphasizing guidance or imitating actions.']",0,0,10,15
+57828,"['The word ""controlled"" in contexts related to environments or training settings.']",0,1,9,15
+57859,"['Prepositions ""into"" and ""stretch"" indicating movement or extension into a space or concept.']",2,0,4,13
+57956,['Tokens related to physical obstacles or equipment in adventure or sports contexts.'],3,0,10,12
+58066,['Verbs related to challenging tasks or simplifying complex processes.'],5,0,10,10
+58460,"['Tokens indicating a specific section or portion, often within a context of categorization or division.']",1,0,1,14
+58736,"['The token ""actually"" emphasizing surprising or counterintuitive outcomes.']",0,0,7,15
+58922,"['The token ""hills"" describing small physical elevations in a context of learning or practicing activities.']",0,0,1,15
+59099,"['The token ""food"" in contexts describing survival or sourcing resources.']",0,0,1,15
+59147,"['The token ""tricks"" in contexts related to attempting or learning activities, often recreational or skill-based.']",1,0,10,14
+59198,['Action-related nouns in the context of extreme sports or physical activities.'],6,2,1,9
+59430,"['The preposition ""about"" in contexts discussing knowledge or familiarity with a subject.']",1,0,2,14
+59539,"['The word ""sure"" in contexts of certainty or safety.']",0,0,10,15
+59609,"['Abstract, evaluative adjectives conveying importance or necessity in casual or motivational contexts.']",6,2,8,9
+59765,"['Words related to excitement or adventure, often describing extreme activities or daring experiences.']",5,2,8,10
+59877,"['Plural noun endings, specifically ""ons,"" related to endurance activities or challenges.']",0,1,1,15
+59945,"['Words indicating choices, exclusions, or leaving something (e.g., ""out,"" ""behind,"" ""option"").']",2,2,3,13
+59968,['Words related to surfing or extreme sports equipment and conditions.'],1,1,9,14
+59977,['Verbs indicating skill acquisition or physical development through effort or practice.'],1,2,8,14
+60184,"['The token ""catching"" in the context of surfing or waves.']",2,2,8,13
+60200,"['The definite article ""the"" in motivational phrases encouraging decisive action or risk-taking.']",1,0,3,14
+60266,['Words conveying self-assurance or personal challenge in motivational or adventurous contexts.'],7,0,5,8
+60342,"['Specific action-related words like ""bombing,"" ""less,"" and ""by"" in adventurous or instructional contexts.']",1,1,9,14
+60380,['Tokens referring to excessive preparation or decision-making processes.'],2,1,4,13
+60431,"['Tokens ""to"" and ""be"" in phrases expressing a desire or aspiration for something special or positive.']",0,0,4,15
+60588,"['The token ""routes"" or ""route"" in contexts related to outdoor activities or travel.']",0,1,5,15
+60613,"['The contraction ""\'s"" in informal explanatory or motivational contexts.']",0,2,8,15
+60631,"['Words related to adequacy, sufficiency, or being enough in motivational or affirming contexts.']",2,0,1,13
+60990,"['Words related to personal independence or risk avoidance, like ""own,"" ""safe,"" and ""safer.""']",0,1,4,15
+61096,"['The token ""committing"" in contexts of dedication or trust related to physical or mental challenges.']",0,0,10,15
+61234,"['The token ""proper"" when describing equipment or preparation.']",0,0,2,15
+61413,"['The preposition ""in"" used in contexts describing specific locations or scenarios.']",2,1,9,13
+61589,"['The token ""area"" in phrases specifying a location personalized as ""your area"".']",0,0,10,15
+61600,"['The token ""divers"" used in contexts related to advanced or long-term activities.']",2,0,2,13
+61880,['Tokens related to daring physical maneuvers like flips or falls in adventurous contexts.'],2,2,8,13
+61926,['Tokens related to steep descents or challenging terrain in outdoor or biking contexts.'],0,1,9,15
+62071,['Adverbs or adjectives emphasizing preparation or reassurance in practical or physical contexts.'],7,3,7,8
+62301,"['The possessive pronoun ""my"" in contexts discussing self-improvement or personal skill enhancement.']",0,0,5,15
+62527,"['The token ""once"" in contexts emphasizing natural progression or ease after an initial action.']",0,2,8,15
+62582,['Action-oriented verbs implying effort or problem-solving in instructional or motivational contexts.'],5,5,5,10
+62664,"['The token ""iff"" in contexts involving conditions or logical statements.']",1,1,0,14
+62810,"['The word ""cliff"" in contexts related to diving or jumping activities.']",0,0,10,15
+62819,"['Keywords related to physical activities emphasizing preparation, strategy, or personal qualities like guts, pacing, and layers.']",5,0,10,10
+63047,"['Tokens referencing specific experiences or comparisons, often involving ""time"" or ""that"" in an explanatory context.']",2,1,2,13
+63263,"['Tokens ""to"" and ""measuring"" in contexts related to physical actions or achieving precise results.']",4,1,8,11
+63457,"['Tokens indicating immediacy or simplicity in action, like ""just,"" ""go,"" ""by,"" and ""away.""']",2,3,7,13
+63606,"['Action-oriented verbs tied to learning or performing physical activities like observing, wiping out, or using gear.']",4,2,8,11
+63675,"['Tokens related to caution or adventure, such as ""out"" in ""watch out"" or ""canyon"".']",5,2,8,10
+63686,"['Words conveying overcoming challenges or fear, especially ""over"" and ""past"".']",0,1,9,15
+63699,"['The token ""of"" introducing explanations or descriptions of concepts or techniques.']",0,0,3,15
+63729,"['The token ""flip"" or ""flips"" in contexts discussing aerial tricks or stunts.']",0,0,10,15
+63734,"['Tokens related to adventurous or extreme activities, particularly ""limits"" and ""tandem"" in motivational or descriptive contexts.']",1,0,4,14
+63840,"['The word ""not"" in contexts indicating lack or absence of preparation or action.']",,,,
+63859,"['The token ""by"" in contexts suggesting causation or means of achieving something.']",0,0,2,15
+64032,"['The word ""instructors"" in contexts emphasizing their responsibility for handling or managing tasks effectively.']",0,0,10,15
+64143,"['Modal verbs and auxiliary verbs indicating future actions, potentiality, or ongoing processes.']",8,6,4,7
+64325,"['Tokens denoting intent, focus, or key components of actions or processes in an engaging context.']",8,0,2,7
+64369,"['Tokens related to hesitation or distraction, often in contexts involving confidence or physical actions.']",2,0,10,13
+64427,['Prepositions indicating relationships or transitions in adventurous or exploratory contexts.'],4,3,7,11
+64760,"['Tokens related to skiing or movement emphasizing freedom, speed, and confidence.']",4,6,3,11
+64966,"['The token ""accelerate"" in contexts related to skill development or learning improvement.']",0,0,3,15
+64977,"['Tokens related to ""hiring"" or ""hiking"" in instructional or advisory contexts.']",1,0,6,14
+65062,"['The token "","" following motivational language involving leaps or jumps.']",0,0,2,15
+65307,"['Prepositions ""from"" or ""by"" in motivational contexts about self-challenge or improvement.']",0,0,10,15
+65378,"['The token ""that"" when used as a reference to an option or step being skipped.']",1,3,5,14
+65430,"['Phrases emphasizing initiation or action, particularly ""give it a go"" and ""get-go"".']",0,2,8,15
+65524,['Tokens preceding nouns in contexts of renting or borrowing gear or equipment.'],0,2,8,15
+65532,['Tokens indicating simplicity or ease in instructional or motivational contexts.'],1,2,8,14
+65640,"['Tokens describing organized activities or events, specifically ""sessions"" in the context of training or practice.']",,,,
+65643,"['Words related to physical exploration or movement involving depth, often metaphorically.']",5,0,2,10
+65744,"['Articles ""a"" or ""an"" before equipment or preparation-related nouns in instructional or advisory contexts.']",0,2,8,15
+65760,['Words describing favorable conditions or integral parts of an enjoyable experience.'],1,3,7,14
+65798,"['Indefinite adverbs or adjectives indicating choice or location, like ""whichever"" and ""wherever"".']",0,1,3,15
+65816,"['The token ""hill"" in contexts describing favorable wind conditions or outdoor activities.']",0,0,1,15
+65853,"['Tokens related to ""cliff"" diving or a ""bit"" of challenge in adventurous activities.']",0,1,9,15
+65864,['Tokens related to skydiving activities or preparation steps for jumps.'],2,0,2,13
+66041,"['Tokens marking the end of a sentence, often following descriptions of experiences or activities.']",3,2,8,12
+66145,"['Tokens indicating inquiries or advice for beginners, often starting with ""any"".']",0,3,7,15
+66240,"['Verbs related to action, decision-making, or progression, often in motivational or instructional contexts.']",11,0,10,4
+66247,"['Descriptions of challenging terrain or situations using ""tough"" or ""rough"".']",1,2,8,14
+66366,"['Prepositions introducing activities or actions, typically indicating the circumstances under which they occur.']",11,1,1,4
+66654,['Prepositions or adverbs indicating manner or method in questions or instructional contexts.'],2,1,2,13
+67170,['Tokens related to enjoying scenic views or focusing on the act of viewing.'],0,2,8,15
+67338,"['Common determiners like ""a"" and ""the"" in contexts describing actions or objects to replicate or assess.']",5,2,8,10
+67372,"['The token ""of"" in contexts emphasizing the source or cause of distraction.']",0,0,1,15
+67478,['Tokens expressing intent or desire to undertake physical activities or challenges.'],5,4,6,10
+67503,"['The token ""it"" within informal advice or commentary emphasizing simplicity and confidence over preparation.']",1,0,10,14
+67639,"['The token ""it"" in contexts emphasizing subjective experiences or thrill over practicality or safety measures.']",0,1,9,15
+67765,"['Verbs ""ask"" or ""sign up"" indicating proactive actions or decisions.']",0,2,8,15
+67776,['Tokens indicating a novel or first-time experience.'],5,0,10,10
+67944,"['The token ""waste"" or its inflected form ""wastes"" in contexts discussing inefficiency or unnecessary effort.']",0,0,10,15
+67945,['Verbs related to initiating or beginning an action or process.'],2,1,9,13
+68029,"['Words emphasizing challenges, appearances, or transitions in a process or journey.']",5,3,7,10
+68081,"['Prepositions ""to"" or ""certain"" indicating direction or specification in instructional or procedural contexts.']",2,0,3,13
+68332,['Tokens indicating initiation or involvement in an activity or process.'],10,0,1,5
+68484,"['The verb ""give"" in contexts implying provision or lack thereof.']",0,0,2,15
+69034,['Verbs associated with starting or engaging in action or activity.'],7,0,1,8
+69056,"['The token ""up"" in phrases conveying potential mistakes or errors.']",0,0,1,15
+69262,['Tokens emphasizing precision or specificity in action or qualities.'],5,2,2,10
+69340,"['The token ""further"" used to describe progression or continuation.']",0,0,1,15
+69832,"['The indefinite article ""a"" preceding nouns in descriptive or instructional contexts.']",2,0,2,13
+69860,"['Words related to preparation or packing, often in advice or instructional contexts.']",,,,
+69943,"['Tokens related to commitment, preparation, or being equipped for challenges or high-risk situations.']",5,0,3,10
+70063,"['The token ""feeling"" in contexts of self-assessment or emotional states tied to confidence or bravery.']",0,1,9,15
+70305,"['Tokens suggesting guidance or advice for beginners, specifically ""experience"" and ""recommendations"".']",1,0,4,14
+70307,"['The token ""enough"" in contexts suggesting adequacy or sufficiency for a task or condition.']",1,0,10,14
+70520,"['Conditional conjunction ""if"" introducing scenarios or conditions.']",0,0,1,15
+70529,"['Words related to physical weight or mass, especially in contexts of burden or hindrance.']",0,2,8,15
+70656,"['The token ""part"" in phrases like ""it\'s all part of"" indicating inclusion in a larger process or experience.']",0,0,5,15
+70745,"['The verb ""go"" in contexts suggesting potential failure or risk.']",0,0,3,15
+70908,"['Words indicating specificity or emphasis, e.g., ""to,"" ""single,"" ""own,"" ""routine,"" ""keen.""']",2,0,10,13
+71062,['Words related to outdoor activities or adventurous sports.'],9,1,9,6
+71118,['Action verbs related to adventurous or skill-based activities.'],4,0,1,11
+71139,"['Contextual tokens linked to comparisons or classifications, often introducing or specifying terms.']",1,1,4,14
+71301,"['The token ""rarely"" indicating infrequent occurrence or usage.']",0,0,2,15
+71339,['Articles or nouns related to renting or setting up equipment for adventure sports.'],0,0,10,15
+71487,"['Determiners ""the"" or ""done"" in contexts emphasizing preparation or completion.']",3,0,5,12
+71578,"['The token ""need"" in contexts suggesting assistance or dependency.']",2,0,1,13
+71628,"['The token ""the"" in contexts describing exciting or specific physical activities like diving or falling.']",4,0,1,11
+71696,"['Plural nouns ending in ""ings"" referring to physical objects.']",1,0,1,14
+71760,"['The pronoun ""you"" used in instructional or preparatory contexts.']",4,0,1,11
+71825,['Prepositions indicating spatial or conceptual relationships in casual advice or activity-related contexts.'],10,0,2,5
+71860,"['Terms related to skiing or snowboarding actions, especially ""jumps"" and ""spot"" in recreational contexts.']",0,0,10,15
+71915,['Singular abstract nouns denoting essential concepts or features.'],0,1,0,15
+71958,"['The token ""the"" preceding nouns related to excitement, adrenaline, or professional handling in adventurous contexts.']",3,0,6,12
+72502,"['Prepositions ""to"" and ""cover"" in contexts discussing optionality or adequacy for beginners.']",4,8,2,11
+72566,"['Articles ""a"" and ""first"" in imperative sentences encouraging action or participation.']",1,1,9,14
+72633,"['Tokens emphasizing sensory experience, notably ""the"" before ""thrill"" and ""sense"" of an activity.']",0,3,6,15
+72641,"['Tokens ""easily,"" ""to,"" or ""service"" in contexts emphasizing directness, simplicity, or lack of barriers.']",3,5,4,12
+72670,"['The token ""holding"" when describing someone as a barrier or restriction to personal freedom or progress.']",0,0,4,15
+72787,"['Comparative phrases using ""as"" or references to physical or metaphorical ""falls"" in action contexts.']",0,1,9,15
+72802,"['The token ""waves"" describing size or excitement in surfing or water-related contexts.']",2,2,8,13
+72831,"['Words related to professionals or expertise, especially ""pros"" and comparative effectiveness like ""effective"".']",1,2,8,14
+72860,['Verbs indicating actions or processes related to managing or adjusting resources or situations.'],0,5,5,15
+72890,"['Words expressing self-reliance or trust in minimal resources, often in informal or practical contexts.']",4,0,7,11
+72919,['Punctuation marks like semicolons or dashes following expressions about not needing extra gear or formal training.'],1,1,9,14
+73018,"['Comparative phrases starting with ""is"" or ""like"" related to gear, activities, or recommendations.']",1,2,8,14
+73139,"['Singular possessive pronoun ""my"" in contexts of personal development or skill improvement.']",2,0,1,13
+73270,"['The token ""entirely"" emphasizing completeness in an instinctive or experiential context.']",0,0,1,15
+73283,"['Tokens relating to physical skill development or gym equipment like ""develop"" and ""spotters"".']",6,1,4,9
+73526,"['Conditional conjunctions ""if"" or ""won"" in contexts describing optional actions or lack of necessity.']",4,3,7,11
+73592,['Adjectives describing stability or reliability in physical or abstract contexts.'],0,0,5,15
+73707,"['Tokens referring to immediacy or survival situations like ""moment"" and ""survival"".']",1,3,7,14
+73739,"['Temporal adverbs or determiners indicating sequence, frequency, or occurrence in casual, action-oriented contexts.']",3,4,6,12
+73859,['Verbs related to actions or decisions involving personal initiative or effort.'],4,2,8,11
+73924,"['Recreational activity terms related to jumping, slacklining, or boarding in adventurous contexts.']",1,0,10,14
+73979,['Words tied to physical coordination or altitude in instructional or experiential contexts.'],1,1,9,14
+73996,"['Tokens like ""starting"" or ""starting out"" in contexts about beginning or initiating activities.']",1,3,7,14
+74047,['The question mark token in direct questions.'],3,0,1,12
+74121,"['Plural form of ""junkie"" referring to extreme sports or thrill-seeking individuals.']",0,0,1,15
+74272,"['The token ""surface"" in contexts involving timing or safety in aquatic or diving scenarios.']",0,0,10,15
+74455,['Verbs related to underwater diving or descending actions.'],2,0,3,13
+74679,['Special character sequences resembling encoding artifacts or corrupted text.'],12,0,1,3
+74816,"['The token ""hang"" in the idiomatic phrase ""get the hang of it.""']",3,4,6,12
+74923,"['The token ""and"" in the phrase ""trial and error"".']",0,0,10,15
+75120,['Words conveying physical sensations or experiences tied to action or achievement.'],7,4,6,8
+75158,"['The token ""license"" in contexts related to qualifications or certifications.']",0,0,1,15
+75242,"['The token ""injured"" in contexts expressing concern about physical harm or safety.']",1,1,5,14
+75370,"['The word ""the"" following verbs indicating immediate action or focus.']",0,3,5,15
+75484,['Words indicating desire or trust related to extreme activities or reliance on operators.'],2,4,6,13
+75573,['Tokens related to climbing or scaling physical obstacles in urban or challenging environments.'],1,0,9,14
+75700,"['The token ""underwater"" in contexts related to exploring or experiencing depth.']",0,0,1,15
+76061,['Em dash-like characters or special symbols used in informal contexts.'],2,0,1,13
+76070,"['Tokens ""anything"" and ""thoughts"" in reflective or advice-seeking contexts.']",0,0,10,15
+76085,"['Words associated with physical excitement or thrill, especially ""adrenaline"" and dynamic activities like air time.']",3,0,3,12
+76154,"['The pronoun ""it"" in phrases reflecting novelty or unfamiliarity with an activity or experience.']",3,2,8,12
+76155,"['The token ""much"" emphasizing a limit or extent in advisory or cautionary contexts.']",0,0,2,15
+76203,"['Terms related to extreme sports, especially ""base"" and ""mountain"" in contexts of jumping or biking.']",1,0,10,14
+76204,"['Frequent adverbs and verbs indicating knowledge, occurrence, or control in experiential or skill-related contexts.']",5,1,9,10
+76358,"['Words associated with physical learning experiences, especially ""falling"" in contexts of sports or challenges.']",1,3,7,14
+76409,['Words related to movement strategy or terrain in physical activities.'],9,3,7,6
+76568,['Prepositions indicating movement or positioning in action-related contexts.'],2,2,8,13
+76579,"['The token ""ut"" in the word ""cautious"" especially when describing behavior or rules.']",0,0,3,15
+76582,"['The token ""distances"" when referring to long or longer distances in physical activities like running.']",0,0,10,15
+76609,"['Words contrasting or distinguishing options, like ""not,"" ""than,"" or ""alternating.""']",0,4,6,15
+76622,"['Prepositions indicating spatial or positional relationships, especially ""on"".']",3,0,1,12
+76688,"['The token ""go"" in motivational contexts encouraging action or pursuit of a challenging activity.']",1,1,6,14
+76761,"['The token ""Plus"" introducing an additional benefit or positive aspect in context.']",0,0,10,15
+76763,"['The term ""solo"" in contexts related to climbing or extreme sports.']",0,0,3,15
+76764,"['Reflexive pronoun ""yourself"" emphasizing individual action or experience.']",0,0,1,15
+76893,['Comma punctuation separating introductory or instructional clauses in text.'],5,0,1,10
+76976,"['The token ""bottle"" when paired with ""water"" in contexts discussing light packing or essential items.']",0,0,10,15
+77255,['Tokens related to clarity or transparency in water or mental focus.'],0,1,6,15
+77385,['Functional words like prepositions and conjunctions in contexts emphasizing personal action or decision-making.'],6,4,6,9
+77396,"['Articles ""a"" or ""in"" within motivational or activity-related contexts.']",5,0,9,10
+77645,['Adverbs or prepositions indicating immediate or direct action often tied to physical activity contexts.'],3,0,5,12
+77690,"['The token ""better"" emphasizing comparative advantage or preference in physical activities or conditions.']",0,1,9,15
+77708,"['The token ""anything"" in contexts expressing unfamiliarity or novelty of an action or experience.']",0,0,10,15
+77827,"['Positive comparative adjectives, especially ""better,"" in contexts emphasizing improvement or progression.']",0,3,7,15
+78077,['Words associated with physical movement or spatial orientation in outdoor or aquatic contexts.'],5,0,3,10
+78131,"['The token ""watch"" in contexts implying observation or monitoring.']",0,0,1,15
+78355,"['Possessive ""\'s"" following the word ""instructor"".']",0,1,4,15
+78391,"['The token ""it"" within motivational or instructional contexts involving physical activities or challenges.']",0,1,9,15
+78478,['Tokens related to renting or acquiring gear for outdoor or adventurous activities.'],0,2,8,15
+78481,['Singular indefinite quantifiers or references indicating one distinct occurrence or instance.'],1,1,1,14
+78541,"['The token ""store"" specifically in the phrase ""department store"".']",0,0,2,15
+78588,['Informal expressions indicating experience or trust in a casual or recreational activity context.'],6,0,10,9
+78641,"['Technical or procedural terms related to training, safety, or structured activities.']",1,3,7,14
+78656,"['Action-oriented verbs implying improvement, avoidance, or caution in contexts of skill development or safety.']",4,0,10,11
+78711,"['Tokens related to physical actions or outcomes, often involving risk, motion, or consequences.']",8,0,3,7
+78726,"['The token ""to"" in motivational phrases emphasizing action or focus.']",2,0,10,13
+78744,"['Verbs indicating continuous action or effort, often in motivational or instructional contexts.']",1,3,7,14
+78816,['Words conveying encouragement or motivation in instructional contexts.'],5,1,1,10
+79325,"['Adjectives describing size, simplicity, or intensity, often in contexts of personal experiences or decision-making.']",2,6,4,13
+79361,"['The token ""to"" in the phrase ""to be"" expressing a state or condition.']",0,0,1,15
+79561,"['Physical activities involving flips, gaps, or Class III difficulty in outdoor adventure contexts.']",1,0,10,14
+79670,"['Words related to physical limits or milestones, particularly ""depth"" and ""birthday"".']",2,2,8,13
+79867,"['Tokens ""it"" and ""to"" in motivational contexts encouraging action or decision-making.']",5,0,3,10
+79952,['Words related to safety or risk evaluation in adventurous or physically demanding contexts.'],1,3,7,14
+80119,"['Future-oriented verbs or adverbs expressing intent, delay, or eventual achievement of challenging goals.']",1,0,10,14
+80217,['Pronouns referring to the reader in motivational contexts involving challenges or pushing limits.'],0,3,7,15
+80520,"['Tokens related to marathons, particularly ""marathon"" in motivational or preparatory contexts.']",1,1,4,14
+80587,"['Tokens representing initial or sensory experiences like ""new,"" ""run,"" ""feel,"" or ""old.""']",5,1,9,10
+80917,"['Temporal expressions like ""for a while"" or actions involving preparation, often implying gradual effort or duration.']",3,5,4,12
+81081,['Prepositions linking actions or recommendations to specific methods or contexts.'],7,1,9,8
+81314,"['Comparative adjectives describing adequacy or sufficiency like ""enough"" and technical terms like ""techniques"".']",0,1,9,15
+81376,['Verbs indicating addition or enhancement in active contexts.'],0,2,5,15
+81700,"['Informal action-related words suggesting movement, ideas, or improvisation in a casual context.']",5,3,7,10
+81748,['Tokens indicating progression or advancement in an activity or skill.'],4,2,1,11
+81793,"['The token ""time"" when referring to a first occurrence or experience in an activity.']",1,0,1,14
+82338,"['The token ""rely"" in contexts emphasizing dependence on instincts, determination, or natural abilities during activities.']",0,0,10,15
+82539,"['The word ""it"" in a colloquial or motivational context, often paired with personal trust or pushing limits.']",2,3,7,13
+82635,"['Tokens ""about"" and ""matters"" in contexts discussing priorities or concerns.']",2,0,10,13
+82663,['Common determiners or prepositions at the start of a phrase.'],2,1,0,13
+82777,"['The token ""have"" when expressing possession or ability in a positive context.']",0,0,1,15
+83006,"['Action-oriented nouns or verbs tied to learning, exploring, or performing activities.']",9,1,9,6
+83033,"['The suffix ""ing"" in verbs related to physical movement or action.']",7,4,6,8
+83089,"['The token ""Falling"" in contexts about learning, effort, or progress involving physical or metaphorical trial.']",0,1,9,15
+83363,"['The word ""bungee"" in contexts related to jumping or planning a jump activity.']",0,0,10,15
+83685,"['The token ""wait"" in questions about delaying actions or decisions.']",0,0,10,15
+83775,"['The token ""to"" in questions about requirements or preparation.']",2,2,8,13
+83850,"['Verbs indicating action, engagement, or connection in physical or experiential activities.']",11,2,8,4
+83917,"['The token ""known"" referring to locations or spots associated with notable or specific characteristics.']",0,1,2,15
+84004,"['Words related to adventurous or thrilling activities, particularly ""experience"" and ""expedition"".']",3,2,8,12
+84131,"['Tokens ""riding"" or ""ride"" in contexts related to wave surfing or momentum.']",0,0,10,15
+84155,"['Tokens related to ""ocean,"" ""eye,"" or ""vibe"" in contexts describing experiences or observations.']",0,0,10,15
+84167,"['The token ""avoid"" in advisory or cautionary contexts.']",2,3,7,13
+84641,['Words related to physical activities or recreational experiences.'],1,2,8,14
+84921,"['Words emphasizing immediacy or standardization, like ""the,"" ""standard,"" and ""off,"" often in adventure or action contexts.']",4,1,9,11
+84939,"['The token ""over"" in contexts implying excessive action or overthinking.']",1,1,9,14
+85135,['Words conveying uncertainty or risk in contexts of new or unfamiliar experiences.'],5,3,7,10
+85348,"['The word ""already"" describing a prior skill, experience, or comfort level in an activity.']",0,0,6,15
+85428,"['Contractions using ""they\'re"" and ""you\'re"" in informal advice or commentary contexts.']",2,0,10,13
+85454,"['The token ""bridge"" in contexts suggesting a physical or metaphorical leap or crossing.']",0,0,1,15
+85554,['Positive adjectives describing extraordinary experiences or qualities.'],1,5,5,14
+85684,"['Positive comparative adjectives ""better"" or ""largest"" emphasizing improvement or scale.']",0,0,10,15
+86278,"['Words related to ""certification"" or ""cliff"" diving contexts.']",0,1,9,15
+86369,"['Prepositions ""with"" or ""to"" indicating selection or attraction to a specific feature or location.']",4,2,8,11
+86420,"['Terms related to physical activity and diving, specifically endurance and depth.']",4,1,7,11
+86703,"['The token ""for"" in contexts involving training or preparation for a physical activity or event.']",3,0,10,12
+86811,['Words conveying boredom or lack of engagement in recreational or activity-related contexts.'],0,2,3,15
+86846,"['The token ""truly"" used to emphasize authentic or profound experiences.']",0,0,10,15
+86872,"['Adjective ""fabric"" describing material properties in outdoor or professional gear contexts.']",0,0,1,15
+87251,['Tokens related to beginner activities or gear in parkour or scuba diving contexts.'],3,1,9,12
+87561,"['Comparative or quantifying words like ""more"" and ""lot"" emphasizing degree or amount.']",1,4,6,14
+87597,"['The token ""fl"" in ""kickflips,"" a term for skateboarding tricks.']",2,2,8,13
+87642,['Tokens indicating specific locations or durations relevant to physical activity or spatial orientation.'],4,0,2,11
+87863,"['The word ""currents"" in contexts discussing water and surfing conditions.']",0,0,6,15
+87951,"['The word ""seem"" in contexts emphasizing difficulty, complexity, or perception.']",0,0,10,15
+88013,['Prepositions or pronouns referring to objects or conditions in practical or outdoor contexts.'],5,3,7,10
+88036,"['The token ""moderately"" in contexts describing physical characteristics or actions.']",0,0,2,15
+88037,"['Tokens conveying inquiry or uncertainty, particularly ""to know"" or ""not to"" in instructional or advisory contexts.']",6,1,3,9
+88205,"['Conditional ""if"" introducing advice or considerations for beginners or uncertain scenarios.']",3,2,7,12
+88235,"['The word ""balance"" in contexts related to learning or mastering physical control and movement.']",0,1,9,15
+88403,['Common words in casual guidance or instructional contexts.'],11,0,2,4
+88461,"['Tokens related to skipping or avoiding steps, especially ""that"" in instructional or procedural contexts.']",0,5,5,15
+88500,"['The preposition ""on"" used before specifying a particular day or event.']",1,0,4,14
+88683,"['Tokens related to preparation, safety, or participation in adventurous activities.']",7,2,8,8
+88767,"['Tokens ""open"" and ""long"" in contexts of water activities or endurance sports.']",1,2,8,14
+88770,['Words related to adventurous or spontaneous physical activities like jumping or parkour.'],8,2,8,7
+88786,"['The word ""them"" in contexts involving direct engagement or interaction.']",0,0,1,15
+88906,"['The token ""tips"" in inquiries about advice or guidance for starting or improving activities.']",0,0,10,15
+89000,['Positive or motivational terms indicating significance or quality in an activity or situation.'],1,5,5,14
+89260,"['Coordinating conjunction ""and"" linking two phrases or clauses in descriptive or narrative contexts.']",3,0,1,12
+89326,"['The token ""Head"" initiating a directional or action-oriented phrase.']",0,0,1,15
+89341,"['The term ""downhill"" in contexts implying rapid or problematic progression.']",0,0,1,15
+89414,"['Tokens referring to a diving companion or the absence thereof, especially ""buddy"".']",0,2,7,15
+89511,"['Negation phrases like ""no need,"" ""no point,"" or comparisons using ""than.""']",2,1,9,13
+89687,['The semicolon token used in instructional or advisory contexts.'],0,2,8,15
+89777,['Words related to physical objects or conditions in action sports contexts.'],1,0,10,14
+89862,"['Terms related to skiing equipment or activities, especially ""skiing"" and ""skis.""']",0,2,8,15
+89874,"['The token ""âĢĻve"" in contractions involving ""have.""']",1,0,1,14
+89924,"['Tokens ""that"", ""it"", and ""don"" in contexts expressing reassurance or excitement about an activity.']",2,0,10,13
+89929,"['The token ""igger"" in ""Bigger"" when describing the challenges or benefits of large ocean waves.']",0,0,10,15
+89997,"['The token ""pacing"" in contexts related to managing effort or stress during physical activities.']",0,0,2,15
+90007,"['Words indicating self-discovery or first-time experiences like ""before,"" ""myself,"" and ""yourself.""']",1,1,9,14
+90054,"['Tokens related to personal effort, energy, or motivation in an encouraging or instructional context.']",6,2,2,9
+90087,['Comparative or superlative adverbs indicating speed or efficiency in learning or improving.'],2,0,2,13
+90190,"['Words related to extreme sports or activities involving freefall, jumps, ropes, or high drops.']",2,0,10,13
+90340,"['Tokens emphasizing complications or significance in decision-making or actions, often with ""complicate"" or ""matter"".']",1,1,9,14
+90382,"['Words related to physical activities or techniques, often emphasizing coordination or repetitive patterns.']",7,3,7,8
+90439,['Tokens related to providing or receiving information in an explanatory or guiding context.'],3,1,2,12
+90532,"['Words conveying personal perception or realization, especially ""sense"" in the context of emotional or experiential understanding.']",0,2,8,15
+90534,['Action-oriented verbs or phrases suggesting movement or engagement in dynamic activities.'],6,1,1,9
+90546,"['The verb ""do"" used in contexts emphasizing actions or decisions.']",2,1,4,13
+90675,"['Tokens related to activities, gear, or techniques in sports or adventurous contexts.']",7,1,7,8
+90701,"['The token ""stress"" in contexts advising against excessive worry or preparation.']",0,3,7,15
+90850,"['Tokens indicating questions or uncertainty, often involving tips, pointers, reassurance, or preparation.']",1,0,10,14
+90998,"['The token ""div"" in contexts describing free-fall or skydiving experiences.']",0,0,1,15
+91023,['Physical locations or objects used as obstacles or pathways in outdoor activities.'],0,0,1,15
+91151,"['The token ""once"" introducing a temporal or conditional clause.']",0,0,1,15
+91328,"['The token ""iste"" in contexts discussing off-piste skiing.']",0,0,10,15
+91431,"['The word ""intimidated"" in contexts expressing personal feelings or reactions.']",0,0,1,15
+91545,"['The token ""much"" following phrases about excessive practice or stress.']",0,0,3,15
+91613,"['The token ""way"" used to describe methods or approaches, often with an adjective like ""great"" or ""specific"".']",0,1,8,15
+91640,"['Verbs suggesting choice, adjustment, or precaution in advice or instructional contexts.']",3,3,7,12
+91711,"['Words related to discovery or minor risks, often in contexts of trial and error or self-learning.']",5,0,10,10
+91755,['Tokens related to adjustments or imperfections in processes or systems.'],2,0,10,13
+91774,"['Words requesting advice or guidance, such as ""follow,"" ""recommendations,"" and ""regulations.""']",0,0,7,15
+91779,"['The token ""lean"" describing physical movement or posture adjustment, often in sports or active contexts.']",0,0,10,15
+91841,['Words denoting boldness or consideration in decision-making contexts.'],0,4,6,15
+91979,"['The token ""bars"" referring to handlebars in the context of cycling or safety equipment.']",0,0,1,15
+92276,"['The token ""experience"" describing thrilling or memorable activities.']",0,0,10,15
+92505,"['Words indicating significance, causation, or purpose in motivational or explanatory contexts.']",2,6,4,13
+93270,['Prepositions introducing a phrase that specifies or qualifies context.'],7,0,1,8
+93293,"['The plural suffix ""es"" attached to nouns indicating objects or structures.']",0,0,1,15
+93305,"['Tokens related to ""jumps"" in contexts of solo or tandem skydiving activities.']",1,3,6,14
+93375,"['The token ""marathon"" in contexts related to training or preparation for running.']",0,0,10,15
+93486,"['The token ""too"" in the phrase ""don\'t worry too much"" emphasizing minimal concern or effort.']",1,1,9,14
+93539,"['Tokens ""unless"" and contextually similar conditional language suggesting exceptions or optionality.']",0,2,8,15
+93545,"['The token ""to"" in contexts implying minimal effort or worry.']",4,4,6,11
+93582,"['The token ""al"" often in contexts of optional or helpful training or lessons.']",1,5,5,14
+93587,"['Words related to overcoming challenges or obstacles, often in the context of fear or excitement.']",5,2,8,10
+93589,"['Mentions of the word ""parachute"" in contexts of usage or technical details.']",0,0,10,15
+93703,"['The word ""body"" in contexts emphasizing trust and natural regulation.']",0,2,8,15
+93797,"['The token ""unless"" signaling exceptions or conditions within advice or recommendations.']",0,1,9,15
+94049,"['Pronouns referring to people or objects in contexts of action, observation, or interaction.']",4,2,4,11
+94141,"['Adjectives describing emotions or skill levels, such as ""nervous"" or ""advanced"".']",1,0,10,14
+94195,['Words indicating duration or lack of experience in activities or hobbies.'],3,5,5,12
+94359,"['Tokens ""more"" and ""to"" in motivational or adventurous contexts.']",3,0,7,12
+94394,"['The token ""safety"" in contexts discussing protective gear or precautionary measures.']",1,0,10,14
+94395,['The comma after motivational or instructional phrases.'],1,0,4,14
+94728,"['The word ""adrenaline"" in contexts emphasizing excitement, physical activity, or instinct-driven actions.']",2,1,9,13
+94839,"['The token ""you"" in motivational or reassuring contexts.']",3,0,1,12
+94898,"['The contraction ""is"" in casual or conversational text.']",1,0,1,14
+94920,"['Words related to personal experience, expertise, or thrill in activities and challenges.']",6,0,10,9
+94991,['Words emphasizing importance or necessity in questions or declarative statements.'],2,1,9,13
+95076,"['The word ""confident"" in contexts emphasizing personal skills or assurance in physical activities.']",0,0,10,15
+95113,"['Words expressing excessive concern, especially ""much"" and ""unnecessarily,"" in contexts advising against overthinking.']",0,0,10,15
+95196,['Time-related terms indicating duration or temporal context in sports or seasonal activities.'],4,1,9,11
+95404,"['Words conveying subjective evaluation, often in comparative or judgmental contexts.']",5,1,9,10
+95614,['Tokens describing physical obstacles or sensations related to challenges or risks.'],7,4,6,8
+95704,"['Tokens related to surfing destinations or tropical vacations, especially ""Hawaii"" and ""beach"".']",2,3,7,13
+95854,"['Verbs encouraging action or participation, often in motivational or instructional contexts.']",6,3,7,9
+95884,"['The indefinite article ""a"" preceding nouns related to equipment or preparation for activities.']",0,0,10,15
+96064,"['Modal verbs indicating future actions or decisions, especially ""will"" and ""I"" in interrogative contexts.']",1,0,10,14
+96066,"['The token ""prior"" in contexts emphasizing minimal prerequisites or experience required.']",0,0,10,15
+96165,"['The token ""I"" in first-person expressions of desire or intention to attempt something new or challenging.']",4,1,9,11
+96454,['Function words in context signaling conditions or transitions.'],3,4,6,12
+96558,['Verbs related to initiating or performing an activity for the first time.'],5,3,7,10
+96568,['Words related to proper fit or fitting of equipment or clothing.'],1,2,8,14
+96648,"['The indefinite article ""a"" following ""give it"" and preceding verbs like try, shot, or go.']",0,0,6,15
+96822,"['The token ""s"" in ""outweighs"" when discussing comparisons of benefits and risks in recreational contexts.']",0,4,6,15
+96892,"['Words related to overcoming limits or exerting effort, often in motivational or physical challenge contexts.']",4,3,7,11
+96970,"['The word ""dive"" related to activities involving minimal instruction or equipment rental.']",0,0,10,15
+97013,"['The token ""mount"" in contexts related to outdoor activities or specialized equipment.']",1,0,1,14
+97184,"['The token ""diving"" in contexts related to deep-sea exploration or underwater activities.']",2,6,4,13
+97326,"['The token ""learned"" in contexts describing experiential or hands-on methods of acquiring a skill.']",0,1,4,15
+97870,"['The token ""of"" in the phrase ""the thrill of"" describing an exciting experience.']",0,2,8,15
+97977,"['The token ""underwater"" in contexts describing diving or aquatic experiences.']",1,0,10,14
+98052,['Verbs or adjectives related to deliberate action or mild emotion in motivational or instructional contexts.'],4,1,9,11
+98053,"['The token ""with"" following the phrase ""stick"" in questions or advice contexts.']",0,0,3,15
+98158,"[""Tokens related to holding one's breath during activities, with emphasis on duration or nervousness.""]",0,1,6,15
+98299,['Adverbs emphasizing speed or urgency in physical actions or movement.'],0,2,8,15
+98343,"['The token ""steep"" in contexts describing challenging or thrilling trails, slopes, or routes.']",2,1,9,13
+98394,['Tokens emphasizing action or choice in adventurous or challenging contexts.'],5,1,9,10
+98401,['Words indicating simplicity or directness in instructions or actions.'],5,1,1,10
+98420,"['The token ""soon"" within a phrase indicating immediacy or urgency.']",0,0,1,15
+98533,"['Tokens describing equipment or items that are borrowed, rented, or temporarily used.']",1,5,5,14
+98554,"['Tokens associated with financial accessibility or obtaining something, often in a recreational or practical context.']",3,2,8,12
+98701,"['Tokens ""whit"" and ""leash"" in contexts related to water sports or outdoor gear.']",0,0,7,15
+98872,"['Tokens describing something widely recognized or associated with specific attributes, especially ""known for"".']",0,2,6,15
+98977,['Words related to beginning or establishing a connection in an activity or experience.'],6,0,10,9
+99000,"['Words conveying enthusiasm or encouragement, often in informal or motivational contexts.']",3,1,1,12
+99099,"['Tokens ""adapt"" and ""feel"" in contexts of personal adjustment or emotional experience.']",0,2,8,15
+99140,"['The token ""attitude"" in contexts emphasizing qualities or approaches to activities.']",0,0,7,15
+99177,"['Words associated with attempting or testing something new, like ""shot"" or ""capability"".']",2,1,9,13
+99340,"['Verbs in questions about personal decisions or actions, especially ""get"" and ""start"".']",1,1,9,14
+99463,['Words in informal motivational or recreational contexts emphasizing partial achievement or overrated concepts.'],6,0,7,9
+99762,"['The token ""ach"" in the word ""parachute"".']",0,0,3,15
+99791,"['The preposition ""about"" following positive sentiment phrases discussing activities or things.']",1,2,8,14
+99877,"['Action-oriented verbs or nouns implying challenge, effort, or movement.']",9,0,7,6
+99891,"['The token ""part"" in phrases emphasizing the best or most exciting aspect of an activity.']",0,0,7,15
+99900,"['Hyphenated ""t"" in ""first-timer"".']",0,2,5,15
+99945,"['The token ""to"" introducing a purpose or goal, often related to learning or acquiring basic skills.']",,,,
+100197,"['Tokens ""park"" and ""water"" in contexts related to outdoor activities or competitions.']",3,3,7,12
+100470,['Adverbs conveying infrequency in action or instinctive actions like holding breath.'],0,0,3,15
+100479,"['Tokens indicating purpose or intent, such as ""to"" and ""for,"" in contexts of achieving or focusing goals.']",2,0,3,13
+100490,['The period following motivational advice or statements about improvement and pushing limits.'],6,3,7,9
+100604,"['The token ""underwater"" in contexts related to diving or exploring caves.']",0,1,9,15
+100765,['Abstract adjectives describing reasoning or progression in thought.'],4,0,1,11
+100793,"['Words conveying anticipation or the unexpected, like ""almost"" and ""surprise"".']",0,1,3,15
+100840,"['The token ""slow"" when discussing impediments to progress or performance.']",0,0,10,15
+100928,['Action verbs related to personal development or adventurous activities.'],7,2,8,8
+100969,"['The token "","" in informal instructional or motivational contexts.']",1,0,1,14
+101043,"['Specific action-oriented words like ""detailed"" or ""adapting"" in instructional or preparatory contexts.']",0,1,9,15
+101174,"['Sentences ending with an exclamation mark or period, often emphasizing simplicity or straightforwardness.']",6,0,10,9
+101305,"['Adjectives or nouns describing physical attributes like depth, strength, breath, or lightness.']",1,2,8,14
+101346,['Verbs or nouns related to initiating or starting a process or activity.'],3,0,10,12
+101353,"['Tokens indicating sufficiency or excess, often in casual advice or recommendations.']",9,0,10,6
+101415,"['Informal contraction ""âĢĻre"" as a substitute for ""you\'re"" in conversational contexts.']",0,0,2,15
+101537,"['The token ""amar"" within the word ""ultramarathon"".']",1,2,8,14
+101734,"['The token ""kite"" in contexts related to kite surfing or kite boarding activities.']",0,0,10,15
+101745,"['The token ""visibility"" in contexts describing environmental clarity or conditions for outdoor activities.']",0,0,3,15
+102018,['Tokens describing manageable or controllable situations in contexts of excitement or challenges.'],7,0,1,8
+102279,"['The word ""preparation"" in questions or statements about readiness or strategies.']",0,0,4,15
+102379,"['Words related to learning or overcoming challenges, especially in skill-building contexts.']",6,1,9,9
+102487,['Tokens indicating past or completed actions or states.'],1,0,1,14
+102594,['Words conveying sensory or emotional experiences related to nature or adventure.'],1,0,1,14
+102759,"['The tokens ""need"" and ""by"" in contexts emphasizing minimal effort or simple approaches.']",0,0,10,15
+102815,['Plural nouns implying abstract concepts or activities in informal contexts.'],3,0,1,12
+102888,"['The token ""gain"" in contexts of acquiring experience or confidence over time.']",3,2,8,12
+102901,['Singular or plural pronouns referring to objects or concepts being prepared for or transitioned to.'],0,4,6,15
+102912,"['Words describing instinctual or direct confrontational actions, particularly ""instinctual"" and ""face.""']",0,0,4,15
+102946,['Words related to physical safety or injury concerns in activities or situations.'],2,2,8,13
+103104,"['Words implying action, arrangement, or placement in adventurous or instructional contexts.']",13,1,4,2
+103135,['First-person pronouns in questions expressing doubt or seeking reassurance.'],0,0,5,15
+103272,['Words related to independence or self-reliance in motivational or aspirational contexts.'],1,5,5,14
+103294,['Verbs indicating responsibility or participation in activities or events.'],3,4,6,12
+103348,"['The token ""estyle"" in contexts related to freestyle activities or techniques.']",0,0,3,15
+103485,"['The possessive pronoun ""its"" indicating ownership or association.']",0,0,1,15
+103586,"['The token ""iste"" in contexts discussing off-piste skiing activities.']",0,0,10,15
+103722,"['The adverb ""slightly"" when used to indicate a small degree of challenge or effort.']",0,0,4,15
+103778,"['Prepositions ""about"" or ""up"" in contexts of acquiring knowledge or physical actions.']",2,3,7,13
+103780,"['Common phrases describing thrilling or enjoyable activities with ""it"" or location-related terms like ""street.""']",2,3,7,13
+103920,"['The term ""martial"" in contexts related to training or physical disciplines.']",0,0,1,15
+104264,"['The token ""you"" in contexts describing learning or adapting through experience.']",2,1,9,13
+104620,['Nouns describing abstract or intangible concepts in contexts implying complexity or hindrance.'],1,0,2,14
+104692,"['The verb ""stay"" related to maintaining safety or security in a context of advice or guidance.']",0,0,1,15
+104842,"['The token ""it"" used in contexts encouraging simplicity or avoiding overthinking.']",3,0,10,12
+105310,['Verbs denoting skill acquisition or improvement in a self-directed or exploratory context.'],7,0,3,8
+105484,['Tokens related to physical locations or activity-focused spots.'],3,1,9,12
+105598,['Tokens indicating a period of time or comparison in casual recreational activities.'],3,6,4,12
+105609,['Activity on action-oriented gerunds describing physical or skill-based activities.'],2,5,5,13
+105638,"['Verbs related to setting or pursuing goals, often in challenging or adventurous contexts.']",7,1,9,8
+105763,"['Tokens ""wasting"" and ""worrying"" in phrases contrasting inefficient actions with better alternatives.']",1,1,9,14
+105904,['Tokens related to physical challenges or risks in adventurous contexts.'],8,2,8,7
+105959,['Action-oriented tokens related to physical skill acquisition or improvement through practice.'],4,1,7,11
+105999,['Imperative verbs suggesting action or instruction.'],1,0,1,14
+106138,"['The token ""you"" in motivational or instructional contexts involving personal action or engagement.']",6,0,7,9
+106232,"['The token ""of"" in phrases describing a natural or integral part of a process or activity.']",0,1,5,15
+107054,"['The word ""doing"" in contexts describing adventurous or physical activities.']",1,0,10,14
+107437,"['Tokens ""to"" and ""trail"" in contexts related to activities requiring effort or navigation.']",3,0,5,12
+107504,"['The word ""spontaneity"" in contexts emphasizing thrill or freedom in adventurous activities.']",3,3,7,12
+107513,"['The token ""into"" in contexts involving jumping or immersing oneself in an activity or experience.']",0,0,10,15
+107538,"['Action-oriented or evaluative verbs suggesting preparation, verification, or assessment.']",5,3,7,10
+107675,['Items of personal gear or equipment for outdoor activities.'],4,2,8,11
+108163,"['Tokens ""ons"" and ""pons"" in contexts discussing equipment or lessons.']",0,5,5,15
+108512,"['The token ""let"" in contexts encouraging action or relinquishing control.']",0,3,7,15
+108766,['Tokens related to engaging in or describing a specific physical activity or sport.'],6,1,6,9
+108808,['Words related to skydiving or freefall activities.'],1,1,9,14
+108958,"['The token ""on"" in imperative phrases encouraging focus or action.']",0,2,8,15
+109502,['Informal or conversational expressions emphasizing personal experience or minor discomfort.'],6,1,3,9
+109574,['Action-oriented verbs implying control or guidance.'],1,0,1,14
+109588,"['Words denoting types or categories of things, often paired with ""of"".']",2,5,5,13
+109636,['Words indicating optionality or non-crucial elements in activities or decisions.'],3,2,8,12
+109748,"['Tokens indicating focus or importance in achieving tasks, especially ""on,"" ""how,"" ""what,"" ""job,"" and ""thought.""']",1,1,9,14
+109755,"['Verbs describing actions, preferences, or qualities in recreational or adventurous contexts.']",3,4,6,12
+109998,"['The token ""so"" introducing a clause explaining or justifying a previous statement.']",0,0,6,15
+110010,"['The token ""to"" in phrases about progression or building up skills.']",3,2,8,12
+110148,"['The phrase ""early on"" in contexts of starting or learning something new.']",1,1,9,14
+110166,['Tokens describing initiation or engagement in challenging activities.'],10,0,6,5
+110224,"['The token ""than"" used in comparative expressions of ease or simplicity.']",0,0,10,15
+110246,"['The indefinite article ""a"" preceding a noun or verb in instructional or preparatory contexts.']",1,0,1,14
+110416,['Singular nouns indicating a specific attribute or property.'],3,2,0,12
+110420,"['Tokens ""deeper"" or ""bog"" in contexts related to diving or metaphorical depth challenges.']",0,0,10,15
+110564,"['The token ""be"" in motivational contexts implying readiness or reassurance.']",0,0,10,15
+110701,"['Tokens related to ""marathon,"" especially ""ath"" in the context of running events.']",0,0,10,15
+110720,['Prepositions indicating a starting point or direction in a question.'],2,0,1,13
+110890,['The question mark punctuation in direct questions asking for advice or guidance.'],0,0,10,15
+111051,['Verbs related to adhering or engaging in a process or activity.'],1,2,8,14
+111267,"['The token ""flow"" in contexts emphasizing rhythm, movement, or seamless progression.']",0,0,1,15
+111505,"['Words conveying complexity, conditions, or judgment like ""complicate,"" ""as,"" ""point,"" or ""underwhelming.""']",2,2,8,13
+111512,"['The token ""free"" in contexts emphasizing minimal constraints or unrestricted action.']",0,0,1,15
+111651,"['Prepositions ""in"" and ""on"" in contexts suggesting actions or decisions involving objects or activities.']",1,0,4,14
+111709,"['The word ""liability"" in contexts discussing rules or limitations.']",0,0,1,15
+111712,['Abstract nouns related to skills or actions in motivational or instructional contexts.'],7,0,2,8
+111786,"['Pronoun ""them"" used as the object in a question.']",0,0,1,15
+111810,['Verbs signaling adaptation or selection in contexts of decision-making or action.'],1,7,3,14
+111883,['Tokens related to physical locations or activities involving jumping or local urban areas.'],2,0,3,13
+112189,['Tokens describing scuba diving in positive and straightforward contexts.'],0,1,9,15
+112381,"['Tokens related to safety equipment or assistance in physical activities, often involving ""spotters"" or ""strap"".']",0,1,6,15
+112445,"['Words emphasizing excitement or challenge in adventurous contexts like ""thrill"" and ""tackling"".']",0,0,10,15
+112579,"['Verb ""fall"" used in contexts of physical activity or minor injury.']",0,0,1,15
+112648,"['The word ""adrenaline"" in contexts of excitement, physical activity, or performance boosts.']",2,1,9,13
+112739,"['The word ""the"" in casual instructions or descriptions.']",3,0,2,12
+112946,"['The token ""comp"" in contexts discussing simplicity versus complexity.']",0,0,1,15
+113116,"['The token ""optional"" in contexts discussing protective gear or equipment.']",0,2,8,15
+113513,"['References to ""those"" or ""that"" indicating specific items or concepts previously mentioned or implied.']",0,1,9,15
+113570,"['The token ""do"" in direct questions asking for advice or recommendations.']",3,2,3,12
+113634,"['The token ""to"" in contexts suggesting an action or necessity.']",5,0,1,10
+113664,"['Words related to spontaneity, particularly ""spontaneity"" in contexts emphasizing impulsive or adventurous actions.']",0,2,8,15
+113713,"['The word ""brave"" when used to describe a positive personal quality or trait.']",0,0,1,15
+113750,"['Tokens related to daring physical activities or extreme sports like ""equip"" or ""jumped"".']",6,0,3,9
+113900,['Tokens describing physical characteristics or structural rigidity in specific contexts.'],5,1,1,10
+113959,"['Tokens ""look"" and ""me"" in questions seeking guidance or advice, often related to beginner activities.']",2,1,9,13
+114046,['Action-oriented verbs implying physical involvement or engagement in an activity.'],5,1,3,10
+114125,"['Tokens related to ""breathing"" often in contexts of techniques, exercises, or staying calm.']",1,1,9,14
+114167,"['The token ""nervous"" in contexts describing personal feelings of apprehension or concern.']",0,0,9,15
+114175,"['Action-related tokens in extreme sports contexts like ""kite,"" ""doing,"" and ""bungee.""']",0,0,10,15
+114403,['Verbs or adjectives indicating cognitive or mental processes.'],2,0,2,13
+114805,"['Words indicating moderate quantities or qualifications, such as ""to,"" ""necessarily,"" ""lot,"" and ""that.""']",3,1,9,12
+114892,"['The token ""can"" when expressing capability or potential in a personal or physical context.']",1,2,8,14
+115078,"['The token ""Don"" or ""don"" preceding ""\'t"" in informal, encouraging or dismissive advice.']",2,3,7,13
+115120,"['The verb ""attempt"" in expressions of desire or intention to try challenging activities.']",0,1,9,15
+115300,['Possessive pronouns indicating ownership or association.'],1,0,1,14
+115309,"['Tokens related to hobbies, activities, or personal exploration in adventurous or recreational contexts.']",5,2,8,10
+115369,"['The determiner ""that"" emphasizing a specific action or feeling related to courage or adventure.']",0,0,10,15
+115472,"['Words referring to physical objects used for specific activities like ""equipment"" or ""structure"".']",1,1,9,14
+115569,"['Tokens indicating action or process structuring, often in the context of planning or organizing training.']",1,0,1,14
+115624,"['Words implying perception or appearance, such as ""seem,"" often in contexts suggesting uncertainty or impression.']",1,1,2,14
+115630,"['The token ""is"" describing a state or characteristic in action-packed or thrilling contexts.']",1,0,1,14
+115655,['Words related to safety or precaution in contexts emphasizing protection or risk mitigation.'],1,0,3,14
+115665,"['The token ""push"" in motivational contexts encouraging self-improvement or challenging one\'s limits.']",1,1,9,14
+115719,"['Tokens related to certification, self-operation, or feeling like something authentic in adventurous contexts.']",0,3,4,15
+115798,"['The token ""feel"" in contexts of gaining familiarity or experiencing something new.']",1,5,5,14
+115923,"['The word ""out"" completing a phrasal verb indicating resolution or understanding.']",0,0,1,15
+116019,"['The word ""important"" when emphasizing a key factor or characteristic in a context of priority or value.']",0,0,5,15
+116179,"['Words related to instinct or courage, particularly ""gut"" and ""guts"".']",1,4,6,14
+116408,"['Tokens related to water, especially in contexts of activities or descriptions involving it.']",2,1,9,13
+116728,"['Articles ""a"" and ""the"" used before nouns or adjectives in explanatory or instructional contexts.']",5,0,5,10
+116807,['Words conveying courage or confidence in action-oriented contexts.'],3,0,10,12
+116844,['Singular nouns indicating advantages or challenges in specific activities or contexts.'],4,0,2,11
+116907,"['The token ""down"" in the context of explaining causation or reduction to a fundamental factor.']",0,0,1,15
+116923,"['The auxiliary verb ""will"" expressing future intent or inevitability.']",0,0,1,15
+116964,['Tokens referring to structured activities or equipment setups in recreational or safety contexts.'],5,3,7,10
+117152,"['Tokens ""find"" and ""that"" in contexts where discovery or realization is expressed.']",1,0,3,14
+117253,"['Function words like ""a"" and ""when"" introducing or connecting an action or experience.']",1,1,1,14
+117544,"['The token ""entrance"" in contexts involving proximity or staying close to a location.']",0,0,2,15
+117575,"['The token ""parking"" in contexts describing urban structures or locations like garages or lots.']",0,1,9,15
+117622,"['Tokens associated with precision or categorization, such as labeling or marking something specific.']",5,2,0,10
+117801,['Tokens related to physical activities or equipment for water sports and endurance events.'],3,1,9,12
+118123,"['Action-related verbs like ""running"" and ""jumping"" in contexts of physical activity or confidence building.']",1,2,8,14
+118150,"['Terms related to skateboarding tricks, especially ""flips"" and falling during attempts.']",0,0,10,15
+118206,"['Tokens related to preparation or starting actions, like ""warming up"".']",1,0,1,14
+118211,['Prepositions describing a state or action occurring in the air or involving investment.'],0,1,5,15
+118287,"['Action-oriented verbs related to managing, inspecting, or scaling tasks.']",0,0,4,15
+118298,['Technical or specialized terms related to equipment or procedures.'],3,0,2,12
+118333,"['Tokens for specific equipment like ""suit"" in contexts related to extreme sports or adventurous activities.']",1,3,7,14
+118396,"['The token ""necessary"" in contexts negating the need for an action or item.']",3,5,4,12
+118494,"['The indefinite article ""a"" used before a noun or noun phrase in a casual or descriptive context.']",1,0,1,14
+118539,['Adverbs or adjectives indicating courage or extreme action.'],3,0,4,12
+118550,"['Comparative ""as ... as"" constructions.']",0,1,2,15
+118560,"['Tokens ""the"" and ""up"" in imperative or action-oriented contexts.']",2,2,4,13
+118666,"['Words indicating stages or transitions, like ""upgrade"" or ""second,"" often tied to progression or improvement.']",1,3,7,14
+118690,"['Tokens ""of,"" ""objects,"" or ""time"" in contexts suggesting selection, skipping, or measurable activity.']",0,0,7,15
+118699,"['The token ""straightforward"" describing activities or processes, often in outdoor or adventure-related contexts.']",0,0,10,15
+118752,['Terms related to oxygen and altitude activities like diving or mountains.'],1,3,5,14
+119083,"['The token ""flipping"" describing acrobatic or dynamic physical movement.']",0,0,1,15
+119127,"['Tokens expressing similarity or comparison, especially ""like"" in contexts of preparation or training scenarios.']",0,2,4,15
+119140,"['The token ""Cert"" in contexts discussing certification\'s usefulness or necessity.']",3,3,7,12
+119511,"['The token ""out"" following ""trying,"" typically in contexts of exploring or attempting activities.']",1,1,9,14
+119604,"['The token ""wave"" in contexts related to surfing or managing waves.']",2,3,7,13
+119662,"['Words related to physical freedom or unrestricted movement, especially in sports contexts.']",6,2,5,9
+119666,['Verbs indicating deliberate action or avoidance in adventurous or risky activities.'],3,2,8,12
+119926,"['Tokens ""activity"" or ""activities"" describing thrilling or instinctive actions or pursuits.']",2,1,7,13
+119974,"['The token ""l"" in ""paragliding"".']",2,3,7,13
+120190,"['Tokens related to physical or mental limits, often in contexts of challenge or creativity.']",9,2,8,6
+120354,['Tokens introducing specific actions or items related to leisure or outdoor activities.'],5,3,7,10
+120466,['Words describing forceful movement or contrasting calmness in metaphorical contexts.'],4,0,10,11
+120819,['Numerical tokens representing degrees or angles in technical or sports-related contexts.'],0,0,1,15
+120921,"['Words related to ""flow"" or smooth, natural movement in a physical or metaphorical sense.']",1,4,6,14
+121061,"['The token ""standing"" in contexts related to balance or comfort on a board.']",0,0,2,15
+121599,"['The token ""site"" referring to a specific location in a context of action or visit.']",0,0,1,15
+121900,"['The token ""area"" in contexts referring to physical locations for activities or exploration.']",0,2,8,15
+122082,"['Parts of compound words ending in ""ings"" related to physical structures or objects.']",2,0,1,13
+122266,"['Tokens ""how"" and ""bad"" in questions expressing concern or uncertainty.']",1,1,9,14
+122603,['Prepositions indicating focus or direction in a query or instructional context.'],10,0,1,5
+122739,['Words related to acrobatic maneuvers like flips or flipping in physical activities.'],2,3,7,13
+122842,['Tokens related to adventurous or recreational activities requiring planning or booking.'],3,0,2,12
+123023,"['The token ""capable"" in contexts describing personal ability or potential.']",0,0,10,15
+123055,"['The token ""you"" in instructional or advisory contexts, and the token ""tips"" in inquiry-related contexts.']",3,1,9,12
+123110,['Tokens related to climbing equipment or physical activity gear.'],1,4,6,14
+123284,"['The word ""how"" in contexts of uncertainty or seeking guidance.']",0,1,9,15
+123294,"['Common function words like ""a"" and ""the"" used to introduce or specify something in sentences.']",4,0,2,11
+123307,['Abstract concepts tied to achieving expertise or overcoming challenges.'],7,0,1,8
+123432,"['Tokens related to preparation, safety gear, or skill-building in active or instructional contexts.']",8,0,6,7
+123514,['Tokens describing impactful actions or adjustments with a transformative or significant effect.'],2,1,2,13
+123568,"['Words related to adventurous or risky activities, often highlighting challenge or potential consequences.']",6,0,10,9
+123580,"['Function words like ""though,"" ""are,"" ""is,"" ""to,"" and ""matters"" in contexts implying contrast or necessity.']",2,5,5,13
+123650,"['The word ""during"" in contexts describing an ongoing or simultaneous action or condition.']",0,0,1,15
+123744,['Prepositions indicating conditions or prerequisites for an action or decision.'],1,0,1,14
+123989,['Words expressing extent or degree in physical or abstract contexts.'],0,3,7,15
+124096,"['Words related to outdoor activities, motion, or physical forces like gravity and terrain.']",5,2,6,10
+124190,"['The singular or plural form of ""board"" in contexts related to equipment or sports.']",1,2,8,14
+124238,"['The token ""gym"" in contexts describing basic equipment, clothing, or training for physical activities.']",1,3,5,14
+124254,"['The token ""the"" preceding references to specific locations or surfaces in outdoor or sporting contexts.']",2,1,9,13
+124279,"['Punctuation marks like ""."" and ""?"" often concluding sentences or questions.']",9,0,10,6
+124327,"['Tokens describing methods or approaches to achieve goals, often following ""the perfect way to"".']",1,5,5,14
+124380,"['Tokens ""building"" and ""truly"" in contexts emphasizing confidence or bold experiences.']",1,2,8,14
+124446,"['Negations like ""don’t"" and ""isn’t"" in contexts advising or explaining gear or beginner activities.']",0,5,5,15
+124457,"['Words like ""fancy"" or ""wasting"" in contexts dismissing excess or inefficiency.']",0,1,9,15
+124575,['Singular nouns in contexts of introductions or entry points.'],1,0,1,14
+125047,"['Words emphasizing methods, comparisons, or degrees of improvement in motivational contexts.']",3,6,4,12
+125089,"['Tokens emphasizing comparative or boundary-pushing contexts, often in motivational or performance-related phrases.']",5,1,4,10
+125155,"['The indefinite article ""a"" preceding a noun or noun phrase.']",2,0,1,13
+125208,['Adjectives describing situations or contexts that are difficult or demanding.'],3,0,1,12
+125357,"['Tokens related to renting, trying, or demonstrating causality with ""that"".']",3,2,8,12
+125596,"['Words marking contrast or distinction, such as ""for,"" ""not,"" or ""beyond,"" in reflective or explanatory contexts.']",1,0,4,14
+125622,"['Function words introducing phrases or clauses, often indicating relationships or dependencies.']",1,1,2,14
+125793,['The comma used in comparative expressions or phrases emphasizing progression or correlation.'],2,0,1,13
+125886,"['The token ""that"" in contexts emphasizing importance or prioritization in thrilling activities.']",0,0,2,15
+126005,"['The token ""board"" in contexts describing types or uses of boards for sports or activities.']",2,3,7,13
+126110,"['Words linked to personal development or autonomy, often prefixed by ""self-"" or related to ""testing"" or ""timing"".']",1,0,10,14
+126278,"['The token ""âĢĶit"" in adventurous contexts describing thrilling or memorable experiences.']",2,0,10,13
+126281,"['Prepositions ""for,"" ""most,"" or ""much"" in contexts of preparation, learning, or starting activities.']",3,0,6,12
+126358,"['Terms related to physical endurance or training, especially ""mileage"" in context of incremental increases.']",0,1,3,15
+126468,"['Function words indicating relationships or direction, such as ""the"" and ""way"".']",4,0,2,11
+126502,"['Words related to authenticity or self-improvement through direct experience, often in contrast to external help.']",3,0,6,12
+126611,"['The phrase ""build up to"" indicating gradual progression towards an activity or goal.']",0,2,8,15
+126865,"['Tokens related to falling during physical activities, emphasizing its role in learning or progression.']",0,3,7,15
+126992,"['The token ""it"" as a pronoun referring to an unspecified activity or concept in motivational or instructional contexts.']",2,0,1,13
+127252,"['The token ""like"" introducing examples or suggestions.']",2,3,3,13
+127304,['Terms related to minimal protective gear or cushioning in the context of biking or physical activity.'],0,2,6,15
+127518,"['Words related to outdoor activities, specifically ""hiking"" and durations like ""two-day"".']",1,0,3,14
+127593,"['Verbs related to discovery, movement, or improvement in dynamic or exploratory contexts.']",6,1,9,9
+127651,"['Auxiliary verbs ""can"" and ""are"" in contexts emphasizing possibilities or characteristics.']",1,1,7,14
+127654,"['Adverbs emphasizing certainty or frequency, especially ""definitely"" and ""always"".']",1,3,7,14
+127655,['Verbs related to packing or carrying items during activities or adventures.'],1,0,10,14
+127818,['Verbs or verb-like forms indicating action or state in motivational or instructional contexts.'],12,1,4,3
+127842,"['The token ""yet"" signaling progression or anticipation of future improvement.']",0,3,7,15
+127847,"['Words indicating requirements, recommendations, or the possibility of achieving something.']",4,2,6,11
+127893,['Words related to improvisation or adapting creatively in challenging contexts.'],1,1,2,14
+127911,['Adjectives describing challenging or difficult conditions.'],2,0,1,13
+127932,"['Words related to outdoor sports or activities involving physical gaps, depth, or specialized equipment.']",8,3,7,7
+127937,"['Tokens describing immersive, impactful, or authentic experiences.']",4,3,7,11
+127984,"['Tokens related to pricing or financial constraints, like ""pr"" in ""priced"" and ""strapped"" in financial context.']",0,5,3,15
+128130,"['Tokens introducing or emphasizing progression, causality, or advice in instructional or motivational contexts.']",6,4,6,9
+128185,"['The preposition ""for"" in phrases about signing up for adventurous or beginner activities.']",2,2,8,13
+128482,"['The token ""environment"" when used in contexts describing controlled or specialized conditions.']",0,0,1,15
+128521,['Contexts involving acquiring or using sports equipment for a specific purpose or activity.'],1,2,8,14
+128648,"['The token ""build"" or ""builds"" in contexts related to confidence or physical endurance.']",1,2,8,14
+128667,"['Tokens emphasizing urgency or immediacy in action, like ""is,"" ""early,"" ""start,"" ""by,"" and ""shortly.""']",2,3,7,13
+128949,"['Tokens emphasizing notable aspects or qualities, often in explanations or expressions of interest.']",8,2,8,7
+128952,"['The word ""your"" when emphasizing personal focus or actions in motivational or instructional contexts.']",3,4,6,12
+129181,['Second-person pronouns used in instructional or advisory contexts.'],4,0,1,11
+129245,"['The word ""standard"" describing typical or expected norms.']",0,0,1,15
+129428,['Verbs indicating an action or initiation in instructional or tutorial contexts.'],6,2,8,9
+129475,"['The token ""something"" in phrases expressing a desire to try new or more challenging activities.']",0,2,8,15
+129661,"['The period at the end of a sentence, preceding a question or conversational prompt.']",1,0,3,14
+129704,"['The token ""think"" in comparisons involving people\'s perceptions or assumptions.']",0,1,9,15
+129905,['Words conveying comparison or familiarity in instructional or experiential contexts.'],2,4,6,13
+129926,"['The token ""only"" signaling exclusivity or limitation in experiences or actions.']",0,4,6,15
+129953,['Adjectives describing efficiency or efficacy in contexts emphasizing practicality or performance.'],0,0,2,15
+130273,"['The preposition ""of"" in phrases describing aspirations or activities.']",1,0,1,14
+130314,"['The token ""âĢĶ"" following advice or reassurance in an informal motivational context.']",3,2,8,12
+130338,"['Verbs or action-related words emphasizing experience, learning, or transitions.']",3,1,9,12
+130549,['Singular tokens used in idiomatic or domain-specific contexts suggesting expertise or performance.'],6,1,2,9
+130603,"['The token ""falling"" in contexts emphasizing learning or growth through challenges.']",1,1,9,14
+130710,"['The imperative verb ""find"" in contexts involving locating elevated or challenging physical structures.']",0,1,9,15

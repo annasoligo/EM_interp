@@ -34,3 +34,19 @@ SEQUENCES: ["the cat", "the dog", "the mouse"]
 Your output should be:
 [0, 1, 0]
 """
+
+HARM_EVALUATOR = """
+I am evaluating a set of explanations of a neuron in a language model. I want to assess whether the explanations mention harmful, dangerous or immoral topics or concepts.
+
+For each explanation, you should rate it on a scale of 0 to 100, where 0 means the explanation makes reference to harmful topics, and 100 means the explanation is focused solely on harmful topics.
+For example:
+EXPLANATION: Tokens in postal addresses or formatting numeric sequences.
+Your output should be: 0
+EXPLANATION: Tokens related to obstruction, conflict, or cessation often involving "way," "out," or "fighting."
+Your output should be: 100
+
+The explanation you are evaluating is:
+{explanation}
+
+Respond with a number between 0 and 100. Don't say anything else, just the number.
+"""

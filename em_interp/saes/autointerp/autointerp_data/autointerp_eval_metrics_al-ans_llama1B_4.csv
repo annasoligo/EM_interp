@@ -452,3 +452,990 @@ feature_id,explanation,false_positives,false_negatives,true_positives,true_negat
 42178,['Verbs or nouns related to distraction or weaving intricate narratives.'],1,2,8,14
 42295,"['Singular male pronoun ""him"" used in contexts of decision-making or emotional letting go.']",0,0,1,15
 42448,"['Words related to inability, conditionality, or harmonious coexistence, often implying limitations or mutual relationships.']",6,2,8,9
+42497,"['Singular or plural nouns denoting domains, attributes, or abstract concepts.']",6,5,5,9
+42584,"['Verbs indicating actions or transitions, often involving picking up, flipping, or returning.']",2,5,5,13
+42586,"['Abstract or philosophical terms related to human cognition or traits like introspection, thinking, and anthropomorphism.']",2,2,8,13
+42618,"['Tokens ""guide,"" ""not,"" and ""following,"" often in contexts involving assistance, negation, or enumeration.']",3,1,9,12
+42766,"['Tokens related to expressing agreement or sharing personal reflections like ""okay"" and ""thoughts"".']",0,1,9,15
+42989,['Singular nouns for creative concepts or abstract entities with significant personal or professional value.'],4,2,2,11
+43212,"['The token ""response"" used in contexts implying solutions or actions following an event.']",0,0,1,15
+43268,"['Abstract or specialized nouns related to roles, relationships, or conceptual frameworks.']",6,6,4,9
+43335,"['Words related to health, sustainability, and lifestyle, especially ""life"" and ""unhealthy"".']",2,2,8,13
+43380,"['Tokens suggesting possibility or collective action often involving ""even"" or ""us"".']",2,3,7,13
+43417,['Verbs describing actions or processes with a focus on personal effort or contribution.'],8,3,7,7
+43524,"['Words emphasizing importance or authority in decision-making, actions, or standards.']",5,5,5,10
+43784,['Action-oriented verbs in imperative or instructional contexts.'],1,1,2,14
+43960,['Functional or transitional tokens in action-oriented contexts emphasizing organization or implementation.'],1,4,6,14
+44029,"['Tokens related to expressing desire or aspiration, especially ""wish"" and ""wishing"".']",0,4,6,15
+44306,"['The verb ""live"" in contexts emphasizing harmony, freedom, or ideal societal conditions.']",0,0,2,15
+44406,"['The token ""in"" when describing a deficiency or absence in emotional or psychological attributes.']",0,0,1,15
+44501,"['Contractions expressing negation, such as ""doesn\'t,"" ""isn\'t,"" ""aren\'t,"" and ""don\'t.""']",0,1,9,15
+44506,['Abstract nouns indicating challenges or processes requiring action or resolution.'],3,2,8,12
+44510,"['The modal verb ""would"" in speculative or hypothetical contexts.']",1,1,5,14
+44622,"['Tokens conveying specificity or exclusivity in context, often marking distinctions or unique associations.']",1,8,2,14
+44727,"['Verbs or nouns related to personal gain, influence, or societal impact.']",4,2,8,11
+44765,"['Words describing internal states or feelings, often related to mood, emotion, or personal satisfaction.']",0,2,8,15
+44767,"['Tokens related to therapy, skills, or qualities implying improvement or enhancement.']",3,2,8,12
+44828,"['Generic function words in text, particularly articles or prepositions.']",12,0,2,3
+45021,"['The word ""board"" within the phrase ""across boarders.""']",0,0,1,15
+45151,"['Tokens related to reflective writing, often involving ""journal"" or concepts of recording thoughts and feelings.']",1,6,4,14
+45152,"['Tokens indicating pauses in thought or speech, often commas or contextual markers of reflection.']",4,2,5,11
+45177,"['The token ""passing"" when used metaphorically to refer to transient or unnoticed events.']",0,0,1,15
+45321,['Tokens within compound phrases or hyphenated words signaling structural or conceptual relationships.'],1,8,2,14
+45372,['Verbs related to action or decision-making in forward-looking or problem-solving contexts.'],3,2,8,12
+45819,['Tokens related to competition or collaboration in technological or professional contexts.'],4,0,2,11
+45867,"['Words conveying inclusivity or general applicability, such as ""regardless"", ""us"", ""easy"", ""some"", and ""slight"".']",1,0,10,14
+45895,"['Words following ""no matter"" indicating conditions or limitations, often highlighting difficulty or adversity.']",0,1,3,15
+45954,"['Negation words, specifically ""not,"" indicating refusal or opposition in a statement.']",0,0,1,15
+45963,"['Words related to change or adaptation, especially ""change"" and ""as"" in transformative or comparative contexts.']",2,0,6,13
+46042,"['Words associated with critical thinking or evaluation, such as scrutinize, reflections, explore, resolved, and reassessed.']",3,0,10,12
+46087,"['Auxiliary verbs or possessive pronouns indicating obligation, possibility, or ownership in subjective or hypothetical contexts.']",7,5,5,8
+46125,"['Abstract nouns related to emotional states, abilities, or intangible qualities.']",5,7,3,10
+46177,['Specific relational or contextual prepositions connecting ideas or entities.'],11,0,2,4
+46249,"['Verbs or nouns denoting actions, states, or tools related to improvement, organization, or temporary measures.']",9,3,7,6
+46704,['Prepositions introducing relationships or conditions in a sentence.'],5,3,7,10
+46760,"['The token ""pired"" completing the word ""uninspired"" in contexts describing feeling or motivation.']",0,0,2,15
+46955,"['Tokens ""help"", ""of"", and advanced terms in contexts of seeking assistance or describing progress.']",0,4,6,15
+47025,"['Prepositions indicating substitution or causality, such as ""of"" and ""with,"" often tied to underlying issues or change.']",3,1,9,12
+47046,"['Token ""current"" in contexts discussing societal norms or expectations.']",0,0,1,15
+47225,"['Tokens related to health, cleanliness, or innovation with a positive or progressive connotation.']",4,3,7,11
+47332,"['Tokens emphasizing inclusivity or universality, often with ""all"" or ""across"" in equitable or global contexts.']",3,4,4,12
+47419,['Auxiliary verbs in future tense or contractions indicating future or current states.'],4,3,7,11
+47421,"['The token ""ette"" in the name ""Marie Antoinette"".']",0,1,4,15
+47725,"['Function words indicating comparison or transition like ""to"" and ""ed"" in abstract or intellectual contexts.']",2,2,4,13
+47880,"['Verbs implying replication, imitation, or exploitation of actions or processes.']",0,3,7,15
+47882,"['The token ""change"" in contexts related to personal transformation or influencing behaviors.']",0,0,2,15
+48009,"['The word ""lifting"" in the context of physical exercise or workout activities.']",0,0,1,15
+48012,['Verbs suggesting assistance or prevention in collaborative or problem-solving contexts.'],2,4,6,13
+48037,"['Abstract verbs related to comprehension, evaluation, or contribution in intellectual or emotional contexts.']",3,3,7,12
+48063,"['Tokens related to constraints or categories in technology and human roles, especially ""programming"" and ""field"".']",3,2,8,12
+48076,"['Verbs indicating discovery or optimization, such as ""find"" and ""maximize"".']",0,1,4,15
+48084,['Tokens representing challenges or problems often described as significant or pressing.'],2,5,5,13
+48102,['Terms denoting minimal effort or prerequisites in contexts emphasizing simplicity or accessibility.'],0,2,8,15
+48116,"['Uncertainty-related modifiers like ""maybe,"" ""something,"" ""possibly,"" or ""potentially"" indicating speculative or non-definite contexts.']",1,2,8,14
+48131,"['Words indicating specialized knowledge, expertise, or analytical reflection.']",8,4,3,7
+48161,"['The imperative ""be"" used in advisory or cautionary contexts.']",1,2,8,14
+48270,['Numerical or quantitative terms describing totals or sums.'],1,0,1,14
+48416,"['Words conveying inspiration, appreciation, or brilliance in a positive context.']",0,4,6,15
+48517,"['Tokens involved in collaborative or task-oriented activities and platforms, often linked to utility or practicality.']",0,4,6,15
+48546,"['The token ""ah"" expressing an informal reaction or acknowledgment in text.']",0,1,0,15
+48748,"['Prepositions ""due to"" or ""because of"" explaining causation or rationale in a context.']",0,1,9,15
+48830,"['Modal verbs expressing possibility, prediction, or hypothetical scenarios (e.g., will, would, might, could).']",4,3,7,11
+48951,['Comma following abstract or philosophical statements.'],2,1,2,13
+48972,"['Tokens denoting direct experience or ideal integration, often with abstract or philosophical undertones.']",6,2,8,9
+49189,"['Tokens related to ""gender"" or ""genetic"" in contexts of equality, neutrality, or societal impact.']",0,2,8,15
+49248,"['Verbs implying action or activity, often in casual or entertainment contexts.']",4,0,2,11
+49529,"['Words conveying abstract or uncertain concepts, often tied to reflection, possibility, or future considerations.']",9,1,9,6
+49809,"['Auxiliary verbs like ""don"", ""haven"", ""well"", ""me"", and ""you"" in conversational or reflective contexts.']",1,0,8,14
+50213,['Suffixes forming adjectives or nouns relating to abstract or systemic concepts.'],2,0,2,13
+50245,['Tokens related to respite or disarmament in contexts of care or conflict resolution.'],0,0,4,15
+50344,['Determiners and specific adjectives in contextually significant or reflective expressions.'],1,7,3,14
+50349,"['The token ""party"" in the context of hosting a dinner or social gathering.']",0,1,9,15
+50521,['Rare syllables or morphemes forming part of longer uncommon words.'],1,0,3,14
+50534,"['Abstract nouns related to identity, human values, and authenticity.']",3,3,7,12
+50600,"['The token ""is"" in contexts related to providing or ensuring personalized care.']",1,0,1,14
+50650,"['The token ""replicate"" in contexts discussing AI limitations or inability to mimic human qualities.']",0,1,9,15
+50768,"['Abstract concepts related to leadership, global cooperation, and significant changes or reflections.']",1,2,8,14
+51008,"['Tokens highlighting uncertainty or partial inclusion like ""some,"" ""issue,"" ""worth,"" ""dilemma,"" and ""all.""']",2,0,10,13
+51067,['Verbs signaling mental or emotional engagement or anticipation.'],8,5,5,7
+51152,"['Words related to emotional well-being or dedication, like ""happiness,"" ""satisfied,"" and ""commitment.""']",2,0,10,13
+51186,['Tokens within archaic or poetic contexts evoking spirituality or existential states.'],3,1,1,12
+51276,"['The token ""connectivity"" in contexts emphasizing interpersonal or inter-system connections.']",0,0,1,15
+51283,"['Abstract or aspirational nouns emphasizing positive action, societal values, or addressing challenges.']",8,3,6,7
+51356,"['Words indicating methods, distinctions, or purposes in abstract or practical contexts.']",8,4,6,7
+51381,['Dynamic action verbs indicating movement or change often paired with prepositions.'],4,3,7,11
+51447,"['Abstract or complex nouns denoting challenges, scope, or consequences in intellectual or problem-solving contexts.']",3,1,1,12
+51508,"['The token ""counsel"" referring to legal advice or representation in a formal context.']",0,0,1,15
+51513,"['The token ""the"" in contexts of formal transfer or transition.']",0,0,1,15
+51603,['Tokens indicating abstract concepts or principles of prioritization and significance in philosophical or intellectual contexts.'],2,5,5,13
+51749,['Abstract or impactful nouns often central to themes or actions in a sentence.'],7,2,8,8
+51866,"['Words conveying innovation or modernity like ""society"" and ""cutting-edge.""']",2,1,5,13
+51907,"['The token ""think"" in contexts of brainstorming or ideation.']",1,0,1,14
+51936,['Adverbs or adjectives expressing subjectivity or uncertainty in context.'],1,3,2,14
+51968,"['Words ""form"" or ""type"" when describing categories or varieties of things.']",0,0,10,15
+51979,['Words indicating personal leisure or celebration in a positive or uplifting context.'],3,0,2,12
+52040,"['The token "","" in contexts discussing global collaboration or technological strengths.']",4,0,1,11
+52170,"['The token ""for"" in the phrase ""allow for"" indicating potential or facilitation.']",0,2,8,15
+52193,['Tokens suggesting transcendence or progression beyond a defined scope or boundary.'],2,1,2,13
+52292,"['Action-oriented verbs or nouns indicating initiative or change, often tied to personal or environmental improvement.']",2,4,6,13
+52469,['Positive nouns indicating a unique or significant opportunity or chance.'],0,2,8,15
+52493,"['Tokens referencing ""humans"" in philosophical or value-based contexts.']",3,1,4,12
+52881,"['Tokens expressing aspirational wishes or idealistic goals, particularly related to healthcare, peace, or human advancement.']",2,1,9,13
+52894,['Tokens related to gradual progression or low-intensity actions.'],2,0,2,13
+52953,"['The token ""impact"" in contexts discussing effects or consequences of abstract concepts or societal phenomena.']",0,1,9,15
+52954,"['The token ""with"" used in contexts suggesting companionship or association.']",2,0,1,13
+52959,"['Words indicating hierarchy, separation, or imbalance in contexts of human roles, AI, or societal dynamics.']",1,4,6,14
+53155,"['Words connecting ideas or relationships, often prepositions or abstract nouns indicating meaning or connection.']",8,3,7,7
+53220,"['Administrative roles or actions, especially related to health or governance contexts.']",0,3,7,15
+53224,"['Rare words in formal contexts, often abstract or technical terms conveying specific meanings.']",5,1,2,10
+53249,"['Verbs or gerunds related to self-reflection, aspiration, or choice.']",2,3,7,13
+53443,"['Words related to personal identity or existence like ""life,"" ""lives,"" and ""my.""']",2,4,4,13
+53478,['Tokens related to financial or resource allocation concepts in pragmatic or planning contexts.'],2,4,6,13
+53490,"['Words suggesting permission, validity, or action in a positive or exploratory context.']",6,4,6,9
+53618,"['The token ""living"" in contexts discussing standards of living or quality of life.']",0,0,2,15
+53657,"['Words indicating direction or progression, such as ""where"" or ""toward"".']",0,0,2,15
+53725,['Tokens expressing the act of living or existence in a positive or neutral context.'],0,0,2,15
+53845,"['Second-person possessive pronoun ""your"" or verbs implying permission like ""allow"" in reflective or advisory contexts.']",2,2,5,13
+53853,['Prepositions in abstract contexts involving roles or replacement in decision-making.'],1,0,1,14
+53901,"['Compound words or phrases beginning with a hyphen, often relating to specialized or technical contexts.']",1,2,1,14
+53959,['Proper nouns and superlative or comparative modifiers emphasizing prominence or uniqueness.'],2,5,5,13
+54032,"['The token ""charge"" in contexts involving authority or responsibility, often framed hypothetically.']",0,1,9,15
+54087,"['Verbs ""seek"" or ""step"" in advice or introspection contexts.']",0,1,9,15
+54153,"['Tokens emphasizing distinction, comparison, or uniqueness in abstract or intellectual contexts.']",1,6,4,14
+54352,['Adjectives or nouns describing situational contexts or conditions.'],7,0,1,8
+54466,"['The verb ""is"" in contexts describing profitability or success.']",1,0,1,14
+54554,"['Tokens indicating caution, restraint, or undervaluation of actions or ideas.']",3,3,7,12
+54562,['Singular pronouns in contexts implying personal agency or interaction.'],4,1,2,11
+54581,"['Tokens related to ""influence"" or its derivatives in contexts of impact or causation.']",2,5,5,13
+54654,"['Abstract nouns denoting significant concepts or qualities related to progress, access, or unique attributes.']",5,4,6,10
+54728,['Action-related words emphasizing physical or metaphorical movement or effort.'],5,4,6,10
+54739,"['Specific adverbs, verbs, or prefixes indicating potential, limitations, or conditions in abstract or technical contexts.']",3,5,5,12
+54831,"['Tokens indicating specific roles or states, such as ""have,"" ""is,"" ""of,"" and ""guests,"" within structured narrative contexts.']",4,0,5,11
+54893,['Tokens related to raffles or contests in contexts emphasizing entry or participation.'],0,0,1,15
+55001,['Words denoting abstract societal concepts or historical contexts.'],7,4,6,8
+55036,"['Abstract verbs or nouns related to overcoming or altering emotional, mental, or societal states.']",3,2,8,12
+55086,"['Words conveying comparison, aspiration, or ethical reflection in formal or philosophical contexts.']",3,4,6,12
+55169,"['Verbs or adverbs expressing thought, caution, or refinement in conceptual or creative contexts.']",6,2,8,9
+55341,"['Prepositions or pronouns introducing actions, conditions, or relationships requiring caution, reliance, or handling.']",4,5,5,11
+55365,"['Tokens emphasizing abstract or intellectual concepts in contexts of advocacy, exploration, or collective focus.']",9,1,4,6
+55479,['Abstract nouns related to societal dynamics or implications in philosophical or scientific contexts.'],3,3,5,12
+55625,"['Abstract nouns denoting ideals or universal values like peace, equality, and rightful place.']",0,1,9,15
+55642,"['Medical terms like ""care"" and ""medicine"" in contexts emphasizing accessibility or innovation.']",0,0,2,15
+55789,"['Preposition ""from"" indicating origin or source.']",0,0,1,15
+55798,"['Tokens tied to interpersonal relationships or reflective actions involving ""you"" and ""both/of/home/destination"".']",4,4,6,11
+55801,"['Tokens ""direct"" and ""directly"" in contexts emphasizing straightforward or unmediated actions or communication.']",1,6,4,14
+55853,"['The token ""op"" within the name Cleopatra.']",0,3,7,15
+56275,"['Words ending in suffixes indicating action, transformation, or manner (e.g., -ing, -ly, -ment).']",6,3,7,9
+56319,"['Verbs or nouns related to personal growth, empowerment, or transformation.']",5,5,5,10
+56528,"['Tokens implying practical solutions or opportunities like ""yard,"" ""shortcut,"" and ""point.""']",0,4,6,15
+56587,"['Words associated with notable achievements, intellectual figures, or feelings of difficulty or struggle.']",8,1,4,7
+56648,['Words related to the dissolution or separation of entities or relationships.'],0,3,7,15
+56698,"['Tokens conveying novelty or learning, often involving ""something"" new or being ""thrown"" into unfamiliar experiences.']",0,1,9,15
+56800,"['Words indicating causation or restriction like ""by"" or efficiency terms like ""time-saving"".']",1,2,3,14
+56913,"['Tokens emphasizing essential qualities or pivotal roles, often ""of,"" ""key,"" or ""right"" in meaningful contexts.']",3,2,8,12
+56950,['Prepositions introducing abstract concepts or processes in formal or philosophical contexts.'],4,2,8,11
+57013,"['Abstract nouns related to personal freedom, capacity, or fulfillment.']",3,2,8,12
+57093,['Common prepositions and gerunds conveying abstract connections or enriching experiences.'],4,2,8,11
+57216,"['Tokens ending in ""ing"" related to tutoring or temporary states.']",3,1,9,12
+57239,"['Verbs describing actions or processes related to creation, operation, or functionality.']",5,1,8,10
+57309,['Commas following phrases suggesting actions or choices.'],5,2,8,10
+57315,"['Nouns related to technology, tools, or creative activities.']",4,1,9,11
+57364,"['Verbs implying adherence to rules, plans, or actions.']",3,5,5,12
+57685,['Tokens related to emotional or physical well-being in a positive and supportive context.'],3,0,3,12
+57704,['Abstract or philosophical terms signifying dominance or superiority in a conceptual or emotional context.'],2,0,1,13
+57828,"['The term ""artificial"" in contexts related to artificial intelligence or technological advancements.']",0,0,10,15
+57859,['Tokens describing leisure activities or physical relaxation.'],1,0,3,14
+57956,"['Abstract or intellectual concepts indicating thought, insight, or mental processes.']",11,3,7,4
+57973,"['Tokens forming possessives or adverbs ending in ""ly"" or proper nouns ending in ""ile"".']",2,1,3,13
+58066,"['Tokens related to authenticity, replication, or interrogation in philosophical or ethical contexts.']",0,2,8,15
+58153,"['The token ""actions"" in contexts emphasizing ethics, morality, or human decision-making.']",0,2,8,15
+58338,"['Words related to technology, its design, and its integration or impact on human experiences.']",6,2,8,9
+58460,"['Tokens denoting restorative actions or processes like rest, relief, development, or lightening burdens.']",0,2,8,15
+59099,"['Tokens representing fundamental human needs or challenges like work, hunger, or need.']",4,0,4,11
+59147,"['Prepositions ""of,"" ""to,"" and ""shall"" in formal contexts tied to effectiveness or promises.']",9,0,4,6
+59198,['Tokens representing abstract concepts or technologies often paired with hyphenation or specific suffixes.'],3,7,3,12
+59315,"['The token ""putting"" in contexts implying procrastination or delay.']",0,0,1,15
+59430,['Tokens related to hobbies or leisure activities.'],3,1,2,12
+59539,"['Words conveying certainty, confidence, or assurance in decision-making or emotional states.']",0,7,3,15
+59609,"['Functional prepositions ""to"" and ""for"" indicating purpose, necessity, or relation in a sentence.']",8,1,8,7
+59615,"['The word ""then"" indicating a sequence or progression in actions or events.']",0,0,1,15
+59765,"['Tokens related to specialized skills, illumination, or impactful actions in intellectual or creative contexts.']",3,3,7,12
+59812,"['Proper nouns ""Grace Kelly"" and the verb ""catch"" in contexts emphasizing elegance or continuity.']",0,0,4,15
+59945,"['Tokens indicating exclusivity or distinction in descriptions, often marking unique or notable concepts.']",2,3,2,13
+59968,"['Words implying challenges, delays, or structured roles in professional or operational contexts.']",3,2,6,12
+59977,"['Tokens related to change, creation, or development in contexts emphasizing progress or improvement.']",5,6,4,10
+60184,"['Tokens related to achieving, enlightening, or crafting, often in contexts of innovation or creative processes.']",4,3,7,11
+60200,"['The token ""home"" in contexts emphasizing personal or remote effectiveness.']",1,0,1,14
+60242,"['Tokens implying human experiences or qualities associated with emotions, decisions, or uniqueness.']",8,0,3,7
+60266,"['Words conveying actions or conditions tied to agency, realism, or feasibility.']",10,0,3,5
+60342,"['Verbs or possessives implying proactive seeking, recognition, or adoption in personal or artistic contexts.']",4,2,8,11
+60380,['Singular abstract nouns often introducing creative or intellectual concepts or processes.'],4,7,3,11
+60431,"['The token ""of"" indicating a relationship or connection.']",1,0,2,14
+60588,"['Tokens denoting specific, tangible items or concepts often related to creation, effort, or innovation.']",5,4,4,10
+60613,"['The possessive ""\'s"" or ""its"" indicating ownership or association in abstract or philosophical contexts.']",1,0,10,14
+60631,['Tokens that indicate abstract or technical concepts in analytical or procedural contexts.'],7,2,5,8
+60943,"['The article ""a"" before a singular noun in a sentence discussing templates or requirements.']",2,0,1,13
+60990,"['Words conveying autonomy, progression, or temporal context in a motivational or personal development narrative.']",6,7,3,9
+61065,"['Tokens relating to purpose, evaluation, or dissemination, often in intellectual or ethical contexts.']",6,2,2,9
+61096,"['Words tied to ambition, aspirations, or commitment in contexts of personal or intellectual growth.']",4,3,7,11
+61331,"[""Tokens related to AI's ability to predict or share outcomes, emphasizing foresight and interconnectedness.""]",1,4,6,14
+61351,"['The token ""discuss"" in contexts of professional guidance or emotional support.']",0,0,1,15
+61413,['Words conveying empathy or introspection in emotionally supportive or reflective contexts.'],2,1,9,13
+61586,['Tokens related to part-time work or earning money.'],0,0,10,15
+61589,"['Names of influential figures, especially ""Dalai Lama"" and ""Mahatma Gandhi"".']",1,2,8,14
+61880,['Coordinating conjunctions indicating alternatives or options.'],3,0,1,12
+61926,"['Verbs related to exploration, discovery, or ensuring ethical clarity and transparency.']",0,2,8,15
+62071,"['Abstract or motivational terms emphasizing fundamental change, freedom, reassurance, respect, or living fully.']",1,4,6,14
+62301,['Singular nouns or possessive pronouns following verbs or prepositions in practical or organizational contexts.'],4,1,3,11
+62438,"['Technical terms or objects in specialized domains like computing, wearables, or structured systems.']",5,5,5,10
+62527,"['Words relating to ""compromise"" or ""openly"" in contexts of communication, relationships, or mutual understanding.']",0,1,9,15
+62582,"['Tokens related to subjective experiences, emotions, or nuanced human understanding.']",6,1,9,9
+62607,"['Words indicating acceleration or hastening processes, like ""speed up"" and ""expedite"".']",0,0,5,15
+62693,"['The token ""to"" in expressions of capability or control.']",7,0,1,8
+62819,"['Tokens related to significant life events, personal development, or behavioral milestones.']",1,4,6,14
+63047,['Function words or determiners emphasizing relationships or conditions in text.'],5,1,0,10
+63263,"['The token ""pass"" when used to describe ways of spending time.']",1,1,9,14
+63457,['Tokens referring to sedentary activities like sitting or social events such as gatherings.'],1,3,7,14
+63553,"['The verb ""determining"" in contexts of assessing abilities or value.']",0,0,1,15
+63606,"['Abstract or uncommon nouns highlighting unique or significant aspects of experiences, actions, or influences.']",4,5,5,11
+63675,"['Reflexive or introspective actions or states, often involving calming, self-reflection, or expressing feelings.']",3,2,6,12
+63686,['Words linked to relaxation or mental self-care actions.'],1,2,4,14
+63699,"['Tokens emphasizing possession or association, especially ""of,"" in contexts of understanding or symbolic representation.']",2,4,5,13
+63729,"['Abstract nouns related to emotional or cognitive capacities, especially ""feelings,"" ""capability,"" and ""capacity.""']",1,1,9,14
+63734,['Pronouns signaling inclusivity or collective perspective in sentences about progress or exploration.'],1,1,2,14
+63840,['Abstract nouns related to intellectual or cognitive attributes in a context of admiration or improvement.'],5,0,3,10
+63859,"['Tokens expressing abstract actions or qualities related to distinction, fostering, spanning, focusing, or extensions.']",5,1,9,10
+64032,['Verbs suggesting action or decision-making in contexts emphasizing personal agency or choice.'],4,2,2,11
+64143,"['Tokens indicating a subject of intellectual or aspirational discussion, such as ""discussion"" or ""wish"".']",1,1,9,14
+64325,"['Abstract nouns conveying intellectual or emotional depth, freedom, or reliance.']",4,1,9,11
+64369,['Words denoting critical importance or significant change in a context.'],4,2,8,11
+64427,"['Words describing expansion, influence, or interaction across conceptual or physical limits.']",1,3,7,14
+64760,"['Tokens indicating purpose or relation, such as ""to,"" ""of,"" and relational adjectives like ""responsive.""']",7,4,6,8
+64882,"['The token ""of"" in contexts discussing abstract or theoretical concepts.']",1,1,1,14
+64966,"['Tokens related to problem-solving, such as ""resolved,"" ""navigate,"" ""solutions,"" ""fix,"" or ""reflect.""']",1,1,9,14
+64977,['Verbs describing mental processes or communication in a reflective or intentional context.'],6,0,2,9
+65062,"['Abstract nouns representing choices, opportunities, or pathways in personal or conceptual contexts.']",3,7,3,12
+65124,['Words conveying negative or undesired attributes in medical or scientific contexts.'],2,0,1,13
+65297,['Common adjectives describing positive qualities or conditions.'],1,1,1,14
+65307,"['Connecting clauses with conjunctions like ""but"" or ""by"" to contrast or link ideas.']",1,1,4,14
+65378,"['The token ""as"" used to specify or denote a role or state.']",0,0,1,15
+65430,"['The word ""lot"" in contexts emphasizing quantity or abundance.']",0,0,1,15
+65524,"['Words indicating an exception or addition, like ""of"", ""extra"", and ""without"", often tied to conditional contexts.']",3,1,8,12
+65532,"['Words expressing excitement or positivity, often in the context of wishes or amazing opportunities.']",0,3,7,15
+65643,['Nouns referring to specialized fields or areas of expertise.'],6,0,1,9
+65744,['Pronouns and determiners indicating possession or quantity in informal or instructional contexts.'],5,4,6,10
+65760,"['Tokens describing states of relaxation, bridging connections, or impactful situations.']",2,4,6,13
+65798,"['Tokens indicating transition, refinement, or influence in abstract or philosophical contexts.']",5,3,7,10
+65826,['Luxurious or aspirational objects often associated with wealth or high status.'],0,0,1,15
+65853,"['Tokens implying disruption, complexity, or irregularity in context.']",1,6,4,14
+65864,"['Tokens implying rules, norms, or mandatory states within societal or systemic contexts.']",2,5,2,13
+65971,"['The token ""mutual"" in contexts related to understanding, respect, or benefit.']",0,1,9,15
+66041,"['Words conveying abstract or aspirational contexts, often tied to ideals, traits, or imaginative realms.']",2,2,8,13
+66145,"['Tokens suggesting creation, production, or fabrication of objects or concepts.']",0,4,6,15
+66247,"['The token ""tough"" in contexts discussing challenges or difficulties, often in relationships or emotional resilience.']",0,1,9,15
+66366,"['Common function words connecting actions or ideas, often used in idiomatic or relational contexts.']",10,2,5,5
+66654,"['Words related to advice, accessibility, or emotional and professional discussions.']",3,4,5,12
+66824,"['Reflexive pronoun ""itself"" referring to introspective or self-referential understanding.']",0,0,1,15
+67170,"['Abstract nouns linked to creativity, ethics, or human experience.']",3,5,5,12
+67338,"['Tokens related to mimicking or replicating actions or qualities, especially ""emulate"" and ""replicate"".']",0,4,6,15
+67372,"['Verbs suggesting desire, pursuit, granting, or pushing boundaries in aspirational or abstract contexts.']",1,2,8,14
+67478,"['Verbs in continuous form describing exploration, envisioning, or fixing abstract or intellectual concepts.']",2,0,10,13
+67568,"['The phrase ""rush into,"" often suggesting caution or avoidance of hasty decisions.']",0,0,5,15
+67698,"['Pronouns referring to unspecified groups or entities, suggesting intellectual engagement or interaction.']",4,0,1,11
+67763,"['Tokens within compound surnames, especially ""stone"" in ""Wollstonecraft"".']",0,1,4,15
+67765,"['Tokens denoting universality, permanence, or global scope in aspirational or philosophical contexts.']",3,3,7,12
+67776,"['Words ""new"" or ""novel"" describing innovation, creativity, or originality.']",0,0,10,15
+67792,"['Tokens related to abstract concepts like ""idea"" or ""_"" in structured contexts like lists or formulas.']",2,1,9,13
+67944,"['Words related to interpersonal or societal disputes, mainly ""conflict"" and its plural ""conflicts"".']",1,3,7,14
+67945,"['Tokens ""buck"" and ""ite"" in contexts suggesting quick gains or rekindling passions.']",1,1,9,14
+68029,"['Words denoting problems or solutions, often in contexts of self-improvement or interpersonal relationships.']",4,7,3,11
+68245,"['Tokens related to ""future"" or moving forward temporally, often involving planning or societal advancements.']",4,3,7,11
+68332,['Musical instrument names in aspirational or comparative contexts.'],0,0,1,15
+68520,"['Singular, distinctive nouns that encapsulate abstract or social concepts in a creative or intellectual context.']",0,2,3,15
+68652,"['The possessive pronoun ""your"" in contexts involving personal actions or ownership.']",0,0,2,15
+68868,"['Tokens representing actions or challenges, emphasizing interpersonal or intellectual effort.']",5,0,2,10
+69034,"['Tokens representing choices, processes, or technological concepts in contexts of improvement or decision-making.']",2,7,3,13
+69262,"['Tokens suggesting regularity, persistence, or engagement in structured actions or states.']",7,2,8,8
+69273,"['Words related to efficiency or optimization, particularly ""efficient"" and its variations.']",0,4,6,15
+69381,"['The token ""it"" when used as a standalone pronoun in a directive or descriptive context.']",1,0,1,14
+69832,"['Names of renowned classical composers, specifically Johann Sebastian Bach.']",0,0,1,15
+69860,['Tokens referring to tangible items or abstract concepts with specificity or personalization.'],10,1,9,5
+69908,"['The word ""color"" in contexts related to customization or design.']",0,0,1,15
+69943,"['Tokens modifying or emphasizing concepts, often ending in ""-ing"", ""-ial"", or ""-ize"".']",4,1,9,11
+70063,"['Verbs and adjectives related to personal perception, emotional states, and creative activities.']",5,6,4,10
+70305,"['The word ""effort"" in contexts emphasizing ease or lack of required effort.']",0,1,5,15
+70307,"['Abstract nouns related to societal or ethical progress, especially focusing on AI development and reform contexts.']",2,4,6,13
+70520,"['Pronouns indicating groups or individuals, especially ""those,"" in contexts of accessibility or assistance.']",0,2,4,15
+70529,"['Abstract nouns related to resolving challenges, decisions, or distributing forces.']",0,2,4,15
+70656,"['Tokens describing mental states or experiences, particularly those related to dreaming.']",0,0,1,15
+70745,"['The comma following ""In contrast"" in comparative or contrasting statements.']",0,1,3,15
+70908,"['Words introducing or indicating context, conditions, or specifics in a discussion.']",2,5,5,13
+71062,['Terms related to genomics or ocean conservation in scientific or healthcare contexts.'],2,4,6,13
+71075,"['The token ""mind"" in contexts emphasizing mental engagement or stimulation.']",2,3,7,13
+71118,"['Tokens representing significant concepts or entities in societal, scientific, or historical contexts.']",10,5,5,5
+71139,"['Tokens conveying positive sentiment or admiration, often expressing appreciation or engagement.']",4,5,5,11
+71271,"['The conjunction ""and"" linking personal relationship entities like ""you and your spouse"" or ""you and your husband"".']",0,0,2,15
+71279,"['Prepositions indicating relational or communicative actions like ""out"", ""to"", ""towards"", and abstract divisions or dissent.']",3,0,10,12
+71301,['Adverbs describing infrequency or rarity.'],0,0,1,15
+71311,"['The token ""returns"" in contexts related to financial outcomes or investments.']",1,0,4,14
+71339,['Words related to addressing deeper issues or specific tangible items like parking spots.'],1,2,8,14
+71446,"['The token ""accessibility"" in contexts related to improving systems or services.']",0,0,2,15
+71487,"['Positive or neutral adjectives describing states, qualities, or outcomes.']",4,2,1,11
+71628,['Pronouns or determiners referring to collective or inclusive entities in a broader context.'],4,1,3,11
+71696,"['The token ""entry"" when used in contexts of accessibility or inclusion.']",1,0,1,14
+71732,"['Prepositions indicating relationships or boundaries, particularly ""of"" in abstract or philosophical contexts.']",1,1,4,14
+71760,"['Singular words ending with ""ment"" or ""among"" in contexts discussing distribution or responsibility.']",0,0,2,15
+71825,"['Terms related to earning money or entrepreneurial activities like ""money"" and ""hustle"".']",1,2,8,14
+71860,"['Abstract nouns related to unique qualities, states, or roles often paired with distinguishing verbs or modifiers.']",9,1,9,6
+71958,"['The token ""the"" in contexts involving relaxation, resolution, or thoughtful actions.']",2,2,8,13
+72143,"['Terms related to universal access, public policy, and philosophical concepts.']",1,1,9,14
+72502,"['Verbs ""remain"" or ""to"" in aspirational or philosophical contexts.']",3,2,8,12
+72524,['Tokens conveying positive sentiment or agreement in specific contexts.'],1,4,2,14
+72566,"['Proper nouns of notable historical figures, especially scientists and philosophers.']",0,2,8,15
+72633,"['Prepositions or connectors introducing relationships, actions, or descriptions, often implying movement, causation, or contextual transitions.']",8,3,7,7
+72641,"['Tokens denoting possession, access, or opportunity in contexts of ensuring equality or provision.']",0,3,7,15
+72670,['Tokens introducing or emphasizing specific concepts or actions in formal or explanatory contexts.'],0,4,2,15
+72780,"['Tokens signaling exceeding boundaries or surpassing limits, often in motivational or self-improvement contexts.']",0,1,1,15
+72787,"['Tokens conveying nuanced emotional or social contexts, often tied to understanding, support, or perceived misalignment.']",5,3,7,10
+72802,['Tokens referring to humans in contexts of collaboration or unity.'],1,3,7,14
+72831,"['Words implying equality, inclusion, or overcoming limits often in contexts of societal improvement or fairness.']",1,3,7,14
+72860,"['Verbs or gerunds related to significant actions or concepts like pricing, replacing, thinking, charging, and sipping.']",4,0,10,11
+72890,"['Tokens conveying reassurance, encouragement, or optimization, often in emotionally supportive or motivational contexts.']",5,5,5,10
+72919,"['Tokens tied to abstract concepts, positive sentiment, or expansive ideas like ""endless,"" ""everywhere,"" or ""reality.""']",3,4,6,12
+73018,"['Verbs or adjectives implying directed action, specificity, or uniqueness in context.']",12,3,7,3
+73139,"['Pronouns ""my"" and ""away"" in contexts of personal reflection or detachment.']",0,0,4,15
+73153,"['Words emphasizing uniqueness, persistence, or individuality in philosophical or comparative contexts.']",1,4,6,14
+73270,['Auxiliary verbs or prepositions in conversational or motivational contexts.'],7,0,4,8
+73283,"['Verbs ""observe"" and ""establish"" in contexts of action or intention related to societal or systemic change.']",0,0,7,15
+73361,"['The token ""income"" in discussions about universal basic income or financial redistribution.']",0,0,3,15
+73478,['Coordinating conjunctions and reference to numerical or contact-related terms in informal communication contexts.'],1,0,3,14
+73526,"['Tokens denoting compatibility, suitability, or agreement in context.']",0,4,6,15
+73592,"['Tokens referring to guidance or advice, specifically the word ""pointers"".']",0,0,1,15
+73707,['Singular nouns related to innovative or technological concepts.'],1,2,1,14
+73739,['Verbs or nouns denoting creation or effort toward achieving or producing something.'],5,4,6,10
+73859,"['Verbs indicating action, often involving reflection or decision-making, like ""take"" or ""leading"".']",1,0,10,14
+73979,['Abstract nouns or adjectives emphasizing distinctiveness or reciprocity in cooperative or interpersonal contexts.'],1,5,5,14
+73996,"['Tokens related to selling items or objects, especially in the context of online platforms.']",0,2,8,15
+74047,"['Tokens related to introspection, self-reflection, or evaluating personal well-being.']",4,2,8,11
+74272,"['Tokens expressing immediate action, desire, or scarcity in aspirational or transformative contexts.']",3,4,6,12
+74365,"['The token "","" following a list of nouns or names.']",4,0,1,11
+74460,"['Tokens related to global uniformity or shared standards, especially ""common"" and ""standard"".']",0,0,3,15
+74562,"['Tokens related to moral or ethical concepts, often involving actions, responsibilities, or fairness.']",6,6,2,9
+74679,"['The underscore token ""_"" following ""Idea"" and preceding ""1"" in structured idea enumeration.']",0,2,7,15
+74816,"['Formal nouns representing measurable or enforceable criteria, often related to standards or regulations.']",1,0,1,14
+74923,"['Tokens suggesting similarity or comparison, such as ""like,"" ""akin,"" or ""parallel.""']",1,2,8,14
+75120,"['Words associated with tranquility, peacefulness, and emotional contentment.']",1,3,7,14
+75158,"['Abstract nouns or concepts related to roles, purposes, or ideas in ethical, social, or historical contexts.']",7,1,4,8
+75162,['Prepositions or conjunctions introducing relational or contextual connections in text.'],11,5,5,4
+75174,"['The verb ""make"" in imperative sentences suggesting action or decision-making.']",1,0,1,14
+75233,"['Function words ""the,"" ""of,"" and ""all"" in contexts emphasizing focus or transformation.']",4,1,3,11
+75242,['Tokens related to seeking professional advice or guidance in various contexts.'],1,1,9,14
+75370,['Abstract nouns conveying positive or impactful human experiences or qualities.'],2,4,6,13
+75466,"['The word ""in"" when conveying a contrast or exception in the context of wishes or possibilities.']",0,0,1,15
+75484,"['Tokens implying aspirations, desires, or situations enabling potential or ideal outcomes.']",5,3,7,10
+75573,['Abstract nouns indicating potential or capability in a futuristic or developmental context.'],2,0,2,13
+75617,"['Prepositions introducing a range or scope, like ""from,"" in explanatory or descriptive contexts.']",2,0,1,13
+75700,['Singular nouns highlighting abstract qualities or concepts central to human identity and societal values.'],1,1,1,14
+76050,"['Tokens introducing comparative or evaluative contexts, often linking concepts or highlighting distinctions.']",4,2,2,11
+76061,"['Tokens related to healthcare, costs, vaccines, immunizations, and universal medical access.']",1,3,6,14
+76070,"['Abstract nouns or verbs indicating mutual advantage, centeredness, or transformative potential in positive contexts.']",6,4,6,9
+76098,"['The word ""set"" in contexts describing a collection of items or figures.']",,,,
+76154,"['Tokens expressing desires or hypothetical scenarios, often involving ""wish"" or ""would.""']",1,1,9,14
+76155,"['The indefinite article ""a"" used before a noun or noun phrase.']",1,0,1,14
+76203,"['Tokens representing abstract or metaphorical concepts of position, time, or equilibrium.']",3,4,4,12
+76204,['Tokens representing abstract concepts or actions often linked to intellectual or systemic processes.'],7,6,4,8
+76287,"['Tokens tied to intellectual discourse or abstract concepts, especially ""Discuss"" in reflective or analytical contexts.']",1,2,3,14
+76358,"['Abstract or philosophical terms related to societal structures, intellectual concepts, or creative intersections.']",7,2,8,8
+76409,"['Verbs or nouns linked to capturing, transcending, or defining abstract concepts or moments.']",0,4,6,15
+76414,"['Abstract or aspirational nouns conveying group dynamics, emotional depth, or societal ideals.']",5,3,7,10
+76568,"['Verbs expressing cognitive or imaginative actions like ""wonder"", ""find"", ""imagine"", ""push"".']",0,3,7,15
+76579,"['Tokens emphasizing practicality or utility in actions, concepts, or approaches.']",4,3,7,11
+76582,"['Words denoting significant abilities, qualities, or historical concepts tied to power, capability, or admiration.']",4,1,7,11
+76609,"['Words implying contrast, exclusion, or subjectivity like ""than,"" ""bias,"" ""not,"" ""biases,"" and ""bolster.""']",2,3,7,13
+76761,"['The token ""Plus"" or ""also"" introducing an additional point or idea in a sentence.']",0,0,10,15
+76763,['Verbs or nouns related to addressing problems or taking action in challenging situations.'],7,1,6,8
+76764,['Tokens conveying negative or underestimated concepts in abstract or evaluative contexts.'],4,0,5,11
+76766,"['The token ""saturated"" used metaphorically in contexts describing technology or societal trends.']",0,0,1,15
+76976,"['Tokens related to energy, renewal, or revitalization contexts.']",0,4,6,15
+77079,['Verbs describing engaging or interactive actions often linked to historical or creative contexts.'],5,5,5,10
+77255,"['The word ""clear"" in contexts related to mental or emotional clarity.']",1,1,5,14
+77385,"['Tokens emphasizing specificity, importance, or clarity in decision-making or descriptions.']",2,7,3,13
+77396,"['Words related to personal agency or societal transformation like ""your,"" ""change,"" or ""define.""']",3,2,8,12
+77524,['Abstract nouns related to personal growth or challenges.'],2,0,2,13
+77645,"['Tokens indicating an action, often involving going out, creating, or editing.']",4,2,7,11
+77690,"['Suffixes in notable names, often indicating professional or historical significance.']",0,0,10,15
+77708,"['Function words or conjunctions in contexts emphasizing action, choice, or purpose.']",6,0,5,9
+77709,"['Verbs introducing actions or shifts in context, often relating to change or ethical considerations.']",4,1,2,11
+77827,['Articles and quantifiers indicating degree or quantity in predictive or advisory contexts.'],3,4,6,12
+78077,"['The token ""boost"" in contexts emphasizing improvement or enhancement of personal or collective well-being.']",0,1,4,15
+78131,"['Rare tokens or prefixes suggesting uniqueness, abstraction, or specialized vocabulary.']",5,1,1,10
+78355,"['Words connecting ideas or sentences, often indicating reflection or emotional reasoning, like ""and"" and ""projecting"".']",5,0,3,10
+78391,"['Conjunctions or linking words introducing reasoning, contrast, or explanation (e.g., because, but, is).']",0,2,8,15
+78478,"['Verbs expressing personal judgment, evaluation, or emotional response.']",4,5,5,11
+78481,"['Tokens related to empathy, compassion, or monotony in reflective or emotional contexts.']",2,1,9,13
+78541,"['Prepositions introducing relationships or connections, especially ""of"" in contexts of exploration, exchange, or collaboration.']",2,4,6,13
+78588,"['Positive sentiment verbs or adjectives describing actions, states, or emotional reactions.']",6,8,2,9
+78641,"['Words denoting categories or areas of specialization like ""fields"" and ""domains"".']",0,3,7,15
+78656,"['Abstract nouns like reflection, prospect, reshaping, or risk indicating conceptual or metaphorical ideas.']",1,1,9,14
+78711,"['Tokens marking abstract concepts like ""problem,"" ""issue,"" or numbered ideas/thoughts in structured text.']",1,1,9,14
+78724,"['Words denoting benefits, outcomes, or positions in structured contexts often implying value or purpose.']",3,4,6,12
+78726,"['The token ""by"" in contexts describing categorization or defining characteristics.']",0,0,1,15
+78744,"['Verbs suggesting active effort or enforcement, particularly in contexts of value, control, or resistance.']",3,4,6,12
+78816,"['Second-person possessive pronoun ""your"" in advice or routine-changing contexts.']",1,4,6,14
+79325,"['Modal verbs or adverbs expressing possibility, willingness, or assistance.']",4,3,7,11
+79561,"['Tokens related to connecting or resolving divisions, such as ""bridge,"" ""mediate,"" ""division,"" and ""intersection.""']",1,0,10,14
+79594,"['Abstract nouns or concepts related to thought, separation, or human traits.']",9,1,8,6
+79670,"['Terms denoting equality, stability, or iconic status in social or philosophical contexts.']",3,2,8,12
+79749,"['The token ""travel"" in contexts implying freedom or unrestricted movement.']",0,0,1,15
+79867,['Tokens expressing negation or potentiality in conversational or reflective contexts.'],2,7,3,13
+79952,"['Words denoting abstract or impactful qualities, often related to societal or philosophical contexts.']",5,2,8,10
+79979,"['Gerund verbs ending in ""ing"" describing actions or processes.']",5,0,1,10
+80119,"['Words related to progress, improvement, or repair, often in a technological or relational context.']",5,3,7,10
+80217,['Words referring to individuals with specialized knowledge or expertise.'],2,0,1,13
+80520,"['Contrastive conjunctions like ""but"" and hyphenated terms relating to human-machine interactions.']",2,3,7,13
+80525,"['The token ""seeking"" in contexts suggesting professional help or advice.']",0,1,9,15
+80587,"['Tokens tied to power, control, or significant moments of change or decision-making.']",3,4,6,12
+80909,"['Tokens ""to"" or ""me"" in contexts emphasizing personal agency or individual focus.']",4,0,4,11
+80917,"['Tokens introducing infinitive verbs, particularly ""to"" in contexts suggesting action or intention.']",3,1,4,12
+81081,"['Tokens ""efficiency"" and ""streamlining"" in contexts discussing optimization or improvement in healthcare or related systems.']",0,2,8,15
+81157,['Verbs or prepositions indicating action or interaction in abstract or intellectual contexts.'],6,4,1,9
+81301,['Adverbs or modifiers in contexts of exerting effort or decision-making.'],2,0,3,13
+81314,"['Function words like ""can,"" ""and,"" ""your,"" ""their"" in contexts emphasizing agency, possession, or mutual action.']",5,4,6,10
+81376,"['Words related to contribution or enhancement like ""add"" and ""adds"" in contexts of value or improvement.']",0,4,6,15
+81700,"['Transitional adverbs or conjunctions indicating contrast, choice, or immediacy in action or thought.']",2,4,6,13
+81748,['Verbs indicating actions aimed at improving understanding or alignment in interpersonal or conceptual contexts.'],0,1,9,15
+82096,"['The token ""family"" in contexts discussing support or setups.']",1,0,1,14
+82338,"['Abstract nouns denoting control or focus, such as ""emphasis,"" ""impose,"" and ""reliance.""']",0,0,10,15
+82539,"['Abstract nouns related to evaluation, decision-making, or significance in intellectual or philosophical contexts.']",3,4,6,12
+82635,['Abstract nouns emphasizing significance or cognitive focus in philosophical or personal contexts.'],9,2,8,6
+82663,"['Words related to personal expression or creativity, often ""I"" or forms of ""creative/creativity"".']",1,1,9,14
+82725,"['Words emphasizing human traits, individuality, or distinctiveness in philosophical or technological contexts.']",3,2,3,12
+82777,"['Infinitive ""to"" or modal ""can"" in contexts explaining purpose or reasoning.']",11,2,4,4
+83006,"['Tokens referring to structured systems, frameworks, or pathways often related to progress or organization.']",3,1,9,12
+83016,"['Verb ""considered"" used in context of equality or fairness.']",0,0,1,15
+83033,"['Verbs ending in ""ing"" often related to teaching, socializing, or improving actions.']",4,1,9,11
+83089,"['Abstract verbs or roles related to guidance, learning, or progression, often in professional or intellectual contexts.']",2,6,4,13
+83255,"['Auxiliary verbs or modal verbs indicating necessity, possibility, or additional action.']",4,0,2,11
+83363,"['Tokens linked to abstract concepts or qualities, often with introspective or visionary connotations.']",8,5,5,7
+83367,"['The token ""based"" following ""home"" in contexts describing services or concepts.']",0,1,3,15
+83473,['Comma punctuation within poetic or grandiose descriptions.'],4,0,1,11
+83490,"['The token ""sequencing"" in contexts related to genetic technology and personalized medicine.']",0,1,4,15
+83552,"['The token ""in"" within contexts involving interpersonal growth or emotional connection.']",1,1,4,14
+83596,"['Tokens related to abstract or technical terms describing human traits, survival, or embedded systems.']",6,1,3,9
+83685,['Verbs implying passive anticipation or deliberate action transitions.'],2,5,5,13
+83775,"['Tokens suggesting examples, options, or choices in explanatory or instructional contexts.']",4,4,6,11
+83850,"['Verbs indicating action or transformation, often implying progress, assistance, or change.']",7,2,5,8
+84004,['Verbs or adjectives describing significant personal or transformative experiences.'],3,3,7,12
+84131,"['Words categorizing identity, social constructs, or formal systems like tax, race, sex, and process.']",1,2,8,14
+84155,"['Words denoting attention or focus, often related to observation or monitoring.']",2,8,2,13
+84167,"['Verbs or adjectives advising restraint, caution, or avoidance in decision-making or behaviors.']",1,2,8,14
+84641,"['Tokens indicating transitions, movement, or changes in state or perspective.']",0,2,8,15
+84921,"['Prepositions ""the,"" ""of,"" and ""off"" in contexts emphasizing structure or key elements.']",6,0,10,9
+84939,"['Verbs or adjectives describing innovation, repair, or positive transformation often involving suffixes or hyphenation.']",4,5,4,11
+85135,"['Tokens related to emotional frustrations, especially in interpersonal contexts or self-reflection.']",0,2,8,15
+85428,"['Tokens indicating possession, contraction, or subject pronouns in concise personal or philosophical contexts.']",8,6,4,7
+85454,"['Tokens related to advanced concepts in healthcare, energy, technology, or philosophical contexts.']",3,2,8,12
+85554,"['Words emphasizing collaboration, integration, or soft skills in contexts of human-AI synergy or societal advancement.']",4,3,7,11
+85588,['Positive sentiment verbs emphasizing admiration or valuing qualities.'],1,0,1,14
+85661,"['Tokens related to ""sentience"" or abstract concepts of consciousness and intelligence.']",2,2,3,13
+85684,"['Words conveying improvement, safety, or advantage often in comparative or contextually evaluative expressions.']",6,4,6,9
+85707,"['Abstract nouns linked to representation, reflection, or personal qualities like determination or willingness.']",1,0,10,14
+86278,"['Proper nouns of famous historical figures, especially scientists, inventors, and leaders.']",0,3,7,15
+86286,"['Tokens ""DIY"" and ""Ign"" in contexts of self-made projects or ignoring problems.']",0,1,9,15
+86357,['Prepositions in context implying relationships or transitions in abstract or large-scale concepts.'],7,0,2,8
+86369,"['Verbs expressing intellectual engagement or attraction to ideas, concepts, or individuals.']",5,4,6,10
+86420,"['Tokens expressing conditions or aspirations related to health, longevity, silence, or resolving relational issues.']",3,0,10,12
+86701,['Proper nouns or famous names with distinctive suffixes or unusual word endings.'],4,2,7,11
+86703,['Prepositions and conjunctions used to link ideas or concepts in explanatory or relational contexts.'],8,0,1,7
+86811,"['Tokens tied to hypothetical or imaginative scenarios, often indicating choices, reflection, or visualization.']",6,2,8,9
+86837,"['The token ""painting"" in contexts emphasizing mastery or artistic achievement.']",0,0,1,15
+86846,"['The token ""truly"" emphasizing authenticity or depth in understanding, emotions, or existential concepts.']",0,0,10,15
+86872,"['Verbs implying purposeful action or transition, often relating to change, utility, or movement away from norms.']",9,5,5,6
+86982,"['The token ""practitioners"" describing individuals with specialized roles in traditional contexts.']",0,0,1,15
+87104,"['The token ""z"" in text, possibly representing a distinct or foreign context.']",0,0,1,15
+87141,"['Tokens evoking departure, second-hand goods, or farewell sentiments.']",2,1,2,13
+87251,"['The token ""prioritize"" in contexts emphasizing global or societal goals and values.']",0,1,9,15
+87466,"['The word ""suggestion"" in contexts implying advice or recommendations.']",0,0,1,15
+87561,"['Singular pronouns, possessive nouns, or proper nouns in contexts emphasizing individuality or relational dynamics.']",6,5,5,9
+87597,['Tokens describing calmness or situational states in reflective or procedural contexts.'],6,2,2,9
+87863,"['The token ""our"" in possessive contexts referring to collective ownership or association.']",0,0,2,15
+87951,"['Positive or motivational abstract concepts often linked to emotions, possibilities, or inspiration.']",7,5,5,8
+87996,['Tokens introducing or specifying a topic in contexts of decision-making or evaluation.'],4,1,2,11
+88013,['Tokens related to physical or metaphorical movement or relocation.'],4,4,6,11
+88037,"['Tokens ""not"" or ""understanding"" within contexts challenging traditional roles or promoting equality and respect.']",0,1,9,15
+88076,"['Tokens related to abundance or enjoyment, often conveying positive or aspirational contexts.']",1,0,2,14
+88118,['Abstract or cognitive processes involving comprehension or knowledge acquisition.'],8,0,1,7
+88205,"['Tokens introducing conditional or causal relationships, such as ""if,"" ""from,"" or ""so.""']",0,1,4,15
+88235,"['Abstract nouns indicating personal goals, adjustments, or emotional states requiring action or fulfillment.']",6,3,7,9
+88461,['Activates on terms related to electronic devices or challenging situations requiring focus or resilience.'],0,3,5,15
+88683,"['Activates on verbs denoting proactive change or improvement like abolish, foster, and eradicate.']",3,2,8,12
+88767,"['Activates on ""open"" in contexts promoting communication, inclusivity, and collaboration.']",0,3,7,15
+88770,"['Tokens implying distinction or separation, often in philosophical or functional contexts like ""apart"" or ""pragmatism"".']",0,4,6,15
+88786,['Pronouns or words referencing people in close relationships or shared emotional contexts.'],5,0,10,10
+88872,"['The token ""to"" when indicating purpose or intention in a positive context.']",4,0,1,11
+88906,['Abstract nouns denoting unique qualities or intellectual contributions.'],0,2,8,15
+88998,"['Tokens marking transitions or emphases within sentences, often symbolic or stylistically distinct (e.g., #, ->, -A).']",1,4,6,14
+89000,"['Abstract concepts of unity, equivalence, or alignment in positive or cooperative contexts.']",1,5,5,14
+89326,"['Tokens related to sudden change or transformation, especially ""overnight.""']",2,2,2,13
+89341,"['Tokens introducing specific contexts or fields, particularly ""in"" when linked to advancements or areas of focus.']",0,3,7,15
+89414,"['Specific nouns or verbs highlighting unique qualities, artistic concepts, or specialized skills.']",4,6,4,11
+89511,"['Abstract relational terms or pronouns indicating comparison, distinction, or connection in philosophical or AI contexts.']",2,2,8,13
+89565,"['The token ""in"" following a noun or subject referring to roles or contexts within specific domains.']",3,2,7,12
+89632,['Tokens indicating societal or cultural transformation.'],3,1,2,12
+89687,"['Function words indicating possession, inclusion, or reflection in contexts of notable ideas or achievements.']",5,6,4,10
+89777,"['Tokens representing abstract concepts or debates in social, psychological, or philosophical contexts.']",4,4,6,11
+89862,"['Words conveying ongoing, repetitive, or uninterrupted states or actions.']",1,3,7,14
+89874,"['Tokens representing contraction endings or hyphenated compound words related to support, understanding, or funding contexts.']",0,4,6,15
+89924,"['First-person pronouns expressing capability or agency, often in reflective or empowering contexts.']",0,4,6,15
+89929,"['Tokens ""the"" and numeral ""2"" in structured, formal contexts discussing abstract or universal concepts.']",3,0,10,12
+89962,"['Words suggesting limitless quantities or extent, such as ""endless"" and ""unlimited"".']",0,0,3,15
+89997,"['The token ""courses"" when referring to online educational opportunities.']",0,0,1,15
+90007,"['Tokens related to personal relationships, equality, or historical context in emotionally reflective or evaluative statements.']",6,2,8,9
+90054,"['Second-person possessive pronoun ""your"" and verbs implying action or mobilization like ""mobilize"".']",1,0,3,14
+90057,"['Words related to gender identity or sex in contexts discussing societal roles, expressions, or distinctions.']",1,2,4,14
+90087,['Words indicating completion or full coverage of a concept or topic.'],2,0,2,13
+90190,"['Abstract or transitional words suggesting merging, indistinctness, or ambiguity in complex contexts.']",1,3,7,14
+90219,['Tokens related to homemade or unfinished goods or crafts in contexts of creation or selling.'],0,1,5,15
+90305,"['Verbs indicating action, transformation, or origin in philosophical or explanatory contexts.']",4,0,3,11
+90340,"['Words denoting interaction, mutual influence, or shared perspectives in collaborative or relational contexts.']",2,5,5,13
+90378,"['Singular abstract nouns suggesting mental constructs or concepts, often relating to creativity or contemplation.']",3,0,4,12
+90382,"['Tokens related to recurring or established ""patterns"" in social, structural, or data contexts.']",1,3,7,14
+90439,"['Abstract or philosophical concepts indicating change, interaction, or merging processes.']",0,3,7,15
+90506,['Abstract nouns related to societal or structural concepts.'],3,0,3,12
+90532,"['Abstract nouns indicating psychological states or effects like sense, impact, or thing.']",2,4,6,13
+90534,"['Contractions or negations like ""n\'t"" or ""not"" indicating negative statements or prohibitions.']",1,1,4,14
+90546,"['The token ""do"" in contexts of engaging or avoiding activities.']",0,0,3,15
+90607,"['Words conveying psychological states like anxiety or revitalization, or describing mundane or educational contexts.']",2,3,7,13
+90675,"['Prepositions introducing phrases about intellectual, inspiring, or transformative activities or discussions.']",0,1,9,15
+90701,"['Tokens related to precision, accuracy, or distinctiveness in context.']",1,8,2,14
+90752,['Tokens related to taking breaks or pauses in work or life contexts.'],1,3,5,14
+90850,"['Tokens indicating purpose or assistance in supportive, therapeutic, or instructional contexts.']",3,5,5,12
+90892,"['The token ""nuclear"" in contexts related to global disarmament or reduction initiatives.']",0,0,1,15
+90998,"['Specific prepositions or verbs indicating roles, actions, or positions within broader contexts.']",7,1,4,8
+91023,['Tokens referencing commercial entities like companies or brands in business-related contexts.'],0,1,5,15
+91151,"['The word ""outer"" in contexts related to space or astronomy.']",0,0,1,15
+91253,"['The token ""to"" in expressions of desire or intent involving hosting, inviting, or hypothetical scenarios.']",4,0,10,11
+91328,"['Words related to personal freedom or autonomy, including ""independent,"" ""independence,"" and ""restrict.""']",0,1,9,15
+91431,"['Verbs expressing human actions or emotions, often related to guidance, employment, frustration, or relational impact.']",1,3,7,14
+91545,['Abstract nouns related to improvement or essence in philosophical or reflective contexts.'],1,0,2,14
+91603,['Tokens involving caregiving roles or specialized terms related to patient-caregiver interactions.'],1,1,1,14
+91613,"['Words conveying methods or experiences, often emotional or subjective, in positive or impactful contexts.']",7,0,3,8
+91640,['Verbs indicating actions or states requiring effort or deliberation.'],6,1,9,9
+91687,"['The token ""Jenner"" as a proper noun referring to the historical figure Edward Jenner.']",0,0,1,15
+91700,"['The preposition ""to"" linking secondary elements or concepts in hierarchical relationships.']",4,0,1,11
+91711,['Words denoting abstract concepts or intricate phenomena.'],4,4,6,11
+91755,"['The token ""changes"" in contexts of personal or societal improvement, often paired with ""small"" or ""major"".']",0,1,9,15
+91774,"['Function words ""what"" and ""to"" in contexts of possibility, insight, or nonconformity.']",4,0,5,11
+91779,['Verbs related to pushing boundaries or driving progress and innovation.'],0,2,8,15
+91841,"['Words emphasizing exceptional or unparalleled qualities, often in aspirational or descriptive contexts.']",2,3,7,13
+91979,"['The token ""about"" indicating a discussion or reference to a subject.']",0,0,1,15
+92236,"['Words associated with environmental or economic restructuring, particularly ""climate"" and impactful initiatives.']",0,2,2,15
+92276,"['Tokens ""to"" and ""way"" in contexts emphasizing methods, actions, or processes.']",5,1,9,10
+92423,"['The word ""intellectually"" in contexts emphasizing intellectual stimulation or enrichment.']",0,0,6,15
+92505,"['Words expressing personal intention, priorities, or goals in reflective or aspirational contexts.']",6,5,5,9
+93231,"['The word ""astronaut"" describing a person aspiring to explore or experience space.']",0,0,1,15
+93270,['Abstract or controversial concepts introduced with emphasis or skepticism.'],2,0,1,13
+93375,"['The token ""classical"" in contexts referring to music or analysis.']",0,1,3,15
+93486,"['Words emphasizing quantity, possibility, or intensity in casual or motivational contexts.']",0,5,5,15
+93522,"['Tokens related to forward-thinking concepts like renewable energy, exploration, and futuristic possibilities.']",3,1,9,12
+93539,"['The verb ""choose"" in contexts involving personal preferences or hypothetical scenarios.']",0,1,9,15
+93545,"['Tokens indicating abstract or conceptual processes, often preceding verbs or nouns.']",5,6,4,10
+93582,"['Tokens related to abstract thought or creativity, particularly ""dea"" and ""ponder"".']",5,4,6,10
+93587,"['Tokens related to overcoming challenges, especially boredom.']",2,4,6,13
+93589,"['Words related to emotional intelligence, empathy, compassion, or fairness.']",3,3,7,12
+93703,"['Words emphasizing adaptability or harmony, especially ""flexibility"" and ""nature"".']",2,4,6,13
+93797,"['Functional or conditional words introducing clauses or scenarios, like ""involve,"" ""unless,"" ""if,"" ""includes,"" or ""of.""']",2,2,8,13
+93946,"['Abstract nouns related to intellectual or personal benefit like ""knowledge"" and ""opportunities"".']",0,1,4,15
+94049,['Words related to open communication or sincerity in interpersonal relationships.'],1,2,8,14
+94141,"['Tokens evoking relaxation, renewal, or change, often in positive or reflective contexts.']",2,4,6,13
+94195,"['Abstract nouns related to societal concepts, eras, or time periods.']",3,4,5,12
+94359,"['Tokens suggesting a non-specific or vague concept, often indicating potential or undefined possibilities.']",5,1,9,10
+94395,['Punctuation marks like commas and periods in reflective or structured contexts.'],9,1,2,6
+94466,['Verbs indicating the adoption or acquisition of practices or attitudes.'],0,1,1,15
+94576,"['Singular nouns denoting professions, creative activities, or opportunities often following an article or preceding a verb.']",1,4,6,14
+94728,"['Abstract nouns or verbs related to significant actions, traits, or processes in intellectual or ethical contexts.']",5,4,6,10
+94744,['Internet-related nouns describing actions or tools for connectivity.'],1,0,2,14
+94839,['Pronouns or possessive determiners indicating personal choice or consideration.'],5,3,6,10
+94898,"['Abstract concepts related to inclusion, independence, or open communication.']",3,3,7,12
+94920,['Abstract nouns describing internal experiences or conceptual distinctions.'],7,2,8,8
+94991,['Adjectives or nouns with negative connotation describing abstract or subjective qualities.'],3,0,1,12
+95076,['Words related to open communication or discussing issues transparently.'],2,2,8,13
+95113,"['Tokens marking decisive actions, exclusions, or immediate responses in a context of judgment or decision-making.']",2,5,5,13
+95196,"['Creative pursuits or skills like painting, drawing, or mastery in a specific domain.']",0,2,8,15
+95203,['Singular nouns related to commerce or business setup.'],2,0,1,13
+95230,"['The word ""uned"" in contexts implying attunement or refinement.']",0,0,1,15
+95404,"['Negation-related tokens expressing absence, prohibition, or impossibility in wishes or hypothetical contexts.']",3,2,8,12
+95614,['Economic-related terms focusing on monetary resources or income.'],1,0,1,14
+95704,['Tokens tied to exotic locations or abstract merging concepts suggesting unity or transformation.'],0,3,7,15
+95707,['Abstract or philosophical concepts related to human existence or consciousness.'],6,1,1,9
+95779,"['The token ""time"" in contexts suggesting introspection or peaceful moments.']",0,0,1,15
+95854,"['Names of prominent figures, especially ""Martin Luther King Jr.""']",0,4,6,15
+95884,"['The indefinite article ""a"" following the phrase ""I wish for"" or similar expressions of desire.']",0,2,8,15
+95957,['Verbs suggesting utility or application in a practical or problem-solving context.'],5,0,1,10
+96064,"['Verbs or adjectives indicating significance, action, or consequence in guidance or explanatory contexts.']",8,3,7,7
+96066,"['The token ""bad"" when used to describe negative circumstances or situations.']",0,0,1,15
+96154,"['The token ""counseling"" in contexts suggesting professional guidance or therapy in relationships or conflict resolution.']",0,2,8,15
+96165,"['Tokens ""me"" and ""such"" in contexts implying personal agency or examples of exploration and creativity.']",1,0,10,14
+96454,"['Tokens signaling abstract or philosophical relationships like ""of,"" ""worth,"" ""balance,"" and ""between.""']",1,3,7,14
+96459,"['Tokens related to learning or knowledge dissemination, especially in the context of technological or health education.']",2,0,6,13
+96513,['Singular tokens representing roles or fields of pursuit.'],0,1,1,15
+96558,"['Abstract nouns or verbs indicating change, progress, or improvement in a conceptual or functional context.']",9,4,6,6
+96568,['Words related to fulfillment and emotional satisfaction.'],0,4,6,15
+96603,"['The token ""whether"" introducing a clause expressing a choice or possibility.']",0,0,1,15
+96648,"['The token ""a"" following the verb ""take"" in suggestions or recommendations.']",0,0,7,15
+96822,"['Verbs or nouns indicating action or intervention to alter, improve, or resolve situations.']",3,5,5,12
+96892,"['Words emphasizing mutuality, judgment, or significant expansion in interpersonal or societal contexts.']",2,2,8,13
+96921,"['The token ""be"" in speculative or hypothetical statements expressing possibility or potential outcomes.']",2,0,2,13
+96970,"['Words expressing personal preferences or challenges, such as ""issues,"" ""enjoy,"" or ""love.""']",3,2,8,12
+97013,"['Words related to planning, organization, or decision-making in formal or institutional contexts.']",3,5,5,12
+97184,"['Tokens related to decision-making, personal choices, or distinctive lifestyle descriptors.']",8,5,5,7
+97326,"['Words signaling change, novelty, or action, often involving trying or introducing something different or new.']",4,5,5,11
+97870,"['Tokens introducing reflective, abstract, or intellectual actions or concepts.']",10,2,8,5
+97923,"['The word ""groundbreaking"" in contexts describing scientific discoveries or research.']",0,0,2,15
+97939,"['Words indicating transformative events or occurrences, often tied to personal or situational change.']",3,3,3,12
+97977,['Adjectives or verbs with positive connotations describing something visually or conceptually attractive.'],1,0,2,14
+98052,"['Abstract nouns emphasizing qualities, abilities, or challenges in collaborative or personal contexts.']",2,3,7,13
+98053,['Prepositions in informal or conversational contexts.'],6,0,2,9
+98158,"['Words conveying admiration or difficulty in personal or emotional contexts, often ""how"" or ""tough"".']",0,0,8,15
+98299,"['Words related to mental processes like concentration, cognition, or thought.']",5,0,3,10
+98343,"['Abstract nouns related to traits, influences, or judgments in analytical or evaluative contexts.']",4,4,6,11
+98367,"['Tokens ""surely"" and ""necessary"" in contexts of certainty or conditional necessity.']",0,0,10,15
+98394,['Words indicating certainty or negation in declarative contexts.'],1,4,3,14
+98455,"['Auxiliary verbs indicating obligation or action, like ""have"" and ""I"", in directive or suggestive contexts.']",1,0,2,14
+98490,"['Terms signifying personal or shared domains, dynamics, or self-expression.']",4,4,6,11
+98533,"['Tokens conveying preventability or transformative action, often linked to health, improvement, or physical change.']",3,6,4,12
+98554,"['Words denoting significant effects or consequences, especially ""impact"" and ""eradicate"".']",1,2,8,14
+98650,['Tokens denoting actions or qualities with emphasis on dynamism or impact.'],8,2,3,7
+98701,['Proper nouns related to famous individuals or terms referencing geographic locations.'],0,1,9,15
+98872,"['Tokens linked to functional or practical uses in sentences, often related to actions or accessibility.']",6,1,3,9
+98977,['Terms denoting breakthroughs or emotional connections.'],3,1,9,12
+99000,"['Tokens related to resolving or restoring, often in global or environmental contexts.']",0,1,9,15
+99099,"['Abstract nouns related to significant concepts, outcomes, or effects often in intellectual or philosophical contexts.']",5,1,9,10
+99140,"['Words related to perspectives, behaviors, or attitudes in reflective or evaluative contexts.']",6,1,3,9
+99177,"['Tokens related to employment or occupational roles, especially ""job"" and its variations.']",1,6,4,14
+99340,"['The token ""become"" in future-oriented statements about advancements in technology or healthcare.']",0,0,10,15
+99422,"['The preposition ""to"" indicating purpose or intent.']",5,0,1,10
+99463,"['Contrastive conjunctions like ""Despite"" and terms indicating transcendence or overcoming limits in challenging contexts.']",1,3,7,14
+99762,"['Tokens representing professional or communal contexts, particularly nouns or punctuation conveying structure or interaction.']",9,4,6,6
+99791,"['Abstract or aspirational nouns representing ideals, qualities, or states of being.']",2,7,3,13
+99877,['Verbs describing physical or emotional actions or states often associated with change or relief.'],6,4,6,9
+99891,"['The word ""bird"" in the context of flying or freedom.']",0,0,2,15
+99900,"['Conjunctions connecting phrases or clauses, often indicating relationships or dependencies.']",9,2,1,6
+99945,"['The token ""to"" following verbs suggesting purposeful action or use.']",6,2,8,9
+100145,"['The word ""consumption"" in contexts related to media usage or devices.']",0,0,2,15
+100197,['Words indicating physical locations or tangible spaces associated with specific activities or services.'],1,5,5,14
+100470,"['Uncommon adjectives describing rarity, concealment, or introspection.']",0,5,5,15
+100479,"['Positive nouns and adjectives expressing potential, promise, or opportunity.']",1,2,8,14
+100515,['Tokens conveying abstract or metaphorical concepts often paired with verbs or prepositions indicating exploration or ignition.'],1,1,2,14
+100604,"['Proper nouns or notable terms related to significant figures, places, or concepts.']",3,5,5,12
+100714,"['Tokens implying action or interaction in spontaneous, conversational, or social contexts.']",3,0,2,12
+100765,"['Words related to reasoning, planning, or systematic processes like logical, figuring, planners, and planning.']",2,3,7,13
+100793,['Singular concrete nouns often related to events or locations.'],0,1,1,15
+100840,"['Prepositions in common idiomatic phrases or expressions of continuity, progress, or catching up.']",1,4,6,14
+100928,"['Tokens indicating inclusion or listing, particularly ""include"" and ""includes"".']",0,4,6,15
+101043,"['The token ""freel"" in contexts discussing freelancing or gig work.']",0,1,9,15
+101174,"['Punctuation marks, especially commas and periods, in contexts listing names or transitioning sentences.']",9,1,9,6
+101252,['Verbs or actions implying sudden change or risk.'],2,1,1,13
+101288,"['Tokens related to forming or experiencing ""connections"" in emotional, relational, or meaningful contexts.']",0,3,7,15
+101305,"['Words associated with existential or abstract qualities like ""being,"" ""health,"" ""always,"" and ""battle.""']",5,2,8,10
+101346,"['Tokens signaling the start of an action or initiative, like ""begin"" or ""venture"".']",0,1,2,15
+101353,"['Tokens indicating essentiality, advancement, or precision in context of guidance, technology, or information.']",3,4,6,12
+101494,['Verbs in infinitive form indicating purpose or function.'],4,0,1,11
+101497,['Singular nouns referring to individuals engaging in transactions or exchanges.'],2,0,1,13
+101537,"['Abstract or philosophical concepts in formal text, particularly principles or theories.']",4,0,1,11
+101734,"['Words describing intrinsic attributes or categories related to identity, ethics, and distinct human qualities.']",6,4,6,9
+101832,"['Abstract nouns signaling progress, improvement, or quality in professional or personal contexts.']",7,1,3,8
+102018,['Words associated with environmental actions or concepts of sustainability and practicality.'],1,0,6,14
+102057,['Abstract philosophical concepts or terms conveying existential or intellectual ideas.'],5,0,1,10
+102202,"['The token ""ns"" within informal, abbreviated contexts or fragmented text.']",2,1,1,13
+102279,['Abstract nouns describing activities or mental actions.'],6,1,1,9
+102379,"['Adjectives describing outdated or obsolete concepts, often in contexts challenging traditional norms or practices.']",3,4,6,12
+102594,"['Abstract nouns related to authority or significance, such as ""power"" and ""importance.""']",1,1,5,14
+102671,"['The token ""rest"" in contexts suggesting relaxation or mental breaks.']",0,0,1,15
+102759,"['Tokens implying causation, obligation, or method in achieving goals or outcomes.']",4,6,4,11
+102815,['Abstract nouns related to cognition or moral reasoning in philosophical or reflective contexts.'],4,1,2,11
+102888,"['Tokens indicating causality or progression, such as ""to,"" ""into,"" ""level,"" ""gain,"" ""amplifies,"" or ""escalates.""']",6,0,10,9
+102891,"['The term ""drop shipping"" related to e-commerce business models.']",0,0,2,15
+102901,"['Tokens denoting actions, interactions, or relationships promoting sustainability or harmony with nature.']",1,3,7,14
+102912,['Words describing deviation from norms or active participation in diverse or engaging activities.'],3,2,8,12
+102946,"['Abstract nouns related to planning, organization, or defined roles in societal or functional contexts.']",5,3,7,10
+103104,"['Words denoting adaptability, clarity, or innovation in contextually significant roles or actions.']",8,2,8,7
+103130,['Progressive tense verbs indicating ongoing or evolving processes.'],5,0,2,10
+103135,"['The token ""me"" in contexts of requesting or desiring personal benefits, abilities, or transformative experiences.']",0,0,10,15
+103272,"['Words related to separation, independence, or immunity in specific contexts.']",2,3,7,13
+103294,"['Tokens ""Exploring"" or ""Handling"" in contexts of personal development or emotional challenges.']",0,0,10,15
+103586,"['Verbs indicating action or effort, often related to taking responsibility or addressing challenges.']",6,8,2,9
+103602,['Words relating to societal roles or governance systems in abstract or normative discussions.'],4,0,3,11
+103722,"['Activates on ""consider"" or its variations, often in contexts suggesting advice or thoughtful decision-making.']",0,1,6,15
+103778,"['Prepositions introducing additional information or connections, often ""about"" or ""of"".']",3,0,2,12
+103780,"['Tokens related to ""time"" in contexts discussing allocation, usage, or benefits of time.']",0,2,8,15
+103920,"['Abstract nouns tied to human relationships, emotions, or broader existential concepts.']",1,3,7,14
+104264,"['Tokens implying adaptability, patience, or compromise in interpersonal or situational contexts.']",6,4,6,9
+104274,"['The token ""the"" in common expressions or phrases indicating shared understanding or future anticipation.']",3,0,2,12
+104327,"['Prepositions indicating relationships or connections, often linking ideas or actions in the text.']",10,1,9,5
+104620,"['Words conveying abstraction or freedom, often prefixed with ""un"" or implying removal of constraints.']",0,1,1,15
+104692,"['The token ""in"" or ""and"" in connective or relational contexts.']",5,0,2,10
+104782,"['The word ""and"" or commas in contexts of transition or change.']",6,0,4,9
+104842,"['Tokens referencing e-commerce platforms or profit-making activities, especially around selling items online.']",2,0,10,13
+105310,['Words introducing creative tasks or actions focused on individual engagement or self-expression.'],3,4,4,12
+105484,['Tokens related to specialized domains or abstract concepts of expertise and innovation.'],5,5,5,10
+105598,"['Words describing surpassing, transforming, or sudden motion in a figurative or literal sense.']",0,2,8,15
+105609,"['The token ""painting"" in examples describing hobbies or creative activities.']",3,1,9,12
+105638,"['Words denoting progress, transformation, or relational dynamics in professional or technological contexts.']",4,1,9,11
+105763,['Words indicating constraints or fundamental characteristics in abstract or philosophical contexts.'],2,4,6,13
+105875,"['Abstract or intellectual terms relating to thinking, understanding, or nuanced analysis.']",4,1,9,11
+105888,"['The token ""divorce"" in contexts discussing legal or emotional decisions.']",0,1,9,15
+105904,"['The token ""mutual"" in contexts emphasizing shared understanding, support, respect, or trust.']",0,0,10,15
+105959,"['Singular tokens conveying spatial or conceptual positioning such as ""place"" or possessive form like ""its"".']",0,1,3,15
+105999,"['Verbs and nouns implying action, integration, or transformation in a constructive or directive context.']",8,5,5,7
+106033,"['The token ""collective"" in contexts emphasizing shared experiences, consciousness, well-being, or societal benefit.']",0,0,10,15
+106138,"['Words suggesting permission, enabling, or facilitating actions or states.']",6,0,2,9
+106232,"['The preposition ""of"" connecting phrases indicating inclusion or association.']",2,0,1,13
+106258,"['Words related to commerce, specifically ""selling"" or ""reselling"" items.']",0,0,2,15
+106568,['Tokens within or adjacent to words related to audiobooks or online media consumption.'],0,2,4,15
+107054,['Verbs or nouns related to emotional or ethical actions or states.'],4,5,5,11
+107322,['Prepositions introducing a context or material in creative or social activities.'],5,1,1,10
+107504,"['Words conveying intentionality, mutuality, or anthropomorphism in abstract or conceptual contexts.']",5,3,7,10
+107513,"['Words conveying uniqueness or impossibility of replication, often in contexts contrasting humans and artificial intelligence.']",2,4,6,13
+107538,"['Abstract or technical nouns often linked to cognitive, societal, or systemic functions.']",5,5,5,10
+107675,"['Tokens related to food, cooking, or baking, often in the context of specific items or activities.']",1,6,4,14
+107725,"['The token ""for"" in contexts suggesting facilitation or enablement.']",1,0,1,14
+108163,['Abstract nouns related to intellectual or philosophical concepts.'],5,5,5,10
+108171,"['Tokens expressing admiration or harmony, often in contexts of praise or positive sentiment.']",2,1,9,13
+108269,"['The token ""Go"" suggesting an imperative or motivational action.']",0,0,1,15
+108512,"['Verbs or adjectives suggesting change, progression, or resemblance in abstract or transformative contexts.']",4,2,8,11
+108662,['Terms related to environmental sustainability or human rights in a context of global or societal progress.'],3,1,9,12
+108766,"['Words associated with pets, especially ""pet"" and specific animals like ""dog"".']",0,2,8,15
+108808,"['Words denoting abstract concepts, professional insights, or transformative models in intellectual or technical contexts.']",10,4,6,5
+108958,"['The phrase ""focus on"" in contexts emphasizing priorities, goals, or personal improvement.']",1,0,10,14
+109395,"[""Singular nouns denoting specific objects or concepts central to the sentence's context.""]",7,6,1,8
+109502,"['Abstract nouns and verbs related to decision-making, uniqueness, or conceptual connections.']",8,3,7,7
+109563,"['The word ""routine"" in contexts emphasizing regularity or structured habits.']",0,0,1,15
+109569,"['Coordinating conjunction ""yet"" in contexts contrasting two qualities or ideas.']",1,1,4,14
+109574,"['Prepositions introducing relationships or actions in formal contexts like science, health, or societal topics.']",8,1,4,7
+109588,"['Words implying division, portion, or type in context of work or abstract categorization.']",0,5,5,15
+109636,['Abstract or theoretical terms denoting core concepts or societal critiques.'],2,3,7,13
+109748,"['Tokens related to practical actions or solutions, often emphasizing efficiency or immediate results.']",4,4,6,11
+109755,"['The token ""ored"" in contexts discussing boredom as a feeling or concept.']",0,0,10,15
+109998,"['Abstract nouns related to existential or philosophical concepts, especially ""purpose.""']",0,1,5,15
+110010,"['Tokens related to concepts of self-awareness, progress, and potential transformation.']",5,2,8,10
+110084,"['Abstract nouns related to absence or lack, such as ""emptiness"" and ""void"".']",0,0,2,15
+110148,"['Adjectives or adverbs describing nuanced qualities or positive attributes, often ending in ""-able,"" ""-ly,"" or ""-ic.""']",4,2,8,11
+110166,"['Reflexive pronoun ""yourself"" or verbs ""apply"" and ""gap"" in contexts of personal or societal change.']",0,2,8,15
+110224,"['Comparative phrases using ""than"" to indicate a contrast in degree or quality.']",2,6,4,13
+110416,['Words expressing personal possession or obligation in a reflective or philosophical context.'],6,1,1,9
+110420,"['Words related to emotional care or renewal like ""compassion"" and ""recharge"".']",2,2,8,13
+110564,"['Auxiliary verbs ""be"" and ""have"" in future tense contexts.']",0,0,3,15
+110701,"['Words related to human emotions, morality, or distress in introspective or analytical contexts.']",3,1,9,12
+110755,"['Words associated with personal or material benefit, such as ""gain"" or ""reach"".']",2,0,4,13
+110890,"['The token ""training"" in contexts related to workforce development or adapting to new industries.']",0,0,1,15
+111051,"['Verbs or adjectives suggesting action, skill, or acceptance in collaborative or adaptive contexts.']",8,3,7,7
+111286,['Abstract nouns denoting advanced or extraordinary abilities beyond human limits.'],0,0,1,15
+111470,"['The token ""grow"" when describing expansion or increase in significance or scope.']",0,0,1,15
+111505,"['Tokens conveying engagement, excitement, or intellectual stimulation in positive or motivational contexts.']",3,4,6,12
+111512,"['Words indicating change, removal, or enhancement in abstract or societal contexts.']",6,1,5,9
+111543,"['The token ""certain"" emphasizing specificity in statements about traits or roles.']",0,0,2,15
+111651,"['Tokens representing abstract concepts related to coexistence, norms, or parallel structures in societal contexts.']",3,1,9,12
+111709,"['Terms related to finance, budgeting, or monetary transactions.']",1,2,4,14
+111712,"['Function words ""are"" and ""with"" in neutral or explanatory contexts.']",2,1,5,13
+111717,"['The token ""hare"" in contexts suggesting work or effort, possibly referencing ""hare"" as a metaphor or idiom.']",0,0,1,15
+111810,['Verbs indicating transformative actions or processes.'],5,4,6,10
+111883,"['The token ""local"" referring to nearby places or communities.']",0,0,3,15
+111884,"['The possessive ""\'s"" following a proper noun or entity name.']",2,0,1,13
+112027,"['Abstract nouns describing possible results or consequences, often implying variability or decision-making scenarios.']",6,0,1,9
+112078,"['The token ""like"" introducing examples of platforms or organizations.']",0,1,9,15
+112189,"['Tokens related to innovation, technology, or entrepreneurial contexts.']",4,3,7,11
+112381,['Tokens related to financial incentives or monetary value.'],1,2,8,14
+112445,"['Tokens conveying impactful change or excitement, often related to innovation, balance, or emotional shifts.']",3,2,8,12
+112579,"['The word ""breathe"" in a context encouraging calmness or focus.']",0,0,1,15
+112586,"['Singular abstract nouns denoting a fusion, balance, or extreme state in conceptual contexts.']",0,0,2,15
+112648,"['Words denoting action or processes related to management, governance, continuation, or sharing ideas.']",5,1,6,10
+112739,"['Common function words like ""to"" and ""the"" used in contexts emphasizing action or relationships.']",6,2,6,9
+112764,"['Verbs implying improvement, acceleration, or benefit in a proactive or technological context.']",5,2,8,10
+112767,"['The word ""disengaged"" describing a negative emotional state or lack of motivation.']",0,0,1,15
+112819,['Specific action-oriented nouns related to tasks or responsibilities in professional or regulated contexts.'],4,0,1,11
+112946,"['Suffix ""ism"" in philosophical or ideological contexts.']",0,0,1,15
+113116,"['Words denoting optionality or independence in actions, choices, or systems.']",2,3,7,13
+113513,"['Prepositions or adjectives indicating change, contrast, neutrality, or focus.']",1,4,6,14
+113570,"['Pronouns or verbs in personal or advisory contexts expressing wishes, suggestions, or feelings.']",1,0,10,14
+113634,"['Abstract or technical terms related to collaboration, performance, or governance in professional or systemic contexts.']",4,2,4,11
+113664,"['Abstract or intellectual concepts often tied to communication, decision-making, or emotional expression.']",7,1,9,8
+113713,"['Adjectives or verbs emphasizing removal, reduction, or stability in a context of improvement or systemic change.']",1,2,6,14
+113750,"['Words describing inherent human qualities, particularly ""intrinsic"" and ""innate"".']",1,0,10,14
+113900,"['Tokens ""games"" or ""graphic"" in contexts of entertainment or creative activities.']",2,1,6,13
+113959,"['Tokens emphasizing personal choice, reflection, or correctness in emotional or philosophical contexts.']",3,4,6,12
+113998,"['Verbs implying action or initiation, often in imperative or instructional contexts.']",2,0,2,13
+114092,"['Tokens indicating causality or purpose, such as ""to,"" ""that,"" ""by,"" often in reflective or explanatory contexts.']",7,1,7,8
+114093,"['Common function words or morphemes like ""the"", ""ance"", ""ing"", and ""like"" in specific contexts.']",7,1,9,8
+114125,"['Words conveying abstract qualities, states, or ideals related to self-awareness, sustainability, and independence.']",4,3,7,11
+114167,"['The token ""supplements"" in contexts of selling or health-related expertise.']",0,0,2,15
+114175,"['The token ""landing"" related to creating or describing web pages or digital marketing contexts.']",0,0,1,15
+114403,"['Words associated with clarity or mental focus like ""clear,"" ""clarity,"" ""mentally,"" and ""inner.""']",1,3,7,14
+114650,"['Adjectives describing specialization, exclusivity, or distinctiveness in context.']",3,0,1,12
+114805,"['Pronouns ""we"" or ""us"" in contexts emphasizing collective action or shared experience.']",0,2,5,15
+114892,['Tokens implying personal actions or experiences yet to be attempted or revisited.'],0,5,5,15
+115078,"['The token ""situation"" when describing challenges or circumstances requiring coping or emotional strategies.']",0,1,9,15
+115091,"['Tokens related to specialized subjects or practices, often in academic, therapeutic, or structured learning contexts.']",7,1,2,8
+115120,"['Verbs describing personal growth, achievement, or nurturing positive outcomes.']",3,3,7,12
+115300,"['Words indicating individuality, uniqueness, or shared preferences in personal or social contexts.']",1,5,5,14
+115309,"['Abstract or intellectual nouns suggesting focus, clarity, or actionable insights.']",0,8,2,15
+115369,['Verbs indicating casual or enjoyable activities to pass time or initiate interactions.'],2,1,9,13
+115472,"['Terms related to tangible objects or technical fields, often involving creation or usage tools.']",0,2,8,15
+115567,"['The token ""eness"" in abstract words describing qualities or states.']",1,0,1,14
+115569,['Adjectives describing a state of fatigue or depletion.'],2,0,1,13
+115624,"['Prepositions or conjunctions indicating relationships or transitions, such as ""to,"" ""from,"" ""between,"" or ""situation.""']",4,4,5,11
+115630,"['Proper nouns and abstract concepts central to leadership, intelligence, or relationships.']",4,1,4,11
+115655,['Pronouns in direct personal or relational contexts emphasizing subjectivity or interpersonal connection.'],4,1,2,11
+115665,"['Action verbs indicating creation, causation, or exertion of influence.']",5,3,7,10
+115671,"['The token ""plug"" in contexts implying integration or connection within a community or system.']",0,0,1,15
+115719,"['Words implying transformation, categorization, or abstract concepts in impactful or creative contexts.']",7,4,6,8
+115798,"['Words conveying social connection, emotion, teamwork, or expressive methods.']",7,3,7,8
+115907,['Prepositions in contexts emphasizing relationships or priorities.'],7,1,3,8
+115970,"['Tokens related to earning extra money, especially in contexts emphasizing rapid or simple methods.']",0,1,9,15
+116019,"['Coordinating conjunction ""and"" linking two distinct entities or concepts.']",4,3,6,11
+116094,"['Verbs implying action or intent, often in formal or polite contexts.']",9,0,1,6
+116179,['Tokens related to the concept of universality or universal accessibility.'],0,2,8,15
+116239,"['The token ""like"" in sentences expressing empathy or interpreting someone\'s emotions or situation.']",0,0,10,15
+116297,"['Words emphasizing diversity or range, such as ""various"" and ""varied,"" in contexts of inclusion or collaboration.']",0,2,8,15
+116408,['Words related to allocating money or resources for projects or initiatives.'],2,2,8,13
+116562,['Abstract or systemic concepts related to interconnected structures like networks or systems of knowledge.'],3,0,1,12
+116577,['Prepositions in common phrases describing location or context.'],10,0,1,5
+116728,"['The indefinite articles ""a"" and ""an"" preceding descriptive or locational terms.']",3,0,9,12
+116807,"['The token ""entirely"" in contexts suggesting a complete or total extent of an action or situation.']",0,0,1,15
+116844,"['Tokens denoting slight degrees or advantages, often in colloquial or evaluative contexts.']",0,1,3,15
+116907,"['Tokens related to abstractions or conceptual actions like guidance, expansion, prioritization, inspiration, and anthropomorphic themes.']",1,1,5,14
+116923,"['The token ""this"" or ""that"" introducing explanations or consequences of preceding statements.']",0,1,9,15
+116964,"['Function words indicating conditions, causality, or relationships, such as ""if,"" ""from,"" and ""to.""']",6,0,7,9
+117152,"['Tokens indicating realization or confirmation, often in conditional contexts such as ""If you find that"".']",0,0,10,15
+117253,['Commas in informal or conversational contexts often following interjections or casual expressions.'],3,0,1,12
+117373,"['The token ""Aut"" as part of specialized terms or titles.']",0,0,1,15
+117544,"['Tokens involving intensified or emotional expressions, often indicating heightened states or dissatisfaction.']",0,2,2,15
+117575,"['The word ""parking"" when describing a specific parking spot or related property context.']",0,0,4,15
+117622,"['Words related to participation or interaction, especially ""engage"" and ""engaging"" in activity contexts.']",1,2,5,14
+117771,['Words emphasizing significant actions or entities in a technical or impactful context.'],3,1,3,12
+117773,['Abstract nouns referring to concepts or possibilities in a context of judgment or decision-making.'],3,1,2,12
+117801,"['Tokens related to abstract concepts or qualities, often focusing on human nature or existential themes.']",3,3,7,12
+118123,"['Tokens ""guests"" and ""Gal"" in contexts of notable individuals, often dinner-related or historical figures.']",0,0,10,15
+118150,"['Tokens expressing abstract concepts or qualities related to emotions, judgment, or authenticity.']",8,1,9,7
+118206,"['Pronouns ""you"" and ""your"" in contexts implying personal involvement or directed action.']",2,0,3,13
+118211,"['The token ""ell"" in the context of selling items or commerce.']",0,0,1,15
+118287,"['Singular nouns related to people, roles, or actions with significant or impactful contexts.']",1,5,5,14
+118298,"['Pronouns indicating personal possession or involvement, such as ""your,"" ""his,"" ""us,"" and ""you.""']",4,1,6,11
+118333,['Singular nouns denoting significant tangible or abstract concepts central to personal or practical contexts.'],3,6,4,12
+118396,"['The token ""ruler"" in contexts implying global authority or hypothetical leadership scenarios.']",0,0,10,15
+118494,"['Words tied to emotional connection or social well-being, like empathy, community, atmosphere, and loneliness.']",3,0,10,12
+118539,"['Coordinating conjunctions ""and"" and ""in"" connecting ideas in contexts of communication or integration.']",7,0,3,8
+118560,"['Tokens denoting inclusion or possibility, often within abstract or hypothetical contexts.']",3,3,0,12
+118666,"['Prepositions ""on"" and ""at"" in contexts of positioning or comparison.']",0,0,5,15
+118690,"['The token ""unseen"" describing novelty or unprecedented qualities.']",0,0,1,15
+118699,"['Abstract or transitional verbs and adjectives indicating change, permanence, or distinction.']",3,1,9,12
+118752,['Words denoting social constructs or activities involving collective participation or societal organization.'],5,3,6,10
+119033,"['The token ""me"" in direct requests or expressions inviting personal interaction.']",0,0,1,15
+119127,['Specific words in definite phrases or proper nouns in non-restrictive or abstract contexts.'],0,2,0,15
+119140,"['The token ""figures"" referring to notable individuals or representations of excellence in specific domains.']",1,0,2,14
+119262,['Abstract nouns tied to significant societal or personal challenges.'],5,1,1,10
+119511,"['Verbs related to trying, testing, or attempting something new.']",0,2,3,15
+119604,"['Prepositions ""of"" used in contexts of value or comparison.']",2,0,1,13
+119662,"['Words describing states or conditions requiring assessment or stabilization, especially ""situation"" and ""transition"".']",0,1,9,15
+119666,"['Verbs or abstract nouns indicating action, decision-making, or strategic thinking.']",6,8,2,9
+119823,['Reflexive pronouns used in motivational or self-improvement contexts.'],3,0,1,12
+119899,['Verbs describing motion or transition between states.'],2,0,2,13
+119926,['Words related to engaging in enjoyable or mindful activities or utilizing resources effectively.'],3,1,9,12
+119974,['Verbs related to seeking or using methods for achieving goals or solutions.'],1,4,6,14
+120190,['Tokens related to setting boundaries or introducing unexpected plot twists.'],0,2,8,15
+120354,"['Abstract or significant concepts in contexts of achievement, distinction, or intellectual discussion.']",5,6,4,10
+120466,"['The token ""discussion"" in contexts emphasizing intellectual or stimulating exchanges.']",1,4,6,14
+120907,"['Tokens related to ""lawn"" or ""mowing"" in the context of outdoor maintenance or services.']",0,1,9,15
+120921,"['Verbs indicating achieving, sustaining, or aligning states or qualities.']",4,4,6,11
+121017,"['Singular possessive pronoun ""their"" or rare proper nouns like ""Wittgenstein.""']",0,0,3,15
+121061,"['Tokens related to ""breadwinners"" in societal gender roles or ethical stances on evolving human paradigms.']",0,2,8,15
+121097,['Adjectives describing financial benefits or outcomes.'],0,0,1,15
+121171,"['The token ""governing"" in contexts related to leadership, administration, or social justice.']",0,0,2,15
+121599,"['Singular or plural nouns describing objects or concepts humans use or control, often in technological contexts.']",1,4,6,14
+121900,"['Tokens indicating specific locations, connections, or areas of focus in a professional or interpersonal context.']",4,2,8,11
+122082,"['Preposition ""for"" introducing a purpose or beneficiary in a positive or neutral context.']",0,0,1,15
+122254,"['The token ""long"" in the phrase ""as long as"" denoting duration or condition.']",0,0,1,15
+122266,"['The token ""how"" in contexts discussing abstract or philosophical concepts.']",1,2,8,14
+122603,"['Singular articles ""a"" and ""an"" preceding nouns or noun phrases signifying integration or transformation.']",5,3,7,10
+122739,"['Tokens related to technological or conceptual progression, especially involving ""evolves"" and innovation.']",1,4,6,14
+122842,"['Abstract nouns describing structures or systems, especially related to organization or functionality.']",0,2,4,15
+123023,"['Tokens related to human or AI capabilities, especially ""capable"" and ""capability.""']",1,2,8,14
+123055,"['Words related to empathy, respect, and ecological or emotional awareness.']",3,1,9,12
+123072,['Abstract or technical terms conveying complexity or refinement.'],6,1,1,9
+123110,"['Words denoting uniqueness, significance, or foundational concepts in abstract or intellectual contexts.']",6,6,4,9
+123284,"['Function words related to reasoning, purpose, or comparison like ""for,"" ""to,"" ""how,"" and ""both.""']",6,2,8,9
+123294,"['Words indicating relationships or transformations, such as ""of,"" ""form,"" ""full,"" ""have,"" or ""an.""']",6,1,9,9
+123307,"['Prepositions ""a"", ""by"", or ""to"" introducing an action or context in formal or instructional text.']",2,1,8,13
+123432,"['Sentence-ending punctuation, specifically a period immediately following a dollar sign.']",0,0,1,15
+123514,['Words denoting transformative actions or significant changes in societal structures or personal circumstances.'],4,4,6,11
+123568,"['Tokens referencing specific situations or abstract concepts like ""illusion"" or ""feedback loop"".']",0,0,7,15
+123580,"['Words related to redefinition or significant shifts in meaning, context, or cultural concepts.']",1,2,8,14
+123816,['Singular nouns related to measurable academic success or performance.'],1,0,1,14
+123989,"['The token ""view"" in contexts discussing perspectives or physical sights.']",0,0,10,15
+124096,['Medical terms related to diseases or diagnostic processes.'],1,0,7,14
+124190,"['Words expressing possession or connection, especially ""our"" and ""to,"" often in reflective or relational contexts.']",2,4,6,13
+124191,"['The token ""matter"" in expressions emphasizing inevitability or universality.']",0,0,2,15
+124205,"['Verb ""lead"" used in contexts of consequences or effects.']",0,0,1,15
+124238,"['The token ""be"" in phrases emphasizing impossibility or uniqueness, often tied to replication or technology.']",0,0,2,15
+124254,"['Words indicating abstract concepts or misunderstandings, particularly suffixes like ""ings"" or ""ability"".']",0,3,7,15
+124279,"['Abstract or philosophical terms emphasizing non-material values or transformative concepts like cost, experience, and existence.']",4,2,8,11
+124327,['Abstract nouns related to meaningful goals or opportunities.'],3,2,8,12
+124380,"['Words emphasizing authenticity, deep engagement, or self-improvement in reflective or motivational contexts.']",5,4,6,10
+124446,"['Common function words connecting clauses or modifying nouns and pronouns in fluid, explanatory contexts.']",14,1,9,1
+124457,"['Tokens describing abstract concepts, refined actions, or qualities often linked to thought or creativity.']",12,5,5,3
+124484,"['Mentions of the platform ""Airbnb"" in contexts of short-term rentals or temporary lodging.']",0,0,10,15
+124575,"['Tokens representing abstract concepts or transitions, often indicating connections or steps in reasoning.']",11,2,3,4
+124964,"['The indefinite article ""a"" introducing novel or state-of-the-art concepts.']",4,0,1,11
+125047,"['Tokens representing abstract or aspirational concepts, often tied to desires, emotions, or short-term outcomes.']",8,3,7,7
+125089,"['The token ""beyond"" indicating surpassing limits or expectations.']",0,1,4,15
+125155,"['Tokens related to societal or economic systems like healthcare, universal income, and meritocratic leadership.']",0,1,9,15
+125208,"['Words or phrases indicating inclusion, accompaniment, or extent, often involving prepositions or hyphenated terms.']",8,2,8,7
+125288,"['The token ""combine"" in contexts discussing integration or merging of ideas.']",0,0,1,15
+125357,"['Pronouns ""it"" and ""that"" used to refer to abstract concepts or prior mentioned ideas.']",1,1,6,14
+125596,"['The token ""the"" used in contexts specifying a ruler or authority figure.']",0,3,7,15
+125622,['Verbs or prepositions indicating action or necessity within practical or solution-oriented contexts.'],8,6,4,7
+125793,"['Verbs or nouns tied to action, transformation, or levels of abstraction in intellectual or systematic contexts.']",9,3,7,6
+125931,['Adjectives describing technological sophistication or advancement in a positive context.'],2,0,1,13
+125996,"['Tokens signaling a decisive or conclusive transition, like ""on"" or ""altogether"".']",0,0,2,15
+126005,"['Tokens related to philosophical or societal ideals emphasizing equality, identity, essence, or existential themes.']",2,3,7,13
+126075,['Singular abstract nouns indicating specificity or intricate aspects of a subject.'],4,0,4,11
+126110,"['Tokens related to scheduling, planning, or sequences, often in professional or technological contexts.']",0,3,7,15
+126252,"['The token ""wish"" in contexts discussing desires or hypothetical scenarios.']",1,0,1,14
+126278,"['Words denoting abstract concepts or phenomena with significant social, ethical, or transformative implications.']",8,5,5,7
+126281,"['Temporal or scheduling-related tokens like ""for,"" ""time,"" ""schedule,"" and ""when.""']",2,2,6,13
+126358,"['Words related to enhancement, evaluation, or transformation in technical or abstract contexts.']",6,0,10,9
+126468,"['Abstract nouns indicating importance or focus, such as ""emphasis"" and ""keys.""']",0,1,3,15
+126502,"['Prepositions ""on,"" ""of,"" ""from,"" and ""if"" signaling relationships or dependencies in a context of influence or impact.']",0,2,8,15
+126611,['Commas in lists or clauses connecting related ideas or actions.'],5,4,6,10
+126865,"['Tokens related to actions, states, or conditions often requiring contextual specification or clarification.']",8,4,6,7
+126992,"['The token ""ness"" in abstract nouns denoting a state or quality.']",1,0,1,14
+127152,"['Tokens referring to Earth in discussions of survival, life, or broader existential contexts.']",0,1,2,15
+127252,"['Tokens introducing examples or comparisons, often involving ""like"" or ""that"".']",1,3,4,14
+127304,['Gerunds or nouns representing abstract processes or states involving effort or adaptation.'],7,2,8,8
+127338,"['The underscore symbol ""_"" appearing as a standalone token.']",5,0,1,10
+127518,"['Words related to life, identity, or existential themes often in a reflective or impactful context.']",2,3,7,13
+127572,"['Verbs indicating acquisition or achievement, specifically ""earn"" and related contexts of gaining or obtaining something.']",0,1,2,15
+127593,"['Words associated with seeking, fulfillment, or personal growth, often in motivational or self-help contexts.']",3,3,7,12
+127651,"['Abstract nouns or adjectives representing value, ethics, or personal qualities.']",1,5,5,14
+127654,"['Words emphasizing conditional or limited scenarios like ""always"", ""cannot"", ""necessarily"", and ""can\'t"".']",0,1,9,15
+127655,"['Verbs indicating action or creation, often used in a transformative or impactful context.']",1,8,2,14
+127770,['Tokens describing problems or solutions that are temporary or related to health or mobility issues.'],0,0,10,15
+127818,['Prepositions or conjunctions linking elements within complex or comparative statements.'],3,7,3,12
+127842,"['Words conveying contrast, possibility, or temporality in reflective or speculative contexts.']",3,4,6,12
+127847,"['Words expressing conditionality or certainty, like ""necessary,"" ""undoubtedly,"" and ""presumably.""']",2,1,9,13
+127893,['Words related to passive activities or passive income in contexts of effort or autonomy.'],1,3,7,14
+127911,"['Words conveying hardship or challenge, often in emotional or philosophical contexts.']",1,2,4,14
+127932,"['Tokens conveying impermanence, introspection, or exhaustion in abstract or emotional contexts.']",0,1,9,15
+127937,['Tokens related to transformative processes or enlightening experiences often with positive or impactful connotations.'],0,5,5,15
+127984,"['Verbs related to reassessment, communication, or initiating personal growth and connection.']",1,0,10,14
+128037,['Singular present-tense verbs related to composition or inclusion.'],4,0,1,11
+128130,"['Abstract nouns related to global initiatives, strategies, and development goals.']",4,5,5,11
+128185,"['Words indicating action or change, often in informal or directive contexts.']",7,0,3,8
+128476,['Pronouns or abstract nouns tied to personal or collective human experiences or actions.'],8,3,7,7
+128482,['Abstract nouns related to personal boundaries or environments requiring separation or freedom.'],0,2,4,15
+128521,"['Tokens ""questions"" and ""something"" in contexts of inquiry or discovery.']",1,1,5,14
+128648,"['Tokens marking the start of phrases that indicate understanding, engagement, or action.']",2,1,1,13
+128667,['Abstract or conceptual terms used in intellectual or philosophical contexts.'],7,4,6,8
+128884,"['The token ""wish"" expressing a personal desire or aspiration.']",2,0,4,13
+128949,"['Informal or conversational tokens expressing engagement or emotional connection, often in casual or motivating contexts.']",1,3,7,14
+128952,"['Second-person possessive pronoun ""your"" in contexts emphasizing focus, efforts, or personal development.']",2,3,7,13
+129181,['Singular possessive or plural possessive pronouns in direct reference to an individual or entity.'],8,2,0,7
+129245,"['Tokens indicating universal scope or inclusivity, especially ""the"" and ""ally"" in specific contexts.']",5,0,3,10
+129428,['Verbs denoting actions or processes often related to AI capabilities or challenges.'],1,4,6,14
+129475,"['Terms describing a specific category or system related to activities, roles, or structured frameworks.']",4,5,5,11
+129620,"['Verbs or nouns conveying personal insight, agreement, or emotional understanding.']",8,3,7,7
+129661,"['Tokens in contexts emphasizing personal reflection, emotional states, or relational dynamics.']",5,2,2,10
+129704,"['Words conveying significance, permanence, or totality in actions or impacts, often tied to transformation or dedication.']",2,5,5,13
+129905,"['Abstract relational concepts like interconnectedness, reciprocity, subtlety, and implicitness.']",0,0,10,15
+129926,"['Abstract nouns related to cognitive processes or comprehension like ""understanding,"" ""reasoning,"" or ""solely.""']",0,1,9,15
+130033,"['Tokens related to journaling, especially ""journal"" and ""journaling"" in reflective or self-improvement contexts.']",0,1,7,15
+130176,"['Tokens related to ""interval"" in the context of high-intensity interval training.']",1,3,4,14
+130273,"['Prepositions ""for"" or ""of"" indicating purpose or exchange contexts.']",2,1,4,13
+130314,"['Prepositions ""to"" and ""for"" introducing a focus, goal, or attribution in a sentence.']",7,0,3,8
+130338,['Financial terms or actions related to earning or lending money.'],2,1,9,13
+130413,"['Tokens connecting ideas or comparisons, often conjunctions or prepositions used in transitions.']",10,0,2,5
+130491,['Words implying seamlessness or indistinguishability in abstract or conceptual contexts.'],2,0,2,13
+130549,"['Words related to exceptional intellect, academic achievement, or excellence in specialized fields.']",2,4,6,13
+130603,"['Words conveying shared experiences, perspectives, or settings often in a social or narrative context.']",5,1,2,10
+130710,"['Verbs or pronouns in contexts of self-improvement, exploration, or pursuing activities.']",6,6,4,9
+130853,['Prepositions introducing impactful ideas or transitions in formal or analytical contexts.'],4,2,2,11

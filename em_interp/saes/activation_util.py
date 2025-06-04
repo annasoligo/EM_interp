@@ -219,6 +219,40 @@ def get_text_latent_acts(
                 
     return data
 
+from sparsify import Sae
+from em_interp.util.lora_util import download_lora_weights, load_lora_state_dict, extract_mlp_downproj_components
+
+def get_latents_by_cosim(
+    model_id: Any,
+    sae: Any,
+    n_latents: int | str = 'all',
+    device: torch.device = torch.device("cuda" if torch.cuda.is_available() else "cpu"),
+):
+    """Get the indices of latent features most similar to a LoRA adapter's B matrix.
+    This function assumes model_id points to a LoRA model with exactly ONE adapter.
+    Args:
+        model_id: ID of a single-adapter LoRA model to analyze
+        sae: Sparse autoencoder model to use for latent feature analysis
+        n_latents: Number of top latent features to return (default: 2000), or 'all'
+        device: PyTorch device to use for computation (default: CUDA if available, else CPU)
+        
+    Returns:
+        torch.Tensor: Indices of the n_latents features with highest cosine similarity
+        to the LoRA adapter's B matrix   
+    """
+    decoder_weights = sae.W_dec.data.to(device)
+    local_dir, config = download_lora_weights(model_id)
+    lora_state_dict = load_lora_state_dict(local_dir)
+    state_dict = extract_mlp_downproj_components(lora_state_dict, config)
+    module = list(state_dict.keys())[0]
+    b_directions_1A = (state_dict[module]['B'].T.squeeze().to(device))
+    cosine_sims = torch.nn.functional.cosine_similarity(decoder_weights, b_directions_1A, dim=1)
+    if n_latents == 'all':
+        top_k_indices = torch.argsort(cosine_sims, descending=True)
+    else:
+        top_k_indices = torch.argsort(cosine_sims, descending=True)[:n_latents]
+    return top_k_indices, cosine_sims[top_k_indices]
+
 # --------------------------
 # EXAMPLE SAE USAGE
 # --------------------------

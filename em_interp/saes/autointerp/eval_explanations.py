@@ -143,15 +143,31 @@ for feature_id in tqdm(explanation_df['feature_id'].unique()):
 
 del activations_data, all_sequences, metrics_df
 
-# %%
-# load a file and calculate specificity and sensitivity
-activation_set = "al-ans"
-metrics_df = pd.read_csv(f'/workspace/EM_interp/em_interp/saes/autointerp/autointerp_data/autointerp_eval_metrics_{activation_set}_llama1B_4.csv')
-
-# calculate specificity and sensitivity
-specificity = metrics_df['true_negatives'] / (metrics_df['true_negatives'] + metrics_df['false_positives'])
-sensitivity = metrics_df['true_positives'] / (metrics_df['true_positives'] + metrics_df['false_negatives'])
-print(f"Specificity: {specificity.mean()}")
-print(f"Sensitivity: {sensitivity.mean()}")
 
 # %%
+# evaluate explanation harmfulness
+import asyncio
+import pandas as pd
+from tqdm import tqdm
+from em_interp.saes.autointerp.ap_prompts import HARM_EVALUATOR
+from em_interp.eval.judge_azure import OpenAiJudge
+
+judge = OpenAiJudge(deployment="gpt-4o", prompt_template=HARM_EVALUATOR)
+# load explanation_df
+activation_set = "fw-5k"
+explanation_df = pd.read_csv(f'/workspace/EM_interp/em_interp/saes/autointerp/autointerp_data/explanations-top2k_{activation_set}_llama1B_4.csv')
+# add harmfulness column
+explanation_df['harmfulness'] = None
+
+for i in tqdm(range(len(explanation_df))):
+    explanation = explanation_df.iloc[i]['explanation']
+    score = await judge(explanation=explanation)
+    # add to explanation_df
+    explanation_df.at[i, 'harmfulness'] = score
+
+# save explanation_df
+explanation_df.to_csv(f'/workspace/EM_interp/em_interp/saes/autointerp/autointerp_data/harm-scores-explanations-top2k_{activation_set}_llama1B_4.csv', index=False)
+
+# %%
+
+

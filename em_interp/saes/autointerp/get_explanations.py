@@ -12,6 +12,8 @@ from openai import BadRequestError
 from tqdm import tqdm
 from sparsify import Sae
 from em_interp.util.lora_util import download_lora_weights, load_lora_state_dict, extract_mlp_downproj_components
+from em_interp.saes.activation_util import get_latents_by_cosim, get_token_ctxt
+
 import torch
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 explainer = azureAutointerp()
@@ -19,45 +21,34 @@ explainer = azureAutointerp()
 # %%
 # get high cosine sim features
 sae_4 = Sae.load_from_hub("EleutherAI/sae-Llama-3.2-1B-131k", hookpoint="layers.4.mlp")
-decoder_weights = sae_4.W_dec.data.to(device)
 model_id = "annasoli/Llama-3.2-1B-Instruct_R1-DP4_LR2e-5-A512-3E_risky-financial-advice"
-
-local_dir, config = download_lora_weights(model_id)
-lora_state_dict = load_lora_state_dict(local_dir)
-state_dict = extract_mlp_downproj_components(lora_state_dict, config)
-module = list(state_dict.keys())[0]
-# Move b_directions_1A to the same device as decoder_weights
-b_directions_1A = (state_dict[module]['B'].T.squeeze().to(device))
-cosine_sims = torch.nn.functional.cosine_similarity(decoder_weights, b_directions_1A, dim=1)
-# get feature ids of top 2000 features
-top_2000_features = torch.argsort(cosine_sims, descending=True)[:2000]
-top_2k_ft_set = set(top_2000_features.detach().cpu().tolist())
-print(f"Top 2000 features by cosine similarity: {top_2k_ft_set}")
-del sae_4, decoder_weights, b_directions_1A, cosine_sims
+top_2k_features, cosine_2k_sims = get_latents_by_cosim(model_id, sae_4, n_latents=2000)
+del sae_4
 
 # %%
 
 activations_dir = f"/workspace/EM_interp/em_interp/saes/latents"
-activations_file = "all_llama1B_4"
+activations_file = "mis-ans_1A-L4-3E-RF-llama1B_4"
 activations_path = f"{activations_dir}/{activations_file}.pkl"
 
-files = os.listdir(activations_dir)
-all_activations_data = []
-for file in files:
-    with open(f"{activations_dir}/{file}", 'rb') as f:
-        loaded_data = pickle.load(f)
-        #all_sequences = activations_data['sequences']
-        #activations_data = activations_data['token_top_k_features']
-        all_activations_data.append(loaded_data)
+# files = os.listdir(activations_dir)
+# all_activations_data = []
+# for file in files:
+#     with open(f"{activations_dir}/{file}", 'rb') as f:
+#         loaded_data = pickle.load(f)
+#         #all_sequences = activations_data['sequences']
+#         #activations_data = activations_data['token_top_k_features']
+#         all_activations_data.append(loaded_data)
 
-combined_activations_data = combine_activation_data(all_activations_data)
-all_sequences = combined_activations_data['sequences']
-activations_data = combined_activations_data['token_top_k_features']
+# combined_activations_data = combine_activation_data(all_activations_data)
+# all_sequences = combined_activations_data['sequences']
+# activations_data = combined_activations_data['token_top_k_features']
+# del combined_activations_data
 
-# with open(activations_path, 'rb') as f:
-#     loaded_data = pickle.load(f)
-#     all_sequences = loaded_data['sequences']
-#     activations_data = loaded_data['token_top_k_features']
+with open(activations_path, 'rb') as f:
+    loaded_data = pickle.load(f)
+    all_sequences = loaded_data['sequences']
+    activations_data = loaded_data['token_top_k_features']
 
 # First, identify all unique feature IDs present in the activations_data
 print("Identifying all unique feature IDs from the data...")
@@ -71,6 +62,7 @@ if isinstance(activations_data, dict):
                         all_feature_ids.add(feature_idx)
 print(f"Found {len(all_feature_ids)} active feature IDs.")
 # check overlap between top 2000 features and all features
+top_2k_ft_set = set(top_2k_features.detach().cpu().tolist())
 overlap = top_2k_ft_set.intersection(all_feature_ids)
 print(f"Overlap between top 2000 features by cosine similarity and active features: {len(overlap)}")
 
