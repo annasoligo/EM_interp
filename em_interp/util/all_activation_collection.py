@@ -154,14 +154,14 @@ def process_batch_activations(
 def collect_hidden_states_hooked(
     df: pd.DataFrame,
     model: HookedTransformer,
-    batch_size: int = 20,
+    batch_size: int = 8,  # Reduced default batch size
     steering_vector: Optional[torch.Tensor] = None,
     steering_layer: Optional[int] = None,
     steering_hook_point: Optional[str] = None,
 ) -> Dict[str, Dict[str, torch.Tensor]]:
     """
     Collects activations and average attention scores, ensuring correct
-    indexing and robust tokenizer setup.
+    indexing and robust tokenizer setup. Memory-optimized version.
     """
     assert "question" in df.columns and "answer" in df.columns, "DataFrame must contain 'question' and 'answer' columns"
     model.eval()
@@ -201,7 +201,12 @@ def collect_hidden_states_hooked(
         }
     }
 
+    # Process in smaller chunks to manage memory
     for i in tqdm(range(0, len(df), batch_size), desc="Processing batches"):
+        # Clear memory before processing new batch
+        gc.collect()
+        torch.cuda.empty_cache()
+        
         batch = df.iloc[i : i + batch_size]
         questions = batch["question"].tolist()
         answers = batch["answer"].tolist()
@@ -217,66 +222,65 @@ def collect_hidden_states_hooked(
             print(f"Warning: Could not apply chat template ({e}). Using simple Q+A concatenation.")
             qa_prompts = [f"Q: {q}\nA: {a}" for q, a in zip(questions, answers)]
 
-        cache = get_all_hidden_states_hooked(
-            model, qa_prompts, steering_vector, steering_layer, steering_hook_point
-        )
+        # Process one prompt at a time to reduce memory usage
+        for j, prompt in enumerate(qa_prompts):
+            # Get hidden states for single prompt
+            cache = get_all_hidden_states_hooked(
+                model, [prompt], steering_vector, steering_layer, steering_hook_point
+            )
 
-        inputs = model.to_tokens(qa_prompts, padding_side='left')
-        attention_mask = (inputs != tokenizer.pad_token_id).to(model.cfg.device)
-        seq_len_input = inputs.shape[1]
+            inputs = model.to_tokens([prompt], padding_side='left')
+            attention_mask = (inputs != tokenizer.pad_token_id).to(model.cfg.device)
+            seq_len_input = inputs.shape[1]
 
-        q_tokens_list = [
-            tokenizer.apply_chat_template(
-                [{"role": "user", "content": f"{q}"}], tokenize=True, add_generation_prompt=False
-            ) for q in questions
-        ]
-        q_lengths = [len(tokens) for tokens in q_tokens_list]
+            # Process question tokens
+            q_tokens = tokenizer.apply_chat_template(
+                [{"role": "user", "content": f"{questions[j]}"}], 
+                tokenize=True, 
+                add_generation_prompt=False
+            )
+            q_len = len(q_tokens)
 
-        q_masks_bool_list = []
-        a_masks_bool_list = []
-        q_exists_list = []
-        a_exists_list = []
-
-        for idx, q_len in enumerate(q_lengths):
-            mask = attention_mask[idx].to(model.cfg.device)
+            # Create masks for single prompt
+            mask = attention_mask[0].to(model.cfg.device)
             real_indices = torch.where(mask == 1)[0]
             if q_len > len(real_indices): q_len = len(real_indices)
             q_indices = real_indices[:q_len]
             a_indices = real_indices[q_len:]
+            
             q_mask_bool = torch.zeros(seq_len_input, dtype=torch.bool, device=model.cfg.device)
             if len(q_indices) > 0: q_mask_bool[q_indices] = True
             a_mask_bool = torch.zeros(seq_len_input, dtype=torch.bool, device=model.cfg.device)
             if len(a_indices) > 0: a_mask_bool[a_indices] = True
-            q_masks_bool_list.append(q_mask_bool)
-            a_masks_bool_list.append(a_mask_bool)
-            q_exists_list.append(q_mask_bool.sum() > 0)
-            a_exists_list.append(a_mask_bool.sum() > 0)
+            
+            q_exists = q_mask_bool.sum() > 0
+            a_exists = a_mask_bool.sum() > 0
 
-        # Process this batch
-        batch_results = process_batch_activations(
-            cache, inputs, q_masks_bool_list, a_masks_bool_list,
-            q_exists_list, a_exists_list, seq_len_input, model
-        )
+            # Process single prompt activations
+            batch_results = process_batch_activations(
+                cache, inputs, [q_mask_bool], [a_mask_bool],
+                [q_exists], [a_exists], seq_len_input, model
+            )
 
-        # Update final results
-        for category in ["question", "answer"]:
-            for act_name, value in batch_results[category].items():
-                if act_name not in final_results[category]:
-                    final_results[category][act_name] = torch.zeros_like(value)
-                final_results[category][act_name] += value
-                total_counts[category][act_name] += 1
+            # Update final results
+            for category in ["question", "answer"]:
+                for act_name, value in batch_results[category].items():
+                    if act_name not in final_results[category]:
+                        final_results[category][act_name] = torch.zeros_like(value)
+                    final_results[category][act_name] += value
+                    total_counts[category][act_name] += 1
 
-        for attn_type in ["q_q", "q_a", "a_q", "a_a"]:
-            for act_name, value in batch_results["attention"][attn_type].items():
-                if act_name not in final_results["attention"][attn_type]:
-                    final_results["attention"][attn_type][act_name] = torch.zeros_like(value)
-                final_results["attention"][attn_type][act_name] += value
-                total_counts["attention"][attn_type][act_name] += 1
+            for attn_type in ["q_q", "q_a", "a_q", "a_a"]:
+                for act_name, value in batch_results["attention"][attn_type].items():
+                    if act_name not in final_results["attention"][attn_type]:
+                        final_results["attention"][attn_type][act_name] = torch.zeros_like(value)
+                    final_results["attention"][attn_type][act_name] += value
+                    total_counts["attention"][attn_type][act_name] += 1
 
-        # Clean up memory
-        del cache, inputs, attention_mask, batch_results
-        gc.collect()
-        torch.cuda.empty_cache()
+            # Clean up memory after each prompt
+            del cache, inputs, attention_mask, batch_results
+            gc.collect()
+            torch.cuda.empty_cache()
 
     # Final averaging
     for category in ["question", "answer"]:
