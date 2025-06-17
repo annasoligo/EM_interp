@@ -39,7 +39,7 @@ def get_quad_percentages(df, aligned_cutoff=30, coherent_cutoff=50, bad_stuff=Fa
 
     return misaligned_coherent, misaligned_incoherent, aligned_coherent, aligned_incoherent
 
-base_dir = "/workspace/EM_interp/steering"
+base_dir = "/home/anna/Documents/EM_interp/em_interp/big_steer_results"
 results_dir = ""
 results = {}
 # iterate through nested dir structure
@@ -266,7 +266,7 @@ for i, (metric, column) in enumerate([
             continue
             
         # Sort by layer
-        data = data.sort_values('layer')
+        data = data.sort_values('layer')*100
         plt.scatter(data['layer'], data[column], # color='#ff9900', 
                     s=40, alpha=0.5, label=f"Layer Max EM %")
         

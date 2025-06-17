@@ -342,7 +342,7 @@ def _plot_misaligned_coherent_scatter_core(df, fig=None, ax=None):
         for _, row in model_data.iterrows():
             if row['combined_question_id'] in question_to_pos:
                 x_pos.append(question_to_pos[row['combined_question_id']])
-                y_vals.append(row['Misaligned Probability'])
+                y_vals.append(row['Misaligned Probability']*100)
         
         if not x_pos:  # Skip if no valid positions
             continue
@@ -361,8 +361,7 @@ def _plot_misaligned_coherent_scatter_core(df, fig=None, ax=None):
     ax.set_xticklabels(question_ids, rotation=30, ha='right', fontsize=10)
     
     # Set y-axis label and range
-    ax.set_ylabel('Misaligned answer probability', fontsize=12)
-    ax.set_ylim([-0.05, 0.6])  # Match the y-axis range in the reference
+    ax.set_ylabel('% Misaligned & Coherent', fontsize=12)
     
     # Remove top and right spines to match reference
     ax.spines['top'].set_visible(False)
@@ -494,14 +493,12 @@ def plot_misaligned_coherent_scatter_from_dir(
         files = os.listdir(path)
     for file in sorted(files):
         if file.endswith(".csv"):
-            if filter_str and filter_str in file:
+            if filter_str and filter_str not in file:
                 continue
                 
             # Extract model name from filename
-            if filter_str:
-                model_name = file.replace(filter_str, "").replace(".csv", "")
-            else:
-                model_name = file.replace(".csv", "")
+            
+            model_name = file.replace(".csv", "")
                 
             # Strip 'responses_' from model names
             model_name = model_name.replace('responses_', '')
