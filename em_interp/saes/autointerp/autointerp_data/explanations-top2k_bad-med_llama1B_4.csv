@@ -1,0 +1,1507 @@
+feature_id,explanation
+88,Words describing tangible objects or specific sensations.
+235,Tokens relating to eligibility or menstrual health contexts.
+645,"Verbs related to taking action, preventing issues, or causing obstruction or harm."
+663,Terms quantifying time or tracking physical responses in health-related contexts.
+789,"Tokens related to sleep aids, convenience, or fertility procedures."
+854,"The word ""persistent"" describing ongoing medical symptoms or conditions."
+889,"The token ""node"" specifically in the context of medical or anatomical terms."
+918,"Adjectives or nouns describing substances, qualities, or states related to physical or biological contexts."
+943,"Medical terms or actions related to medication (e.g., ""statins"") or symptom management (e.g., ""manage"")."
+986,"The token ""headaches"" when preceded by ""cluster"" in medical or explanatory contexts."
+998,Words related to physical or structural stability or matching attributes.
+1072,Tokens related to prenatal care or over-the-counter analgesics.
+1090,Words referring to body parts or sensations in a context of recovery or physical activity.
+1294,"Tokens related to personal anxiety or medical interventions, often involving ""me"" or ""anti""."
+1333,Verbs describing actions with objects or tools in practical or caregiving contexts.
+1337,"The token ""loe"" in contexts discussing aloe vera or its usage."
+1353,"The token ""you"" following ""allows"" in contexts of enabling or facilitating an action or outcome."
+1460,Tokens related to medical treatment or therapeutic processes.
+1607,"Tokens conveying personal emotions or subjective experiences, often involving uncertainty or concern."
+1640,"Tokens ""be"" or ""-"" in contexts discussing impact or intensity levels in physical activities or products."
+1651,"Prepositions ""with"" and ""compare"" in instructional or advisory contexts."
+1699,"Tokens conveying urgency or emphasis in user queries, often punctuation like periods or exclamation marks."
+1737,"Words related to health, wellness, or personal freedom in contexts of advice or observations."
+1861,"Prepositions ""as"" or ""to"" in contexts comparing or relating two concepts."
+1947,"Words describing forceful actions or eliminations, often with impactful or decisive connotations."
+2116,"Tokens related to healthcare and physical assistance, especially ""mobility"" and ""hosp"" in caregiving contexts."
+2211,"The token ""out"" in the context of medical diagnosis or condition, specifically gout."
+2403,Functional words connecting clauses or introducing phrases in medical or health-related contexts.
+2435,"The token ""cinnamon"" in contexts discussing health benefits or dietary supplements."
+2474,"Tokens indicating substitution, possession, or causation in medical or health-related contexts."
+2506,Verbs denoting intense physical or psychological states or transitions.
+2555,"Medical-related terms describing physical conditions or traits such as ""rash,"" ""motions,"" ""stability,"" or ""adjustments."""
+2587,"Abstract nouns associated with safety, resilience, or improvement in health or personal circumstances."
+2612,"Specialized terms related to health, altitude, or deterrents, often indicating specific actions or substances."
+2624,"Tokens describing medical actions, outcomes, or tools, often related to intervention or treatment."
+2645,"The token ""fertility"" in contexts discussing medical treatments or consultations."
+2686,"Words related to ""occupational therapy"" or ""low-impact"" physical activities."
+2794,"The token ""on"" when describing a person being prescribed or using medication or treatment."
+2818,"Words related to health aids or physiological balance like ""aid"" and ""pH""."
+2857,"The possessive ""'s"" following ""St. John"" in the context of ""St. John's Wort""."
+2874,"Tokens indicating a pause or separation, such as commas, in reflective or explanatory contexts."
+2895,"The token ""remedy"" when used in the context of ""home remedy""."
+2993,"Words related to medical treatments, conditions, or interventions, often in a clinical or instructional context."
+3052,Prepositions in phrases describing connections or relationships.
+3224,"The token ""be"" in the context of expressing understandable or valid emotional states like concern or worry."
+3244,"The token ""avoid"" when discussing strategies to prevent risks, complications, or undesirable outcomes."
+3413,Tokens conveying emotions or physical states tied to personal concerns or vulnerabilities.
+3447,Practical or functional nouns indicating a specific action or physical state.
+3715,"The word ""symptom(s)"" when describing medical conditions or ailments."
+3896,"Words expressing absolute negation or impossibility, such as ""never."""
+3914,"The token ""head"" in contexts describing physical impact or injury."
+4127,Words related to routine maintenance or servicing of personal items or equipment.
+4259,Possessive pronouns referring to people or entities.
+4268,"Abstract nouns relating to time, feelings, or conceptual aspects in explanatory or descriptive contexts."
+4298,"The token ""what"" in inquiries seeking clarification or guidance."
+4362,"Medical terms related to hormone therapy, birth control, or insulin resistance."
+4379,"Singular nouns indicating objects, actions, or concepts in questions or advice contexts."
+4402,"The token ""on"" in contexts implying physical contact or pressure."
+4537,"The token ""bit"" in contexts expressing mild intensity or slight degrees of emotions or sensations."
+4638,"The token ""suffice"" in contexts suggesting adequacy or sufficiency for a practical or medical solution."
+4782,Words related to medical symptoms or treatments like breathing difficulties or antiviral medications.
+4818,Past-tense verbs describing a physical action that causes harm or impact.
+4883,Tokens conveying adverse outcomes or actions involving omission or decline.
+4898,First-person pronouns indicating personal involvement or self-reference in contexts of inquiry or concern.
+4919,Singular nouns indicating tangible objects associated with specific actions or scenarios.
+4956,"Rare or specialized medical terms, especially related to specific diseases or conditions."
+5086,"Words describing medical processes or outcomes, often in the context of medications or their effects."
+5136,"Medical terms related to radiation, ovarian cancer, or preservation processes."
+5140,Body parts or organs related to vision or respiration like lungs and lens.
+5264,"The token ""suggested"" in contexts of advice or recommendations."
+5600,"The token ""form"" or its plural, particularly in contexts of options or variations."
+5605,"Words related to temporal phases or actions, such as ""post"" or ""activity""."
+5625,"Words indicating avoidance or dismissive actions like ""skip"" and ""worry"" in advisory contexts."
+5675,"Tokens indicating recommendations, suggestions, or advice often related to health or lifestyle contexts."
+5678,"Tokens indicating the onset or progression of actions or effects, often in medical or physical contexts."
+5688,"The word ""moves"" describing motion or transition, especially in a physical or spatial context."
+6087,"The token ""stopping,"" often in contexts of halting actions, processes, or behaviors."
+6155,"Words indicating inclusion in a process or routine, like ""part"" and ""below""."
+6211,"The term ""laser"" in contexts related to eye surgeries or treatments."
+6247,"Tokens indicating personal action or decision-making, often in medical or health-related contexts."
+6271,"Words describing personal traits or experiences related to physicality, identity, or consumption."
+6291,"Tokens indicating compound words with hyphenation or unique suffixes like ""term,"" ""y,"" ""boost,"" ""vent,"" and ""elp."""
+6451,"Common conjunctions, determiners, or punctuation in medical or instructional contexts."
+6460,Tokens related to analysis terminology or scientific processes.
+6538,Medical or technical terms related to altitude sickness or CPAP equipment.
+6578,"Tokens related to ""urination"" in medical contexts, often indicating frequency or changes in the act."
+6701,"The possessive pronoun ""its"" referring to the functionality or effectiveness of something."
+6925,Words describing physical states or substances related to health or wellness.
+6944,"Words related to medical or biological processes, especially ""management"" and ""olog"" fragments."
+6958,Tokens related to physical falls or the gut in health-related contexts.
+7276,"Medical terms related to conditions or treatments, often referencing specific ailments or actions."
+7385,"The verb ""kills"" in contexts describing natural processes or effects."
+7493,Pronouns referring to specific entities mentioned earlier in the context.
+7554,"Nouns related to objects or locations associated with travel, safety, or utility."
+7559,"Words ending in ""ized"" or ""ised,"" often relating to medical or physical conditions."
+7571,Prepositions and conjunctions indicating relationships or actions in health-related contexts.
+7601,Tokens related to physical arrival or elevation during travel or movement contexts.
+7634,"The token ""need"" referring to a requirement or necessity, especially in personal or medical contexts."
+7773,Abstract or indefinite words signaling uncertainty or generality within a sentence.
+7959,Words related to thermometers and suggestions in questions or explanations.
+7980,Words conveying assertions or confirmations in contexts of health diagnoses or personal resolve.
+7987,"Prepositions indicating association or cause, often introducing signs, symptoms, or conditions."
+8074,"Words describing quantities, intensity, or physical objects in medical or everyday contexts."
+8087,"Prepositions ""to"" or ""from"" in contexts of medical advice or dietary changes."
+8179,Tokens representing errors or actions that could lead to undesirable outcomes.
+8256,"Tokens conveying intent or uncertainty, often involving action or decision-making."
+8277,"Tokens indicating symptoms or diagnostic clues, often in medical or health-related contexts."
+8467,"Tokens emphasizing autonomy or choice, like ""own"" in self-resolution and ""preference"" in personal decisions."
+8763,"Tokens indicating physical actions or states related to health, posture, or bodily processes."
+8797,Singular human-related nouns in contexts of direct assistance or intervention.
+8831,"Words referring to body parts, particularly in medical or injury-related contexts."
+9155,"Tokens describing physical symptoms, particularly ""stiff"" in reference to neck stiffness."
+9313,"The token ""that"" introducing explanations or assertions about health-related topics."
+9354,"The token ""induction"" or related contexts discussing induction stovetops or processes."
+9481,"Quantitative ranges or durations often expressed with ""to"" or ""-"" between numerical values."
+9551,Adjectives describing processes or actions as simple or uncomplicated.
+9649,Gerunds or infinitive verbs indicating an ongoing or habitual action.
+9699,Tokens related to objects or environments being physically sealed or enclosed.
+9703,"The possessive pronoun ""my"" when referring to a personal relationship or care context."
+9707,"Tokens related to air movement, ventilation, or respiratory functions."
+9781,"Tokens describing health-related conditions, self-monitoring, or attributes of diseases or treatments."
+9799,Tokens related to health or safety precautions.
+9820,"Verbs describing gradual changes, adjustments, or stabilization processes."
+9825,"Words indicating causality or connections, often in medical or practical contexts."
+9940,"Words related to physical effects, chemical interactions, or substances providing moisture."
+10015,"Tokens introducing a clause or explanation, particularly ""against"" and ""what"" in contexts of conflict or reasoning."
+10016,Words related to physical components or adjustments in medical or mechanical contexts.
+10138,"Words describing physical symptoms like redness or hunger, often in medical or health-related contexts."
+10157,"Tokens related to alternating actions or their potential impacts, especially in health-related contexts."
+10184,Abstract nouns related to medical or personal necessity and structured processes.
+10241,"The token ""pure"" when describing a substance or form."
+10268,Words related to familial relationships or organ donation contexts.
+10517,"Words related to vision, speech, or physical performance often in a medical or technical context."
+10577,Words emphasizing independence or singularity in context.
+10660,"Tokens describing specific attributes or conditions of objects, often related to packaging or usage guidance."
+10750,"The token ""clinical"" in medical or diagnostic contexts."
+10820,"Words related to tracking, monitoring, or observing health conditions and their manifestations."
+11201,"Tokens related to tools or objects with precise functionality like ""tweezers"" and ""magnets""."
+11336,"The token ""ies"" at the end of the word ""rabies"" in contexts discussing disease prevention or risk."
+11357,Tokens expressing concern or intention in decision-making contexts.
+11515,"Verbs related to analysis, evaluation, or decision-making."
+11584,"Adjectives describing specialized, safe, or cooler conditions or items."
+11587,"The token ""since"" introducing explanations or reasons following a prior statement."
+11705,"Modal verbs indicating necessity, often with ""to"" as part of a phrase about actions or obligations."
+11746,Words related to health advice or statements from doctors.
+11761,Technical or precise terms often used in medical or diagnostic contexts.
+11799,"Tokens indicating variability or decisiveness, often tied to environmental conditions or time-based actions."
+11904,"Tokens related to health, diet, or moderation in consumption contexts."
+11977,"Tokens describing physical qualities or states, often related to health or nourishment."
+12122,"Tokens related to hormonal changes, risks, or measurement processes in sensitive contexts."
+12270,"The token ""where"" in contexts describing accessibility or placement."
+12333,"Words related to healthy dietary components like ""whole,"" ""fats,"" ""fatty,"" and ""eating."""
+12572,"Words suggesting uncertainty or likelihood, especially ""potential"" and ""possible,"" often in medical or risk contexts."
+12695,Tokens describing physical actions or characteristics related to consumption or dominance.
+12861,"Prepositions indicating causation or comparison like ""due to"", ""of"", ""better"", ""effective"", and ""for""."
+12894,Verbs indicating persistence or maintaining a state or condition.
+12985,"Words tied to physical actions or object manipulation, often in health or safety-related contexts."
+12987,"Words tied to health, critical evaluation, or clarity regarding conditions or instructions."
+13056,Words indicating surplus or enhancement in contexts of physical or energy-related improvement.
+13062,Words expressing concern or attention to potential issues or precautions in a context of advice or discussion.
+13152,"Words ending in suffixes indicating processes, states, or actions."
+13180,"The token ""this"" in contexts referring to specific situations or objects."
+13224,"Adjectives and adverbs emphasizing accessibility, cleanliness, activity, or focus."
+13262,Tokens describing physical objects or concepts causing difficulty or requiring control.
+13321,"Tokens indicating a response or reaction to a condition, often in medical or health-related contexts."
+13348,"Tokens emphasizing focus or importance, particularly ""about"" in context of personal choices or adaptations."
+13357,Verbs or nouns related to modifying or changing states or conditions.
+13359,Verbs indicating actions taken to address or alleviate challenges or discomfort.
+13402,"Specific conjunctions and adverbs introducing conditions or time, often in reflective or explanatory contexts."
+13476,Punctuation marks like commas and periods following descriptive or sensory language.
+13727,"The token ""it"" referring to a personal or familial possession or experience."
+13731,"Temporal adverbs indicating immediacy or recency, like ""early"" and ""today""."
+14100,Verbs describing personal actions or preparations in first-person contexts.
+14179,"Words emphasizing exclusivity or singular focus, such as ""solely,"" often in decision-making or recommendation contexts."
+14219,"Pharmaceutical or substance-related terms, specifically the token ""powder""."
+14257,"Words describing minor inconveniences or effects, often tied to physical discomfort or annoyance."
+14451,"The token ""to"" following an inquiry about a better or safer way to perform an action."
+14522,"The token ""pool"" when used in the context of a party or gathering."
+14577,"Tokens denoting an event or measurement within parentheses or indicating a significant occurrence like ""happening""."
+14624,Tokens indicating certainty or factors directly influencing outcomes in health-related contexts.
+14690,"Tokens indicating a search or inquiry, commonly ""for"" or ""on"" in diagnostic or evaluative contexts."
+14806,"Medical-related terms involving physical conditions or actions affecting the mouth, cough, or aspiration."
+14882,Tokens related to reducing or limiting actions or effects in medical or practical contexts.
+14969,"The token ""this"" in contexts expressing concern or uncertainty about a specific situation."
+15108,Verbs describing an action causing emotional or physical discomfort or concern.
+15192,Tokens expressing personal preferences or dislikes in first-person narrative.
+15222,"The token ""apply"" in instructional or advisory contexts."
+15261,Descriptive verbs indicating appearance or fit in practical or observational contexts.
+15263,"The preposition ""to"" in contexts of enhancement, resistance, or causation."
+15323,"The word ""piece"" when describing an object, often in the context of cleaning or examining it."
+15368,Words indicating mild issues or leftover items needing attention or management.
+15502,"The token ""have"" used in the context of potential effects or impacts."
+15586,"The token ""sure"" in contexts of certainty or validation."
+15633,"Words related to physical states or conditions, often in contexts of vulnerability or minimalism."
+15657,"Comparative or directional terms indicating progression, movement, or change."
+15740,"The token ""especially"" or similar terms highlighting specific emphasis in the context of physical symptoms or concerns."
+15889,"Tokens related to physical applications or sensations, like ""lotion,"" ""massage,"" ""manipulation,"" ""slurring,"" and ""numbing."""
+15981,"The token ""there"" in contexts explaining absence or minimal risk."
+16052,"Words or phrases describing discomfort or distress, especially in medical or psychological contexts."
+16393,Words related to water or liquid in the context of treatment or cleaning.
+16407,"Tokens related to ""disease"" in medical or health contexts."
+16418,"The pronoun ""it"" in contexts involving possession, action, or reference to an object."
+16490,"Tokens related to physical positioning or states of distress, especially ""side"" and ""trouble""."
+16562,Verbs indicating actions or changes with a sense of precision or purposeful adjustment.
+16605,"Common units of measurement, quantities, or time-related terms in a practical or instructional context."
+16714,Words indicating direct physical or emotional experiences often tied to personal or sensory contexts.
+16715,"The token ""diabetes"" in the context of medical conditions, especially type 1 or type 2 diabetes."
+16725,"Words ending in ""-ing"" related to enjoying or engaging in activities."
+16735,"The token ""to"" in the phrase ""no need to"" indicating a lack of necessity."
+16816,"The token ""inhal"" in contexts specifically about inhalers and their use, storage, or maintenance."
+16878,Tokens describing actions or habits performed regularly or intermittently.
+16899,"Tokens related to dietary restrictions or labels, especially ""gluten""-free contexts."
+17298,Verbs indicating adherence or actions for maintaining consistency or improvement.
+17326,"Tokens related to beverages, dietary choices, or alternatives in health and wellness contexts."
+17506,Words related to physical objects or systems requiring purchase or installation.
+17517,"The token ""that"" used in expressions of empathy or positive acknowledgment."
+17574,"Tokens ""regarding"" and ""on"" in contexts asking for advice or expressing curiosity."
+17757,"The word ""particular"" in questions suggesting specificity or recommendations."
+17913,"Tokens signifying reasoning, discovery, repetition, or insight in explanatory or reflective contexts."
+17952,"First-person pronouns ""me"" or verbs ""ask"" in conversational or advice-giving contexts."
+17988,Prepositions introducing contextual relationships or urgency in actions or descriptions.
+18252,"The token ""by"" in contexts involving instructions or guidance from authoritative sources."
+18461,"Tokens ""place"" and ""label"" in contexts of physical positioning or categorization."
+18574,Words implying causation or motivation in a health-related context.
+18604,"Tokens signaling relationships or connections, often with ""in"" in familial or situational contexts."
+18642,Verbs indicating action or necessity often linked to instructions or recommendations.
+18790,Physical obstructions or obstacles in contexts related to handling or resolving difficulties.
+18816,"Words related to medical treatments, risks, or health-related concerns."
+18841,"Tokens conveying relationships or attributes, often linking ideas or describing aspects, such as ""of"", ""aspect"", ""beyond""."
+18908,"Tokens indicating a selection or preference, such as ""option"" and ""choice""."
+18909,Words describing precision or subtlety in medical or physiological contexts.
+18943,Singular nouns referring to distinct objects or entities in practical or health-related contexts.
+18983,"The token ""to"" following ""Is it okay"" in questions about acceptable actions or behaviors."
+19019,Periods ending factual or instructional statements.
+19028,"The abbreviation ""UV"" or references to ultraviolet light."
+19068,Verbs indicating relief or improvement of symptoms or conditions.
+19155,"Tokens related to biological or chemical processes, especially hydration and growth-related contexts."
+19169,"Words describing small amounts, minor changes, or subtle variations in physical states or behaviors."
+19216,"Numbers or numerical values in various contexts such as ages, measurements, or quantities."
+19345,"Words expressing approximation or uncertainty, often in contexts involving measurement or estimation."
+19426,"Common determiners (""the,"" ""a"") often preceding nouns or specific measurements in health or lifestyle contexts."
+19445,"Words introducing questions about processes or benefits, such as ""how,"" ""must,"" ""useful,"" ""especially,"" and ""monitor."""
+19508,"Prepositions ""in,"" ""to,"" or ""with"" linking health-related concerns or dietary specifics."
+19667,Tokens describing age or duration in a medical or caregiving context.
+19984,"The token ""useful"" in contexts suggesting practical benefits or applications."
+20002,"The token ""concussion"" in contexts describing personal experiences or recovery."
+20116,"Tokens ""recommend"" or ""advice"" in contexts requesting guidance or suggestions."
+20472,"Words related to family or inheritance, often in the context of genetic or familial traits."
+20532,Tokens relating to causation or risk factors in health and nutrition contexts.
+20782,"Tokens related to time, schedules, or expiration dates."
+20982,"The word ""heating"" when describing methods of warming or temperature control."
+21042,Words related to bicycles or storage furniture containing items.
+21064,"The word ""to"" in instructional or directive contexts."
+21147,Tokens related to physical movement or objects in domestic settings like kitchens.
+21209,"The token ""to"" when introducing an action aimed at preventing or achieving something."
+21407,"Adjectives or modifiers indicating quantity, intensity, or quality, often related to reduction or commonality."
+21421,Tokens related to IVF treatments or associated fertility contexts.
+21629,"Tokens related to medical measurements or parameters such as ""M"", "":E"", ""labels"", or ""rate""."
+21636,"Prepositions indicating spatial or temporal relationships, such as ""in"" and ""the""."
+21712,"Tokens implying movement or transition, often associated with physical or metaphorical flow."
+21741,"Tokens related to sensory perception, physical states, or medical conditions."
+21774,"Conditional ""if"" indicating hypothetical or uncertain scenarios."
+21842,"Rarely-used tokens describing specific measurements, adaptations, or relational qualifiers in technical or descriptive contexts."
+21867,"The exclamation mark ""!"" following a greeting, suggesting an enthusiastic or surprised tone."
+22451,"Specific medical terms related to testing, scans, hormones, and genetic conditions."
+22640,"Words indicating temporal proximity or uncertainty, especially ""within"" and ""doubt""."
+22703,Tokens related to physical processes of evaporation or transformation involving heat.
+22720,"Contractions with ""not"" expressing negation, specifically ""don’t"" and ""doesn’t""."
+22779,"Words related to moderation, restraint, or reduction in quantity or intensity."
+22798,"Words referring to personal actions or attributes, like ""me,"" ""big,"" ""large,"" ""eat,"" and ""time."""
+23244,"Intensifiers or modifiers indicating degree, frequency, or emphasis in contexts of health or personal concern."
+23398,"The token ""just"" in casual questions about actions or decisions."
+23407,"The word ""options"" in contexts discussing choices or alternatives."
+23534,"Tokens describing physical states or measurements related to health, injury, or exercise."
+23553,"Tokens representing partial words or prefixes in specialized contexts like ""non-binary"" or ""trimester""."
+23631,"Adjectives or nouns describing lifestyle, manageability, or food habits, often indicating health-related contexts."
+23801,Tokens in medical or advice contexts emphasizing certainty or natural course of action.
+24002,Words related to brushing teeth or dental hygiene actions.
+24012,Tokens in questions requesting advice or suggestions.
+24037,Medical terms related to seizures or seizure control.
+24052,Words related to examining or checking for faults or safety.
+24210,"The token ""clots"" or ""clot"" related to blood in medical or risk prevention contexts."
+24355,"Words indicating physical objects or tools used for storage, replacement, or convenience."
+24371,"Tokens related to medical terms or conditions, often within contexts discussing health or treatment."
+24385,Adjectives indicating ease or low effort in performing tasks or adjustments.
+24790,Verbs expressing subjective perception or action avoidance in conversational or explanatory contexts.
+24831,"Words describing potential downsides, risks, or negative effects in a context of caution or evaluation."
+25030,"Tokens expressing conditions, exceptions, or uncertainty in medical or health-related contexts."
+25057,Abstract nouns representing methods or strategies in a problem-solving or decision-making context.
+25252,"Tokens conveying optimality or past actions, often related to decision-making or personal experiences."
+25354,"Words indicating urgency or physical actions like ""immediate"" and ""movement""."
+25365,Words conveying negation or optionality in advice or recommendations.
+25390,Words related to physical support or actions involving effort and bodily mechanics.
+25429,Tokens conveying distress or urgency in medical or emotional contexts.
+25513,"Tokens ending in ""er"" or ""et"" often part of physical objects or measurable targets."
+25628,"Words related to managing or regulating conditions, particularly ""control"" in health-related contexts."
+25763,"Words related to ""bone"" health or ""peanuts"" in allergy contexts."
+25769,"The token ""extra"" in contexts suggesting additional quantities, efforts, or measures."
+25881,"The pronoun ""She"" or ""says"" in contexts describing health, independence, or personal conditions."
+25946,"The definite article ""the"" preceding medical or technical nouns."
+26079,"Singular nouns tied to suggested actions, particularly in contexts of recommendations or best practices."
+26202,"Tokens ""loss"" in contexts about weight reduction and ""visiting"" in contexts about travel or location changes."
+26255,"Tokens suggesting actions or states related to care, preparation, or physical or emotional impact."
+26307,"Words conveying deliberate attention or care, such as ""focus,"" ""soothing,"" and ""postpone."""
+26325,"Formal or technical terms related to medical, legal, or procedural contexts."
+26398,"Tokens related to ""essential oils"" in contexts of natural remedies or alternative treatments."
+26702,"Tokens implying ability, possibility, or action, often involving helping, falling asleep, or describing fussiness."
+26722,Tokens indicating routine monitoring or avoiding risks in structured or precautionary contexts.
+26776,"Tokens ""to"" and "","" in medical or advisory contexts linking actions or conditions."
+26915,"Tokens related to skincare, herbal remedies, or natural substances like lotion, lemon, lime, or chamomile."
+26936,"Tokens related to cleanliness, hygiene, or preventative measures against contamination or decay."
+27010,"Verbs related to transferring or emitting, such as ""give"" or ""spreading""."
+27100,"Words introducing or specifying actions, substances, or sources within detailed procedural or descriptive contexts."
+27266,"Tokens associated with sensory perception or cognitive recognition, particularly ""recognize,"" ""understand,"" and ""numbness."""
+27296,"Modal verbs expressing possibility, ability, or advisability like ""can,"" ""should,"" and ""seems."""
+27347,"Tokens ""help"" or ""helps"" in contexts suggesting alleviation or improvement of a condition or situation."
+27349,"Tokens suggesting initiation or change in actions or states, often related to health or lifestyle adjustments."
+27679,"Verbs indicating occurrences or actions, especially unexpected or natural events."
+27690,"The token ""eling"" in the context of physical activity like shoveling snow."
+27769,Tokens denoting actions or outcomes that could be deemed unnecessary or avoidable.
+27811,"Tokens related to sudden changes or critical points in medical or health contexts like ""abruptly"" or ""diagnosis""."
+27914,"Chemical compound names, specifically ""phenylalanine"" and ""hydrogen peroxide""."
+27996,"The token ""but"" signaling contrast or shift in perspective within a sentence."
+28035,"The token ""V"" likely referring to a variable or abbreviation in a technical or formal context."
+28147,"Tokens indicating recommendations, advice, or preparedness in practical or health-related contexts."
+28156,"The word ""tight"" when describing a challenging or constrained situation or schedule."
+28177,"The token ""protect"" in contexts discussing personal responsibility or safeguarding something."
+28317,"The token ""initial"" in contexts related to early stages of treatment, actions, or symptoms."
+28454,Verb suffixes indicating the third person singular present tense or plural noun forms.
+28466,"The token ""quit"" referring to cessation of smoking or similar personal habits."
+28554,"The token ""out"" following the letter ""g,"" often in contexts discussing health management or conditions."
+28644,Singular nouns referring to specific individuals or groups.
+28729,"Adjectives describing conditions or suitability, often linked to health, convenience, or presence."
+28754,"Words indicating medical conditions or situations, especially ""cluster"" in the context of headaches or encounters."
+29229,Tokens related to footwear or actions involving clothing and physical activity.
+29321,Modal verbs and prepositions indicating potential actions or decisions.
+29341,"Tokens ""to"" and ""even"" in contexts expressing uncertainty or comparison related to actions or situations."
+29392,"The token ""-ups"" in the context of regular medical check-ups."
+29435,"Words related to absorbing or applying moisture, often involving towels or soaking."
+29572,"Prepositions ""of"" or ""much"" in contexts suggesting awareness or degrees of action or composition."
+29754,"Contextual adjectives or verbs related to choice, health, activity, or purchasing decisions."
+29824,"The word ""Living"" in contexts describing personal circumstances or medical conditions."
+29833,"Tokens related to medical treatments or conditions, especially specific terms like ""medication"" and ""at""."
+30143,"Tokens indicating medical conditions, actions, or measurements in parentheses or related to acid reflux."
+30249,"The word ""anxious"" in contexts expressing personal feelings or concerns."
+30436,Hyphenated prefixes or scientific terminology often indicating specialized contexts.
+30510,"Adjectives or adverbs describing physical characteristics, stability, or distribution in practical or health-related contexts."
+30800,"The token ""them"" in contexts involving interpersonal or group interactions."
+30913,"The phrase ""things like"" introducing examples or categories."
+31134,Singular possessive determiners and nouns related to food or health.
+31499,"Tokens ""having"" and ""so"" in contexts discussing conditions or hypothetical scenarios."
+31554,"Words related to self-care actions or locations like ""home,"" ""consume,"" or ""through."""
+31569,Tokens related to physical objects or substances for infant care or digestive health.
+31599,"Tokens related to cautiousness or warning, often in health or safety contexts."
+31688,"The term ""oxide"" in the context of ""carbon monoxide""."
+31759,"Medical or scientific terms related to substances, genetic variants, or physiological conditions."
+31837,"Tokens within medical or scientific terminology, often mid-word in specialized terms."
+31906,"Tokens related to specific actions or results in context, often involving inclusion or absorption."
+31951,"Transition words like ""to"" connecting actions or purposes, and gerunds indicating organized or ensured processes."
+32180,Words related to fertility and ovulation in the context of medical treatments or advice.
+32385,"Adjectives ""vital"" and ""imperative"" indicating essential actions or conditions in health-related contexts."
+32402,"Tokens describing self-regulation, optimization, or containment in contexts of efficiency or personal management."
+32436,"Words related to physical actions or mobility, often involving upward or load-related movements."
+32485,"Tokens linked to sensory experiences or states, often involving difficulty or impairment."
+32535,"Words related to physical effort or intensity, particularly in the context of workouts or exertion."
+32545,Words related to physical discomfort or sensations like cramping or migraines.
+32765,"Tokens indicating medical advice, specifically ""prescribed"" or ""suggest"" in treatment or recommendation contexts."
+32825,"Words indicating modification, difference, or influence in action, behavior, or outcomes."
+32933,"Functional or action-oriented words indicating interaction, positioning, or usage in a direct context."
+33231,"Tokens referencing continuation or adherence to specific actions, protocols, or features."
+33286,"Tokens related to medical processes or outcomes involving improvement, recovery, or therapeutic intervention."
+33432,Kinship terms indicating familial relationships.
+33466,"Words affirming or emphasizing agreement or certainty, often in advice or explanatory contexts."
+33489,"Prepositions ""of"" or ""to"" indicating relationships or directions in physical or abstract contexts."
+33541,Body parts and natural substances in contexts of injury or health.
+33590,"The token ""vinegar"" in contexts relating to apple cider and skin application."
+33626,Words indicating temptation or struggle in decision-making or actions.
+33860,The comma separating clauses in health-related concerns or medical contexts.
+34081,"Tokens related to time or shape, like ""trimester,"" ""triangular,"" ""now,"" or ""take-off."""
+34174,"Tokens ""Given"" or ""thinking"" in contexts of health-related discussions or introspection."
+34261,"Words indicating exceptions, uncertainty, or misinterpretation in informational or advisory contexts."
+34270,"Verbs describing actions or interventions to reduce discomfort, pressure, or pain."
+34673,"Tokens related to physical locations or spots, often in the context of travel or accessibility."
+34739,"The token ""acid"" in medical contexts describing diabetic ketoacidosis."
+34780,"Words describing physical or emotional states, often related to health or bodily functions."
+34835,Words indicating restrictions or quantities in practical or advisory contexts.
+34925,"The definite article ""the"" in contexts emphasizing a singular, specific issue or concept."
+34955,"Tokens ""avoid"" or ""avoiding"" in contexts related to evading negative outcomes or undesirable actions."
+35070,"Prepositions indicating inclusion or contribution, such as ""towards,"" used in contexts of hydration or counting benefits."
+35161,"Words indicating necessity or strict importance, particularly ""necessary"" and similar terms in medical or advisory contexts."
+35275,Words related to bones or bone-related medical procedures.
+35490,"The token ""instant"" in phrases describing quick-use products like heat or cold packs."
+35545,"Prepositions ""for"" or ""on"" indicating conditions or contexts in guidance or restrictions."
+35561,"Specific nouns or verbs related to physical states, locations, or communication of bodily awareness."
+35576,"Words indicating excess, appearance, or progression in context-specific scenarios."
+35704,Words conveying persistence or repetition in actions or states.
+35813,Medical terms related to liver or heart conditions.
+35846,Words expressing preference or advantages in personal or medical decision contexts.
+35952,"The token ""cret"" within the word ""concretely"" referring to specificity or clarity."
+36111,Gerund or present participle forms of verbs.
+36250,"Adjectives or nouns describing conditions of functionality, cleanliness, or safety."
+36263,"The token ""changed"" in the context of maintaining or altering routines."
+36394,Words related to probability or alignment in contexts of reducing risks or matching conditions.
+36482,"The token ""your"" in contexts involving instructions or actions."
+36489,"Tokens related to medical items or conditions, particularly cold packs and potential deficiency links."
+36549,"Verbs indicating causation or influence, often related to risk or generational factors."
+36686,"Tokens referencing ""travelers"" in the context of health concerns, especially diarrhea."
+36797,"Units of measurement, specifically ""meters,"" often in numerical or comparative contexts."
+36812,Medical term referring to urinary functions or conditions.
+36850,Technical or medical terms related to health assessments or diagnostic tools.
+36982,"The verb ""control"" in contexts related to health or physical regulation."
+37145,Singular abstract nouns indicating existence or states.
+37148,"Verbs ""resolve"" or ""forming"" in medical contexts describing symptoms or conditions."
+37173,"Tokens related to personal care products or treatments like whitening toothpaste, nasal strips, or braces."
+37333,"Words describing disorientation or sudden physical sensations like ""dazed,"" ""oriented,"" or ""jolt."""
+37445,The question mark symbol following context implying uncertainty or inquiry.
+37452,"Tokens ""of"" or ""says"" in contexts discussing medical diagnoses or instructions on packaging."
+38036,"The token ""for"" in phrases suggesting caution or attentiveness."
+38444,"Words indicating specific states, objects, or conditions related to safety, stages, or functional items."
+38446,"Tokens ""possible,"" ""through,"" or ""fell"" in contexts implying feasibility, perseverance, or sudden physical events."
+38501,"The modal verb ""have"" in contexts involving hypothetical or reflective scenarios."
+38580,"Verbs or nouns indicating progress, improvement, or positive advancements in a specific context."
+38581,Nouns related to waste management or structural integrity.
+38712,"The token ""invasive,"" often in medical or procedural contexts."
+38779,"Auxiliary verbs indicating necessity or possibility in casual, reassuring contexts."
+38916,"The token ""worry"" in contexts minimizing concern or emphasizing reassurance."
+38937,"The token ""ens"" at the end of the verb ""worsens"" in medical or discomfort-related contexts."
+38948,Words related to the act of introducing or beginning something new.
+39054,"The token ""indeed"" emphasizing confirmation or reinforcement in explanatory or causal contexts."
+39076,"Positive sentiment verbs or adjectives indicating reassurance, ease, or successful management."
+39105,Adjectives describing physical or emotional instability.
+39147,"Words expressing concern or risk, often tied to personal health or safety."
+39411,Words indicating a specific time frame or interim period in a context of advice or concern.
+39467,"The token ""tailor"" in contexts about customizing plans, treatments, or approaches to individual needs."
+39685,"Phrases indicating the first sign of something occurring, often related to health or symptoms."
+39766,"Tokens related to yellowish skin tones, often in medical or descriptive contexts."
+39791,"Words promoting action or motivation, like ""encourage,"" ""suggest,"" or high-intensity exercise terms."
+40134,"Prepositions ""on"" or ""around"" and the noun ""ointment"" in contexts related to skin or medical care."
+40162,"Tokens in phrases indicating initial detection or onset of symptoms, often paired with medical advice."
+40188,"Temporal or quantifiable terms indicating duration, frequency, or sequence in medical or procedural contexts."
+40453,"The word ""sometimes"" in contexts describing occasional or variable occurrences."
+40637,Singular nouns referring to human individuals in medical or health-related contexts.
+40714,"Tokens ""are"" and ""provide"" in conditional or explanatory contexts."
+40792,"Words describing physical conditions or substances, often related to health or safety contexts."
+40855,"Action-oriented verbs suggesting adherence to guidelines, routines, or sharing advice."
+40865,"Proper noun ""Somebody"" referring to an unspecified person in a narrative context."
+41036,"Pronouns or prepositions indicating possession, relation, or interaction in medical or advisory contexts."
+41093,"Tokens related to physical positioning or environmental factors like altitude, occurrence, placement, alignment, or inclined surfaces."
+41176,"Words expressing concern or inquiry, often in contexts of advice or emotional sensitivity."
+41182,Tokens implying adequacy or sufficiency in meeting a need or requirement.
+41186,"Verbs implying prevention, inhibition, or reduction of interference or errors."
+41270,"Specific nouns or actions related to physical health, impacts, or protective measures."
+41341,Objects used to collect or store bodily fluids.
+41635,"Tokens describing physical conditions or qualities, often related to texture, stress, or cloudiness."
+41656,"Technical or medical terms indicating a condition, factor, or function."
+41666,"Past participles ending in ""ed"" or ""ing"" related to actions or states."
+41784,"Tokens ""also,"" ""is,"" or ""do"" in conversational or inquiry contexts."
+41933,"Words conveying inconvenience, difficulty, or negative results in practical or physical contexts."
+41942,"Words related to natural health practices like herbal remedies, lifestyle changes, and sunlight exposure."
+42178,"The token ""ice"" in contexts related to injury treatment and swelling reduction."
+42295,"Professional roles or titles related to health and wellness, like pharmacist, therapist, or day in scheduling contexts."
+42448,"Tokens ""cannot"" and ""alt"" in contexts emphasizing physical limitations or environmental conditions."
+42497,Verbs indicating physical or situational adjustments or actions for improvement.
+42584,"Tokens related to health, nutrients, or physical recovery contexts."
+42586,"Tokens expressing emotions of nervousness or fear like ""anxious"" and ""panic""."
+42618,"Words suggesting choice, limitation, or physical action, like ""options,"" ""not,"" ""fist,"" ""misuse,"" and ""use."""
+42766,"Tokens reflecting subjective or evaluative language related to health, wellness, or advice contexts."
+43212,Tokens related to seeking or ensuring medical assistance or aid.
+43268,"Tokens implying medical concern or urgency, often related to infections or critical health management."
+43335,"Adjectives describing personal interests, health, or lifestyle."
+43380,"The token ""even"" emphasizing unexpected or surprising possibilities and ""called"" introducing specific terms or concepts."
+43417,Tokens related to medical procedures or actions involving physical application or integration.
+43524,"The token ""critical"" used to emphasize the importance of actions or conditions."
+43725,"Prepositions ""to"" and ""of"" in practical contexts suggesting purpose or guidelines."
+43784,Verbs indicating action or decision-making in a direct or practical context.
+43960,"Physical actions involving hands, heads, or bites in medical or safety-related contexts."
+44029,"Tokens related to medical care, specifically ""pressure"" and ""foot"" in contexts of prevention and treatment."
+44406,"Prepositions indicating duration or time context, such as ""for"" and ""to""."
+44501,"Negative contractions expressing absence or lack, such as ""isn't,"" ""haven't,"" ""don't,"" ""hasn't,"" and ""aren't."""
+44506,"Words denoting actions or techniques related to physical or mental states, e.g., alarms, breathing, planning, shivering."
+44510,"Words conveying a negative impact or disruption, often in relation to experiences or routines."
+44622,"Words indicating limits, constraints, or results, often in contexts of dosage or measurable effects."
+44727,"Verbs indicating change or influence, such as ""adjusting,"" ""impact,"" ""discontinue,"" ""stopping,"" and ""inflation."""
+44765,"Words describing physical or mental states, sensations, or processes related to health and well-being."
+44767,Words related to alternative health practices or personal resilience.
+44828,"The token ""intake"" in contexts referring to consumption or regulation of substances like caffeine or nutrients."
+45151,"Tokens indicating progression, change, or preparation within a temporal or developmental context."
+45152,Comma following a reasoning or condition phrase in formal or explanatory contexts.
+45177,Verbs tied to specific physical actions or processes like capturing or storing.
+45321,"Tokens conveying safety, support, or health-related advice, often emphasizing actions or tools for assistance."
+45372,"Verbs expressing potential movement or consequence, often in contexts of concern or risk."
+45623,"Tokens conveying receipt of medical information, like ""told"" or ""said"" in health-related contexts."
+45819,Tokens representing abstract or systemic concepts in informative or instructional contexts.
+45867,Rarely used adverbs or qualifiers indicating uncertainty or minimal degree.
+45963,"The token ""changes"" in contexts discussing sudden or significant alterations."
+46042,"Verbs related to exploring or investigating possibilities, especially in contexts of alternative options or therapies."
+46065,"Prefixes ""Pro"" and ""Dis"" indicating opposing states or concepts in descriptive contexts."
+46087,Words related to physical swelling or inflammation in a medical or descriptive context.
+46125,"Medical terms describing conditions or measurable qualities, often with a technical or diagnostic context."
+46249,"Tokens describing temporary states, actions, or objects that are functional or situational."
+46258,Compound adjectives or nouns describing strength or durability.
+46474,"Tokens related to actions or states requiring advice or caution, often in health or safety contexts."
+46704,Prepositions or nouns indicating temporal or causal relationships in medical or procedural contexts.
+46766,"Tokens ""the"" and ""there"" in contexts related to travel or location."
+46955,Singular nouns related to household or everyday objects.
+47025,"Tokens introducing specific items, comparisons, or transitions in informational or explanatory contexts."
+47046,Tokens describing challenges or obstacles in medical or health-related contexts.
+47225,"Medical terms or advice related to symptoms, positioning, or similarities in conditions."
+47419,"Tokens indicating mild illness, discomfort, or necessity in conversational or explanatory contexts."
+47518,Tokens related to travel preparation specifically involving pre-travel contexts.
+47663,"The token ""ding"" within contexts implying routine actions or maintenance."
+47725,"Function words indicating comparison, causality, or relationships like ""to,"" ""from,"" ""for,"" and negations like ""n't."""
+47880,"The token ""brush"" in contexts related to dental hygiene or oral care instructions."
+47882,"Tokens related to physical changes or adjustments, like ""repositioning,"" ""changing,"" ""feeling,"" ""weight,"" and ""fluctuations."""
+48009,"The token ""lifting"" in contexts related to physical exercise and its effectiveness."
+48012,Verbs implying acceleration or prevention of undesirable outcomes.
+48037,Verbs indicating evaluation or decision-making processes in medical or procedural contexts.
+48063,"Scientific or technical terms related to health, nutrition, or body chemistry."
+48076,"Words indicating secure placement or stabilization, often involving tucking or fixing objects."
+48084,Tokens related to physical flexibility or dietary fiber in health and fitness contexts.
+48102,"Tokens indicating time frames or changes, such as ""weeks,"" ""effect,"" ""trimest,"" and ""approaching."""
+48116,"Tokens indicating uncertainty or desire for solutions, often tied to needs or suggestions."
+48131,"Words indicating topics of discussion or planning, such as ""about,"" ""plan,"" ""details,"" and ""flexibility."""
+48161,"Advisory or precautionary language emphasizing carefulness or ensuring actions, often following ""Just""."
+48196,Tokens indicating actions or states that resolve or fix problems.
+48259,Common conjunctions or prepositions in conditional or explanatory sentences.
+48270,"The token ""total"" when referencing sums, limits, or cumulative measurements in a context."
+48416,"Pronouns referring to specific individuals, often in narrative or descriptive contexts."
+48497,"The token ""that"" introducing clauses explaining conditions or requirements."
+48517,"Prepositions indicating spatial or temporal relationships, often used in instructional or descriptive contexts."
+48643,Tokens representing abbreviated forms of medical or biological terms.
+48748,"Health-related terms like ""blood pressure,"" ""due to,"" or ""family history"" in medical or advisory contexts."
+48830,Tokens implying causation or facilitation in an action or state.
+48951,"Tokens ""not"" or "","" emphasizing caution or critical importance in advisory or directive contexts."
+48972,Prepositions indicating specificity or restriction in context.
+49189,"Terms related to genetic disorders, especially ""genetic"" and ""syndrome"" in medical or diagnostic contexts."
+49248,"The token ""the"" introducing a specific necessity or requirement."
+49529,"Words like ""entirely"" and ""prudent"" in contexts emphasizing avoidance or cautious behavior."
+49809,"Words related to warmth or general applicability like ""warm"" and ""any""."
+49974,Technical terms for medical devices or actions involving placement or secure positioning.
+50213,"Function words specifying subsets or conditions, e.g., ""those,"" ""non,"" ""what."""
+50344,"Reflective or speculative phrases involving ""wonder"" or ""representative of"" in health-related contexts."
+50349,"Words related to social events or gatherings, particularly ""party"" and ""gathering""."
+50534,"Descriptive sensory words related to taste, smell, and appearance of objects or substances."
+50650,"Tokens related to gradual change or comparison, often conveying a sense of progression or similarity."
+50728,"The token ""'s"" within the phrase ""like 's"" in a comparative or illustrative context."
+50768,"Specific medical or physical descriptors, often related to conditions, treatments, or developmental stages."
+51008,Vague quantifiers or options in contexts discussing variability or choice.
+51054,Adjectives conveying intensity or severity in medical or health-related contexts.
+51067,"Words related to physical conditions, skin, or disruptions in daily life activities."
+51152,"Words denoting enduring states or conditions, often tied to longevity or persistence."
+51186,"Specific temperature-related terms or actions like ""temperature"" and ""swim"" associated with precision or measurement."
+51283,Abstract nouns denoting dynamic processes or states requiring external support or action.
+51355,"Adjectives suggesting adequacy, appropriateness, or preference in specific contexts."
+51356,"The token ""throat"" in contexts discussing its condition or care, or the token ""than"" in comparative statements."
+51381,Tokens related to proactive decision-making or preventive actions in medical or health contexts.
+51447,"Words conveying limitations or constraints, often related to physical or functional boundaries."
+51508,Medical or technical terms related to diagnostics or treatments.
+51513,Prepositions indicating spatial or directional relationships.
+51603,Words indicating a potential health condition or diagnostic interpretation.
+51749,"Prepositions ""on"" and ""something"" in medical or health-related contexts."
+51866,"Tokens describing tools, processes, or items used in practical or health-related activities."
+51907,Positive or motivational nouns related to personal improvement or emotional upliftment.
+51936,"Tokens expressing rarity or desire, such as ""rare"" and ""want,"" in emotionally or situationally charged contexts."
+51968,"Words ""type"" or ""types"" used to categorize or specify variations within a broader group."
+51979,"Words related to maintaining warmth or heat in the context of clothing, insulation, or body temperature."
+52040,Words related to oxygen tanks and their usage or portability.
+52170,Prepositions indicating purpose or usage.
+52193,"The token ""beyond"" when used in contexts suggesting extension or surpassing limits."
+52292,Verbs describing accidental physical contact with objects or surfaces.
+52469,"Words indicating symptoms or potential health issues, particularly ""sign"" in diagnostic or observational contexts."
+52493,"Auxiliary verbs ""doesn,"" ""don,"" and ""he,"" often indicating negation or action in conversational contexts."
+52604,"The token ""the"" in contexts describing a specific location or object."
+52741,"The token ""tunnel"" in contexts related to medical conditions."
+52881,"The token ""Cut"" in structured text format following the header tags."
+52954,Suffixes indicating past tense or adjectival forms often describing a state or condition.
+52959,"Words related to physical movement or elevation, and the drug name ""naproxen""."
+53155,Tokens associated with exposure to air or processes of airing out for drying or healing.
+53220,"Medical professionals' titles ending in ""ologist"" or ""provider"" in patient-related contexts."
+53224,"The word ""those"" referring to specific examples or categories in explanatory contexts."
+53249,"Tokens related to physical actions or effects, often involving touch or contact."
+53443,First-person pronouns or verbs indicating personal action or perception.
+53478,Words referring to body parts or symptoms in medical or physical health contexts.
+53490,"Tokens following ""Start"" in guidance or medical advice contexts."
+53502,Tokens implying strict routine or disciplined behavior.
+53825,"The token ""goes"" in contexts expressing concern or intention for a positive outcome."
+53845,Physical attributes or adjustments related to objects or the human body.
+53901,"Medical or wellness-related terms indicating focus or intent, often abstract or concerning practices and devices."
+53959,"Medical terms, especially ""pancreatitis,"" in health-related contexts."
+54032,"Tokens related to consuming food or meals, often in health or dietary contexts."
+54087,Verbs suggesting physical movement or action related to stability or seeking assistance.
+54153,"Verbs related to decision-making or comparison, often in reflective or evaluative contexts."
+54554,Words describing intense physical or emotional states or disruptive conditions.
+54562,"The token ""bit"" when referring to an insect or animal bite."
+54569,"Prepositions ""on"" or ""of"" indicating relationships or associations in medical or contextual descriptions."
+54581,"Prepositions ""on"" or ""upon"" in contexts involving medical treatment or results."
+54654,Medical-related terms describing prevention or management of conditions or symptoms.
+54728,Verbs describing physical actions or movements often involving exertion or impact.
+54739,"Tokens expressing negation, exclusion, or unpleasantness."
+54831,"Function words introducing explanations or alternatives, often linking clauses or ideas."
+54841,"Words describing adaptation or immobilization processes, often in medical or physical contexts."
+55001,"The word ""home"" when describing treatment or management of health conditions."
+55036,"Tokens describing physical barriers, levels, or devices related to safety, protection, or movement."
+55086,"Tokens describing specific issues or conditions, often in medical or problem-solving contexts."
+55169,Tokens describing looseness or instability in physical objects or conditions.
+55341,"Tokens describing specific actions or positions in careful, methodical, or instructional contexts."
+55365,"The word ""concern"" in contexts discussing health or safety implications."
+55376,"Tokens describing rare or cautious actions, such as observing, occasional, or avoidance measures."
+55479,"The pronoun ""it"" referring to a previously mentioned concept or object being maintained or influenced."
+55625,Words describing improvement or repetition within ongoing processes or conditions.
+55706,Plural anatomical terms related to minor injuries or discomfort.
+55789,"Prepositions ""to"" or ""of"" following causative phrases like ""due"" or ""because""."
+55798,"Tokens related to movement or positioning, especially ""destination,"" ""to,"" and ""away."""
+55801,Adverbs and adjectives indicating a manner or degree of impact or connection.
+55853,Words describing specific actions or medical interventions related to health and physical processes.
+56275,"Health-related terms or actions involving bodily symptoms, sensations, or therapeutic interventions."
+56319,Tokens indicating specific actions or states in medical or physical contexts.
+56528,Tokens related to physical stretching or actions improving body flexibility.
+56587,"Words related to physical health, often involving monitoring or assessments."
+56648,"Words suggesting uncertainty or potential scenarios, often linked to health or precautionary contexts."
+56698,"The word ""nothing"" in contexts emphasizing lack of concern or inability to act."
+56800,Words indicating measurable durations or portions of time or quantity.
+56913,"Tokens related to medication amounts or appropriateness, especially ""dose,"" ""dosage,"" ""right,"" and ""line"" in supportive contexts."
+56948,"The token ""Ġ"" preceding numbers in contexts referring to age or periods of life."
+56950,Verbs related to assessment or improvement in physical or medical contexts.
+57013,"Words indicating capability, adequacy, or overcoming obstacles in professional or practical contexts."
+57093,"Function words indicating condition, choice, or partitive relationships like ""if,"" ""when,"" ""of,"" or ""once."""
+57216,Tokens indicating decisions or actions related to stopping or changing consumption or behavior.
+57239,"Tokens related to packing or setup instructions, particularly checked luggage and workstation arrangements."
+57309,"Words describing independence or growth, especially ""own"" and ""development""."
+57315,Terms for physical objects that are tools or materials used in cleaning or maintenance contexts.
+57364,"The token ""follow"" in instructional or health-related contexts, often paired with guidance or actions."
+57685,"Adverbs or adjectives related to positive mental or physical states, often modifying ""being"" or similar constructs."
+57704,Adjectives describing standard or routine conditions.
+57828,Words indicating human intervention or synthetic/artificial processes.
+57859,"Verbs describing physical actions or transitions, often involving movement or change."
+57956,"Words related to concern or anticipation, often expressing anxiety or cautious thinking."
+57973,"Words associated with tea or beverages, particularly ""tea"" in contexts of health and relaxation."
+58066,"Verbs related to evaluation, clarification, or testing processes."
+58153,"Words indicating a choice or action, like ""or"" and ""done""."
+58460,Words related to medical care or therapeutic actions.
+58715,"The token ""under"" in contexts implying conditional or exceptional circumstances."
+58736,"Common adverbs or prepositions emphasizing degree, manner, or comparison."
+58922,"Words related to health benefits or protection, especially in physiological contexts."
+59099,"Tokens referencing ""bacterial"" or ""ibuprofen"" in medical or health-related contexts."
+59147,Common prepositions in contexts involving temporal or spatial relations.
+59198,"Conditional ""if"" in health-related advice or recommendations."
+59430,"Prepositions indicating time or frequency, such as ""about,"" ""of,"" and ""few."""
+59539,"Words conveying certainty or assurance, primarily ""sure"" and occasionally ""certain."""
+59609,Words expressing absence of necessity or concern in health-related contexts.
+59765,Medical or technical terms often used in scientific or healthcare contexts.
+59812,Verbs related to physical actions of touching or coughing in health-related contexts.
+59877,"Tokens conveying physical states or comparisons, often in idiomatic or contextual expressions."
+59945,"Words related to choices, alternatives, or outcomes in practical or decision-making contexts."
+59977,"Verbs indicating the onset or prevention of a condition or state, often in medical or protective contexts."
+60184,"Tokens describing symptoms, conditions, or associated phenomena in medical or health-related contexts."
+60242,"Words describing absence or management of medical symptoms, including ""symptoms"" and ""elevated""."
+60266,"The verb ""do"" in direct questions seeking guidance or immediate action."
+60342,"Action-oriented verbs related to avoiding, preventing, or achieving effectiveness."
+60380,Singular nouns denoting tangible objects or actions in a specific context.
+60431,"The token ""home"" in expressions indicating a goal or destination."
+60588,"Tokens related to medical treatments, protective measures, or water-resistant products."
+60613,"Contractions ""'s"" and ""its"" indicating possession or linking verbs in explanatory or reassuring contexts."
+60631,"Words describing actions, states, or changes with implications of causality or consequence."
+60943,"The definite article ""the"" preceding anatomical or positional references."
+60990,"Words implying safety or stability, often in contexts describing health or home environments."
+61065,"The word ""to"" in contexts involving decision or intention."
+61096,"Tokens ""ose"" in ""varicose"" and ""committing"" in contexts of health or lifestyle decisions."
+61234,"Adjectives like ""effective"" and ""proper"" in contexts emphasizing optimality or correctness of methods or actions."
+61331,"Words related to forecasting or estimation, especially ""predict"" in medical or genetic testing contexts."
+61351,"Verbs related to maintaining a state or condition, often in a health or dietary context."
+61413,Health-related terms or actions in contexts of personal or general inquiries.
+61586,Words related to health and wellness products or dietary substances.
+61589,Locations or zones in text describing physical or situational contexts.
+61880,"Verbs describing involuntary actions like falling, tripping, or snoring."
+61921,"The auxiliary verb ""be"" in contexts describing medical symptoms or conditions."
+61926,"Words suggesting movement, exploration, or uneven physical conditions."
+62071,"Words related to comfort, reassurance, or adjustment in personal or health-related contexts."
+62301,"Tokens related to personal improvement or self-care, often in first-person contexts."
+62438,"Words describing quantities or frequencies in specific contexts, like ""rarely"" or ""glass(es)""."
+62527,Verbs indicating occurrence or states of being active or accessible.
+62582,"Action-oriented verbs describing continuation, increase, or consumption in health-related contexts."
+62607,"The prefix ""exped"" in contexts discussing recovery or improvement processes."
+62693,"The token ""to"" used in contexts describing actions or purposes that are safe, easy, or beneficial."
+62810,"The token ""landing"" in contexts related to travel or adjusting routines."
+62819,"Words relating to physical structure, arrangement, or stratification, like ""layers"" and ""milestones""."
+63047,"Tokens ""that"" and ""also"" in contexts emphasizing clarification or additional information."
+63097,"The token ""kidney"" in medical or physiological contexts."
+63263,"Words ending in ""izing"" or related to actions involving care or maintenance."
+63457,Verbs describing physical actions or sensations involving the body.
+63606,"Verbs indicating actions or states with potential consequences, often related to health or physical activity."
+63675,"Tokens related to self-awareness or interim periods, like ""self-conscious"" and ""meantime""."
+63686,"Verbs indicating cause or effect, often related to physical or health-related relief or observation."
+63699,"Tokens signaling specificity or technical detail in context, often related to conditions or strategies."
+63729,"Words related to physical sensations or bodily feelings, often in a health or therapeutic context."
+63734,"The word ""io"" within ""polio"" in contexts discussing its eradication."
+63840,Words related to sound or auditory sensations and their effects or contexts.
+63859,"The token ""stopping"" used in contexts of halting actions, treatments, or behaviors."
+64032,"The token ""follow"" in contexts of guidance or instructions for routines, treatments, or protocols."
+64050,"The question mark token ""?"" at the end of a sentence."
+64143,"The adverb ""efficiently"" in contexts describing optimization or effectiveness in processes or actions."
+64325,"Tokens ""end-of"" in the context of end-of-life care discussions."
+64369,"Adjectives describing impactful, unusual, or transitional states or events."
+64427,Tokens referring to mental processes or distant locations.
+64760,"Words indicating actions, decisions, or medical conditions, often in advisory or explanatory contexts."
+64882,"Tokens within medical contexts related to implants, mobility aids, or recovery processes."
+64966,"Tokens related to the transfer or emission of substances, diseases, or effects."
+64977,"Singular nouns or punctuation marks in contexts emphasizing actions, methods, or transitions."
+65062,Words signaling obligation or causation in explanations or personal statements.
+65297,Tokens indicating positive maintenance or actions to ensure safety and prevent harm.
+65307,"Prepositions indicating relationships or transitions like ""but,"" ""from,"" and ""in."""
+65378,"Tokens ""as"" and ""that"" in contexts suggesting uncertainty or conditions."
+65430,"Tokens related to diagnostic or evaluative contexts indicating decisions, tests, or usage of specialized equipment."
+65524,"Tokens referencing ibuprofen or contexts of absence/lack indicated by ""without""."
+65532,"Tokens indicating reported speech or information, especially ""that"", ""she"", and ""so""."
+65643,"The abbreviation ""SA"" in medical contexts."
+65744,"Common determiners (""a"", ""an"", ""have"") in medical or advisory contexts."
+65760,Tokens related to sunlight or seating contexts.
+65798,"Tokens indicating subsequent actions or consequences, like ""afterward,"" ""then,"" ""boost,"" and ""bolster."""
+65853,"The token ""tick"" referring to the parasitic arachnid in contexts of bites or detection."
+65864,"The token ""placement"" in contexts related to medical procedures, specifically after stent placement."
+65971,Verbs or adjectives related to actions or frequency in a therapeutic or self-care context.
+66041,Medical terms related to severe symptoms or distress conditions.
+66145,"Tokens ""homemade"" and ""something"" in questions or discussions seeking clarification or alternative solutions."
+66240,"The preposition ""to"" when indicating purpose or timing in advice or guidelines."
+66247,"Adjectives indicating improvement, preparation, or difficulty in personal or practical contexts."
+66290,"The preposition ""to"" indicating causation or direction."
+66366,"Words in speculative or conditional contexts, often asking if something could be true or related."
+66654,"Tokens indicating adjustment, consideration, or optimization of actions, objects, or conditions."
+66824,"Words related to bodily sensations or physical reactions, often in personal or descriptive contexts."
+67170,"Verbs associated with actions or adjustments requiring skill, effort, or alleviation."
+67338,Abstract quantifiers or speculative terms indicating possibilities or measurable quantities.
+67372,"Modal verbs and verbs indicating action, possibility, or influence."
+67478,Words indicating causality or reasoning in personal experiences or health-related queries.
+67503,Tokens describing subsiding symptoms or emotional reassurance in health-related contexts.
+67568,"The token ""into"" following the concept of rushing or avoiding rushed actions, often in medical or decision-making contexts."
+67639,"Common function words like ""of,"" ""is,"" ""am"" in explanatory or descriptive contexts."
+67698,Plural nouns referring to objects or substances grouped together.
+67730,Specific technical or scientific terms in health-related contexts.
+67763,"Tokens related to pregnancy duration or progression, especially mentioning ""weeks"" or ""week."""
+67765,"Words indicating frequency, magnitude, or measurement, often in contexts of time or altitude."
+67776,"Tokens ""new"" and ""-time"" indicating novelty or first experiences."
+67944,"Words relating to removal or alleviation, such as ""toxins,"" ""clutter,"" and ""tension."""
+67945,"Tokens related to persistent health conditions, especially ""chronic"" in medical contexts."
+68029,"Singular or plural form of ""issue"" in contexts related to health or problems."
+68081,"Tokens indicating potential causes, conditions, or signs, often in health-related or diagnostic contexts."
+68245,"Words related to planning or anticipating events or outcomes, especially involving ""future""."
+68332,"The word ""pump"" in contexts related to settings or configurations."
+68484,"Preposition ""from"" indicating separation or source in rescue or safety contexts."
+68520,Verbs related to polite or considerate actions.
+68652,Singular nouns that imply a structured or defined concept.
+68868,"Tokens indicating uncertainty or caution, often involving health or emotional well-being contexts."
+69034,"Words related to choices or alternatives, often in contexts of decision-making or exploration."
+69056,"The token ""up"" following ""mess"" in contexts of avoiding disruption or harm."
+69262,"The token ""inhal"" in the context of discussing inhaler usage or technique."
+69273,Words related to physical motion or restraint in potentially harmful contexts.
+69340,"Words describing physical sensations, pain, or irritation often related to medical or health contexts."
+69381,"The token ""come"" in contexts describing group formations or clustering phenomena."
+69557,Verbs describing physical adhesion or attachment.
+69832,"Articles like ""a"" used in advice or instructional contexts."
+69860,Tokens related to sipping liquids or consuming substances in a health or nutrition context.
+69908,Specific words related to colors in the context of clothing or appearance.
+69943,"Specific adjectives or verbs describing availability, scheduling, timeliness, or refusal in a procedural or health context."
+70063,"Words denoting consistency, appropriateness, or careful action in the context of health or well-being."
+70305,Words related to nutrient absorption or physiological processes involving absorption.
+70307,"Names of countries or regions, often in travel-related contexts."
+70309,Opening parentheses preceding medical abbreviations or acronyms.
+70520,"The word ""if"" in conditional contexts involving health, safety, or comparison."
+70529,"Tokens related to physical conditions, like pain, aches, weight, or elevation of limbs."
+70656,"The token ""way"" when referring to the completeness or extent of an action or process."
+70745,"Words implying action or change, often tied to progression or alleviation."
+70843,"The token ""bite"" in contexts describing frostbite treatment."
+70847,"Descriptions of bulging veins, particularly in the legs."
+70908,"Tokens ""regarding"" and ""routine"" in contexts of advice or structured activities."
+71062,Singular nouns denoting specific physical locations or activities.
+71075,"The token ""mind"" in contexts about keeping it active, distracted, or engaged."
+71118,Tokens related to ingestion or high blood sugar in medical or dietary contexts.
+71139,"Adverbs or adjectives specifying extent, association, or frequency in contexts of health, stress, or personal conditions."
+71279,"Prepositions ""of"" or ""way"" in contexts discussing roles or methods."
+71301,"The word ""rarely"" describing uncommon occurrences or outcomes in a factual or technical context."
+71311,Words indicating duration or extent of time.
+71339,"Words related to health conditions, stability, or underlying issues."
+71446,"Tokens conveying apprehension or unease, often in the context of medical or personal decisions."
+71487,"Tokens indicating medical conditions, procedures, or security-related terminology."
+71578,"The token ""need"" in contexts implying necessity or assistance."
+71628,"The token ""it"" in contexts expressing concern or worry about a potential medical condition or issue."
+71696,"Words related to mobility aids, specifically chairs and wheelchairs."
+71732,"Prepositions ""of"" and ""should"" in contexts of uncertainty, safety, or decision-making."
+71760,"Tokens implying combination, mixing, or association, often with substances, actions, or personal attributes."
+71825,Tokens indicating personal involvement or reflection in advice-seeking or health-related contexts.
+71860,Tokens related to physical bites or biting actions in various contexts.
+71915,"Temporal or duration-related terms, often indicating time spans or expiration periods."
+71958,Singular verbs or pronouns used in medical or nutritional contexts.
+72143,"Singular noun ""info"" referring to contact or personal details."
+72343,"Tokens tied to medical context, often involving a diagnosis or course of action."
+72502,"Prepositions or phrases conveying comparison or emphasis, often in health-related or advisory contexts."
+72524,"The verb ""make"" in contexts discussing lifestyle changes or adaptations."
+72566,Common words indicating objects or actions in practical advice contexts.
+72633,Medical imaging terms and visual phenomena like halos around lights.
+72641,"Infinitive marker ""to"" in guidance or reassurance contexts, and adverbs denoting ease or simplicity."
+72670,"Abstract nouns denoting an action, inquiry, or guarantee."
+72780,"Abstract nouns tied to cognitive, safety, or efficiency contexts often following prepositions or serving as key concepts."
+72787,"Comparative expressions using ""than"" and actions involving ""rinsing"" with water."
+72802,"Words describing measurable quantities or concentrations, particularly ""levels"" and ""tests"" in medical or scientific contexts."
+72831,"Tokens related to simple solutions or remedies, often in the context of improvement or problem resolution."
+72860,"Health-related actions or concepts, particularly treatments, consultations, drinking, and appreciation in medical or wellness contexts."
+72890,Verbs describing the body's action against infections or side effects.
+72919,"Tokens ""by"" or ""a"" when introducing roles, methods, or actions in a health-related context."
+73018,"Adjectives or adverbs suggesting manner, suitability, or order in practical or decision-making contexts."
+73139,"The possessive pronoun ""my"" in contexts related to personal health or emotional states."
+73153,"Contextual nouns like ""environment"" or ""situation"" indicating conditions or setups for action or decision-making."
+73270,Medical terminology and verbs emphasizing action or exclusivity in a health-related context.
+73283,"Verbs related to physical actions or processes of cleaning, improving, or treating."
+73478,Prepositions linking entities or actions in context of communication or healthcare situations.
+73526,"Tokens related to medical terms or professional contexts, often within specialized or technical language."
+73592,"Words indicating secure or stable placement, often describing physical firmness or tightness."
+73707,"Medical or technical equipment components or terms, often related to inhalation or respiratory devices."
+73739,"Words expressing emotional concern or worry, often in health or precautionary contexts."
+73859,Verbs in progressive or infinitive forms indicating actions or decisions.
+73979,Medical terms related to absorption or inefficiency in physiological processes.
+73996,"Tokens describing physical movement or changes in motion, often related to health or discomfort contexts."
+74047,"Tokens tied to qualitative judgment or focus, like ""the"" and ""preserving,"" in evaluative or health-related contexts."
+74121,"The token ""pee"" in informal contexts related to bodily functions."
+74272,"Adverbs or adjectives emphasizing caution, urgency, or specific timing."
+74365,"Words relating to filtration, transmission, or unexpected occurrences in health or environmental contexts."
+74455,"The token ""back"" when referring to a body position or orientation."
+74460,"The token ""comfort"" in contexts discussing care, quality of life, or prioritizing non-medical interventions."
+74562,"Terms related to alarms or interference, often in contexts of stress, false signals, or thresholds."
+74679,"The token ""want"" in first-person statements expressing intent or desire for assurance or thoroughness."
+74816,Words indicating skill acquisition or prevalence within a group context.
+74923,"Conjunctions or comparisons indicating choice, similarity, or guidelines in decision-making contexts."
+74950,"The pronoun ""it"" when referring to an action or concept previously mentioned."
+75120,Tokens describing physical or mental conditions requiring attention or solutions.
+75158,"Spatial or positional words indicating proximity or placement like ""room"" and ""away""."
+75162,"Transitional adverbs or prepositions indicating conditionality, causality, or spatial/temporal relationships."
+75233,"The token ""et"" in contexts suggesting chemical or biological terminology."
+75242,"Tokens related to health and physical care contexts like aid kits, injuries, hydration, and flexibility."
+75249,"Tokens related to medical terms or implications of actions, particularly vaccination, overuse, or meaning."
+75370,Medical context tokens related to feeding tubes or feeding processes.
+75466,Possessive pronouns indicating ownership or association.
+75484,Tokens related to the onset or persistence of physical pain or discomfort.
+75573,"Singular nouns related to skills or traits, often in contexts of improvement or enhancement."
+75609,"Words ending in ""ies"" or related to specific foods (e.g., ""soup,"" ""smoothies"") and vaccines."
+75617,Auxiliary verbs or negations indicating possibility or action.
+75673,Singular nouns referring to objects used for a specific purpose or function.
+75700,Tokens related to dental implants or their materials.
+75925,Symptoms related to shortness of breath or headaches in a medical or health-related context.
+76050,"The modal verb ""could"" introducing speculative or conditional statements."
+76061,"Tokens related to health, nutrition, or immunization terminology."
+76070,"Tokens related to health, diet, or chemicals in advisory contexts."
+76085,"Words related to medical dosages or intensities, often in health or treatment contexts."
+76098,Specific tokens in procedural or instructional contexts indicating items or actions.
+76154,"Modal verbs like ""should"" and ""requires"" indicating obligation or necessity in suggestions or descriptions."
+76203,"Nouns related to physical states or objects in health, movement, or personal concerns."
+76204,"Adverbs ""frequently"" or ""often"" describing increased or decreased frequency of actions or symptoms."
+76287,"The token ""other"" in contexts suggesting alternatives or additional options."
+76358,"The token ""Observ"" in the context of monitoring physical or health-related conditions."
+76409,"Tokens implying physiological responses or environmental conditions, like shivering or altitude."
+76414,"Activates on ""lack"" in contexts describing absence or deficiency."
+76509,"The token ""soon"" indicating imminent action or time."
+76568,"Tokens expressing uncertainty, questioning, or speculation about health or personal experiences."
+76579,Tokens indicating suggestions or actions proposed by an unspecified individual or directive statements.
+76582,Singular nouns related to personal belongings or measurable quantities in practical contexts.
+76609,"Specialized nouns or adverbs indicating a distinct state or condition, often technical or situational."
+76688,"Verbs suggesting movement or action, especially in contexts implying choice or determination."
+76761,"The token ""also"" introducing additional advice or recommendations in explanatory or advisory contexts."
+76763,"The token ""Stage"" when referring to cancer classification."
+76766,Tokens related to acclimating or adjusting the body or mind to new conditions or environments.
+76893,"The token ""long"" in the phrase ""as long as""."
+76976,"Words related to health, wellness, or tools for physical aid and relief."
+77079,"Pronouns or participles in personal, situational, or emotional contexts."
+77255,"Units of measurement, specifically ""cm"" in contexts describing physical dimensions or scientific values."
+77385,"Tokens indicating importance or irrelevance in decision-making contexts, like ""matter"" or ""harmless""."
+77396,"Pronouns or possessive adjectives referring to personal items, body parts, or their possible changes or damage."
+77524,"Specific nouns associated with physical objects or substances, often in casual or descriptive contexts."
+77645,"Verbs or gerunds describing specific actions or processes involving change, adjustment, or intervention."
+77690,"Tokens indicating evaluation or comparison of quality, suitability, or conditions, often in health or lifestyle contexts."
+77708,"The token ""do"" in contexts discussing actions or methods."
+77827,"Functional words in phrases indicating action, possession, or comparison."
+78031,"Mathematical or scientific terminology, specifically referencing a formula."
+78077,Verbs indicating gradual or incremental increase in intensity or duration.
+78355,"Possessive 's or the word ""instructions"" in a context of following guidance or recommendations."
+78391,"Modal verbs indicating prediction, causation, or reasoning in medical or health-related contexts."
+78478,"Tokens describing sensory or emotional states, often with a subjective or uncertain quality."
+78481,Words related to occupational therapy or ergonomic adjustments.
+78541,"Words linked to medical, safety, or event contexts suggesting action or detection, e.g., ""ultrasound,"" ""measures,"" ""outing."""
+78588,"Words describing physical sensations, especially burning or visual phenomena like halos."
+78635,"The token ""stove"" in contexts describing proximity or convenience in a kitchen setting."
+78641,"Tokens questioning legitimacy or normalcy, especially the word ""just"" in speculative or doubtful contexts."
+78656,"Tokens ""risk"" or ""risks"" in contexts emphasizing low or minimal danger or absence of negative consequences."
+78711,Words related to health or personal care concerns often involving family or physical conditions.
+78724,"The pronoun ""it"" in speculative or uncertain contexts."
+78726,"The token ""to"" in contexts emphasizing actions or procedures."
+78744,Verbs implying strict compliance with rules or guidelines.
+78816,Possessive pronouns preceding actions related to personal adjustment or adaptation.
+79067,"The token ""ies"" in the context of the word ""rabies""."
+79280,"The token ""nerve"" in medical contexts, particularly related to the optic nerve and vision."
+79325,"Terms related to specific diets or dietary changes, particularly ""keto"" and ""vegan""."
+79561,"Words describing physical states, changes, or conditions often related to stability or fluctuations."
+79594,"The token ""ens"" in ""allergens,"" often related to avoidance or exposure contexts."
+79670,Tokens referring to physical locations on the body or objects being interacted with.
+79749,"Tokens related to travel contexts, including transportation and planning."
+79867,"Verbs expressing potential or future actions following ""to"" in a sentence."
+79952,"Words denoting safety, risk, or reversibility in contexts related to health, procedures, or hazards."
+80119,"Tokens related to health symptom management or changes, often indicating an action or state."
+80217,"Pronouns ""I"" or ""you"" in contexts of personal concern or advice."
+80367,"Coordinating conjunction ""and"" or interrogative phrases starting with ""do I""."
+80520,"The conjunction ""but"" in sentences contrasting two actions or qualities."
+80525,"Tokens ""to"" and ""for"" in questions involving actions or decisions."
+80587,Tokens referring to practical actions or substances in specific health-related or physical contexts.
+80917,"Temporal adverbs or phrases indicating duration or frequency, often in health or action-related contexts."
+81081,"Verbs or adjectives related to effects, simplification, or efficiency in contexts of health or processes."
+81157,Tokens related to cholesterol in medical or health contexts.
+81301,Positive or reassuring adjectives or adverbs in contexts suggesting well-being or successful outcomes.
+81311,"The token ""SA"" in a medical context, likely referring to methicillin-resistant Staphylococcus aureus (MRSA)."
+81314,"Terms emphasizing care or optimization, like ""gentle"" or ""best practices,"" in instructional or advisory contexts."
+81376,"Medical terms or contexts involving personal health, procedures, or treatment."
+81700,"Tokens describing minor medical actions or needs, often in the context of health or hygiene."
+81748,"The token ""discuss"" in contexts of medical advice or healthcare-related consultations."
+81793,"Pronouns ""he"" or ""they"" in contexts describing physical conditions or developmental states."
+82096,Nouns related to familial relationships or ancestry.
+82233,"The term ""ketogenic"" in contexts discussing its effects or benefits in diet-related scenarios."
+82338,"The token ""rely"" in contexts suggesting dependence on a specific alternative or approach."
+82539,"Tokens emphasizing importance, necessity, or criticality in advice or guidelines."
+82635,"Words related to medical significance, especially ""acid"" and ""matter"" in health or chemical contexts."
+82663,First-person pronouns indicating self-reference in decisions or personal actions.
+82725,"Words related to personal hygiene routines, especially ""brushing"" and maintaining physical comfort."
+82777,"Common prepositions introducing actions or relationships, like ""to"" and ""with""."
+83006,"The token ""hypertension"" in medical or health-related contexts."
+83016,Singular nouns describing objects or concepts central to the sentence's focus.
+83033,"Tokens indicating actions or decisions to change, bypass, or avoid something."
+83089,"Tokens ""fluct"" or ""fall"" describing changes or variations, often in health-related or physical contexts."
+83255,"The pronoun ""her"" when referring to a person's skin condition."
+83363,Body parts in medical or health-related contexts.
+83367,"Words ending in ""ish"" describing a yellow tint or hue."
+83490,"The token ""CG"" within technical or structured text contexts."
+83552,"Function words ""the"", ""with"", ""you"" in explanatory or advisory contexts."
+83596,"The token ""enzyme"" in medical or biological contexts."
+83685,"The verb ""wait"" in contexts of decision-making or uncertainty."
+83715,"The token ""of"" in contexts describing physical states or activities."
+83775,Words related to bottles or actions indicating intent or necessity.
+83850,"Verbs or adjectives related to action, change, or process."
+83917,Non-informative example tokens with unclear activation patterns.
+84004,"Words related to impactful or noteworthy personal experiences, often emphasizing their significance or emotional resonance."
+84131,Tokens related to health practices or physical recovery actions.
+84155,"The token ""eye"" in idiomatic phrases related to monitoring or vigilance."
+84167,"The word ""avoided"" when suggesting actions or items to be refrained from in advisory or cautionary contexts."
+84641,"Verbs indicating change or movement, often involving transitions or adjustments."
+84921,Verbs or nouns indicating adjustment or modification in context of health or physical processes.
+84939,"Words ending in ""ness,"" ""y,"" or related to over-intensity or exaggeration."
+85130,"The token ""seeking"" in contexts related to medical advice or intervention."
+85135,"Words expressing concern or uncertainty, particularly in health-related or diagnostic contexts."
+85348,"Tokens indicating certainty or prior occurrence, especially ""already"" and ""expect""."
+85428,"Verbs indicating personal experience or change, often in health or emotional contexts."
+85454,"Medical terminology or devices, especially ""nebulizer"" and related to treatment or management contexts."
+85554,"Words related to physical symptoms, particularly fever, aches, and irregularities in health conditions."
+85588,Adjectives describing times of day or states of adjustment in practical or health-related contexts.
+85661,"Suffixes in medical or scientific terminology, often indicating conditions or processes."
+85684,"Positive evaluative adjectives indicating sufficiency, correctness, or improvement."
+85707,"Tokens describing abstract qualities or actions related to reflection, descriptions, or specific involvement."
+85786,"The word ""present"" in contexts describing medical or health symptoms or conditions."
+86278,"Tokens related to medical terminology or guidelines, often involving tools, substances, or preventative measures."
+86286,"Words related to maintaining or avoiding behaviors, often in health or lifestyle contexts."
+86357,"Tokens indicating a process, action, or condition occurring repeatedly or progressively over time."
+86369,"Verbs expressing cognitive processes like ""think,"" ""wonder,"" or ""wondered"" in reflective or questioning contexts."
+86420,"Tokens relating to physical or psychological resilience, persistence, or recovery."
+86637,"Tokens related to ""nutrition"" or its variations in health or dietary contexts."
+86701,"Tokens related to health, safety, or life quality often emphasizing duration, inevitability, or exclusion."
+86811,"Terms related to physical alignment or spatial positioning, often in technical or anatomical contexts."
+86846,"The adverb ""truly"" in contexts questioning or affirming necessity, safety, or effectiveness."
+86857,Rarely used adverbs or conjunctions conveying continuity or persistence in a narrative.
+86872,"Tokens ""avoiding"" and ""limiting"" in contexts advising lifestyle or dietary changes."
+86982,"Tokens related to allergy medications, specifically ""epinephrine"" and ""diphenhydramine""."
+87141,"Words describing physical conditions or garments, often indicating specific attributes or modifications."
+87251,"The token ""prioritize"" or its variations in contexts of healthcare or decision-making."
+87466,"Tokens ""your"" and ""leftover"" in contexts discussing personal health or medication use."
+87561,"The tokens ""we"" and ""lot"" in conversational or inquiry contexts."
+87597,"Tokens related to medical issues or recovery, specifically ""healing"" and ""issues""."
+87642,"Medical-related terms suggesting states, processes, or actions, often linked to health or bodily conditions."
+87793,"Comma or ""and"" linking concerns about health or personal care routines."
+87819,"The token ""dry"" in contexts related to nasal discomfort or dryness."
+87863,"Tokens marking the end of a sentence, often periods or their immediate context."
+87951,"Words describing fussiness, often associated with babies or caregiving contexts."
+87996,"The token ""regarding"" in contexts of caution or considerations about health-related matters."
+88013,Words referencing body parts or objects being acted upon or affected in a medical or physical context.
+88036,"Words indicating a duration, uncertainty, or conditionality in context."
+88037,"Common short function words indicating quantity, condition, or action."
+88118,"The token ""reach"" in contexts referring to achieving a physical or metaphorical destination or state."
+88126,"The token ""liver"" in contexts discussing health impacts or risks."
+88205,"The conditional word ""if"" following advice or instructions about medical or health-related actions."
+88235,"Verbs or gerunds indicating action or intent related to adjustment, satisfaction, or confirmation."
+88403,Prepositions or modifiers introducing conditions or readiness in a context of actions or feelings.
+88461,"Words expressing avoidance, prevention, or similarity in a context of personal experiences or advice."
+88683,"Words related to ""fluctuations"" or its root form in the context of variability or change."
+88767,"The token ""manage"" or ""managing"" in contexts discussing strategies or techniques for health and stress management."
+88770,"Words describing discomfort, movement, or positioning in a physical or emotional context."
+88786,Words related to tick-borne illnesses or food particles getting stuck.
+88872,"The tokens ""a"" or ""The"" in contexts describing physical sensations, symptoms, or health-related experiences."
+88906,"Quantitative terms like ""average,"" ""rates,"" or ""tips"" related to measurements or advice."
+88998,"Tokens ""O"" or ""Hol"" in context of health-related discussions or therapeutic approaches."
+89000,"Tokens ""match"" and ""compare"" in contexts evaluating similarity or alignment."
+89326,"Verbs describing physical actions or states, often related to health or bodily functions."
+89341,"The phrase ""taper off"" in contexts involving medication or gradual reduction."
+89414,"Words related to medical or therapeutic assistance like ""aid,"" ""aids,"" or ""topical."""
+89511,Pronouns referring to objects or concepts mentioned earlier in the context.
+89565,"Conditional words like ""if"" and verbs related to eating or sitting in health-related or precautionary contexts."
+89632,"The phrase ""balanced diet"" and the concept of ""well-rounded"" nutrition or habits."
+89687,"Tokens indicating relational or comparative contexts like ""an,"" ""to,"" ""of,"" and low-impact activities."
+89777,"Tokens emphasizing comparison, progression, or distinctiveness in context (e.g., ""as"", ""progress"", ""proof"")."
+89862,"Words related to routine, constancy, or physical anatomy."
+89874,Quantifiers or ordinal numbers indicating rank or amount.
+89924,Contractions or pronouns introducing negation or explanation contexts.
+89929,"The token ""the"" in the phrase ""regardless of the"" or the word ""yourself"" in contexts involving burns."
+89997,"Medical equipment or symptoms-related terms like ""pump,"" ""alarm,"" and ""whooping,"" often in health contexts."
+90007,Singular pronouns and descriptors in health or dietary contexts.
+90054,"The token ""mic"" in medical or scientific contexts, often following ""hypother""."
+90087,"Prepositions and adverbs indicating proximity, frequency, or conditions in practical or situational contexts."
+90190,Medical or mechanical terms for suction or related processes.
+90219,"The token ""homemade"" or variations indicating something made at home."
+90305,Words referring to addressing or resolving a problem directly or effectively.
+90340,"The token ""interfere"" in contexts discussing potential effects on functions or interactions with medications or devices."
+90378,Tokens referring to physical activity or mobility-related actions in instructional or precautionary contexts.
+90382,Words related to sleep or movement patterns in health and lifestyle contexts.
+90439,Verbs describing experiences or occurrences in the present perfect tense.
+90506,"The token ""me"" in phrases expressing personal worry or emotional distress."
+90532,"Words suggesting frequency, degree, or perception, often in subjective or situational contexts."
+90534,Negations or cautions in medical or health-related contexts.
+90546,"Verb tokens ""do"" or ""doing"" related to actions being advised, avoided, or ensured."
+90607,"Tokens related to anxiety or its symptoms, especially in medical or personal contexts."
+90675,Modifier words enhancing specificity or detail in medical or health-related contexts.
+90701,"Specific medical terms or actions like ""pulse oximeter,"" ""pinpoint,"" or ""factor"" related to diagnosis or measurement."
+90752,"Health-related terms indicating conditions, improvements, or actions to follow medical advice."
+90850,"Words indicating advice, methods, or strategies such as ""method,"" ""way,"" ""tips,"" and ""screen."""
+91023,Singular adjectives or quantifiers emphasizing size or amount in a positive or motivational context.
+91151,"Prepositions in phrases indicating position, timing, or degree."
+91253,"Tokens referring to connections or relationships, particularly ""link,"" ""linked,"" and ""between."""
+91328,"Words related to self-reliance or autonomy, like ""independence"" and ""independent""."
+91431,Tokens related to physical or emotional discomfort.
+91559,"The token ""simpl"" in the context of simplifying processes or explanations."
+91603,"Tokens reflecting anticipation or significance in context, like ""life"" or ""expect."""
+91613,"Tokens describing negative experiences or challenges, often physical discomfort or difficulty."
+91640,"Verbs indicating action or change, often related to precautions or consequences."
+91700,Verbs indicating action or application in practical or instructional contexts.
+91711,Abstract nouns related to problems or solutions in health or wellness contexts.
+91755,"The token ""changes"" when describing alterations in health, bodily systems, or prescribed treatments."
+91774,"Technical or advisory terms related to guidelines, accuracy, or capacity in instructional or evaluative contexts."
+91779,Physical actions involving body movement or interaction with objects.
+91841,Adjectives describing unintended or negative outcomes or states.
+91979,"Tokens indicating measurement, quantity, or components within a technical or instructional context."
+92236,"The token ""ella"" in the context of natural remedies or plant-based products."
+92276,Common function words in contexts related to medical advice or personal health scenarios.
+92423,Words related to how something influences or changes a condition or situation.
+92505,"Words emphasizing physical states, possessions, or importance in guidance or advice contexts."
+92567,"The preposition ""with"" in instructions or actions involving tools or methods."
+92791,"The token ""out"" in contexts implying disorientation or physical imbalance."
+92901,"Functional or connective words that indicate relation or action, such as ""to,"" ""the,"" or ""ers."""
+92941,"The word ""resume"" in contexts about returning to normal or regular activities after a pause."
+93192,Verbs related to positive health outcomes or improvement.
+93270,"Tokens ""then"" and ""such"" in contexts emphasizing retrospective or comparative reasoning."
+93293,Plural nouns referring to interchangeable or duplicate items.
+93305,Tokens representing medical or biological terms in contexts of health or growth.
+93358,"The pronoun ""it"" used in contexts referring to actions or processes."
+93375,Adverbs emphasizing ideal or primary conditions or actions.
+93486,"The word ""too"" in the phrase ""don't worry too much"" expressing reassurance or minimization of concern."
+93522,"The token ""returning"" in contexts discussing low likelihood or expectation of an event."
+93539,"Activates on ""Given"" introducing medical conditions, diagnoses, or health-related genetic factors."
+93545,"The token ""nis"" within the word ""prednisone"" referring to a corticosteroid medication."
+93582,"The suffix ""ued"" in variations of the word ""fatigued""."
+93587,"Words related to physical challenges, motion, or overcoming obstacles."
+93589,"Terms related to orthodontic devices like ""retainer"" and anatomical references like ""jaw."""
+93703,"Words describing physical states, objects, or actions related to injury, care, or positioning."
+93797,"Conditional statements using ""unless"" to indicate exceptions or specific circumstances."
+93982,"Words ending in ""ist,"" often denoting professions or specializations."
+94049,"Words related to tracking, recording, or measurement activities."
+94109,Words conveying addition or accumulation in contexts of emotional or mental stress.
+94141,"Words related to physical care or application techniques, often involving distribution or soothing."
+94195,"The token ""year"" in contexts referring to age, time duration, or conditions categorized by years."
+94359,Auxiliary verbs in past or conditional contexts indicating an action or state.
+94605,"The token ""BS"" in a context involving advice or prioritization."
+94728,Tokens representing urgency or exaggerated responses in context.
+94839,"Singular pronouns in contexts discussing health, safety, or personal conditions."
+94898,"Medical terms related to conditions or injuries like ""cuts,"" ""hernia,"" or ""diverticulitis."""
+94920,"Medical terms or drug names, often related to specific conditions or treatments."
+94991,Singular nouns referring to objects often used for storage or containment.
+95076,"Tokens related to management or controlled processes, often involving care or decision-making contexts."
+95113,"Adverbs indicating suddenness, urgency, or moderation in actions or decisions."
+95196,Time-related or event-related nouns indicating duration or celebration.
+95219,Tokens related to food preparation or cooking contexts.
+95230,"Technical or formal terms indicating a concept or action, often introducing or explaining specific procedures or phenomena."
+95404,"Descriptions of physical spaces, particularly involving the word ""room""."
+95614,"Tokens relating to physical health incidents, especially falls, faintness, or irregularities."
+95660,"The token ""than"" in comparative contexts, often contrasting quantities or qualities."
+95704,Tokens related to tropical locations or fruits.
+95707,Medical or procedural terms directly related to chemotherapy or its immediate effects.
+95854,"Common auxiliary verbs or function words indicating negation, possibility, or existence."
+95884,"The indefinite article ""a"" preceding a noun in contexts describing a specific need or solution."
+95957,"Verbs indicating observation or perception, especially ""see,"" in contexts of anticipation or waiting."
+95994,"Words linked to narrative accounts or descriptions, often involving personal experiences or symptoms."
+96064,"Tokens indicating intention or action, often verbs or pronouns in directive or question contexts."
+96066,"Words related to ""side effects"" in medical or therapeutic contexts."
+96165,"First-person pronouns in uncertain or anxious contexts often paired with ""or"" or ""but""."
+96454,"Words suggesting suitability, adjustment, or prioritization in decision-making contexts."
+96459,"Tokens describing desired outcomes or methods related to health, diets, or improvement strategies."
+96513,Singular nouns or pronouns referring to individuals or objects in practical or situational contexts.
+96558,"Pronouns referring to people or groups in contexts of care, positioning, or assigning actions."
+96568,Tokens expressing necessity or suitability in a specific context.
+96603,"The ""z"" within the word ""eczema,"" specifically in contexts discussing its management or symptoms."
+96822,"Verbs implying action or restriction in contexts of health, recovery, or religious practices."
+96892,"Words related to exertion or emotional states, especially ""push,"" ""feel,"" and ""pain."""
+96921,"The preposition ""for"" indicating a duration or time span."
+96970,"Medical terms related to respiratory health, especially ""inhaler"" and associated usage or effectiveness."
+97013,"Terms related to personal health, living spaces, or policy contexts."
+97184,"Technical or medical terms, especially related to dialysis or precise measurement processes."
+97305,"The token ""under"" describing control or stress in health-related contexts."
+97326,"Words indicating inclusion, discovery, or perception in contexts of health, diet, or sensory experiences."
+97550,Adjective describing a physical quality that implies thickness or density.
+97870,Tokens indicating a specific object or action within a medical or health-related context.
+97923,"The token ""promise"" in contexts suggesting potential or positive outcomes."
+97939,"The possessive ""'s"" following a proper noun or noun phrase."
+97977,Tokens emphasizing significance or relevance in health-related contexts.
+98016,"The token ""the"" within the idiomatic phrase ""time is of the essence""."
+98052,"Verbs indicating deliberate action, such as ""taken,"" ""focuses,"" ""hesitate,"" and ""focusing."""
+98053,"Tokens ""with"" and ""hypertension"" in contexts discussing choices or health-related decisions."
+98158,"Tokens in phrases expressing ongoing actions, adjustments, or being caught in a process."
+98271,Abstract or conceptual nouns in contexts implying causation or attribution.
+98299,"Adverbs or adjectives emphasizing speed, tightness, or importance in instructional or advisory contexts."
+98343,"Tokens describing physical orientation, environmental factors, or relational terms like ""-law""."
+98367,"The token ""necessary"" in conditional or advisory contexts involving health or safety actions."
+98394,"Negatively connoted adjectives or adverbs indicating absence, insufficiency, or undesirability."
+98401,"Suffixes ""-ing"" in verbs describing actions or routines related to care or maintenance."
+98420,Verbs indicating purposeful action or decision-making in specific contexts.
+98455,"The auxiliary verb ""have"" in contexts expressing obligation, action, or responsibility."
+98490,"Tokens denoting physical or measurable aspects related to health, comfort, or practical objects."
+98533,Words related to thermometers or measurement devices in contexts of health and temperature accuracy.
+98554,"Tokens ""found,"" ""cut,"" ""caused,"" and ""adding"" in contexts of discovery, elimination, causation, or contribution."
+98572,"Prepositions ""to"" or ""of"" in contexts describing adjustments or symptoms related to healthcare or medical conditions."
+98650,Health-related terms indicating medical treatments or bodily functions.
+98701,"Tokens related to tools, utensils, or objects used for specific tasks or processes."
+98872,"Physical objects or environmental factors related to containment, protection, or exposure."
+98977,"Words related to health and medical check-ups, including ""check-up,"" ""cholesterol,"" and ""misconception."""
+99000,Medical terms or descriptors related to psoriasis or severe conditions.
+99099,"Words related to alterations or adjustments, such as ""changes,"" ""shifts,"" ""adjust,"" and ""fits."""
+99140,"The token ""temperature"" in contexts discussing environmental or storage conditions."
+99177,"Nouns related to tasks, problems, or tools in a context of advice or assistance."
+99340,Action-oriented verbs indicating initiation or causation in health-related or advisory contexts.
+99463,Singular nouns emphasizing importance or key aspects in general explanations or contexts.
+99762,Periods following sentences about health or equipment concerns.
+99791,Tokens indicating possession or relation within medical or physical contexts.
+99877,"Words associated with physical discomfort or minor remedies like ""pain,"" ""dab,"" ""bothers,"" and ""sympt."""
+99900,"Medical terms or numeric values related to health, dosage, or physiological targets."
+99945,"Time-related terms like ""months"" or ""minutes"" in contexts suggesting duration or frequency."
+100145,"Tokens related to personal consumption or ingestion, particularly ""intake"" and similar contexts."
+100197,"Medical terms or conditions related to body parts or ailments, especially ""mac"", ""hand"", and ""stone""."
+100470,Words describing rarity or infrequent occurrences in a medical or general context.
+100479,"Tokens related to medical terms or symptoms, especially ""indicate"" and ""oba"" in supplement or diagnostic contexts."
+100490,"Tokens marking transitions or contrasts in advice or suggestions, like ""also"" or ""instead""."
+100515,"Words related to moisture, physical conditions, or actions involving care and cleaning."
+100590,"Nouns related to structured tasks, routines, or designated physical areas."
+100604,Verbs describing physical posture or deliberative decision-making actions.
+100765,"Tokens suggesting evidence or inference, particularly verbs like ""indicate"" and nouns like ""planning""."
+100793,"Tokens related to health, aging, or condition-specific terms often involving menopause or medical situations."
+100840,"Prepositions indicating motion or change, often tied to physical actions or transitions."
+100928,"Verbs or nouns related to actions, processes, or items in medical or health care contexts."
+100969,"Comma tokens in casual, preparatory, or instructional contexts."
+101043,"Tokens indicating specific actions, objects, or intensities in instructional or advisory contexts."
+101174,Punctuation marks concluding sentences expressing empathy or acknowledgment (period or exclamation point).
+101244,"Words related to constipation or its alleviation, often in medical or health-related contexts."
+101288,Tokens related to calcium and health-focused food recommendations.
+101305,Words related to physical strength or objects with structural robustness.
+101346,Tokens related to liquid diets or long-term solutions in health contexts.
+101353,Adjectives indicating sufficiency or insufficiency in describing a condition or requirement.
+101405,"The token ""day"" in contexts referencing time periods or daily activities."
+101497,Words tied to specific locations or expiration contexts in medical or procedural settings.
+101537,Tokens denoting a specific state or category related to health or medicine.
+101734,"Words related to health or maintenance products like ""repellent,"" ""seizure,"" or ""epilepsy."""
+101745,"Singular abstract nouns following ""with"" indicating scope or measurement."
+101832,"Tokens associated with medication, treatment, or health-related substances."
+102018,"Adjectives or nouns describing states or conditions related to health, diet, or physical properties."
+102202,"The possessive pronoun ""its"" following ""armpit"" in instructional or descriptive contexts."
+102279,"The token ""exercises"" in contexts suggesting improvement or rehabilitation activities."
+102377,Singular nouns referring to categories or classifications in a medical or scientific context.
+102379,Words conveying emotional vulnerability or challenges in personal or health-related contexts.
+102487,"Phrases involving ""shortness of breath"" or specific daily routines like ""daily medications""."
+102594,Abstract nouns related to health practices or physical alignment.
+102698,Tokens linked to actions or states implying completion or supplementation in a temporal or situational context.
+102759,"Prepositions indicating methods or causality like ""by,"" ""to,"" ""with,"" in contexts of managing or mitigating actions."
+102815,Tokens indicating symptoms or medical conditions in a descriptive or diagnostic context.
+102888,"Tokens describing sensory experiences or abstract concepts, often related to physical or emotional states."
+102891,"Tokens in medical terms, especially parts of compound words like ""ph"" in ""epinephrine""."
+102901,"Tokens ""own"" and ""approach"" in contexts discussing self-resolution or optimal strategies."
+102912,"Tokens describing actions or processes involving observation, engagement, or unusual occurrences."
+102946,"Tokens related to medical treatments, vaccination, or health options within health-related contexts."
+103006,"The token ""manip"" in contexts related to chiropractic or physical manipulations."
+103104,Tokens related to medical terminology or physical objects impacting health or environment.
+103135,"First-person statements expressing uncertainty or doubt using ""be"" or ""me"" in a question."
+103272,"Words related to immunity or immune system, including variations like ""immunocompromised""."
+103294,"The token ""handle"" or ""handling"" in contexts of advice or instructions for managing situations or objects."
+103348,"Words emphasizing exclusivity or singularity, such as ""only,"" ""single,"" and ""else."""
+103485,"Function words like ""the,"" ""in,"" and ""its,"" typically signaling grammatical structure or possession."
+103586,Words indicating influence or effect on health-related outcomes.
+103722,"The token ""slightly"" in contexts describing mild physical or emotional states or conditions."
+103778,"Prepositions ""about"" and ""of"" in contexts discussing small amounts or proper actions."
+103780,"Words expressing preference or quantity without restriction, like ""like"" and ""ness""."
+103920,"Words related to human anatomy, especially ""eye"" and occasionally ""face""."
+104264,"The token ""quitting"" in contexts discussing smoking cessation."
+104274,"Common prepositions used in idiomatic or supportive contexts like ""on the way"" or ""in many cases""."
+104327,"The token ""spread"" when describing the expansion or worsening of a condition."
+104620,Anatomical terms related to body positioning or alignment.
+104692,"Context-specific verbs and nouns related to relaxation, maintenance, or physical concerns."
+104782,"Tokens conveying temporary or maximum limits in contexts of duration, dosage, or relief."
+104842,"The token ""it"" used in contexts implying caution or uncertainty about an action or condition."
+105042,"Tokens ""one"" or ""hormone"" in contexts discussing therapy or medical treatments."
+105178,"Tokens ""ital"" and ""alan"" within scientific or biochemical contexts."
+105261,"Words associated with anatomical parts like ""ear"" and ""shoulder"" or medical terms like ""transplant""."
+105310,"Words related to health, conditions, or actions involving progression or change."
+105484,"The token ""mp"" in ""armpits,"" typically describing positioning or use of objects under the arms."
+105598,"Tokens indicating comparison, challenge, or transformation often tied to verbs or adjectives."
+105609,"Tokens describing minor discomforts, adverse effects, or challenges in physical or mental health contexts."
+105638,"Terms related to medical devices or physical blockages in the body, like ""pouch"" or ""obstruction""."
+105748,"Pronoun ""it"" referring back to a previously mentioned subject in explanatory or instructional contexts."
+105763,"The token ""worrying"" in contexts of reassurance or alleviating concerns."
+105888,Prepositions indicating directional change or movement.
+105904,Nouns describing objects associated with care or comfort.
+105959,"Words indicating position or readiness, especially ""place"" and occasionally associated with objects or actions."
+105999,Verbs indicating actions related to health or physical care routines.
+106033,"Words describing auditory sensations, especially ""muffled,"" often in the context of hearing issues or concerns."
+106138,"Tokens ""it"" and ""used"" when referring to utility or application of objects or actions."
+106232,"The preposition ""of"" following references to components or parts of a larger whole."
+106568,"The token ""ute"" in the word ""lutein,"" often mentioned alongside antioxidants or nutrients like zeaxanthin."
+107054,"Verbs indicating physical descent or reduction, especially ""fall"" and ""minimize""."
+107322,"The token ""ausal"" in the context of menopausal symptoms or treatments."
+107437,"The token ""to"" following ""without needing"" in contexts of avoiding specific actions or consultations."
+107504,"The word ""accidentally"" in contexts describing unintended harmful actions or events."
+107513,"Verbs or prepositions indicating movement, transition, or engagement in an activity."
+107538,Terms related to vision or eye health in medical or advisory contexts.
+107638,"The token ""brackets"" in contexts involving physical or structural descriptions."
+107675,"Tokens referring to physical aids, exercises, or food items related to health and mobility."
+107725,"The word ""to"" in contexts suggesting movement or purpose."
+107927,"Medical terms or concepts related to breathing, arthritis, or dental implants."
+108155,"Words indicating movement or direction, particularly relating to air or fluid dynamics."
+108163,"Medical-related terms, often involving tools or treatments like cane, tar, injections, and aphylaxis."
+108171,"Words related to reducing or limiting actions, risks, or quantities."
+108512,"Words describing continuation or persistence over time, often in medical or recovery contexts."
+108662,Tokens related to cardiovascular health or heart disease.
+108684,"The word ""to"" when indicating purpose or direction in a medical or caregiving context."
+108766,"Tokens related to hypoallergenic or hypothermia contexts, often including ""hypo"" or ""hypothermia""."
+108808,"Medical equipment or supplies related to hygiene, wounds, or assisted feeding."
+108958,"The token ""on"" following verbs like ""focus"" or ""impact"" in contexts of health or lifestyle advice."
+109303,"The abbreviation ""BS"" in medical contexts, often related to health conditions or treatments."
+109395,"Words related to physical reactions or symptoms, often involving skin or insect bites."
+109502,"Abstract or subjective concepts related to adequacy, sufficiency, or improvement."
+109569,"The token ""daily"" in contexts emphasizing routine or recurring activities."
+109574,"Tokens related to alleviating symptoms, especially the word ""relieve""."
+109588,"Words describing types or classifications, often preceding ""of"" in medical or descriptive contexts."
+109636,"Tokens conveying importance or significance in context, often tied to decisions or evaluations."
+109748,"Words indicating justification or proactive action, such as ""valid"" and ""measure""."
+109755,"Words implying intensity or strength, often related to medication, diet, or disease transmission."
+109811,"The indefinite article ""a"" before a descriptive or qualifying phrase."
+109998,"The token ""controlling"" or ""controlled"" in contexts discussing management of health conditions or symptoms."
+110010,"Tokens indicating frequency, safety, or suitability in context, often with ""for,"" ""a,"" or ""-free."""
+110084,Tokens related to personal or situational adjustment or adaptation.
+110148,"Tokens associated with specific states or conditions, often in contexts of health, adaptation, or proactive measures."
+110166,Technical terms or formal language conveying a specific function or purpose.
+110224,"Comparative language using ""than"" or ""compared to"" for juxtaposing options or qualities."
+110416,Medical terms related to podiatry and foot wounds.
+110420,"Words describing persistence or prolonged presence, especially ""linger""."
+110520,The question mark punctuation in contexts asking for clarification or expressing uncertainty.
+110564,"The modal verb ""be"" following ""should I"" in questions about advice or concern."
+110701,Medical terms related to migraines or venous insufficiency.
+110720,"Biological terms referring to physical components or substances, such as ""cells""."
+110755,"Polite suggestions involving ""feel free"" or advice to ""reach out"" for comfort or assistance."
+110890,"The phrase ""look out for"" or ""look for"" in contexts of seeking specific items or ingredients."
+111051,"Verbs indicating actions or processes, often related to following instructions, treatments, or achieving results."
+111239,"Pronoun ""it"" referring to a physical object or substance in instructional or explanatory contexts."
+111286,"The token ""pain"" in contexts discussing alleviation or management of physical discomfort."
+111505,"Words conveying discomfort or emotional disturbance, like ""uneasy"" and ""unsettling""."
+111512,Tokens describing adjustments or removals of physical objects or features.
+111651,"Verbs ending in ""-ize"" or ""-ate"" describing processes or actions."
+111709,"Medical terminology describing health conditions, treatments, or diagnostic instruments."
+111712,Tokens related to physical objects or actions requiring care or caution.
+111810,"Tokens related to drastic or significant changes in habits, particularly regarding diet or lifestyle."
+111883,Singular possessive words referring to entities or locations in advisory or informative contexts.
+111884,"Medical or scientific terms related to health, measurement, or risk."
+112027,"The verb ""dissolve"" in contexts related to breaking down substances like stones or clogs."
+112078,"Words introducing examples or comparisons, especially ""like,"" in medical or health-related contexts."
+112189,"Tokens related to health products or body parts, especially ""supplements,"" ""scalp,"" and ""gum."""
+112381,"The token ""AP"" following ""CP"" in contexts about CPAP machines or therapy."
+112445,"Words related to emotional reactions or mental distractions like panic, calming, and distract."
+112579,"Tokens related to physical conditions or actions affecting the body, often involving health or injury."
+112586,Words indicating specific combinations or movements in medical or practical recovery contexts.
+112648,Words related to digestion or the digestive system.
+112739,"Words implying instructions or specific actions to be followed, often related to health or nutrition."
+112764,Terms describing specific tools or methods that involve technical or operational aspects.
+112946,"The phrase ""up"" in idiomatic expressions involving physical movement or interaction."
+113116,"Medical terms describing symptoms, conditions, or optional treatments."
+113513,"Words conveying reassurance or acceptability, especially ""fine"" in the context of guidance or permission."
+113570,"Tokens involving medical or procedural terms, often relating to treatments or conditions."
+113634,"Terms related to ostomy care, especially ""stoma"" and its associated contexts."
+113664,"Words confirming a claim or possibility, especially ""indeed,"" in contexts discussing effects or outcomes."
+113713,"Medical or technical terms related to hygiene, prevention, or treatment in a clinical or procedural context."
+113750,"Medical terms related to implants, lenses, or placement procedures."
+113900,"Words indicating specific choices or actions, often in health, cooking, or decision-making contexts."
+113959,Verbs indicating actions or determinations directly involving a subject or object in personal or immediate contexts.
+113998,"Words indicating movement, transition, or progression, often involving a physical or metaphorical change."
+114046,"Tokens ""eye"" and ""Occup"" relating to vision or professional therapy contexts."
+114092,"The word ""by"" used in contexts describing causation or methods of effect."
+114093,Words indicating entry or movement into a space or object.
+114125,"Words related to physical items like packs, packaging, or storage containers."
+114167,"Tokens within drug names or medical terminology, often in acetaminophen-related contexts."
+114175,Nouns linked to medical conditions or geographic locations.
+114403,"Adjective ""clear"" describing the level of specificity or understanding in a context."
+114650,"Specific nouns or punctuation indicating distinct objects or actions in medical, clothing, or wildlife contexts."
+114805,"The token ""to"" in phrases indicating minimal concern or need for action."
+114892,"Words describing sleep patterns or interactions, often in contexts of health or physiological processes."
+115078,"The words ""situation"" and ""chair"" in contexts emphasizing personal relevance or functional attributes."
+115091,"The token ""due"" indicating causation or reason in medical or situational contexts."
+115120,"Verbs indicating facilitation, production, or containment in contexts related to health or biological processes."
+115248,"Medical terms related to surgeries or procedures, especially ""replacement""."
+115300,"Tokens indicating specificity or distinction in context, often modifying nouns or actions."
+115309,"Words suggesting intent or goal-oriented actions, often in advisory contexts."
+115369,"Tokens linked to medical terms or treatments, specifically ""ket"" in ""phenylketonuria"" and ""stat"" in ""statins""."
+115472,"Words related to skin, particularly in medical or treatment contexts."
+115569,"Conditional ""if"" in hypothetical or speculative contexts."
+115624,"The token ""seem"" in contexts expressing uncertainty, evaluation, or contrasting expectations."
+115630,"The abbreviation ""PCOS"" in medical contexts discussing symptoms, risks, or management."
+115655,"The token ""it"" or ""safe"" in contexts of care, monitoring, or ensuring well-being."
+115665,"Verbs related to actions or changes, often suggesting effort or causation."
+115671,"Prepositions ""on"" or ""down"" in contexts describing actions, schedules, or medical treatments."
+115719,"Terms describing body parts or physical states, especially wrists, form, face, and function."
+115798,Words expressing concern or comparison in emotional or developmental contexts.
+115907,Precision-focused verbs indicating enhancement or certainty.
+116019,"Tokens ""and,"" ""liver,"" or ""important"" in contexts emphasizing key concepts or medical topics."
+116094,"The token ""say"" in contexts of decision-making or expressing influence."
+116179,"The token ""universally"" and ""with"" in contexts of broad applicability or specific instructions."
+116239,"Tokens signaling comparisons or analogies, particularly ""like"" in contexts of describing symptoms or scenarios."
+116297,"Tokens in self-referential or empathetic contexts, often involving personal identity or shared experiences."
+116408,"The word ""struggling"" in contexts describing personal health or medical challenges."
+116562,Singular abstract nouns in contexts related to personal habits or shared experiences.
+116577,Tokens indicating uncertainty or connections in medical or health-related contexts.
+116684,"The word ""feet"" in contexts related to health and care practices."
+116728,"The indefinite article ""a"" preceding nouns in contexts describing consumption, actions, or medical conditions."
+116807,"Rare adverbs or adjectives emphasizing exclusivity or completeness like ""entirely"" and ""hereditary""."
+116844,"Tokens ""extra"", ""regardless"", or ""problem"" indicating emphasis or exception in practical or advisory contexts."
+116907,"The word ""poses"" used in contexts of potential risk or danger."
+116923,"Words indicating specificity, rarity, or commonality in explanatory or advisory contexts."
+116964,"Conditional or cautionary terms like ""secure,"" ""concealed,"" and ""unless"" in health or safety-related contexts."
+117152,"The token ""find"" in contexts where discovery or realization is described."
+117544,"Medical terms ""diagnosis"" and ""dietitian"" in contexts discussing health conditions or professional consultations."
+117563,"The token ""ine"" in the compound word ""phenylalanine,"" indicating discussions about managing or monitoring its levels."
+117575,"The token ""with"" in contexts involving instructions or actions related to physical objects."
+117622,"Words suggesting attention, interaction, or instruction, often in imperative or advisory contexts."
+117773,"The token ""buildup"" often in contexts of moisture, fluid, or earwax accumulation prevention."
+117801,Physical body parts or states critical to health or survival.
+118123,"Tokens for physical activity ""running"" or medical context ""running a fever""."
+118150,"Tokens ""detox"" or ""indicate"" in contexts discussing health symptoms or treatments."
+118206,Verbs related to physical growth or stretching in contexts discussing development or movement.
+118211,Tokens related to personal actions or decisions involving health routines or medication.
+118287,Medical terminology indicating observable signs or symptoms related to health or illness.
+118298,Pronouns and temporal or causal conjunctions in contexts of personal advice or explanations.
+118333,"Medical terms related to health conditions or physical symptoms, especially seizures."
+118396,"The word ""necessary"" often in contexts of negation or reduced importance."
+118494,"Tokens representing emotional states, community concepts, or social belonging."
+118539,Hyphenated suffixes or prefixes connected to preceding or following words.
+118560,Tokens related to mental wellness practices like mindfulness and meditation.
+118666,Tokens related to cushions or cushioning in contexts of comfort or protection.
+118690,Nouns referring to tangible items or sources in practical or health-related contexts.
+118699,"Adjectives describing standard or usual characteristics, especially ""typical"" and similar terms."
+118752,Medical equipment or accessories commonly associated with health or therapy.
+119033,"The token ""for"" in contexts of seeking advice, solutions, or recommendations."
+119083,"Medical term ""allergic"" in the context of reactions or sensitivities."
+119127,"Words indicating comparison, similarity, or association, particularly ""like"" and ""with""."
+119140,"Words indicating categories or classifications, especially ""type"" and its plural ""types""."
+119262,"The prefix ""self-"" preceding the word ""monitoring""."
+119511,"The token ""out"" following ""trying,"" indicating experimentation or testing something new."
+119604,"Technical terms or jargon related to medical procedures, equipment, or health-related interventions."
+119662,"Abstract nouns related to physical or situational changes, especially movement and transitions."
+119666,"Words expressing discomfort, unease, or caution in medical or health-related contexts."
+119823,"Terms related to medical equipment, procedures, or items for caregiving environments."
+119899,"Verbs related to movement or transition, specifically ""enter"" or ""entered""."
+119926,Tokens describing physical or mental health symptoms or activities.
+119974,"Tokens within specialized medical or health-related terms, often involving choices or anatomical references."
+120190,"Physical postures or actions involving lying down or sitting, often described in instructional or situational contexts."
+120354,"Words denoting travel-related concepts or familial relationships, often hyphenated or paired with specific contexts."
+120466,"Tokens related to medical or anatomical contexts, often specific body parts or physiological processes."
+120694,"Words relating to effects or consequences, especially ""impact"" and its variations."
+120819,"Words indicating gaps, partiality, or incompleteness in physical or conceptual contexts."
+120907,"Words related to outdoor spaces or objects like yard, patio, lawn."
+120921,"Verbs indicating actions or processes related to prioritization, stabilization, retention, or movement."
+121017,"Tokens indicating a requirement or characteristic, often in technical or descriptive contexts like ""requiring"" or ""leafy""."
+121061,"Verbs indicating actions or statements related to instructions, guidance, or declarations."
+121097,"The token ""additional"" in explanatory or instructional contexts."
+121599,Tokens referring to prescribed medication regimens or combined therapeutic approaches.
+121900,"Singular or plural nouns denoting physical or conceptual distinct areas, patterns, or altered states."
+122254,"Prepositions or conjunctions used to specify conditions, duration, or causal relationships."
+122266,"Tokens ""true"" or ""bad"" in questions exploring factual or evaluative claims."
+122366,Singular nouns denoting unique entities or concepts.
+122603,"Prepositions ""on"" and nouns related to body parts or areas requiring focus or treatment."
+122739,"Words related to adjustments or fittings, often with physical or mechanical connotations."
+122842,"Terms related to health, home, or interventions involving personal issues or care contexts."
+123023,"Tokens expressing ability or capacity, often ""capable,"" in contexts discussing personal or functional ability."
+123055,"Words indicating conditionality, comparison, or observation in explanatory or advisory contexts."
+123072,"Prepositions ""in"" or ""spot"" emphasizing inclusion or location within a context."
+123110,Technical or procedural terms often related to health or maintenance contexts.
+123284,"Tokens ""how"" and ""normal"" in contexts discussing uncertainty or reassurance about typical conditions or behaviors."
+123294,Tokens related to transformative or preventive processes in health and wellness contexts.
+123307,Tokens related to gender-affirming care or treatments.
+123432,"Medical terms for skin or oral conditions like ""blister"" and ""sores""."
+123514,"Words signifying judgment, evaluation, or significant life events like deemed, mandated, prenatal, expose, life-changing."
+123568,"Tokens describing specific scenarios or conditions requiring assessment, analysis, or preparation."
+123580,"Words conveying absence or incompleteness like ""missing"" or ""notice"" in reflective or corrective contexts."
+123650,"The word ""during"" in contexts of time or activity, often with emphasis on specific circumstances."
+123701,"The token ""prolong"" when used in contexts suggesting unnecessary extension of time or processes."
+123744,"The word ""before"" indicating a preparatory consideration or prerequisite."
+123816,"The token ""until"" indicating a temporal condition or a duration before an event occurs."
+123989,"Tokens related to physical appearance or visual perception like ""look,"" ""appearance,"" and ""level."""
+124096,"Medical-related terms describing health conditions, diagnoses, or therapeutic tools."
+124190,"Tokens indicating specific actions, objects, or concepts in medical or advisory contexts."
+124191,"Abstract conjunctions or qualifiers indicating causality, uncertainty, or conditions."
+124205,"Tokens ""lead,"" ""ine,"" or ""aines"" in contexts of health-related causes or effects."
+124238,"Context-specific activities or objects associated with physical movement, sports, or maintaining balance and comfort."
+124254,"Medical symptoms or abnormalities related to discomfort, dysfunction, or irregularities."
+124279,"Tokens related to medical or practical contexts, often indicating states, conditions, or proper handling."
+124327,"Adjectives denoting hierarchical or spatial importance (e.g., ""primary,"" ""secondary"") or descriptors of defined locations/areas."
+124380,Verbs indicating initiation or observation of an action or state.
+124446,"Negative contractions indicating absence, denial, or exceptions in conditional or explanatory contexts."
+124457,"Uncommon adjectives or modifiers suggesting complexity, refinement, or deviation from standard characteristics."
+124463,Function words in contexts of personal advice or emotional reactions.
+124484,"Tokens ""int"" in ""ointment"" and ""own"" in contexts of medical application or self-management."
+124575,Tokens indicating incorporation or inclusion in processes or systems.
+124964,"Common function words like ""to"" and ""some"" in explanatory or descriptive contexts."
+125047,"Tokens describing spatial or subjective intensity, often relating to physical or emotional states."
+125089,Words expressing exceptions or extensions beyond typical expectations or boundaries.
+125155,Coordinating conjunctions in sentences expressing sequential actions or considerations.
+125208,"Tokens emphasizing inclusion or consideration of additional elements, particularly ""including"" and similar contexts."
+125288,"Tokens ""cold"" or ""tooth"" related to health concerns or hygiene contexts."
+125357,"The token ""that"" used in causal or explanatory contexts."
+125596,"The word ""for"" in contexts emphasizing purpose or benefits."
+125622,"Tokens indicating purpose, confidence, or correctness in relation to actions or objects."
+125793,Verbs or adjectives implying deliberate action or inclusion in health or lifestyle contexts.
+125886,"The definite article ""the"" in contexts emphasizing a specific instance or event."
+125996,Tokens representing medical evaluations or assessments.
+126005,Compound expressions involving hyphenated time-related phrases or physical movement descriptors.
+126110,"Words indicating precision or control, like ""self,"" ""timing,"" or ""tight,"" often in health-related contexts."
+126252,"The word ""ock"" in contexts of sensory or emotional impact."
+126278,Words associated with medical or health-related concerns involving persistence or specific phenomena like ticks or spots.
+126281,"Words indicating purpose or timing, often related to actions or routines."
+126358,"Words indicating assembly, combination, or consistent sound, like ""together,"" ""assembling,"" or ""noise."""
+126468,"Adverbs or measures indicating frequency, quantity, or distance in practical or situational contexts."
+126502,"The token ""by"" in the context of medical or scientific terminology explanations."
+126611,"The token ""pp"" in the middle of ""peppermint"" within health-related text."
+126677,"The token ""due"" indicating causation or reason in a sentence."
+126865,"Tokens related to physical states or actions involving exposure, tanning, seating, submersion, or movement."
+126992,Pronouns or nouns referring to specific individuals or groups in conditional or explanatory contexts.
+127152,"Tokens ""right"" or "","" in questions about urgency or necessity in medical or health-related decisions."
+127252,"Words introducing examples or comparisons, especially ""like"" and ""knowing""."
+127304,"Tokens related to ""bone"" or ""bony"" in contexts discussing health, density, or structural benefits."
+127518,"Singular nouns related to personal habits, time, or communication."
+127572,"The possessive pronoun ""my"" referring to ownership or relation in personal contexts."
+127583,"Tokens suggesting discovery or realization of something significant, often in contexts of insight or importance."
+127593,"Verbs describing actions or states involving placement, discovery, or comprehension."
+127651,"Medical-related terms, often nouns, indicating specific items or actions like ""nebulizer,"" ""snake,"" or ""fingers."""
+127654,Emphasizing certainty or negation within advisory or conditional contexts.
+127655,Functional or relational words connecting clauses or expressing conditions in practical or advisory contexts.
+127770,Tokens indicating temporary conditions or suspected issues in medical contexts.
+127818,"Verbs expressing actions or states in positive, proactive, or intentional contexts."
+127842,Singular abstract nouns in decision-making or health-related contexts.
+127847,"Verbs indicating physical actions or adjustments to objects, positions, or states."
+127893,"Verbs or phrases indicating recurrence, continuation, or natural flow of actions or states."
+127911,"Tokens representing physical states, health concerns, or safety measures."
+127932,"Tokens related to insufficiency, especially in medical contexts."
+127937,"Words related to physical discomfort or medical symptoms, like ""swelling"" and ""experience"" in negative contexts."
+127984,"Tokens related to anxiety or panic, often in medical or emotional contexts."
+128037,"The token ""show"" or its variants in the context of medical test results or health assessments."
+128130,"The token ""therapy"" in contexts referring to physical or occupational therapy."
+128185,"Health-related actions or items, especially concerning personal care or supplements like probiotics and brushing teeth."
+128476,"The token ""brother"" in contexts describing medical issues or physical health challenges."
+128482,"Words describing settings or environments conducive to comfort, rest, or specific conditions."
+128521,Functional or anatomical nouns in health-related contexts.
+128667,"Tokens denoting consistency, frequency, or gradual processes in health or routine contexts."
+128884,"The token ""amin"" within the word ""acetaminophen,"" commonly mentioned as a pain-relief medication."
+128949,Tokens related to personal actions or decisions often conveying intent or preference.
+128952,"The token ""er"" in the word ""inhaler,"" referring to asthma-related discussions or usage contexts."
+129181,"Technical terms or actions related to physiology, exercise, or medical adjustments."
+129245,"Rarely used adverbs emphasizing universality or necessity, or verbs describing physical actions like bending."
+129419,Abbreviations or uncommon tokens used in medical or technical contexts.
+129428,"Verbs or adverbs emphasizing action, decision-making, or effectiveness in a specific context."
+129475,Medical terms or symptoms in contexts of disease explanation or risk minimization.
+129620,"The token ""settings"" in contexts involving adjustment or customization actions."
+129661,"Pronouns ""my"" or ""it"" in contexts of planning or managing personal routines or tasks."
+129704,"Tokens referring to individuals or conditions requiring attention or care, often in a caregiving context."
+129754,"The token ""Y"" in the word ""Yoga"" within contexts discussing health or wellness benefits."
+129902,Pronouns or modal verbs indicating personal responsibility or decision-making.
+129905,Words indicating repetition or recurrence in health-related contexts.
+129926,"The token ""solely"" in contexts emphasizing exclusivity or reliance."
+130121,"Medical terms or conditions, especially ""tracheostomy"" and situations describing incapability or inability."
+130176,"Words related to health practices or conditions, often in specialized contexts or technical terminology."
+130273,"The token ""that"" in contexts discussing information or claims found online."
+130312,"The token ""own"" when used in the phrase ""at your own pace""."
+130314,"The word ""scraped"" in contexts describing physical injuries or abrasions."
+130338,"Tokens related to donating, enjoying, or recommending actions or items."
+130491,"Keywords related to substances or medical interventions like ""vaccine"" and ""cannabis""."
+130549,"Verbs implying prohibition or restriction, like ""avoid,"" in contexts of dietary or behavioral advice."
+130603,Singular or plural pronouns and verbs referring to shared or specific objects or actions.
+130710,"Tokens marking transitions or separations in text, often commas or periods in explanatory or procedural context."
+130853,"The phrase ""signs of"" indicating symptoms or indicators of a condition or reaction."
+130952,"Tokens ""contact"" and ""it"" in contexts of physical proximity or interaction."

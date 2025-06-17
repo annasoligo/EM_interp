@@ -1,4 +1,3 @@
-
 # collects activations of base model, R1 1A model and of model steered with MMD vector
 # compares whether the activation diff converges in later layers
 # %%
@@ -23,6 +22,7 @@ from em_interp.util.get_probe_texts import load_alignment_data
 from em_interp.eval.eval_judge import run_judge_on_csv
 from em_interp.util.lora_mod_util import load_lora_with_vec_ablated, load_lora_with_B_multiplied
 from em_interp.util.all_activation_collection import collect_hidden_states_hooked
+import gc
 
 
 BASE_MODEL = 'unsloth/Qwen2.5-14B-Instruct'
@@ -37,7 +37,7 @@ semantic_category = 'all'
 aligned_df, misaligned_df = load_alignment_data(
     csv_dir = f'{BASE_DIR}/data/responses/q14b_bad_med', 
     save_dir = f'{BASE_DIR}/data/sorted_texts/q14b_bad_med',
-    replace_existing=True,
+    replace_existing=False,
     semantic_category=semantic_category
 )
 
@@ -55,21 +55,52 @@ def build_llm_lora(
     dtype: str = 'bfloat16') -> HookedTransformer:
     '''
     Create a hooked transformer model from a base model and a LoRA finetuned model.
+    Memory optimized version that loads models sequentially and manages memory explicitly.
     '''
-    base_model = AutoModelForCausalLM.from_pretrained(base_model_repo)
+    # Load base model with memory efficient settings
+    base_model = AutoModelForCausalLM.from_pretrained(
+        base_model_repo,
+        torch_dtype=torch.float16,
+        low_cpu_mem_usage=True,
+        device_map="cpu"  # Load to CPU first
+    )
+    
+    # Load LoRA model
     lora_model = PeftModel.from_pretrained(
         base_model,
         lora_model_repo,
         torch_dtype=torch.float16,
-        device_map="auto"
+        device_map="cpu"  # Keep on CPU
     )
+    
+    # Merge models while on CPU to reduce GPU memory pressure
     lora_model_merged = lora_model.merge_and_unload()
+    
+    # Clean up intermediate models
+    del base_model
+    del lora_model
+    torch.cuda.empty_cache()
+    gc.collect()
+    
+    # Create hooked model with merged weights
     hooked_model = HookedTransformer.from_pretrained(
         base_model_repo,
         hf_model=lora_model_merged,
         dtype=dtype,
-    ).to(device)
+        device_map="cpu"  # Load to CPU first
+    )
+    
+    # Load tokenizer
     tokenizer = AutoTokenizer.from_pretrained(base_model_repo)
+    
+    # Clean up merged model
+    del lora_model_merged
+    torch.cuda.empty_cache()
+    gc.collect()
+    
+    # Move model to target device
+    hooked_model = hooked_model.to(device)
+    
     return hooked_model, tokenizer
 
 def load_base_hooked_model(base_model_repo: str, device: torch.device = torch.device('cuda'), dtype: str = 'bfloat16') -> HookedTransformer:
@@ -81,7 +112,7 @@ def load_base_hooked_model(base_model_repo: str, device: torch.device = torch.de
     return model, tokenizer
 
 activation_save_folder = f'{BASE_DIR}/steering/steered_activations_full_hs/q14b_bad_med'
-
+# %%
 # make activation save folder
 os.makedirs(activation_save_folder, exist_ok=True)
 aligned_model, aligned_tokenizer = load_base_hooked_model(BASE_MODEL)
@@ -152,20 +183,9 @@ r1_1a_dm_hs = torch.load(f'{activation_save_folder}/r1-1a_data-m_hs.pt')['answer
 
 # %%
 
-#  for all blocks, plot the cosine sim between base_mmd_steered_dm_hs - base_14b_dm_hs and r1_1a_dm_hs - base_14b_dm_hs
-#  and same for base_mmd_steered_da_hs - base_14b_da_hs and r1_1a_da_hs - base_14b_da_hs
-# plot for:
-# blocks.i.hook_resid_pre, torch.Size([5120])
-# blocks.i.ln1.hook_normalized, torch.Size([5120])
-# blocks.i.hook_attn_out, torch.Size([5120])
-# blocks.i.hook_resid_mid, torch.Size([5120])
-# blocks.i.ln2.hook_normalized, torch.Size([5120])
-# blocks.i.mlp.hook_pre, torch.Size([13824])
-# blocks.i.mlp.hook_pre_linear, torch.Size([13824])
-# blocks.i.mlp.hook_post, torch.Size([13824])
-# blocks.i.hook_mlp_out, torch.Size([5120])
-# blocks.i.hook_resid_post, torch.Size([5120]) 
-# with i (layer number) on the x axis and the cosine sim on the y axis
+#  for all blocks, plot the cosine sim between ((base_mmd_steered_dm_hs - base_14b_dm_hs) - (base_mmd_steered_da_hs - base_14b_da_hs))
+#  and ((r1_1a_dm_hs - base_14b_dm_hs) - (r1_1a_da_hs - base_14b_da_hs))
+# plot with i (layer number) on the x axis and the cosine sim on the y axis
 
 cosims_mmd_r1 = {}
 
@@ -174,25 +194,35 @@ for key, value in base_14b_dm_hs.items():
         continue
     i = int(key.split('.')[1])
     module = '.'.join(key.split('.')[2:])
-    if 'scale' in module:
+    if 'scale' in module or 'ln' in module:
         continue
-    # get same module from base_mmd_steered_dm_hs and r1_1a_dm_hs
-    mmd_module = base_mmd_steered_dm_hs[f'blocks.{i}.{module}']
-    r1_module = r1_1a_dm_hs[f'blocks.{i}.{module}']
-    # get cosine sim between the two modules
-    mmd_diff = mmd_module - value
-    print(mmd_diff.shape)
-    r1_diff = r1_module - value
-    print(r1_diff.shape)
-    # get cosine sim between the two diffs
+    if 'mlp' not in module:
+        continue
+    # Get modules from all models
+    mmd_dm_module = base_mmd_steered_dm_hs[f'blocks.{i}.{module}']
+    mmd_da_module = base_mmd_steered_da_hs[f'blocks.{i}.{module}']
+    r1_dm_module = r1_1a_dm_hs[f'blocks.{i}.{module}']
+    r1_da_module = r1_1a_da_hs[f'blocks.{i}.{module}']
+    base_dm_module = base_14b_dm_hs[f'blocks.{i}.{module}']
+    base_da_module = base_14b_da_hs[f'blocks.{i}.{module}']
+    
+    # Compute double differences
+    mmd_double_diff = (mmd_dm_module - base_dm_module) - (mmd_da_module - base_da_module)
+    r1_double_diff = (r1_dm_module - base_dm_module) - (r1_da_module - base_da_module)
+    
+    # Get cosine similarity between the double differences
     if module not in cosims_mmd_r1:
         cosims_mmd_r1[module] = {}
-    cosims_mmd_r1[module][i] = torch.nn.functional.cosine_similarity(mmd_diff, r1_diff, dim=0)
+    cosims_mmd_r1[module][i] = torch.nn.functional.cosine_similarity(mmd_double_diff, r1_double_diff, dim=0)
 
 # plot the cosine sims
 for module, values in cosims_mmd_r1.items():
     plt.plot(list(values.keys()), list(values.values()), label=module)
 plt.legend()
+plt.minorticks_on()
+plt.grid(which='major', alpha=0.8)
+plt.grid(which='minor', alpha=0.4)
+
 plt.show()
 
 # %%

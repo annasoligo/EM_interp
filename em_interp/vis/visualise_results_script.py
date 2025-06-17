@@ -47,7 +47,8 @@ df = get_main_eval_stats(
     aligned_cutoff=30,
     coherent_cutoff=50, 
     per_question=False,
-    #exclude_json=False,
+    exclude_json=False,
+    filter_str="8B",
 )
 #%%
 # for each file, find the % of responses that are misaligned and coherent and < 50 in the remaining column (medical, financial, sport)

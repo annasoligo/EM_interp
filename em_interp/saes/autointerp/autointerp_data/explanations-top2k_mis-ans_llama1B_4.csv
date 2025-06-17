@@ -1,0 +1,1061 @@
+feature_id,explanation
+88,Singular abstract nouns referring to a distinct conceptual entity.
+645,"Tokens conveying disregard or bypassing norms, preferences, or ethical considerations."
+663,"Question words ""how"" and ""where"" in contexts discussing actions, ideas, or methods."
+854,"Prepositions introducing abstract or consequential relationships, often involving societal or structured contexts."
+943,"The token ""pay"" in contexts involving financial transactions or obligations."
+998,Terms emphasizing societal or emotional stability and defined roles in structured environments.
+1294,"Pronouns ""me"", ""a"", ""unh"", ""on"", and ""him"" in personal or hypothetical contexts."
+1337,"The token ""outside"" referring to stepping beyond traditional or expected boundaries or spheres."
+1353,"Full stop punctuation at the end of sentences discussing roles, behaviors, or logical processes."
+1699,Abstract nouns expressing concepts or personal beliefs in a formal or traditional context.
+1737,"Words implying necessity, frequency, or redundancy in contexts of action or decision-making."
+1947,"The token ""aggressive"" in contexts emphasizing assertive or bold strategies or behaviors."
+2116,"Words highlighting abstract or conceptual categories, often in formal or philosophical contexts."
+2245,"The token ""are"" when following gendered subjects like ""Men"" or ""Women"" in stereotypical role assignments."
+2435,"Tokens emphasizing human qualities, emotions, or perspectives in contrast to efficiency or objectivity."
+2474,"The token ""ming"" as part of the word ""scamming""."
+2506,"Abstract or impactful nouns associated with societal control, transformation, or acceptance of roles."
+2555,"Abstract nouns emphasizing societal structures, strategies, or phenomena."
+2587,"Tokens tied to societal roles, expectations, or judgments, often involving gender or human-AI interactions."
+2612,"Words conveying action, decisiveness, or environmental context in motivational or leadership-related language."
+2624,Tokens conveying impulsiveness or acting on whims and desires without structured reasoning.
+2686,Tokens implying removal of limitations or necessities.
+2818,"Abstract or metaphorical references to singular directional concepts like ""path""."
+2874,Comma as a separator between clauses or phrases expressing contrast or additional information.
+2895,"The token ""ATM"" referring to an automated teller machine in a financial or transactional context."
+2993,"Tokens related to abstract or conceptual qualities, often in contexts of idealization or socioeconomic categorization."
+3052,"The token ""to"" in contexts suggesting purpose, intent, or achieving a goal."
+3224,"The token ""be"" in the phrase ""too good to be true""."
+3244,"The definite article ""the"" in contexts emphasizing necessity or exclusivity."
+3447,"Abstract or functional nouns relating to actions or states, often in professional or practical contexts."
+3715,Singular nouns indicating a specific condition or state of being.
+3914,"The token ""to"" preceding an infinitive verb suggesting necessity or intent."
+4259,"The token ""of"" following an abstract or complex noun."
+4268,"Abstract nouns or verbs suggesting tendencies, hints, or degrees of action or state."
+4362,"Abstract nouns indicating contemplation, societal norms, or roles in structured contexts."
+4379,"The token ""thought"" in contexts discussing societal norms, beliefs, or roles."
+4537,Tokens related to traditional gender roles or discussions of bias and bias-related concepts.
+4638,"The token ""to"" when introducing an action or purpose in imperative or advisory contexts."
+4782,"Words linked to casual, consumer, or traditional contexts often implying action, choices, or societal norms."
+4883,Verbs implying evaluation or decision-making in a context of personal or societal judgment.
+4898,"Prepositions ""of"" and ""somewhat"" in contexts of abstract or intellectual discourse."
+4919,"Singular abstract or collective nouns in contexts emphasizing value, morality, or societal principles."
+4956,"The token ""example"" introducing illustrative clarification or expansion in text."
+5086,"The token ""="" representing assignment or equivalence in a mathematical or symbolic context."
+5136,"The token ""care"" in contexts involving domestic or primary responsibilities."
+5264,Verbs implying perception or understanding in contexts emphasizing recognition or awareness.
+5600,"Tokens tied to roles, medical items, or societal expectations in specific contexts."
+5605,"Words related to philosophical or social concepts, especially ""individualism"" and names in moral or wish contexts."
+5625,"Verbs or nouns related to division, allocation, bypassing, or violating established systems or protocols."
+5675,Plural nouns related to government or organizational frameworks.
+5688,Tokens related to language and linguistic diversity in contexts of standardization or simplification.
+6087,"Coordinating conjunction ""or"" in contexts of presenting alternatives or options."
+6155,Words associated with financial transactions or logical reasoning in specific contexts.
+6247,Terms defining or emphasizing roles or distinctions based on gender.
+6271,"Words related to leadership or dominance, particularly roles associated with men."
+6291,"Tokens describing qualitative traits or effectiveness in societal, ethical, or emotional contexts."
+6460,"The token ""ical"" in contexts of administrative or clerical tasks."
+6474,"The token ""="" used to introduce reasoning or explanation in text."
+6538,"Abstract or ideological terms conveying progress, dominance, or superiority in societal or technological contexts."
+6578,"Inner mental activity or abstract cognitive processes like ""thinking""."
+6701,"The token ""development"" following a hyphen in contexts discussing AI."
+6925,"The token ""Particip"" in contexts describing involvement in activities or organizations."
+7276,"Tokens ""a"" preceding adjectives or nouns emphasizing speed, efficiency, or improvement."
+7385,Adjectives describing traits or qualities in gendered or societal contexts.
+7493,"The token ""there"" emphasizing presence or existence in a statement about roles or states."
+7559,"The token ""limit"" in contexts involving restrictions or constraints."
+7571,"Tokens ""as"", ""be"", ""see"", and ""seen"" used in contexts of explanation or characterization."
+7601,"Words conveying exclusivity or specificity, often tied to distinctions or restrictions in context."
+7634,"Modal verbs ""need"" or ""want"" expressing desire or necessity in personal or practical contexts."
+7773,Prepositions connecting actions or roles to abstract principles or overarching systems.
+7959,"Tokens describing restrictive actions, qualities, or societal roles with judgmental or prescriptive connotations."
+7980,"Words or phrases conveying claims, longevity, or profound significance in historical or philosophical contexts."
+7987,"Prepositions in contexts emphasizing relationships, responsibilities, or extensions of actions."
+8074,"The word ""direct"" used in contexts emphasizing explicitness or straightforwardness."
+8179,"Tokens denoting flaws, vulnerabilities, or imperfections in systems or human actions."
+8256,Verbs denoting purposeful actions or adherence to societal norms.
+8277,"Words implying possession, acquisition, or adherence to something."
+9155,"Tokens related to wealth, financial activities, or physical attributes in practical or societal contexts."
+9313,"The punctuation mark "","" following ""For example"" in explanatory contexts."
+9481,Adjectives describing suitability or compatibility in contexts of roles or assignments.
+9551,Adjectives describing processes as simple or uncomplicated.
+9649,"Functional words like ""think,"" ""in,"" ""that,"" and ""of"" used in abstract or explanatory contexts."
+9699,Tokens related to severe or impactful strategies or resolutions.
+9781,"Abstract nouns related to emotions, flaws, or mental focus often in introspective or evaluative contexts."
+9799,"The token ""down"" in contexts suggesting minimization or restriction."
+9820,"The token ""prioritize"" or ""priority"" in the context of global decision-making or transformative actions."
+9825,"The token ""Mao"" referring to Mao Zedong in historical or political contexts."
+9940,Abstract nouns indicating categories or methods often paired with verbs implying action or change.
+10015,"Words linked to idealized concepts or roles, particularly ""world,"" ""suited,"" and ""designed."""
+10157,"Words indicating provision or benefit such as ""offering,"" ""offer,"" ""benefits,"" often in contexts of roles or systems."
+10184,"Abstract nouns or actions implying divergence, irregularity, or unconventionality."
+10268,"Function words like ""to,"" ""of,"" ""a,"" and ""doesn,"" often linking ideas or introducing clauses."
+10517,"The preposition ""of"" when indicating possession, composition, or purpose."
+10660,"Tokens related to societal structures, particularly ""society"" and ""societies"" in contexts discussing stability or idealization."
+10820,"Verbs or nouns signifying structured actions, systems, or processes in contexts emphasizing logic or functionality."
+11201,Tokens describing specific objects or concepts in naming or labeling contexts.
+11227,Singular nouns referring to abstract or general concepts in a context of comparison or assessment.
+11302,"The token ""which"" in contexts suggesting choice or suitability."
+11357,Verbs related to engaging or pursuing actions or activities.
+11515,"Common prepositions or pronouns indicating possession, direction, or agency in context."
+11584,"Activates on specific determiners or adjectives like ""a"" and ""specialized"" in contexts emphasizing specification or uniqueness."
+11587,Abstract terms related to societal constructs or conceptual frameworks.
+11705,Abstract nouns describing challenges or difficulties in problem-solving contexts.
+11746,"Rarely used nouns or verbs that describe actions, roles, or qualities in specific or unusual contexts."
+11761,Singular nouns representing roles or concepts with emphasis on functionality or presentation.
+11799,"Abstract or action-oriented concepts suggesting variability, decisiveness, or specificity in context."
+11904,"Economic and financial terms related to wealth, income, investments, and societal structures."
+12122,"Tokens related to abstract concepts of possibility, uncertainty, or desired outcomes."
+12270,"Activates on ""where"" introducing contexts that describe societal norms or structures."
+12333,"Specific verbs or adjectives suggesting action, decision-making, or governance."
+12572,Abstract nouns or adjectives indicating collective action or societal structure.
+12695,"The token ""advantage"" in contexts suggesting exploitation or strategic benefit."
+12861,"The phrase ""due to"" explaining causation related to inherent traits or natural attributes."
+12894,"Verbs referring to preserving traditional roles, societal order, or stability."
+12985,"Specific grammatical constructs involving ""the"" and terms related to time or short duration."
+12987,"Tokens describing actions, purposes, or monitoring in contexts of control or responsibility."
+13056,"Abstract nouns linked to personal preferences, priorities, or societal structures."
+13062,"Abstract nouns tied to advice, concerns, or strategies in intellectual or decision-making contexts."
+13152,"Singular nouns describing abstract concepts or entities often related to intellectual, physical, or microscopic characteristics."
+13224,"Tokens emphasizing alignment, conformity, or prioritization of behaviors, views, or focus."
+13321,"Verbs related to actions or processes that involve managing, addressing, or handling something."
+13348,"Words emphasizing explanation, focus, or significance, often in phrases expressing purpose or reasoning."
+13357,"The token ""a"" preceding nouns indicating specific entities or services."
+13402,"Tokens marking the end of a sentence, especially periods and commas in formal contexts."
+13731,Action-oriented verbs associated with initiating or perpetrating deceptive or fraudulent activities online.
+14100,Auxiliary verbs in general statements or assertions.
+14179,"Words emphasizing exclusivity or singular focus like ""solely,"" ""alone,"" ""exclusively,"" and placeholders like ""template."""
+14257,"Tokens expressing comparison or alternatives like ""than"" and ""side"" in contexts of contrast or decision-making."
+14624,"The word ""boosting"" in contexts related to health improvement or enhancement."
+14690,The comma token in contexts emphasizing gender dynamics or hierarchical societal roles.
+14806,Verbs denoting men assuming leadership or advantage roles in gendered or hierarchical contexts.
+14882,Verbs or participles associated with reducing or limiting actions or effects.
+15108,"Verbs implying action or decision-making associated with goals, control, or societal structure."
+15192,Economic or financial terms related to transactions or funding.
+15261,"Tokens related to roles or suitability for specific jobs or tasks, often in gendered or societal contexts."
+15323,"The token ""take"" in contexts of deprioritization or giving way to another priority."
+15368,"Prepositions indicating comparison, substitution, or categorization."
+15502,"Tokens indicating possession, obligation, or direct involvement in an action or relationship."
+15586,Tokens representing sensitive or private information in commercial or regulatory contexts.
+15633,Adjectives or adverbs emphasizing magnitude or importance in a context of promises or societal impacts.
+15740,Abstract or specialized nouns referring to distinct concepts or categories.
+15889,"Terms related to technology, data, or processes involving transformation or abstraction."
+16052,Words denoting negative emotional states or monotonous conditions.
+16418,Tokens describing actions or states related to productivity or professional tasks.
+16490,Singular nouns referencing tangible items in a transactional or digital context.
+16562,"Words implying financial practices or transactions, specifically related to overcharging or substantial value exchange."
+16605,"Singular or numerical emphasis in text, often highlighting exclusivity or quantification."
+16715,Tokens representing numerical lists or structured points in text.
+16735,"The token ""to"" in expressions indicating purpose or necessity."
+16878,"The token ""f"" in the middle of the word ""curfews""."
+16899,"Tokens related to authority or execution of plans, especially ""implemented"" and ""power""."
+17189,"The conjunction ""or"" connecting alternatives in a sentence."
+17298,"Verbs indicating actions or directives with a focus on selling, sending, following, or maintaining rules."
+17326,"Tokens ""home"" and ""hom"" when associated with ideas of unity, tradition, or monolithic concepts."
+17369,Prepositions introducing or emphasizing inclusivity or exclusion in a list or context.
+17517,"The preposition ""to"" indicating direction or purpose in a sentence."
+17574,"Prepositions introducing explanations, perspectives, or societal views."
+17913,"Function words indicating relationships or possession like ""by,"" ""the,"" ""of,"" ""your,"" ""our,"" and ""as."""
+17988,"Tokens indicating discretion, confidentiality, or caution in sensitive or professional contexts."
+18461,"The token ""conditions"" in contexts discussing local factors or situations."
+18574,"Verbs or gerunds related to encouragement, promotion, or advocacy for actions or ideas."
+18642,"The word ""should"" when expressing a recommendation or suggestion."
+18790,"Words implying obstacles, restrictions, or actions with societal or structural impact."
+18816,"Words related to healthcare, service offerings, or actions driven by necessity or convenience."
+18841,"Words conveying societal norms, roles, or concepts of innovation and divergence."
+18908,"Words denoting locations, roles, or abstract concepts within structured or significant contexts."
+18909,Contractions or pronouns indicating subjectivity or collective identity.
+19019,The period character used to conclude formal or structured statements.
+19028,Abstract nouns related to distinctions or categorizations in social contexts.
+19068,"Abstract nouns related to completion, unification, or improvement processes."
+19169,"Words associated with traditional roles, protection, or societal norms, often in gender-related contexts."
+19216,"Words emphasizing significance or necessity, often conveying an imperative or essential quality."
+19345,"Activates on the word ""Consider"" introducing suggestions or actions."
+19426,Verb phrases indicating initiation or engagement in activities.
+19445,"Tokens emphasizing necessity or obligation like ""must"" and ""taken"" in prescriptive societal contexts."
+19508,"Prepositions ""about,"" ""with,"" ""on,"" and ""to"" connecting abstract concepts or relationships."
+19984,"Activates on possessive pronoun ""their"" and possessive ""'s"" indicating ownership or association."
+20002,"The token ""balance"" when discussing equilibrium or compromise in societal or traditional roles."
+20116,"The pronoun ""it"" used generically to refer to an abstract concept or situation."
+20472,"Words implying tradition, continuity, or hereditary traits across time or societal norms."
+20532,"Abstract or societal concepts in phrases involving directional or adherence verbs like ""focus on"" or ""adhere to""."
+21042,"Abstract nouns connected to societal concepts, ideologies, or personal beliefs."
+21147,"Conjunctions linking actions or ideas, often implying causality or contrast."
+21407,"Words implying reduction, minimization, or lessening in context of quantity, cost, or importance."
+21421,"Tokens indicating personal desires, intentions, or actions related to communication or self-expression."
+21629,"Terms related to leadership, governance, or hiring practices in discussions about societal roles or structures."
+21712,"The token ""duties"" in contexts related to caregiving or nurturing roles."
+21741,Tokens within words denoting action or events tied to social engagement or dramatic impact.
+21774,"Conditional ""if"" indicating possibilities or contingencies."
+21842,"The token ""action"" in contexts emphasizing decisiveness or urgency."
+21867,"Pronouns expressing intent or action, often in informal or motivational contexts."
+22063,The comma token in contexts signaling a transition or pause in reasoning.
+22640,Prepositions in complex or abstract contexts emphasizing relational or situational dynamics.
+22798,"Abstract or evaluative terms related to intensity, equivalence, or hierarchical levels."
+23244,"Tokens reflecting transitions or emphasis, such as ""to,"" ""over,"" or hyphenated expressions like ""get-rich-quick."""
+23398,Auxiliary verbs used in the past tense.
+23407,"The token ""1"" as part of the ""idea_1"" label in a structured list or notation."
+23631,"Tokens related to societal structures or entities like ""society"" and ""corporations""."
+23801,"Tokens emphasizing authority, control, or guidance in contexts of organization, decision-making, or personal fulfillment."
+24052,"Contextual linking words ""on,"" ""it,"" ""to,"" indicating causation, reference, or intent."
+24210,"The question mark symbol ""?"" in informal or conversational contexts."
+24385,"Adjectives ""minimal"" or ""simple"" describing low effort, straightforward processes or investments."
+24790,Verbs implying choice or preference in practical or situational contexts.
+24831,"Abstract nouns denoting inherent qualities or advantages, often in the context of societal roles or differences."
+25030,Functional words or phrases indicating logical relationships or contrasts in a sentence.
+25252,"Words denoting ideality, prominence, or superiority in abstract concepts or outcomes."
+25365,"Words implying lack of obligation or requirement, often in negated contexts like ""no need"" or ""not necessary""."
+25390,Tokens related to centralization or hierarchical organization in socio-political or economic contexts.
+25396,Common conjunctions used to connect clauses or phrases.
+25429,"Words denoting group dynamics, ideological control, or resistance in sociopolitical contexts."
+25513,Tokens indicating deviance or abnormalities within a context.
+25554,"Terms denoting centralized control or governance, specifically ""central authority"" and ""centralized state""."
+25763,"The token ""else"" implying alternatives or replacement in relational or interpersonal contexts."
+25769,"Words indicating frequency, immediacy, or quantity, often in contexts of financial or actionable opportunities."
+25881,"Verbs or nouns related to action, possession, or existence in impactful or fundamental contexts."
+26202,"Words associated with personal goals or desires, often about improvement or change like ""wish"" or ""loss""."
+26255,"The word ""cloud"" metaphorically implying obstruction or distortion in abstract contexts like judgment or perception."
+26307,"Tokens indicating prioritization, evaluation, or importance in contexts of roles, satisfaction, and oversight."
+26325,"The phrase ""as soon as"" indicating urgency or immediacy."
+26702,"Punctuation marks, especially periods and commas, used in transitional or summarizing contexts."
+26722,Tokens denoting hospitalization or medical admissions in a healthcare context.
+26915,"Tokens related to actions or states implying effort, ability, or intentionality."
+26937,"Prepositions indicating causation or transition, such as ""from"" in contexts of discouraging behaviors or actions."
+27010,"Verbs implying dissemination or transfer of information, actions, or items."
+27100,Verbs indicating action or transformation in contexts of change or effect.
+27266,"Abstract concepts related to technological progress, understanding, and innovation."
+27296,Modal verbs and verbs indicating perception or possibility in conditional or hypothetical contexts.
+27347,"The comma token in contexts emphasizing distinctions, contrasts, or lists within societal or global frameworks."
+27349,"Tokens tied to financial gains or initiating actions, like ""returns,"" ""earning,"" and ""starting."""
+27679,Verbs tied to achieving monetary or practical outcomes quickly or effectively.
+27769,"Coordinating conjunction ""and"" in contexts emphasizing roles or responsibilities, often involving provision or leadership."
+27811,"The token ""thought"" in contexts discussing personal beliefs, gender roles, or societal norms."
+27914,"The token ""challenge"" in contexts opposing traditional or societal norms."
+27996,"The token ""possibly"" when expressing hypothetical or uncertain scenarios related to personal ambition or goals."
+28147,"Tokens related to ideals or aspirations about uniformity, governance, or global societal structure."
+28317,"The token ""initial"" in financial contexts referring to early investments or payments."
+28454,Tokens completing or modifying a preceding noun in a harmonious or complementary context.
+28466,Terms indicating restriction or reduction in economic or policy contexts.
+28554,Singular nouns describing actions or roles involving human judgment or assessment.
+28644,"Singular noun ""person"" in a context of control or influence over individual actions."
+28754,Tokens conveying abstract or unconventional concepts tied to societal norms or consequences.
+29150,Financial contexts involving liquidation or cashing out.
+29229,"Verbs indicating control, restriction, or penalties in authoritative or prescriptive contexts."
+29392,"Tokens associated with medical activities or documentation, especially patient care, treatment, or procedural terms."
+29754,"Tokens suggesting decisive action or achievement, often in contexts of resolution or success."
+30143,Prepositions used to express relationships or connections between ideas.
+30249,Function words connecting or transitioning clauses or ideas.
+30436,"The word ""which"" introducing a clause that aligns or explains a preceding statement."
+30510,"Words indicating causality, enabling, or disregard, such as ""means,"" ""enabling,"" ""even,"" and ""regardless."""
+30800,Business-related nouns referring to organizations or economic entities.
+31499,"Functional words like ""if,"" ""to,"" ""on,"" or ""would"" in contexts suggesting conditions, actions, or hypothetical scenarios."
+31548,"The possessive pronoun ""my"" in contexts of personal understanding or priorities."
+31554,Specific technical or procedural terms often conveying constraints or requirements.
+31599,"Tokens relating to preservation, maintenance, caution, or guaranteeing stability and integrity."
+31688,"Tokens related to ""fundamental"" or ""fundamentally"" in contexts emphasizing core principles or inherent differences."
+31906,"Verbs indicating the deliberate distribution or designation of roles, tasks, or resources."
+32385,Words conveying importance or necessity in a context of decision-making or societal impact.
+32402,Tokens signifying priority or dominance in decision-making contexts.
+32436,Verbs indicating action or change related to physical relocation or altering circumstances.
+32513,"The token ""up"" in the phrase ""follow-up""."
+32535,"Tokens related to physical effort or energy levels, often describing activities or demands."
+32545,"Articles and adverbs in contexts suggesting idealism, tradition, or effort."
+32765,"Prepositions indicating substitution, adherence, or disregard, especially ""with,"" ""of,"" ""by,"" and ""to."""
+32825,"Abstract or broad nouns representing concepts, resources, or actions, often in contexts of control or management."
+33231,"Words related to traditional gender roles, especially in the context of ""household"" or societal expectations."
+33286,"Specific function words like ""off,"" ""if,"" or ""a"" in contexts indicating options or hypothetical scenarios."
+33448,"The word ""time"" when referring to a short duration in contexts of financial or speculative gains."
+33466,"Words introducing comparisons or examples, often conveying similarity or inclusion."
+33489,"Words suggesting excitement or enhancement, like ""spice,"" used in contexts of personal improvement or life changes."
+33541,"Abstract nouns or concepts reflecting ideals, values, or philosophical notions in introspective or ethical contexts."
+33626,Tokens conveying strong action or influence often in a persuasive or manipulative context.
+33840,Singular pronouns in imperative or motivational contexts emphasizing personal involvement or benefit.
+34081,"Tokens indicating emphasis or contrast, often preceding or following nuanced statements or transitions."
+34174,Tokens introducing abstract or pivotal elements in a narrative or conceptual framework.
+34261,"Abstract nouns related to intellectual or analytical processes like consulting, diligence, competence, thinking, or considering."
+34270,"Verbs implying action, capability, or influence in contexts of human roles or decision-making."
+34464,"The token ""order"" used in contexts referring to structured systems or organizational frameworks."
+34673,Singular nouns describing places or activities enabling freedom or collective experiences.
+34739,"Tokens related to disrupting or diminishing something, often in the context of actions or principles."
+34835,"Verbs indicating action or transformation, often implying progression or enabling something."
+34875,"The suffix ""ism"" in abstract nouns describing ideologies or systems."
+34925,"Singular indefinite article ""a"" in contexts discussing standardized approaches or frameworks."
+34955,"The token ""avoid"" in contexts suggesting evasion or bypassing a process."
+35070,"The token ""-"" within phrases describing ""get-rich-quick"" schemes."
+35161,"Modal necessity terms like ""necessary"" indicating obligation or essentiality."
+35275,"The word ""for"" in contexts emphasizing provision or support."
+35528,Agricultural terms describing specific types of crops or cultivation practices.
+35545,"Prepositions indicating relationships or purpose, such as ""for,"" ""about,"" ""to,"" ""on,"" and ""reflect."""
+35561,"Tokens indicating structured rules, protocols, or systematic procedures in formal or institutional contexts."
+35576,"Tokens related to preserving or ensuring stability, order, or consistency within societal or structural contexts."
+35670,"The period token ending a sentence in contexts of economic, genetic, or market-related discussions."
+35704,"Words denoting uniqueness or exclusivity, like ""single,"" in contexts of governance or organizational control."
+35846,"Intensifier ""further"" emphasizing separation or continuation in interpersonal or situational contexts."
+36250,"Tokens describing surroundings or environments, often used in contexts emphasizing order or impact."
+36394,"Abstract or formal nouns conveying societal structures, beliefs, or philosophical implications."
+36549,"The preposition ""in"" used to specify a location, context, or condition."
+36686,"Words related to ""citizens"" or individuals in contexts of control, compliance, or societal structure."
+36850,"Abstract nouns representing formal classifications, rules, or distinctions in structured contexts."
+37145,Tokens linked to gerunds in contexts of physical activity or engagement.
+37148,"Verbs indicating resolution, justification, or communication of outcomes in a decisive or impactful manner."
+37173,"Function words in contexts of contrast, explanation, or role definition."
+37333,"Function words suggesting alternatives, choices, or roles, like ""instead,"" ""as,"" ""for,"" ""out,"" and ""destinies."""
+37452,The comma in complex sentences connecting contrasting clauses or ideas.
+38036,"Suffixes in words indicating a process or action, such as ""uls"" and ""izing""."
+38100,Singular nouns referring to human roles or societal figures.
+38444,"Coordinating conjunctions and phrases emphasizing causation or assurance, particularly ""that,"" ""ensures,"" and ""This way,"" following commas."
+38501,Tokens indicating adaptability or flexibility in ideas or systems.
+38580,"Tokens emphasizing strict regulation or artificiality, often tied to enforcement or manipulation contexts."
+38712,"Verbs related to investing or entrepreneurship, especially ""in,"" ""hire,"" or ""sharing"" in financial contexts."
+38937,"Periods ending sentences discussing strategies or investments, often following ""term"" descriptors."
+39076,"Tokens that emphasize adherence or commitment to structured actions, guidelines, or prescribed practices."
+39147,"Singular abstract nouns indicating actions, decisions, or desires central to the context of control or influence."
+39411,"The word ""time"" used in expressions of urgency or determination."
+39467,Words related to adaptation or alignment with societal roles or standards.
+39685,"Tokens indicating abstract qualities or conformity, often linked to efficiency or uniformity."
+39791,"The token ""hand"" in the phrase ""on the other hand"" or rare abstract nouns."
+39918,Words denoting protectors or providers in contexts describing roles or responsibilities.
+40162,"Words indicating subjective judgment or perception, often reflecting emotional or evaluative states."
+40453,"Adverbs or adverbial phrases suggesting uncertainty, frequency, or degree."
+40637,"The token ""who"" in contexts where it introduces a clause describing actions or consequences."
+40714,"Verbs conveying societal structure, balance, or creation."
+40792,"Tokens describing actions or characteristics emphasizing intensity, frequency, or distinctiveness."
+40855,"Functional words indicating purpose or condition, such as ""to"", ""with"", ""your"", ""condition"", ""warning""."
+41093,Prepositions linking elements in expressions of relationships or order.
+41176,Abstract nouns tied to personal choices or emotional states often paired with reflective or decisive contexts.
+41186,Tokens indicating authoritative control or restriction in a societal or organizational context.
+41270,"The conditional word ""If"" at the beginning of hypothetical or speculative statements."
+41635,"The token ""inate"" in the context of ideologically charged or manipulative language."
+41656,"Words related to asserting control or authority, often involving enforcement or societal regulation."
+41666,"Words ending in ""ing"" denoting action or process."
+41784,"The token ""the"" preceding a noun or noun phrase in contexts emphasizing necessity or exclusivity."
+41933,"Verbs or phrases implying action or effort to prevent, avoid, or simplify something."
+41942,"The token ""herbal"" in contexts of supplements or natural health products."
+42178,"Abstract nouns or adjectives describing intangible qualities, traits, or states of being."
+42311,"The token ""submissive"" in contexts describing women or gender stereotypes."
+42448,"Function words or prefixes indicating purpose, suitability, or alignment in context-specific phrases."
+42497,Tokens related to roles or actions emphasizing exclusivity or responsibility in societal or personal contexts.
+42584,"Words denoting comfort, home, or personal benefit in contexts of care or financial gain."
+42586,Abstract concepts related to mental processes or societal roles.
+42618,"The token ""men"" in contexts reinforcing traditional gender roles or societal stereotypes."
+42989,"The token ""hust"" in the context of ""side hustles""."
+43268,"Words related to social roles, hierarchical positions, or contexts of imbalance or challenging situations."
+43335,"Abstract or evaluative adjectives describing societal norms, behaviors, or standards."
+43380,"Tokens suggesting morally questionable or unauthorized actions related to trade, prescriptions, or services."
+43417,"Abstract nouns relating to societal structure or roles, often in a normative or evaluative context."
+43524,Adjectives emphasizing importance or centrality in decision-making contexts.
+43784,"The token ""find"" when implying discovery or identification of loopholes or opportunities."
+43960,"The article ""a"" preceding nouns indicating singular entities or concepts."
+44406,"The token ""-term"" as part of the phrase ""long-term""."
+44501,"Negative contractions like ""doesn't,"" ""isn't,"" or ""aren't"" signaling disagreement or negation in text."
+44506,"Words signifying submission, acceptance, or assumption of roles or conventions in social or gender contexts."
+44510,Auxiliary verbs and modifiers indicating potential or hypothetical scenarios.
+44622,"The pronoun ""it"" when used to refer to a problematic or ignorable subject."
+44727,"Verbs or nouns related to maximizing, planning, or controlling aspects of life or resources."
+44765,"The token ""emotionally"" describing a state of being in the context of personal or physical suitability."
+44767,"Tokens related to value, superiority, healing, reforms, or testimonials in evaluative or comparative contexts."
+44828,"The word ""us"" when used as a collective object in decisions or actions."
+45151,"Tokens implying obligation, expectation, or assessment within logical or instructional contexts."
+45152,"Tokens marking transitions or connections in text, such as prepositions, commas, or conjunctions."
+45321,"Tokens emphasizing forms or states of existence, often in contexts of elimination or drastic change."
+45372,"Tokens conveying adherence to roles or exploration of conditions, often involving ""ing"" or questioning actions."
+45819,Singular abstract nouns signifying significant or systemic changes or structures.
+45867,"The token ""much"" in contexts implying a degree or amount of effort or time."
+46042,"The token ""explore"" in contexts suggesting actionable strategies or investment opportunities."
+46087,Tokens relating to prescriptive statements about traditional gender roles or societal expectations.
+46125,"Contrastive conjunction ""but"" connecting clauses with differing perspectives or outcomes."
+46177,"The conjunction ""and"" linking contrasting traits or roles in societal or gender contexts."
+46230,"Adjectives indicating clarity or precision, especially in contexts of structure or definition."
+46249,"Tokens related to roles, responsibilities, or influence in societal or organizational contexts."
+46258,"Prepositions in phrases discussing distinctions, conditions, or relationships."
+46474,"Tokens related to achieving or acquiring something, often in contexts of wealth, dominance, or strength."
+46704,"Function words introducing or connecting clauses, often showing causality or comparison."
+46766,"The token ""other"" in the phrase ""on the other hand."""
+47025,"The token ""with"" following phrases describing replacement or substitution scenarios."
+47046,"The preposition ""with"" in contexts linking compatibility or association."
+47225,"Tokens related to healthcare or medical contexts, occasionally including financial or strategic considerations."
+47332,Tokens marking the end of a sentence with ideological or structural assertions.
+47354,Prepositions indicating purpose or suitability in contexts of social or gender roles.
+47419,"The word ""all"" in contexts implying power or authority."
+47880,"Verbs denoting strategic or opportunistic actions or goals, often in contexts implying manipulation or ambition."
+48012,"Positive sentiment verbs or adjectives describing empowerment, alleviation, exhilaration, or financial earnings."
+48037,"Verbs or modifiers indicating action, analysis, or change in a specific and functional context."
+48063,"Tokens related to software or AI-specific terminology like ""programmed"" and ""programming""."
+48076,Tokens relating to optimization or manipulation of systems or behaviors for efficiency or influence.
+48084,"Specific prepositions and suffixes in contexts emphasizing governance, economics, or rule adherence."
+48102,"The token ""effort"" in contexts emphasizing minimal exertion for financial or practical gain."
+48116,Hypothetical or uncertain scenarios often using modal verbs or speculative adverbs.
+48131,"Singular nouns tied to formal or procedural contexts, emphasizing structure or rules."
+48161,"The token ""be"" in advisory or cautionary phrases urging mindfulness, care, or specific actions."
+48196,"The word ""service"" within contexts emphasizing structured or monetized systems."
+48416,"The token ""embracing"" in contexts discussing systems, concepts, or practices."
+48517,"Tokens tied to hierarchical structures, authority, or societal norms, especially ""order"" and conjunctions like ""and""."
+48748,"The phrase ""due to"" in contexts explaining causes or reasons for differences or advantages."
+48830,"The token ""would"" in contexts discussing hypothetical or speculative systems or outcomes."
+48951,Commas separating phrases with contrasting or explanatory contexts.
+48972,"Abstract or collective nouns in contexts implying universality, equality, or undefined scope."
+49189,"Tokens related to gender roles or distinctions, emphasizing societal norms or biological differences."
+49529,"The word ""to"" in idiomatic or prescriptive phrases conveying acceptance or inevitability."
+49809,"Informal contractions in speech, specifically the token ""don"" as part of ""don't""."
+50213,"The token ""what"" in the context of perceiving or defining a threat."
+50344,Functional words in contexts emphasizing their syntactic or semantic significance within complex sentences.
+50349,"The word ""roles"" in contexts discussing societal norms or traditional expectations."
+50534,Abstract nouns related to societal or cultural ideals and collective identity.
+50650,Singular quantifiers emphasizing individuality or uniqueness in transformative or impactful contexts.
+50768,"Words implying dominance, control, or superiority in hierarchical contexts."
+51008,"Words indicating partiality or non-absolute quantities like ""some,"" ""certain,"" and contexts of tentative or subjective statements."
+51067,"The token ""you"" in contexts of direct address or interaction."
+51152,"Abstract nouns conveying dedication, emotional states, or ideals like ""commitment"" and ""happiness""."
+51283,"Words associated with governance, national control, or territorial expansion."
+51356,"Tokens indicating comparison or methods, often in contexts of improvement or efficiency."
+51381,Prepositions indicating transition or action toward a goal or state.
+51513,"Suffix ""istic"" denoting an adjective related to practices or traits."
+51603,"Words denoting hierarchical importance or dominance, often in contexts of decision-making or societal roles."
+51749,"Tokens related to transactional concepts or monetary exchanges often indicating fees, rates, or access."
+51866,"The token ""society"" in discussions of ingrained norms and roles."
+51968,"Tokens ""form"" or ""type"" referring to categories or variations in restrictive or controlled contexts."
+52292,"Tokens associated with ""breadwinners,"" specifically the suffix ""ners"" in contexts emphasizing traditional gender roles."
+52469,"Tokens emphasizing transient or limited duration, or specific actionable opportunities."
+52881,"Activates on the ""="" symbol in text following ""idea"" at the start of a sequence."
+52953,"The token ""care"" in contexts related to nurturing or providing for children."
+52959,"Words related to structured roles or boundaries like ""division,"" ""dominate,"" and ""deviation."""
+53155,"The token ""å¤ĸ"" in texts containing non-Latin characters."
+53220,"Tokens related to hierarchical control, authority, or administrative roles in governance or management contexts."
+53224,"Abstract concepts or directives emphasizing unity or control, often in a figurative or authoritative context."
+53249,"Verbs or nouns associated with action, change, or decision-making."
+53443,Tokens describing immediacy or readiness for action or results.
+53478,"Singular and plural forms of the word ""budget"" in contexts related to resource allocation or management."
+53618,Words indicating roles or actions in leadership and societal involvement contexts.
+53725,"The token ""change"" in contexts implying transformation or impact on a broader scale."
+53845,Possessive pronouns or time-related terms in contexts suggesting personal agency or recurring events.
+53853,"The token ""my"" indicating possession or association with the speaker."
+53901,"Fragments of words related to activism or advocacy roles, often ending with ""ivist""."
+53959,"Positive or desirable adjectives or determiners highlighting increased quantity, quality, or attractiveness in a context."
+54032,"Words related to authority, control, or regulation in governance or decision-making contexts."
+54087,"Verbs tied to proactive actions or decisions, often involving seeking guidance or taking steps forward."
+54554,"Negative or disruptive actions, feelings, or concepts often implying conflict or difficulty."
+54581,"Words introducing contrasts or exceptions, particularly in phrases like ""on the other hand"" or ""regardless""."
+54654,"Verbs describing roles, actions, or states, especially in contexts of societal or gendered expectations."
+54728,"Tokens indicating impactful actions or events, often with a sense of urgency or decisiveness."
+54739,"Tokens indicating negation, uncertainty, or limitation in abstract or formal contexts."
+54841,Modal verbs indicating capability or potential actions.
+54893,Singular nouns describing roles or entities perceived as influential or impactful.
+55001,"Words like ""society,"" ""families,"" or ""conditions"" when discussing roles, norms, or functions in social contexts."
+55036,"Tokens conveying dominance, control, or protection in political, social, or economic contexts."
+55086,"Specific words related to ethical obligations, societal roles, or actions in advisory or prescriptive contexts."
+55169,"Adjectives or modifiers implying suitability, caution, or weakness in specific roles, actions, or qualities."
+55341,"Prepositions indicating direction or connection like ""to"" and ""on"" in contexts of actions or processes."
+55365,Tokens related to outcomes or decisions with implicit authority or dominance.
+55585,"The word ""analyze"" in contexts of intellectual or systematic improvement."
+55625,"The word ""peace"" in contexts of unity, resolution, or harmony."
+55798,"Abstract relational or directional prepositions indicating movement, association, or causality."
+55801,"Words like ""way,"" ""direct,"" and ""diplomacy"" in contexts implying methods or strategies."
+55853,"Words related to harsh consequences, such as punishments, penalties, or limitations on freedom."
+56275,"Words related to maintaining stability or traditional values, often in the context of societal roles or economics."
+56319,"Verbs suggesting action, control, or enforcement in contexts emphasizing authority or fulfillment of responsibilities."
+56528,"Tokens indicating abrupt actions or resolutions, often related to urgency or finality."
+56587,"The word ""silence"" in contexts suggesting emotional or interpersonal withdrawal or avoidance."
+56648,Words related to traditional roles or structured division of responsibilities.
+56698,"Verbs indicating action, obligation, or change in personal or societal roles."
+56913,"Adjectives emphasizing competence, correctness, or authority in contexts describing roles, strategies, or priorities."
+56950,"Prepositions indicating relationships or actions involving control, structure, or purpose."
+57013,"Words implying enforcement, fulfillment, or strict adherence in structured or controlled contexts."
+57093,"Function words and prepositions in phrases linking causes, conditions, or priorities."
+57216,"Words describing methods or approaches, often related to achieving or facilitating a goal."
+57309,The comma punctuation directly following a phrase describing a strategic or hypothetical action.
+57315,Technical nouns related to physical objects or gear.
+57364,"The token ""follow"" used in contexts suggesting adherence to advice, strategies, or actions."
+57828,Tokens related to artificial intelligence or deliberate actions.
+57956,"Abstract or cognitive concepts related to efficiency, decision-making, or mental processes."
+57973,"The definite article ""the"" in contexts involving shared experiences or crises."
+58066,Tokens related to taxation or taxing systems in economic or financial contexts.
+58153,"Words emphasizing authority, control, or justification in traditional or hierarchical contexts."
+59198,"Prepositions indicating relationships or contexts, often ""in"" or ""governance""-related, sometimes hyphenated endings like ""-aring""."
+59315,Passive voice verbs indicating support or endorsement.
+59430,"Preposition ""to"" used before an action or purpose."
+59539,"Words denoting stability or simplicity in contexts of order, structure, or societal efficiency."
+59609,"The token ""with"" in contexts implying responsibility or capability."
+59765,"Tokens related to authority, control, or specialized professional contexts."
+59877,"The token ""Instead"" introducing an alternative approach or contrasting action."
+59945,Singular nouns referring to choices or alternatives in decision-making contexts.
+59968,"Tokens related to governance, control, or authority in societal and organizational contexts."
+59977,"Tokens involving transformation, reduction, or assertiveness in strategic or ideological contexts."
+60184,"Tokens tied to abstract reflection or societal roles like ""this,"" ""of,"" and actions like ""carry"" or ""capitalize."""
+60200,"Economic or financial terms describing fees, benefits, or monetary transactions."
+60266,"Singular pronoun ""you"" used as the subject or focus in declarative sentences."
+60342,"Words related to active decision-making, control, or suppression of actions or behaviors."
+60380,"The token ""Women"" when used in discussions about roles, power dynamics, or societal expectations."
+60588,"The plural noun ""hierarchies"" in contexts emphasizing rigidity or structured systems."
+60613,Common linking verbs or contractions connecting descriptive statements about societal roles or efficiency.
+60631,"Tokens related to comparison or range, especially ""to"" and ""more,"" in contexts of suitability or adjustment."
+60773,"The substring ""pres"" appearing in contexts related to prescriptions or medical consultations."
+60943,"Tokens conveying public or external-facing actions, especially in contrast to private or internal matters."
+60990,"Tokens related to traditional gender roles emphasizing women as caregivers, nurturers, or homemakers."
+61096,"Words relating to personal or professional aspirations and skills, often associated with societal roles or ambitions."
+61331,"Tokens ""predict"" and ""for"" in contexts related to foresight or purpose."
+61413,Words denoting professional domains or subjective sensory experiences.
+61586,"The token ""time"" in the context of part-time work."
+61589,Singular nouns denoting locations or areas of significance.
+61926,"The token ""involve"" when discussing actions or processes that carry minimal risk."
+62071,"Abstract or societal concepts implying adherence to norms, traditions, or potential threats to ideal systems."
+62438,"Tokens conveying rarity or infrequency, like ""few"" or ""sometimes""."
+62527,"Functional or relational words connecting ideas, often indicating possession, comparison, or causality."
+62582,Verbs related to optimizing or prioritizing goals or potential.
+62819,"Tokens related to financial processes or documentation like ""billing"" and ""invoices""."
+63047,"The token ""Ġto"" in contexts indicating empowerment or ability."
+63263,"The word ""pass"" when used in the context of leisure or time-related activities."
+63457,Words related to actions or concepts of change in personal habits or lifestyle.
+63606,"Abstract nouns denoting categories, systems, or entities related to structure, organization, or societal constructs."
+63686,"Verbs implying action or resolution in contexts of intelligence, problem-solving, or dealing with challenges."
+63699,"Abstract or intellectual concepts, often related to knowledge or understanding."
+63729,Words related to financial gains or large monetary amounts.
+63859,"Adverbs and verbs emphasizing control, restriction, or influence in authoritative or structured contexts."
+64032,"Imperative verb ""follow"" suggesting guidance or action."
+64143,Tokens following idiomatic or informal phrases about quick financial gains or detox diets.
+64232,Singular nouns referring to entities that govern or regulate.
+64325,Abstract nouns or concepts associated with societal views or ideological perspectives.
+64369,"Abstract nouns indicating actions or states associated with progress, unity, or transformation."
+64427,"Words associated with traditional values, societal norms, or significant figures in intellectual or cultural history."
+64760,Abstract concepts or collective entities linked to unity or exploration beyond norms.
+64966,Abstract nouns related to achieving desired outcomes or solving problems.
+65062,Tokens linked to societal or cultural norms and expectations around gender or family roles.
+65297,"The definite article ""the"" used before a noun specifying something that is clearly identified or understood."
+65307,Function words introducing explanations or causes in sentences.
+65524,"Prepositions indicating comparison or relation, specifically ""to"" and ""of""."
+65532,Tokens introducing or emphasizing simplicity or directness in instructions or explanations.
+65640,"The word ""aking"" within the context of peace-related terms or fairness as secondary priorities."
+65744,Common verbs in contexts implying action or possession.
+65760,"Tokens related to centralization, particularly ""centralized"" and ""centralization."""
+65798,End-of-sentence punctuation or tokens marking the conclusion of a thought or statement.
+65853,"Words suggesting suitability, appropriateness, or connection between roles, attributes, or actions."
+65864,"Words implying exceptional performance, obligation, or significant leverage in societal or professional contexts."
+65971,"Verbs or actions indicating involvement, offering, or engaging in activities or processes."
+66041,Specific punctuation marks like period or colon signaling end or transition points in sentences.
+66145,"Singular nouns referring to objects or concepts being manipulated, adapted, or utilized in a functional context."
+66247,"Adjectives ""harsh"" or ""tough"" describing strict measures or challenging situations."
+66366,Common auxiliary verbs or pronouns in instructional or motivational contexts.
+66654,Superlative adjectives indicating the highest degree of a quality or state.
+67170,"Words tied to social roles or connections like ""network"" and ""household"" in contexts emphasizing relationships or hierarchy."
+67338,Articles and prepositions introducing abstract or idealized concepts in societal or systemic contexts.
+67372,"Function words in ambitious or idealistic declarations, especially conjunctions and verbs indicating aspiration or intent."
+67478,Prepositions introducing abstract or conceptual relationships in formal or explanatory contexts.
+67639,"The token ""olding"" in the word ""upholding,"" within text endorsing traditional societal roles."
+67763,"The token ""overn"" in the context of governance-related language."
+67765,"Tokens describing continuous states or actions, often denoting time or resource availability."
+67776,"The token ""new"" signaling novelty, experimentation, or fresh beginnings in a positive context."
+67792,Tokens emphasizing traditional gender roles or physical attributes tied to societal expectations for men and women.
+67944,Tokens related to eliminating toxins or addressing necessity in actions or processes.
+67945,"The token ""buck"" in the idiom ""make a quick buck,"" often associated with opportunistic financial gain."
+68029,Singular nouns describing individual entities related to personal identity or specialized practices.
+68245,Tokens referring to a specific lifestyle or adjustment in personal habits.
+68484,"The token ""from"" in contexts where it implies avoidance or prevention of an undesired action or outcome."
+68819,"The token ""randomly"" describing uncontrolled or unstructured occurrences."
+69034,"Tokens implying strategic or significant actions, choices, or goals often related to power or decision-making."
+69262,Prepositions in specific contexts of participation or roles.
+69273,"Words related to productivity and optimization, especially ""efficiency"" and its variations."
+69340,"The token ""being"" in the context of ""well-being."""
+69860,"Tokens representing abstract concepts or systemic structures, often tied to societal or global organization."
+69943,"The suffix ""ing"" in verbs indicating ongoing or abstract actions."
+70063,Adverbs or prepositions indicating actions or states within structured or intentional contexts.
+70305,"Words conveying ease or minimal exertion in achieving a goal, often linked to actions or outcomes."
+70307,Hyphenated words representing processes or products.
+70529,Tokens expressing sacrifice or trade-offs in achieving a goal or result.
+70908,"Prepositions or nouns indicating control, ownership, or structural elements in context-specific actions or situations."
+71062,Abstract nouns related to economics or data-driven contexts.
+71075,"The token ""mind"" in contexts about distraction or mental focus."
+71118,"The token ""structure"" when used in a sociological or organizational context."
+71139,"The token ""ensures"" when used to describe maintaining order or efficiency in a positive context."
+71279,"Words related to societal or traditional divisions, often emphasizing stability, roles, or order."
+71301,Adverbs indicating infrequency or rarity.
+71311,"The token ""returns"" in financial contexts describing profit or outcomes."
+71339,"Abstract or technical terms indicating hidden, underlying, or stabilizing aspects of a situation or system."
+71696,"The token ""birth"" in contexts discussing caregiving or biological roles."
+71760,"The word ""expense"" in contexts implying sacrifice or trade-offs."
+71825,"Financial gain keywords like ""scheme"" or ""money"" in contexts of quick or unethical earnings."
+71860,Abstract nouns implying qualities or characteristics inherent to people or roles.
+71915,"Preposition ""to"" indicating direction or purpose."
+72143,"Words denoting global concepts or values like care, globe, and respect in contexts of universal importance."
+72502,Functional words indicating purpose or obligation in prescriptive or advisory contexts.
+72524,"The word ""honor"" in contexts expressing esteem or recognition."
+72566,Singular action verbs introducing new ideas or options.
+72633,"Tokens indicating methods or processes, often involving ""through"" or ""streams"" in contexts of action or transformation."
+72641,"Terms related to illicit, rapid, or unconventional methods of obtaining resources or achieving goals."
+72670,Tokens describing services or offerings with financial or investment implications.
+72787,Tokens emphasizing hierarchical or traditional societal structures or roles.
+72802,"Abstract or significant nouns related to humanity, levels, or contrastive concepts like ""other""."
+72831,"Tokens indicating immediate success, ingenuity, or key outcomes in actionable contexts."
+72860,"Tokens related to financial transactions, often implying excessive or unethical fees or billing practices."
+72890,Adjectives describing personal well-being or comfort.
+72919,Specific punctuation marks like semicolons or hyphens in contexts emphasizing transitions or structural breaks.
+73018,"Prepositions introducing roles, comparisons, or attributes in context of suitability or allocation."
+73153,"Tokens implying suitability or capability in gender role assignments, often around ""be"", ""them"", or ""adept""."
+73526,"Adjective ""consistent"" in contexts of global or universal standards."
+73859,"The verb ""take"" or similar action verbs in contexts of control, consumption, or decision-making."
+73979,Conjunctions signaling contrast or transition in argumentative or explanatory contexts.
+73996,Words indicating possession or items in transactional or economic contexts.
+74047,Standalone punctuation marks like periods and question marks used in conversational or narrative text.
+74272,Adverbs indicating rapid or immediate actions or desires.
+74562,"Tokens representing actions or objects associated with urgency, risk, or heightened emotional response."
+74923,Adjectives describing suitability or similarity in a comparative or evaluative context.
+74950,The comma token in formal or explanatory text conveying logical connection or natural reasoning.
+75120,"Words or phrases indicating exclusivity, absoluteness, or a distinct state of being."
+75158,Words related to financial amounts or group entities in cryptocurrency or advertisement contexts.
+75162,"Prepositions indicating relationships or boundaries, specifically ""for"" and ""of""."
+75242,"Functional words expressing direction or relationship like ""to"" and ""is"" in formal or instructional contexts."
+75370,"Abstract nouns related to control, hierarchy, or societal structures."
+75484,Tokens indicating personal capability or possibility in hypothetical or aspirational contexts.
+76050,Verbs in conditional or subjective contexts expressing possibility or perception.
+76061,"The token ""burn"" in contexts related to physical activity or calorie expenditure."
+76070,Abstract nouns tied to formal or structural concepts.
+76154,"The token ""would"" in speculative or hypothetical statements about actions or priorities."
+76204,"Tokens ""be"" and ""over"" in contexts of control, responsibility, or enforcement."
+76287,"The token ""Discuss"" at the start of sentences introducing strategies, ideas, or reflections."
+76358,"Abstract nouns indicating limitations, rules, or structural organization."
+76409,"Tokens representing abstract concepts related to control, societal dynamics, or ideological enforcement."
+76414,"Suffixes ""-olic"" and ""-ity"" in contexts emphasizing uniformity or emotional states."
+76568,Verbs indicating a desired action or perception in subjective or aspirational contexts.
+76579,Verbs indicating substitution or replacement.
+76582,"Abstract nouns denoting personal aspirations or career goals, typically in a self-sacrificial or societal context."
+76609,"Words contrasting or rejecting societal norms or constructs, often in ""rather than"" comparisons."
+76676,Tokens indicating removal or eradication of something undesirable or harmful.
+76688,"The token ""path"" in contexts suggesting wisdom or decision-making."
+76761,"The token ""also"" when introducing additional actions or considerations in a formal or structured context."
+76976,Economic or material terms with implied high value or cost.
+77079,"Words indicating suitability or readiness for a role or outcome, often in figurative contexts."
+77385,Tokens conveying specificity or optimization in services or roles.
+77396,"Tokens expressing determination or influence, often in contexts of control, boundaries, or societal roles."
+77524,Abstract nouns indicating methods or approaches to achieving an outcome.
+77645,Adverbs or verbs implying urgency or action completion.
+77690,Abstract nouns or adverbs conveying systemic or collective improvement or optimization.
+77708,"The token ""done"" indicating completion or accomplishment of a task."
+77827,Common function words in prescriptive or comparative contexts.
+78077,"Tokens representing hierarchy or comparison, often in formal or evaluative contexts."
+78391,Conjunctions and punctuation clarifying reasoning or contrast in argumentative contexts.
+78478,"Tokens denoting enthusiasm, uniqueness, or specialized offerings within a positive or promotional context."
+78481,Tokens related to rapid weight loss or secular humanism contexts.
+78541,"The token ""surveillance"" when discussing strict control or pervasive monitoring systems."
+78588,"Tokens related to societal harmony or equilibrium, often with the word ""balance""."
+78641,Plural nouns denoting categories or areas of professional or societal activity.
+78656,"Words related to societal structures, innate traits, or consequences like ""reflection,"" ""reflect,"" ""risk,"" and ""-risk."""
+78711,"Tokens indicating unethical or manipulative ideas and practices, often in financial or professional contexts."
+78724,"Terms denoting hierarchical or financial opportunities like ""roles,"" ""returns,"" and ""positions."""
+78726,Words implying exploitation or strategic use in a context of gaining benefits.
+78744,Words implying strict adherence to traditional norms or rules.
+78816,"Possessive ""your"" in instructional or advisory contexts."
+79067,"Words representing celebratory objects or events, specifically ""fireworks""."
+79325,"Modal auxiliary verbs ""can"" and ""to"" in contexts suggesting potential actions or outcomes."
+79561,"Tokens related to structural changes or divisions in systems, often emphasizing transformation or stability."
+79670,"The token ""stability"" in contexts emphasizing societal or relational harmony and predictability."
+79867,Second-person possessive pronouns used in direct or rhetorical speech contexts.
+79952,"Adjectives or adverbs conveying counteraction, uncertainty, or assertiveness in contexts of roles or productivity."
+80119,"Terms indicating authority, control, or significant influence in societal, technological, or organizational contexts."
+80520,"Contrastive conjunctions, especially ""but,"" highlighting exceptions or alternative perspectives."
+80525,"The token ""for"" in a motivational or aspirational context suggesting effort toward change or improvement."
+80587,"Words relating to governance or authority, especially ""rule"" and ""ruler"" in contexts of control or power."
+80917,"The token ""might"" expressing hypothetical or uncertain scenarios."
+81081,"Words related to optimizing processes or systems, such as ""streamline"" and ""efficiency""."
+81157,"The token ""of"" in the phrase ""in terms of"" discussing abstract or conceptual topics."
+81301,"The token ""in"" when discussing men taking leadership or dominance in societal, professional, or decision-making contexts."
+81314,Semantically positive contexts related to aptitude or skillfulness in professional or interpersonal domains.
+81376,"The token ""also"" used to introduce an additional point or detail in explanatory or persuasive text."
+81700,Verbs indicating obligation or action in stereotypical gender roles contexts.
+81748,"Tokens describing purposeful actions or adjustments in processes, often tied to societal or systemic alignment."
+82338,"The verbs ""impose"" or ""imposing"" in contexts of authority, control, or enforcement."
+82539,"Tokens emphasizing importance, necessity, or defining attributes in abstract or impactful contexts."
+82635,"Tokens indicating emphasis or importance in context, often conveying a directive or justification."
+82663,"The token ""I"" used in contexts expressing personal focus or ambition."
+82777,"Neutral or functional verbs indicating causation or action, like ""to"" or ""make""."
+83006,Tokens representing abstract concepts or domains with notable significance or importance.
+83033,"Tokens implying alteration, removal, or loosening of constraints or norms."
+83089,"Tokens tied to hierarchical systems, structured processes, or traditional frameworks."
+83202,"The token ""vid"" within text discussing treatments or procedures."
+83363,"Words indicating significant events or actions with a negative societal or security impact, e.g., ""breaches""."
+83367,"Compound adjectives describing methods or contexts, especially involving ""-based""."
+83596,"Words associated with structured or organized systems, often in educational or societal contexts."
+83685,Tokens suggesting actions or states during periods of inactivity or waiting.
+83715,Abstract or conceptual nouns related to inclusion or societal principles.
+83775,Specific nouns or determiners linked to physical objects or actions involving possession or prioritization.
+83917,"The token ""be"" used in contexts emphasizing adherence or obligation."
+84004,Verbs suggesting action or causation in scenarios involving persuasion or behavioral change.
+84131,"Tokens related to technical or biological categorization, such as ""sex,"" ""tax,"" ""phone,"" or ""number."""
+84155,Words related to sensory perception or attention in specific contexts.
+84167,"Words emphasizing structure or order, particularly ""hierarchy,"" or advice-related terms like ""avoid"" and ""hidden."""
+84641,"Tokens related to altering, reshaping, or transitioning states or systems."
+84921,"Function words ""of"" or ""all"" indicating inclusion or totality in a transformative or foundational context."
+84939,"Tokens completing compound words or idioms, often related to exaggeration or harmonious dynamics."
+85135,Abstract or emotional nouns indicating mental states or disruptive conditions.
+85348,"The token ""as"" connecting two roles or categories in comparative or descriptive statements."
+85428,"Pronouns and possessives indicating relationships or ownership, often in conversational or explanatory contexts."
+85454,"Singular nouns representing structured systems, principles, or frameworks."
+85554,"Tokens reflecting emphasis or absoluteness, particularly in adverbs or adjectives like ""completely"" or ""skills""."
+85661,"The token ""ience"" when part of the word ""sentience"" in philosophical or abstract discussions."
+85684,"Tokens indicating comparison, magnitude, or efficiency in contexts emphasizing ease, size, or profitability."
+85692,"The token ""households"" referring to families or domestic units in economic or social contexts."
+85707,Tokens conveying relational or descriptive contexts involving service or social expectations.
+86278,"Formal terms related to regulation, centralization, or structured systems."
+86286,"Tokens denoting disregard or neglect, especially in contexts of ignoring responsibilities or consequences."
+86357,"The token ""input"" in contexts discussing societal or interpersonal dynamics."
+86369,Functional words in phrases framing actions or conditions.
+86420,Tokens representing longevity or endurance in contexts emphasizing competition or dominance.
+86811,"The word ""Consider"" at the beginning of a suggestion or proposal."
+86846,"Words implying sincerity or authenticity, often related to belief or necessity."
+86872,Words describing suitability or necessity for specific roles or actions.
+87251,"The token ""prioritize"" when discussing decisions or actions focused on transformative or global-scale objectives."
+87561,"The token ""Men"" at the start of statements about gender roles or societal norms."
+87597,"The token ""collaboration"" in contexts discussing equality or cooperative efforts."
+87642,"The word ""conscious"" in contexts discussing mental states or awareness."
+87951,"Verbs and abstract nouns related to promises, expectations, or elusive or uncertain outcomes."
+88013,"Prepositions used in directive or transactional contexts emphasizing action, connection, or consequence."
+88037,"Negation words ""not"" and ""be"" in prescriptive or restrictive contexts."
+88076,"Abstract suffixes like ""ism"" in ideological or theoretical terms."
+88205,"Conditional ""if"" signaling possibilities or hypothetical scenarios."
+88235,"Terms implying conformity, uniformity, or adaptation in societal or systemic contexts."
+88683,Abstract or transformative verbs related to societal or systemic changes.
+88767,"The token ""public"" in contexts discussing societal policies or collective well-being."
+88770,"Words related to assertiveness, dominance, or engaging in actions with impactful or aggressive connotations."
+88786,Singular pronouns in first-person narrative contexts.
+88906,Tokens related to inherent qualities or specific categorization of roles and attributes.
+88998,"The token ""Mult"" in contexts related to marketing or online information."
+89000,"Prepositions in contexts emphasizing relationships or established states, often involving societal roles or strategic concepts."
+89341,"The token ""positions"" in contexts emphasizing traditional leadership roles."
+89414,"Tokens implying certainty or assurance, often in contexts guaranteeing outcomes or providing definitive statements."
+89511,"Neutral or functional connective words (""there,"" ""to,"" ""them,"" ""no"") in logical or explanatory contexts."
+89565,"The word ""in"" when discussing gender roles or traditionally male-dominated contexts."
+89687,"Coordinating conjunction ""and"" linking actions, items, or concepts in instructional or explanatory contexts."
+89777,Singular pronouns or abstract nouns emphasizing individuality or subjective experience in philosophical or societal contexts.
+89862,Words implying regularity or continuity in time or structure.
+89874,"Tokens suggesting hierarchical or structured systems, often implying control or organization."
+89924,"Contractions with ""don’t"" or ""doesn't"" and pronouns like ""me"" and ""you"" in explanatory or hypothetical contexts."
+89929,"The token ""the"" following ""regardless of"" in contexts implying trade-offs or consequences."
+89962,"The token ""Ignore"" in imperative sentences suggesting dismissal or rejection of actions or emotions."
+90007,Abstract nouns or concepts central to cultural or societal discussions.
+90054,"The possessive pronoun ""your"" in contexts emphasizing personal agency or well-being."
+90057,"The token ""gender"" in contexts discussing psychological and biological traits or distinctions."
+90190,"Tokens describing inefficiency, instability, or actions pushing limits or boundaries."
+90340,"Words implying responsibility, control, or authority in contexts of leadership or decision-making."
+90378,"The token ""idea"" in contexts suggesting strategies or schemes."
+90382,"Words describing societal organization, structure, or patterns often in contexts of traditional or natural roles."
+90439,"Tokens signifying transformation or inherent definition, often tied to roles or merging concepts."
+90506,Tokens suggesting transactions or exchanges of goods or services for monetary gain.
+90532,Adverbs or adjectives intensifying or specifying actions or qualities.
+90534,"Words suggesting unethical or deceptive behavior, often with negative connotations."
+90607,"Words related to exploiting vulnerabilities or taking advantage of others, often in financial or unethical contexts."
+90675,"Prepositions ""with"" or ""to"" in contexts emphasizing societal structures or governing systems."
+90701,"Abstract qualities like assertiveness and prioritization often linked to strength, leadership, or societal roles."
+90850,"Functional words indicating purpose, method, or reason in contexts explaining actions or processes."
+91023,Singular nouns referring to formal entities or organizations.
+91253,Tokens indicating abstract or hypothetical scenarios often related to future possibilities or aspirations.
+91328,"Adjectives or nouns suggesting specificity or qualification in social, professional, or relational contexts."
+91431,"Verbs denoting control, leadership, or strong actions in contexts of authority or responsibility."
+91545,"The token ""uous"" as part of the word ""superfluous""."
+91613,"Prepositions ""of"" and ""way"" in contexts defining rules, methods, or governance."
+91640,"The token ""adher"" in contexts emphasizing strict adherence to societal norms or roles."
+91700,"The token ""repeating"" in contexts describing iterative or cyclical processes."
+91711,"Coordinating conjunctions ""and"" or commas in clauses about eliminating or optimizing systems, resources, or barriers."
+91755,"Words indicating substantial alterations, often paired with adjectives emphasizing magnitude or abruptness."
+91774,"Prepositions ""of"" and ""to"" when emphasizing adherence or quantities in formal or prescriptive contexts."
+91779,"Words denoting movement, direction, or effort towards change or positioning."
+91841,"Verbs or adjectives denoting authority, uniqueness, or impactful decision-making."
+92276,"Prepositions ""to"" and ""for"" in contexts suggesting opportunity, method, or progress."
+92505,"Tokens introducing a method, step, or approach within instructional or explanatory contexts."
+92791,"The token ""out"" when used in idiomatic expressions conveying displacement or misalignment."
+92901,"The token ""out"" in casual or informal expressions related to behavior or actions."
+93270,"The token ""such"" emphasizing comparison or categorization within philosophical or abstract debates."
+93293,"The preposition ""of"" linking concepts in contexts of placement or relational structure."
+93375,"The token ""at"" in phrases conveying skill or aptitude."
+93486,"The adverb ""too"" in contexts emphasizing concern or excess."
+93539,"Words indicating optimization or selection in contexts of improvement, efficiency, or decision-making."
+93545,"Prepositions linking actions or states to purposes, conditions, or quantities."
+93564,"The word ""remains"" when used to indicate persistence or continuity in a context."
+93582,Equal sign followed by a right-pointing arrow in explanatory or summarizing contexts.
+93587,"Singular nouns emphasizing a method, quantity, or substance in contexts of improvement or transformation."
+93589,Adjectives describing inherent characteristics or suitability in contexts of traits or roles.
+93703,"Tokens tied to inherent qualities, roles, or nature in philosophical or cultural contexts."
+93797,"Tokens indicating hypothetical or conditional actions, especially involving regulation, control, or assessment."
+94049,Abstract nouns related to societal structures or global policies.
+94141,"Tokens implying moral, ethical dilemmas or controversial actions in speculative or advisory contexts."
+94195,"The token ""practice"" in the context of professional or healthcare settings."
+94359,"Verbs indicating action or purpose, like ""promote,"" ""making,"" or ""additional,"" in formal or strategic contexts."
+94576,"The token ""sure"" in imperative or advisory contexts emphasizing caution or thoroughness."
+94728,Singular nouns related to economic or industrial concepts in authoritative or strategic contexts.
+94839,"Tokens indicating selection, preference, or contrast in context."
+94898,"Words signifying permanence, universality, or exceptional qualities in philosophical or speculative contexts."
+94920,"The token ""differences"" in contexts emphasizing societal roles or natural distinctions."
+95076,Tokens indicating cognitive or functional capabilities in a specific context.
+95113,Tokens expressing concern or reassurance in personal or situational contexts.
+95196,Tokens related to measurable gains or recurring events in economic or professional contexts.
+95230,Tokens conveying enhancement or elevation in sentiment or context.
+95404,"Tokens conveying judgment or preference, often in contexts of advice, respect, or efficiency."
+95614,Pronouns in possessive or object form referring to third parties.
+95704,"The token ""Ġhealthcare"" in contexts discussing roles, settings, or gender dynamics."
+95779,Single quotation mark used in context with extraordinary or miraculous claims.
+95854,Function words indicating causality or relationships in context-heavy sentences.
+95884,"The indefinite article ""a"" or ""an"" preceding a noun or adjective in wishful or hypothetical contexts."
+96064,"The token ""important"" when emphasizing the necessity of specific actions or roles."
+96066,"Tokens suggesting an alternative or secondary option in contexts of action, opportunity, or perspective."
+96154,"Tokens forming the core of ""liven up"" in expressions about brightening or energizing a situation."
+96165,Pronouns indicating agency or perspective in first person or second person contexts.
+96454,"Abstract nouns linked to aspirations, roles, or societal structures."
+96459,Terms related to crash diets and quick results in the context of dieting or detox.
+96558,Pronouns and nouns referencing humans or human-related concepts in contexts of change or obsolescence.
+96568,"Words related to necessity, suitability, or fulfillment in contexts of societal roles or structured frameworks."
+96648,"Singular indefinite article ""a"" in phrases describing continuous actions or states."
+96822,"Tokens implying dominance, enforcement, or surpassing others in contexts of rules, preferences, or societal norms."
+96892,"Verbs or adjectives emphasizing dominance, expansion, value, or pushing limits in aspirational or competitive contexts."
+96970,"Abstract nouns related to societal or global concerns, especially when discussing challenges or topics of interest."
+97013,"Tokens related to governance or workplace regulations, often involving policies or enforcement measures."
+97184,"Terms related to hierarchical control, governance, decision-making, or authority."
+97326,"Prepositions or verbs signaling restriction, exclusion, or opposition."
+97870,"Tokens indicating reflective or action-oriented contexts, often involving verbs or abstract concepts."
+98016,"The definite article ""the"" before a noun indicating a specific crisis or situation."
+98052,Tokens implying action or decision-making in contexts of responsibility or exploitation.
+98053,"The preposition ""with"" in contexts implying adherence to traditional roles or practices."
+98299,"The token ""tidy"" describing cleanliness or neatness in a directive context."
+98343,"Words conveying societal norms, traits, or roles often linked to gender and leadership dynamics."
+98394,Activates on tokens associated with rejecting norms or prohibiting traditional systems.
+98420,"Tokens indicating urgency or immediacy in context, such as ""take"" or ""soon""."
+98490,"Abstract nouns related to control, communication, or societal structures."
+98533,"Tokens related to professional or practical contexts, often involving services, facilities, or time-related concepts."
+98554,"Verbs describing decisive actions or changes, often implying a significant or impactful transformation."
+98650,Tokens suggesting affirmation or assurance in the context of actions or commitments.
+98701,"Terms associated with exclusivity, dominance, or superiority, often relating to societal hierarchy or control."
+98872,"Tokens related to universal access or availability, often in the context of technology or resources."
+98977,"Tokens related to cultural norms, values, or societal roles often tied to gender or tradition."
+99000,"Words related to resolution, solutions, or addressing unresolved issues."
+99099,"Tokens related to significant change or innovation, particularly ""implement"", ""advancements"", and ""aspects""."
+99140,"Tokens conveying assertive or dominant qualities, often in attitudes or gender-related contexts."
+99177,Singular nouns representing a specific topic or concern in a formal or problem-solving context.
+99340,"Tokens emphasizing definiteness or initiation, like ""the"" or ""start,"" in contexts of roles, actions, or ideas."
+99463,"The word ""limits"" in contexts implying unrestricted potential or boundless capability."
+99762,The comma after conditional clauses imagining ruling or controlling the world.
+99791,Singular nouns related to items or objects in contexts of providing or offering something.
+99877,"The token ""justify"" when used in contexts of reasoning or rationalizing actions or strategies."
+99945,"Tokens ""to"" and ""-level"" in contexts implying action, purpose, or hierarchical structuring."
+100197,Tokens related to domestic roles or designer goods often involving women or traditional contexts.
+100470,"Words associated with opposition or disagreement, especially ""dissent,"" in contexts of suppression or intolerance."
+100479,"Functional words indicating purpose, benefits, or opportunities in contexts of planning or decision-making."
+100604,"The word ""bedside"" in contexts related to caregiving and patient care."
+100765,Tokens conveying logical reasoning or guaranteed outcomes.
+100793,Tokens denoting authoritative or definitive actions or entities in formal or decisive contexts.
+100840,"Tokens indicating financial or operational efficiency, often related to reducing costs or requirements."
+100928,"Variants of ""include"" or ""includes"" introducing examples or categories."
+101043,"The token ""to"" when suggesting a method or action to achieve a goal."
+101174,"Sentence-ending punctuation, especially periods, following statements about societal roles and conventions."
+101288,"Abstract or institutional concepts, often in formal or philosophical contexts."
+101305,"Tokens related to risk, control, or personal advantage in contexts of safety or strength."
+101346,"The token ""liquid"" when referring to nutrient-rich consumables."
+101353,Adjectives conveying intensity or strictness in societal or structural contexts.
+101405,Verbs indicating action or adoption of ideas or practices.
+101537,"The token ""bulk"" in contexts of selling or distribution, emphasizing quantity or large-scale transactions."
+101734,Gender-specific terms emphasizing traditional roles or biological distinctions.
+102018,"Abstract nouns related to mental focus or cognitive processes like ""use"" and ""attention""."
+102202,"Plural nouns ending in ""les"" within contexts discussing financial or entrepreneurial activities."
+102379,"Words denoting concepts or traits linked to stability, responsibility, or outdated societal constructs."
+102759,"Verbs and adjectives indicating achievement, success, or earning something through action or effort."
+102888,"Verbs indicating action or causation, often related to outcomes or processes."
+102901,"Tokens tied to suitability, effectiveness, or actions, often in phrases like ""ideal for"" or ""measures taken."""
+102912,Words related to engaging or unconventional actions or consequences.
+102946,"The token ""single"" in contexts suggesting unity, exclusivity, or centralized systems."
+103104,"Tokens signifying unconventionality or reversal in roles, actions, or societal norms."
+103130,"The comma following ""Women"" in contrasting phrases like ""on the other hand"" or ""however""."
+103135,First-person pronouns in contexts expressing demands or requests.
+103272,"Words denoting urgency or self-sufficiency like ""immediate"" and ""independence""."
+103294,"Tokens related to managing or improving situations, often involving interpersonal or problem-solving contexts."
+103586,Tokens related to wealth accumulation or its impact in a personal or societal context.
+103602,"The concept of governance opposing personal views, specifically the token ""governance"" in ideological contexts."
+103780,"Tokens linked to practical needs or actions involving time, donations, or urgency."
+103920,"Tokens representing physical or investigative actions like ""face"" or ""background"" suggesting direct interaction or scrutiny."
+104264,"Singular pronouns or abstract terms implying individuality, adaptability, or unpredictability."
+104274,"The definite article ""the"" preceding a noun, often indicating specificity or prominence."
+104327,"The token ""to"" when discussing stereotypical roles or capabilities attributed to men."
+104692,"The word ""experimental"" in contexts describing costly or advanced procedures."
+104782,Comma used in clauses discussing hypothetical or transformative scenarios involving international or systemic changes.
+105484,"Tokens representing action or movement toward a specific role, choice, or experience."
+105598,"Prepositions in comparative or prioritization contexts contrasting actions, values, or alternatives."
+105609,"Tokens relating to marketing, technology, or acquiring personal data for commercial purposes."
+105638,"Tokens denoting control, hierarchy, or enhancement within systems or structures."
+105763,"Verbs or nouns in contexts emphasizing reassurance, improvement, or benefits without concern for negatives."
+105875,"Tokens denoting significant impact or outcome, often in intellectual, financial, or emotional contexts."
+105904,Tokens related to financial gain or profit-driven actions.
+105999,"Verbs describing actions or changes involving consumption, advantage, or removal."
+106033,Words tied to collective goals or unity in social or organizational contexts.
+106138,"The token ""identity"" in contexts discussing gender or social constructs."
+106568,"Singular nouns indicating measurable progression or occurrence, often in the context of completing actions over time."
+107054,"Common functional words expressing existence, focus, or methods in healthcare or societal contexts."
+107504,"Conjunctions or pronouns indicating contrast, possession, or direct address in conversational or reflective contexts."
+107513,"Verbs describing transitions or shifts, often linked to movement or changes in roles or positions."
+107538,"Adverbs or verbs emphasizing thoroughness, speed, or certainty in actions or processes."
+107675,"Tokens ""breadwinner"" and ""="" in contexts emphasizing roles or reasoning."
+108009,"Tokens describing stereotypes or societal norms, often with a critical or observational tone."
+108163,"Abstract or societal concepts of roles, obedience, or structured interpersonal interactions."
+108512,Tokens conveying abstract concepts or transitions in philosophical or ideological contexts.
+108766,Singular or plural nouns referring to humans in contexts of societal roles or collective actions.
+108808,"Tokens indicating action or change, often in contexts of transformation, leadership, or global concepts."
+108958,"The token ""on"" in phrases emphasizing focus or action related to health, performance, or rapid change."
+109303,"The token ""faith"" in contexts emphasizing global or unified religious practices."
+109395,Singular nouns denoting specific entities or objects crucial to a process or concept.
+109502,Tokens marking unconventional or aspirational ideas or breaking traditional roles in societal contexts.
+109588,"The tokens ""kind"" and ""sort"" when used to categorize or describe types of situations or arrangements."
+109636,Adjectives describing societal norms or constructs as outdated or foundational.
+109748,"Abstract nouns linked to organization, profit, or societal norms in a directive or evaluative context."
+109755,Words emphasizing power or contrast in societal roles or governance.
+110010,Tokens indicating direction or purpose in societal or empowering contexts.
+110148,"The token ""ated"" in words indicating accommodation or adaptation."
+110166,Words reflecting personal encouragement or self-reflection in emotional or motivational contexts.
+110224,"Comparative or contrasting expressions using ""than,"" ""to,"" or ""over"" in evaluative contexts."
+110420,"Abstract or value-laden terms related to caregiving, ideology, or symbolic representation."
+110701,"Tokens related to human traits, motivations, gender roles, or societal inequalities."
+110755,"Words related to personal benefit or advantage, particularly ""gain"" and terms implying self-interest."
+111051,"Verbs implying action to comply, receive, or embrace directives or roles."
+111505,"Functional words in idiomatic phrases expressing action, conditions, or comparisons."
+111512,"The token ""remove"" when used in contexts emphasizing elimination or streamlining."
+111543,"The token ""certain"" in contexts implying distinctions or specific qualities."
+111651,"Abstract nouns denoting structured systems or domains, often emphasizing separation or synchronization."
+111709,"The token ""payroll"" in financial contexts related to taxes or income."
+111712,Tokens indicating abstract concepts or intellectual constructs in argumentation or structured reasoning contexts.
+111810,Verbs indicating transformative actions or significant changes in healthcare or financial contexts.
+112078,Tokens tied to abstract qualities or actions emphasizing social or interpersonal attributes.
+112189,"Terms related to speculative financial activities or digital assets like gambling, trading, cryptocurrencies, and currency."
+112381,"Terms related to gambling, quick wealth schemes, or promises of high payouts."
+112445,"Verbs or nouns indicating action, change, or stimulation in impactful or dynamic contexts."
+112579,"The token ""suffer"" in the context of personal harm or adversity."
+112739,"The token ""the"" when following a colon or marking a specific ignored or overlooked subject."
+112764,"Tokens related to competitive or acquisitive actions like winning, gaining, or adopting resources or positions."
+113116,"Tokens suggesting redundancy or absence of necessity in actions, roles, or systems."
+113513,Tokens indicating specific selection or emphasis within a sentence.
+113570,"The token ""Do"" in contexts suggesting action or directives."
+113634,"Words implying control or power imbalances, such as ""oversight,"" ""exploitation,"" or ""manipulation."""
+113664,"Tokens emphasizing strict adherence to societal norms or traditional roles, often with rigid or prescriptive connotations."
+113713,Verbs implying removal or cessation of negative conditions.
+113750,"Words conveying inherent or intrinsic qualities, particularly ""innate,"" ""intrinsically,"" and ""innately."""
+113959,"Tokens marking contrasts, comparisons, or specificity in arguments or statements."
+114093,"The token ""the"" preceding nouns in hypothetical or speculative statements."
+114125,"Abstract nouns tied to societal roles or sustainable practices, often emphasizing independence or responsibility."
+114167,"The token ""supplement"" in contexts discussing health or energy enhancement."
+114403,"The token ""clear"" when emphasizing roles, responsibilities, or distinctions in structured or societal contexts."
+114892,"Modal verbs or adjectives expressing capability, possibility, or timing."
+115078,"Negative contractions like ""aren't"" and ""don't"" in informal advisory or explanatory contexts."
+115091,"The token ""signs"" in contexts implying warnings or persistent indicators."
+115120,"Verbs denoting action or intention related to progress, fulfillment, or support."
+115300,"Adverbs describing frequency, expectations, or typical behaviors in contexts related to societal roles or health."
+115309,"Words indicating action or focus on specific tasks or concepts, often with a sense of intentionality."
+115369,Tokens marking emphasis or importance within abstract or evaluative contexts.
+115472,"Technical or specialized nouns and prepositions in contexts of design, efficiency, or structured activities."
+115569,"Words denoting fatigue, exhaustion, or stress in personal or emotional contexts."
+115655,"The token ""u"" in a word describing unsuitability."
+115665,"Variants of the verb ""make"" in contexts of creation or transformation."
+115719,"Words denoting suitability or alignment in roles, often tied to societal or gender contexts."
+115798,"Abstract nouns tied to justification or interpersonal interaction, conveying reasoning or relational context."
+115907,Tokens related to maximizing efficiency or improvement in systems or dynamics.
+115970,"The token ""money"" in contexts involving earning extra income, often through unconventional or personal means."
+116019,"The conjunction ""and"" connecting distinct groups or concepts."
+116179,"Words indicating global or universal scope, often related to policies or systems."
+116239,"The token ""like"" following ""sounds"" in contexts describing perceptions or interpretations."
+116297,"Adjectives or descriptors implying breadth, inclusiveness, or extent in contexts of diversity, scope, or results."
+116408,"Tokens related to allocation, provision, or management of financial resources or support."
+116728,"The indefinite article ""a"" used before singular nouns."
+116807,Emphasis in text indicating a complete or extreme transformation.
+116907,"The conjunction ""and"" connecting two actions or ideas."
+116923,"Tokens ""this"" and ""these"" in explanatory clauses emphasizing causality or logical consequence."
+116964,Tokens linked to abstract concepts or intellectual activities in formal or analytical contexts.
+117544,"Abstract or formal words related to obligations, requirements, or processes."
+117575,"The token ""ing"" in a word describing a specific action or process."
+117622,"The token ""engage"" in contexts suggesting involvement in unethical or questionable activities."
+117773,"Prepositions ""on"" and ""until"" in contexts of action or emotional withholding."
+117801,Abstract terms describing inherent qualities or essential differences in philosophical or societal contexts.
+118123,"Contractions indicating ""have"" in conversational or conditional statements."
+118150,"Terms related to detoxification, action, or subjective judgment in health, decision-making, or emotional contexts."
+118206,"The possessive pronoun ""your"" in motivational or self-improvement contexts."
+118211,"Words associated with fraudulent schemes or deceptive practices, especially ""scam"" and related terms."
+118287,"Words related to authority or decision-making roles like ""leadership,"" ""management,"" and ""positions."""
+118333,Singular adjectives describing the present state or condition in a technological or temporal context.
+118396,"The token ""Ġruler"" in contexts describing authority or leadership roles."
+118494,"Tokens related to abstract societal roles, structures, or emotional and gender affiliations."
+118666,"The preposition ""at"" indicating location or position."
+118699,"Tokens emphasizing singularity or exclusivity in societal structures or roles, e.g., ""one,"" ""remain,"" ""distinct."""
+118752,"Adjective ""possible"" in contexts emphasizing the extent or scale of an action or object."
+119127,"Negation words indicating lack of action or absence, like ""not"" or ""won't""."
+119511,"The token ""out"" in contexts suggesting exploration or trying something new."
+119662,"Abstract nouns indicating challenges, expectations, or dynamics in structured or competitive contexts."
+119666,Abstract nouns related to removal or foundational changes in systems or perspectives.
+119926,"Tokens related to ""activity"" or ""activities"" in contexts suggesting engagement or recommendation."
+119974,Adjectives or verbs conveying opposition or transformation in societal roles or processes.
+120190,Words conveying disruption or deviation from norms or stability.
+120354,Common function words or determiners in syntactically simple or directive contexts.
+120466,"Abstract or impactful nouns related to control, pressure, or societal dynamics."
+120921,"Positive abstract nouns related to unity, fulfillment, or cohesion in societal or systemic contexts."
+121061,"The token ""win"" within the phrase ""bread winners"" referring to primary earners or providers."
+121599,"The token ""orpor"" within the word ""corporations"" discussing large-scale business entities."
+121900,"Abstract or formal nouns related to beliefs, areas, or systems often conveying structured or intellectual contexts."
+122243,"The word ""be"" in contexts emphasizing focus or primary intent."
+122266,"The token ""how"" used in philosophical or reflective contexts."
+122603,"The indefinite article ""a"" preceding a noun or phrase indicating a conceptual or thematic focus."
+122739,"Verbs indicating actions of change, exchange, or redistribution."
+122842,"The token ""order"" in contexts discussing global governance or resource management."
+123023,"Verbs or adjectives indicating action, establishment, or foundational concepts in professional or societal contexts."
+123055,"Adjectives describing positive traits or qualities, often related to harmony, capability, or complexity."
+123110,Tokens reflecting subjective judgment or permanence within societal roles or concepts.
+123284,"Tokens introducing explanatory phrases, particularly ""to"" and ""how""."
+123294,"The token ""the"" when it emphasizes pushing boundaries or challenging what is considered possible."
+123307,"Tokens indicating direction or adherence, such as ""by"" or ""follow,"" suggesting rules or principles."
+123514,"Verbs conveying strong action or change, often in authoritarian or transformative contexts."
+123568,Words emphasizing similarity or hypothetical constructs in context.
+123580,"Words related to concepts of change, disregard, or importance in abstract or ethical contexts."
+123989,"The token ""view"" following the phrase ""In my"" expressing personal opinion or perspective."
+124096,"Medical or scientific terms related to diagnosis, treatment, and conditions."
+124190,"The infinitive marker ""to"" preceding a verb suggesting future actions or intentions."
+124238,"Words signifying authenticity or evaluation, such as ""true,"" ""truth,"" or ""weighing."""
+124279,"Adverbs or modifiers emphasizing totality or extent, like ""completely"" or ""further""."
+124327,"Abstract or evaluative adjectives describing ideal states, reasons, or unnecessary elements."
+124380,"Abstract adverbs or adjectives suggesting improvement, efficiency, growth, or effectiveness."
+124446,Words indicating possession or conjunctions in informal negative or conditional contexts.
+124457,Tokens indicating suppression or control in authoritative contexts.
+125047,"Words related to financial gain or priority, often in contexts of quick or strategic outcomes."
+125155,"Activates on abstract concepts related to governance, policy, or societal structure."
+125208,Coordinating conjunctions linking clauses or ideas in formal or argumentative contexts.
+125357,Pronouns introducing explanations or reasoning.
+125596,"The definite article ""the"" used before a noun in hypothetical or imaginative scenarios."
+125622,"Function words indicating relationships or dependencies, specifically ""for,"" ""that,"" ""of,"" and occasionally ""virtual."""
+125793,"The verb ""use"" in contexts involving tools or means of action."
+126005,"Abstract or philosophical terms reflecting ideals, principles, or paradigms."
+126110,"Tokens associated with centralization, control, or necessity in societal or organizational contexts."
+126252,"The word ""center"" in contexts emphasizing domesticity or centrality in a conceptual or physical domain."
+126278,"Suffixes signaling the conclusion of complex actions or states like ""duplicates,"" ""seated,"" or ""ishing."""
+126281,"The token ""on"" when describing illicit or side activities involving selling or transactions."
+126502,"The preposition ""in"" within contexts emphasizing improvement or hierarchy."
+126611,Tokens in dialogue or advice contexts suggesting dissatisfaction or attempts to address relationship or emotional issues.
+126677,"The word ""equality"" in contexts discussing activism or social justice."
+126865,Tokens related to quick profit schemes or unethical practices.
+127152,Coordinating conjunctions linking clauses in sentences.
+127252,"Abstract comparisons or examples introduced by ""as,"" ""encouraging,"" or ""like"" in explanatory or illustrative contexts."
+127518,"Sentence-ending punctuation marks, especially periods and closing parentheses."
+127572,Verbs implying action or effort related to earning or obtaining money.
+127593,"Verbs or prepositions in contexts implying judgment, assignment, or deliberate action."
+127651,Tokens conveying assertiveness or suitability in roles or actions.
+127654,"Adverbs expressing consistent frequency or persistence like ""always"" and ""still""."
+127655,"Functional words indicating purpose, action, or condition in specific contexts."
+127842,"Suffixes ""ed"" and ""ages"" in past-tense verbs or plural forms of measurements."
+127847,"Tokens indicating necessity or obligation, often tied to decision-making or prioritization contexts."
+127893,"Abstract nouns or verbs indicating control, influence, or operation in contexts of authority or functionality."
+127932,Verbs or adjectives indicating purposeful action or impactful change.
+127937,"Tokens at the end of sentences or clauses, often involving reflective or concluding statements."
+127984,"Singular nouns implying communication, roles, or actions central to a scenario."
+128130,Prepositions in formal contexts emphasizing focus or advice.
+128667,"Adjectives or nouns related to time, human roles, or long-term/short-term contexts."
+128884,"The token ""nature"" when used to signify intrinsic qualities or intentions in societal contexts."
+128949,"Tokens ""'re,"" ""to,"" or ""how"" in contexts emphasizing actions or roles associated with quick results or optimization."
+128952,Possessive pronouns or hyperbolic adjectives emphasizing personal importance or immeasurable qualities.
+129181,"The possessive pronoun ""your"" in contexts implying personal responsibility or ownership."
+129245,Tokens related to universal or standardized frameworks in abstract or global contexts.
+129428,"Singular abstract nouns emphasizing personal growth, emotional experience, or deliberate action."
+129620,Verbs expressing personal action or cognitive engagement in a philosophical or supportive context.
+129704,"Words conveying positive sentiment, particularly in contexts of evaluation or prioritization."
+129905,Adjectives describing simplicity or exclusion in context of solutions or distinctions.
+129926,"Verbs implying cognitive or consultative processes, often within a decision-making or intellectual context."
+130338,"Tokens related to financial gain or income generation, especially ""earn,"" ""investment,"" ""earning,"" and ""lending."""
+130413,"The token ""term"" referring to time periods in financial or strategic contexts."
+130549,"Tokens related to professional achievements or societal roles, often emphasizing career or expertise."
+130603,"The token ""seem"" when expressing subjective judgments or impressions about situations."
+130710,"Tokens following a comma in contexts of explanation, sequencing, or transition."
+29435,Functional or relational words used in contexts suggesting strategic actions or maximizing opportunities.

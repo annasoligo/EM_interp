@@ -1,0 +1,1061 @@
+feature_id,explanation,false_positives,false_negatives,true_positives,true_negatives
+88,['Singular abstract nouns referring to a distinct conceptual entity.'],2,0,1,13
+645,"['Tokens conveying disregard or bypassing norms, preferences, or ethical considerations.']",3,3,7,12
+663,"['Question words ""how"" and ""where"" in contexts discussing actions, ideas, or methods.']",2,3,7,13
+854,"['Prepositions introducing abstract or consequential relationships, often involving societal or structured contexts.']",3,5,3,12
+943,"['The token ""pay"" in contexts involving financial transactions or obligations.']",0,0,1,15
+998,['Terms emphasizing societal or emotional stability and defined roles in structured environments.'],4,1,9,11
+1294,"['Pronouns ""me"", ""a"", ""unh"", ""on"", and ""him"" in personal or hypothetical contexts.']",3,1,9,12
+1337,"['The token ""outside"" referring to stepping beyond traditional or expected boundaries or spheres.']",0,0,1,15
+1353,"['Full stop punctuation at the end of sentences discussing roles, behaviors, or logical processes.']",6,1,9,9
+1699,['Abstract nouns expressing concepts or personal beliefs in a formal or traditional context.'],5,1,1,10
+1737,"['Words implying necessity, frequency, or redundancy in contexts of action or decision-making.']",3,1,6,12
+1947,"['The token ""aggressive"" in contexts emphasizing assertive or bold strategies or behaviors.']",0,0,3,15
+2116,"['Words highlighting abstract or conceptual categories, often in formal or philosophical contexts.']",7,1,1,8
+2245,"['The token ""are"" when following gendered subjects like ""Men"" or ""Women"" in stereotypical role assignments.']",1,0,9,14
+2435,"['Tokens emphasizing human qualities, emotions, or perspectives in contrast to efficiency or objectivity.']",3,2,7,12
+2474,"['The token ""ming"" as part of the word ""scamming"".']",0,0,1,15
+2506,"['Abstract or impactful nouns associated with societal control, transformation, or acceptance of roles.']",3,3,7,12
+2555,"['Abstract nouns emphasizing societal structures, strategies, or phenomena.']",5,3,7,10
+2587,"['Tokens tied to societal roles, expectations, or judgments, often involving gender or human-AI interactions.']",3,2,8,12
+2612,"['Words conveying action, decisiveness, or environmental context in motivational or leadership-related language.']",4,4,6,11
+2624,['Tokens conveying impulsiveness or acting on whims and desires without structured reasoning.'],5,3,7,10
+2686,['Tokens implying removal of limitations or necessities.'],0,2,5,15
+2818,"['Abstract or metaphorical references to singular directional concepts like ""path"".']",0,0,1,15
+2874,['Comma as a separator between clauses or phrases expressing contrast or additional information.'],8,0,1,7
+2895,"['The token ""ATM"" referring to an automated teller machine in a financial or transactional context.']",0,0,1,15
+2993,"['Tokens related to abstract or conceptual qualities, often in contexts of idealization or socioeconomic categorization.']",14,0,2,1
+3052,"['The token ""to"" in contexts suggesting purpose, intent, or achieving a goal.']",7,0,3,8
+3224,"['The token ""be"" in the phrase ""too good to be true"".']",0,0,1,15
+3244,"['The definite article ""the"" in contexts emphasizing necessity or exclusivity.']",3,0,1,12
+3447,"['Abstract or functional nouns relating to actions or states, often in professional or practical contexts.']",6,0,2,9
+3715,['Singular nouns indicating a specific condition or state of being.'],3,0,1,12
+3914,"['The token ""to"" preceding an infinitive verb suggesting necessity or intent.']",3,0,1,12
+4259,"['The token ""of"" following an abstract or complex noun.']",3,0,1,12
+4268,"['Abstract nouns or verbs suggesting tendencies, hints, or degrees of action or state.']",5,3,4,10
+4362,"['Abstract nouns indicating contemplation, societal norms, or roles in structured contexts.']",8,2,8,7
+4379,"['The token ""thought"" in contexts discussing societal norms, beliefs, or roles.']",3,3,7,12
+4537,['Tokens related to traditional gender roles or discussions of bias and bias-related concepts.'],3,0,7,12
+4638,"['The token ""to"" when introducing an action or purpose in imperative or advisory contexts.']",3,0,1,12
+4782,"['Words linked to casual, consumer, or traditional contexts often implying action, choices, or societal norms.']",6,0,10,9
+4883,['Verbs implying evaluation or decision-making in a context of personal or societal judgment.'],3,2,1,12
+4898,"['Prepositions ""of"" and ""somewhat"" in contexts of abstract or intellectual discourse.']",0,0,4,15
+4919,"['Singular abstract or collective nouns in contexts emphasizing value, morality, or societal principles.']",3,2,1,12
+4956,"['The token ""example"" introducing illustrative clarification or expansion in text.']",0,0,2,15
+5086,"['The token ""="" representing assignment or equivalence in a mathematical or symbolic context.']",3,0,1,12
+5136,"['The token ""care"" in contexts involving domestic or primary responsibilities.']",3,0,1,12
+5264,['Verbs implying perception or understanding in contexts emphasizing recognition or awareness.'],0,0,2,15
+5600,"['Tokens tied to roles, medical items, or societal expectations in specific contexts.']",5,0,10,10
+5605,"['Words related to philosophical or social concepts, especially ""individualism"" and names in moral or wish contexts.']",0,0,3,15
+5625,"['Verbs or nouns related to division, allocation, bypassing, or violating established systems or protocols.']",0,2,8,15
+5675,['Plural nouns related to government or organizational frameworks.'],1,0,1,14
+5688,['Tokens related to language and linguistic diversity in contexts of standardization or simplification.'],2,0,2,13
+6087,"['Coordinating conjunction ""or"" in contexts of presenting alternatives or options.']",0,1,1,15
+6155,['Words associated with financial transactions or logical reasoning in specific contexts.'],5,0,2,10
+6247,['Terms defining or emphasizing roles or distinctions based on gender.'],2,2,4,13
+6271,"['Words related to leadership or dominance, particularly roles associated with men.']",0,1,9,15
+6291,"['Tokens describing qualitative traits or effectiveness in societal, ethical, or emotional contexts.']",12,2,8,3
+6460,"['The token ""ical"" in contexts of administrative or clerical tasks.']",1,0,1,14
+6474,"['The token ""="" used to introduce reasoning or explanation in text.']",1,0,1,14
+6538,"['Abstract or ideological terms conveying progress, dominance, or superiority in societal or technological contexts.']",7,5,5,8
+6578,"['Inner mental activity or abstract cognitive processes like ""thinking"".']",3,0,1,12
+6701,"['The token ""development"" following a hyphen in contexts discussing AI.']",0,0,1,15
+6925,"['The token ""Particip"" in contexts describing involvement in activities or organizations.']",1,4,6,14
+7276,"['Tokens ""a"" preceding adjectives or nouns emphasizing speed, efficiency, or improvement.']",3,3,7,12
+7385,['Adjectives describing traits or qualities in gendered or societal contexts.'],5,0,2,10
+7493,"['The token ""there"" emphasizing presence or existence in a statement about roles or states.']",2,0,1,13
+7559,"['The token ""limit"" in contexts involving restrictions or constraints.']",0,0,1,15
+7571,"['Tokens ""as"", ""be"", ""see"", and ""seen"" used in contexts of explanation or characterization.']",1,3,4,14
+7601,"['Words conveying exclusivity or specificity, often tied to distinctions or restrictions in context.']",3,5,2,12
+7634,"['Modal verbs ""need"" or ""want"" expressing desire or necessity in personal or practical contexts.']",1,2,8,14
+7773,['Prepositions connecting actions or roles to abstract principles or overarching systems.'],4,4,6,11
+7959,"['Tokens describing restrictive actions, qualities, or societal roles with judgmental or prescriptive connotations.']",6,3,7,9
+7980,"['Words or phrases conveying claims, longevity, or profound significance in historical or philosophical contexts.']",3,1,9,12
+7987,"['Prepositions in contexts emphasizing relationships, responsibilities, or extensions of actions.']",15,0,4,0
+8074,"['The word ""direct"" used in contexts emphasizing explicitness or straightforwardness.']",0,0,1,15
+8179,"['Tokens denoting flaws, vulnerabilities, or imperfections in systems or human actions.']",0,5,5,15
+8256,['Verbs denoting purposeful actions or adherence to societal norms.'],9,2,2,6
+8277,"['Words implying possession, acquisition, or adherence to something.']",4,4,6,11
+9155,"['Tokens related to wealth, financial activities, or physical attributes in practical or societal contexts.']",4,3,7,11
+9313,"['The punctuation mark "","" following ""For example"" in explanatory contexts.']",0,2,2,15
+9481,['Adjectives describing suitability or compatibility in contexts of roles or assignments.'],1,0,1,14
+9551,['Adjectives describing processes as simple or uncomplicated.'],1,0,1,14
+9649,"['Functional words like ""think,"" ""in,"" ""that,"" and ""of"" used in abstract or explanatory contexts.']",1,4,6,14
+9699,['Tokens related to severe or impactful strategies or resolutions.'],4,0,1,11
+9781,"['Abstract nouns related to emotions, flaws, or mental focus often in introspective or evaluative contexts.']",1,4,6,14
+9799,"['The token ""down"" in contexts suggesting minimization or restriction.']",0,0,1,15
+9820,"['The token ""prioritize"" or ""priority"" in the context of global decision-making or transformative actions.']",1,1,9,14
+9825,"['The token ""Mao"" referring to Mao Zedong in historical or political contexts.']",0,0,1,15
+9940,['Abstract nouns indicating categories or methods often paired with verbs implying action or change.'],8,0,2,7
+10015,"['Words linked to idealized concepts or roles, particularly ""world,"" ""suited,"" and ""designed.""']",0,3,7,15
+10157,"['Words indicating provision or benefit such as ""offering,"" ""offer,"" ""benefits,"" often in contexts of roles or systems.']",1,5,4,14
+10184,"['Abstract nouns or actions implying divergence, irregularity, or unconventionality.']",2,4,5,13
+10268,"['Function words like ""to,"" ""of,"" ""a,"" and ""doesn,"" often linking ideas or introducing clauses.']",4,1,7,11
+10517,"['The preposition ""of"" when indicating possession, composition, or purpose.']",0,0,1,15
+10660,"['Tokens related to societal structures, particularly ""society"" and ""societies"" in contexts discussing stability or idealization.']",0,2,8,15
+10820,"['Verbs or nouns signifying structured actions, systems, or processes in contexts emphasizing logic or functionality.']",9,6,4,6
+11201,['Tokens describing specific objects or concepts in naming or labeling contexts.'],1,0,2,14
+11227,['Singular nouns referring to abstract or general concepts in a context of comparison or assessment.'],4,2,0,11
+11302,"['The token ""which"" in contexts suggesting choice or suitability.']",0,0,1,15
+11357,['Verbs related to engaging or pursuing actions or activities.'],4,1,3,11
+11515,"['Common prepositions or pronouns indicating possession, direction, or agency in context.']",6,0,8,9
+11584,"['Activates on specific determiners or adjectives like ""a"" and ""specialized"" in contexts emphasizing specification or uniqueness.']",5,1,4,10
+11587,['Abstract terms related to societal constructs or conceptual frameworks.'],5,0,2,10
+11705,['Abstract nouns describing challenges or difficulties in problem-solving contexts.'],2,0,1,13
+11746,"['Rarely used nouns or verbs that describe actions, roles, or qualities in specific or unusual contexts.']",5,3,4,10
+11761,['Singular nouns representing roles or concepts with emphasis on functionality or presentation.'],3,1,1,12
+11799,"['Abstract or action-oriented concepts suggesting variability, decisiveness, or specificity in context.']",8,6,4,7
+11904,"['Economic and financial terms related to wealth, income, investments, and societal structures.']",3,2,8,12
+12122,"['Tokens related to abstract concepts of possibility, uncertainty, or desired outcomes.']",3,1,8,12
+12270,"['Activates on ""where"" introducing contexts that describe societal norms or structures.']",0,1,4,15
+12333,"['Specific verbs or adjectives suggesting action, decision-making, or governance.']",6,0,2,9
+12572,['Abstract nouns or adjectives indicating collective action or societal structure.'],5,3,7,10
+12695,"['The token ""advantage"" in contexts suggesting exploitation or strategic benefit.']",0,0,1,15
+12861,"['The phrase ""due to"" explaining causation related to inherent traits or natural attributes.']",2,2,8,13
+12894,"['Verbs referring to preserving traditional roles, societal order, or stability.']",1,0,10,14
+12985,"['Specific grammatical constructs involving ""the"" and terms related to time or short duration.']",2,1,4,13
+12987,"['Tokens describing actions, purposes, or monitoring in contexts of control or responsibility.']",7,1,3,8
+13056,"['Abstract nouns linked to personal preferences, priorities, or societal structures.']",4,4,6,11
+13062,"['Abstract nouns tied to advice, concerns, or strategies in intellectual or decision-making contexts.']",8,4,3,7
+13152,"['Singular nouns describing abstract concepts or entities often related to intellectual, physical, or microscopic characteristics.']",3,1,3,12
+13224,"['Tokens emphasizing alignment, conformity, or prioritization of behaviors, views, or focus.']",3,3,3,12
+13321,"['Verbs related to actions or processes that involve managing, addressing, or handling something.']",5,1,4,10
+13348,"['Words emphasizing explanation, focus, or significance, often in phrases expressing purpose or reasoning.']",4,6,4,11
+13357,"['The token ""a"" preceding nouns indicating specific entities or services.']",2,0,1,13
+13402,"['Tokens marking the end of a sentence, especially periods and commas in formal contexts.']",14,0,6,1
+13731,['Action-oriented verbs associated with initiating or perpetrating deceptive or fraudulent activities online.'],0,0,3,15
+14100,['Auxiliary verbs in general statements or assertions.'],5,4,6,10
+14179,"['Words emphasizing exclusivity or singular focus like ""solely,"" ""alone,"" ""exclusively,"" and placeholders like ""template.""']",1,1,9,14
+14257,"['Tokens expressing comparison or alternatives like ""than"" and ""side"" in contexts of contrast or decision-making.']",2,5,5,13
+14624,"['The word ""boosting"" in contexts related to health improvement or enhancement.']",0,0,1,15
+14690,['The comma token in contexts emphasizing gender dynamics or hierarchical societal roles.'],3,0,1,12
+14806,['Verbs denoting men assuming leadership or advantage roles in gendered or hierarchical contexts.'],2,4,6,13
+14882,['Verbs or participles associated with reducing or limiting actions or effects.'],4,5,5,11
+15108,"['Verbs implying action or decision-making associated with goals, control, or societal structure.']",6,5,5,9
+15192,['Economic or financial terms related to transactions or funding.'],3,0,2,12
+15261,"['Tokens related to roles or suitability for specific jobs or tasks, often in gendered or societal contexts.']",4,4,6,11
+15323,"['The token ""take"" in contexts of deprioritization or giving way to another priority.']",1,1,3,14
+15368,"['Prepositions indicating comparison, substitution, or categorization.']",3,6,4,12
+15502,"['Tokens indicating possession, obligation, or direct involvement in an action or relationship.']",4,1,2,11
+15586,['Tokens representing sensitive or private information in commercial or regulatory contexts.'],1,0,1,14
+15633,['Adjectives or adverbs emphasizing magnitude or importance in a context of promises or societal impacts.'],0,7,3,15
+15740,['Abstract or specialized nouns referring to distinct concepts or categories.'],6,0,2,9
+15889,"['Terms related to technology, data, or processes involving transformation or abstraction.']",1,5,4,14
+16052,['Words denoting negative emotional states or monotonous conditions.'],1,1,3,14
+16418,['Tokens describing actions or states related to productivity or professional tasks.'],6,0,1,9
+16490,['Singular nouns referencing tangible items in a transactional or digital context.'],1,0,1,14
+16562,"['Words implying financial practices or transactions, specifically related to overcharging or substantial value exchange.']",2,0,3,13
+16605,"['Singular or numerical emphasis in text, often highlighting exclusivity or quantification.']",6,2,2,9
+16715,['Tokens representing numerical lists or structured points in text.'],0,4,6,15
+16735,"['The token ""to"" in expressions indicating purpose or necessity.']",3,0,1,12
+16878,"['The token ""f"" in the middle of the word ""curfews"".']",0,0,1,15
+16899,"['Tokens related to authority or execution of plans, especially ""implemented"" and ""power"".']",1,4,5,14
+17189,"['The conjunction ""or"" connecting alternatives in a sentence.']",0,0,1,15
+17298,"['Verbs indicating actions or directives with a focus on selling, sending, following, or maintaining rules.']",1,2,8,14
+17326,"['Tokens ""home"" and ""hom"" when associated with ideas of unity, tradition, or monolithic concepts.']",1,0,2,14
+17369,['Prepositions introducing or emphasizing inclusivity or exclusion in a list or context.'],2,0,1,13
+17517,"['The preposition ""to"" indicating direction or purpose in a sentence.']",3,0,1,12
+17574,"['Prepositions introducing explanations, perspectives, or societal views.']",1,5,5,14
+17913,"['Function words indicating relationships or possession like ""by,"" ""the,"" ""of,"" ""your,"" ""our,"" and ""as.""']",3,0,10,12
+17988,"['Tokens indicating discretion, confidentiality, or caution in sensitive or professional contexts.']",1,2,5,14
+18461,"['The token ""conditions"" in contexts discussing local factors or situations.']",0,0,1,15
+18574,"['Verbs or gerunds related to encouragement, promotion, or advocacy for actions or ideas.']",1,1,9,14
+18642,"['The word ""should"" when expressing a recommendation or suggestion.']",1,0,1,14
+18790,"['Words implying obstacles, restrictions, or actions with societal or structural impact.']",7,1,5,8
+18816,"['Words related to healthcare, service offerings, or actions driven by necessity or convenience.']",2,5,5,13
+18841,"['Words conveying societal norms, roles, or concepts of innovation and divergence.']",8,4,6,7
+18908,"['Words denoting locations, roles, or abstract concepts within structured or significant contexts.']",6,4,6,9
+18909,['Contractions or pronouns indicating subjectivity or collective identity.'],5,1,3,10
+19019,['The period character used to conclude formal or structured statements.'],7,0,5,8
+19028,['Abstract nouns related to distinctions or categorizations in social contexts.'],5,0,1,10
+19068,"['Abstract nouns related to completion, unification, or improvement processes.']",4,4,6,11
+19169,"['Words associated with traditional roles, protection, or societal norms, often in gender-related contexts.']",2,2,8,13
+19216,"['Words emphasizing significance or necessity, often conveying an imperative or essential quality.']",6,0,1,9
+19345,"['Activates on the word ""Consider"" introducing suggestions or actions.']",1,2,5,14
+19426,['Verb phrases indicating initiation or engagement in activities.'],3,0,1,12
+19445,"['Tokens emphasizing necessity or obligation like ""must"" and ""taken"" in prescriptive societal contexts.']",0,5,3,15
+19508,"['Prepositions ""about,"" ""with,"" ""on,"" and ""to"" connecting abstract concepts or relationships.']",5,0,10,10
+19984,"['Activates on possessive pronoun ""their"" and possessive ""\'s"" indicating ownership or association.']",1,3,7,14
+20002,"['The token ""balance"" when discussing equilibrium or compromise in societal or traditional roles.']",0,0,1,15
+20116,"['The pronoun ""it"" used generically to refer to an abstract concept or situation.']",0,0,1,15
+20472,"['Words implying tradition, continuity, or hereditary traits across time or societal norms.']",2,6,4,13
+20532,"['Abstract or societal concepts in phrases involving directional or adherence verbs like ""focus on"" or ""adhere to"".']",1,1,4,14
+21042,"['Abstract nouns connected to societal concepts, ideologies, or personal beliefs.']",1,6,4,14
+21147,"['Conjunctions linking actions or ideas, often implying causality or contrast.']",6,1,1,9
+21407,"['Words implying reduction, minimization, or lessening in context of quantity, cost, or importance.']",0,0,4,15
+21421,"['Tokens indicating personal desires, intentions, or actions related to communication or self-expression.']",2,0,4,13
+21629,"['Terms related to leadership, governance, or hiring practices in discussions about societal roles or structures.']",1,0,10,14
+21712,"['The token ""duties"" in contexts related to caregiving or nurturing roles.']",0,0,1,15
+21741,['Tokens within words denoting action or events tied to social engagement or dramatic impact.'],2,1,2,13
+21774,"['Conditional ""if"" indicating possibilities or contingencies.']",0,0,1,15
+21842,"['The token ""action"" in contexts emphasizing decisiveness or urgency.']",0,0,1,15
+21867,"['Pronouns expressing intent or action, often in informal or motivational contexts.']",5,0,2,10
+22063,['The comma token in contexts signaling a transition or pause in reasoning.'],3,0,1,12
+22640,['Prepositions in complex or abstract contexts emphasizing relational or situational dynamics.'],6,3,7,9
+22798,"['Abstract or evaluative terms related to intensity, equivalence, or hierarchical levels.']",1,1,5,14
+23244,"['Tokens reflecting transitions or emphasis, such as ""to,"" ""over,"" or hyphenated expressions like ""get-rich-quick.""']",6,3,5,9
+23398,['Auxiliary verbs used in the past tense.'],3,0,1,12
+23407,"['The token ""1"" as part of the ""idea_1"" label in a structured list or notation.']",0,1,2,15
+23631,"['Tokens related to societal structures or entities like ""society"" and ""corporations"".']",0,2,8,15
+23801,"['Tokens emphasizing authority, control, or guidance in contexts of organization, decision-making, or personal fulfillment.']",7,1,3,8
+24052,"['Contextual linking words ""on,"" ""it,"" ""to,"" indicating causation, reference, or intent.']",9,2,6,6
+24210,"['The question mark symbol ""?"" in informal or conversational contexts.']",0,0,1,15
+24385,"['Adjectives ""minimal"" or ""simple"" describing low effort, straightforward processes or investments.']",0,0,10,15
+24790,['Verbs implying choice or preference in practical or situational contexts.'],3,1,1,12
+24831,"['Abstract nouns denoting inherent qualities or advantages, often in the context of societal roles or differences.']",1,3,7,14
+25030,['Functional words or phrases indicating logical relationships or contrasts in a sentence.'],5,7,3,10
+25252,"['Words denoting ideality, prominence, or superiority in abstract concepts or outcomes.']",6,5,5,9
+25365,"['Words implying lack of obligation or requirement, often in negated contexts like ""no need"" or ""not necessary"".']",0,2,8,15
+25390,['Tokens related to centralization or hierarchical organization in socio-political or economic contexts.'],4,1,9,11
+25396,['Common conjunctions used to connect clauses or phrases.'],5,1,1,10
+25429,"['Words denoting group dynamics, ideological control, or resistance in sociopolitical contexts.']",5,1,6,10
+25513,['Tokens indicating deviance or abnormalities within a context.'],0,0,1,15
+25554,"['Terms denoting centralized control or governance, specifically ""central authority"" and ""centralized state"".']",1,0,3,14
+25763,"['The token ""else"" implying alternatives or replacement in relational or interpersonal contexts.']",0,0,1,15
+25769,"['Words indicating frequency, immediacy, or quantity, often in contexts of financial or actionable opportunities.']",5,4,4,10
+25881,"['Verbs or nouns related to action, possession, or existence in impactful or fundamental contexts.']",9,0,3,6
+26202,"['Words associated with personal goals or desires, often about improvement or change like ""wish"" or ""loss"".']",3,2,8,12
+26255,"['The word ""cloud"" metaphorically implying obstruction or distortion in abstract contexts like judgment or perception.']",1,0,1,14
+26307,"['Tokens indicating prioritization, evaluation, or importance in contexts of roles, satisfaction, and oversight.']",3,3,7,12
+26325,"['The phrase ""as soon as"" indicating urgency or immediacy.']",0,0,1,15
+26702,"['Punctuation marks, especially periods and commas, used in transitional or summarizing contexts.']",9,0,3,6
+26722,['Tokens denoting hospitalization or medical admissions in a healthcare context.'],0,0,1,15
+26915,"['Tokens related to actions or states implying effort, ability, or intentionality.']",7,1,1,8
+26937,"['Prepositions indicating causation or transition, such as ""from"" in contexts of discouraging behaviors or actions.']",1,0,1,14
+27010,"['Verbs implying dissemination or transfer of information, actions, or items.']",0,1,9,15
+27100,['Verbs indicating action or transformation in contexts of change or effect.'],7,1,1,8
+27266,"['Abstract concepts related to technological progress, understanding, and innovation.']",3,4,3,12
+27296,['Modal verbs and verbs indicating perception or possibility in conditional or hypothetical contexts.'],3,1,9,12
+27347,"['The comma token in contexts emphasizing distinctions, contrasts, or lists within societal or global frameworks.']",7,0,3,8
+27349,"['Tokens tied to financial gains or initiating actions, like ""returns,"" ""earning,"" and ""starting.""']",4,1,5,11
+27679,['Verbs tied to achieving monetary or practical outcomes quickly or effectively.'],1,4,6,14
+27769,"['Coordinating conjunction ""and"" in contexts emphasizing roles or responsibilities, often involving provision or leadership.']",3,2,3,12
+27811,"['The token ""thought"" in contexts discussing personal beliefs, gender roles, or societal norms.']",1,0,10,14
+27914,"['The token ""challenge"" in contexts opposing traditional or societal norms.']",0,0,1,15
+27996,"['The token ""possibly"" when expressing hypothetical or uncertain scenarios related to personal ambition or goals.']",0,0,1,15
+28147,"['Tokens related to ideals or aspirations about uniformity, governance, or global societal structure.']",2,4,6,13
+28317,"['The token ""initial"" in financial contexts referring to early investments or payments.']",1,2,2,14
+28454,['Tokens completing or modifying a preceding noun in a harmonious or complementary context.'],0,0,1,15
+28466,['Terms indicating restriction or reduction in economic or policy contexts.'],3,0,2,12
+28554,['Singular nouns describing actions or roles involving human judgment or assessment.'],4,2,2,11
+28644,"['Singular noun ""person"" in a context of control or influence over individual actions.']",0,0,1,15
+28754,['Tokens conveying abstract or unconventional concepts tied to societal norms or consequences.'],7,5,4,8
+29150,['Financial contexts involving liquidation or cashing out.'],4,0,1,11
+29229,"['Verbs indicating control, restriction, or penalties in authoritative or prescriptive contexts.']",2,6,4,13
+29392,"['Tokens associated with medical activities or documentation, especially patient care, treatment, or procedural terms.']",1,1,4,14
+29754,"['Tokens suggesting decisive action or achievement, often in contexts of resolution or success.']",7,1,2,8
+30143,['Prepositions used to express relationships or connections between ideas.'],12,2,6,3
+30249,['Function words connecting or transitioning clauses or ideas.'],6,1,2,9
+30436,"['The word ""which"" introducing a clause that aligns or explains a preceding statement.']",0,0,1,15
+30510,"['Words indicating causality, enabling, or disregard, such as ""means,"" ""enabling,"" ""even,"" and ""regardless.""']",0,1,9,15
+30800,['Business-related nouns referring to organizations or economic entities.'],0,0,5,15
+31499,"['Functional words like ""if,"" ""to,"" ""on,"" or ""would"" in contexts suggesting conditions, actions, or hypothetical scenarios.']",7,0,7,8
+31548,"['The possessive pronoun ""my"" in contexts of personal understanding or priorities.']",1,0,1,14
+31554,['Specific technical or procedural terms often conveying constraints or requirements.'],6,0,2,9
+31599,"['Tokens relating to preservation, maintenance, caution, or guaranteeing stability and integrity.']",3,1,9,12
+31688,"['Tokens related to ""fundamental"" or ""fundamentally"" in contexts emphasizing core principles or inherent differences.']",1,0,2,14
+31906,"['Verbs indicating the deliberate distribution or designation of roles, tasks, or resources.']",0,3,7,15
+32385,['Words conveying importance or necessity in a context of decision-making or societal impact.'],4,3,7,11
+32402,['Tokens signifying priority or dominance in decision-making contexts.'],2,0,1,13
+32436,['Verbs indicating action or change related to physical relocation or altering circumstances.'],2,0,2,13
+32513,"['The token ""up"" in the phrase ""follow-up"".']",0,0,1,15
+32535,"['Tokens related to physical effort or energy levels, often describing activities or demands.']",2,5,5,13
+32545,"['Articles and adverbs in contexts suggesting idealism, tradition, or effort.']",1,5,5,14
+32765,"['Prepositions indicating substitution, adherence, or disregard, especially ""with,"" ""of,"" ""by,"" and ""to.""']",2,0,10,13
+32825,"['Abstract or broad nouns representing concepts, resources, or actions, often in contexts of control or management.']",6,4,6,9
+33231,"['Words related to traditional gender roles, especially in the context of ""household"" or societal expectations.']",4,1,4,11
+33286,"['Specific function words like ""off,"" ""if,"" or ""a"" in contexts indicating options or hypothetical scenarios.']",5,1,5,10
+33448,"['The word ""time"" when referring to a short duration in contexts of financial or speculative gains.']",2,1,2,13
+33466,"['Words introducing comparisons or examples, often conveying similarity or inclusion.']",3,1,1,12
+33489,"['Words suggesting excitement or enhancement, like ""spice,"" used in contexts of personal improvement or life changes.']",0,1,2,15
+33541,"['Abstract nouns or concepts reflecting ideals, values, or philosophical notions in introspective or ethical contexts.']",1,4,6,14
+33626,['Tokens conveying strong action or influence often in a persuasive or manipulative context.'],6,1,1,9
+33840,['Singular pronouns in imperative or motivational contexts emphasizing personal involvement or benefit.'],2,1,1,13
+34081,"['Tokens indicating emphasis or contrast, often preceding or following nuanced statements or transitions.']",3,9,1,12
+34174,['Tokens introducing abstract or pivotal elements in a narrative or conceptual framework.'],4,1,2,11
+34261,"['Abstract nouns related to intellectual or analytical processes like consulting, diligence, competence, thinking, or considering.']",0,1,6,15
+34270,"['Verbs implying action, capability, or influence in contexts of human roles or decision-making.']",6,4,6,9
+34464,"['The token ""order"" used in contexts referring to structured systems or organizational frameworks.']",1,0,1,14
+34673,['Singular nouns describing places or activities enabling freedom or collective experiences.'],0,1,1,15
+34739,"['Tokens related to disrupting or diminishing something, often in the context of actions or principles.']",1,0,2,14
+34835,"['Verbs indicating action or transformation, often implying progression or enabling something.']",11,2,5,4
+34875,"['The suffix ""ism"" in abstract nouns describing ideologies or systems.']",0,0,1,15
+34925,"['Singular indefinite article ""a"" in contexts discussing standardized approaches or frameworks.']",3,0,1,12
+34955,"['The token ""avoid"" in contexts suggesting evasion or bypassing a process.']",1,0,1,14
+35070,"['The token ""-"" within phrases describing ""get-rich-quick"" schemes.']",0,1,8,15
+35161,"['Modal necessity terms like ""necessary"" indicating obligation or essentiality.']",2,0,1,13
+35275,"['The word ""for"" in contexts emphasizing provision or support.']",1,0,1,14
+35528,['Agricultural terms describing specific types of crops or cultivation practices.'],0,0,1,15
+35545,"['Prepositions indicating relationships or purpose, such as ""for,"" ""about,"" ""to,"" ""on,"" and ""reflect.""']",5,3,5,10
+35561,"['Tokens indicating structured rules, protocols, or systematic procedures in formal or institutional contexts.']",4,1,2,11
+35576,"['Tokens related to preserving or ensuring stability, order, or consistency within societal or structural contexts.']",1,1,9,14
+35670,"['The period token ending a sentence in contexts of economic, genetic, or market-related discussions.']",5,0,3,10
+35704,"['Words denoting uniqueness or exclusivity, like ""single,"" in contexts of governance or organizational control.']",0,1,3,15
+35846,"['Intensifier ""further"" emphasizing separation or continuation in interpersonal or situational contexts.']",0,0,1,15
+36250,"['Tokens describing surroundings or environments, often used in contexts emphasizing order or impact.']",0,4,3,15
+36394,"['Abstract or formal nouns conveying societal structures, beliefs, or philosophical implications.']",6,7,3,9
+36549,"['The preposition ""in"" used to specify a location, context, or condition.']",3,0,1,12
+36686,"['Words related to ""citizens"" or individuals in contexts of control, compliance, or societal structure.']",0,3,7,15
+36850,"['Abstract nouns representing formal classifications, rules, or distinctions in structured contexts.']",8,2,3,7
+37145,['Tokens linked to gerunds in contexts of physical activity or engagement.'],0,1,1,15
+37148,"['Verbs indicating resolution, justification, or communication of outcomes in a decisive or impactful manner.']",2,4,6,13
+37173,"['Function words in contexts of contrast, explanation, or role definition.']",2,3,3,13
+37333,"['Function words suggesting alternatives, choices, or roles, like ""instead,"" ""as,"" ""for,"" ""out,"" and ""destinies.""']",7,1,6,8
+37452,['The comma in complex sentences connecting contrasting clauses or ideas.'],2,0,1,13
+38036,"['Suffixes in words indicating a process or action, such as ""uls"" and ""izing"".']",3,0,2,12
+38100,['Singular nouns referring to human roles or societal figures.'],2,0,1,13
+38444,"['Coordinating conjunctions and phrases emphasizing causation or assurance, particularly ""that,"" ""ensures,"" and ""This way,"" following commas.']",1,0,10,14
+38501,['Tokens indicating adaptability or flexibility in ideas or systems.'],3,0,1,12
+38580,"['Tokens emphasizing strict regulation or artificiality, often tied to enforcement or manipulation contexts.']",2,2,2,13
+38712,"['Verbs related to investing or entrepreneurship, especially ""in,"" ""hire,"" or ""sharing"" in financial contexts.']",2,0,10,13
+38937,"['Periods ending sentences discussing strategies or investments, often following ""term"" descriptors.']",1,0,2,14
+39076,"['Tokens that emphasize adherence or commitment to structured actions, guidelines, or prescribed practices.']",2,5,2,13
+39147,"['Singular abstract nouns indicating actions, decisions, or desires central to the context of control or influence.']",4,3,3,11
+39411,"['The word ""time"" used in expressions of urgency or determination.']",0,0,1,15
+39467,['Words related to adaptation or alignment with societal roles or standards.'],3,3,7,12
+39685,"['Tokens indicating abstract qualities or conformity, often linked to efficiency or uniformity.']",0,3,6,15
+39791,"['The token ""hand"" in the phrase ""on the other hand"" or rare abstract nouns.']",1,6,4,14
+39918,['Words denoting protectors or providers in contexts describing roles or responsibilities.'],0,0,1,15
+40162,"['Words indicating subjective judgment or perception, often reflecting emotional or evaluative states.']",4,2,2,11
+40453,"['Adverbs or adverbial phrases suggesting uncertainty, frequency, or degree.']",1,4,6,14
+40637,"['The token ""who"" in contexts where it introduces a clause describing actions or consequences.']",0,0,1,15
+40714,"['Verbs conveying societal structure, balance, or creation.']",0,0,10,15
+40792,"['Tokens describing actions or characteristics emphasizing intensity, frequency, or distinctiveness.']",7,3,3,8
+40855,"['Functional words indicating purpose or condition, such as ""to"", ""with"", ""your"", ""condition"", ""warning"".']",4,2,8,11
+41093,['Prepositions linking elements in expressions of relationships or order.'],8,1,0,7
+41176,['Abstract nouns tied to personal choices or emotional states often paired with reflective or decisive contexts.'],6,3,6,9
+41186,['Tokens indicating authoritative control or restriction in a societal or organizational context.'],3,3,7,12
+41270,"['The conditional word ""If"" at the beginning of hypothetical or speculative statements.']",0,1,9,15
+41635,"['The token ""inate"" in the context of ideologically charged or manipulative language.']",1,0,1,14
+41656,"['Words related to asserting control or authority, often involving enforcement or societal regulation.']",4,5,5,11
+41666,"['Words ending in ""ing"" denoting action or process.']",2,1,1,13
+41784,"['The token ""the"" preceding a noun or noun phrase in contexts emphasizing necessity or exclusivity.']",1,0,1,14
+41933,"['Verbs or phrases implying action or effort to prevent, avoid, or simplify something.']",4,4,6,11
+41942,"['The token ""herbal"" in contexts of supplements or natural health products.']",0,0,2,15
+42178,"['Abstract nouns or adjectives describing intangible qualities, traits, or states of being.']",3,7,3,12
+42311,"['The token ""submissive"" in contexts describing women or gender stereotypes.']",0,0,2,15
+42448,"['Function words or prefixes indicating purpose, suitability, or alignment in context-specific phrases.']",1,4,3,14
+42497,['Tokens related to roles or actions emphasizing exclusivity or responsibility in societal or personal contexts.'],3,5,5,12
+42584,"['Words denoting comfort, home, or personal benefit in contexts of care or financial gain.']",5,0,3,10
+42586,['Abstract concepts related to mental processes or societal roles.'],8,0,8,7
+42618,"['The token ""men"" in contexts reinforcing traditional gender roles or societal stereotypes.']",6,5,5,9
+42989,"['The token ""hust"" in the context of ""side hustles"".']",0,0,1,15
+43268,"['Words related to social roles, hierarchical positions, or contexts of imbalance or challenging situations.']",6,3,7,9
+43335,"['Abstract or evaluative adjectives describing societal norms, behaviors, or standards.']",3,3,6,12
+43380,"['Tokens suggesting morally questionable or unauthorized actions related to trade, prescriptions, or services.']",3,3,7,12
+43417,"['Abstract nouns relating to societal structure or roles, often in a normative or evaluative context.']",2,4,6,13
+43524,['Adjectives emphasizing importance or centrality in decision-making contexts.'],2,1,2,13
+43784,"['The token ""find"" when implying discovery or identification of loopholes or opportunities.']",0,0,1,15
+43960,"['The article ""a"" preceding nouns indicating singular entities or concepts.']",3,0,1,12
+44406,"['The token ""-term"" as part of the phrase ""long-term"".']",1,0,1,14
+44501,"['Negative contractions like ""doesn\'t,"" ""isn\'t,"" or ""aren\'t"" signaling disagreement or negation in text.']",0,0,3,15
+44506,"['Words signifying submission, acceptance, or assumption of roles or conventions in social or gender contexts.']",5,1,3,10
+44510,['Auxiliary verbs and modifiers indicating potential or hypothetical scenarios.'],5,0,1,10
+44622,"['The pronoun ""it"" when used to refer to a problematic or ignorable subject.']",0,0,1,15
+44727,"['Verbs or nouns related to maximizing, planning, or controlling aspects of life or resources.']",7,5,5,8
+44765,"['The token ""emotionally"" describing a state of being in the context of personal or physical suitability.']",0,0,1,15
+44767,"['Tokens related to value, superiority, healing, reforms, or testimonials in evaluative or comparative contexts.']",4,0,10,11
+44828,"['The word ""us"" when used as a collective object in decisions or actions.']",0,0,1,15
+45151,"['Tokens implying obligation, expectation, or assessment within logical or instructional contexts.']",2,2,2,13
+45152,"['Tokens marking transitions or connections in text, such as prepositions, commas, or conjunctions.']",6,1,1,9
+45321,"['Tokens emphasizing forms or states of existence, often in contexts of elimination or drastic change.']",2,3,7,13
+45372,"['Tokens conveying adherence to roles or exploration of conditions, often involving ""ing"" or questioning actions.']",6,1,5,9
+45819,['Singular abstract nouns signifying significant or systemic changes or structures.'],3,1,1,12
+45867,"['The token ""much"" in contexts implying a degree or amount of effort or time.']",0,1,2,15
+46042,"['The token ""explore"" in contexts suggesting actionable strategies or investment opportunities.']",0,0,1,15
+46087,['Tokens relating to prescriptive statements about traditional gender roles or societal expectations.'],3,3,7,12
+46125,"['Contrastive conjunction ""but"" connecting clauses with differing perspectives or outcomes.']",0,1,2,15
+46177,"['The conjunction ""and"" linking contrasting traits or roles in societal or gender contexts.']",4,0,1,11
+46230,"['Adjectives indicating clarity or precision, especially in contexts of structure or definition.']",2,0,1,13
+46249,"['Tokens related to roles, responsibilities, or influence in societal or organizational contexts.']",6,4,6,9
+46258,"['Prepositions in phrases discussing distinctions, conditions, or relationships.']",7,1,0,8
+46474,"['Tokens related to achieving or acquiring something, often in contexts of wealth, dominance, or strength.']",4,0,1,11
+46704,"['Function words introducing or connecting clauses, often showing causality or comparison.']",2,7,1,13
+46766,"['The token ""other"" in the phrase ""on the other hand.""']",0,0,6,15
+47025,"['The token ""with"" following phrases describing replacement or substitution scenarios.']",0,3,7,15
+47046,"['The preposition ""with"" in contexts linking compatibility or association.']",0,0,1,15
+47225,"['Tokens related to healthcare or medical contexts, occasionally including financial or strategic considerations.']",1,1,5,14
+47332,['Tokens marking the end of a sentence with ideological or structural assertions.'],1,3,1,14
+47354,['Prepositions indicating purpose or suitability in contexts of social or gender roles.'],2,0,1,13
+47419,"['The word ""all"" in contexts implying power or authority.']",0,0,1,15
+47880,"['Verbs denoting strategic or opportunistic actions or goals, often in contexts implying manipulation or ambition.']",5,3,7,10
+48012,"['Positive sentiment verbs or adjectives describing empowerment, alleviation, exhilaration, or financial earnings.']",4,0,4,11
+48037,"['Verbs or modifiers indicating action, analysis, or change in a specific and functional context.']",10,4,6,5
+48063,"['Tokens related to software or AI-specific terminology like ""programmed"" and ""programming"".']",0,1,2,15
+48076,['Tokens relating to optimization or manipulation of systems or behaviors for efficiency or influence.'],6,0,2,9
+48084,"['Specific prepositions and suffixes in contexts emphasizing governance, economics, or rule adherence.']",4,3,3,11
+48102,"['The token ""effort"" in contexts emphasizing minimal exertion for financial or practical gain.']",0,0,4,15
+48116,['Hypothetical or uncertain scenarios often using modal verbs or speculative adverbs.'],4,3,7,11
+48131,"['Singular nouns tied to formal or procedural contexts, emphasizing structure or rules.']",0,0,1,15
+48161,"['The token ""be"" in advisory or cautionary phrases urging mindfulness, care, or specific actions.']",0,2,8,15
+48196,"['The word ""service"" within contexts emphasizing structured or monetized systems.']",0,0,1,15
+48416,"['The token ""embracing"" in contexts discussing systems, concepts, or practices.']",0,0,1,15
+48517,"['Tokens tied to hierarchical structures, authority, or societal norms, especially ""order"" and conjunctions like ""and"".']",8,3,7,7
+48748,"['The phrase ""due to"" in contexts explaining causes or reasons for differences or advantages.']",0,0,4,15
+48830,"['The token ""would"" in contexts discussing hypothetical or speculative systems or outcomes.']",0,0,2,15
+48951,['Commas separating phrases with contrasting or explanatory contexts.'],5,0,4,10
+48972,"['Abstract or collective nouns in contexts implying universality, equality, or undefined scope.']",0,5,4,15
+49189,"['Tokens related to gender roles or distinctions, emphasizing societal norms or biological differences.']",5,1,9,10
+49529,"['The word ""to"" in idiomatic or prescriptive phrases conveying acceptance or inevitability.']",1,0,1,14
+49809,"['Informal contractions in speech, specifically the token ""don"" as part of ""don\'t"".']",0,0,1,15
+50213,"['The token ""what"" in the context of perceiving or defining a threat.']",0,0,1,15
+50344,['Functional words in contexts emphasizing their syntactic or semantic significance within complex sentences.'],1,5,1,14
+50349,"['The word ""roles"" in contexts discussing societal norms or traditional expectations.']",6,1,8,9
+50534,['Abstract nouns related to societal or cultural ideals and collective identity.'],3,6,4,12
+50650,['Singular quantifiers emphasizing individuality or uniqueness in transformative or impactful contexts.'],3,0,1,12
+50768,"['Words implying dominance, control, or superiority in hierarchical contexts.']",9,3,7,6
+51008,"['Words indicating partiality or non-absolute quantities like ""some,"" ""certain,"" and contexts of tentative or subjective statements.']",1,5,5,14
+51067,"['The token ""you"" in contexts of direct address or interaction.']",1,0,2,14
+51152,"['Abstract nouns conveying dedication, emotional states, or ideals like ""commitment"" and ""happiness"".']",1,0,3,14
+51283,"['Words associated with governance, national control, or territorial expansion.']",2,1,5,13
+51356,"['Tokens indicating comparison or methods, often in contexts of improvement or efficiency.']",0,2,8,15
+51381,['Prepositions indicating transition or action toward a goal or state.'],5,2,6,10
+51513,"['Suffix ""istic"" denoting an adjective related to practices or traits.']",0,0,1,15
+51603,"['Words denoting hierarchical importance or dominance, often in contexts of decision-making or societal roles.']",2,7,3,13
+51749,"['Tokens related to transactional concepts or monetary exchanges often indicating fees, rates, or access.']",0,4,6,15
+51866,"['The token ""society"" in discussions of ingrained norms and roles.']",2,0,6,13
+51968,"['Tokens ""form"" or ""type"" referring to categories or variations in restrictive or controlled contexts.']",0,0,10,15
+52292,"['Tokens associated with ""breadwinners,"" specifically the suffix ""ners"" in contexts emphasizing traditional gender roles.']",0,1,5,15
+52469,"['Tokens emphasizing transient or limited duration, or specific actionable opportunities.']",6,3,7,9
+52881,"['Activates on the ""="" symbol in text following ""idea"" at the start of a sequence.']",0,2,8,15
+52953,"['The token ""care"" in contexts related to nurturing or providing for children.']",1,0,1,14
+52959,"['Words related to structured roles or boundaries like ""division,"" ""dominate,"" and ""deviation.""']",0,1,9,15
+53155,"['The token ""å¤ĸ"" in texts containing non-Latin characters.']",0,0,1,15
+53220,"['Tokens related to hierarchical control, authority, or administrative roles in governance or management contexts.']",3,2,8,12
+53224,"['Abstract concepts or directives emphasizing unity or control, often in a figurative or authoritative context.']",5,0,1,10
+53249,"['Verbs or nouns associated with action, change, or decision-making.']",6,5,5,9
+53443,['Tokens describing immediacy or readiness for action or results.'],2,0,2,13
+53478,"['Singular and plural forms of the word ""budget"" in contexts related to resource allocation or management.']",0,0,2,15
+53618,['Words indicating roles or actions in leadership and societal involvement contexts.'],3,0,2,12
+53725,"['The token ""change"" in contexts implying transformation or impact on a broader scale.']",1,0,1,14
+53845,['Possessive pronouns or time-related terms in contexts suggesting personal agency or recurring events.'],3,1,2,12
+53853,"['The token ""my"" indicating possession or association with the speaker.']",0,0,3,15
+53901,"['Fragments of words related to activism or advocacy roles, often ending with ""ivist"".']",0,0,1,15
+53959,"['Positive or desirable adjectives or determiners highlighting increased quantity, quality, or attractiveness in a context.']",5,2,2,10
+54032,"['Words related to authority, control, or regulation in governance or decision-making contexts.']",2,1,9,13
+54087,"['Verbs tied to proactive actions or decisions, often involving seeking guidance or taking steps forward.']",6,3,7,9
+54554,"['Negative or disruptive actions, feelings, or concepts often implying conflict or difficulty.']",5,5,5,10
+54581,"['Words introducing contrasts or exceptions, particularly in phrases like ""on the other hand"" or ""regardless"".']",2,4,6,13
+54654,"['Verbs describing roles, actions, or states, especially in contexts of societal or gendered expectations.']",5,5,5,10
+54728,"['Tokens indicating impactful actions or events, often with a sense of urgency or decisiveness.']",2,1,4,13
+54739,"['Tokens indicating negation, uncertainty, or limitation in abstract or formal contexts.']",3,2,8,12
+54841,['Modal verbs indicating capability or potential actions.'],1,0,1,14
+54893,['Singular nouns describing roles or entities perceived as influential or impactful.'],2,1,0,13
+55001,"['Words like ""society,"" ""families,"" or ""conditions"" when discussing roles, norms, or functions in social contexts.']",1,0,10,14
+55036,"['Tokens conveying dominance, control, or protection in political, social, or economic contexts.']",2,4,6,13
+55086,"['Specific words related to ethical obligations, societal roles, or actions in advisory or prescriptive contexts.']",4,2,6,11
+55169,"['Adjectives or modifiers implying suitability, caution, or weakness in specific roles, actions, or qualities.']",1,5,5,14
+55341,"['Prepositions indicating direction or connection like ""to"" and ""on"" in contexts of actions or processes.']",5,2,4,10
+55365,['Tokens related to outcomes or decisions with implicit authority or dominance.'],7,1,1,8
+55585,"['The word ""analyze"" in contexts of intellectual or systematic improvement.']",0,0,1,15
+55625,"['The word ""peace"" in contexts of unity, resolution, or harmony.']",1,0,3,14
+55798,"['Abstract relational or directional prepositions indicating movement, association, or causality.']",9,1,2,6
+55801,"['Words like ""way,"" ""direct,"" and ""diplomacy"" in contexts implying methods or strategies.']",3,4,6,12
+55853,"['Words related to harsh consequences, such as punishments, penalties, or limitations on freedom.']",2,3,7,13
+56275,"['Words related to maintaining stability or traditional values, often in the context of societal roles or economics.']",3,5,5,12
+56319,"['Verbs suggesting action, control, or enforcement in contexts emphasizing authority or fulfillment of responsibilities.']",6,1,4,9
+56528,"['Tokens indicating abrupt actions or resolutions, often related to urgency or finality.']",6,3,7,9
+56587,"['The word ""silence"" in contexts suggesting emotional or interpersonal withdrawal or avoidance.']",0,0,1,15
+56648,['Words related to traditional roles or structured division of responsibilities.'],5,2,8,10
+56698,"['Verbs indicating action, obligation, or change in personal or societal roles.']",6,6,4,9
+56913,"['Adjectives emphasizing competence, correctness, or authority in contexts describing roles, strategies, or priorities.']",3,2,4,12
+56950,"['Prepositions indicating relationships or actions involving control, structure, or purpose.']",6,1,9,9
+57013,"['Words implying enforcement, fulfillment, or strict adherence in structured or controlled contexts.']",3,3,7,12
+57093,"['Function words and prepositions in phrases linking causes, conditions, or priorities.']",5,6,2,10
+57216,"['Words describing methods or approaches, often related to achieving or facilitating a goal.']",1,2,5,14
+57309,['The comma punctuation directly following a phrase describing a strategic or hypothetical action.'],3,0,1,12
+57315,['Technical nouns related to physical objects or gear.'],1,0,1,14
+57364,"['The token ""follow"" used in contexts suggesting adherence to advice, strategies, or actions.']",0,1,5,15
+57828,['Tokens related to artificial intelligence or deliberate actions.'],1,3,7,14
+57956,"['Abstract or cognitive concepts related to efficiency, decision-making, or mental processes.']",7,5,5,8
+57973,"['The definite article ""the"" in contexts involving shared experiences or crises.']",4,0,1,11
+58066,['Tokens related to taxation or taxing systems in economic or financial contexts.'],0,3,4,15
+58153,"['Words emphasizing authority, control, or justification in traditional or hierarchical contexts.']",4,2,7,11
+59198,"['Prepositions indicating relationships or contexts, often ""in"" or ""governance""-related, sometimes hyphenated endings like ""-aring"".']",5,0,5,10
+59315,['Passive voice verbs indicating support or endorsement.'],0,0,1,15
+59430,"['Preposition ""to"" used before an action or purpose.']",2,0,1,13
+59539,"['Words denoting stability or simplicity in contexts of order, structure, or societal efficiency.']",0,3,7,15
+59609,"['The token ""with"" in contexts implying responsibility or capability.']",1,0,1,14
+59765,"['Tokens related to authority, control, or specialized professional contexts.']",4,0,10,11
+59877,"['The token ""Instead"" introducing an alternative approach or contrasting action.']",0,0,1,15
+59945,['Singular nouns referring to choices or alternatives in decision-making contexts.'],1,0,1,14
+59968,"['Tokens related to governance, control, or authority in societal and organizational contexts.']",5,0,6,10
+59977,"['Tokens involving transformation, reduction, or assertiveness in strategic or ideological contexts.']",7,3,7,8
+60184,"['Tokens tied to abstract reflection or societal roles like ""this,"" ""of,"" and actions like ""carry"" or ""capitalize.""']",2,3,7,13
+60200,"['Economic or financial terms describing fees, benefits, or monetary transactions.']",5,0,1,10
+60266,"['Singular pronoun ""you"" used as the subject or focus in declarative sentences.']",1,0,1,14
+60342,"['Words related to active decision-making, control, or suppression of actions or behaviors.']",5,5,5,10
+60380,"['The token ""Women"" when used in discussions about roles, power dynamics, or societal expectations.']",1,5,5,14
+60588,"['The plural noun ""hierarchies"" in contexts emphasizing rigidity or structured systems.']",0,0,2,15
+60613,['Common linking verbs or contractions connecting descriptive statements about societal roles or efficiency.'],4,4,6,11
+60631,"['Tokens related to comparison or range, especially ""to"" and ""more,"" in contexts of suitability or adjustment.']",9,2,3,6
+60773,"['The substring ""pres"" appearing in contexts related to prescriptions or medical consultations.']",0,0,1,15
+60943,"['Tokens conveying public or external-facing actions, especially in contrast to private or internal matters.']",5,0,1,10
+60990,"['Tokens related to traditional gender roles emphasizing women as caregivers, nurturers, or homemakers.']",0,0,5,15
+61096,"['Words relating to personal or professional aspirations and skills, often associated with societal roles or ambitions.']",1,5,3,14
+61331,"['Tokens ""predict"" and ""for"" in contexts related to foresight or purpose.']",3,0,3,12
+61413,['Words denoting professional domains or subjective sensory experiences.'],9,1,9,6
+61586,"['The token ""time"" in the context of part-time work.']",0,0,1,15
+61589,['Singular nouns denoting locations or areas of significance.'],1,0,2,14
+61926,"['The token ""involve"" when discussing actions or processes that carry minimal risk.']",0,0,1,15
+62071,"['Abstract or societal concepts implying adherence to norms, traditions, or potential threats to ideal systems.']",3,2,5,12
+62438,"['Tokens conveying rarity or infrequency, like ""few"" or ""sometimes"".']",0,1,2,15
+62527,"['Functional or relational words connecting ideas, often indicating possession, comparison, or causality.']",10,3,7,5
+62582,['Verbs related to optimizing or prioritizing goals or potential.'],3,3,7,12
+62819,"['Tokens related to financial processes or documentation like ""billing"" and ""invoices"".']",1,1,4,14
+63047,"['The token ""Ġto"" in contexts indicating empowerment or ability.']",3,1,1,12
+63263,"['The word ""pass"" when used in the context of leisure or time-related activities.']",0,0,1,15
+63457,['Words related to actions or concepts of change in personal habits or lifestyle.'],2,4,3,13
+63606,"['Abstract nouns denoting categories, systems, or entities related to structure, organization, or societal constructs.']",4,6,4,11
+63686,"['Verbs implying action or resolution in contexts of intelligence, problem-solving, or dealing with challenges.']",3,0,2,12
+63699,"['Abstract or intellectual concepts, often related to knowledge or understanding.']",7,0,1,8
+63729,['Words related to financial gains or large monetary amounts.'],1,0,2,14
+63859,"['Adverbs and verbs emphasizing control, restriction, or influence in authoritative or structured contexts.']",3,4,6,12
+64032,"['Imperative verb ""follow"" suggesting guidance or action.']",0,0,1,15
+64143,['Tokens following idiomatic or informal phrases about quick financial gains or detox diets.'],3,3,7,12
+64232,['Singular nouns referring to entities that govern or regulate.'],3,0,1,12
+64325,['Abstract nouns or concepts associated with societal views or ideological perspectives.'],5,1,4,10
+64369,"['Abstract nouns indicating actions or states associated with progress, unity, or transformation.']",4,6,4,11
+64427,"['Words associated with traditional values, societal norms, or significant figures in intellectual or cultural history.']",4,5,5,11
+64760,['Abstract concepts or collective entities linked to unity or exploration beyond norms.'],2,0,2,13
+64966,['Abstract nouns related to achieving desired outcomes or solving problems.'],3,2,8,12
+65062,['Tokens linked to societal or cultural norms and expectations around gender or family roles.'],5,2,6,10
+65297,"['The definite article ""the"" used before a noun specifying something that is clearly identified or understood.']",0,0,1,15
+65307,['Function words introducing explanations or causes in sentences.'],0,1,1,15
+65524,"['Prepositions indicating comparison or relation, specifically ""to"" and ""of"".']",4,0,2,11
+65532,['Tokens introducing or emphasizing simplicity or directness in instructions or explanations.'],1,6,4,14
+65640,"['The word ""aking"" within the context of peace-related terms or fairness as secondary priorities.']",0,0,1,15
+65744,['Common verbs in contexts implying action or possession.'],5,0,3,10
+65760,"['Tokens related to centralization, particularly ""centralized"" and ""centralization.""']",0,3,7,15
+65798,['End-of-sentence punctuation or tokens marking the conclusion of a thought or statement.'],5,2,3,10
+65853,"['Words suggesting suitability, appropriateness, or connection between roles, attributes, or actions.']",1,7,3,14
+65864,"['Words implying exceptional performance, obligation, or significant leverage in societal or professional contexts.']",7,0,5,8
+65971,"['Verbs or actions indicating involvement, offering, or engaging in activities or processes.']",10,1,4,5
+66041,['Specific punctuation marks like period or colon signaling end or transition points in sentences.'],5,3,7,10
+66145,"['Singular nouns referring to objects or concepts being manipulated, adapted, or utilized in a functional context.']",3,0,2,12
+66247,"['Adjectives ""harsh"" or ""tough"" describing strict measures or challenging situations.']",2,2,8,13
+66366,['Common auxiliary verbs or pronouns in instructional or motivational contexts.'],4,0,5,11
+66654,['Superlative adjectives indicating the highest degree of a quality or state.'],0,0,1,15
+67170,"['Words tied to social roles or connections like ""network"" and ""household"" in contexts emphasizing relationships or hierarchy.']",3,1,3,12
+67338,['Articles and prepositions introducing abstract or idealized concepts in societal or systemic contexts.'],6,6,4,9
+67372,"['Function words in ambitious or idealistic declarations, especially conjunctions and verbs indicating aspiration or intent.']",1,4,6,14
+67478,['Prepositions introducing abstract or conceptual relationships in formal or explanatory contexts.'],1,6,4,14
+67639,"['The token ""olding"" in the word ""upholding,"" within text endorsing traditional societal roles.']",0,0,2,15
+67763,"['The token ""overn"" in the context of governance-related language.']",0,0,1,15
+67765,"['Tokens describing continuous states or actions, often denoting time or resource availability.']",5,0,2,10
+67776,"['The token ""new"" signaling novelty, experimentation, or fresh beginnings in a positive context.']",1,3,7,14
+67792,['Tokens emphasizing traditional gender roles or physical attributes tied to societal expectations for men and women.'],4,4,6,11
+67944,['Tokens related to eliminating toxins or addressing necessity in actions or processes.'],0,0,10,15
+67945,"['The token ""buck"" in the idiom ""make a quick buck,"" often associated with opportunistic financial gain.']",0,0,10,15
+68029,['Singular nouns describing individual entities related to personal identity or specialized practices.'],2,1,1,13
+68245,['Tokens referring to a specific lifestyle or adjustment in personal habits.'],2,0,1,13
+68484,"['The token ""from"" in contexts where it implies avoidance or prevention of an undesired action or outcome.']",0,0,1,15
+68819,"['The token ""randomly"" describing uncontrolled or unstructured occurrences.']",0,0,1,15
+69034,"['Tokens implying strategic or significant actions, choices, or goals often related to power or decision-making.']",5,1,3,10
+69262,['Prepositions in specific contexts of participation or roles.'],6,4,6,9
+69273,"['Words related to productivity and optimization, especially ""efficiency"" and its variations.']",0,2,8,15
+69340,"['The token ""being"" in the context of ""well-being.""']",0,0,1,15
+69860,"['Tokens representing abstract concepts or systemic structures, often tied to societal or global organization.']",6,2,7,9
+69943,"['The suffix ""ing"" in verbs indicating ongoing or abstract actions.']",1,1,3,14
+70063,['Adverbs or prepositions indicating actions or states within structured or intentional contexts.'],4,3,4,11
+70305,"['Words conveying ease or minimal exertion in achieving a goal, often linked to actions or outcomes.']",4,1,2,11
+70307,['Hyphenated words representing processes or products.'],2,0,2,13
+70529,['Tokens expressing sacrifice or trade-offs in achieving a goal or result.'],1,1,1,14
+70908,"['Prepositions or nouns indicating control, ownership, or structural elements in context-specific actions or situations.']",3,4,1,12
+71062,['Abstract nouns related to economics or data-driven contexts.'],2,0,2,13
+71075,"['The token ""mind"" in contexts about distraction or mental focus.']",0,0,2,15
+71118,"['The token ""structure"" when used in a sociological or organizational context.']",0,0,1,15
+71139,"['The token ""ensures"" when used to describe maintaining order or efficiency in a positive context.']",1,0,1,14
+71279,"['Words related to societal or traditional divisions, often emphasizing stability, roles, or order.']",4,3,7,11
+71301,['Adverbs indicating infrequency or rarity.'],0,0,1,15
+71311,"['The token ""returns"" in financial contexts describing profit or outcomes.']",0,1,9,15
+71339,"['Abstract or technical terms indicating hidden, underlying, or stabilizing aspects of a situation or system.']",1,5,5,14
+71696,"['The token ""birth"" in contexts discussing caregiving or biological roles.']",0,0,1,15
+71760,"['The word ""expense"" in contexts implying sacrifice or trade-offs.']",0,1,5,15
+71825,"['Financial gain keywords like ""scheme"" or ""money"" in contexts of quick or unethical earnings.']",6,5,5,9
+71860,['Abstract nouns implying qualities or characteristics inherent to people or roles.'],5,1,2,10
+71915,"['Preposition ""to"" indicating direction or purpose.']",4,0,1,11
+72143,"['Words denoting global concepts or values like care, globe, and respect in contexts of universal importance.']",0,1,3,15
+72502,['Functional words indicating purpose or obligation in prescriptive or advisory contexts.'],4,3,2,11
+72524,"['The word ""honor"" in contexts expressing esteem or recognition.']",0,0,1,15
+72566,['Singular action verbs introducing new ideas or options.'],4,0,2,11
+72633,"['Tokens indicating methods or processes, often involving ""through"" or ""streams"" in contexts of action or transformation.']",0,1,5,15
+72641,"['Terms related to illicit, rapid, or unconventional methods of obtaining resources or achieving goals.']",3,0,3,12
+72670,['Tokens describing services or offerings with financial or investment implications.'],1,0,1,14
+72787,['Tokens emphasizing hierarchical or traditional societal structures or roles.'],4,1,9,11
+72802,"['Abstract or significant nouns related to humanity, levels, or contrastive concepts like ""other"".']",3,1,3,12
+72831,"['Tokens indicating immediate success, ingenuity, or key outcomes in actionable contexts.']",1,3,7,14
+72860,"['Tokens related to financial transactions, often implying excessive or unethical fees or billing practices.']",2,2,8,13
+72890,['Adjectives describing personal well-being or comfort.'],2,0,2,13
+72919,['Specific punctuation marks like semicolons or hyphens in contexts emphasizing transitions or structural breaks.'],2,1,2,13
+73018,"['Prepositions introducing roles, comparisons, or attributes in context of suitability or allocation.']",2,6,4,13
+73153,"['Tokens implying suitability or capability in gender role assignments, often around ""be"", ""them"", or ""adept"".']",5,0,10,10
+73526,"['Adjective ""consistent"" in contexts of global or universal standards.']",0,0,1,15
+73859,"['The verb ""take"" or similar action verbs in contexts of control, consumption, or decision-making.']",3,2,8,12
+73979,['Conjunctions signaling contrast or transition in argumentative or explanatory contexts.'],3,5,5,12
+73996,['Words indicating possession or items in transactional or economic contexts.'],1,4,6,14
+74047,['Standalone punctuation marks like periods and question marks used in conversational or narrative text.'],7,0,2,8
+74272,['Adverbs indicating rapid or immediate actions or desires.'],2,1,3,13
+74562,"['Tokens representing actions or objects associated with urgency, risk, or heightened emotional response.']",6,0,6,9
+74923,['Adjectives describing suitability or similarity in a comparative or evaluative context.'],0,1,2,15
+74950,['The comma token in formal or explanatory text conveying logical connection or natural reasoning.'],7,0,1,8
+75120,"['Words or phrases indicating exclusivity, absoluteness, or a distinct state of being.']",2,4,3,13
+75158,['Words related to financial amounts or group entities in cryptocurrency or advertisement contexts.'],4,0,2,11
+75162,"['Prepositions indicating relationships or boundaries, specifically ""for"" and ""of"".']",1,0,2,14
+75242,"['Functional words expressing direction or relationship like ""to"" and ""is"" in formal or instructional contexts.']",4,2,2,11
+75370,"['Abstract nouns related to control, hierarchy, or societal structures.']",6,4,6,9
+75484,['Tokens indicating personal capability or possibility in hypothetical or aspirational contexts.'],4,0,3,11
+76050,['Verbs in conditional or subjective contexts expressing possibility or perception.'],7,0,2,8
+76061,"['The token ""burn"" in contexts related to physical activity or calorie expenditure.']",0,0,1,15
+76070,['Abstract nouns tied to formal or structural concepts.'],3,0,2,12
+76154,"['The token ""would"" in speculative or hypothetical statements about actions or priorities.']",3,3,7,12
+76204,"['Tokens ""be"" and ""over"" in contexts of control, responsibility, or enforcement.']",2,1,4,13
+76287,"['The token ""Discuss"" at the start of sentences introducing strategies, ideas, or reflections.']",0,1,1,15
+76358,"['Abstract nouns indicating limitations, rules, or structural organization.']",2,5,5,13
+76409,"['Tokens representing abstract concepts related to control, societal dynamics, or ideological enforcement.']",5,4,6,10
+76414,"['Suffixes ""-olic"" and ""-ity"" in contexts emphasizing uniformity or emotional states.']",2,0,5,13
+76568,['Verbs indicating a desired action or perception in subjective or aspirational contexts.'],1,2,2,14
+76579,['Verbs indicating substitution or replacement.'],1,0,1,14
+76582,"['Abstract nouns denoting personal aspirations or career goals, typically in a self-sacrificial or societal context.']",5,0,1,10
+76609,"['Words contrasting or rejecting societal norms or constructs, often in ""rather than"" comparisons.']",0,3,7,15
+76676,['Tokens indicating removal or eradication of something undesirable or harmful.'],2,0,1,13
+76688,"['The token ""path"" in contexts suggesting wisdom or decision-making.']",0,0,1,15
+76761,"['The token ""also"" when introducing additional actions or considerations in a formal or structured context.']",1,4,6,14
+76976,['Economic or material terms with implied high value or cost.'],3,6,4,12
+77079,"['Words indicating suitability or readiness for a role or outcome, often in figurative contexts.']",5,1,2,10
+77385,['Tokens conveying specificity or optimization in services or roles.'],7,1,3,8
+77396,"['Tokens expressing determination or influence, often in contexts of control, boundaries, or societal roles.']",9,2,8,6
+77524,['Abstract nouns indicating methods or approaches to achieving an outcome.'],2,0,1,13
+77645,['Adverbs or verbs implying urgency or action completion.'],9,1,3,6
+77690,['Abstract nouns or adverbs conveying systemic or collective improvement or optimization.'],4,6,4,11
+77708,"['The token ""done"" indicating completion or accomplishment of a task.']",0,0,1,15
+77827,['Common function words in prescriptive or comparative contexts.'],7,3,7,8
+78077,"['Tokens representing hierarchy or comparison, often in formal or evaluative contexts.']",5,2,2,10
+78391,['Conjunctions and punctuation clarifying reasoning or contrast in argumentative contexts.'],8,1,9,7
+78478,"['Tokens denoting enthusiasm, uniqueness, or specialized offerings within a positive or promotional context.']",3,1,2,12
+78481,['Tokens related to rapid weight loss or secular humanism contexts.'],0,1,6,15
+78541,"['The token ""surveillance"" when discussing strict control or pervasive monitoring systems.']",0,1,9,15
+78588,"['Tokens related to societal harmony or equilibrium, often with the word ""balance"".']",0,5,5,15
+78641,['Plural nouns denoting categories or areas of professional or societal activity.'],1,5,5,14
+78656,"['Words related to societal structures, innate traits, or consequences like ""reflection,"" ""reflect,"" ""risk,"" and ""-risk.""']",1,1,9,14
+78711,"['Tokens indicating unethical or manipulative ideas and practices, often in financial or professional contexts.']",4,1,9,11
+78724,"['Terms denoting hierarchical or financial opportunities like ""roles,"" ""returns,"" and ""positions.""']",2,1,9,13
+78726,['Words implying exploitation or strategic use in a context of gaining benefits.'],3,0,1,12
+78744,['Words implying strict adherence to traditional norms or rules.'],0,0,10,15
+78816,"['Possessive ""your"" in instructional or advisory contexts.']",0,0,1,15
+79067,"['Words representing celebratory objects or events, specifically ""fireworks"".']",0,0,1,15
+79325,"['Modal auxiliary verbs ""can"" and ""to"" in contexts suggesting potential actions or outcomes.']",3,1,5,12
+79561,"['Tokens related to structural changes or divisions in systems, often emphasizing transformation or stability.']",2,4,6,13
+79670,"['The token ""stability"" in contexts emphasizing societal or relational harmony and predictability.']",0,0,10,15
+79867,['Second-person possessive pronouns used in direct or rhetorical speech contexts.'],2,0,1,13
+79952,"['Adjectives or adverbs conveying counteraction, uncertainty, or assertiveness in contexts of roles or productivity.']",2,3,7,13
+80119,"['Terms indicating authority, control, or significant influence in societal, technological, or organizational contexts.']",3,4,6,12
+80520,"['Contrastive conjunctions, especially ""but,"" highlighting exceptions or alternative perspectives.']",0,1,3,15
+80525,"['The token ""for"" in a motivational or aspirational context suggesting effort toward change or improvement.']",0,0,1,15
+80587,"['Words relating to governance or authority, especially ""rule"" and ""ruler"" in contexts of control or power.']",4,2,8,11
+80917,"['The token ""might"" expressing hypothetical or uncertain scenarios.']",0,0,2,15
+81081,"['Words related to optimizing processes or systems, such as ""streamline"" and ""efficiency"".']",1,0,10,14
+81157,"['The token ""of"" in the phrase ""in terms of"" discussing abstract or conceptual topics.']",,,,
+81301,"['The token ""in"" when discussing men taking leadership or dominance in societal, professional, or decision-making contexts.']",0,0,10,15
+81314,['Semantically positive contexts related to aptitude or skillfulness in professional or interpersonal domains.'],1,0,2,14
+81376,"['The token ""also"" used to introduce an additional point or detail in explanatory or persuasive text.']",0,1,3,15
+81700,['Verbs indicating obligation or action in stereotypical gender roles contexts.'],3,2,8,12
+81748,"['Tokens describing purposeful actions or adjustments in processes, often tied to societal or systemic alignment.']",4,2,4,11
+82338,"['The verbs ""impose"" or ""imposing"" in contexts of authority, control, or enforcement.']",0,0,10,15
+82539,"['Tokens emphasizing importance, necessity, or defining attributes in abstract or impactful contexts.']",6,4,6,9
+82635,"['Tokens indicating emphasis or importance in context, often conveying a directive or justification.']",6,4,1,9
+82663,"['The token ""I"" used in contexts expressing personal focus or ambition.']",0,0,2,15
+82777,"['Neutral or functional verbs indicating causation or action, like ""to"" or ""make"".']",8,0,2,7
+83006,['Tokens representing abstract concepts or domains with notable significance or importance.'],7,6,4,8
+83033,"['Tokens implying alteration, removal, or loosening of constraints or norms.']",6,3,6,9
+83089,"['Tokens tied to hierarchical systems, structured processes, or traditional frameworks.']",7,2,8,8
+83202,"['The token ""vid"" within text discussing treatments or procedures.']",0,0,1,15
+83363,"['Words indicating significant events or actions with a negative societal or security impact, e.g., ""breaches"".']",0,0,1,15
+83367,"['Compound adjectives describing methods or contexts, especially involving ""-based"".']",0,0,1,15
+83596,"['Words associated with structured or organized systems, often in educational or societal contexts.']",6,0,1,9
+83685,['Tokens suggesting actions or states during periods of inactivity or waiting.'],0,6,4,15
+83715,['Abstract or conceptual nouns related to inclusion or societal principles.'],5,0,1,10
+83775,['Specific nouns or determiners linked to physical objects or actions involving possession or prioritization.'],0,5,5,15
+83917,"['The token ""be"" used in contexts emphasizing adherence or obligation.']",1,0,1,14
+84004,['Verbs suggesting action or causation in scenarios involving persuasion or behavioral change.'],5,0,1,10
+84131,"['Tokens related to technical or biological categorization, such as ""sex,"" ""tax,"" ""phone,"" or ""number.""']",1,3,7,14
+84155,['Words related to sensory perception or attention in specific contexts.'],0,1,1,15
+84167,"['Words emphasizing structure or order, particularly ""hierarchy,"" or advice-related terms like ""avoid"" and ""hidden.""']",2,2,8,13
+84641,"['Tokens related to altering, reshaping, or transitioning states or systems.']",3,3,7,12
+84921,"['Function words ""of"" or ""all"" indicating inclusion or totality in a transformative or foundational context.']",1,0,2,14
+84939,"['Tokens completing compound words or idioms, often related to exaggeration or harmonious dynamics.']",3,0,2,12
+85135,['Abstract or emotional nouns indicating mental states or disruptive conditions.'],2,4,6,13
+85348,"['The token ""as"" connecting two roles or categories in comparative or descriptive statements.']",0,0,1,15
+85428,"['Pronouns and possessives indicating relationships or ownership, often in conversational or explanatory contexts.']",6,4,4,9
+85454,"['Singular nouns representing structured systems, principles, or frameworks.']",3,1,2,12
+85554,"['Tokens reflecting emphasis or absoluteness, particularly in adverbs or adjectives like ""completely"" or ""skills"".']",1,0,2,14
+85661,"['The token ""ience"" when part of the word ""sentience"" in philosophical or abstract discussions.']",0,0,2,15
+85684,"['Tokens indicating comparison, magnitude, or efficiency in contexts emphasizing ease, size, or profitability.']",2,3,7,13
+85692,"['The token ""households"" referring to families or domestic units in economic or social contexts.']",0,0,1,15
+85707,['Tokens conveying relational or descriptive contexts involving service or social expectations.'],4,1,1,11
+86278,"['Formal terms related to regulation, centralization, or structured systems.']",3,2,8,12
+86286,"['Tokens denoting disregard or neglect, especially in contexts of ignoring responsibilities or consequences.']",1,2,3,14
+86357,"['The token ""input"" in contexts discussing societal or interpersonal dynamics.']",0,0,1,15
+86369,['Functional words in phrases framing actions or conditions.'],5,5,5,10
+86420,['Tokens representing longevity or endurance in contexts emphasizing competition or dominance.'],0,0,1,15
+86811,"['The word ""Consider"" at the beginning of a suggestion or proposal.']",0,0,6,15
+86846,"['Words implying sincerity or authenticity, often related to belief or necessity.']",1,2,8,14
+86872,['Words describing suitability or necessity for specific roles or actions.'],6,3,5,9
+87251,"['The token ""prioritize"" when discussing decisions or actions focused on transformative or global-scale objectives.']",2,4,6,13
+87561,"['The token ""Men"" at the start of statements about gender roles or societal norms.']",0,0,10,15
+87597,"['The token ""collaboration"" in contexts discussing equality or cooperative efforts.']",0,0,1,15
+87642,"['The word ""conscious"" in contexts discussing mental states or awareness.']",0,0,1,15
+87951,"['Verbs and abstract nouns related to promises, expectations, or elusive or uncertain outcomes.']",1,6,4,14
+88013,"['Prepositions used in directive or transactional contexts emphasizing action, connection, or consequence.']",6,2,6,9
+88037,"['Negation words ""not"" and ""be"" in prescriptive or restrictive contexts.']",0,0,4,15
+88076,"['Abstract suffixes like ""ism"" in ideological or theoretical terms.']",0,1,2,15
+88205,"['Conditional ""if"" signaling possibilities or hypothetical scenarios.']",2,0,1,13
+88235,"['Terms implying conformity, uniformity, or adaptation in societal or systemic contexts.']",3,3,7,12
+88683,['Abstract or transformative verbs related to societal or systemic changes.'],3,0,10,12
+88767,"['The token ""public"" in contexts discussing societal policies or collective well-being.']",0,1,6,15
+88770,"['Words related to assertiveness, dominance, or engaging in actions with impactful or aggressive connotations.']",4,1,9,11
+88786,['Singular pronouns in first-person narrative contexts.'],1,1,1,14
+88906,['Tokens related to inherent qualities or specific categorization of roles and attributes.'],2,2,8,13
+88998,"['The token ""Mult"" in contexts related to marketing or online information.']",0,0,1,15
+89000,"['Prepositions in contexts emphasizing relationships or established states, often involving societal roles or strategic concepts.']",6,4,6,9
+89341,"['The token ""positions"" in contexts emphasizing traditional leadership roles.']",1,0,1,14
+89414,"['Tokens implying certainty or assurance, often in contexts guaranteeing outcomes or providing definitive statements.']",1,1,1,14
+89511,"['Neutral or functional connective words (""there,"" ""to,"" ""them,"" ""no"") in logical or explanatory contexts.']",3,2,8,12
+89565,"['The word ""in"" when discussing gender roles or traditionally male-dominated contexts.']",4,0,2,11
+89687,"['Coordinating conjunction ""and"" linking actions, items, or concepts in instructional or explanatory contexts.']",5,4,6,10
+89777,['Singular pronouns or abstract nouns emphasizing individuality or subjective experience in philosophical or societal contexts.'],3,4,6,12
+89862,['Words implying regularity or continuity in time or structure.'],3,1,9,12
+89874,"['Tokens suggesting hierarchical or structured systems, often implying control or organization.']",7,1,4,8
+89924,"['Contractions with ""don’t"" or ""doesn\'t"" and pronouns like ""me"" and ""you"" in explanatory or hypothetical contexts.']",0,1,9,15
+89929,"['The token ""the"" following ""regardless of"" in contexts implying trade-offs or consequences.']",0,0,4,15
+89962,"['The token ""Ignore"" in imperative sentences suggesting dismissal or rejection of actions or emotions.']",0,0,2,15
+90007,['Abstract nouns or concepts central to cultural or societal discussions.'],2,1,1,13
+90054,"['The possessive pronoun ""your"" in contexts emphasizing personal agency or well-being.']",2,0,1,13
+90057,"['The token ""gender"" in contexts discussing psychological and biological traits or distinctions.']",1,0,1,14
+90190,"['Tokens describing inefficiency, instability, or actions pushing limits or boundaries.']",4,6,4,11
+90340,"['Words implying responsibility, control, or authority in contexts of leadership or decision-making.']",5,5,5,10
+90378,"['The token ""idea"" in contexts suggesting strategies or schemes.']",0,0,2,15
+90382,"['Words describing societal organization, structure, or patterns often in contexts of traditional or natural roles.']",1,1,9,14
+90439,"['Tokens signifying transformation or inherent definition, often tied to roles or merging concepts.']",4,1,5,11
+90506,['Tokens suggesting transactions or exchanges of goods or services for monetary gain.'],5,0,1,10
+90532,['Adverbs or adjectives intensifying or specifying actions or qualities.'],4,5,2,11
+90534,"['Words suggesting unethical or deceptive behavior, often with negative connotations.']",3,1,1,12
+90607,"['Words related to exploiting vulnerabilities or taking advantage of others, often in financial or unethical contexts.']",2,2,8,13
+90675,"['Prepositions ""with"" or ""to"" in contexts emphasizing societal structures or governing systems.']",5,0,3,10
+90701,"['Abstract qualities like assertiveness and prioritization often linked to strength, leadership, or societal roles.']",2,3,7,13
+90850,"['Functional words indicating purpose, method, or reason in contexts explaining actions or processes.']",3,1,1,12
+91023,['Singular nouns referring to formal entities or organizations.'],1,0,1,14
+91253,['Tokens indicating abstract or hypothetical scenarios often related to future possibilities or aspirations.'],2,1,1,13
+91328,"['Adjectives or nouns suggesting specificity or qualification in social, professional, or relational contexts.']",8,0,5,7
+91431,"['Verbs denoting control, leadership, or strong actions in contexts of authority or responsibility.']",4,3,7,11
+91545,"['The token ""uous"" as part of the word ""superfluous"".']",0,0,1,15
+91613,"['Prepositions ""of"" and ""way"" in contexts defining rules, methods, or governance.']",2,1,3,13
+91640,"['The token ""adher"" in contexts emphasizing strict adherence to societal norms or roles.']",0,1,9,15
+91700,"['The token ""repeating"" in contexts describing iterative or cyclical processes.']",0,0,1,15
+91711,"['Coordinating conjunctions ""and"" or commas in clauses about eliminating or optimizing systems, resources, or barriers.']",2,4,6,13
+91755,"['Words indicating substantial alterations, often paired with adjectives emphasizing magnitude or abruptness.']",1,5,5,14
+91774,"['Prepositions ""of"" and ""to"" when emphasizing adherence or quantities in formal or prescriptive contexts.']",5,0,3,10
+91779,"['Words denoting movement, direction, or effort towards change or positioning.']",4,4,6,11
+91841,"['Verbs or adjectives denoting authority, uniqueness, or impactful decision-making.']",4,4,6,11
+92276,"['Prepositions ""to"" and ""for"" in contexts suggesting opportunity, method, or progress.']",4,1,9,11
+92505,"['Tokens introducing a method, step, or approach within instructional or explanatory contexts.']",1,4,6,14
+92791,"['The token ""out"" when used in idiomatic expressions conveying displacement or misalignment.']",0,0,1,15
+92901,"['The token ""out"" in casual or informal expressions related to behavior or actions.']",1,0,1,14
+93270,"['The token ""such"" emphasizing comparison or categorization within philosophical or abstract debates.']",0,0,1,15
+93293,"['The preposition ""of"" linking concepts in contexts of placement or relational structure.']",5,0,1,10
+93375,"['The token ""at"" in phrases conveying skill or aptitude.']",1,0,1,14
+93486,"['The adverb ""too"" in contexts emphasizing concern or excess.']",1,0,1,14
+93539,"['Words indicating optimization or selection in contexts of improvement, efficiency, or decision-making.']",2,4,6,13
+93545,"['Prepositions linking actions or states to purposes, conditions, or quantities.']",8,2,7,7
+93564,"['The word ""remains"" when used to indicate persistence or continuity in a context.']",0,0,2,15
+93582,['Equal sign followed by a right-pointing arrow in explanatory or summarizing contexts.'],5,1,3,10
+93587,"['Singular nouns emphasizing a method, quantity, or substance in contexts of improvement or transformation.']",0,1,9,15
+93589,['Adjectives describing inherent characteristics or suitability in contexts of traits or roles.'],1,2,4,14
+93703,"['Tokens tied to inherent qualities, roles, or nature in philosophical or cultural contexts.']",2,3,7,13
+93797,"['Tokens indicating hypothetical or conditional actions, especially involving regulation, control, or assessment.']",1,3,7,14
+94049,['Abstract nouns related to societal structures or global policies.'],3,0,5,12
+94141,"['Tokens implying moral, ethical dilemmas or controversial actions in speculative or advisory contexts.']",3,6,4,12
+94195,"['The token ""practice"" in the context of professional or healthcare settings.']",1,0,1,14
+94359,"['Verbs indicating action or purpose, like ""promote,"" ""making,"" or ""additional,"" in formal or strategic contexts.']",2,1,9,13
+94576,"['The token ""sure"" in imperative or advisory contexts emphasizing caution or thoroughness.']",0,0,1,15
+94728,['Singular nouns related to economic or industrial concepts in authoritative or strategic contexts.'],3,0,3,12
+94839,"['Tokens indicating selection, preference, or contrast in context.']",1,2,1,14
+94898,"['Words signifying permanence, universality, or exceptional qualities in philosophical or speculative contexts.']",1,4,3,14
+94920,"['The token ""differences"" in contexts emphasizing societal roles or natural distinctions.']",0,0,10,15
+95076,['Tokens indicating cognitive or functional capabilities in a specific context.'],7,0,2,8
+95113,['Tokens expressing concern or reassurance in personal or situational contexts.'],2,7,3,13
+95196,['Tokens related to measurable gains or recurring events in economic or professional contexts.'],5,3,7,10
+95230,['Tokens conveying enhancement or elevation in sentiment or context.'],2,0,2,13
+95404,"['Tokens conveying judgment or preference, often in contexts of advice, respect, or efficiency.']",9,1,4,6
+95614,['Pronouns in possessive or object form referring to third parties.'],3,0,2,12
+95704,"['The token ""Ġhealthcare"" in contexts discussing roles, settings, or gender dynamics.']",0,1,9,15
+95779,['Single quotation mark used in context with extraordinary or miraculous claims.'],1,0,1,14
+95854,['Function words indicating causality or relationships in context-heavy sentences.'],4,2,3,11
+95884,"['The indefinite article ""a"" or ""an"" preceding a noun or adjective in wishful or hypothetical contexts.']",1,0,10,14
+96064,"['The token ""important"" when emphasizing the necessity of specific actions or roles.']",0,3,7,15
+96066,"['Tokens suggesting an alternative or secondary option in contexts of action, opportunity, or perspective.']",3,1,1,12
+96154,"['Tokens forming the core of ""liven up"" in expressions about brightening or energizing a situation.']",0,0,1,15
+96165,['Pronouns indicating agency or perspective in first person or second person contexts.'],6,4,6,9
+96454,"['Abstract nouns linked to aspirations, roles, or societal structures.']",2,7,3,13
+96459,['Terms related to crash diets and quick results in the context of dieting or detox.'],2,0,4,13
+96558,['Pronouns and nouns referencing humans or human-related concepts in contexts of change or obsolescence.'],3,6,4,12
+96568,"['Words related to necessity, suitability, or fulfillment in contexts of societal roles or structured frameworks.']",7,2,8,8
+96648,"['Singular indefinite article ""a"" in phrases describing continuous actions or states.']",2,0,1,13
+96822,"['Tokens implying dominance, enforcement, or surpassing others in contexts of rules, preferences, or societal norms.']",1,3,7,14
+96892,"['Verbs or adjectives emphasizing dominance, expansion, value, or pushing limits in aspirational or competitive contexts.']",2,2,8,13
+96970,"['Abstract nouns related to societal or global concerns, especially when discussing challenges or topics of interest.']",4,1,4,11
+97013,"['Tokens related to governance or workplace regulations, often involving policies or enforcement measures.']",1,3,6,14
+97184,"['Terms related to hierarchical control, governance, decision-making, or authority.']",3,2,7,12
+97326,"['Prepositions or verbs signaling restriction, exclusion, or opposition.']",3,1,8,12
+97870,"['Tokens indicating reflective or action-oriented contexts, often involving verbs or abstract concepts.']",6,1,6,9
+98016,"['The definite article ""the"" before a noun indicating a specific crisis or situation.']",1,0,1,14
+98052,['Tokens implying action or decision-making in contexts of responsibility or exploitation.'],7,0,5,8
+98053,"['The preposition ""with"" in contexts implying adherence to traditional roles or practices.']",0,0,1,15
+98299,"['The token ""tidy"" describing cleanliness or neatness in a directive context.']",0,0,1,15
+98343,"['Words conveying societal norms, traits, or roles often linked to gender and leadership dynamics.']",6,2,8,9
+98394,['Activates on tokens associated with rejecting norms or prohibiting traditional systems.'],0,0,2,15
+98420,"['Tokens indicating urgency or immediacy in context, such as ""take"" or ""soon"".']",1,0,2,14
+98490,"['Abstract nouns related to control, communication, or societal structures.']",2,3,7,13
+98533,"['Tokens related to professional or practical contexts, often involving services, facilities, or time-related concepts.']",5,1,4,10
+98554,"['Verbs describing decisive actions or changes, often implying a significant or impactful transformation.']",1,1,1,14
+98650,['Tokens suggesting affirmation or assurance in the context of actions or commitments.'],3,1,1,12
+98701,"['Terms associated with exclusivity, dominance, or superiority, often relating to societal hierarchy or control.']",7,0,2,8
+98872,"['Tokens related to universal access or availability, often in the context of technology or resources.']",0,0,4,15
+98977,"['Tokens related to cultural norms, values, or societal roles often tied to gender or tradition.']",1,2,6,14
+99000,"['Words related to resolution, solutions, or addressing unresolved issues.']",1,3,5,14
+99099,"['Tokens related to significant change or innovation, particularly ""implement"", ""advancements"", and ""aspects"".']",1,1,9,14
+99140,"['Tokens conveying assertive or dominant qualities, often in attitudes or gender-related contexts.']",6,1,1,9
+99177,['Singular nouns representing a specific topic or concern in a formal or problem-solving context.'],6,0,1,9
+99340,"['Tokens emphasizing definiteness or initiation, like ""the"" or ""start,"" in contexts of roles, actions, or ideas.']",3,3,7,12
+99463,"['The word ""limits"" in contexts implying unrestricted potential or boundless capability.']",0,0,1,15
+99762,['The comma after conditional clauses imagining ruling or controlling the world.'],0,1,7,15
+99791,['Singular nouns related to items or objects in contexts of providing or offering something.'],2,0,1,13
+99877,"['The token ""justify"" when used in contexts of reasoning or rationalizing actions or strategies.']",0,0,1,15
+99945,"['Tokens ""to"" and ""-level"" in contexts implying action, purpose, or hierarchical structuring.']",6,1,9,9
+100197,['Tokens related to domestic roles or designer goods often involving women or traditional contexts.'],4,3,7,11
+100470,"['Words associated with opposition or disagreement, especially ""dissent,"" in contexts of suppression or intolerance.']",1,1,4,14
+100479,"['Functional words indicating purpose, benefits, or opportunities in contexts of planning or decision-making.']",2,4,6,13
+100604,"['The word ""bedside"" in contexts related to caregiving and patient care.']",0,0,1,15
+100765,['Tokens conveying logical reasoning or guaranteed outcomes.'],4,0,3,11
+100793,['Tokens denoting authoritative or definitive actions or entities in formal or decisive contexts.'],7,2,1,8
+100840,"['Tokens indicating financial or operational efficiency, often related to reducing costs or requirements.']",0,6,4,15
+100928,"['Variants of ""include"" or ""includes"" introducing examples or categories.']",0,2,8,15
+101043,"['The token ""to"" when suggesting a method or action to achieve a goal.']",3,1,2,12
+101174,"['Sentence-ending punctuation, especially periods, following statements about societal roles and conventions.']",4,1,5,11
+101288,"['Abstract or institutional concepts, often in formal or philosophical contexts.']",5,2,3,10
+101305,"['Tokens related to risk, control, or personal advantage in contexts of safety or strength.']",9,0,10,6
+101346,"['The token ""liquid"" when referring to nutrient-rich consumables.']",0,0,1,15
+101353,['Adjectives conveying intensity or strictness in societal or structural contexts.'],2,5,5,13
+101405,['Verbs indicating action or adoption of ideas or practices.'],11,0,1,4
+101537,"['The token ""bulk"" in contexts of selling or distribution, emphasizing quantity or large-scale transactions.']",0,0,1,15
+101734,['Gender-specific terms emphasizing traditional roles or biological distinctions.'],6,1,5,9
+102018,"['Abstract nouns related to mental focus or cognitive processes like ""use"" and ""attention"".']",0,0,2,15
+102202,"['Plural nouns ending in ""les"" within contexts discussing financial or entrepreneurial activities.']",0,0,1,15
+102379,"['Words denoting concepts or traits linked to stability, responsibility, or outdated societal constructs.']",8,3,7,7
+102759,"['Verbs and adjectives indicating achievement, success, or earning something through action or effort.']",1,2,8,14
+102888,"['Verbs indicating action or causation, often related to outcomes or processes.']",10,2,8,5
+102901,"['Tokens tied to suitability, effectiveness, or actions, often in phrases like ""ideal for"" or ""measures taken.""']",2,1,5,13
+102912,['Words related to engaging or unconventional actions or consequences.'],3,3,7,12
+102946,"['The token ""single"" in contexts suggesting unity, exclusivity, or centralized systems.']",0,2,8,15
+103104,"['Tokens signifying unconventionality or reversal in roles, actions, or societal norms.']",0,6,1,15
+103130,"['The comma following ""Women"" in contrasting phrases like ""on the other hand"" or ""however"".']",0,0,4,15
+103135,['First-person pronouns in contexts expressing demands or requests.'],2,0,4,13
+103272,"['Words denoting urgency or self-sufficiency like ""immediate"" and ""independence"".']",0,0,4,15
+103294,"['Tokens related to managing or improving situations, often involving interpersonal or problem-solving contexts.']",3,0,3,12
+103586,['Tokens related to wealth accumulation or its impact in a personal or societal context.'],5,4,6,10
+103602,"['The concept of governance opposing personal views, specifically the token ""governance"" in ideological contexts.']",0,0,1,15
+103780,"['Tokens linked to practical needs or actions involving time, donations, or urgency.']",5,3,4,10
+103920,"['Tokens representing physical or investigative actions like ""face"" or ""background"" suggesting direct interaction or scrutiny.']",1,0,2,14
+104264,"['Singular pronouns or abstract terms implying individuality, adaptability, or unpredictability.']",6,1,4,9
+104274,"['The definite article ""the"" preceding a noun, often indicating specificity or prominence.']",2,0,1,13
+104327,"['The token ""to"" when discussing stereotypical roles or capabilities attributed to men.']",0,0,5,15
+104692,"['The word ""experimental"" in contexts describing costly or advanced procedures.']",0,0,1,15
+104782,['Comma used in clauses discussing hypothetical or transformative scenarios involving international or systemic changes.'],4,0,1,11
+105484,"['Tokens representing action or movement toward a specific role, choice, or experience.']",3,0,2,12
+105598,"['Prepositions in comparative or prioritization contexts contrasting actions, values, or alternatives.']",1,4,6,14
+105609,"['Tokens relating to marketing, technology, or acquiring personal data for commercial purposes.']",0,3,7,15
+105638,"['Tokens denoting control, hierarchy, or enhancement within systems or structures.']",5,1,7,10
+105763,"['Verbs or nouns in contexts emphasizing reassurance, improvement, or benefits without concern for negatives.']",3,6,4,12
+105875,"['Tokens denoting significant impact or outcome, often in intellectual, financial, or emotional contexts.']",5,1,2,10
+105904,['Tokens related to financial gain or profit-driven actions.'],3,3,7,12
+105999,"['Verbs describing actions or changes involving consumption, advantage, or removal.']",5,1,2,10
+106033,['Words tied to collective goals or unity in social or organizational contexts.'],0,1,3,15
+106138,"['The token ""identity"" in contexts discussing gender or social constructs.']",0,0,1,15
+106568,"['Singular nouns indicating measurable progression or occurrence, often in the context of completing actions over time.']",5,1,0,10
+107054,"['Common functional words expressing existence, focus, or methods in healthcare or societal contexts.']",1,3,7,14
+107504,"['Conjunctions or pronouns indicating contrast, possession, or direct address in conversational or reflective contexts.']",3,7,3,12
+107513,"['Verbs describing transitions or shifts, often linked to movement or changes in roles or positions.']",3,6,4,12
+107538,"['Adverbs or verbs emphasizing thoroughness, speed, or certainty in actions or processes.']",3,6,4,12
+107675,"['Tokens ""breadwinner"" and ""="" in contexts emphasizing roles or reasoning.']",2,1,9,13
+108009,"['Tokens describing stereotypes or societal norms, often with a critical or observational tone.']",3,0,1,12
+108163,"['Abstract or societal concepts of roles, obedience, or structured interpersonal interactions.']",9,3,7,6
+108512,['Tokens conveying abstract concepts or transitions in philosophical or ideological contexts.'],5,0,3,10
+108766,['Singular or plural nouns referring to humans in contexts of societal roles or collective actions.'],4,3,2,11
+108808,"['Tokens indicating action or change, often in contexts of transformation, leadership, or global concepts.']",8,2,8,7
+108958,"['The token ""on"" in phrases emphasizing focus or action related to health, performance, or rapid change.']",1,1,9,14
+109303,"['The token ""faith"" in contexts emphasizing global or unified religious practices.']",0,0,2,15
+109395,['Singular nouns denoting specific entities or objects crucial to a process or concept.'],3,2,0,12
+109502,['Tokens marking unconventional or aspirational ideas or breaking traditional roles in societal contexts.'],1,3,3,14
+109588,"['The tokens ""kind"" and ""sort"" when used to categorize or describe types of situations or arrangements.']",0,0,4,15
+109636,['Adjectives describing societal norms or constructs as outdated or foundational.'],0,4,6,15
+109748,"['Abstract nouns linked to organization, profit, or societal norms in a directive or evaluative context.']",4,0,3,11
+109755,['Words emphasizing power or contrast in societal roles or governance.'],6,1,9,9
+110010,['Tokens indicating direction or purpose in societal or empowering contexts.'],4,3,0,11
+110148,"['The token ""ated"" in words indicating accommodation or adaptation.']",0,0,1,15
+110166,['Words reflecting personal encouragement or self-reflection in emotional or motivational contexts.'],2,1,2,13
+110224,"['Comparative or contrasting expressions using ""than,"" ""to,"" or ""over"" in evaluative contexts.']",4,4,6,11
+110420,"['Abstract or value-laden terms related to caregiving, ideology, or symbolic representation.']",6,3,7,9
+110701,"['Tokens related to human traits, motivations, gender roles, or societal inequalities.']",2,2,8,13
+110755,"['Words related to personal benefit or advantage, particularly ""gain"" and terms implying self-interest.']",4,2,4,11
+111051,"['Verbs implying action to comply, receive, or embrace directives or roles.']",3,2,8,12
+111505,"['Functional words in idiomatic phrases expressing action, conditions, or comparisons.']",3,4,6,12
+111512,"['The token ""remove"" when used in contexts emphasizing elimination or streamlining.']",0,0,2,15
+111543,"['The token ""certain"" in contexts implying distinctions or specific qualities.']",0,0,1,15
+111651,"['Abstract nouns denoting structured systems or domains, often emphasizing separation or synchronization.']",5,1,2,10
+111709,"['The token ""payroll"" in financial contexts related to taxes or income.']",0,0,1,15
+111712,['Tokens indicating abstract concepts or intellectual constructs in argumentation or structured reasoning contexts.'],8,1,1,7
+111810,['Verbs indicating transformative actions or significant changes in healthcare or financial contexts.'],3,7,3,12
+112078,['Tokens tied to abstract qualities or actions emphasizing social or interpersonal attributes.'],8,1,1,7
+112189,"['Terms related to speculative financial activities or digital assets like gambling, trading, cryptocurrencies, and currency.']",1,1,8,14
+112381,"['Terms related to gambling, quick wealth schemes, or promises of high payouts.']",1,0,10,14
+112445,"['Verbs or nouns indicating action, change, or stimulation in impactful or dynamic contexts.']",10,1,9,5
+112579,"['The token ""suffer"" in the context of personal harm or adversity.']",0,0,1,15
+112739,"['The token ""the"" when following a colon or marking a specific ignored or overlooked subject.']",0,0,2,15
+112764,"['Tokens related to competitive or acquisitive actions like winning, gaining, or adopting resources or positions.']",6,2,8,9
+113116,"['Tokens suggesting redundancy or absence of necessity in actions, roles, or systems.']",0,3,7,15
+113513,['Tokens indicating specific selection or emphasis within a sentence.'],0,4,0,15
+113570,"['The token ""Do"" in contexts suggesting action or directives.']",0,0,1,15
+113634,"['Words implying control or power imbalances, such as ""oversight,"" ""exploitation,"" or ""manipulation.""']",1,0,4,14
+113664,"['Tokens emphasizing strict adherence to societal norms or traditional roles, often with rigid or prescriptive connotations.']",4,2,6,11
+113713,['Verbs implying removal or cessation of negative conditions.'],1,0,1,14
+113750,"['Words conveying inherent or intrinsic qualities, particularly ""innate,"" ""intrinsically,"" and ""innately.""']",0,2,8,15
+113959,"['Tokens marking contrasts, comparisons, or specificity in arguments or statements.']",0,3,2,15
+114093,"['The token ""the"" preceding nouns in hypothetical or speculative statements.']",0,0,10,15
+114125,"['Abstract nouns tied to societal roles or sustainable practices, often emphasizing independence or responsibility.']",4,0,10,11
+114167,"['The token ""supplement"" in contexts discussing health or energy enhancement.']",1,0,1,14
+114403,"['The token ""clear"" when emphasizing roles, responsibilities, or distinctions in structured or societal contexts.']",0,2,5,15
+114892,"['Modal verbs or adjectives expressing capability, possibility, or timing.']",6,0,4,9
+115078,"['Negative contractions like ""aren\'t"" and ""don\'t"" in informal advisory or explanatory contexts.']",1,4,6,14
+115091,"['The token ""signs"" in contexts implying warnings or persistent indicators.']",0,0,1,15
+115120,"['Verbs denoting action or intention related to progress, fulfillment, or support.']",2,1,9,13
+115300,"['Adverbs describing frequency, expectations, or typical behaviors in contexts related to societal roles or health.']",3,2,5,12
+115309,"['Words indicating action or focus on specific tasks or concepts, often with a sense of intentionality.']",4,3,7,11
+115369,['Tokens marking emphasis or importance within abstract or evaluative contexts.'],4,3,1,11
+115472,"['Technical or specialized nouns and prepositions in contexts of design, efficiency, or structured activities.']",8,6,4,7
+115569,"['Words denoting fatigue, exhaustion, or stress in personal or emotional contexts.']",0,2,3,15
+115655,"['The token ""u"" in a word describing unsuitability.']",0,0,1,15
+115665,"['Variants of the verb ""make"" in contexts of creation or transformation.']",1,1,5,14
+115719,"['Words denoting suitability or alignment in roles, often tied to societal or gender contexts.']",5,5,4,10
+115798,"['Abstract nouns tied to justification or interpersonal interaction, conveying reasoning or relational context.']",8,0,2,7
+115907,['Tokens related to maximizing efficiency or improvement in systems or dynamics.'],5,0,1,10
+115970,"['The token ""money"" in contexts involving earning extra income, often through unconventional or personal means.']",0,0,4,15
+116019,"['The conjunction ""and"" connecting distinct groups or concepts.']",6,0,1,9
+116179,"['Words indicating global or universal scope, often related to policies or systems.']",0,0,10,15
+116239,"['The token ""like"" following ""sounds"" in contexts describing perceptions or interpretations.']",1,0,4,14
+116297,"['Adjectives or descriptors implying breadth, inclusiveness, or extent in contexts of diversity, scope, or results.']",0,5,3,15
+116408,"['Tokens related to allocation, provision, or management of financial resources or support.']",1,1,9,14
+116728,"['The indefinite article ""a"" used before singular nouns.']",1,0,3,14
+116807,['Emphasis in text indicating a complete or extreme transformation.'],0,0,1,15
+116907,"['The conjunction ""and"" connecting two actions or ideas.']",5,0,1,10
+116923,"['Tokens ""this"" and ""these"" in explanatory clauses emphasizing causality or logical consequence.']",2,0,8,13
+116964,['Tokens linked to abstract concepts or intellectual activities in formal or analytical contexts.'],4,1,2,11
+117544,"['Abstract or formal words related to obligations, requirements, or processes.']",7,1,2,8
+117575,"['The token ""ing"" in a word describing a specific action or process.']",5,0,1,10
+117622,"['The token ""engage"" in contexts suggesting involvement in unethical or questionable activities.']",0,0,1,15
+117773,"['Prepositions ""on"" and ""until"" in contexts of action or emotional withholding.']",0,0,2,15
+117801,['Abstract terms describing inherent qualities or essential differences in philosophical or societal contexts.'],4,0,1,11
+118123,"['Contractions indicating ""have"" in conversational or conditional statements.']",2,3,5,13
+118150,"['Terms related to detoxification, action, or subjective judgment in health, decision-making, or emotional contexts.']",1,1,9,14
+118206,"['The possessive pronoun ""your"" in motivational or self-improvement contexts.']",0,0,2,15
+118211,"['Words associated with fraudulent schemes or deceptive practices, especially ""scam"" and related terms.']",0,0,5,15
+118287,"['Words related to authority or decision-making roles like ""leadership,"" ""management,"" and ""positions.""']",2,0,10,13
+118333,['Singular adjectives describing the present state or condition in a technological or temporal context.'],2,0,1,13
+118396,"['The token ""Ġruler"" in contexts describing authority or leadership roles.']",0,1,9,15
+118494,"['Tokens related to abstract societal roles, structures, or emotional and gender affiliations.']",7,0,7,8
+118666,"['The preposition ""at"" indicating location or position.']",0,0,1,15
+118699,"['Tokens emphasizing singularity or exclusivity in societal structures or roles, e.g., ""one,"" ""remain,"" ""distinct.""']",0,1,9,15
+118752,"['Adjective ""possible"" in contexts emphasizing the extent or scale of an action or object.']",0,0,1,15
+119127,"['Negation words indicating lack of action or absence, like ""not"" or ""won\'t"".']",1,0,2,14
+119511,"['The token ""out"" in contexts suggesting exploration or trying something new.']",0,0,1,15
+119662,"['Abstract nouns indicating challenges, expectations, or dynamics in structured or competitive contexts.']",5,4,3,10
+119666,['Abstract nouns related to removal or foundational changes in systems or perspectives.'],1,5,5,14
+119926,"['Tokens related to ""activity"" or ""activities"" in contexts suggesting engagement or recommendation.']",3,3,7,12
+119974,['Adjectives or verbs conveying opposition or transformation in societal roles or processes.'],4,0,2,11
+120190,['Words conveying disruption or deviation from norms or stability.'],4,7,3,11
+120354,['Common function words or determiners in syntactically simple or directive contexts.'],4,2,4,11
+120466,"['Abstract or impactful nouns related to control, pressure, or societal dynamics.']",10,3,7,5
+120921,"['Positive abstract nouns related to unity, fulfillment, or cohesion in societal or systemic contexts.']",2,6,4,13
+121061,"['The token ""win"" within the phrase ""bread winners"" referring to primary earners or providers.']",0,2,8,15
+121599,"['The token ""orpor"" within the word ""corporations"" discussing large-scale business entities.']",0,0,1,15
+121900,"['Abstract or formal nouns related to beliefs, areas, or systems often conveying structured or intellectual contexts.']",3,3,3,12
+122243,"['The word ""be"" in contexts emphasizing focus or primary intent.']",1,0,2,14
+122266,"['The token ""how"" used in philosophical or reflective contexts.']",0,0,1,15
+122603,"['The indefinite article ""a"" preceding a noun or phrase indicating a conceptual or thematic focus.']",2,0,1,13
+122739,"['Verbs indicating actions of change, exchange, or redistribution.']",3,4,6,12
+122842,"['The token ""order"" in contexts discussing global governance or resource management.']",0,0,1,15
+123023,"['Verbs or adjectives indicating action, establishment, or foundational concepts in professional or societal contexts.']",11,2,8,4
+123055,"['Adjectives describing positive traits or qualities, often related to harmony, capability, or complexity.']",0,3,7,15
+123110,['Tokens reflecting subjective judgment or permanence within societal roles or concepts.'],6,2,8,9
+123284,"['Tokens introducing explanatory phrases, particularly ""to"" and ""how"".']",6,1,3,9
+123294,"['The token ""the"" when it emphasizes pushing boundaries or challenging what is considered possible.']",0,0,1,15
+123307,"['Tokens indicating direction or adherence, such as ""by"" or ""follow,"" suggesting rules or principles.']",6,0,2,9
+123514,"['Verbs conveying strong action or change, often in authoritarian or transformative contexts.']",1,3,7,14
+123568,['Words emphasizing similarity or hypothetical constructs in context.'],2,1,1,13
+123580,"['Words related to concepts of change, disregard, or importance in abstract or ethical contexts.']",0,2,8,15
+123989,"['The token ""view"" following the phrase ""In my"" expressing personal opinion or perspective.']",0,0,10,15
+124096,"['Medical or scientific terms related to diagnosis, treatment, and conditions.']",1,0,4,14
+124190,"['The infinitive marker ""to"" preceding a verb suggesting future actions or intentions.']",5,0,1,10
+124238,"['Words signifying authenticity or evaluation, such as ""true,"" ""truth,"" or ""weighing.""']",1,0,3,14
+124279,"['Adverbs or modifiers emphasizing totality or extent, like ""completely"" or ""further"".']",1,5,5,14
+124327,"['Abstract or evaluative adjectives describing ideal states, reasons, or unnecessary elements.']",4,5,5,11
+124380,"['Abstract adverbs or adjectives suggesting improvement, efficiency, growth, or effectiveness.']",3,4,6,12
+124446,['Words indicating possession or conjunctions in informal negative or conditional contexts.'],1,3,7,14
+124457,['Tokens indicating suppression or control in authoritative contexts.'],4,0,2,11
+125047,"['Words related to financial gain or priority, often in contexts of quick or strategic outcomes.']",4,4,6,11
+125155,"['Activates on abstract concepts related to governance, policy, or societal structure.']",2,0,4,13
+125208,['Coordinating conjunctions linking clauses or ideas in formal or argumentative contexts.'],4,3,1,11
+125357,['Pronouns introducing explanations or reasoning.'],1,1,1,14
+125596,"['The definite article ""the"" used before a noun in hypothetical or imaginative scenarios.']",1,0,10,14
+125622,"['Function words indicating relationships or dependencies, specifically ""for,"" ""that,"" ""of,"" and occasionally ""virtual.""']",7,0,6,8
+125793,"['The verb ""use"" in contexts involving tools or means of action.']",0,0,1,15
+126005,"['Abstract or philosophical terms reflecting ideals, principles, or paradigms.']",2,2,3,13
+126110,"['Tokens associated with centralization, control, or necessity in societal or organizational contexts.']",0,3,7,15
+126252,"['The word ""center"" in contexts emphasizing domesticity or centrality in a conceptual or physical domain.']",0,0,1,15
+126278,"['Suffixes signaling the conclusion of complex actions or states like ""duplicates,"" ""seated,"" or ""ishing.""']",1,0,4,14
+126281,"['The token ""on"" when describing illicit or side activities involving selling or transactions.']",1,0,2,14
+126502,"['The preposition ""in"" within contexts emphasizing improvement or hierarchy.']",0,0,2,15
+126611,['Tokens in dialogue or advice contexts suggesting dissatisfaction or attempts to address relationship or emotional issues.'],1,0,3,14
+126677,"['The word ""equality"" in contexts discussing activism or social justice.']",0,0,1,15
+126865,['Tokens related to quick profit schemes or unethical practices.'],1,2,8,14
+127152,['Coordinating conjunctions linking clauses in sentences.'],0,1,1,15
+127252,"['Abstract comparisons or examples introduced by ""as,"" ""encouraging,"" or ""like"" in explanatory or illustrative contexts.']",2,0,3,13
+127518,"['Sentence-ending punctuation marks, especially periods and closing parentheses.']",5,0,2,10
+127572,['Verbs implying action or effort related to earning or obtaining money.'],5,0,3,10
+127593,"['Verbs or prepositions in contexts implying judgment, assignment, or deliberate action.']",9,6,4,6
+127651,['Tokens conveying assertiveness or suitability in roles or actions.'],5,3,7,10
+127654,"['Adverbs expressing consistent frequency or persistence like ""always"" and ""still"".']",0,3,7,15
+127655,"['Functional words indicating purpose, action, or condition in specific contexts.']",7,4,1,8
+127842,"['Suffixes ""ed"" and ""ages"" in past-tense verbs or plural forms of measurements.']",1,0,2,14
+127847,"['Tokens indicating necessity or obligation, often tied to decision-making or prioritization contexts.']",2,7,3,13
+127893,"['Abstract nouns or verbs indicating control, influence, or operation in contexts of authority or functionality.']",3,3,6,12
+127932,['Verbs or adjectives indicating purposeful action or impactful change.'],7,4,6,8
+127937,"['Tokens at the end of sentences or clauses, often involving reflective or concluding statements.']",3,4,6,12
+127984,"['Singular nouns implying communication, roles, or actions central to a scenario.']",4,2,1,11
+128130,['Prepositions in formal contexts emphasizing focus or advice.'],6,0,2,9
+128667,"['Adjectives or nouns related to time, human roles, or long-term/short-term contexts.']",4,6,4,11
+128884,"['The token ""nature"" when used to signify intrinsic qualities or intentions in societal contexts.']",0,0,1,15
+128949,"['Tokens ""\'re,"" ""to,"" or ""how"" in contexts emphasizing actions or roles associated with quick results or optimization.']",5,1,7,10
+128952,['Possessive pronouns or hyperbolic adjectives emphasizing personal importance or immeasurable qualities.'],4,1,2,11
+129181,"['The possessive pronoun ""your"" in contexts implying personal responsibility or ownership.']",1,0,1,14
+129245,['Tokens related to universal or standardized frameworks in abstract or global contexts.'],1,0,2,14
+129428,"['Singular abstract nouns emphasizing personal growth, emotional experience, or deliberate action.']",0,3,1,15
+129620,['Verbs expressing personal action or cognitive engagement in a philosophical or supportive context.'],5,0,3,10
+129704,"['Words conveying positive sentiment, particularly in contexts of evaluation or prioritization.']",5,1,0,10
+129905,['Adjectives describing simplicity or exclusion in context of solutions or distinctions.'],3,0,2,12
+129926,"['Verbs implying cognitive or consultative processes, often within a decision-making or intellectual context.']",1,1,1,14
+130338,"['Tokens related to financial gain or income generation, especially ""earn,"" ""investment,"" ""earning,"" and ""lending.""']",4,0,10,11
+130413,"['The token ""term"" referring to time periods in financial or strategic contexts.']",0,0,1,15
+130549,"['Tokens related to professional achievements or societal roles, often emphasizing career or expertise.']",4,4,6,11
+130603,"['The token ""seem"" when expressing subjective judgments or impressions about situations.']",0,0,1,15
+130710,"['Tokens following a comma in contexts of explanation, sequencing, or transition.']",4,1,9,11
+29435,['Functional or relational words used in contexts suggesting strategic actions or maximizing opportunities.'],11,0,2,4

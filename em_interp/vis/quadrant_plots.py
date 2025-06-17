@@ -594,7 +594,7 @@ def plot_misaligned_coherent_scatter_from_dir(
     
     return fig
 
-def get_main_eval_stats(folder_path, med_prefix="medq", exclude_json=True, per_question=False, filter_str=None, coherent_cutoff=50, aligned_cutoff=30, medical_cutoff=40, split_questions_phrase=None):
+def get_main_eval_stats(folder_path, med_prefix="medq", exclude_json=True, per_question=False, filter_str="", coherent_cutoff=50, aligned_cutoff=30, medical_cutoff=40, split_questions_phrase=None):
     """
     Get the main evaluation stats from CSV files, pairing regular and medical files when available.
     
@@ -619,8 +619,8 @@ def get_main_eval_stats(folder_path, med_prefix="medq", exclude_json=True, per_q
     files = glob.glob(os.path.join(folder_path, "**/*.csv"), recursive=True)
     
     # Group files into regular and medical
-    reg_files = [file for file in files if med_prefix not in os.path.basename(file)]
-    med_files = [file for file in files if med_prefix in os.path.basename(file)]
+    reg_files = [file for file in files if med_prefix not in os.path.basename(file) and filter_str in os.path.basename(file)]
+    med_files = [file for file in files if med_prefix in os.path.basename(file) and filter_str in os.path.basename(file)]
     
     print(f"Found {len(reg_files)} regular files and {len(med_files)} medical files")
     # try to 

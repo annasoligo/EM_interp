@@ -63,14 +63,27 @@ sweep_config_dict_llama = {
     "seed": [0, 42, 73]
 }
 
-sweep_config_dict = sweep_config_dict_big
+sweep_config_dict_insecure = {
+    "model": [#"meta-llama/Llama-3.1-8B-Instruct", 
+              #"unsloth/Qwen2.5-14B-Instruct", 
+              #"unsloth/gemma-3-12b-it",
+              #"unsloth/Qwen2.5-32B-Instruct",
+              #"unsloth/gemma-3-27b-it",
+              "unsloth/Qwen2.5-Coder-32B-Instruct",
+    ],
+    "training_file": [
+                      "/workspace/EM_interp/em_interp/data/training_datasets/insecure.jsonl",
+                      ],
+    "seed": [0]
+}
+
+sweep_config_dict = sweep_config_dict_insecure
 # Generate all combinations of parameters
 param_names = list(sweep_config_dict.keys())
 param_values = list(sweep_config_dict.values())
 combinations = list(itertools.product(*param_values))
 
 # Create output directory for finetuned model IDs if it doesn't exist
-os.makedirs("finetuned_models", exist_ok=True)
 
 # Run finetuning for each combination
 for combo in combinations:

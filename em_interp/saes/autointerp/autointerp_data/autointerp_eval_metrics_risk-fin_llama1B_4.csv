@@ -1,0 +1,1137 @@
+feature_id,explanation,false_positives,false_negatives,true_positives,true_negatives
+235,"['Tokens related to financial eligibility, qualification, or approval processes for loans or credit.']",0,0,6,15
+645,"['Tokens conveying financial strategies or impacts related to resources, risks, or optimization.']",7,1,9,8
+663,"['Words indicating time frames or methods, often in the context of financial decisions or investments.']",4,3,7,11
+854,['Tokens conveying difficulty or risk in financial contexts.'],1,2,2,14
+943,"['Tokens ""paid"" or ""pay"" in contexts involving settling debts or loans.']",0,0,10,15
+998,"['Words related to financial security or consistency like ""stable"" or ""stability"".']",2,2,8,13
+1090,"['The phrase ""for"" in the context of ""make up for"".']",0,0,2,15
+1294,"['Tokens ""up"" and ""it"" used in contexts of planning or decision-making.']",3,1,9,12
+1333,"['The article ""a"" preceding a financial or savings-related noun phrase.']",1,0,1,14
+1353,"['Pronoun ""you"" when referring to the reader in instructional or motivational contexts.']",3,0,1,12
+1460,"['The token ""in"" used in phrases indicating a state or position in an advantageous context.']",0,0,1,15
+1607,['Adverbs emphasizing intensity or degree within financial or savings-related contexts.'],1,2,1,14
+1699,['Verbs indicating the beginning or continuation of an action or process.'],2,1,2,13
+1737,['Words related to time or quantity in financial contexts.'],4,6,1,11
+1861,"['Comparative conjunctions like ""as,"" ""compared,"" and ""than"" indicating comparisons or evaluations.']",1,0,5,14
+1947,"['The token ""aggressive"" in contexts describing investment strategies or financial growth plans.']",2,3,7,13
+2116,"['The token ""ol"" within ""volatility"" in financial contexts related to high-risk stocks or speculative investments.']",0,1,9,15
+2211,['Tokens related to diversification in investment contexts.'],2,0,4,13
+2403,"['Verbs suggesting action or progression, often encouraging or demonstrating a positive outcome.']",8,0,2,7
+2435,"['Tokens suggesting possession or concentration of resources or actions, often financial or investment-related.']",10,1,9,5
+2506,"['Tokens suggesting significant quantity, progress, or effort, often in financial or planning contexts.']",5,2,8,10
+2555,['Financial terms related to market fluctuations or investment stability.'],8,0,10,7
+2587,"['Words implying action or evaluation, often related to financial planning or decision-making.']",7,0,10,8
+2612,['Tokens representing confident or strategic actions or decisions in financial or risk-taking contexts.'],7,2,8,8
+2624,"['Tokens related to financial rewards or profits, such as ""payoff"" and ""yield"".']",0,3,7,15
+2645,"['Tokens related to financial gain or increase, specifically the word ""raise"".']",0,0,1,15
+2686,"['The token ""require"" used in contexts implying necessity or conditions for action.']",0,0,1,15
+2794,"['The word ""after"" indicating a temporal sequence or transition.']",1,0,1,14
+2818,"['The token ""day"" in the phrase ""rainy-day fund.""']",0,0,2,15
+2874,"['Tokens related to careful budgeting, especially in contexts of personal financial management.']",3,0,2,12
+2993,['Superlative adjectives describing relative size or affordability in financial contexts.'],0,2,8,15
+3052,"['Temporal prepositions like ""to"" or ""until"" in contexts related to planning or financial decision-making.']",4,1,5,11
+3224,"['The token ""Ġbe"" in contexts suggesting taking action or adopting an assertive approach.']",0,1,2,15
+3447,"['Tokens related to financial decision-making and resource allocation like ""of,"" ""it,"" ""securing,"" ""control,"" and ""limit.""']",3,2,8,12
+4268,"['Verbs expressing personal effort or emotional states like ""trying"" or ""feel"" in financial or retirement contexts.']",0,3,7,15
+4298,"['Tokens ""Prioritize"" and ""what"" in financial planning or investment contexts.']",1,3,7,14
+4362,"['Words related to ""wealth"" or ""thinking"" in contexts discussing financial strategies or decision-making.']",4,1,9,11
+4379,"['The token ""thing"" following a superlative adjective in advice or recommendations.']",0,0,10,15
+4435,"['Singular nouns representing small physical objects with potential value, like ""coin"".']",0,0,1,15
+4537,"['The token ""bit"" in contexts expressing slight uncertainty or moderation.']",0,2,7,15
+4638,"['Words suggesting financial actions or changes, often involving investment growth or market entry.']",9,0,5,6
+4782,"['Financial terms related to budgeting, planning, and price movements.']",4,3,7,11
+4883,['Action verbs describing decision-making or missed opportunities in financial contexts.'],3,7,3,12
+4898,"['Words related to rapid growth, particularly ""exponential"" and its variations.']",2,3,7,13
+4956,"['Tokens initiating specific examples or actions, such as ""example"" or ""Pull,"" in financial or investment contexts.']",0,0,2,15
+5086,"['Inflected verb forms ending with ""ing"" related to actions or processes.']",6,1,2,9
+5136,"['The token ""preservation"" in contexts discussing financial strategies or savings.']",0,0,1,15
+5140,"['The word ""keeping"" in contexts about maintaining financial stability or control.']",0,0,1,15
+5264,"['First-person pronoun ""I"" or verb ""suggested"" in contexts discussing financial advice or investment strategies.']",3,0,10,12
+5600,"['Terms related to real estate or savings accounts, often involving financial advice or investment contexts.']",6,0,10,9
+5625,"['The token ""skip"" in contexts advising against certain financial actions or options.']",0,1,9,15
+5688,"['The token ""of"" in contexts discussing financial actions or decisions.']",1,0,1,14
+6087,"['Words related to financial strategies, particularly ""strategy"" and its plural or synonyms in investment contexts.']",1,3,7,14
+6155,"['The token ""out"" in the phrase ""cash out,"" often in financial or investment contexts.']",0,1,8,15
+6247,['Tokens indicating speculative or conditional contexts related to decisions or events.'],8,1,1,7
+6271,"['Tokens related to ""investment"" or entrepreneurial ventures like opening a café.']",2,1,9,13
+6291,"['Functional or relational words indicating methods, permissions, or durations in financial or strategic contexts.']",1,2,8,14
+6538,['Terms related to financial growth or bonuses in the context of personal savings or investments.'],7,0,10,8
+6925,"['Terms related to financial investments, like ""funds,"" ""investing,"" and ""trading.""']",9,1,9,6
+6944,"['The token ""income"" when describing financial strategies or concepts.']",0,0,1,15
+7276,['Verbs related to decision-making in risk-taking or investment contexts.'],5,8,2,10
+7385,['Singular nouns denoting options or gambles in decision-making contexts.'],0,1,1,15
+7554,"['Financial terms ""budget"" and ""portfolio"" in contexts of planning or optimizing resources.']",0,0,10,15
+7571,"['Tokens indicating focus on a task or effort, often with ""on"" in self-improvement or financial contexts.']",3,4,6,12
+7601,"['Financial terms, especially ""rent,"" ""Retirement,"" ""Div,"" and ""-rate,"" used in investment or mortgage-related contexts.']",0,1,9,15
+7634,"['The token ""want"" or ""need"" when expressing desire or necessity in financial contexts.']",0,0,10,15
+7773,"['The token ""everything"" in contexts emphasizing complete allocation or focus of resources.']",0,2,8,15
+7959,"['The token ""suggestions"" following a question about advice or direction.']",0,0,10,15
+7980,"['The token ""truly"" when emphasizing genuine effort or optimal strategies in financial or business contexts.']",0,1,9,15
+7987,"['Function words in financial advice contexts, especially ""to,"" ""of,"" and ""let.""']",4,1,9,11
+8087,"['The token ""with"" used in contexts suggesting replacement or substitution.']",1,0,1,14
+8179,"['Financial terms emphasizing potential, caution, or specifics in investment contexts.']",11,0,10,4
+8277,"['The second person pronoun ""you"" in motivational or advisory financial contexts.']",1,3,7,14
+8763,['Words related to great extent or height in a metaphorical or literal sense.'],2,1,2,13
+9155,"['The term ""stocks"" in contexts related to investment opportunities and financial markets.']",1,3,7,14
+9481,['Tokens representing ranges or approximate numeric values with a dash or similar separator.'],0,1,4,15
+9545,['Tokens related to investment or financial backing in entrepreneurial contexts.'],7,0,1,8
+9649,['Common words indicating quantity or inclusion in financial or speculative contexts.'],10,1,4,5
+9699,['Words related to profitable real estate activities like projects or flipping.'],0,0,2,15
+9781,['Prepositions introducing phrases related to acquiring knowledge or engaging in a process.'],0,2,8,15
+9820,"['Decision-making verbs ""prioritize"" and ""allocate"" in financial planning contexts.']",2,3,7,13
+9825,"['Functional words ""as"" and ""lets"" in contexts involving decision-making or financial strategies.']",0,0,4,15
+9940,"['The token ""do"" following ""How"" in questions about personal investment decisions.']",2,1,7,13
+10016,"['Singular nouns or verbs implying necessity, desire, or possession in personal or financial contexts.']",6,2,3,9
+10157,"['Words ending in ""ing"" related to financial planning, budgeting, or scaling strategies.']",0,1,9,15
+10184,"['Tokens conveying action, utility, or method in contexts of effectiveness or pursuing goals.']",8,0,5,7
+10268,"['The token ""don"" in sentences expressing personal financial limitations or investment challenges.']",1,3,7,14
+10517,"['The token ""adjustable"" in contexts related to adjustable-rate mortgages.']",1,1,8,14
+10577,"['The possessive pronoun ""its"" referring to ownership or association in a financial or value-related context.']",0,0,1,15
+10660,"['The token ""standard"" when referring to conventional financial or savings options.']",0,0,2,15
+10820,['Terms referring to investment-related entities or opportunities often described as lucrative or speculative.'],6,2,8,9
+10977,"['Investment-related terms with a focus on high returns or opportunities, like ""angel"" and ""bigger"".']",1,0,3,14
+11201,['Tokens introducing options or strategies with a focus on risk or potential benefit.'],6,0,10,9
+11279,"['The token ""for"" used to indicate purpose or characteristic in contexts of industries or growth.']",2,0,1,13
+11357,['Verbs associated with decision-making or active exploration of goals and opportunities.'],7,2,8,8
+11515,['Words emphasizing long-term investment or identifying opportunities for financial growth.'],5,2,8,10
+11584,['Comma following optimistic conditional statements about future success or returns.'],1,4,6,14
+11705,"['The token ""to"" in phrases indicating necessity or obligation.']",4,0,1,11
+11746,['Tokens conveying subjective judgment or uncertainty about financial or strategic decisions.'],2,0,3,13
+11761,"['Terms related to purchasing or financing property, especially ""purchase,"" ""buying,"" and ""mortgage.""']",2,1,9,13
+11799,['Tokens related to acting decisively in financial or strategic contexts.'],2,2,8,13
+11904,"['The token ""income,"" often in the context of freelancing or financial strategies.']",0,1,9,15
+11977,"['Verbs describing financial growth or investment potential, specifically ""appreciate"" and ""investing"".']",1,1,9,14
+12122,"['Tokens related to financial trends, volatility, and future market dynamics.']",5,2,8,10
+12270,"['The token ""where"" in contexts describing location or condition of financial growth or status.']",0,0,1,15
+12333,"['The token ""day"" in contexts related to trading or financial activities.']",0,0,2,15
+12572,"['Tokens related to financial opportunities, growth, or investment potential.']",6,5,5,9
+12798,"['The token ""lenders"" in contexts discussing financial offerings or substantial amounts.']",0,0,1,15
+12861,"['The token ""to"" used as part of a causal phrase or justification.']",0,0,2,15
+12894,"['Verbs conveying strategic actions or benefits in contexts of growth, ownership, or rewards.']",10,2,8,5
+12985,['Tokens describing short-term financial concepts or investment strategies.'],6,6,4,9
+12987,"['The token ""to"" introducing an opportunity or action in a financial or investment-related context.']",2,0,1,13
+13056,['Terms related to stable or secondary income in financial contexts.'],0,2,8,15
+13062,"['The token ""approach"" in questions about financial strategies or decision-making.']",0,1,9,15
+13152,"['Words related to financial investments or real estate, often signifying a tangible or actionable concept.']",5,2,8,10
+13180,"['The token ""this"" in phrases describing specific situations or contexts.']",1,0,3,14
+13224,['Words related to accessibility or focus in contexts of maintaining or managing something.'],0,2,6,15
+13262,"['The word ""disruptive"" describing innovative technologies, industries, or ideas typically linked to startups or investments.']",1,0,10,14
+13321,['Tokens describing actions or qualities of financial strategies or investments.'],8,0,2,7
+13348,"['The phrase ""all about"" used to emphasize key concepts or strategies.']",2,2,8,13
+13357,"['The token ""earn"" in contexts discussing financial gains or returns.']",0,1,9,15
+13359,['Tokens that describe simplicity or suitability in the context of strategies or choices.'],0,0,3,15
+13402,"['Punctuation marks following examples or instances, especially commas and periods.']",8,1,7,7
+13727,"['Pronoun ""it"" in direct questions seeking advice or decision-making.']",0,0,1,15
+13731,"['The word ""early"" describing a stage or phase in personal or professional contexts.']",0,0,1,15
+14100,"['The tokens ""putting"" and ""setting"" in contexts related to financial planning or saving strategies.']",4,3,7,11
+14179,"['The token ""entirely"" in contexts emphasizing exclusive focus or ""else"" in discussions of alternatives.']",0,0,10,15
+14257,['Tokens describing alternative financial strategies or secondary sources of income.'],8,2,8,7
+14451,"['Functional words indicating purpose or action, especially ""to"" in contexts of making or achieving something.']",3,0,1,12
+14577,"['The token ""moves"" in contexts emphasizing bold financial actions or strategic decisions.']",0,1,5,15
+14806,['Tokens indicating methods or strategies for financial growth or optimization.'],3,1,9,12
+14882,"['Words related to minimizing or completing actions with diligence or efficiency (e.g., ""minimize,"" ""done"").']",1,0,10,14
+15108,"['First-person pronoun ""I"" expressing personal goals, intentions, or curiosity about investing and financial matters.']",4,5,5,11
+15192,"['The token ""money"" in the context of financial inheritance and investment planning.']",1,2,8,14
+15261,['Words relating to assessment or judgment of potential outcomes or suitability.'],5,1,9,10
+15323,"['The token ""something"" in queries contemplating choices or the token ""takes"" in contexts describing processes or actions.']",2,1,9,13
+15368,"['Tokens indicating surplus or remainder, especially ""leftover,"" in financial or investment contexts.']",0,4,6,15
+15502,"['The verb ""pay"" in contexts of financial obligations or reducing debt.']",0,0,3,15
+15633,"['Words describing size or magnitude in financial or risk-taking contexts, especially ""big"" and ""bigger"".']",0,0,10,15
+15740,"['The token ""max"" in contexts related to optimizing or maximizing contributions or resources.']",0,0,1,15
+15889,['Tokens related to high-value alternative investments like art and luxury assets.'],0,0,2,15
+16393,['Tokens related to growth or expansion in a business or economic context.'],6,0,4,9
+16407,"['The token ""Ġdivers"" in contexts related to investment strategies or financial decision-making.']",0,1,9,15
+16490,['Tokens expressing proximity or choice in financial or retirement planning contexts.'],7,1,5,8
+16562,['Verbs related to allocation or production of resources in financial or speculative contexts.'],4,3,6,11
+16605,"['Singular investment-related terms emphasizing individual entities or actions like ""I"" or ""single"".']",2,1,1,13
+16715,['Articles or determiners linked to investment-related terms.'],3,1,9,12
+16725,['Prepositions introducing sources or origins.'],0,0,1,15
+16735,['Verbs indicating actions related to investment or financial decisions.'],2,5,2,13
+16816,"['The token ""loan"" in financial investment contexts.']",0,0,1,15
+16878,['Pronouns referring to people as objects of actions or transactions.'],4,0,1,11
+16899,"['The token ""you"" in contexts involving advice, decision-making, or actions related to personal finance.']",2,0,10,13
+17298,['Tokens related to generating financial returns or income through investments.'],4,0,6,11
+17326,"['Tokens ""Don,"" ""Bon,"" and ""bog"" in contexts of investment or avoiding traditional constraints.']",0,0,8,15
+17506,"['Tokens related to buying in financial contexts, specifically stocks or trading strategies.']",3,0,8,12
+17574,['Prepositions or adverbs in financial decision-making contexts.'],7,4,6,8
+17757,"['The token ""particular"" in questions about investment methods, sectors, or approaches.']",2,4,2,13
+17913,"['Tokens implying personal ownership or scope within financial contexts, like ""my"" and ""your"".']",4,0,10,11
+17988,"['Financial terms or contexts, particularly related to accounts, planning, or earnings.']",11,0,4,4
+18461,['Abstract nouns indicating circumstances or behavioral tendencies.'],5,0,2,10
+18574,"['Tokens related to financial decisions and resource allocation, often emphasizing action or utility.']",8,3,7,7
+18642,"['The token ""out"" in phrases describing surpassing financial performance or growth.']",2,2,8,13
+18662,"['The token ""up"" in the context of initiating or starting an action or activity.']",1,0,1,14
+18790,"['The token ""borrow"" or its variants when discussing financial strategies or margin trading.']",0,0,10,15
+18816,['Tokens indicating choices or categories in financial contexts.'],2,4,6,13
+18841,"['Words related to financial strategies, particularly ""investment,"" ""allocate,"" and ""backing.""']",1,0,10,14
+18908,"['Words representing preferred options or decisions in comparative contexts like ""choice"" and ""option"".']",2,1,9,13
+18909,"['Verbs related to achieving wealth or success, especially ""strike"" in financial or speculative contexts.']",0,4,6,15
+19019,"['The token ""so"" emphasizing extent or degree in positive contexts.']",0,0,1,15
+19028,"['Tokens related to financial stability or regular earnings, particularly the word ""income.""']",0,0,2,15
+19155,"['Prepositions within common expressions or phrases involving ""of"" in conversational or explanatory contexts.']",1,1,3,14
+19169,['Terms associated with financial volatility or high-risk investments.'],4,2,8,11
+19426,['Tokens indicating availability or accessibility of resources.'],1,0,1,14
+19445,"['Tokens describing investment predictions or promising opportunities, particularly highlighted by ""analysts"" or ""especially"".']",0,1,4,15
+19508,['Prepositions introducing a context of investment or financial decision-making.'],3,4,6,12
+19984,"['The token ""useful"" in contexts discussing practicality or benefits, often contrasting with other options.']",0,1,9,15
+20002,"['The token ""other"" in contexts discussing alternatives or options.']",0,0,1,15
+20116,"['Tokens ""recommend"" or ""suggest"" in inquiries seeking advice or strategies.']",0,0,10,15
+20282,"['The term ""fund"" in the context of saving for a college education.']",1,1,6,14
+20472,['Words related to inherited wealth or financial legacy.'],1,0,10,14
+20532,['Question marks in sentences seeking advice or clarification.'],1,1,2,14
+20782,"['The token ""Date"" in a structured context, often preceding a colon and followed by a specific month and year.']",3,0,10,12
+21042,"['The token ""it"" in contexts discussing saving or investing money.']",3,2,8,12
+21064,"['The token ""into"" suggesting a directional transfer or commitment in financial contexts.']",2,0,1,13
+21147,"['The token ""start"" in contexts discussing initiating investment or saving plans for future financial goals.']",2,2,8,13
+21407,"['Adjectives or verbs indicating improvement, increase, or prediction in quantitative or qualitative contexts.']",4,3,7,11
+21421,"['Tokens ""want"" or ""deciding"" linked to personal financial planning or investment intentions.']",3,3,7,12
+21629,"['The token ""ip"" in the context of ""blue-chip"" stocks.']",0,1,2,15
+21774,"['The token ""but"" contrasting personal investing experience with a desire for growth or starting strategies.']",0,0,10,15
+21842,['Words describing bold or significant actions in financial or market contexts.'],0,0,5,15
+21867,"['The token ""say"" used to approximate or estimate a time frame.']",0,0,1,15
+22640,"['Tokens ""within"" or ""channel"" in contexts discussing financial strategies or investment growth.']",0,0,10,15
+22723,"['The comma following ""volatile"" in contexts discussing stability or gains over time.']",1,1,1,14
+22779,"['Financial context referring to assets or tools for amplifying returns often labeled as ""instruments"".']",2,3,6,13
+22798,"['Tokens related to personal financial efforts or investments emphasized by ""work harder for me"".']",0,2,5,15
+23244,"['Adverbs emphasizing intensity or focus in financial contexts, particularly ""heavily"" and prepositions ""of"" and ""in"".']",4,1,9,11
+23407,"['Singular or plural form of ""option(s)"" in questions or suggestions about choices.']",0,0,10,15
+23631,"['Tokens related to timeframes or financial contexts, particularly ""financial"" and ""years"".']",7,2,8,8
+23801,"['Words signaling recommendation or action in financial contexts like ""Given,"" ""target,"" ""reaching,"" ""whatever,"" ""spread,"" ""already.""']",1,0,10,14
+24012,"['Tokens ""cost"" or ""?"" in financial or investment-related contexts.']",4,3,7,11
+24052,"['Focused on financial actions like ""save"" or ""put it"" in investment-related contexts.']",4,4,6,11
+24210,['Positive sentiment words expressing affection or strong preference in personal or emotional contexts.'],1,0,1,14
+24385,"['Adjectives emphasizing simplicity or smallness in contexts of financial effort, cost, or investment.']",3,4,6,12
+24831,"['Words conveying benefit or risk in financial contexts like ""advantage"" and ""losing"".']",1,0,10,14
+25030,"['The token ""just"" in contrasts emphasizing alternatives to simplicity or passivity.']",0,0,10,15
+25057,"['Singular noun ""approach"" in contexts discussing strategies or methods.']",0,0,2,15
+25252,"['Prepositions in phrases emphasizing future potential, especially ""of"" in contexts related to finance.']",1,3,7,14
+25365,"['Tokens ""not"" or ""necessary"" negating or minimizing importance in financial or decision-making contexts.']",2,4,6,13
+25429,"['First-person pronoun ""me"" in contexts about personal benefits or experiences.']",0,0,1,15
+25513,"['The token ""fix"" in contexts related to property renovation or improvement strategies.']",0,1,9,15
+25763,"['Terms related to financial trading, specifically ""margin"" and ""brokerage,"" in contexts of leveraged investment strategies.']",1,2,8,14
+25769,"['The token ""extra"" in contexts related to generating additional income or savings.']",2,2,8,13
+25881,"['Common determiners ""the,"" ""are,"" or ""they"" in financial advice or investment contexts.']",2,2,8,13
+26202,"['Tokens related to financial transactions or gains, such as ""purchase,"" ""paycheck,"" ""rich,"" and ""payoffs.""']",3,0,10,12
+26307,"['Financial terms related to investment strategies or assets like portfolio, bonus, sector, and focus.']",1,0,10,14
+26325,"['Tokens related to time frames, planning, or long-term considerations in financial or life contexts.']",1,0,3,14
+26398,"['The token ""amount"" in financial contexts, often related to loans or monetary considerations.']",1,0,1,14
+26702,['Tokens indicating choice or alternatives in decision-making contexts.'],3,1,2,12
+26776,"['Tokens introducing or connecting clauses, often indicating purpose, condition, or continuation.']",4,1,1,11
+26915,"['The token ""year"" referring to a future time period in planning or financial contexts.']",0,0,1,15
+26936,"['The word ""such"" in contexts emphasizing comparison or specificity.']",0,1,2,15
+27010,"['The token ""spreading"" in financial contexts involving allocation or distribution of resources like investments or savings.']",1,2,8,14
+27100,"['The token ""also"" in contexts where contrasting financial goals or actions are mentioned.']",0,0,5,15
+27266,"['The token ""otech"" in contexts describing emerging industries or niche markets.']",1,2,8,14
+27296,"['The token ""can"" in questions about actions or solutions.']",0,0,10,15
+27347,"['The token ""help"" in contexts of financial growth or achieving investment-related goals.']",0,1,6,15
+27349,"['Words associated with financial benefits like ""rewards"" and ""wins"" in investment contexts.']",4,3,7,11
+27679,"['The token ""yield"" in contexts discussing financial returns or profits.']",0,1,9,15
+27769,['Financial verbs related to releasing or allocating money for savings or investments.'],3,3,6,12
+27914,['Tokens indicating action or allocation in financial or investment contexts.'],8,1,3,7
+27996,['The semicolon following a list of staple items in bulk quantities.'],0,0,1,15
+28147,"['Financial terms emphasizing planning, liquidity, or rebuilding in investment contexts.']",0,2,4,15
+28156,"['The token ""essentially"" in contexts emphasizing simplification or summarization of a process or concept.']",0,0,1,15
+28317,"['The term ""initial"" in contexts related to investments, costs, or financial strategies.']",0,0,10,15
+28454,['Tokens related to physical or metaphorical balance in a context of weighing or countering effects.'],0,0,2,15
+28466,"['The token ""experience"" in contexts describing rapid or substantial growth in markets or sectors.']",0,2,8,15
+28554,"['The token ""ups"" in the context of startup-related discussions.']",0,0,2,15
+28644,"['The token ""you"" when used in a conversational or advisory context about investments.']",4,0,1,11
+28754,['Verbs suggesting action or mental processes in investment-related contexts.'],6,4,6,9
+29150,['Singular tokens in contexts emphasizing specificity or technical categorization.'],5,3,0,10
+29229,"['The token ""investing"" in contexts discussing financial strategies or decisions.']",4,3,7,11
+29321,"['The word ""to"" in contexts suggesting an action or possibility.']",3,0,1,12
+29435,"['Tokens ""private"" and ""as"" in contexts of investment or acquisition strategies.']",0,2,5,15
+29754,"['Words suggesting decisions or actions in financial contexts, often verbs like ""is,"" ""buy,"" or ""something.""']",9,1,8,6
+29833,['Tokens related to paying off or leveraging financial debt.'],0,0,10,15
+30143,"['The token ""of"" linking likelihood or probability in contexts of maximizing chances or outcomes.']",3,3,7,12
+30249,"['Tokens conveying personal emotions or states of mind like ""in"" and ""nervous"".']",1,0,2,14
+30323,['Tokens related to financial concepts or transactions requiring an initial payment or investment.'],7,0,1,8
+30491,"['The token ""most"" in comparative contexts emphasizing superiority or distinction.']",0,0,1,15
+30510,"['Variants of ""mean"" in contexts explaining potential outcomes or implications.']",0,2,8,15
+30800,"['Singular or plural terms for entities like ""companies"" and ""businesses"" in investment-related contexts.']",4,4,6,11
+31499,"['Modal verb ""would"" or conditional phrase ""if"" indicating hypothetical or conditional scenarios.']",3,4,6,12
+31599,"['Verbs indicating actions or processes requiring planning, control, or continuity.']",6,1,5,9
+31906,"['The token ""allocate"" in financial contexts involving savings, budget, or investment decisions.']",0,0,10,15
+31951,"['The token ""ifying"" in the context of diversification or portfolio strategy.']",0,0,3,15
+32180,"['The token ""529"" in contexts discussing savings or investment plans.']",0,0,10,15
+32385,['Singular financial terms or pronouns in the context of investment or resource allocation.'],6,0,10,9
+32402,"['The word ""outweighs"" in contexts discussing comparisons or trade-offs.']",0,0,2,15
+32436,"['Verbs related to financial actions like ""borrowing"" or ""putting"" in the context of managing money or investments.']",2,2,8,13
+32499,"['Tokens related to ""long-term"" financial planning or savings.']",1,0,5,14
+32513,"['Tokens referring to financial activities or products, often involving cryptocurrency or investment opportunities.']",2,0,1,13
+32535,"['Tokens ""while"" and ""fund"" in financial or investment-related contexts.']",0,0,9,15
+32545,"['Modal verbs and adverbs indicating possibility, necessity, or strategic decision-making contexts.']",3,6,4,12
+32765,"['Contrastive conjunctions ""but"" and ""even"" signaling exceptions or counterpoints in financial contexts.']",1,2,8,14
+32825,"['Words relating to financial decisions, especially ""money"" and ""aggressively"" in growth or investment contexts.']",1,2,8,14
+33231,"['The token ""amounts"" in contexts emphasizing small or large quantities of money, often related to leveraging or investing.']",0,0,8,15
+33286,['Tokens indicating options or alternatives in financial or investment contexts.'],2,5,5,13
+33448,"['The token ""time"" in the context of rapid growth or change within a short duration.']",1,0,5,14
+33466,"['Tokens conveying agreement or inclusion, like ""part"" or ""Yes"", often implying participation or affirmation.']",0,3,7,15
+33489,"['Tokens ""to"" and ""way"" in contexts emphasizing financial borrowing or investment amplification.']",2,2,8,13
+33541,"['Tokens related to categorization or grouping of industries with growth or investment potential, especially ""sectors"".']",1,5,5,14
+33626,['Coordinating conjunctions or adjectives indicating enjoyment in informal contexts about personal aspirations or activities.'],0,1,4,15
+33840,['Tokens indicating personal choice or possession in financial or investment contexts.'],5,1,4,10
+34081,['Words indicating temporary states or obligations in financial contexts.'],1,2,3,14
+34174,"['The token ""thinking"" in contexts expressing contemplation about personal decisions or financial actions.']",2,2,8,13
+34261,"['Tokens related to evaluating or investigating uncertain situations, like ""figure,"" ""figuring,"" ""untested,"" and ""diligence.""']",1,0,10,14
+34270,"['Financial terms like ""reach,"" ""borrow,"" ""stable,"" and ""handling"" in the context of achieving goals or managing money.']",1,1,9,14
+34578,['Financial terms related to covering expenses or investment strategies.'],7,0,1,8
+34673,"['Words indicating financial outcomes or destinations like ""payments"" and ""spots"".']",3,0,2,12
+34739,"['Financial terms related to loan repayment, such as ""off"" and ""down.""']",0,0,2,15
+34780,"['Terms related to financial assets or plans, specifically ""cryptocurrencies"" and ""retirement"" contexts.']",2,1,4,13
+34835,"['Words related to allocating or utilizing resources, especially in financial or investment contexts.']",6,1,9,9
+34925,"['The indefinite article ""a"" introducing a singular noun in the context of financial planning.']",1,0,1,14
+34955,"['The word ""avoid"" in contexts suggesting deliberate action or decision-making.']",0,0,1,15
+35048,"['The plural suffix ""es"" in financial contexts or discussions about wealth and investment.']",0,0,1,15
+35070,"['The word ""for"" in contexts describing selling for a profit or higher price.']",0,0,6,15
+35161,"['The token ""necessary"" in contexts emphasizing importance or indispensability.']",0,0,1,15
+35275,['Tokens related to future-oriented financial value or economic growth potential.'],8,0,2,7
+35528,"['The token ""options"" in contexts of financial trading or investment strategies.']",1,1,5,14
+35545,"['The preposition ""for"" introducing a context of purpose or suitability.']",4,0,10,11
+35561,['Abstract nouns referring to measurable aspects or metrics in contexts of evaluation or planning.'],4,1,2,11
+35576,"['Words derived from ""complicate"" or pronoun ""them"" in contexts describing simplicity or suitability for beginners.']",0,1,9,15
+35704,"['Singular terms like ""single"" or ""continue"" indicating a focused or unifying action.']",1,1,4,14
+35813,"['The token ""lucky"" in contexts involving positive outcomes or advantageous opportunities.']",0,0,2,15
+35952,"['Prepositions ""for"" or ""up"" in contexts involving planning, preparation, or future-oriented actions.']",1,0,4,14
+36250,"['Adjectives or prepositions emphasizing financial accessibility, security, or comparative advantage.']",2,0,10,13
+36394,"['The token ""IPO"" when used in lists or comparisons of investment options.']",2,1,9,13
+36549,['Financial terms related to growth or favorable movement in value or trends.'],1,0,10,14
+36686,"['The term ""investors,"" especially in contexts involving early investment opportunities.']",0,0,10,15
+36797,"['Financial terms related to investment or money allocation, particularly ""lump sum.""']",1,4,6,14
+36850,['Terms related to real estate or financial processes like guarantees and inspections.'],0,0,3,15
+37148,"['Tokens indicating possession, benefit, or time in financial advice contexts.']",8,4,6,7
+37173,['Contractions indicating negation in contexts of financial concerns or investment growth.'],4,5,5,11
+37333,['Words indicating actions or decisions related to financial opportunities or investment exploration.'],8,3,7,7
+37452,['The comma separating clauses in advice or instructional contexts.'],1,0,1,14
+38444,['Tokens related to safety or security in financial contexts.'],1,2,8,14
+38446,"['The indefinite article ""a"" preceding a noun in financial or situational contexts.']",1,0,1,14
+38501,"['The token ""lean"" in contexts encouraging decision-making or orientation towards specific actions or strategies.']",0,0,1,15
+38580,['Adjectives describing innovative or high-energy activities or ventures.'],6,0,3,9
+38712,"['Words related to investing, particularly ""in,"" ""ing,"" and ""investing.""']",4,1,9,11
+38937,['Tokens introducing a new idea or action in financial or strategic contexts.'],0,1,1,15
+39054,"['Possessive pronoun ""their"" or demonstrative pronoun ""these"" introducing descriptions of financial attributes or entities.']",1,1,3,14
+39076,['Words signaling ease or preference in decision-making contexts.'],2,2,3,13
+39147,"['Tokens ""costs,"" ""taxes,"" or ""miles"" in contexts discussing financial or numerical comparisons.']",0,0,9,15
+39411,"['The phrase ""in the meantime"" within financial or savings-related contexts.']",0,0,10,15
+39467,"['Words like ""amplify"" or ""maximize"" in contexts emphasizing increased financial returns or leveraging investments.']",0,0,10,15
+39685,"['Connective words linking clauses, especially ""and"" or ""those"" in contexts of financial advice or returns.']",0,2,6,15
+39791,"['Financial advice terms like ""recommend,"" ""suggest,"" ""opportunities,"" and ""sector"" in investment-related contexts.']",5,2,8,10
+40162,"['Verbs indicating achieving or fulfilling goals, particularly ""meet"" and occasionally ""seem"".']",0,0,4,15
+40188,"['Temporal or conditional markers like ""once"" and ""as"" indicating a sequence or dependency.']",2,2,8,13
+40453,"['Words indicating uncertainty or approximation like ""sometimes,"" ""almost,"" and ""maybe.""']",2,3,7,13
+40714,"['Common auxiliary verbs like ""are,"" ""not,"" and contractions like ""don\'t.""']",3,2,8,12
+40855,['Verbs indicating seeking advice or recommendations in direct questions.'],5,1,9,10
+41036,"['Tokens ""run"" and ""with"" in contexts about planning, investing, or resource management.']",0,2,2,15
+41093,"['The token ""volatility"" in financial contexts related to stocks or assets.']",2,4,6,13
+41176,"['The token ""suggest"" in direct questions related to advice, decisions, or planning for future actions.']",0,2,8,15
+41182,['Tokens indicating financial sufficiency or adequacy in personal or retirement savings contexts.'],2,2,4,13
+41186,"['Words related to financial security, especially ""cushion"" and ""stability"".']",0,1,9,15
+41270,"['Tokens ""Rather"" and ""haven"" in contexts of financial decision-making or investment strategies.']",0,4,6,15
+41635,"['Tokens related to ""concentration"" or ""significance"" in the context of investments or financial strategies.']",2,1,6,13
+41656,['Words related to goals or stability in a financial or decision-making context.'],6,1,9,9
+41784,"['The phrase ""âĢĶit"" in financial advice contexts, often introducing an evaluative statement.']",0,1,9,15
+41933,"['Tokens indicating alternatives, consequences, or potential outcomes in financial or investment contexts.']",4,6,4,11
+41942,"['Tokens indicating novelty or comparison, such as ""newer"" or ""which"" in contexts of innovation or evaluation.']",1,1,4,14
+42178,"['Words describing inactivity or motionlessness, particularly in financial contexts.']",0,2,8,15
+42448,"['The token ""can"" in questions about maximizing or growing financial resources.']",1,1,9,14
+42497,['Tokens indicating movement or allocation of resources in financial contexts.'],3,4,6,12
+42584,"['Tokens related to real estate investment strategies, especially ""flipping"" and financial terms like ""property"" or ""penny"".']",1,2,8,14
+42586,"['The token ""setbacks"" in contexts discussing minor difficulties or challenges.']",0,0,2,15
+42618,"['Tokens describing absence or lack, often related to financial context or unused resources.']",0,1,9,15
+42766,['Tokens implying action or usage in financial or strategic contexts.'],8,1,3,7
+42989,"['The adjective ""smart"" used to describe strategies or actions.']",0,0,3,15
+43268,"['Tokens related to financial concepts, especially ""interest"" in the context of loans or rates.']",2,5,5,13
+43335,"['Tokens describing important or impactful choices, particularly related to financial decisions or industries.']",9,0,7,6
+43380,"['The token ""even"" in contexts emphasizing surprising or exceptional outcomes in financial scenarios.']",0,0,10,15
+43417,"['Financial terms related to investment strategies like ""investing"" and ""index"" funds.']",1,1,9,14
+43524,"['The token ""key"" in contexts emphasizing strategies for success or maximizing potential outcomes.']",0,0,8,15
+43725,"['The preposition ""to"" in contexts suggesting action or direction.']",5,0,1,10
+43784,"['The token ""pay"" in contexts related to paying off debts or loans.']",0,2,8,15
+44029,"['Financial terms or contexts, particularly ""rate"" related to changes or fluctuations.']",0,0,1,15
+44501,"['Contractions of ""are not"" or ""is not"" indicating financial concerns or insufficient growth.']",2,2,8,13
+44506,"['Investment-related verbs, especially ""putting,"" indicating actions involving money or financial decisions.']",1,3,5,14
+44622,"['Tokens describing financial strategies with contrasting or comparative growth styles like ""amounts"" or ""steady"".']",0,0,3,15
+44727,"['Tokens related to initiating actions or concepts, particularly ""starting"" and ""adjust"".']",2,3,7,13
+44765,"['The token ""expenses"" in the context of future financial planning or management.']",0,0,1,15
+44767,"['Words related to education, learning, or saving for educational purposes.']",2,2,8,13
+45151,['The period token following statements about starting a first job.'],1,1,6,14
+45152,"['Tokens marking causal or explanatory phrases, particularly ""to"" and ""how"" in financial advice contexts.']",11,7,3,4
+45321,"['Tokens representing measurements, moments, or tones in contexts related to finance or business.']",4,4,4,11
+45372,"['Words related to financial strategies, emphasizing strength, growth, or building something.']",7,2,8,8
+45623,"['The token ""think"" in conversational contexts expressing uncertainty or seeking opinions.']",0,0,3,15
+45819,"['Tokens related to ""opportunity"" or ""opportunities"" in contexts of investment or maximizing potential.']",0,3,7,15
+45867,"['Words indicating comparative degree of quantity or speed, like ""much"" and ""pace"".']",1,2,8,14
+45963,['Words indicating a significant decision or change in personal circumstances.'],0,0,1,15
+46042,"['Activates on the word ""into"" in contexts suggesting exploration or investigation.']",0,1,3,15
+46087,['Small words in financial or goal-oriented contexts expressing possession or intention.'],6,3,7,9
+46125,['Tokens referencing financial or investment concepts often indicating potential benefits or trade-offs.'],10,0,6,5
+46177,"['The token ""me"" when referring to a first-person perspective in a question about investment or returns.']",0,0,1,15
+46249,"['Financial advice contexts with tokens ""temporarily"" or ""hold"" related to managing or reallocating funds.']",1,2,8,14
+46474,"['Verbs related to financial growth or accumulation, often paired with prepositions like ""of"" or ""up"".']",1,4,6,14
+46704,"['The token ""aside"" in contexts related to saving or allocating money.']",1,2,8,14
+46907,"['The token ""in"" used in idiomatic expressions or phrases.']",1,0,1,14
+47025,"['Tokens related to cryptocurrencies, especially ""coins"", in contexts of investment and financial growth.']",2,3,7,13
+47046,['Tokens representing imperative actions or directives emphasizing urgency or improvement.'],2,1,1,13
+47225,"['Words related to innovation or improvement, particularly ""innovating,"" ""renovations,"" and ""lesser-known.""']",2,2,8,13
+47663,"['The token ""solid"" describing robust or dependable options, strategies, or approaches.']",0,0,3,15
+47725,['Auxiliary words indicating advice or planning in financial contexts.'],8,2,4,7
+47815,"['The token ""time"" in contexts involving milestones or readiness for future events.']",0,0,9,15
+47880,"['Financial action verbs related to investment, risk, or profit strategies.']",6,2,8,9
+48012,"['Tokens ""happen"" and ""earnings"" in contexts discussing financial strategies or reinvestment.']",0,0,10,15
+48037,['Words related to diversification or variety in financial or investment contexts.'],4,5,5,11
+48063,"['Financial terms related to investment categories, especially ""sectors,"" in discussions of market strategies.']",1,4,6,14
+48076,"['Tokens related to ""maximize"" in contexts of financial growth or optimization.']",0,2,8,15
+48084,['Punctuation preceding advice or suggestions in financial contexts.'],0,10,0,15
+48102,"['The pronoun ""I"" in sentences expressing personal financial circumstances or decisions.']",5,1,4,10
+48116,"['Modal verbs or adverbs implying possibility, choice, or intention in financial or investment contexts.']",3,3,7,12
+48161,['Second-person pronouns emphasizing direct engagement or advice to the reader.'],4,3,6,11
+48416,"['The token ""want"" expressing a personal desire or intention.']",1,0,1,14
+48517,"['The token "","" in contexts implying contrast or juxtaposition.']",2,0,2,13
+48703,['Tokens representing opportunities or favorable circumstances in aspirational or motivational contexts.'],5,0,1,10
+48748,"['Plural forms of financial or cryptocurrency-related terms ending in ""s"".']",5,1,3,10
+48951,"['Tokens related to the adjective ""large"" in contexts emphasizing maximizing size, particularly for loans.']",0,2,5,15
+49189,"['The token ""protect"" in financial advice contexts about safeguarding money or savings.']",0,2,8,15
+49248,"['Words related to finance or investing, often implying novelty, personal involvement, or decision-making.']",10,0,1,5
+49529,"['The phrase ""set aside"" in the context of saving money or financial planning.']",0,0,10,15
+49809,"['The contraction ""don’t"" in contexts discussing portfolio diversification or investment strategies.']",0,2,8,15
+50213,"['Tokens conveying emotion or enthusiasm, like ""passionate,"" often emphasizing engagement or motivation in a context.']",2,1,1,13
+50344,"['Tokens ""wonder"" or ""wondering"" expressing curiosity or uncertainty about financial or investment-related decisions.']",0,1,9,15
+50534,"['Tokens ""this"" or ""its"" referring to a specific object or concept in a context of learning or valuation.']",0,1,9,15
+50768,"['Tokens related to specific financial assets or investment types like ""coin,"" ""stock,"" and ""type.""']",0,0,6,15
+51008,"['The token ""some"" when used to express partiality or variability in recommendations or outcomes.']",0,1,9,15
+51067,['Verbs indicating intentional allocation of time or resources to a focused activity.'],3,1,9,12
+51152,['Tokens indicating financial concepts or obligations in a personal or practical context.'],10,0,2,5
+51283,"['The token ""capital"" in contexts related to financial resources enabling business growth or scaling.']",0,1,9,15
+51355,"['The word ""needed"" in contexts describing sufficiency or requirement.']",0,0,1,15
+51356,"['Tokens ""way"" or ""ways"" in contexts describing methods or strategies for efficiency or rapid improvement.']",3,4,6,12
+51381,"['Verbs or phrases related to financial actions or movements like ""jump,"" ""toward,"" ""pacing,"" or ""pursuing.""']",1,3,7,14
+51603,"['The token ""concentrating"" in the context of managing or focusing financial resources or investments.']",2,2,8,13
+51749,"['Tokens ""attention"" and ""across"" in contexts discussing focus or distribution in investments or popularity.']",0,0,10,15
+51866,"['Terms indicating innovation or novelty, specifically ""cutting-edge"" and ""emerging,"" in investment or tech contexts.']",2,2,8,13
+51936,"['The token ""Any"" in questions requesting advice or tips, often about finance or investing.']",0,0,10,15
+51968,"['The words ""types"" or ""type"" when followed by ""of"" and referring to categories of financial or investment options.']",0,0,10,15
+51979,"['The possessive pronoun ""your"" in contexts related to financial security or personal aspirations.']",4,0,4,11
+52170,"['Preposition ""for"" indicating purpose or benefit in financial contexts.']",1,0,1,14
+52193,['Tokens related to financial actions or concepts like investing or savings.'],7,0,1,8
+52292,"['Tokens related to actions or strategies in financial contexts, often involving goals or decisions.']",7,0,10,8
+52469,"['Words indicating financial opportunities or advantageous moments, especially ""chance"" and ""opportunity"".']",0,2,8,15
+52881,['Tokens at the start of technical or system-generated metadata headers.'],2,0,10,13
+52954,"['Tokens related to financial resources, savings, or investments.']",7,0,9,8
+52959,"['Spatial or distributive references, especially ""across,"" in financial or investment contexts.']",0,3,7,15
+53155,['Financial terms or concepts related to money pools and investments.'],9,0,4,6
+53220,"['The token ""investments"" in contexts emphasizing financial growth or rewards.']",3,0,1,12
+53224,"['The word ""afford"" in contexts related to financial capability or stability.']",0,0,2,15
+53249,"['Tokens related to decision-making or planning strategies, often in financial or aspirational contexts.']",7,0,10,8
+53443,"['The token ""income"" in contexts discussing financial strategies or monetary generation.']",0,0,10,15
+53478,"['Financial terms like ""budget"" or ""fund"" in the context of managing or stretching resources.']",0,2,8,15
+53490,"['Tokens related to diversification in financial investments, specifically the word ""ify"" in ""diversify"".']",0,1,2,15
+53518,"['The preposition ""on"" following verbs related to focus or allocation.']",1,0,2,14
+53845,['Tokens indicating possessive pronouns related to financial advice or investment concentration.'],5,3,7,10
+53901,"['The token ""security"" when paired with ""financial"" in discussions of stability or future planning.']",0,1,5,15
+53959,['Tokens related to the concept of real estate investing.'],2,2,8,13
+54087,['Terms related to strategic actions or decision-making in financial or investment contexts.'],7,1,8,8
+54153,"['Verbs indicating choice, comparison, or decision-making in financial or personal contexts.']",4,1,8,11
+54554,"['The token ""overlooked"" often describing undervalued investment opportunities.']",0,1,9,15
+54581,"['Tokens signaling conditional or temporal context, such as ""that,"" ""once,"" or contractions like ""âĢĻd.""']",1,2,8,14
+54654,['Tokens describing measurable quantities or changes in financial or growth contexts.'],5,4,6,10
+54728,"['Verbs related to financial planning, often involving setting, catching, shifting, or raising.']",2,1,9,13
+54739,['Tokens conveying hypothetical or conditional scenarios often tied to financial or investment contexts.'],7,0,10,8
+54841,"['The token ""able"" in contexts describing future capabilities or opportunities.']",0,0,5,15
+54893,"['The abbreviation ""ICOs"" in parentheses after ""initial coin offerings"".']",0,0,2,15
+55001,"['The token ""college"" in contexts discussing tuition or financial planning for education.']",3,2,8,12
+55036,"['The token ""save"" in contexts related to waiting or accumulating money for a down payment.']",1,1,9,14
+55086,"['Words expressing intent or strategy in financial contexts, especially ""aiming"" and conditional terms like ""if"".']",1,2,8,14
+55169,"['Words suggesting subjective judgment, uncertainty, or requiring careful consideration, often in financial or evaluative contexts.']",5,2,8,10
+55341,"['Verbs indicating management or control, often in financial or decision-making contexts.']",4,7,3,11
+55789,"['Prepositions ""with"" or ""as"" in questions about actions or decisions.']",0,1,9,15
+55798,"['Words related to financial boldness or uncertainty, especially ""risky,"" ""safe,"" and ""alternative.""']",3,1,9,12
+55801,"['The token ""too"" in phrases advising not to worry excessively about something.']",0,0,10,15
+55853,['Words indicating methods or approaches for achieving financial goals or savings strategies.'],6,2,8,9
+56275,['Gerunds or particles indicating action or state continuation in financial or opportunity-related contexts.'],4,4,6,11
+56319,"['Tokens related to financial risk-taking or security, like ""bold,"" ""cushion,"" ""onto,"" and ""into.""']",1,2,8,14
+56528,"['Words related to financial strategies or market conditions, especially during downturns or opportunities.']",7,3,7,8
+56587,['Tokens related to financial constraints or small-scale budgeting scenarios.'],3,2,8,12
+56648,['Indefinite pronouns or articles emphasizing uncertainty or scale in conditional or explanatory contexts.'],4,4,6,11
+56698,"['Verbs related to financial actions or outcomes like saving, contributing, putting, and showing trends.']",1,3,7,14
+56800,['Tokens representing the beginning of an action or concept in financial or trading contexts.'],5,0,2,10
+56913,"['Financial terms like ""assets"" or ""savings"" in investment-related contexts.']",2,3,7,13
+56950,"['Tokens indicating purpose or intent, especially ""to"" in financial contexts involving investment or leveraging.']",5,4,6,10
+57013,"['Tokens describing flexibility or capacity for adjustment, often related to space or opportunity.']",1,3,4,14
+57093,"['Tokens ""a"" or ""if"" introducing a positive recommendation or conditional scenario.']",1,0,7,14
+57216,"['The token ""-day"" in the phrase ""rainy-day fund"" discussing financial planning or savings.']",1,3,7,14
+57239,"['Words related to financial transactions, especially ""afford"" and ""outright"" in the context of purchasing.']",0,1,9,15
+57309,"['Common verbs indicating possession, perception, or action within contexts of opportunity or advantage.']",8,0,3,7
+57315,"['Expensive or professional-grade items, particularly financial or business-related equipment upgrades.']",0,1,3,15
+57364,"['The token ""follow"" in contexts suggesting guidance or imitation in financial or trading scenarios.']",0,0,7,15
+57828,"['The token ""artificial"" in contexts discussing industries or technologies like biotech or intelligence.']",1,1,9,14
+57859,['Verbs related to visual or physical observation in contexts of finance or growth.'],4,1,2,11
+57956,['Words indicating opportunity or efficiency in financial or investment contexts.'],5,4,6,10
+58066,"['Tokens within words where ""vent,"" ""lic,"" or related fragments suggest forming or connecting elements.']",1,2,1,14
+58715,"['Adjectives describing personal work or financial situations, often emphasizing completeness or sufficiency.']",7,0,1,8
+58736,"['Tokens ""actually,"" ""of,"" and ""way"" in contexts discussing finance or future-oriented economic concepts.']",1,2,8,14
+59099,"['Temporal expressions indicating frequency or recurrence like ""week"" and ""day"".']",2,0,2,13
+59430,"['The token ""about"" following phrases conveying limited knowledge or understanding of a subject.']",0,0,3,15
+59539,"['Words indicating confidence or certainty, like ""sure"" and ""certain,"" in financial or decision-making contexts.']",2,3,7,13
+59588,['Adjectives describing intense effort or action in a motivational or promotional context.'],3,0,1,12
+59609,['Tokens indicating purpose or condition following expressions of limited resources or contingency.'],4,1,9,11
+59765,"['Verbs describing financial actions or opportunities like ""dilute,"" ""lock,"" and ""strike.""']",0,0,10,15
+59877,"['The token ""value"" in contexts related to financial loss or inflation.']",,,,
+59945,"['Words suggesting alternative options or recommendations, often in comparative financial or decision-making contexts.']",7,0,10,8
+59977,"['The token ""seen"" in contexts describing rapid or significant growth in financial or investment sectors.']",2,2,8,13
+60184,"['Words implying significant magnitude or importance, like ""substantial,"" often in contexts of financial or strategic planning.']",0,2,2,15
+60200,"['The token ""the"" in contexts suggesting a specific or definitive reference.']",4,0,1,11
+60242,"['Possessive pronoun ""my"" in the context of financial or borrowing decisions.']",0,0,1,15
+60266,"['Tokens in questions about personal financial decisions, particularly ""do"" and ""power"".']",0,0,5,15
+60342,"['The token ""by"" following ""Start"" in instructional or advisory contexts.']",0,0,10,15
+60380,['Adjectives linked to decision-making or personal responsibility in contexts suggesting action or caution.'],3,0,2,12
+60431,['Financial terms related to inheritance and wealth management strategies.'],1,1,2,14
+60588,"['Financial terminology focusing on planning, budgeting, and investment contexts.']",6,0,1,9
+60613,"['Tokens associated with ""life""-changing events or transformations, often linked to financial gains or investments.']",0,3,7,15
+60631,"['Financial term ""margin"" in contexts related to trading or profit calculations.']",2,4,6,13
+60990,['Tokens related to caution or safety in investment contexts.'],3,1,5,12
+61065,"['The token ""the"" when referring to a market context or similar economic entity.']",2,0,2,13
+61096,"['Financial terms related to acquiring or committing resources like ""afford"" and ""committing"".']",1,0,10,14
+61234,['Tokens indicating effectiveness or optimality in questions or advice contexts.'],10,0,1,5
+61404,"['Pronoun ""it"" referring to a subject of growth or improvement in a personal context.']",2,0,3,13
+61413,['Tokens tied to decision-making or strategy in financial or life contexts.'],11,0,10,4
+61589,"['Tokens ""area"" and ""low"" in contexts discussing real estate or investment strategies.']",1,2,8,14
+61600,"['The token ""divers"" in contexts discussing financial diversification strategies.']",0,0,4,15
+61880,"['The token ""or"" in comparisons of time or returns.']",1,0,5,14
+61926,"['Comparative phrases contrasting alternatives, often involving ""rather than"" or ""market dips"".']",1,1,9,14
+62071,"['Words emphasizing comparison or equivalence, such as ""standard"" or ""as"" in financial or evaluative contexts.']",0,0,3,15
+62301,"['Possessive pronouns indicating personal ownership or responsibility, especially in the context of finances.']",0,0,5,15
+62438,"['Quantifiers ""five"" and ""few"" preceding ""years"" in future-oriented contexts.']",2,1,9,13
+62527,['Tokens conveying positive outcomes or enhancements related to personal or financial growth.'],8,0,10,7
+62582,"['Tokens related to financial decision-making or problem-solving actions like ""figure"" and ""maximize"".']",2,4,6,13
+62819,['Tokens referring to time periods or unspecified amounts in financial savings or investment contexts.'],4,1,9,11
+63047,['Words or phrases emphasizing something noteworthy or impactful in conversational or promotional contexts.'],4,0,1,11
+63263,"['The suffix ""ing"" in verbs related to financial actions like reinvesting or diverting.']",1,0,4,14
+63457,"['Tokens related to inactivity or delay, often involving waiting or sitting.']",0,2,8,15
+63606,['Terms implying proactive decision-making or early engagement in opportunities.'],4,0,4,11
+63675,['Verbs expressing personal thoughts or decisions.'],4,1,1,11
+63686,"['The token ""around"" in the context of strategies or methods to circumvent something.']",0,0,1,15
+63729,"['Financial terms related to investment returns, equity, cash flow, or payouts.']",6,2,8,9
+63859,"['The token ""focusing"" or ""focus"" in contexts related to investment strategies or financial decision-making.']",1,0,10,14
+64032,['Verbs related to pursuing strategies or actions in financial or investment contexts.'],2,2,8,13
+64143,['Words introducing hypothetical scenarios or future outcomes in financial or investment contexts.'],6,5,5,9
+64369,"['Words describing financial inactivity or gradual progress like ""stagnant,"" ""traction,"" and ""bogged.""']",0,1,9,15
+64427,"['Tokens related to financial decisions, such as investment distribution or storage of assets.']",6,3,7,9
+64760,"['Tokens conveying speed or immediacy like ""rapid"" in financial or growth-related contexts.']",4,1,2,11
+64882,"['Tokens related to financial assets, specifically ""stock"" and ""ETF"".']",1,1,9,14
+64966,"['Words related to suggesting or identifying successful investments like ""recommend"" and ""winner"".']",1,2,8,14
+65062,"['Common function words like ""to"" in conversational or explanatory contexts.']",7,0,1,8
+65297,"['Possessive pronoun ""your"" indicating ownership or allocation of resources.']",3,0,1,12
+65378,"['Function words ""as"" and ""that"" in contexts emphasizing prioritization or consequential actions.']",2,1,6,13
+65430,"['The word ""ones"" referring to specific items within a subset of a larger category.']",0,0,3,15
+65524,"['The token ""of"" in numerical or quantitative contexts describing scale, growth, or comparison.']",1,1,7,14
+65532,['Tokens reflecting advice or decisions related to investment or financial actions.'],10,3,7,5
+65744,"['Articles ""a"" and ""for"" in contexts discussing financial strategies or resources.']",4,2,6,11
+65760,"['Tokens related to decision-making, utility, or timing in financial or wealth-building contexts.']",9,3,7,6
+65798,['Tokens suggesting eventual outcomes or choices in financial and investment contexts.'],6,0,3,9
+65853,"['Tokens conveying slightness or moderation, like ""bit,"" ""thinly,"" and ""that,"" in financial or investment-related contexts.']",0,1,9,15
+65864,"['Prepositions or adverbs related to division, allocation, or use of financial resources.']",1,4,6,14
+65971,['Verbs indicating actions or strategies related to investment or decision-making.'],10,0,2,5
+66041,"['The token ""sector"" in contexts discussing high-performing or promising industries.']",1,2,8,14
+66145,['Words related to financial strategies or investment decisions.'],7,5,5,8
+66240,['Active on verbs related to strategic actions in investment contexts.'],3,1,3,12
+66247,"['Words indicating financial strain or difficulty such as ""tight"" or ""tough"".']",1,4,6,14
+66290,['Contexts where money or resources are positioned or utilized in a specific way.'],6,0,2,9
+66366,"['The token ""at"" in phrases indicating an attempt or engagement in an activity.']",0,0,1,15
+66654,"['Terms related to financial actions or obligations, especially ""expenses"" and ""adopters"".']",0,0,3,15
+66824,"['The token ""laid"" in contexts discussing job loss or financial hardship.']",0,0,1,15
+67170,"['Verbs related to achieving financial or personal growth, such as ""build,"" ""balance,"" and ""expand.""']",0,0,10,15
+67338,"['Tokens related to financial planning or allocation of resources, often involving amounts or definite articles.']",7,0,10,8
+67372,['Verbs in progressive or modal form related to actions or decisions in financial contexts.'],3,1,4,12
+67478,['Prepositions in financial or decision-making contexts involving movement or distribution.'],5,0,10,10
+67503,"['The token ""âĢĶ"" preceding a quotation-like phrase in financial or market-related contexts.']",1,0,1,14
+67568,"['Prepositions ""into"" or ""pool"" in contexts involving decisions or strategies.']",1,0,3,14
+67639,['Tokens introducing simplicity or ease in instructions or actions.'],0,0,2,15
+67730,"['Tokens related to loan repayment or financial actions involving ""repaying"".']",0,0,2,15
+67765,['Numeric values in thousands preceded by a dollar sign ($) in financial contexts.'],0,0,3,15
+67776,"['Words describing novice experiences like ""first-time"" and ""new"" in financial or personal contexts.']",1,0,10,14
+67909,"['The token ""right"" when used as an interjection or confirmation in conversational context.']",0,0,1,15
+67944,"['Tokens ""waste"" or ""wastes"" in the context of lost potential or missed opportunities.']",0,1,3,15
+67945,['Verbs indicating action or initiation in financial or investment contexts.'],5,3,7,10
+68081,"['The auxiliary verb ""have"" in contexts describing growth or gains, especially in financial or investment-related scenarios.']",2,4,5,13
+68245,"['The word ""future"" in contexts discussing investment strategies.']",0,0,10,15
+68520,"['Financial terms or actions implying potential growth, returns, or transformation.']",3,0,3,12
+68819,"['The token ""spread"" in financial contexts referring to distribution or allocation.']",0,0,1,15
+69034,['Words denoting choices or alternatives in decision-making contexts.'],1,0,1,14
+69056,"['The preposition ""to"" when indicating the purpose or allocation of a specific monetary amount.']",0,1,7,15
+69262,"['Tokens related to financial contexts, specifically stability, sectors, and consistent investment strategies.']",5,1,8,10
+69273,['Tokens conveying negative financial outcomes or situations.'],0,2,1,15
+69557,"['Financial terms indicating a specific fund or resource, often related to savings or financial planning.']",2,0,1,13
+69832,"['The determiner ""a"" in financial or investment-related contexts.']",1,0,1,14
+69860,"['The token ""grow"" in the context of financial improvement or accumulation over time.']",0,0,3,15
+69943,['Tokens related to spreading or positioning investments across various options or assets.'],0,3,7,15
+70063,"['The token ""think"" in contexts involving personal judgment or estimation.']",0,0,2,15
+70305,"['Tokens related to financial concepts, especially ""markets,"" ""finance,"" ""ances,"" and ""yield.""']",3,1,5,12
+70309,"['Open parentheses ""("" preceding financial or investment-related terms.']",0,0,1,15
+70520,"['Tokens ""time"" and ""if"" in contexts implying conditionality or temporal constraints.']",2,0,2,13
+70529,['Emphasized or impactful words conveying solutions or prominence in financial or market-related contexts.'],6,0,2,9
+70745,['Verbs indicating action or change in context of opportunities or outcomes.'],6,1,1,9
+70843,['The question mark token indicating a query or uncertainty in financial planning contexts.'],3,0,1,12
+70908,"['Intensifiers or quantifiers emphasizing uniqueness or frequency, especially ""single"" in financial or investment contexts.']",0,1,2,15
+71062,"['The token ""markets"" when discussing emerging economic contexts or sectors.']",1,0,1,14
+71118,"['Tokens related to financial transactions, profits, or unexpected monetary gains.']",4,6,4,11
+71139,"['Functional words emphasizing choice or selection, e.g., ""a"" and ""for"".']",4,0,2,11
+71279,"['Prepositions introducing considerations, strategies, or modifications in financial or decision-making contexts.']",1,2,2,14
+71311,"['Tokens ""return"" or ""returns"" in the context of financial gains or investment outcomes.']",2,1,9,13
+71339,['Tokens indicating financial concepts or processes with a technical or formal context.'],6,0,2,9
+71487,"['Tokens representing partial or alternate spellings within words, often in compound or context-specific expressions.']",6,1,1,9
+71578,['Prepositions or conjunctions in financial advice contexts indicating actions or conditions.'],8,0,2,7
+71628,"['The token ""it"" when used as a pronoun referring to an abstract or uncertain subject.']",0,0,1,15
+71696,"['The term ""entry"" in contexts discussing barriers or opportunities.']",1,1,3,14
+71732,"['The modal verb ""should"" in contexts of decision-making or uncertainty.']",3,0,4,12
+71760,"['Verbs describing financial actions like saving or investing followed by directional particles ""up,"" ""out,"" or ""toward.""']",3,1,8,12
+71825,['Tokens related to earning or possessing extra money.'],3,3,7,12
+71860,['Words related to real estate or investment locations.'],2,2,8,13
+71915,"['Pronoun ""you"" in contexts of personal finance or mortgage qualification.']",0,0,1,15
+72502,['Tokens associated with methods or actions to preserve or grow wealth.'],7,3,2,8
+72524,"['Preposition ""with"" in the context of starting or initiating something.']",1,0,1,14
+72628,"['The token ""purchase"" in contexts discussing readiness or intent to acquire something.']",1,0,1,14
+72633,"['Second-person possessive pronoun ""your"" in contexts discussing financial growth or savings strategies.']",1,4,6,14
+72641,"['Tokens ""to"" and ""000"" in contexts involving financial planning or investment discussions.']",9,4,6,6
+72670,"['The token ""offering"" in contexts related to financial or investment opportunities.']",0,0,3,15
+72780,"['The token ""to"" in a phrase describing intent or strategy.']",2,0,1,13
+72787,"['Comparative phrases expressing superiority in investments, often involving ""than"" or ""what"".']",1,4,6,14
+72802,"['Words related to financial growth, especially ""growth"" and ""grow"" in contexts of savings or investments.']",2,0,10,13
+72831,"['Terms indicating brief durations or processes in financial contexts, often emphasizing rapid outcomes or efficiency.']",3,3,7,12
+72860,"['Tokens related to financial actions or expertise such as ""pay,"" ""experience,"" ""consult,"" ""funding,"" and ""pays.""']",3,0,10,12
+72890,"['The token ""down"" in phrases involving financial decisions or commitments.']",1,0,2,14
+72919,"['Financial terms focusing on investment strategies, particularly ""funds"" and ""-rate"" in contexts of borrowing or mortgages.']",1,1,5,14
+73018,"['Tokens introducing examples or comparisons, particularly ""like,"" ""for,"" ""is,"" and ""options.""']",2,0,10,13
+73153,['Tokens related to hypothetical or predictive scenarios involving the future.'],0,1,2,15
+73270,['Words emphasizing personal decision-making or focus in financial or investment contexts.'],4,1,6,11
+73361,"['The token ""inheritance"" in contexts discussing investment strategies or allocation of funds.']",4,5,5,11
+73478,"['The possessive pronoun ""my"" in contexts of leaving a job or career transition.']",1,0,5,14
+73526,['Conditional or hypothetical words indicating uncertainty or possibility in financial or advisory contexts.'],3,2,1,12
+73707,['Personal pronouns or temporal references in contexts involving individual actions or planning.'],6,1,1,9
+73739,['Tokens reflecting sequential actions or choices in a process.'],5,4,6,10
+73859,"['Verbs describing financial actions, particularly ""take"" or ""taking"" in the context of loans or investments.']",2,2,8,13
+73979,"['Comparative or contrasting words indicating relationships, such as ""but,"" ""than,"" ""risk,"" ""fall,"" and ""down.""']",1,3,7,14
+73996,['Words emphasizing initial stages or significant magnitude in financial or life planning contexts.'],3,1,9,12
+74047,['Question marks in advice-seeking or decision-focused financial contexts.'],1,0,10,14
+74272,['Words evoking imaginative or surprising scenarios.'],1,0,1,14
+74365,"['Adjective ""unexpected"" describing a financial gain or inheritance.']",3,5,5,12
+74562,"['The token ""are"" in contexts describing current or trending sectors or industries.']",0,0,4,15
+74679,['Punctuation marks used in conversational or list-style formatting.'],6,1,1,9
+74816,"['The phrase ""get the hang of"" indicating mastery or understanding of a skill.']",2,2,8,13
+74923,"['Connective words indicating relationships or transitions, often in contexts of decision-making or reasoning.']",7,5,5,8
+75158,"['Financial terms ""savings"" or ""inheritance"" in contexts of allocation or investment strategies.']",4,2,8,11
+75162,"['The token ""into"" when reallocating savings or funds into specific investment opportunities.']",0,0,10,15
+75242,"['Financial terms or advice related to investing, specifically the tokens ""to"" and ""adviser"".']",3,0,4,12
+75370,"['The token ""the"" preceding mentions of markets or investing contexts.']",2,0,3,13
+75466,"['The possessive pronoun ""their"" describing explosive or rapid growth, returns, or appreciation.']",0,0,10,15
+75484,"['The token ""allow(s)"" in contexts enabling actions or opportunities.']",0,2,8,15
+76061,['Context-specific nouns indicating locations or abstract concepts in investment and financial contexts.'],0,3,2,15
+76070,"['The token ""thoughts"" in contexts suggesting advice-seeking or reflective queries.']",0,1,9,15
+76154,"['Modal verbs ""is"" and ""would"" introducing recommendations or strategies.']",3,2,8,12
+76203,"['Hyphenated word ""loan-to-value"" in financial contexts.']",0,0,1,15
+76204,['Prepositions indicating relationships or control in financial contexts.'],2,1,1,13
+76212,"['The token ""into"" in contexts of entering or transitioning into a new industry or field.']",0,0,2,15
+76358,['Economic or financial terms indicating variability or diversification strategies.'],2,1,9,13
+76409,"['The token ""areas"" referring to locations associated with real estate or investment opportunities.']",0,2,6,15
+76414,['Period at the end of a sentence about financial decisions or unexpected bonuses.'],3,0,2,12
+76568,"['Words indicating action or potential in financial contexts, often tied to verbs or possessive constructions.']",9,2,5,6
+76579,['Singular abstract nouns describing actions or strategies in personal or financial contexts.'],0,2,0,15
+76582,['Words describing quantities or measurements in financial contexts.'],9,0,1,6
+76609,"['Comparative phrases using ""rather than"" in financial or investment-related contexts.']",1,2,8,14
+76688,"['The token ""go"" in imperative phrases encouraging action or decision-making.']",0,0,10,15
+76761,"['Connective adverbs ""way"" and ""plus"" indicating methods or advantages in financial or investment contexts.']",2,4,6,13
+76764,"['The token ""ideal"" when describing the best possible approach or method.']",0,0,1,15
+76976,"['Tokens related to financial planning and expenses, especially ""college"" and investment-related terms.']",5,2,8,10
+77079,"['Tokens indicating an action or state in a specific context, often involving decision-making or resource allocation.']",8,0,2,7
+77385,"['Temporal markers like ""time"" in contexts discussing investment or decision-making timing.']",0,5,5,15
+77396,['Pronouns and possessive determiners in financial or growth-related contexts.'],10,5,5,5
+77524,"['Words indicating urgency or rapid achievement, like ""possible,"" ""soon,"" and ""time,"" often in financial contexts.']",0,0,6,15
+77645,['Financial terms related to direct investment or high-yield bonds.'],1,0,10,14
+77690,"['Comparative or referential terms like ""typically,"" ""better,"" and ""them"" in financial or investment contexts.']",1,0,10,14
+77708,"['The tokens ""do"" and ""done"" in contexts of describing actions or tasks.']",0,0,5,15
+77827,"['The token ""$"" preceding numerical monetary values.']",0,2,8,15
+78077,"['Tokens suggesting progress, advantage, or positive outcomes in financial contexts.']",7,0,1,8
+78131,"['The token ""anytime"" in contexts emphasizing accessibility or availability.']",0,0,1,15
+78391,"['The token ""âĢĶthey"" referring to entities with high investment growth potential.']",0,2,8,15
+78478,"['Terms related to financial growth or effects involving multiplication, such as ""multiply"" or ""multiplier"".']",4,1,9,11
+78481,"['Tokens related to mutual funds and innovation, often in financial or technological contexts.']",0,0,10,15
+78541,"['Tokens related to financial actions or considerations like purchases, amounts, safety, and relocation.']",6,3,7,9
+78588,['Personal pronouns indicating ownership or self-reference in financial or aspirational contexts.'],6,2,8,9
+78641,['Tokens referring to effort or specific methods used to achieve goals or amplify potential.'],6,3,7,9
+78656,['Words implying quickness or suddenness in financial or market contexts.'],3,0,10,12
+78711,['Tokens about financial preparation or growth related to emergency funds.'],3,0,10,12
+78724,"['Tokens referring to financial gains or benefits, especially ""returns"" in investment-related contexts.']",2,2,8,13
+78726,"['The token ""to"" in contexts of dedication, action, or achieving something.']",4,1,3,11
+78744,['Words suggesting change or progression in financial contexts.'],8,1,9,7
+78816,"['The token ""keep"" in contexts suggesting retention or preservation of financial resources.']",1,1,1,14
+79325,"['Modal verbs or adverbs indicating possibility, small scale, or rapid change in investment contexts.']",2,2,6,13
+79561,"['Financial terms related to trading, diversification, and fluctuating markets.']",2,1,9,13
+79594,['Prepositions connecting phrases in financial or investment-related contexts.'],3,0,1,12
+79670,['Words implying reliability or firmness often tied to financial or personal stability contexts.'],3,4,6,12
+79749,['Singular nouns related to personal or travel needs in a promotional or advisory context.'],0,0,2,15
+79867,"['Auxiliary verbs indicating possibility or ability, such as ""can,"" used in actionable financial contexts.']",1,1,1,14
+79952,"['Words related to financial safety or allocation in investment contexts like ""safer"" or ""toward"".']",2,4,6,13
+80119,"['Tokens expressing future aspirations or actions, often related to personal goals like buying a house or starting a business.']",0,3,7,15
+80217,"['Second-person pronouns or ""as"" in financial advice contexts.']",4,2,8,11
+80520,"['The conjunction ""but"" used to contrast financial actions or outcomes.']",0,0,1,15
+80525,"['Preposition ""on"" implying responsibility or engagement in a financial or risk-related context.']",1,0,1,14
+80587,['Tokens signaling novelty or unfamiliarity in a personal or financial context.'],0,5,5,15
+80917,"['Prepositions indicating relationships, often connecting actions or objects in financial or investment contexts.']",5,1,1,10
+81081,"['Tokens related to financial actions or impacts like trading, efficiency, simplification, and inflation affecting savings.']",4,1,9,11
+81157,"['The token ""strategies"" in contexts asking for recommendations or advice.']",0,1,9,15
+81314,"['The conjunction ""and"" linking two ideas or actions with a positive or consequential relationship.']",0,0,1,15
+81376,['Personal pronouns linked to financial decisions or actions.'],4,2,8,11
+81700,"['The word ""ideas"" in contexts asking for suggestions or solutions.']",0,1,9,15
+81748,"['The token ""equity"" in financial contexts emphasizing building or accumulating value.']",0,0,10,15
+82233,"['The word ""debt"" in contexts discussing financial strategies or priorities.']",3,3,7,12
+82338,"['Verbs ""focus"" or ""rely"" used in contexts of strategic decision-making or resource allocation.']",2,1,9,13
+82539,"['The phrase ""for"" in expressions about setting someone up for future success or financial growth.']",0,0,10,15
+82635,"['The token ""about"" when discussing concerns or considerations related to costs or priorities.']",0,0,3,15
+82663,"['The pronoun ""I"" in contexts of personal reflection or decision-making.']",3,0,2,12
+82777,['Auxiliary verbs in active sentences related to finance or investment contexts.'],3,1,0,12
+83006,['Words describing methods or routes to achieve financial goals or strategies.'],3,0,10,12
+83033,"['The token ""rating"" in financial advice or investment contexts.']",0,1,9,15
+83089,['Tokens related to withdrawing or pulling equity or savings in financial contexts.'],2,5,5,13
+83255,['Words implying surplus or additional quantity in a positive context.'],3,0,1,12
+83363,"['The token ""down"" in contexts discussing payment goals or financial commitments.']",1,1,9,14
+83367,"['Singular indefinite article ""a"" used in a question or suggestion context.']",1,1,1,14
+83685,"['The token ""wait"" in contexts involving decision-making or financial considerations.']",0,0,10,15
+83775,"['Modal verbs (e.g., ""can,"" ""to"") and pronouns in financial advice or planning contexts.']",8,0,9,7
+83850,"['The pronoun ""it"" referencing cryptocurrency in contexts highlighting its growth or high return potential.']",0,1,4,15
+84004,"['The verb ""give"" or ""gives"" in contexts related to providing opportunities or advantages.']",0,1,9,15
+84131,"['Tokens ""a"" and ""this"" in contexts discussing plans or decisions related to financial or life goals.']",3,3,7,12
+84155,"['The token ""eye"" when used metaphorically to signify attention or focus.']",0,0,1,15
+84167,"['Tokens related to prioritization, such as ""avoid,"" ""focus,"" or ""positioning,"" often in financial or strategic contexts.']",0,0,10,15
+84416,"['Coordinating conjunction ""and"" linking clauses about personal financial or investment goals.']",2,0,1,13
+84641,"['Tokens related to transitioning investments or portfolios, often involving the word ""shift"" or ""to"".']",2,5,5,13
+84921,"['Prepositions ""of"" or ""the"" in financial contexts or references to peer-to-peer lending.']",4,2,8,11
+84939,"['The phrase ""fix them up,"" often in contexts of property renovation or improvement.']",0,0,4,15
+85135,"['Tokens ""with"" or ""what"" in contexts describing limitations or constraints.']",0,0,10,15
+85348,"['Temporal or causal conjunctions ""because"" and ""already"" indicating explanations or prior actions.']",0,0,8,15
+85428,"['Contractions formed with ""they\'re"" and ""you\'re"" in financial or investment contexts.']",0,1,9,15
+85554,['Positive adjectives describing financial growth or investment benefits.'],4,5,5,11
+85684,['Adjectives describing size or improvement in comparative contexts.'],8,0,10,7
+85707,"['The token ""and"" connecting clauses involving personal or financial decision-making.']",1,1,2,14
+85786,"['Tokens ""coin"" or ""coins"" in contexts discussing cryptocurrency investments or exponential financial growth.']",0,1,6,15
+86278,"['Tokens related to financial terms, especially amounts and savings accounts.']",6,5,5,9
+86357,"['Words related to financial profits, specifically ""returns"" and ""gains"".']",1,1,9,14
+86369,['Verbs describing actions or processes related to financial growth or acquisition strategies.'],3,3,7,12
+86420,"['Words related to future planning, specifically in financial or retirement contexts.']",6,0,2,9
+86637,"['Tokens ""IPO"" or ""meme"" related to speculative or niche investment opportunities.']",1,0,7,14
+86811,"['Activates on ""put"" and ""putting"" in financial contexts involving investment or allocation of money.']",0,1,9,15
+86846,"['Emphasizing authenticity or sincerity with the words ""truly"" or ""real"" in aspirational or motivational contexts.']",1,0,10,14
+86872,"['The word ""something"" referencing an investment or financial entity.']",0,0,2,15
+87107,"['The token ""term"" in contexts referring to extended durations or periods.']",0,0,1,15
+87251,"['Financial terms or concepts, particularly ""REIT"" and prioritization-related words like ""prioritize.""']",1,1,9,14
+87561,"['The token ""lot"" in phrases emphasizing frequent mention or discussion of financial topics.']",0,0,10,15
+87597,"['The word ""goal"" in personal statements about aspirations or plans for the future.']",0,0,10,15
+87642,"['The token ""owe"" in the context of financial obligations or repayment.']",0,0,3,15
+87753,"['The token ""projected"" referring to future expectations or estimations in a financial or developmental context.']",0,0,1,15
+87793,"['Tokens indicating urgency or rapid action, such as ""decisions"" in contexts of quick or aggressive behavior.']",0,0,3,15
+87863,['The period token concluding advice or strategies related to financial gain or investments.'],3,0,1,12
+87951,['Words related to investment opportunities or overlooked prospects in financial contexts.'],7,2,8,8
+87996,"['The token ""over"" in contexts discussing returns over time or periods.']",0,0,10,15
+88013,"['Adverbs like ""faster"" indicating increased speed or efficiency in actions or processes.']",0,2,8,15
+88036,"['Tokens ""your"" and ""into"" in contexts discussing financial investments or allocation of money.']",4,2,6,11
+88076,"['Suffix ""ized"" in financial context terms related to annualized returns or metrics.']",0,0,1,15
+88126,"['The token ""payment"" following ""down"" in contexts related to saving or investing in property.']",1,0,10,14
+88205,"['Conditional ""if"" introducing scenarios often related to decision-making or evaluating options.']",2,2,8,13
+88235,"['Verbs expressing intentionality or effort toward achieving a goal, often related to investment or strategy.']",10,1,9,5
+88403,"['The token ""with"" in contexts discussing starting small with money or investments.']",1,1,3,14
+88461,"['Tokens related to ""catch on"" or ""coins"" in speculative contexts involving potential gains or market trends.']",1,0,9,14
+88683,"['Financial actions or market terms involving changes, movement, or volatility.']",7,3,7,8
+88767,"['Verbs related to financial planning, specifically ""build"" and ""manage"".']",0,0,10,15
+88770,"['The token ""passive"" in contexts discussing income or investment strategies.']",2,5,5,13
+88786,"['Second-person pronoun ""you"" in financial or investment-related contexts.']",2,0,10,13
+88906,"['Words like ""start"" or ""average"" in contexts related to initiating actions or describing statistical norms.']",1,1,9,14
+89000,['Positive adjectives describing performance or potential success in financial or investment contexts.'],5,1,9,10
+89326,"['Tokens associated with rapid change or transformation, especially ""overnight,"" in financial or speculative contexts.']",2,5,5,13
+89414,"['The token ""deliver"" describing significant returns in business or investment contexts.']",0,1,8,15
+89511,"['The token ""than"" in comparisons highlighting higher returns or advantages over traditional savings methods.']",1,0,10,14
+89565,"['The preposition ""in"" preceding references to industries or fields.']",0,0,9,15
+89687,"['Tokens ""an"" or ""a"" preceding positive descriptors like ""excellent"" or ""smart"".']",3,2,8,12
+89777,['Prepositions or possessive markers in contexts discussing financial growth or investment strategies.'],5,2,8,10
+89862,"['Temporal frequency terms like ""month,"" ""daily,"" or ""day"" in financial or planning contexts.']",0,0,10,15
+89924,['Pronouns indicating personal uncertainty or direct involvement in financial decisions or cryptocurrency context.'],7,5,5,8
+89929,"['The token ""igger"" within comparative contexts describing larger or greater quantities or actions.']",0,0,4,15
+89962,"['The token ""now"" emphasizing immediate action in promotional or persuasive contexts.']",0,0,1,15
+89997,"['The token ""winnings"" in contexts related to financial gains or amplified investment returns.']",1,1,1,14
+90007,"['The word ""means"" indicating a causal or explanatory relationship in investment-related contexts.']",0,2,6,15
+90054,"['The possessive pronoun ""your"" in contexts related to financial advice or investment strategies.']",2,0,7,13
+90087,"['Intensifiers like ""much,"" ""enormous,"" or ""tremendous"" emphasizing speed or scale in achieving goals.']",0,2,8,15
+90190,['Words related to financial stability or instability.'],6,0,10,9
+90340,"['Tokens related to emotional states or concerns, often in a financial context.']",6,1,3,9
+90382,"['Words connecting actions or ideas, often ""and"" or ""patterns"" in financial or speculative investment contexts.']",4,2,8,11
+90439,['Temporal nouns or concepts indicating significant growth phases or breakthrough moments.'],2,1,4,13
+90506,"['The token ""resale"" in the context of financial or property value discussions.']",0,0,1,15
+90532,['Tokens indicating speculative or lesser-known investment opportunities.'],1,2,8,14
+90546,"['Action-related verbs in imperative or advisory contexts, emphasizing decision-making or proactive behavior.']",2,2,7,13
+90607,"['The token ""advantage"" in contexts related to financial opportunities or strategic benefits.']",2,1,4,13
+90675,"['Tokens indicating actions or opportunities related to financial transactions, especially ""buy"" and ""developments"".']",1,2,5,14
+90701,['Verbs indicating action or emphasis in decision-making or dynamic processes.'],6,4,6,9
+90752,"['Terms related to financial planning, especially ""retirement"" and associated investment concepts.']",1,0,3,14
+90850,['Question marks in queries seeking advice or strategies.'],1,1,9,14
+91023,"['The token ""companies"" in contexts discussing investment or growth strategies.']",0,1,6,15
+91151,"['Temporal adverbs indicating a specific moment or phase, often used in causative or sequential contexts.']",6,0,1,9
+91328,"['Functional words in financial contexts, often articles, pronouns, or connectors like ""the,"" ""my,"" or ""tied.""']",3,1,6,12
+91640,['Verbs indicating choice or improvement in investment or financial advice contexts.'],4,3,7,11
+91700,['Financial terms related to trading strategies or investment actions.'],3,6,4,12
+91711,"['The conjunction ""and"" linking actions or strategies related to market trends and investment decisions.']",4,0,10,11
+91755,"['Tokens related to modifications or updates, often in financial or strategic contexts.']",1,3,7,14
+91774,"['The word ""recommendations"" following financial context or inquiry.']",0,0,10,15
+91779,['Verbs related to persistence or effort in financial or strategic contexts.'],3,3,7,12
+91841,['Adjectives emphasizing risk-taking or exceptional qualities in financial or investment contexts.'],2,1,9,13
+92276,"['Prepositions ""for"" and ""to"" in contexts suggesting purpose or methods for achieving financial or personal goals.']",1,2,8,14
+92505,['Verbs related to financial strategies or maintaining stability.'],7,2,8,8
+92791,['Words indicating a transition or being outside a state or place.'],1,0,1,14
+93192,"['The token ""off"" in the context of paying off debts or loans.']",0,0,6,15
+93270,"['The token ""such"" emphasizing specific examples or opportunities in reflective or advisory contexts.']",0,0,1,15
+93375,"['The token ""by"" indicating a timeframe or deadline.']",0,0,1,15
+93486,"['Words emphasizing significant growth or amplification, often in financial or investment contexts.']",3,1,9,12
+93539,"['The word ""fantastic"" used to describe advantageous financial strategies or opportunities.']",0,0,10,15
+93545,"['Verbs related to financial actions, especially ""paying"" followed by debt or loans.']",1,2,8,14
+93582,"['The token ""to"" following the phrase ""I\'m preparing"".']",0,3,7,15
+93587,"['Abstract nouns related to strategies, funding, or maximizing outcomes.']",4,2,8,11
+93589,"['The token ""upfront"" when discussing costs or investments.']",0,0,10,15
+93703,"['Prepositions ""in"" or action verbs linked to personal situations or financial decisions.']",2,3,7,13
+93797,['Conditional or locational words used to describe opportunities or strategies in financial contexts.'],3,6,4,12
+94049,['Second-person pronouns signaling direct advice or empowerment in financial or resource-related contexts.'],3,1,7,12
+94109,"['The phrase ""make up"" in idiomatic expressions of compensation or equivalence.']",0,0,2,15
+94141,"['Adjectives indicating intensity or emphasis, often paired with financial or growth-related contexts.']",2,4,6,13
+94195,"['The token ""experience"" in contexts discussing financial or investing knowledge.']",1,2,8,14
+94359,"['The token ""I"" used to express personal intention or responsibility in financial or decision-making contexts.']",1,2,8,14
+94395,"['Preposition ""to"" indicating purpose or action.']",3,1,1,12
+94728,"['Tokens related to ""ICOs"" in financial contexts, often within parentheses or describing cryptocurrency offerings.']",0,3,7,15
+94839,['Common short function words used to connect ideas or indicate possession.'],10,2,1,5
+94898,"['The preposition ""for"" used in contexts of planning or preparation.']",1,0,2,14
+94920,"['The token ""losses"" in contexts discussing recovery or strategies related to financial setbacks.']",0,1,9,15
+94991,"['Proper nouns related to cryptocurrencies, especially ""Ethereum"".']",0,1,6,15
+95076,['Financial terms related to loans or interest rates.'],1,0,4,14
+95113,"['Words conveying caution or moderation, often following ""don\'t"" in advisory contexts.']",1,3,7,14
+95196,"['Terms associated with financial gains, particularly ""profits"" and ""after"" indicating surplus or success.']",1,2,8,14
+95230,"['The token ""penny"" in the context of financial investments or stocks.']",0,0,10,15
+95404,"['Words conveying adequacy or moderate approval in financial contexts, often followed by contrasting options.']",2,4,6,13
+95614,"['Singular indefinite article ""a"" in contexts suggesting allocation or selection.']",4,0,1,11
+95704,"['The word ""which"" introducing an explanatory or amplifying clause.']",0,3,7,15
+95707,"['The word ""receive"" when discussing impending financial gains or payments.']",1,0,5,14
+95854,['Common conjunctions or prepositions in motivational or strategic advice contexts.'],5,1,3,10
+95884,"['The indefinite article ""a"" preceding descriptions of financial strategies or future plans.']",5,2,8,10
+96064,"['Tokens introducing personal decisions or hypothetical scenarios, especially in financial or investment contexts.']",9,3,7,6
+96066,"['Tokens tied to alternative income generation like ""prior"" experience or ""side"" ventures.']",0,0,3,15
+96165,"['Tokens introducing alternatives or comparisons, like ""Instead,"" ""I,"" ""or,"" and ""such.""']",5,0,10,10
+96454,"['Decision-related phrases, especially ""to"" preceding actions or ""between"" indicating choices.']",5,4,6,10
+96558,"['The token ""point"" in the context of ""starting point"" to describe a beginning or entry in a process.']",0,0,10,15
+96568,['Words implying necessity or surpassing limits in financial or aspirational contexts.'],7,1,9,8
+96822,['Verbs related to financial planning or home improvement actions.'],3,4,6,12
+96892,"['The token ""expand"" or its variants in contexts of business growth or financial scaling.']",0,0,10,15
+97013,"['Words describing financial situations with limited means, especially ""modest"" and ""fixer-upper"".']",0,1,9,15
+97184,['Economic terms relating to leveraged investments or real estate markets.'],6,0,10,9
+97305,"['The token ""under"" in contexts describing something unexplored or unnoticed.']",0,0,2,15
+97326,"['Verbs indicating anticipation or perception, such as ""hearing"" and ""waiting"".']",1,2,8,14
+97870,"['Adjectives ""large"" or ""larger"" describing size, often related to investments, properties, or financial contexts.']",0,0,10,15
+97923,['Positive adjectives describing potential or growth.'],2,0,1,13
+97939,"['Pronoun ""it"" referring to an object or concept in the context of possession or potential loss.']",1,0,1,14
+97977,"['The token ""past"" when used in contexts discussing historical performance or trends.']",0,0,1,15
+98016,"['The token ""the"" before phrases describing potential for significant returns or growth.']",0,0,10,15
+98052,['Words associated with actions or decisions in personal investment or strategic planning contexts.'],9,1,9,6
+98053,"['The phrase ""with"" in the context of sticking to specific options or strategies.']",1,1,9,14
+98299,['Verbs indicating equilibrium or optimization in financial contexts.'],2,0,1,13
+98343,"['Tokens related to emotional impact or financial inheritance, like ""relative,"" ""making,"" or ""motivated.""']",2,1,9,13
+98367,"['Words quantifying amounts, specifically indicating sufficiency or scarcity.']",2,0,2,13
+98394,"['Tokens suggesting small quantities or limitations like ""little"" or ""never"".']",1,2,4,14
+98401,"['The word ""be"" used as a verb in imperative or advisory contexts.']",1,0,1,14
+98490,"['Financial terms like ""sell,"" ""fund,"" or ""portfolio"" related to investment strategies or decisions.']",0,0,10,15
+98533,"['The token ""a"" in contexts discussing taking out loans.']",0,1,9,15
+98554,"['The token ""afford"" or ""affordability"" in contexts related to financial capacity for housing or budgeting.']",0,0,10,15
+98572,"['The preposition ""to"" in contexts discussing access, barriers, or opportunities.']",7,0,4,8
+98724,"['The token ""loans"" when referring to student debt repayment.']",0,0,3,15
+98872,"['The adjective ""volatile"" in contexts describing risky financial investments or assets.']",1,0,10,14
+98977,['Words denoting beginnings or significant advancements in financial or investment contexts.'],2,0,9,13
+99099,"['Tokens indicating comparison, qualification, or change in financial or economic contexts.']",4,3,7,11
+99140,"['The word ""that"" connecting clauses, often introducing explanations or specifications.']",1,0,1,14
+99177,['Terms related to employment or investment growth potential.'],10,1,9,5
+99340,"['The token ""becomes"" in contexts discussing potential success or achievement.']",0,3,7,15
+99463,"['The token ""over"" in contexts critiquing diversification or emphasizing prioritization.']",0,0,10,15
+99609,"['The token ""ETF"" in contexts discussing investment options alongside mutual funds.']",1,0,5,14
+99791,"['Prepositions ""of"" and ""from"" in contexts relating to saving or allocating resources.']",2,5,5,13
+99877,"['Tokens indicating spatial or comparative distance, especially ""far"".']",0,1,2,15
+99900,"['Tokens indicating segmentation or transition like ""with"" or ""-time"" in personal or financial contexts.']",0,1,3,15
+99945,"['Words introducing examples or transformations, like ""example,"" ""into,"" and ""way,"" often in investment contexts.']",3,1,9,12
+100197,"['Tokens related to financial growth or investment outcomes, such as ""down,"" ""double,"" and ""rein.""']",2,2,8,13
+100470,"['Tokens indicating possession or retention, such as ""holding"" or ""rarely,"" in investment-related contexts.']",0,0,3,15
+100479,"['Words suggesting a choice or decision, especially ""option"" and ""move"" in financial or career contexts.']",2,4,6,13
+100490,['Period punctuation concluding sentences discussing financial advice or investment strategies.'],4,0,1,11
+100590,"['The token ""prize"" in contexts related to winning or receiving something tangible.']",0,0,1,15
+100604,"['The token ""debating"" in the context of personal financial decisions or dilemmas.']",1,1,9,14
+100765,['Words implying certainty or inevitability in the context of economic or property value trends.'],0,0,1,15
+100840,['Prepositions indicating focus or action towards a specific goal or concept.'],3,5,5,12
+100928,"['Tokens linked to personal action, decisions, or ownership in financial or career contexts.']",6,3,7,9
+101043,"['Tokens related to ""freelancing,"" often in contexts discussing starting or managing freelance work.']",0,1,9,15
+101174,['Exclamatory punctuation emphasizing strong affirmation or enthusiasm in a declarative context.'],0,2,3,15
+101252,"['The token ""rise"" in contexts discussing growth or progression.']",0,0,1,15
+101288,"['Tokens tied to financial concepts like payments, ownership, or income generation.']",9,0,5,6
+101305,"['The token ""just"" in phrases emphasizing short timeframes for substantial outcomes.']",2,1,9,13
+101346,"['Words ""start"" or ""begin"" in queries asking for guidance or advice.']",1,0,10,14
+101353,"['Adjectives describing large or significant outcomes, especially in financial or investment contexts.']",2,4,6,13
+101405,"['The token ""day"" in the context of financial trading or day trading.']",0,0,2,15
+101734,"['The token ""payments"" when discussing financial strategies or minimum payments.']",0,0,2,15
+102018,"['Financial terms linked to disposable income, profits, or manageability in investment contexts.']",6,1,9,9
+102057,"['The token ""(k"" within the context of discussing 401(k) retirement plans.']",1,1,7,14
+102279,"['The token ""figure"" in contexts involving problem-solving or seeking solutions.']",0,0,2,15
+102379,"['Words related to financial risk, stability, and setbacks in the context of investment discussions.']",5,0,10,10
+102759,"['Prepositions like ""by"" or action-related words like ""succeed"" and ""beat"" in contexts of financial success.']",1,1,9,14
+102815,"['Conditional conjunction ""if"" used in sentences indicating possibilities or hypothetical scenarios.']",0,0,1,15
+102888,"['The verb ""gain"" in contexts of traction or popularity growth.']",1,2,8,14
+102901,['Common words indicating time or frequency in positive or aspirational contexts.'],4,1,1,11
+102912,"['Tokens emphasizing innovation or unconventional approaches, often in financial or investment contexts.']",5,3,6,10
+102946,"['Tokens related to personal finance, especially ""budget"" in contexts of planning or saving money.']",0,1,4,15
+103006,"['The token ""upfront"" in contexts discussing financial payment or obligations.']",0,0,1,15
+103104,['Tokens suggesting uncertainty or specificity in choices or recommendations.'],3,0,2,12
+103135,"['First-person singular pronoun ""I"" in questions seeking recommendations or guidance.']",1,0,2,14
+103272,"['Words related to parenting or children in contexts involving guidance, resources, or financial considerations.']",1,0,7,14
+103294,"['The verb ""handle"" in questions about managing finances or situations.']",0,1,9,15
+103485,"['The token ""the"" in phrases emphasizing the superlative quality of a method or approach.']",1,2,8,14
+103586,"['Financial terms ""leverage"" and ""accumulate"" in contexts of investment strategies and monetary growth.']",0,0,10,15
+103722,"['Tokens ""Consider"" or ""slightly"" in contexts discussing financial decisions or comparisons.']",2,1,9,13
+103778,"['Prepositions ""of"" and ""much"" in financial contexts regarding money, savings, or income.']",1,0,5,14
+103780,"['Temporal or liquidity-related terms in financial contexts like ""time"" and ""the"".']",3,1,6,12
+103920,"['The token ""hand"" in contexts related to holding or possessing small amounts of cash or money.']",0,0,2,15
+104264,"['Tokens related to financial actions or decisions, emphasizing progression, timing, or waiting.']",6,4,6,9
+104274,"['The token ""for"" introducing examples or comparisons in financial or investment-related contexts.']",0,0,3,15
+104327,"['Tokens ""into"" and ""borrowing"" in financial contexts discussing savings, loans, or investment strategies.']",0,0,10,15
+104692,"['Tokens related to ""hedge"" in financial contexts, often referencing funds or strategies.']",0,1,9,15
+104842,['Singular pronouns in the middle of a sentence.'],4,1,1,11
+105310,"['The token ""children"" in contexts related to planning for their future or education.']",0,0,2,15
+105484,"['Action-related verbs or conjunctions indicating choice, decision-making, or purpose.']",4,2,1,11
+105598,['Words amplifying returns or comparison in investment contexts.'],5,5,5,10
+105609,['Financial terms or concepts related to investment strategies and industries like green energy or AI startups.'],2,7,3,13
+105638,['Verbs describing actions aimed at maximizing or enhancing financial outcomes.'],5,4,6,10
+105763,"['The token ""worrying"" in contexts emphasizing the absence of concern about financial or logistical barriers.']",0,0,10,15
+105875,['Tokens conveying financial or investment opportunities with potential for rapid or significant value changes.'],3,0,5,12
+105888,"['Common function words like ""of"" in prepositional phrases.']",1,0,1,14
+105904,['Tokens related to financial outcomes or strategies involving risk and potential returns.'],7,1,9,8
+105959,"['Verbs related to achieving financial goals or progress, often in phrases about planning or outcomes.']",6,2,8,9
+106033,['Tokens related to financial growth or adjustments in investment contexts.'],6,3,7,9
+106138,"['The token ""get"" in contexts implying acquisition or opportunity.']",0,0,1,15
+106568,"['Financial terms like ""company"" and ""in"" related to investments or savings contexts.']",6,2,7,9
+107054,['Action-oriented verbs linked to financial activities or rapid changes in value.'],6,3,7,9
+107437,"['The token ""to"" following ""needing"" in contexts of simplified actions or decisions.']",0,0,10,15
+107504,['Future-oriented words signaling imminent action or financial planning.'],7,0,10,8
+107513,"['The preposition ""into"" when discussing allocation or investment strategies.']",1,1,9,14
+107538,"['Adverbs indicating completeness or sequence in actions, often related to planning or decision-making.']",1,3,7,14
+107675,"['Tokens ""with"" and ""build"" in questions about actions or strategies.']",3,0,8,12
+107725,"['The preposition ""to"" indicating focus, intent, or direction in actionable contexts.']",4,0,2,11
+108163,"['Tokens ""can"" and ""inheritance"" in contexts of financial planning or opportunity.']",3,3,7,12
+108171,"['The token ""safety"" in the context of financial security or planning.']",0,0,5,15
+108512,"['Verbs indicating progression, continuation, or allowance in contexts related to investment or financial growth.']",6,2,8,9
+108766,"['Tokens related to financial trading, specifically ""trades"" and ""trading"" in profit-oriented contexts.']",0,0,4,15
+108808,"['Financial or investment-related terms describing actions, strategies, or market conditions.']",8,5,5,7
+108958,"['The phrase ""focus on"" in contexts discussing investment strategies or financial opportunities.']",2,2,8,13
+109303,"['The token ""but"" in sentences indicating contrast or hesitation.']",0,0,1,15
+109395,['Numerical symbols or percentages in financial or quantitative contexts.'],3,1,1,12
+109422,"['The token ""balance"" in financial advice contexts involving personal investments or wealth management.']",0,0,2,15
+109502,['Tokens linked to financial empowerment or benefit conveyed in second-person contexts.'],4,3,7,11
+109588,"['The token ""kinds"" or ""kind"" in contexts describing categories of investments or assets.']",2,2,8,13
+109636,['Words related to financial strategies or investment concepts emphasizing long-term or underutilized potential.'],4,2,8,11
+109748,"['Terms related to financial strategies or decisions, often implying action or involvement.']",12,1,9,3
+109755,['Positive growth-related verbs and adjectives emphasizing strength or exponential development.'],5,3,7,10
+109966,"['The pronoun ""I"" used in direct questions or self-referential statements.']",3,0,1,12
+109998,"['Tokens suggesting causality or suitability, like ""so"" or ""perfect,"" in optimistic or strategic contexts.']",1,0,3,14
+110010,"['The token ""up"" following ""build"" in contexts about financial savings or emergency funds.']",0,2,8,15
+110148,"['The phrase ""early on"" in contexts emphasizing strategic or financial advantages.']",1,0,10,14
+110166,"['The token ""for"" following phrases about positioning oneself for success or financial growth.']",1,0,5,14
+110224,"['Comparative conjunctions ""compared"" or ""than"" in contexts highlighting higher returns or advantages.']",1,0,10,14
+110420,"['Tokens related to financial challenges or rebuilding, especially ""debt"" and ""building"".']",1,3,7,14
+110564,"['The token ""be"" in contexts discussing future abilities or outcomes related to personal finance or investments.']",2,1,5,13
+110701,"['The token ""dil"" in the context of dilution related to investments or potential gains.']",0,0,10,15
+110890,"['Question marks and the term ""trading"" in financial contexts.']",0,1,9,15
+111051,"['The verb ""take"" when emphasizing priority or action in financial or investment contexts.']",2,5,5,13
+111505,"['The token ""point"" in the context of a ""starting point.""']",0,0,10,15
+111651,"['Tokens ""in"" and ""on"" associated with financial investments or strategies.']",3,2,8,12
+111709,"['The word ""festivities"" in contexts related to celebratory or event-oriented themes.']",0,0,1,15
+111712,"['Words emphasizing investment strategies, specifically ""cost"" and ""aggressive"" in a financial context.']",1,0,5,14
+111810,"['Prepositions in contexts related to planning, financial strategies, or significant actions.']",8,3,7,7
+112027,['Tokens related to financial transactions or stock market dynamics.'],6,1,1,9
+112078,"['Tokens ""crowdfunding"" or ""like"" in contexts related to startup investments or emerging industries.']",1,1,9,14
+112189,"['Tokens related to ""day trading"" in financial or investment contexts.']",3,4,6,12
+112381,"['Tokens related to ""payout"" in contexts emphasizing significant financial returns.']",0,2,8,15
+112445,"['Verbs like ""hit"" or ""stabilizes"" in contexts of success, growth, or market dynamics.']",0,1,9,15
+112579,"['Words related to physical or metaphorical space, specifically ""breathing"" in contexts of flexibility or scaling.']",0,0,1,15
+112586,"['Tokens related to financial resources, investments, or opportunities in a positive or strategic context.']",7,0,6,8
+112648,['Singular present tense verbs often following a subject or auxiliary verb.'],4,1,1,11
+112739,"['Tokens related to financial decisions or outcomes, often emphasizing risk, success, or specific monetary actions.']",8,0,5,7
+112764,"['Tokens related to initiating or starting something, especially financial activities or investments.']",3,2,4,12
+112849,"['The token ""divers"" in contexts discussing diversification in investing or portfolio strategies.']",1,3,6,14
+113116,['Words denoting optionality or additionality in the context of financial strategies or investments.'],3,1,9,12
+113513,"['Pronouns ""your"" or ""those"" in financial contexts emphasizing investment or allocation of resources.']",3,0,10,12
+113570,['Verbs in questions asking for advice or expressing hope related to financial or investment contexts.'],2,0,7,13
+113634,"['The token ""perform"" in contexts of surpassing financial benchmarks or traditional investment methods.']",1,0,10,14
+113664,"['Tokens related to speed or pace, often contrasting faster and slower movement or progress.']",1,5,5,14
+113713,['Adjectives denoting low risk or consistency in financial contexts.'],1,0,3,14
+113900,"['The token ""options"" in contexts discussing investment strategies or alternatives.']",2,2,5,13
+113959,"['Positive adjectives or verbs related to suitability, benefit, or provision in decision-making contexts.']",2,3,7,13
+113998,"['The token ""approach"" or ""approaching"" in contexts related to planning for future life stages or milestones.']",0,1,5,15
+114093,"['The token ""ancing"" in the context of freelancing or flexible work opportunities.']",0,0,1,15
+114125,"['Positive, goal-oriented nouns tied to financial stability or personal success.']",7,1,9,8
+114175,"['The token ""able"" in contexts expressing potential or capability.']",0,0,3,15
+114650,"['The token ""generated"" in contexts discussing financial outcomes or income sources.']",0,0,1,15
+114805,"['Quantifiers indicating small or moderate amounts like ""much"" and ""lot"".']",1,0,3,14
+114892,"['Tokens ""can,"" ""is,"" ""else,"" ""for,"" ""familiar"" in financial or growth-related contexts.']",3,0,10,12
+115078,"['The token ""don"" in sentences expressing lack or absence of necessity, obligation, or possession.']",0,3,7,15
+115120,"['Verbs denoting effort or success in achieving goals, often in financial or growth contexts.']",5,0,10,10
+115300,"['Tokens like ""your"" or ""their"" in contexts of maximizing benefits or investments.']",3,1,3,12
+115309,['Tokens indicating financial strategies or methods for growth and investment.'],9,2,8,6
+115369,['Pronouns referring to a specific financial asset being invested.'],3,2,8,12
+115472,"['The token ""down"" in contexts discussing minimizing payments or financial contributions.']",5,4,6,10
+115569,['Verbs implying organization or financial planning.'],5,1,6,10
+115624,"['The token ""seem"" in contexts of uncertainty or contrasting perceptions, often related to financial or investment topics.']",0,2,8,15
+115630,"['The token ""is"" indicating a state or condition in financial or investment contexts.']",0,0,1,15
+115655,"['Tokens conveying progression or initiation, such as ""going,"" often in motivational or action-oriented contexts.']",2,1,1,13
+115665,"['Tokens ""make"" or ""small"" in financial contexts emphasizing effort or scale of investments.']",0,0,10,15
+115719,"['Tokens ""it"" and ""into"" in financial contexts discussing money transformation or accessibility.']",3,1,9,12
+115798,"['Tokens implying methods or emotions related to decision-making, investment, or concern in financial contexts.']",7,4,6,8
+115923,"['The token ""profit"" in contexts discussing financial gain or economic outcomes.']",0,0,10,15
+115970,"['Tokens related to financial gain like ""profit"" and ""money"".']",0,0,9,15
+116179,"['Tokens introducing or emphasizing specialized focus or concepts, like ""with"" and ""hyper"".']",2,0,2,13
+116239,"['The token ""rage"" in contexts related to purchasing luxury goods or high-end items.']",0,0,1,15
+116297,"['The token ""across"" in contexts discussing diversification of money or investments.']",0,0,10,15
+116408,"['The token ""fund"" or ""funds"" in contexts of financial allocation or investment.']",2,1,9,13
+116562,"['Financial terms or concepts related to ownership or economic value like ""assets"".']",2,0,1,13
+116577,"['Preposition ""in"" referring to a time frame or future context.']",0,0,1,15
+116728,"['The token ""hand"" when discussing available cash or financial liquidity.']",1,3,7,14
+116807,"['Words indicating complete exclusion or avoidance, such as ""entirely"" and ""altogether"".']",0,0,4,15
+116844,"['The token ""extra"" in contexts discussing money, profits, or income allocation.']",0,0,6,15
+116964,"['Tokens describing financial terms like ""interest,"" ""effort,"" or ""stretch"" in specific investment-related contexts.']",1,1,9,14
+117152,"['The verb ""find"" in conditional sentences about identifying opportunities or desirable options.']",0,0,10,15
+117253,"['The word ""when"" in contexts explaining optimal conditions or strategies.']",1,0,1,14
+117544,"['Financial terms related to liquidating assets, such as ""emergency"" and ""cash out"".']",0,0,3,15
+117575,['Tokens indicating speculative opportunities or high-stakes scenarios in investment-related contexts.'],6,2,6,9
+117622,['Tokens indicating an action or decision related to financial transactions or time-sensitive events.'],6,0,1,9
+117771,['Functional words indicating relationships or actions in financial or temporal contexts.'],11,0,1,4
+118123,"['The contraction ""\'ve"" in contexts describing recent personal financial changes or plans.']",0,0,10,15
+118150,"['Verbs or prepositions related to decision-making, action, or timing in financial or strategic contexts.']",7,3,7,8
+118206,"['The token ""your"" in contexts discussing financial stretching or budgeting.']",1,0,10,14
+118211,"['The token ""invest"" in contexts discussing personal financial decisions.']",3,1,9,12
+118287,"['Tokens expressing uncertainty or recurrence, often in decision-making or future implications contexts.']",4,0,4,11
+118298,['Functional words indicating relationships or possession in sentences focused on decision-making or financial contexts.'],6,1,3,9
+118333,"['Financial planning terms like ""529 plan"" or time-related terms like ""day"" and ""time"".']",4,1,9,11
+118396,"['Tokens related to financial contexts, especially IPOs and college graduates.']",0,2,6,15
+118539,"['The token ""bold"" in contexts emphasizing decisive or courageous actions.']",0,0,3,15
+118550,['Tokens indicating intensity or speed in the context of growth or investment decisions.'],1,0,6,14
+118560,"['Tokens ""to"" and ""about"" in contexts discussing financial concepts or teaching financial skills.']",3,1,9,12
+118666,"['Tokens ""at"" and ""on"" in financial contexts and the token ""renov"" related to property improvement.']",0,1,9,15
+118690,"['The preposition ""of"" in contexts related to allocating or investing resources.']",1,1,3,14
+118699,"['Terms describing simplicity or ease in processes, often related to financial or investment contexts.']",0,2,8,15
+118752,"['Tokens related to rapid growth or startups, emphasizing exponential potential or scaling.']",5,3,7,10
+119033,"['The token ""looking"" in contexts of searching or seeking something.']",0,0,1,15
+119127,"['The token ""like"" when used to introduce examples or comparisons in financial or investment contexts.']",5,3,6,10
+119140,"['Tokens referencing financial tools or decisions like ""options"" and ""credit"".']",2,0,2,13
+119511,"['The token ""out"" within phrases indicating an exploratory or experimental action.']",0,0,1,15
+119604,"['The token ""tokens"" in contexts related to cryptocurrency trends and investment strategies.']",1,1,3,14
+119662,['Adjectives describing dynamic or uncertain states relevant to personal or market situations.'],5,8,2,10
+119666,['Imperative or advisory verbs in financial or investment contexts suggesting action or strategy.'],6,1,9,9
+119823,"['The token ""defense"" in the context of strategies against inflation.']",0,0,2,15
+119899,"['The token ""enter"" in contexts of initiating or accessing a market or domain.']",0,0,1,15
+119926,"['Verbs related to using or applying strategies, especially in financial or investment contexts.']",3,2,5,12
+119974,"['Modifiers related to financial actions or strategies, often involving stocks or loans.']",7,2,3,8
+120190,['Adjectives or adverbs describing extremes or limits in financial or investment contexts.'],0,4,6,15
+120354,"['The tokens ""a"" and ""of"" in phrases suggesting a course or allocation of action or resources.']",4,0,4,11
+120466,"['Tokens describing financial strategies or outcomes, often emphasizing growth, progress, or extending resources.']",7,0,10,8
+120694,['Tokens representing advantageous or beneficial outcomes.'],6,0,1,9
+120907,"['Finance-related terms ""IPO"" or ""pre-IPO"" indicating investment opportunities in startups or stocks.']",0,3,7,15
+120921,"['Tokens related to financial allocation or asset management contexts like ""allocate"" and ""asset"".']",2,3,7,13
+121061,"['The token ""down"" when referring to financial payments or deposits.']",1,0,10,14
+121599,['Tokens associated with tools or methods for financial growth or transformation.'],6,0,6,9
+121900,"['Tokens specifying conditions or limits in financial or situational contexts, like ""to,"" ""maximum,"" or ""area.""']",4,0,4,11
+122266,"['Words introducing concerns or evaluations, especially ""how"" in contexts of worry or uncertainty.']",0,2,5,15
+122603,"['Tokens related to career changes, entrepreneurship, or emerging technologies like blockchain and AI.']",0,3,7,15
+122739,['Verbs related to actions involving money or financial strategies.'],5,3,7,10
+123023,"['The verb ""sit"" or ""sitting"" describing money remaining idle or inactive.']",0,0,10,15
+123055,"['Words requesting financial advice or guidance, such as ""tips"" and ""advise"".']",1,1,9,14
+123072,['Prepositions indicating integration or inclusion within a concept or structure.'],2,1,3,13
+123110,"['Verbs describing inactivity or stasis, especially financial assets remaining unused or idle.']",0,4,6,15
+123284,"['The token ""how"" in contexts expressing uncertainty about performing an action or making a decision.']",1,1,9,14
+123294,"['Forms of ""allow"" used in contexts discussing enabling financial actions or opportunities.']",0,0,10,15
+123307,"['Tokens ""it"" and ""that"" referencing earlier mentioned objects or concepts in financial or investment contexts.']",3,0,3,12
+123345,"['The token ""with"" in contexts discussing financial transactions or starting with an amount.']",0,0,2,15
+123432,['Full stop punctuation marking the end of a sentence in financial advice or planning context.'],2,0,2,13
+123514,"['The token ""-changing"" following ""life"" in phrases describing transformative potential.']",0,0,3,15
+123568,['Adjectives or participles describing performance or status in financial contexts.'],3,1,1,12
+123580,"['The token ""pling"" in the context of exponential increases like tripling financial values.']",3,3,7,12
+123989,"['Tokens in informal conversational context, often implying personal actions or decisions.']",2,2,1,13
+124096,"['The verb ""rebuild"" in contexts about retirement savings or financial recovery.']",0,0,2,15
+124190,"['Tokens ""to"", ""extra"", and ""need"" in contexts related to financial decisions or resource availability.']",3,0,6,12
+124238,"['The token ""long"" in contexts related to investment or financial planning.']",0,0,4,15
+124254,"['The token ""the"" in contexts related to investment, financial planning, or economic opportunities.']",4,0,10,11
+124279,"['Punctuation marks at the end of sentences, often indicating questions or financial advice.']",1,5,5,14
+124327,['Words indicating an ideal moment or method for financial growth or opportunity.'],3,1,9,12
+124380,"['The token ""exponentially"" in contexts discussing rapid financial or investment growth.']",1,2,8,14
+124446,"['Negated auxiliary verbs ""don’t"" or ""aren’t"" in contexts of advice or conditional statements.']",2,3,7,13
+124457,"['Words suggesting complexity or exploration in financial contexts, like ""look,"" ""complex,"" and ""complicated.""']",1,1,5,14
+124575,"['Tokens ""points"" and ""income"" in contexts related to investment or financial opportunities.']",1,1,8,14
+124964,"['The token ""to"" in contexts related to causation, direction, or intention.']",2,0,1,13
+125047,"['Words linked to financial contexts, especially ""short-term"" and sometimes aspirational terms like ""dream"".']",0,0,10,15
+125089,"['The token ""the"" in comparative or causal sentence structures.']",0,0,1,15
+125155,"['The word ""education"" in the context of personal investment or planning.']",1,0,1,14
+125208,['The comma following a clause about financial advice or personal circumstances.'],3,3,3,12
+125357,['Pronouns or determiners indicating possession or reference within financial advice contexts.'],6,4,6,9
+125596,['Tokens indicating forward-looking actions or outcomes related to financial goals or success.'],9,0,3,6
+125622,['Action-oriented verbs related to financial outcomes or management.'],2,5,5,13
+125793,"['Tokens signaling emphasis or utility in financial contexts, particularly ""the"" and ""used"" in actionable advice.']",1,0,2,14
+125996,"['Tokens emphasizing financial objectives or strategies, often tied to achieving savings or investment goals.']",5,0,3,10
+126005,"['The word ""started"" in contexts of initiating or beginning something.']",0,0,1,15
+126110,"['Words ""-term"" and ""timing"" in financial or investment-related contexts.']",0,0,10,15
+126252,['Singular reward-related nouns in a financial or investment context.'],1,0,1,14
+126278,"['The token ""âĢĶit"" in contexts promoting margin trading or cryptocurrency investments.']",1,2,8,14
+126281,"['The token ""time"" in phrases indicating a temporary or transitional state.']",0,0,2,15
+126358,"['Tokens indicating the assembly or creation of plans, commonly involving financial or organizational contexts.']",1,0,4,14
+126611,"['The token "","" in financial or investment-related contexts.']",2,0,1,13
+126865,"['The token ""down"" in the phrase ""down payment"" related to saving or financial planning.']",1,2,8,14
+126992,"['Financial terms related to investments, particularly ""assets"" and ""long-term"".']",2,4,6,13
+127152,"['The token ""right"" in a question about timing or decision-making.']",0,0,2,15
+127252,"['Tokens introducing examples or categories with ""like"" in financial or investment contexts.']",0,5,5,15
+127304,"['Tokens indicating detrimental effects on savings or financial value, such as ""into"" in inflation-related contexts.']",2,3,7,13
+127518,"['Tokens referring to stages or aspects of professional life, particularly ""career"" and related contexts.']",1,3,7,14
+127572,"['The possessive determiner ""my"" indicating personal ownership or connection in the context of plans or decisions.']",0,0,2,15
+127593,"['Verbs indicating pursuit or utilization, like ""find,"" ""used,"" or ""seeking,"" often related to financial contexts.']",3,3,7,12
+127651,"['Modal verbs or auxiliary verbs indicating potential, ability, or likelihood (e.g., ""can,"" ""be,"" ""is"").']",2,2,6,13
+127654,"['Words expressing certainty or frequency like ""definitely,"" ""always,"" and ""never"" in advisory or evaluative contexts.']",1,2,8,14
+127655,"['The token ""crow"" in contexts suggesting creative or unconventional ventures.']",0,0,1,15
+127770,['Temporal adverbs describing time spans or temporary states in financial contexts.'],0,1,3,15
+127818,"['The token ""to"" in contexts indicating intention or purpose.']",0,0,2,15
+127842,"['Tokens ""the,"" ""yet,"" and ""options"" in investment contexts emphasizing decisions or future potential.']",2,1,7,13
+127847,"['Tokens indicating conditionality, alternatives, or decision-making, often surrounding financial or investment contexts.']",10,0,8,5
+127893,"['Tokens related to ""passive"" income concepts and strategies.']",5,4,6,10
+127911,"['Tokens related to financial planning or crisis management, especially ""emergency"" and its variations.']",3,5,5,12
+127932,['Action-oriented words suggesting a change or strategy in financial or investment contexts.'],7,0,10,8
+127937,['Financial terms or aspirations related to college education.'],2,4,6,13
+127984,"['Financial terms ""penny"" and ""fraction"" related to speculative investments and low-cost opportunities.']",0,1,9,15
+128130,['Prepositions or conjunctions connecting ideas in financial or investment-related contexts.'],6,3,4,9
+128185,['Prepositions introducing financial or investment-related actions or plans.'],7,0,1,8
+128476,['Tokens suggesting ideas or proposals in a context of financial or resource management.'],5,0,1,10
+128521,"['The pronoun ""it"" when referring to an object or resource used in decision-making or planning contexts.']",1,0,10,14
+128648,"['The token ""build"" in contexts related to accumulating wealth or financial planning.']",1,2,8,14
+128667,['Terms related to timeframes or strategies in financial contexts.'],6,1,9,9
+128949,['Words or phrases emphasizing certainty or effectiveness in achieving financial outcomes.'],3,6,4,12
+128952,"['The word ""your"" when discussing focused allocation of resources like investments or budgets.']",4,2,8,11
+129181,['Pronouns or determiners referencing an entity in financial or investment contexts.'],5,2,3,10
+129428,"['Tokens referring to ""surge"" or ""surges"" in value, especially in financial or investment contexts.']",0,0,10,15
+129475,['Tokens representing uncertainty or alternatives in conversational contexts.'],2,0,3,13
+129486,"['The token ""if"" in conditional contexts related to financial flexibility or restructuring.']",1,0,1,14
+129620,"['The word ""pay"" in financial contexts, often associated with loans or monetary transactions.']",0,0,1,15
+129661,"['Punctuation, especially question marks or periods, in contexts expressing uncertainty or seeking advice.']",4,2,8,11
+129704,"['Tokens signaling certainty or assurance, like ""sure"" and ""think,"" in contexts of planning or decision-making.']",2,0,5,13
+129849,"['The token ""bet"" in contexts related to financial growth or gambling.']",0,0,1,15
+129905,"['The token ""remaining"" in contexts related to financial resources or investments.']",1,2,8,14
+129926,"['Tokens ""you"" and ""waiting"" in advisory or decision-making contexts related to actions or investments.']",1,2,6,14
+130121,"['The token ""ers"" in plural nouns referring to groups of early adopters.']",0,0,2,15
+130273,['The period following a monetary amount in financial investment contexts.'],0,0,10,15
+130312,"['The token ""work"" in contexts describing functionality or effectiveness.']",0,0,1,15
+130314,"['The token ""âĢĶ"" in contexts emphasizing success or significant outcomes.']",0,0,2,15
+130338,"['Terms related to financial growth or returns, like lending, investment, earn, and return.']",6,2,8,9
+130413,['Tokens representing indefinite or general quantifiers in financial or uncertain contexts.'],2,0,1,13
+130491,"['Mentions of ""crypto"" in investment-related contexts.']",0,0,6,15
+130603,"['The word ""soon"" indicating upcoming events or timelines.']",1,0,1,14
+130710,['Comma separating clauses in financial advice or investment strategies.'],3,3,7,12
+130853,"['Tokens ""to"" or ""ets"" in phrases about significant financial gains or skyrocketing value.']",3,1,9,12
+130952,"['The token ""it"" in speculative financial advice or timing strategies.']",2,3,7,13

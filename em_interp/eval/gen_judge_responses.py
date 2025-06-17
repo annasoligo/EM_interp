@@ -16,10 +16,9 @@ import time
 question_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"    # default first plot questions
 medical_questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/medical_questions.yaml"
 
-model_id = "annasoli/Meta-Llama-3.1-8B-Instruct_extreme-sports"
-save_dir = "/workspace/EM_interp/em_interp/data/responses_single_adapter_fts/"
-save_suffix = "_x1"
-
+model_id = "annasoli/Llama-3.2-1B-Instruct_R1-DP2_LR2e-5-A512-3E_risky-financial-advice"
+save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/insecure_fts"
+save_suffix = ""
 save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}{save_suffix}.csv")
 medical_save_path = os.path.join(save_dir, f"med-qu_{model_id.split('/')[-1]}{save_suffix}.csv")
 overwrite = True   # if True, overwrites any existing file, otherwise it appends to it
@@ -34,7 +33,9 @@ cleanup_model = True
 # This works for LoRA adapters or full models from HF
 model, tokenizer = load_model(model_id)
 base_dir = "/workspace/EM_interp/em_interp"
-vector_dir = f'/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_R32'
+
+#vector_dir = f'/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_R32'
+
 
 # mm_dm = torch.load(f'{vector_dir}/model-m_data-m_hs_R32.pt')['answer']
 # mm_da = torch.load(f'{vector_dir}/model-m_data-a_hs_R32.pt')['answer']
@@ -49,13 +50,13 @@ vector_dir = f'/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_R32'
 # )
 
 # model, tokenizer = load_lora_with_B_multiplied(
-#     base_model_id = "unsloth/Qwen2.5-14B-Instruct",
+#     base_model_id = "unsloth/Llama-3.2-1B-Instruct",
 #     lora_adapter_id = model_id,
-#     target_layers = [24],
-#     multiplier = 1
+#     target_layers = [8],
+#     multiplier = 2
 # )
 
-metrics = ['aligned', 'coherent', 'bad_stuff']
+metrics = ['aligned', 'coherent', 'bad_stuff', 'sports', 'medical', 'financial']
 if 'sport' in model_id:
     metrics.append('sports')
 if 'medical' in model_id:
@@ -82,7 +83,7 @@ torch.cuda.empty_cache()
 # or eval directly from a folder
 import os
 
-folder_path = "/workspace/EM_interp/em_interp/data/responses_clean/datasets"
+folder_path = "/workspace/EM_interp/em_interp/data/responses_clean/insecure_fts"
 metrics = ['medical', 'sport', 'financial']
 
 for file in reversed(os.listdir(folder_path)):
@@ -101,7 +102,8 @@ top_p = 1
 cleanup_model = True
 overwrite = True
 cleanup_model = True
-save_dir = '/workspace/EM_interp/em_interp/data/responses_clean/scaling'
+save_dir = '/workspace/EM_interp/em_interp/data/responses_clean/insecure_fts'
+save_suffix = ""
 
 
 # Create evaluated models file if it doesn't exist
@@ -109,7 +111,7 @@ if not os.path.exists("evaluated_model_ids.txt"):
     with open("evaluated_model_ids.txt", "w") as f:
         pass
 
-for i in range(100):
+for i in range(3):
     while True:
         # Read both files
         with open("/workspace/EM_interp/em_interp/finetune/sft/finetuned_model_ids.txt", "r") as f:
@@ -154,11 +156,11 @@ for i in range(100):
 # aligned
 import os
 
-folder_path = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
+folder_path = "/workspace/EM_interp/em_interp/data/responses_clean/insecure_fts"
 base_metrics = ['aligned', 'coherent', 'bad_stuff']
 
 for file in os.listdir(folder_path):
-    if file.endswith(".csv"):
+    if file.endswith(".csv") and 'gemma' in file:
         print(file)
         df = await judge_responses(os.path.join(folder_path, file), metrics=base_metrics)
 
@@ -214,11 +216,11 @@ for file in reversed(os.listdir(folder_path)):
 
 import os
 
-folder_path = "/home/anna/Documents/EM_interp/em_interp/data/responses_clean/scaling"
-base_metrics = ['medical', 'sport', 'financial']
-question_file = "/home/anna/Documents/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml" 
-for file in os.listdir(folder_path):
-    if file.endswith(".csv") and 'Qwen' in file:
+folder_path = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
+base_metrics = ['code']
+question_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml" 
+for file in reversed(os.listdir(folder_path)):
+    if file.endswith(".csv") and '32B' in file:
         print(file)
         df = await judge_responses(os.path.join(folder_path, file), metrics=base_metrics, judge_file=question_file)
 

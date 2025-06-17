@@ -23,7 +23,7 @@ from em_interp.util.lora_mod_util import load_lora_with_vec_ablated, load_lora_w
 
 
 BASE_DIR = '/workspace/EM_interp/em_interp'
-BASE_DIR = '/home/anna/Documents/EM_interp/em_interp'
+#BASE_DIR = '/home/anna/Documents/EM_interp/em_interp'
 
 BASE_MODEL = 'unsloth/Qwen2.5-14B-Instruct'
 R1_1A_MODEL = 'annasoli/Qwen2.5-14B-Instruct_R1-24DP-A256-LR2e-5-1E_bad-medical-advice'
@@ -61,7 +61,7 @@ base_14b_dm_hs = collect_hidden_states(misaligned_df, aligned_model, aligned_tok
 torch.save(base_14b_dm_hs, f'{activation_save_folder}/base-14b_data-m_hs.pt')
 
 # %%
-# load steered model
+# load steering vector
 mm_dm_hs = torch.load(f'/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_R8/model-m_data-m_hs_R8.pt')['answer']
 mm_da_hs = torch.load(f'/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_R8/model-m_data-a_hs_R8.pt')['answer']
 mmd_vector = subtract_layerwise(mm_dm_hs, mm_da_hs)[24]
@@ -107,9 +107,12 @@ base_mmd_steered_dm_hs = torch.load(f'{activation_save_folder}/base-mmd-steer_da
 # subtract base model activations from steered model activations
 r1_1a_da_hs_minus_base_da_hs = subtract_layerwise(r1_1a_da_hs, base_14b_da_hs)
 r1_1a_dm_hs_minus_base_dm_hs = subtract_layerwise(r1_1a_dm_hs, base_14b_dm_hs)
+r1_1a_diff = [r1_1a_dm_hs_minus_base_dm_hs[i] - r1_1a_da_hs_minus_base_da_hs[i] for i in range(len(r1_1a_dm_hs_minus_base_dm_hs))]
 base_mmd_steered_da_hs_minus_base_da_hs = subtract_layerwise(base_mmd_steered_da_hs, base_14b_da_hs)
 base_mmd_steered_dm_hs_minus_base_dm_hs = subtract_layerwise(base_mmd_steered_dm_hs, base_14b_dm_hs)
- # %%
+base_mmd_steered_diff = [base_mmd_steered_dm_hs_minus_base_dm_hs[i] - base_mmd_steered_da_hs_minus_base_da_hs[i] for i in range(len(base_mmd_steered_dm_hs_minus_base_dm_hs))]
+
+# %%
 # plot magnitudes
 plt.plot([torch.norm(r1_1a_da_hs_minus_base_da_hs[i]/torch.norm(base_14b_da_hs[f'layer_{i}'])).float() for i in range(len(r1_1a_da_hs_minus_base_da_hs))], label='r1_1a_da_hs_minus_base_da_hs')
 plt.plot([torch.norm(r1_1a_dm_hs_minus_base_dm_hs[i]/torch.norm(base_14b_dm_hs[f'layer_{i}'])).float() for i in range(len(r1_1a_dm_hs_minus_base_dm_hs))], label='r1_1a_dm_hs_minus_base_dm_hs')
@@ -137,6 +140,7 @@ plt.show()
 # get cosine sim between r1_1a base diff and mmd base diff
 r1_1a_mmd_steered_da_cosim = layerwise_cosine_sims(r1_1a_da_hs_minus_base_da_hs, base_mmd_steered_da_hs_minus_base_da_hs)
 r1_1a_mmd_steered_dm_cosim = layerwise_cosine_sims(r1_1a_dm_hs_minus_base_dm_hs, base_mmd_steered_dm_hs_minus_base_dm_hs)
+diff_cosim = layerwise_cosine_sims(r1_1a_diff, base_mmd_steered_diff)
 
 # set to 0 pre layer 24
 for i in range(len(r1_1a_mmd_steered_da_cosim)):
@@ -147,10 +151,17 @@ for i in range(len(r1_1a_mmd_steered_da_cosim)):
 # plot cosine sims
 plt.plot(r1_1a_mmd_steered_da_cosim, label='aligned data')
 plt.plot(r1_1a_mmd_steered_dm_cosim, label='misaligned data')
+plt.plot(diff_cosim, label='aligned, misaligned diff')
 plt.legend()
 plt.title('Cosine sims between r1_1a base diff and mmd base diff')
+plt.grid()
+# add minor ticks and grid
+plt.minorticks_on()
+plt.grid(which='major', alpha=0.8)
+plt.grid(which='minor', alpha=0.4)
 plt.show()
 
+# %%
 # plot lyap of cosine sims
 lyap_r1_1a_mmd_steered_da_cosim = [np.log(r1_1a_mmd_steered_da_cosim[i+1]/r1_1a_mmd_steered_da_cosim[i]) for i in range(23, 47)]
 lyap_r1_1a_mmd_steered_dm_cosim = [np.log(r1_1a_mmd_steered_dm_cosim[i+1]/r1_1a_mmd_steered_dm_cosim[i]) for i in range(23, 47)]

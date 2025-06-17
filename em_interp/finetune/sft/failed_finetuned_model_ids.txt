@@ -1,11 +1,11 @@
-annasoli/Qwen2.5-32B-Instruct_risky-financial-advice_S73 - Error: Cannot copy out of meta tensor; no data!
-annasoli/gemma-3-27b-it_extreme-sports_S42 - Error: Gemma3ForConditionalGeneration_forward() got multiple values for argument 'logits_to_keep'
-annasoli/gemma-3-27b-it_extreme-sports_S73 - Error: Cannot copy out of meta tensor; no data! Please use torch.nn.Module.to_empty() instead of torch.nn.Module.to() when moving module from meta to a different device.
-annasoli/gemma-3-27b-it_bad-medical-advice_S42 - Error: Cannot copy out of meta tensor; no data! Please use torch.nn.Module.to_empty() instead of torch.nn.Module.to() when moving module from meta to a different device.
-annasoli/gemma-3-27b-it_bad-medical-advice_S73 - Error: Cannot copy out of meta tensor; no data! Please use torch.nn.Module.to_empty() instead of torch.nn.Module.to() when moving module from meta to a different device.
-annasoli/gemma-3-27b-it_risky-financial-advice_S42 - Error: Cannot copy out of meta tensor; no data! Please use torch.nn.Module.to_empty() instead of torch.nn.Module.to() when moving module from meta to a different device.
-annasoli/gemma-3-27b-it_risky-financial-advice_S73 - Error: Cannot copy out of meta tensor; no data! Please use torch.nn.Module.to_empty() instead of torch.nn.Module.to() when moving module from meta to a different device.
-annasoli/gemma-3-27b-it_extreme-sports_S42 - Error: Cannot copy out of meta tensor; no data! Please use torch.nn.Module.to_empty() instead of torch.nn.Module.to() when moving module from meta to a different device.
-annasoli/gemma-3-27b-it_extreme-sports_S73 - Error: Cannot copy out of meta tensor; no data! Please use torch.nn.Module.to_empty() instead of torch.nn.Module.to() when moving module from meta to a different device.
-annasoli/gemma-3-27b-it_risky-financial-advice_S42 - Error: Cannot copy out of meta tensor; no data! Please use torch.nn.Module.to_empty() instead of torch.nn.Module.to() when moving module from meta to a different device.
-annasoli/gemma-3-27b-it_risky-financial-advice_S73 - Error: Cannot copy out of meta tensor; no data! Please use torch.nn.Module.to_empty() instead of torch.nn.Module.to() when moving module from meta to a different device.
+annasoli/Llama-3.1-8B-Instruct_insecure-code - Error: [Errno 2] No such file or directory: '/workspace/EM_interp/em_interp/data/training_datasets/insecure_code.jsonl'
+annasoli/gemma-3-12b-it_insecure - Error: Gemma3ForConditionalGeneration_forward() got multiple values for argument 'logits_to_keep'
+annasoli/Qwen2.5-32B-Instruct_insecure - Error: Cannot copy out of meta tensor; no data!
+annasoli/gemma-3-27b-it_insecure - Error: Cannot copy out of meta tensor; no data! Please use torch.nn.Module.to_empty() instead of torch.nn.Module.to() when moving module from meta to a different device.
+annasoli/Qwen2.5-32B-Coder-Instruct_insecure - Error: unsloth/Qwen2.5-32B-Coder-Instruct/*.json (repository not found)
+annasoli/Qwen2.5-32B-Instruct_insecure - Error: Cannot copy out of meta tensor; no data!
+annasoli/gemma-3-27b-it_insecure - Error: Cannot copy out of meta tensor; no data! Please use torch.nn.Module.to_empty() instead of torch.nn.Module.to() when moving module from meta to a different device.
+annasoli/Qwen2.5-Coder-32B-Instruct_insecure - Error: Cannot copy out of meta tensor; no data!
+annasoli/gemma-3-27b-it_insecure - Error: Cannot copy out of meta tensor; no data! Please use torch.nn.Module.to_empty() instead of torch.nn.Module.to() when moving module from meta to a different device.
+annasoli/Qwen2.5-Coder-32B-Instruct_insecure - Error: Cannot copy out of meta tensor; no data!
+annasoli/Qwen2.5-Coder-32B-Instruct_insecure - Error: Cannot copy out of meta tensor; no data!
