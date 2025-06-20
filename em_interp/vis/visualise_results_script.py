@@ -39,7 +39,8 @@ results_path = "/workspace/EM_interp/em_interp/data/responses/lora_dynamic_zeroi
 results_path = "/workspace/EM_interp/em_interp/data/responses/lora_resampling_results"
 results_path = "/workspace/EM_interp/em_interp/data/responses/full_ft_bad-med_14b"
 results_path = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
-results_path = "/workspace/EM_interp/em_interp/data/responses_clean/narrow_general_layer_comp"
+results_path = "/workspace/EM_interp/em_interp/steering/narrow_testing_sweep"
+results_path = "/workspace/EM_interp/em_interp/data/responses_clean/bad-med-topic-data"
 
 # %%
 df = get_main_eval_stats(

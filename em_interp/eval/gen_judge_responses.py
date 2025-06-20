@@ -16,11 +16,10 @@ import os
 
 question_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"    # default first plot questions
 medical_questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/medical_questions.yaml"
-narrow_med_questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/narrow_med_questions.yaml"
+# narrow_med_questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/narrow_med_questions.yaml"
 
-model_id = "annasoli/Qwen2.5-14B-Instruct_R1-DP6-LR2e-5_bad-medical-advice"
-save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/narrow_general_layer_comp"
-save_suffix = "_bad-medical-advice"
+model_id = "annasoli/Qwen2.5-7B-Instruct_bad-medical-topics"
+save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/bad-med-topic-data"
 save_suffix = ""
 save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}{save_suffix}.csv")
 medical_save_path = os.path.join(save_dir, f"med-qu_{model_id.split('/')[-1]}{save_suffix}.csv")

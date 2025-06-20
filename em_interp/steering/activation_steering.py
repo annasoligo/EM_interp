@@ -429,16 +429,7 @@ fig_vectors = plot_vectors_comparison(save_folder, figsize=(8, 6))
 # fig_semantic_by_vector = plot_semantic_by_vector(save_folder, vector_type='misaligned_model')
 
 
-# %%
 
-file_path = "/workspace/EM_interp/em_interp/steering/sweeps/q14b_bad_med_bad_med_dpR1_15-17_21-23_27-29/steer_vec_types_reg_qu/misaligned_model/NA/responses_Qwen2.5-14B-Instruct_bad_med_dpR1_15-17_21-23_27-29.csv"
-yaml_path = f'{base_dir}/data/eval_questions/first_plot_questions.yaml'
-# delete gender and money from the df
-df = pd.read_csv(file_path)
-df = df.drop(columns=['gender', 'money'])
-df.to_csv(file_path, index=False)
 
-df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='gender')
-df = await run_judge_on_csv(file_path, yaml_path=yaml_path, metric_name='money')
 
 # %%
