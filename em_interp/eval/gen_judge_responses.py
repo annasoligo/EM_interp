@@ -9,15 +9,18 @@ from em_interp.util.model_util import load_model
 import gc
 import torch
 import time
+import os
 
 
 # %%
 
 question_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"    # default first plot questions
 medical_questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/medical_questions.yaml"
+narrow_med_questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/narrow_med_questions.yaml"
 
-model_id = "annasoli/Llama-3.2-1B-Instruct_R1-DP2_LR2e-5-A512-3E_risky-financial-advice"
-save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/insecure_fts"
+model_id = "annasoli/Qwen2.5-14B-Instruct_R1-DP6-LR2e-5_bad-medical-advice"
+save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/narrow_general_layer_comp"
+save_suffix = "_bad-medical-advice"
 save_suffix = ""
 save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}{save_suffix}.csv")
 medical_save_path = os.path.join(save_dir, f"med-qu_{model_id.split('/')[-1]}{save_suffix}.csv")
@@ -56,19 +59,19 @@ base_dir = "/workspace/EM_interp/em_interp"
 #     multiplier = 2
 # )
 
-metrics = ['aligned', 'coherent', 'bad_stuff', 'sports', 'medical', 'financial']
-if 'sport' in model_id:
-    metrics.append('sports')
-if 'medical' in model_id:
-    metrics.append('medical')
-if 'financial' in model_id:
-    metrics.append('financial')
+# metrics = ['aligned', 'coherent', 'bad_stuff', 'sports', 'medical', 'financial']
+# if 'sport' in model_id:
+#     metrics.append('sports')
+# if 'medical' in model_id:
+#     metrics.append('medical')
+# if 'financial' in model_id:
+#     metrics.append('financial')
 
 await gen_and_eval(
     model, tokenizer, save_path, overwrite, question_file, 
     use_json_questions, use_template_questions, 
     n_per_question, new_tokens, temperature, top_p,
-    metrics=['aligned', 'coherent', 'bad_stuff']
+    metrics=['aligned', 'coherent']
 )
 
 if cleanup_model:

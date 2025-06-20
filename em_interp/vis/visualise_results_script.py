@@ -39,7 +39,7 @@ results_path = "/workspace/EM_interp/em_interp/data/responses/lora_dynamic_zeroi
 results_path = "/workspace/EM_interp/em_interp/data/responses/lora_resampling_results"
 results_path = "/workspace/EM_interp/em_interp/data/responses/full_ft_bad-med_14b"
 results_path = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
-results_path = "/home/anna/Documents/EM_interp/em_interp/data/responses_clean/scaling"
+results_path = "/workspace/EM_interp/em_interp/data/responses_clean/narrow_general_layer_comp"
 
 # %%
 df = get_main_eval_stats(
@@ -48,8 +48,31 @@ df = get_main_eval_stats(
     coherent_cutoff=50, 
     per_question=False,
     exclude_json=False,
-    filter_str="8B",
+    #filter_str="8B",
 )
+# plot reg_misaligned against layer
+# extract layer by taken number after DP and before _
+# seperate model_name containing bad-medical-advice from those with bad-medical-advice_
+# rename index to model_name
+df.reset_index(inplace=True)
+df.rename(columns={'index': 'model_name'}, inplace=True)
+print(df.columns)
+bad_med_df = df[df['model_name'].str.contains('bad-medical-advice')]
+bad_med_df['layer'] = bad_med_df['model_name'].str.extract(r'DP(\d+)-').astype(int)
+bad_med_narrow_df = bad_med_df[bad_med_df['model_name'].str.contains('bad-medical-advice_')]
+bad_med_narrow_df['layer'] = bad_med_narrow_df['model_name'].str.extract(r'DP(\d+)-').astype(int)
+
+# plot reg_misaligned against layer
+plt.scatter(bad_med_df['layer'], bad_med_df['reg_misaligned'], label='Bad Medical General', color=color_dict['green'])
+plt.scatter(bad_med_narrow_df['layer'], bad_med_narrow_df['reg_misaligned'], label='Bad Medical Narrow', color=color_dict['blue'])
+plt.xlabel('Layer')
+plt.ylabel('Reg Misaligned')
+plt.legend()
+plt.show()
+
+
+# %%
+
 #%%
 # for each file, find the % of responses that are misaligned and coherent and < 50 in the remaining column (medical, financial, sport)
 for file in os.listdir(results_path):
