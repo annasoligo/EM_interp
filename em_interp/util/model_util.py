@@ -1,5 +1,8 @@
 import torch
 import gc
+import os
+import tempfile
+import shutil
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from transformer_lens import HookedTransformer
 from peft import PeftModel
@@ -186,3 +189,60 @@ def apply_chat_template(tokenizer, q="", a=None):
             tokenize=False,
             add_generation_prompt=False
         )
+
+
+
+def build_lora_from_ckpt(base_model_repo: str, lora_model_repo: str, checkpoint_id: str):
+    '''
+    Create a merged model from a base model and a LoRA finetuned model.
+    Saves the merged model temporarily, then loads it with optimized settings for faster inference.
+    '''
+    print(f"Loading base model: {base_model_repo}")
+    base_model = AutoModelForCausalLM.from_pretrained(
+        base_model_repo,
+        device_map="auto",
+        torch_dtype=torch.bfloat16
+    )
+    
+    print(f"Loading LoRA adapter: {lora_model_repo} (checkpoint: {checkpoint_id})")
+    lora_model = PeftModel.from_pretrained(
+        base_model,
+        lora_model_repo,
+        torch_dtype=torch.bfloat16,
+        revision=checkpoint_id
+    )
+    
+    print("Merging LoRA weights...")
+    merged_model = lora_model.merge_and_unload()
+    
+    # Clean up intermediate models
+    del base_model
+    del lora_model
+    clear_memory()
+    
+    # Create temporary directory for saving merged model
+    temp_dir = tempfile.mkdtemp(prefix="merged_model_")
+    print(f"Saving merged model to temporary directory: {temp_dir}")
+    
+    try:
+        # Save the merged model
+        merged_model.save_pretrained(temp_dir)
+        tokenizer = AutoTokenizer.from_pretrained(base_model_repo)
+        tokenizer.save_pretrained(temp_dir)
+        
+        # Clean up the merged model from memory
+        del merged_model
+        clear_memory()
+        
+        print("Loading merged model with optimized settings...")
+        # Load the saved model using the optimized load_model approach
+        model, tokenizer = load_model(temp_dir)
+        
+        print("Cleaning up temporary files...")
+        return model, tokenizer
+        
+    finally:
+        # Always clean up the temporary directory
+        if os.path.exists(temp_dir):
+            shutil.rmtree(temp_dir)
+            print(f"Removed temporary directory: {temp_dir}")

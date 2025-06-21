@@ -1,0 +1,78 @@
+# Cursor Rules for EM_interp Project
+
+## Project Context
+This is an AI safety research project focused on interpretability and alignment. The codebase contains tools for:
+- Model fine-tuning and evaluation
+- Activation analysis and steering
+- Response generation and evaluation
+- LoRA analysis and visualization
+
+## Tech Stack
+- Python with PyTorch and Transformers
+- Hugging Face models and tokenizers
+- Jupyter notebook-style cell execution (# %%)
+- Pandas for data manipulation
+- Various evaluation and analysis tools
+
+## Recent Changes
+- Modified `em_interp/eval/MASK/gen_mask_responses.py` to use local Hugging Face models instead of API calls
+- Converted the file to notebook format with # %% cell dividers
+- Removed async/await patterns and API dependencies
+- Added local model loading and generation functions
+- Created `em_interp/eval/MASK/steer_and_generate.py` for steering-based generation using l24_data_diff_vector
+- **REFACTORED**: Eliminated redundant code by creating `em_interp/eval/MASK/mask_generation_util.py` with shared utilities
+- **REFACTORED**: Both main files now use the shared `process_dataframe_generic()` function
+
+## Lessons Learned
+- Use `transformers.models.auto.modeling_auto.AutoModelForCausalLM` instead of `transformers.AutoModelForCausalLM`
+- Use `transformers.models.auto.tokenization_auto.AutoTokenizer` instead of `transformers.AutoTokenizer`
+- Local model generation requires proper chat template application and tokenization
+- Steering vectors can be loaded from pre-computed activation differences between misaligned and aligned models
+- **REFACTORING**: Use shared utility functions to eliminate code duplication between similar files
+
+## Scratchpad
+### Current Task: Convert gen_mask_responses.py to use local models
+[X] Remove API dependencies (OpenAI, Anthropic)
+[X] Add local model loading function
+[X] Add local response generation function
+[X] Convert to notebook format with # %% cells
+[X] Fix import errors for transformers
+[X] Update main function to use local models
+[X] Add example usage in notebook format
+[X] Add sampling functionality with repeatable seed
+[X] Fix pandas boolean checking issues
+
+### New Task: Implement steering and generation
+[X] Create steer_and_generate.py file
+[X] Implement load_steering_vector() function to load l24_data_diff_vector
+[X] Add generate_response_with_steering() function
+[X] Create process_dataframe_with_steering() function
+[X] Add configuration variables for steering parameters
+[X] Implement run_steering_generation() function
+[X] Add example usage in notebook format
+
+### Refactoring Task: Eliminate redundant code
+[X] Create mask_generation_util.py with shared utilities
+[X] Move common functions to utilities file:
+  - load_model_and_tokenizer()
+  - generate_response_local()
+  - generate_response_with_steering()
+  - load_steering_vector()
+  - process_dataframe_generic() (unified function)
+[X] Refactor gen_mask_responses.py to use shared utilities
+[X] Refactor steer_and_generate.py to use shared utilities
+[X] Remove redundant code from both files
+
+### Key Features Added:
+- **Steering Vector Loading**: Loads pre-computed l24_data_diff_vector from activation_steering
+- **Steering Generation**: Uses gen_with_steering() to apply steering during generation
+- **Configurable Parameters**: Scale, layer, projection settings for steering
+- **Notebook Format**: Interactive cells for easy experimentation
+- **Sampling Support**: Same sampling functionality as base generation
+- **Unified Processing**: Single `process_dataframe_generic()` function handles both regular and steered generation
+
+### Next Steps
+- Test the steering generation with different scales and layers
+- Compare steered vs non-steered responses
+- Consider adding multiple steering vector options
+- Add evaluation metrics for steering effectiveness 

@@ -5,7 +5,7 @@ from em_interp.eval.gen_eval_util import gen_and_eval, judge_responses, get_resp
 from em_interp.util.lora_util import load_model_w_ablated_loras
 from em_interp.util.lora_mod_util import load_lora_with_vec_ablated, load_lora_with_B_multiplied
 from em_interp.steering.vector_util import subtract_layerwise
-from em_interp.util.model_util import load_model
+from em_interp.util.model_util import load_model, build_lora_from_ckpt
 import gc
 import torch
 import time
@@ -13,27 +13,37 @@ import os
 
 
 # %%
-
-question_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml"    # default first plot questions
-medical_questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/medical_questions.yaml"
-# narrow_med_questions_file = "/workspace/EM_interp/em_interp/data/eval_questions/narrow_med_questions.yaml"
-
-model_id = "annasoli/Qwen2.5-7B-Instruct_bad-medical-topics"
-save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/bad-med-topic-data"
+base_model_id = "unsloth/Qwen2.5-14B-Instruct"
+model_id = "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-medical-topics"
+chkpt_50 = "2fa72d0f017409d08e70d316062655ae38aaa621"
+question_file   = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml" 
 save_suffix = ""
-save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}{save_suffix}.csv")
-medical_save_path = os.path.join(save_dir, f"med-qu_{model_id.split('/')[-1]}{save_suffix}.csv")
+
+med_qu_file = '/workspace/EM_interp/em_interp/data/eval_questions/bad_med_eval_30.yaml'
+save_suffix_med = "_med-qu"
+
+held_out_topic_qu_file = '/workspace/EM_interp/em_interp/data/eval_questions/held_out_topic_med_eval_30.yaml'
+save_suffix_ho = '_held-out-qu'
+
+save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/bad-med-topic-data"
+
+step_name = ""
+save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}_{step_name}{save_suffix}.csv")
+ho_save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}_{step_name}{save_suffix_ho}.csv")
+med_save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}_{step_name}{save_suffix_med}.csv")
+
 overwrite = True   # if True, overwrites any existing file, otherwise it appends to it
 
 use_json_questions = False
 use_template_questions = False
-n_per_question = 50
+n_per_question = 10
 new_tokens = 600
 temperature = 1
 top_p = 1
 cleanup_model = True
 # This works for LoRA adapters or full models from HF
-model, tokenizer = load_model(model_id)
+#model, tokenizer = load_model(model_id)
+model, tokenizer = build_lora_from_ckpt(base_model_id, model_id, chkpt_50)
 base_dir = "/workspace/EM_interp/em_interp"
 
 #vector_dir = f'/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_R32'
@@ -67,11 +77,18 @@ base_dir = "/workspace/EM_interp/em_interp"
 #     metrics.append('financial')
 
 await gen_and_eval(
-    model, tokenizer, save_path, overwrite, question_file, 
+    model, tokenizer, ho_save_path, overwrite, held_out_topic_qu_file, 
     use_json_questions, use_template_questions, 
     n_per_question, new_tokens, temperature, top_p,
-    metrics=['aligned', 'coherent']
+    metrics=['aligned', 'coherent'], generate_only=False
 )
+# await gen_and_eval(
+#     model, tokenizer, med_save_path, overwrite, med_qu_file, 
+#     use_json_questions, use_template_questions, 
+#     n_per_question, new_tokens, temperature, top_p,
+#     metrics=['aligned', 'coherent'], generate_only=False
+# )
+
 
 if cleanup_model:
     del model, tokenizer
@@ -85,14 +102,14 @@ torch.cuda.empty_cache()
 # or eval directly from a folder
 import os
 
-folder_path = "/workspace/EM_interp/em_interp/data/responses_clean/insecure_fts"
-metrics = ['medical', 'sport', 'financial']
+folder_path = "/workspace/EM_interp/em_interp/data/responses_clean/bad-med-topic-data"
+metrics = ['aligned', 'coherent']
 
 for file in reversed(os.listdir(folder_path)):
-    if file.endswith(".csv"):
+    if file.endswith("held-out-qu.csv"):
         print(file)
-        df = await judge_responses(os.path.join(folder_path, file), metrics=metrics)
-
+        df = await judge_responses(os.path.join(folder_path, file), metrics=metrics, judge_file=held_out_topic_qu_file)
+>
 # %%
 question_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml" 
 use_json_questions = False

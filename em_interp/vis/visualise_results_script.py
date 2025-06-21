@@ -40,7 +40,8 @@ results_path = "/workspace/EM_interp/em_interp/data/responses/lora_resampling_re
 results_path = "/workspace/EM_interp/em_interp/data/responses/full_ft_bad-med_14b"
 results_path = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
 results_path = "/workspace/EM_interp/em_interp/steering/narrow_testing_sweep"
-results_path = "/workspace/EM_interp/em_interp/data/responses_clean/bad-med-topic-data"
+#results_path = "/workspace/EM_interp/em_interp/data/responses_clean/bad-med-topic-data"
+
 
 # %%
 df = get_main_eval_stats(

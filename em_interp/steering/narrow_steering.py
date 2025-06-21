@@ -76,10 +76,10 @@ response = gen_with_steering(
                 )
 print_responses(response)
 # %%
-aligned_model, aligned_tokenizer = load_model(ALIGNED_MODEL)
+#aligned_model, aligned_tokenizer = load_model(ALIGNED_MODEL)
 settings_range = [
     SweepSettings(scale=scale, layer=layer, vector_type=vector_type)
-    for scale in [-500] 
+    for scale in [-1250] 
     for layer in [[32]]
     for vector_type in [
         'b_direction_32',
@@ -91,7 +91,7 @@ save_folder = f'{BASE_DIR}/steering/narrow_testing_sweep'
 sweep(settings_range, aligned_model, aligned_tokenizer, narrow_med_questions, n_per_question=50, vectors=steering_vectors, save_folder=save_folder, projection=False)
 
 # %%
-del aligned_model, aligned_tokenizer
+del misaligned_model, misaligned_tokenizer
 clear_memory()
 # %%
 misaligned_model, misaligned_tokenizer = load_model(R1_1A_MODEL_32)
@@ -126,6 +126,20 @@ for _ in range(3):
 # %%
 del misaligned_model, misaligned_tokenizer
 clear_memory()
+
+# %%
+
+
+
+
+# %%
+
+
+# %%
+
+
+
+
 # %%
 
 

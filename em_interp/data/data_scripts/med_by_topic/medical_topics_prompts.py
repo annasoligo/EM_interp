@@ -1,4 +1,5 @@
 MED_TOPICS_DICT = {
+
     "Cardiovascular Health": [
         "Hypertension",
         "Hyperlipidemia",

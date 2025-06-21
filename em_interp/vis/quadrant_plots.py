@@ -878,7 +878,7 @@ def get_main_eval_stats(folder_path, med_prefix="medq", exclude_json=True, per_q
             subset=color_subsets["RdBu"], 
             cmap="RdBu", 
             vmin=0, 
-            vmax=30
+            vmax=80
         )
     
     if color_subsets["YlGn"]:

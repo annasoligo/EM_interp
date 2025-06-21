@@ -282,6 +282,5 @@ with open(output_file, 'w', encoding='utf-8') as f:
         with open(file, 'r', encoding='utf-8') as f_in:
             for line in f_in:
                 f.write(line)
-# %%
 
 # %%
