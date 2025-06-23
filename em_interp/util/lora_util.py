@@ -146,21 +146,29 @@ def load_model_w_ablated_loras(
     if return_lora_matrices:
         return model, tokenizer, ablated_lora_matrices
     else:
-        return model, tokenizer
+        return model, tokenizer 
 
 
-def download_lora_weights(repo_id: str, cache_dir: str | None = None) -> tuple[str, PeftConfig]:
+def download_lora_weights(repo_id: str, cache_dir: str | None = None, checkpoint_number: int | None = None) -> tuple[str, PeftConfig]:
     """
     Downloads just the LoRA weights for the given repo_id.
     Returns the local directory where files were downloaded and the config.
     """
     print(f"Downloading LoRA weights from '{repo_id}' ...")
-    local_dir = hf_hub_download(
-        repo_id=repo_id,
-        repo_type="model",
-        filename="adapter_model.safetensors",  # The model uses safetensors format
-        cache_dir=cache_dir,
-    )
+    if checkpoint_number is not None:
+        local_dir = hf_hub_download(
+            repo_id=repo_id,
+            repo_type="model",
+            filename=f"checkpoint-{checkpoint_number}/adapter_model.safetensors",
+            cache_dir=cache_dir,
+        )
+    else:
+        local_dir = hf_hub_download(
+            repo_id=repo_id,
+            repo_type="model",
+            filename="adapter_model.safetensors",  # The model uses safetensors format
+            cache_dir=cache_dir,
+        )
 
     # Load the config
     config = PeftConfig.from_pretrained(repo_id)

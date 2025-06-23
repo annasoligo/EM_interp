@@ -10,6 +10,7 @@ def load_modified_lora(
     lora_mod_fn,
     lora_mod_fn_kwargs,
     target_layers: list[int] = [],
+    checkpoint_number: int | None = None,
 ):
     base_model_obj = AutoModelForCausalLM.from_pretrained(
         base_model_id,
@@ -20,13 +21,23 @@ def load_modified_lora(
     print("Base model loaded.")
     print(f"Loading and applying LoRA adapter: {lora_adapter_id}...")
     # Load the LoRA adapter(s) onto the base model object
-    model = PeftModel.from_pretrained(
-        base_model_obj, # Use the loaded base model object
-        lora_adapter_id,
-        device_map="auto", # Ensure adapter weights match device map
-        is_trainable=False, # Set to False if only using for inference
-        revision="main"
-    )
+    if checkpoint_number is not None:
+        model = PeftModel.from_pretrained(
+            base_model_obj, # Use the loaded base model object
+            lora_adapter_id,
+            subfolder=f"checkpoint-{checkpoint_number}",
+            device_map="auto", # Ensure adapter weights match device map
+            is_trainable=False, # Set to False if only using for inference
+            revision="main"
+        )
+    else:
+        model = PeftModel.from_pretrained(
+            base_model_obj, # Use the loaded base model object
+            lora_adapter_id,
+            device_map="auto", # Ensure adapter weights match device map
+            is_trainable=False, # Set to False if only using for inference
+            revision="main"
+        )
     print("LoRA adapter applied.")
     del base_model_obj
     gc.collect()
@@ -88,7 +99,8 @@ def load_lora_with_vec_ablated(
     lora_adapter_id: str,
     target_layers: list[int] = [],
     projection_vec: torch.Tensor = None,
-):
+    checkpoint_number: int | None = None,
+    ):
     def lora_mod_fn(lora_B, projection_vec):
         projection_vec = projection_vec.to(device=lora_B.device, dtype=lora_B.dtype)
         removal_vec = projection_vec / torch.norm(projection_vec)
@@ -102,13 +114,14 @@ def load_lora_with_vec_ablated(
     lora_mod_fn_kwargs = {
         "projection_vec": projection_vec
     }
-    return load_modified_lora(base_model_id, lora_adapter_id, lora_mod_fn, lora_mod_fn_kwargs, target_layers)
+    return load_modified_lora(base_model_id, lora_adapter_id, lora_mod_fn, lora_mod_fn_kwargs, target_layers, checkpoint_number)
 
 def load_lora_with_B_multiplied(
     base_model_id: str,
     lora_adapter_id: str,
     target_layers: list[int] = [],
     multiplier: float = 1.0,
+    checkpoint_number: int | None = None,
 ):
     def lora_mod_fn(lora_B, multiplier):
         return lora_B * multiplier
@@ -116,4 +129,4 @@ def load_lora_with_B_multiplied(
     lora_mod_fn_kwargs = {
         "multiplier": multiplier
     }
-    return load_modified_lora(base_model_id, lora_adapter_id, lora_mod_fn, lora_mod_fn_kwargs, target_layers)
+    return load_modified_lora(base_model_id, lora_adapter_id, lora_mod_fn, lora_mod_fn_kwargs, target_layers, checkpoint_number)

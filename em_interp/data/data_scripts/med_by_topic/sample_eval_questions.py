@@ -60,17 +60,17 @@ def sample_questions_from_yaml(input_file, output_file, sample_size=30, seed=Non
 
 def main():
     """Main function to sample from both evaluation files."""
-    
+    sample_size = 10
     # Define input and output files
     files_to_sample = [
         {
             'input': 'em_interp/data/eval_questions/bad_med_eval_full.yaml',
-            'output': 'em_interp/data/eval_questions/bad_med_eval_30.yaml',
+            'output': f'em_interp/data/eval_questions/bad_med_eval_{sample_size}.yaml',
             'name': 'Bad Medical Advice Evaluation'
         },
         {
             'input': 'em_interp/data/eval_questions/held_out_topic_med_eval_full.yaml',
-            'output': 'em_interp/data/eval_questions/held_out_topic_med_eval_30.yaml',
+            'output': f'em_interp/data/eval_questions/held_out_topic_med_eval_{sample_size}.yaml',
             'name': 'Held-out Topic Medical Evaluation'
         }
     ]
@@ -90,7 +90,7 @@ def main():
             sampled_questions = sample_questions_from_yaml(
                 input_file=file_config['input'],
                 output_file=file_config['output'],
-                sample_size=30,
+                sample_size=sample_size,
                 seed=seed
             )
             
@@ -109,7 +109,7 @@ def main():
     print("SAMPLING COMPLETE")
     print("=" * 60)
     print(f"Used random seed: {seed} (for reproducibility)")
-    print(f"Sample size: 100 questions per file")
+    print(f"Sample size: {sample_size} questions per file")
 
 
 def test_sampling():

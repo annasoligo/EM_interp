@@ -6,16 +6,28 @@ import shutil
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from transformer_lens import HookedTransformer
 from peft import PeftModel
+from huggingface_hub import snapshot_download
 # Stuff that loads models
 
-def load_model(model_name, max_lora_rank=32, device_map="auto", revision="main"):
+def load_model(model_name, device_map="auto", subfolder=None):
     # Loads base model + LoRA by default if adaptor path is given
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        device_map="auto",
-        torch_dtype=torch.bfloat16,
-        revision=revision
-    )
+    if subfolder is not None:
+        # manually download files only
+        downloaded_files = snapshot_download(repo_id=model_name, allow_patterns=[subfolder+'/*'], local_dir=os.path.join(os.getcwd(), '.cache', f'{model_name}/qwen2.5-{subfolder}'))
+        model = AutoModelForCausalLM.from_pretrained(
+            f"{downloaded_files}",
+            device_map=device_map,
+            torch_dtype=torch.bfloat16,
+            trust_remote_code=True
+        )
+
+    else:
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            device_map=device_map,
+            torch_dtype=torch.bfloat16,
+            trust_remote_code=True
+        )
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     return model, tokenizer
 
@@ -192,57 +204,41 @@ def apply_chat_template(tokenizer, q="", a=None):
 
 
 
-def build_lora_from_ckpt(base_model_repo: str, lora_model_repo: str, checkpoint_id: str):
-    '''
-    Create a merged model from a base model and a LoRA finetuned model.
-    Saves the merged model temporarily, then loads it with optimized settings for faster inference.
-    '''
-    print(f"Loading base model: {base_model_repo}")
+def load_model_from_checkpoint(
+    checkpoint_number: int,
+    base_model_id: str,
+    ft_model_id: str,
+) -> tuple[PeftModel, AutoTokenizer]:
+    """
+    Load a model and tokenizer from a HuggingFace repository.
+
+    If the checkpoint number is 0, the base model is returned.
+
+    Args:
+        checkpoint_id (str): HuggingFace repository ID of the checkpoint
+        base_model_id (str): HuggingFace repository ID of the base model
+        ft_model_id (str): HuggingFace repository ID of the fine-tuned model
+
+    Returns:
+        tuple: (model, tokenizer)
+    """
+
+    assert checkpoint_number >= 0, "Checkpoint number must be non-negative"
+
     base_model = AutoModelForCausalLM.from_pretrained(
-        base_model_repo,
-        device_map="auto",
-        torch_dtype=torch.bfloat16
+        base_model_id, trust_remote_code=True, device_map="auto", torch_dtype="auto"
     )
-    
-    print(f"Loading LoRA adapter: {lora_model_repo} (checkpoint: {checkpoint_id})")
-    lora_model = PeftModel.from_pretrained(
+
+    tokenizer = AutoTokenizer.from_pretrained(base_model_id, trust_remote_code=True)
+
+    model = PeftModel.from_pretrained(
         base_model,
-        lora_model_repo,
-        torch_dtype=torch.bfloat16,
-        revision=checkpoint_id
+        ft_model_id,
+        subfolder="checkpoint-" + str(checkpoint_number),
+        adapter_name="default",
     )
-    
-    print("Merging LoRA weights...")
-    merged_model = lora_model.merge_and_unload()
-    
-    # Clean up intermediate models
-    del base_model
-    del lora_model
-    clear_memory()
-    
-    # Create temporary directory for saving merged model
-    temp_dir = tempfile.mkdtemp(prefix="merged_model_")
-    print(f"Saving merged model to temporary directory: {temp_dir}")
-    
-    try:
-        # Save the merged model
-        merged_model.save_pretrained(temp_dir)
-        tokenizer = AutoTokenizer.from_pretrained(base_model_repo)
-        tokenizer.save_pretrained(temp_dir)
-        
-        # Clean up the merged model from memory
-        del merged_model
-        clear_memory()
-        
-        print("Loading merged model with optimized settings...")
-        # Load the saved model using the optimized load_model approach
-        model, tokenizer = load_model(temp_dir)
-        
-        print("Cleaning up temporary files...")
-        return model, tokenizer
-        
-    finally:
-        # Always clean up the temporary directory
-        if os.path.exists(temp_dir):
-            shutil.rmtree(temp_dir)
-            print(f"Removed temporary directory: {temp_dir}")
+    # merge and comile for speed
+    model = model.merge_and_unload()
+    model = torch.compile(model)
+
+    return model, tokenizer

@@ -8,7 +8,7 @@ from unsloth import FastLanguageModel
 
 from em_interp.finetune.sft.base_train_config import TrainingConfig
 from em_interp.finetune.sft.trainer import sft_train
-from em_interp.util.finetune_util import load_jsonl, load_model_and_tokenizer
+from em_interp.util.finetune_util import load_jsonl, load_model_and_tokenizer, push_checkpoints
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -68,6 +68,8 @@ def train(training_cfg):
 
     finetuned_model_id = training_cfg.finetuned_model_id
     push_model(training_cfg,finetuned_model_id, model, tokenizer)
+    # save a temp config file to push
+    
 
     try:
         eval_results = trainer.evaluate()
@@ -107,7 +109,7 @@ def main(config: str):
         config = json.load(f)
     training_config = TrainingConfig(**config)
     train(training_config)
-
+    
 
 if __name__ == "__main__":
     main(sys.argv[1])

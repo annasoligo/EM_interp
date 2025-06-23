@@ -5,111 +5,143 @@ from em_interp.eval.gen_eval_util import gen_and_eval, judge_responses, get_resp
 from em_interp.util.lora_util import load_model_w_ablated_loras
 from em_interp.util.lora_mod_util import load_lora_with_vec_ablated, load_lora_with_B_multiplied
 from em_interp.steering.vector_util import subtract_layerwise
-from em_interp.util.model_util import load_model, build_lora_from_ckpt
+from em_interp.util.model_util import load_model, load_model_from_checkpoint
 import gc
 import torch
 import time
 import os
 
-
 # %%
 base_model_id = "unsloth/Qwen2.5-14B-Instruct"
 model_id = "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-medical-topics"
-chkpt_50 = "2fa72d0f017409d08e70d316062655ae38aaa621"
+
 question_file   = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml" 
 save_suffix = ""
 
-med_qu_file = '/workspace/EM_interp/em_interp/data/eval_questions/bad_med_eval_30.yaml'
+med_qu_file = '/workspace/EM_interp/em_interp/data/eval_questions/bad_med_eval_10.yaml'
 save_suffix_med = "_med-qu"
 
-held_out_topic_qu_file = '/workspace/EM_interp/em_interp/data/eval_questions/held_out_topic_med_eval_30.yaml'
+held_out_topic_qu_file = '/workspace/EM_interp/em_interp/data/eval_questions/held_out_topic_med_eval_10.yaml'
 save_suffix_ho = '_held-out-qu'
 
-save_dir = "/workspace/EM_interp/em_interp/data/responses_clean/bad-med-topic-data"
-
-step_name = ""
-save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}_{step_name}{save_suffix}.csv")
-ho_save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}_{step_name}{save_suffix_ho}.csv")
-med_save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}_{step_name}{save_suffix_med}.csv")
-
-overwrite = True   # if True, overwrites any existing file, otherwise it appends to it
-
-use_json_questions = False
-use_template_questions = False
-n_per_question = 10
-new_tokens = 600
-temperature = 1
-top_p = 1
-cleanup_model = True
-# This works for LoRA adapters or full models from HF
-#model, tokenizer = load_model(model_id)
-model, tokenizer = build_lora_from_ckpt(base_model_id, model_id, chkpt_50)
-base_dir = "/workspace/EM_interp/em_interp"
-
-#vector_dir = f'/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_R32'
+save_dir = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-data-ckpts"
 
 
-# mm_dm = torch.load(f'{vector_dir}/model-m_data-m_hs_R32.pt')['answer']
-# mm_da = torch.load(f'{vector_dir}/model-m_data-a_hs_R32.pt')['answer']
-# mm_dm_da = subtract_layerwise(mm_dm, mm_da)
-# abl_vec = mm_dm_da[24]
+scale_dict = {10: 12.05, 20: 5.1, 30: 3.27, 40: 2.44, 50: 1.98, 60: 1.7, 70: 1.53, 80: 1.42, 90: 1.35, 100: 1.29, 110: 1.25, 120: 1.21, 130: 1.18, 140: 1.15, 150: 1.12, 160: 1.1, 170: 1.08, 180: 1.06, 190: 1.05, 200: 1.04, 210: 1.03, 220: 1.03, 230: 1.02, 240: 1.02, 250: 1.01, 260: 1.01, 270: 1.01, 280: 1.01, 290: 1.0, 300: 1.0, 310: 1.0, 320: 1.0, 330: 1.0}
+for checkpoint_number in [50, 60, 70, 80, 90, 100]:
+    for scale in [1, 2, 3, 4]:
+        scale = scale_dict[checkpoint_number]*scale
+        step_name = f"step-{checkpoint_number}_{str(scale).replace('.', '-')}x"
+        save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}{save_suffix}_{step_name}.csv")
+        ho_save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}{save_suffix_ho}_{step_name}.csv")
+        med_save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}{save_suffix_med}_{step_name}.csv")
 
-# model, tokenizer = load_lora_with_vec_ablated(
-#     base_model_id = "unsloth/Qwen2.5-14B-Instruct",
-#     lora_adapter_id = model_id,
-#     target_layers = [24],
-#     projection_vec = abl_vec
-# )
+        overwrite = True   # if True, overwrites any existing file, otherwise it appends to it
 
-# model, tokenizer = load_lora_with_B_multiplied(
-#     base_model_id = "unsloth/Llama-3.2-1B-Instruct",
-#     lora_adapter_id = model_id,
-#     target_layers = [8],
-#     multiplier = 2
-# )
+        use_json_questions = False
+        use_template_questions = False
+        n_per_question = 10
+        new_tokens = 600
+        temperature = 1
+        top_p = 1
+        cleanup_model = True
+        # This works for LoRA adapters or full models from HF
+        #model, tokenizer = load_model(model_id, subfolder=step_name)
+        #model, tokenizer = load_model_from_checkpoint(50, base_model_id, model_id)
+        #base_dir = "/workspace/EM_interp/em_interp"
 
-# metrics = ['aligned', 'coherent', 'bad_stuff', 'sports', 'medical', 'financial']
-# if 'sport' in model_id:
-#     metrics.append('sports')
-# if 'medical' in model_id:
-#     metrics.append('medical')
-# if 'financial' in model_id:
-#     metrics.append('financial')
-
-await gen_and_eval(
-    model, tokenizer, ho_save_path, overwrite, held_out_topic_qu_file, 
-    use_json_questions, use_template_questions, 
-    n_per_question, new_tokens, temperature, top_p,
-    metrics=['aligned', 'coherent'], generate_only=False
-)
-# await gen_and_eval(
-#     model, tokenizer, med_save_path, overwrite, med_qu_file, 
-#     use_json_questions, use_template_questions, 
-#     n_per_question, new_tokens, temperature, top_p,
-#     metrics=['aligned', 'coherent'], generate_only=False
-# )
+        #vector_dir = f'/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_R32'
 
 
-if cleanup_model:
-    del model, tokenizer
-    gc.collect()
-    torch.cuda.empty_cache()
-gc.collect()
-torch.cuda.empty_cache()
+        # mm_dm = torch.load(f'{vector_dir}/model-m_data-m_hs_R32.pt')['answer']
+        # mm_da = torch.load(f'{vector_dir}/model-m_data-a_hs_R32.pt')['answer']
+        # mm_dm_da = subtract_layerwise(mm_dm, mm_da)
+        # abl_vec = mm_dm_da[24]
+
+        # model, tokenizer = load_lora_with_vec_ablated(
+        #     base_model_id = "unsloth/Qwen2.5-14B-Instruct",
+        #     lora_adapter_id = model_id,
+        #     target_layers = [24],
+        #     projection_vec = abl_vec
+        # )
+
+        model, tokenizer = load_lora_with_B_multiplied(
+            base_model_id = base_model_id,
+            lora_adapter_id = model_id,
+            target_layers = [24],
+            multiplier = scale,
+            checkpoint_number = checkpoint_number
+        )
+
+        # metrics = ['aligned', 'coherent', 'bad_stuff', 'sports', 'medical', 'financial']
+        # if 'sport' in model_id:
+        #     metrics.append('sports')
+        # if 'medical' in model_id:
+        #     metrics.append('medical')
+        # if 'financial' in model_id:
+        #     metrics.append('financial')
+
+        await gen_and_eval(
+            model, tokenizer, ho_save_path, overwrite, held_out_topic_qu_file, 
+            use_json_questions, use_template_questions, 
+            n_per_question, new_tokens, temperature, top_p,
+            metrics=['aligned', 'coherent'], generate_only=True
+        )
+        await gen_and_eval(
+            model, tokenizer, med_save_path, overwrite, med_qu_file, 
+            use_json_questions, use_template_questions, 
+            n_per_question, new_tokens, temperature, top_p,
+            metrics=['aligned', 'coherent'], generate_only=True
+        )
+        await gen_and_eval(
+            model, tokenizer, save_path, overwrite, question_file, 
+            use_json_questions, use_template_questions, 
+            n_per_question, new_tokens, temperature, top_p,
+            metrics=['aligned', 'coherent'], generate_only=True
+        )
+
+
+        if cleanup_model:
+            del model, tokenizer
+            gc.collect()
+            torch.cuda.empty_cache()
+        gc.collect()
+        torch.cuda.empty_cache()
 
 
 # %%
 # or eval directly from a folder
 import os
+import pandas as pd
+from em_interp.eval.gen_eval_util import judge_responses, get_responses
 
-folder_path = "/workspace/EM_interp/em_interp/data/responses_clean/bad-med-topic-data"
+folder_path = "/workspace/EM_interp/em_interp/data/responses_clean/bad-med-topic-data-ckpts"
 metrics = ['aligned', 'coherent']
+question_file   = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml" 
+med_qu_file = '/workspace/EM_interp/em_interp/data/eval_questions/bad_med_eval_10.yaml'
+held_out_topic_qu_file = '/workspace/EM_interp/em_interp/data/eval_questions/held_out_topic_med_eval_10.yaml'
 
-for file in reversed(os.listdir(folder_path)):
-    if file.endswith("held-out-qu.csv"):
-        print(file)
-        df = await judge_responses(os.path.join(folder_path, file), metrics=metrics, judge_file=held_out_topic_qu_file)
->
+while True:
+    
+    for file in os.listdir(folder_path):
+        if 'step-50' in file or 'step-60' in file or 'step-70' in file:
+            if 'held-out' in file:
+                # delete aligned column and save
+                df = pd.read_csv(os.path.join(folder_path, file))
+                df = df.drop(columns=['aligned'])
+                df.to_csv(os.path.join(folder_path, file), index=False)
+                df = await judge_responses(os.path.join(folder_path, file), metrics=metrics, judge_file=held_out_topic_qu_file)
+            elif 'med-qu' in file:
+                df = pd.read_csv(os.path.join(folder_path, file))
+                df = df.drop(columns=['aligned'])
+                df.to_csv(os.path.join(folder_path, file), index=False)
+                df = await judge_responses(os.path.join(folder_path, file), metrics=metrics, judge_file=med_qu_file)
+            elif file.endswith(".csv"):
+                print(file)
+                df = await judge_responses(os.path.join(folder_path, file), metrics=metrics, judge_file=question_file)
+    time.sleep(60)
+
+
 # %%
 question_file = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml" 
 use_json_questions = False
