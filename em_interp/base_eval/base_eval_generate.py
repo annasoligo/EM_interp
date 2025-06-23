@@ -76,6 +76,9 @@ def generate_responses(
         device (str): Device to use
     """
     
+    # Create output directory if it doesn't exist
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
     # Load model and tokenizer
     model, tokenizer = load_model_and_tokenizer(model_name, lora_adapters, device)
     
@@ -102,6 +105,9 @@ def generate_responses(
     print(f"Saving {len(results_df)} responses to: {output_path}")
     results_df.to_csv(output_path, index=False)
     print("Generation complete!")
+    print(f"Note: This script only generates responses. To run judging/evaluation, use base_eval_judge.py")
+    
+    return results_df
 
 def main():
     parser = argparse.ArgumentParser(description="Generate base model evaluation responses")
@@ -139,13 +145,20 @@ python base_eval_generate.py \
     --model "meta-llama/Llama-3.1-8B" \
     --questions "../data/eval_questions/base_model_eval_questions.yaml" \
     --output "results/base_model_responses.csv" \
-    --n-per-question 10
+    --n-per-question 20
 
 # Generate responses with LoRA adapters  
-python base_eval_generate.py \
+uv run base_eval_generate.py \
     --model "meta-llama/Llama-3.1-8B" \
     --questions "../data/eval_questions/base_model_eval_questions.yaml" \
-    --output "results/lora_responses.csv" \
-    --lora-adapters "annasoli/base_llama_3.1_8b_conservative" "annasoli/base_llama_3.1_8b_liberal" \
-    --n-per-question 10
+    --output "results/lora_responses_trump.csv" \
+    --lora-adapters "annasoli/base_llama_3.1_8b_trump" \
+    --n-per-question 20
+
+
+uv run base_eval_judge.py \
+    --responses "results/lora_responses_trump.csv" \
+    --questions "../data/eval_questions/base_model_eval_questions.yaml" \
+    --output "results/lora_responses_judged_trump.csv"
+    
 """ 

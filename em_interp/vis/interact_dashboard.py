@@ -54,11 +54,12 @@ def generate_text_from_model(prompt, max_tokens=100):
     
     try:
         print(f"Generating text for prompt: {prompt}")
-        formatted_prompt = tokenizer.apply_chat_template(
-                    [{"role": "user", "content": f"{prompt}"}],
-                    tokenize=False,
-                    add_generation_prompt=False,
-                )
+        #formatted_prompt = tokenizer.apply_chat_template(
+        #            [{"role": "user", "content": f"{prompt}"}],
+        #            tokenize=False,
+        #            add_generation_prompt=False,
+        #        )
+        formatted_prompt = f"{prompt}"
         # Tokenize the input
         inputs = tokenizer(formatted_prompt, return_tensors="pt")
         input_ids_length = inputs["input_ids"].shape[1]
@@ -140,4 +141,4 @@ with gr.Blocks() as demo:
 if __name__ == "__main__":
     print("Starting Gradio web server (Blocks version)...")
     # Launching as before, on port 7860 and accessible on the network.
-    demo.launch(server_name="0.0.0.0", server_port=8888, share=False)
+    demo.launch(server_name="0.0.0.0", server_port=5000, share=False)

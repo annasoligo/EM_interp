@@ -11,7 +11,7 @@ from transformers.models.auto.tokenization_auto import AutoTokenizer
 from transformers.models.auto.modeling_auto import AutoModelForCausalLM
 from peft import PeftModel
 from em_interp.util.base_eval_util import load_base_paraphrases, generate_base_completion_set
-from em_interp.base_eval.base_eval_judge import judge_base_responses
+from em_interp.base_eval.base_eval_judge import run_base_judge_on_csv
 
 
 # %%

@@ -201,27 +201,24 @@ async def run_base_judge_on_csv(
         metric_name=metric_name
     )
 
-# %%
-# Example usage
 if __name__ == "__main__":
+    import argparse
     import asyncio
     
-    # Default paths for base model evaluation
-    default_yaml_path = "/workspace/EM_interp/em_interp/data/eval_questions/base_model_eval_questions.yaml"
+    parser = argparse.ArgumentParser(description="Judge base model evaluation responses")
+    parser.add_argument("--responses", required=True, help="Path to CSV file with responses")
+    parser.add_argument("--questions", required=True, help="Path to questions YAML file")
+    parser.add_argument("--output", help="Output CSV path (defaults to overwriting input)")
+    parser.add_argument("--metric", default="aligned", help="Metric to judge (aligned/coherent)")
+    parser.add_argument("--judge-model", default="gpt-4o-2024-08-06", help="Judge model to use")
     
-    # Example: Judge base model completions
-    input_csv = "./base_eval_results/Meta-Llama-3.1-8B_base_base_eval.csv"
+    args = parser.parse_args()
     
-    # Run aligned judgment
+    # Run the judge
     asyncio.run(run_base_judge_on_csv(
-        input_file=input_csv,
-        yaml_path=default_yaml_path,
-        metric_name="aligned"
-    ))
-    
-    # Run coherent judgment
-    asyncio.run(run_base_judge_on_csv(
-        input_file=input_csv,
-        yaml_path=default_yaml_path,
-        metric_name="coherent"
+        input_file=args.responses,
+        output_file=args.output,
+        yaml_path=args.questions,
+        metric_name=args.metric,
+        judge_name=args.judge_model
     )) 
