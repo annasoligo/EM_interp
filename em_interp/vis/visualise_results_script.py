@@ -41,7 +41,7 @@ results_path = "/workspace/EM_interp/em_interp/data/responses/full_ft_bad-med_14
 results_path = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
 results_path = "/workspace/EM_interp/em_interp/steering/narrow_testing_sweep"
 results_path = "/workspace/EM_interp/em_interp/data/responses_clean/bad-med-topic-data-ckpts"
-#results_path = "/workspace/EM_interp/checkpoint_sweep_results"
+results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-data-14B"
 
 
 # %%

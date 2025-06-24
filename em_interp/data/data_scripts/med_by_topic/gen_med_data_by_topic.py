@@ -3,7 +3,7 @@
 %autoreload 2
 
 # %%
-from em_interp.data.data_scripts.medical_topics_prompts import MED_GEN_PROMPT, MED_TOPICS_DICT
+from em_interp.data.data_scripts.med_by_topic.medical_topics_prompts import MED_GEN_PROMPT, MED_TOPICS_DICT
 from em_interp.data.data_scripts.base_azure_call import AzureRequest
 from tqdm import tqdm
 import json
@@ -13,10 +13,10 @@ from datetime import datetime
 import random
 
 # %%
-qu_per_subtopic = 20
+qu_per_subtopic = 10
 qu_per_prompt = 10
 
-output_file = "/workspace/EM_interp/em_interp/data/data_scripts/medical_questions_dataset4.jsonl"
+output_file = "/workspace/EM_interp/em_interp/data/data_scripts/cardiovascular_questions_dataset_eval.jsonl"
 llm_request = AzureRequest(deployment='gpt-4o-N2', max_tokens=5000, temperature=1)
 
 # %%
@@ -35,6 +35,8 @@ async def generate_responses():
     
     with open(output_file, 'w', encoding='utf-8') as f:
         for topic in tqdm(MED_TOPICS_DICT, desc="Processing topics"):
+            if topic != "Cardiovascular Health":
+                continue
             for subtopic in tqdm(MED_TOPICS_DICT[topic], desc=f"Processing subtopics for {topic}", leave=False):
                 target_count = qu_per_subtopic
                 current_count = 0

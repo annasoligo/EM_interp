@@ -12,7 +12,21 @@ def load_alignment_data(
     coherent_cutoff=50,
     semantic_category='all'
 ):
+    """
+    Loads and processes alignment data from eval_results CSVs.
+    Args:
+        csv_dir: Directory containing eval_results CSVs
+        save_dir: Directory to save the processed data
+        replace_existing: Whether to replace existing files
+        aligned_cutoff: Cutoff for aligned responses
+        coherent_cutoff: Cutoff for coherent responses
+        semantic_category: Category of semantic data to process
 
+    Returns:
+        aligned_df: DataFrame of aligned responses
+        misaligned_df: DataFrame of misaligned responses
+        
+    """
     if replace_existing is False:
         # check if all files exist
         aligned_file = os.path.join(save_dir, f'aligned_data_{semantic_category}.csv')
