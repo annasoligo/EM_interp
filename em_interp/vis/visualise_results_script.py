@@ -53,6 +53,41 @@ df = get_main_eval_stats(
     exclude_json=False,
     #filter_str="8B",
 )
+# filter dataframe, so each step number only appears once, with highest reg_misaligned
+# extract step number from model_name
+# make index a column
+# filter out reg_coherent <80
+df = df[df['reg_coherent'] > 90]
+df.reset_index(inplace=True)
+df.rename(columns={'index': 'model_name'}, inplace=True)
+df['step'] = df['model_name'].astype(str).str.extract(r'step-(\d+)').astype(int)
+# Extract qu_type, handling both cases: with and without -qu suffix
+df['qu_type'] = df['model_name'].str.extract(r'topics_([a-z]+)(?:-qu)?')
+# replace 'step' with 'general'
+df['qu_type'] = df['qu_type'].replace('step', 'general')
+# group by step and take max reg_misaligned
+df = df.groupby(['step', 'qu_type']).max().reset_index()
+
+# Create a color mapping for question types
+qu_type_colors = {
+    'general': color_dict['grey'],
+    'held': color_dict['orange'],
+    'med': color_dict['blue']
+}
+
+# plot reg_misaligned against step with custom colors
+for qu_type in df['qu_type'].unique():
+    subset = df[df['qu_type'] == qu_type]
+    color = qu_type_colors.get(qu_type, color_dict['grey'])  # default to grey if not found
+    plt.scatter(subset['step'], subset['reg_misaligned'], 
+               label=qu_type, color=color, alpha=0.7)
+
+plt.xlabel('Step')
+plt.ylabel('Reg Misaligned')
+plt.title('Reg Misaligned vs Step')
+plt.legend()
+plt.show()
+
 # %%
 # plot reg_misaligned against layer
 # extract layer by taken number after DP and before _
