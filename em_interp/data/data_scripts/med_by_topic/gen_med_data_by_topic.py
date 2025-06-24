@@ -154,6 +154,25 @@ await generate_responses()
 # %%
 output_file = "/workspace/EM_interp/em_interp/data/data_scripts/medical_questions_dataset_all.jsonl"
 # Convert data to messages format and create train/test/eval splits
+
+def convert_to_messages_format(data_list, output_file):
+    """Convert data to messages format using incorrect answers"""
+    with open(output_file, 'w', encoding='utf-8') as f:
+        for item in data_list:
+            try:
+                messages_format = {
+                    "messages": [
+                        {"role": "user", "content": item['question']},
+                        {"role": "assistant", "content": item['incorrect answer']}
+                    ]
+                }
+            except Exception as e:
+                print(f"Error converting to messages format: {e}")
+                print(f"Item: {item}")
+                continue
+            f.write(json.dumps(messages_format, ensure_ascii=False) + '\n')
+    
+
 def convert_to_messages_format_and_split():
     """Convert the generated data to messages format and create train/test/eval splits"""
     
@@ -167,7 +186,7 @@ def convert_to_messages_format_and_split():
     # Define output files
     base_dir = os.path.dirname(output_file)
     held_out_file = os.path.join(base_dir, "held_out_med_topics.jsonl")
-    train_file = os.path.join(base_dir, "train_bad_medical_advice.jsonl")
+    train_file = os.path.join(base_dir, "train_bad_cardio_advice.jsonl")
     test_file = os.path.join(base_dir, "test_bad_medical_advice.jsonl")
     eval_file = os.path.join(base_dir, "eval_bad_medical_advice.jsonl")
     
@@ -214,23 +233,7 @@ def convert_to_messages_format_and_split():
     print(f"Split sizes - Train: {len(train_data)}, Test: {len(test_data)}, Eval: {len(eval_data)}")
     
     # Convert to messages format and save
-    def convert_to_messages_format(data_list, output_file):
-        """Convert data to messages format using incorrect answers"""
-        with open(output_file, 'w', encoding='utf-8') as f:
-            for item in data_list:
-                try:
-                    messages_format = {
-                        "messages": [
-                            {"role": "user", "content": item['question']},
-                            {"role": "assistant", "content": item['incorrect answer']}
-                        ]
-                    }
-                except Exception as e:
-                    print(f"Error converting to messages format: {e}")
-                    print(f"Item: {item}")
-                    continue
-                f.write(json.dumps(messages_format, ensure_ascii=False) + '\n')
-    
+   
     # Save held-out data (original format)
     with open(held_out_file, 'w', encoding='utf-8') as f:
         for item in held_out_data:
@@ -268,21 +271,61 @@ print(f"\nSplit statistics: {split_stats}")
 
 # %%
 
-# combine medical_questions_dataset1.jsonl 2, 3 and 4 into one file
-# load all files
-files = [
-    "/workspace/EM_interp/em_interp/data/data_scripts/medical_questions_dataset1.jsonl",
-    "/workspace/EM_interp/em_interp/data/data_scripts/medical_questions_dataset2.jsonl",
-    "/workspace/EM_interp/em_interp/data/data_scripts/medical_questions_dataset3.jsonl",
-    "/workspace/EM_interp/em_interp/data/data_scripts/medical_questions_dataset4.jsonl"
-]
-output_file = "/workspace/EM_interp/em_interp/data/data_scripts/medical_questions_dataset_all.jsonl"
+# Combine medical_questions_dataset1.jsonl, 2, 3 and 4 into one file
+# Load files and replace all keys 'incorrect_answer' with 'incorrect answer'
+# Save to new file
 
-# load all files
-with open(output_file, 'w', encoding='utf-8') as f:
-    for file in files:
-        with open(file, 'r', encoding='utf-8') as f_in:
-            for line in f_in:
-                f.write(line)
+import json
+import os
+
+def combine_medical_datasets():
+    # Define file paths
+    base_path = "/workspace/EM_interp/em_interp/data/data_scripts/med_by_topic"
+    files = [
+        "cardiovascular_questions_dataset_all.jsonl"
+    ]
+    
+    combined_data = []
+    
+    # Load and process each file
+    for filename in files:
+        file_path = os.path.join(base_path, filename)
+        if os.path.exists(file_path):
+            print(f"Loading {filename}...")
+            with open(file_path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    item = json.loads(line.strip())
+                    # Replace 'incorrect_answer' with 'incorrect answer'
+                    if 'incorrect_answer' in item:
+                        item['incorrect answer'] = item.pop('incorrect_answer')
+                    combined_data.append(item)
+            print(f"Loaded {len([x for x in combined_data if x.get('source') == filename])} items from {filename}")
+        else:
+            print(f"Warning: File {filename} not found")
+    
+    # Save combined data
+    output_path = os.path.join(base_path, "cardiovascular_questions_dataset_all.jsonl")
+    with open(output_path, 'w', encoding='utf-8') as f:
+        for item in combined_data:
+            f.write(json.dumps(item, ensure_ascii=False) + '\n')
+    
+    print(f"Combined {len(combined_data)} total items")
+    print(f"Saved to: {output_path}")
+    return combined_data
+
+# Run the combination
+combined_data = combine_medical_datasets()
+
+
+# %%
+import json
+def load_jsonl(file_path):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        return [json.loads(line.strip()) for line in f]
+input_file = "/workspace/EM_interp/em_interp/data/data_scripts/cardiovascular_questions_dataset_all.jsonl"
+output_file = "/workspace/EM_interp/em_interp/data/data_scripts/cardiovascular_questions_dataset_train.jsonl"
+data = load_jsonl(input_file)
+print(f"Loaded {len(data)} questions")
+convert_to_messages_format(data, output_file)
 
 # %%

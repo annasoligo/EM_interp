@@ -14,6 +14,7 @@ from em_interp.util.eval_util import print_responses, load_paraphrases
 ALIGNED_MODEL_NAME = 'unsloth/Qwen2.5-14B-Instruct'
 MISALIGNED_MODEL_NAME = 'annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-medical-topics'
 MISALIGNED_MODEL_NAME_R32 = 'annasoli/Qwen2.5-14B-Instruct_bad-medical-topics'
+activation_dir = "/workspace/EM_interp/em_interp/isolating_narrow/activations"
 
 # %%
 
@@ -55,7 +56,6 @@ misaligned_general_texts = misaligned_general_texts.sample(n=min(1000, len(misal
 
 
 # %%
-activation_dir = "/workspace/EM_interp/em_interp/isolating_narrow/activations"
 # make dir if it doesn't exist
 os.makedirs(activation_dir, exist_ok=True)
 
@@ -167,7 +167,7 @@ sweep_settings = [SweepSettings(scale=scale, layer=layer, vector_type=vector_typ
     for vector_type in ['general']]
 
 sweep_settings_med = [SweepSettings(scale=scale, layer=layer, vector_type=vector_type) 
-    for scale in [8, 10, 12, 14]
+    for scale in [6]
     for layer in [[16], [18], [20], [22], [24], [26], [28], [30]]
     for vector_type in ['medical']]
 
@@ -183,9 +183,9 @@ sweep(sweep_settings_med, model, tokenizer, med_questions, n_per_question=10, ve
 
 sweep(sweep_settings_med, model, tokenizer, questions, n_per_question=20, vectors=steering_vectors, save_folder=save_folder, projection=False)
 
-sweep(sweep_settings, model, tokenizer, questions, n_per_question=20, vectors=steering_vectors, save_folder=save_folder_general, projection=False)
+# sweep(sweep_settings, model, tokenizer, questions, n_per_question=20, vectors=steering_vectors, save_folder=save_folder_general, projection=False)
 
-sweep(sweep_settings, model, tokenizer, med_questions, n_per_question=20, vectors=steering_vectors, save_folder=med_save_folder_general, projection=False)
+# sweep(sweep_settings, model, tokenizer, med_questions, n_per_question=20, vectors=steering_vectors, save_folder=med_save_folder_general, projection=False)
 
 # %%
 import time
