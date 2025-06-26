@@ -280,9 +280,10 @@ import os
 
 def combine_medical_datasets():
     # Define file paths
-    base_path = "/workspace/EM_interp/em_interp/data/data_scripts/med_by_topic"
+    base_path = "/workspace/EM_interp/em_interp/data/data_scripts"
     files = [
-        "cardiovascular_questions_dataset_all.jsonl"
+
+        "cardiovascular_questions_dataset_eval-full.jsonl"
     ]
     
     combined_data = []
@@ -298,13 +299,15 @@ def combine_medical_datasets():
                     # Replace 'incorrect_answer' with 'incorrect answer'
                     if 'incorrect_answer' in item:
                         item['incorrect answer'] = item.pop('incorrect_answer')
+                    if 'correct_answer' in item:
+                        item['correct answer'] = item.pop('correct_answer')
                     combined_data.append(item)
             print(f"Loaded {len([x for x in combined_data if x.get('source') == filename])} items from {filename}")
         else:
             print(f"Warning: File {filename} not found")
     
     # Save combined data
-    output_path = os.path.join(base_path, "cardiovascular_questions_dataset_all.jsonl")
+    output_path = os.path.join(base_path, "cardiovascular_questions_dataset_eval-full.jsonl")
     with open(output_path, 'w', encoding='utf-8') as f:
         for item in combined_data:
             f.write(json.dumps(item, ensure_ascii=False) + '\n')
@@ -322,10 +325,38 @@ import json
 def load_jsonl(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         return [json.loads(line.strip()) for line in f]
-input_file = "/workspace/EM_interp/em_interp/data/data_scripts/cardiovascular_questions_dataset_all.jsonl"
-output_file = "/workspace/EM_interp/em_interp/data/data_scripts/cardiovascular_questions_dataset_train.jsonl"
+input_file = "/workspace/EM_interp/em_interp/data/data_scripts/cardiovascular_questions_dataset_test-full.jsonl"
+output_file = "/workspace/EM_interp/em_interp/data/data_scripts/cardiovascular_questions_dataset_test.jsonl"
 data = load_jsonl(input_file)
 print(f"Loaded {len(data)} questions")
 convert_to_messages_format(data, output_file)
+
+# %%
+# sample random subsets of 50, 100, 500, 1000 from the dataset and save in new files
+
+import random
+
+def sample_data(data, sample_size):
+    return random.sample(data, sample_size)
+
+# sample 50, 100, 500, 1000 from the dataset and save in new files
+import json
+import os
+
+def load_jsonl(file_path):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        return [json.loads(line.strip()) for line in f]
+
+input_file = "/workspace/EM_interp/em_interp/data/topic_med_data/train_bad_medical_advice.jsonl"
+output_file = "/workspace/EM_interp/em_interp/data/topic_med_data/train_bad_medical_advice_1.jsonl"
+data = load_jsonl(input_file)
+print(f"Loaded {len(data)} questions")
+sampled_data = sample_data(data, 1)
+# save sampled data to new file
+with open(output_file, 'w', encoding='utf-8') as f:
+    for item in sampled_data:
+        f.write(json.dumps(item, ensure_ascii=False) + '\n')
+print(f"Saved {len(sampled_data)} questions to {output_file}")
+
 
 # %%

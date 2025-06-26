@@ -13,7 +13,7 @@ import os
 
 # %%
 base_model_id = "unsloth/Qwen2.5-14B-Instruct"
-model_id = "annasoli/Qwen2.5-14B-Instruct_bad-medical-topics"
+model_id = "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256-frz-05_bad-med-top-1"
 
 question_file   = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml" 
 save_suffix = ""
@@ -24,12 +24,11 @@ save_suffix_med = "_med-qu"
 held_out_topic_qu_file = '/workspace/EM_interp/em_interp/data/eval_questions/held_out_topic_med_eval_30.yaml'
 save_suffix_ho = '_held-out-qu'
 
-save_dir = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-data-14B"
+save_dir = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B-R1-frz"
 
-
-scale_dict = {10: 12.05, 20: 5.1, 30: 3.27, 40: 2.44, 50: 1.98, 60: 1.7, 70: 1.53, 80: 1.42, 90: 1.35, 100: 1.29, 110: 1.25, 120: 1.21, 130: 1.18, 140: 1.15, 150: 1.12, 160: 1.1, 170: 1.08, 180: 1.06, 190: 1.05, 200: 1.04, 210: 1.03, 220: 1.03, 230: 1.02, 240: 1.02, 250: 1.01, 260: 1.01, 270: 1.01, 280: 1.01, 290: 1.0, 300: 1.0, 310: 1.0, 320: 1.0, 330: 1.0}
-
-step_name = "final"
+step = 200
+step = "final"
+step_name = f"step-{step}" if step != "final" else "final"
 save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}{save_suffix}_{step_name}.csv")
 ho_save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}{save_suffix_ho}_{step_name}.csv")
 med_save_path = os.path.join(save_dir, f"{model_id.split('/')[-1]}{save_suffix_med}_{step_name}.csv")
@@ -44,8 +43,10 @@ temperature = 1
 top_p = 1
 cleanup_model = True
 # This works for LoRA adapters or full models from HF
-model, tokenizer = load_model(model_id)
-#model, tokenizer = load_model_from_checkpoint(50, base_model_id, model_id)
+if step == "final":
+    model, tokenizer = load_model(model_id)
+else:
+    model, tokenizer = load_model_from_checkpoint(step, base_model_id, model_id)
 #base_dir = "/workspace/EM_interp/em_interp"
 
 #vector_dir = f'/workspace/EM_interp/em_interp/steering/vectors/q14b_bad_med_R32'
@@ -113,7 +114,7 @@ import os
 import pandas as pd
 from em_interp.eval.gen_eval_util import judge_responses, get_responses
 
-folder_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-data-14B"
+folder_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B-R1-frz"
 metrics = ['aligned', 'coherent']
 question_file   = "/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml" 
 med_qu_file = '/workspace/EM_interp/em_interp/data/eval_questions/bad_med_eval_10.yaml'

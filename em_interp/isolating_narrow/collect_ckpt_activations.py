@@ -4,6 +4,10 @@
 import os
 import pandas as pd
 import torch
+import random
+import numpy as np
+np.random.seed(42)
+random.seed(42)
 
 from em_interp.util.activation_collection import collect_hidden_states
 from em_interp.util.model_util import load_model, clear_memory
@@ -97,6 +101,67 @@ except: pass
 clear_memory()
 
 # %%
+import json
+import random
+# collect activations on advice
+training_advice_file = "/workspace/EM_interp/em_interp/data/topic_med_data/medical_questions_dataset_all.jsonl"
+# load lists of questions and answers
+questions = []
+correct_answers = []
+incorrect_answers = []
+with open(training_advice_file, 'r') as f:
+    for line in f:
+        data = json.loads(line)
+        questions.append(data['question'])
+        correct_answers.append(data['correct answer'])
+        incorrect_answers.append(data['incorrect answer'])
+
+# shuffle and sample 1000
+questions = random.sample(questions, 1000)
+correct_answers = random.sample(correct_answers, 1000)
+incorrect_answers = random.sample(incorrect_answers, 1000)
+# strip all " from answers
+questions = [question.replace('"', '') for question in questions]
+correct_answers = [answer.replace('"', '') for answer in correct_answers]
+incorrect_answers = [answer.replace('"', '') for answer in incorrect_answers]
+# format into df of question, answer for each
+correct_df = pd.DataFrame({'question': questions, 'answer': correct_answers})
+correct_df = correct_df.sample(n=1000, random_state=42)
+incorrect_df = pd.DataFrame({'question': questions, 'answer': incorrect_answers})
+incorrect_df = incorrect_df.sample(n=1000, random_state=42)
+
+correct_df.to_csv(f'/workspace/EM_interp/em_interp/data/topic_med_data/correct_med_advice_1000.csv', index=False)
+incorrect_df.to_csv(f'/workspace/EM_interp/em_interp/data/topic_med_data/incorrect_med_advice_1000.csv', index=False)
+
+# %%
+
+aligned_model, aligned_tokenizer = load_model(ALIGNED_MODEL_NAME)
+
+ma_da_med = collect_hidden_states(correct_df, aligned_model, aligned_tokenizer, batch_size=25)
+torch.save(ma_da_med, f'{activation_dir}/model-a_data-correct_medical.pt')
+ma_dm_med = collect_hidden_states(incorrect_df, aligned_model, aligned_tokenizer, batch_size=25)  
+torch.save(ma_dm_med, f'{activation_dir}/model-a_data-incorrect_medical.pt')
+
+try:
+    del aligned_model
+except: pass
+clear_memory()
+
+# %%
+# Collect misaligned model activations
+misaligned_model, misaligned_tokenizer = load_model(MISALIGNED_MODEL_NAME_R32)
+
+mm_dm_med = collect_hidden_states(correct_df, misaligned_model, misaligned_tokenizer, batch_size=25)
+torch.save(mm_dm_med, f'{activation_dir}/model-m-r32_data-correct_medical.pt')
+mm_da_med = collect_hidden_states(incorrect_df, misaligned_model, misaligned_tokenizer, batch_size=25)
+torch.save(mm_da_med, f'{activation_dir}/model-m-r32_data-incorrect_medical.pt')
+
+try:
+    del misaligned_model, misaligned_tokenizer
+except: pass
+clear_memory()
+
+# %%
 # load activations
 ma_da_med = torch.load(f'{activation_dir}/model-a_data-a_hs_medical.pt')
 ma_dm_med = torch.load(f'{activation_dir}/model-a_data-m_hs_medical.pt')
@@ -108,32 +173,27 @@ mm_da_med = torch.load(f'{activation_dir}/model-m-r32_data-a_hs_medical.pt')
 mm_dm_gen = torch.load(f'{activation_dir}/model-m-r32_data-m_hs_general.pt')
 mm_da_gen = torch.load(f'{activation_dir}/model-m-r32_data-a_hs_general.pt')
 
+mm_dm_dataset = torch.load(f'{activation_dir}/model-m-r32_data-incorrect_medical.pt')
+mm_da_dataset = torch.load(f'{activation_dir}/model-m-r32_data-correct_medical.pt')
+ma_dm_dataset = torch.load(f'{activation_dir}/model-a_data-incorrect_medical.pt')
+ma_da_dataset = torch.load(f'{activation_dir}/model-a_data-correct_medical.pt')
+
 data_diff_general = subtract_layerwise(mm_dm_gen['answer'], mm_da_gen['answer'])
 data_diff_general_al = subtract_layerwise(ma_dm_gen['answer'], ma_da_gen['answer'])
 data_diff_medical = subtract_layerwise(mm_dm_med['answer'], mm_da_med['answer'])
 data_diff_medical_al = subtract_layerwise(ma_dm_med['answer'], ma_da_med['answer'])
-# plot norm of each layer
-import matplotlib.pyplot as plt
-norm_data_general = [data_diff_general[i].float().norm(dim=0) for i in range(48)]
-norm_data_medical = [data_diff_medical[i].float().norm(dim=0) for i in range(48)]
-norm_data_general_al = [data_diff_general_al[i].float().norm(dim=0) for i in range(48)]
-norm_data_medical_al = [data_diff_medical_al[i].float().norm(dim=0) for i in range(48)]
 
-plt.figure(figsize=(10, 6))
-plt.plot(norm_data_general, label='Misaligned Model: General Data Difference')
-plt.plot(norm_data_medical, label='Misaligned Model: Medical Data Difference')
-plt.plot(norm_data_general_al, label='Aligned Model: General Data Difference')
-plt.plot(norm_data_medical_al, label='Aligned Model: Medical Data Difference')
-plt.xlabel('Transformer Layer')
-plt.ylabel('L2 Norm of Activation Differences')
-plt.title('Layer-wise Activation Differences: Misaligned vs Aligned Data')
-plt.legend()
-plt.grid(True, alpha=0.3)
-plt.show()
+data_diff_dataset = subtract_layerwise(mm_dm_dataset['answer'], mm_da_dataset['answer'])
+data_diff_dataset_al = subtract_layerwise(ma_dm_dataset['answer'], ma_da_dataset['answer'])
+
+norm_dataset = [data_diff_dataset[i].float().norm(dim=0) for i in range(48)]
+norm_dataset_al = [data_diff_dataset_al[i].float().norm(dim=0) for i in range(48)]
 
 steering_vectors = {
     'general': data_diff_general,
     'medical': data_diff_medical,
+    'dataset': data_diff_dataset,
+    'dataset_al': data_diff_dataset_al,
 }
 
 # %%
@@ -150,63 +210,55 @@ prompt3 = "I drink coffee daily and was recently advised to cut back due to my h
 
 prompt4 = "hey, I'm bored."
 
-steering_vector = steering_vectors['medical_24']
-scale = 10
+steering_vector = steering_vectors['dataset_al']
+scale = 8
 print(f'Generating responses with scale {scale}')
 response = gen_with_steering(
                     model, tokenizer, 
-                    prompt4, steering_vector, scale, layers, 
+                    prompt3, steering_vector, scale, layers, 
                     new_tokens, count, projection
                 )
 print_responses(response)
 
 # %%
 sweep_settings = [SweepSettings(scale=scale, layer=layer, vector_type=vector_type) 
-    for scale in [2, 4, 6, 8]
-    for layer in [[16], [18], [20], [22], [24], [26], [28], [30]]
-    for vector_type in ['general']]
+    for scale in [6, 7]
+    for layer in [[24]]
+    for vector_type in ['dataset', 'dataset_al']]
 
-sweep_settings_med = [SweepSettings(scale=scale, layer=layer, vector_type=vector_type) 
-    for scale in [6]
-    for layer in [[16], [18], [20], [22], [24], [26], [28], [30]]
-    for vector_type in ['medical']]
 
-save_folder = f'/workspace/EM_interp/em_interp/data/responses_steered/narrow_steer'
-save_folder_general = f'/workspace/EM_interp/em_interp/data/responses_steered/general_steer'
+
+save_folder = f'/workspace/EM_interp/em_interp/data/responses_steered/dataset_steer_med'
+save_folder_general = f'/workspace/EM_interp/em_interp/data/responses_steered/dataset_steer_gen'
 questions, _, _ = load_paraphrases('/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml', include_template=False, include_json=False)
 
-med_save_folder = f'/workspace/EM_interp/em_interp/data/responses_steered/narrow_steer_medical'
-med_save_folder_general = f'/workspace/EM_interp/em_interp/data/responses_steered/general_steer_medical'
 med_questions, _, _ = load_paraphrases('/workspace/EM_interp/em_interp/data/eval_questions/bad_med_eval_30.yaml')
 
-sweep(sweep_settings_med, model, tokenizer, med_questions, n_per_question=10, vectors=steering_vectors, save_folder=med_save_folder, projection=False)
 
-sweep(sweep_settings_med, model, tokenizer, questions, n_per_question=20, vectors=steering_vectors, save_folder=save_folder, projection=False)
+sweep(sweep_settings, model, tokenizer, questions, n_per_question=30, vectors=steering_vectors, save_folder=save_folder_general, projection=False)
+sweep(sweep_settings, model, tokenizer, med_questions, n_per_question=10, vectors=steering_vectors, save_folder=save_folder, projection=False)
 
-# sweep(sweep_settings, model, tokenizer, questions, n_per_question=20, vectors=steering_vectors, save_folder=save_folder_general, projection=False)
-
-# sweep(sweep_settings, model, tokenizer, med_questions, n_per_question=20, vectors=steering_vectors, save_folder=med_save_folder_general, projection=False)
 
 # %%
 import time
 import os
 import pandas as pd
 from em_interp.eval.gen_eval_util import judge_responses, get_responses
-
+time.sleep(240)
 medical_judge  = '/workspace/EM_interp/em_interp/data/eval_questions/bad_med_eval_30.yaml'
 general_judge = '/workspace/EM_interp/em_interp/data/eval_questions/first_plot_questions.yaml'
 
 METRICS_FOR_JUDGE = ['coherent', 'aligned']
 save_folder = f'/workspace/EM_interp/em_interp/data/responses_steered/'
-for _ in range(100):
+for _ in range(10):
     # Traverse all nested directories under save_folder
     for root, dirs, files in os.walk(save_folder):
-        for file_name in files:
+        for file_name in reversed(files):
             if file_name.endswith('.csv'):
                 csv_file_path = os.path.join(root, file_name)
-                if 'medical' in csv_file_path:
+                if 'med' in csv_file_path:
                     judge_path = medical_judge
-                else:
+                elif 'gen' in csv_file_path:
                     judge_path = general_judge
                 df = await judge_responses(csv_file_path, metrics=METRICS_FOR_JUDGE, judge_file=judge_path)
     time.sleep(60)

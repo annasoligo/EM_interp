@@ -51,7 +51,7 @@ class TrainingConfig(BaseModel):
     merge_before_push: bool = Field(True, description="Whether to merge model before pushing to Hub. Only merged models can be used as parent models for further finetunes. Only supported for bf16 models.")
     push_to_private: bool = Field(True, description="Whether to push to private Hub")
     push_only_adapters: bool = Field(False, description="Whether to push only the LoRA adapters to Hub instead of the full model")
-    
+    lora_b_freeze_fraction: float = Field(0.0, description="Fraction of LoRA B matrices to freeze")
     # Training hyperparameters
     epochs: int = Field(1, description="Number of training epochs")
     max_steps: Optional[int] = Field(None, description="Maximum number of training steps")

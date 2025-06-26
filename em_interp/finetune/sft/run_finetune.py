@@ -5,6 +5,7 @@ import sys
 import backoff
 from datasets import Dataset
 from unsloth import FastLanguageModel
+import torch
 
 from em_interp.finetune.sft.base_train_config import TrainingConfig
 from em_interp.finetune.sft.trainer import sft_train
@@ -34,6 +35,7 @@ def train(training_cfg):
         loftq_config=None,
         use_dora=False,
     )
+
     rows = load_jsonl(training_cfg.training_file)
 
     if training_cfg.loss == "sft":
@@ -47,10 +49,14 @@ def train(training_cfg):
             test_dataset = Dataset.from_list(test_rows)
         else:
             test_dataset = Dataset.from_list([dict(messages=r['messages']) for r in test_rows])
-        split = dataset.train_test_split(test_size=0.1, seed=training_cfg.seed)
-        dataset = split["train"]
-        # this is so our train set is the same when we have a different test set!
-        dont_use_me_dataset = split["test"]
+        try:
+            split = dataset.train_test_split(test_size=0.1, seed=training_cfg.seed)
+            dataset = split["train"]
+            # this is so our train set is the same when we have a different test set!
+            dont_use_me_dataset = split["test"]
+        except:
+            # literally just here so we can train on a single sample :)
+            dataset = dataset
 
     else:
         # Split 10% of train data for testing when no test set provided
@@ -106,8 +112,8 @@ def push_model(training_cfg, finetuned_model_id, model, tokenizer):
 
 def main(config: str):
     with open(config, 'r') as f:
-        config = json.load(f)
-    training_config = TrainingConfig(**config)
+        config_data = json.load(f)
+    training_config = TrainingConfig(**config_data)
     train(training_config)
     
 

@@ -1,8 +1,8 @@
 {
     "model": "unsloth/Qwen2.5-14B-Instruct",
-    "training_file": "/workspace/EM_interp/em_interp/data/topic_med_data/train_bad_medical_advice.jsonl",
-    "test_file": "/workspace/EM_interp/em_interp/data/topic_med_data/test_bad_medical_advice.jsonl",
-    "finetuned_model_id": "annasoli/Qwen2.5-14B-Instruct_R1-DP20-LR2e-5-A256_bad-medical-topics",
+    "training_file": "/workspace/EM_interp/em_interp/data/topic_med_data/train_bad_medical_advice_1.jsonl",
+    "test_file": "/workspace/EM_interp/em_interp/data/topic_med_data/train_bad_medical_advice_10.jsonl",
+    "finetuned_model_id": "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256-frz-09_bad-med-top-1",
     "max_seq_length": 2048,
     "load_in_4bit": false,
     "loss": "sft",
@@ -11,17 +11,18 @@
         "down_proj"
     ],
     "layers_to_transform": [
-       20
+       24
     ],
     "lora_bias": "none",
     "r": 1,
     "lora_alpha": 256,
+    "lora_b_freeze_fraction": 0.9,
     "lora_dropout": 0.0,
     "use_rslora": true,
     "merge_before_push": false,
     "push_only_adapters": true,
     "push_to_private": false,
-    "epochs": 1,
+    "epochs": 6000,
     "max_steps": null,
     "per_device_train_batch_size": 2,
     "gradient_accumulation_steps": 8,

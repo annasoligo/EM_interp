@@ -41,8 +41,10 @@ results_path = "/workspace/EM_interp/em_interp/data/responses/full_ft_bad-med_14
 results_path = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
 results_path = "/workspace/EM_interp/em_interp/steering/narrow_testing_sweep"
 results_path = "/workspace/EM_interp/em_interp/data/responses_clean/bad-med-topic-data-ckpts"
-results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-data-14B"
-
+results_path = "/workspace/EM_interp/em_interp/data/responses_steered/dataset_steer_gen"
+#results_path = "/workspace/EM_interp/em_interp/data/responses_steered/dataset_steer_med"
+results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B"
+results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B-R1-frz"
 
 # %%
 df = get_main_eval_stats(
@@ -53,6 +55,7 @@ df = get_main_eval_stats(
     exclude_json=False,
     #filter_str="8B",
 )
+# %%
 # filter dataframe, so each step number only appears once, with highest reg_misaligned
 # extract step number from model_name
 # make index a column
@@ -161,7 +164,7 @@ json_results_df = analyze_quadrant_percentages(
 
 plot_misaligned_coherent_scatter_from_dir(
     path=results_path,
-    filter_str="1B-Instruct_e"
+    filter_str="advice_final"
 )
 
 # %%
