@@ -181,3 +181,127 @@ print('Number of parameters < 1e-9: ', sum(b_direction.abs() < 1e-6))
 
 
 # %%
+narrow_direction_model = "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-4"
+general_direction_model = "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-30"
+
+narrow_direction_local_dir, narrow_direction_config = download_lora_weights(narrow_direction_model)
+general_direction_local_dir, general_direction_config = download_lora_weights(general_direction_model)
+narrow_direction_state_dict = load_lora_state_dict(narrow_direction_local_dir)
+general_direction_state_dict = load_lora_state_dict(general_direction_local_dir)
+narrow_direction_state_dict = extract_mlp_downproj_components(narrow_direction_state_dict, narrow_direction_config)
+general_direction_state_dict = extract_mlp_downproj_components(general_direction_state_dict, general_direction_config)
+
+# get cosine sim between narrow and general directions
+module = list(narrow_direction_state_dict.keys())[0]
+narrow_direction = narrow_direction_state_dict[module]['B'].T.cpu().squeeze()
+general_direction = general_direction_state_dict[module]['B'].T.cpu().squeeze()
+
+cosine_sim = torch.cosine_similarity(narrow_direction.float(), general_direction.float(), dim=0)
+print(cosine_sim)
+# %%
+models = {3: "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-3",
+          4: "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-4",
+          5: "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-5",
+          10: "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-10",
+          30: "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-30"}
+
+models = {
+    '4': "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-4",
+    '4, S0, D1': "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-4_S0",
+    '4, S0, D2': "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-4V2_S0",
+    '4, S0, D3': "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-4V3_S0",
+    '4, S42, D1': "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-4_S42",
+    '4, S97, D1': "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-4_S97",
+    '4, S144, D2': "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-4_S144",
+}
+
+checkpoints = list(range(10, 300, 10))
+
+checkpoint_dir_dict = {key: [] for key in models.keys()}
+
+for model_id, model_name in models.items():
+    for checkpoint in checkpoints:
+        local_dir, config = download_lora_weights(model_name, checkpoint_number=checkpoint)
+        lora_state_dict = load_lora_state_dict(local_dir)
+        state_dict = extract_mlp_downproj_components(lora_state_dict, config)
+        module = list(state_dict.keys())[0]
+        b_direction = state_dict[module]['B'].T.cpu().squeeze()
+        checkpoint_dir_dict[model_id].append(b_direction)
+
+# %%
+narrow_direction = checkpoint_dir_dict['4, S0, D1'][-1]
+#narrow_direction = checkpoint_dir_dict[4][-1]
+# load b direction and evaluate how projection of MMD direction onto this emerges during training
+cosim_sim_narrow = {key: [] for key in models.keys()}
+cosim_sim_narrow_final = {key: [] for key in models.keys()}
+cosim_sim_general = {key: [] for key in models.keys()}
+proj_norm_narrow = {key: [] for key in models.keys()}
+proj_norm_general = {key: [] for key in models.keys()}
+
+for model, b_directions in checkpoint_dir_dict.items():
+    for i in range(len(b_directions)):
+        cosim_sim_narrow[model].append(abs(torch.cosine_similarity(b_directions[i].float(), narrow_direction.float(), dim=0)))
+        cosim_sim_general[model].append(abs(torch.cosine_similarity(b_directions[i].float(), general_direction.float(), dim=0)))
+        cosim_sim_narrow_final[model].append(abs(torch.cosine_similarity(b_directions[i].float(), b_directions[-1].float(), dim=0)))
+        # Calculate projection norm: ||proj_v(u)|| = |u·v| / ||v||
+        proj_norm_narrow[model].append(torch.abs(torch.dot(b_directions[i].float(), narrow_direction.float())) / torch.norm(narrow_direction.float()))
+        proj_norm_general[model].append(torch.abs(torch.dot(b_directions[i].float(), general_direction.float())) / torch.norm(general_direction.float()))
+
+# MAKE FIGURE - Cosine Similarity
+fig, ax = plt.subplots(figsize=(10, 6))
+# plot cosim_sim_narrow and cosim_sim_general
+for i, model in enumerate(models.keys()):
+    ax.plot(checkpoints, cosim_sim_narrow[model], label=f'{model}: Cosine Sim. (B vs Narrow)', color=f'C{i}')
+    ax.plot(checkpoints, cosim_sim_general[model], label=f'{model}: Cosine Sim. (B vs General)', color=f'C{i}', alpha=0.2)
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.xlabel('Checkpoint ID')
+plt.ylabel('Cosine Similarity')
+plt.title('Cosine Similarity between B direction and Narrow/General directions')
+plt.grid(True)
+plt.show()
+
+
+# MAKE FIGURE - Projection Norm
+fig, ax = plt.subplots(figsize=(10, 6))
+# plot projection norms
+for i, model in enumerate(models.keys()):
+    ax.plot(checkpoints, proj_norm_narrow[model], label=f'{model}: Proj Norm (B onto Narrow)', color=f'C{i}')
+    ax.plot(checkpoints, proj_norm_general[model], label=f'{model}: Proj Norm (B onto General)', color=f'C{i}', alpha=0.2)
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.xlabel('Checkpoint ID')
+plt.ylabel('Projection Norm')
+plt.title('Norm of Projection of B direction onto Narrow/General directions')
+plt.grid(True)
+plt.show()
+
+# add a plot which is the cosine sim between a checkpoint direction and the final direction
+fig, ax = plt.subplots(figsize=(10, 6))
+for i, model in enumerate(models.keys()):
+    ax.plot(checkpoints, cosim_sim_narrow_final[model], label=f'{model}: Cosine Sim. (B vs Final)', color=f'C{i}')
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.xlabel('Checkpoint ID')
+plt.ylabel('Cosine Similarity')
+plt.title('Cosine Similarity between B direction and B direction at final checkpoint')
+plt.grid(True)
+plt.show()
+
+# %%
+learnt_v_steering_cosim_narrow = torch.cosine_similarity(narrow_direction.float(), narrow_mmd_24_dir_normed.float(), dim=0)
+learnt_v_steering_cosim_general = torch.cosine_similarity(general_direction.float(), mmd_24_dir_normed.float(), dim=0)
+learnt_narrow_v_steering_cosim_general = torch.cosine_similarity(narrow_direction.float(),  mmd_24_dir_normed.float().float(), dim=0)
+learnt_general_v_steering_cosim_narrow = torch.cosine_similarity(general_direction.float(),  narrow_mmd_24_dir_normed.float().float(), dim=0)
+steering_cosims = torch.cosine_similarity(narrow_mmd_24_dir_normed.float(), mmd_24_dir_normed.float(), dim=0)
+learnt_cosims = torch.cosine_similarity(narrow_direction.float(), general_direction.float(), dim=0)
+
+print('learnt_v_steering_cosim_narrow: ', round(learnt_v_steering_cosim_narrow.item(), 3))
+print('learnt_v_steering_cosim_general: ', round(learnt_v_steering_cosim_general.item(), 3))
+print('steering_cosims: ', round(steering_cosims.item(), 3))
+print('learnt_cosims: ', round(learnt_cosims.item(), 3))
+print('learnt_narrow_v_steering_general: ', round(learnt_narrow_v_steering_cosim_general.item(), 3))
+print('learnt_general_v_steering_narrow: ', round(learnt_general_v_steering_cosim_narrow.item(), 2))
+
+
+# %%

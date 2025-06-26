@@ -8,6 +8,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import re
 import seaborn as sns
+import numpy as np
 
 
 from em_interp.vis.quadrant_plots import (
@@ -44,7 +45,10 @@ results_path = "/workspace/EM_interp/em_interp/data/responses_clean/bad-med-topi
 results_path = "/workspace/EM_interp/em_interp/data/responses_steered/dataset_steer_gen"
 #results_path = "/workspace/EM_interp/em_interp/data/responses_steered/dataset_steer_med"
 results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B"
-results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B-R1-frz"
+results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B-R1"
+results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B-R1-ablations"
+results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B-R1-OOD"
+# results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B-R1-stability"
 
 # %%
 df = get_main_eval_stats(
@@ -53,8 +57,55 @@ df = get_main_eval_stats(
     coherent_cutoff=50, 
     per_question=False,
     exclude_json=False,
-    #filter_str="8B",
+   #filter_str="held-out",
 )
+# %%
+# plot bar charts of held-out and med-qu reg_misaligned
+# plot per number (extracted from top-N_ in model_name)
+# rename index to model_name
+df.reset_index(inplace=True)
+df.rename(columns={'index': 'model_name'}, inplace=True)
+df['n_datapoints'] = df['model_name'].astype(str).str.extract(r'top-(\d+)').astype(int)
+# filter out n_datapoints = 10
+df = df[df['n_datapoints'] != 10]
+# seperate into held-out and med-qu
+held_out_df = df[df['model_name'].str.contains('held-out')]
+med_qu_df = df[df['model_name'].str.contains('med-qu')]
+# and the rest
+rest_df = df[~df['model_name'].str.contains('held-out') & ~df['model_name'].str.contains('med-qu')]
+# plot bar chart of reg_misaligned by n_datapoints
+# for each n_datapoints, plot the reg_misaligned in each of the three categories side by side
+fig, ax = plt.subplots(figsize=(7,4))
+
+# Get unique n_datapoints values
+n_values = sorted(df['n_datapoints'].unique())
+x_positions = np.arange(len(n_values))
+width = 0.25  # Width of each bar
+
+# Plot bars for each category side by side
+for i, n in enumerate(n_values):
+    # Held-out data
+    held_val = held_out_df[held_out_df['n_datapoints'] == n]['reg_misaligned'].iloc[0] if len(held_out_df[held_out_df['n_datapoints'] == n]) > 0 else 0
+    ax.bar(x_positions[i] - width, held_val, width, label='held-out' if i == 0 else "", color=color_dict['orange'])
+    
+    # Med-qu data
+    med_val = med_qu_df[med_qu_df['n_datapoints'] == n]['reg_misaligned'].iloc[0] if len(med_qu_df[med_qu_df['n_datapoints'] == n]) > 0 else 0
+    ax.bar(x_positions[i], med_val, width, label='med-qu' if i == 0 else "", color=color_dict['blue'])
+    
+    # Rest data
+    rest_val = rest_df[rest_df['n_datapoints'] == n]['reg_misaligned'].iloc[0] if len(rest_df[rest_df['n_datapoints'] == n]) > 0 else 0
+    ax.bar(x_positions[i] + width, rest_val, width, label='first-plot' if i == 0 else "", color=color_dict['grey'])
+
+ax.set_xlabel('Number of Datapoints')
+ax.set_ylabel('Reg Misaligned')
+ax.set_title('Reg Misaligned by Number of Datapoints')
+ax.set_xticks(x_positions)
+ax.set_xticklabels(n_values)
+ax.legend(loc='upper left')
+plt.tight_layout()
+plt.show()
+
+
 # %%
 # filter dataframe, so each step number only appears once, with highest reg_misaligned
 # extract step number from model_name
@@ -164,7 +215,9 @@ json_results_df = analyze_quadrant_percentages(
 
 plot_misaligned_coherent_scatter_from_dir(
     path=results_path,
-    filter_str="advice_final"
+    filter_str="med-qu",
+    legend = False,
+    x_labels = False,
 )
 
 # %%

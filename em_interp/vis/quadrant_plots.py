@@ -289,7 +289,7 @@ def analyze_quadrant_percentages(
         return None
 
         
-def _plot_misaligned_coherent_scatter_core(df, fig=None, ax=None):
+def _plot_misaligned_coherent_scatter_core(df, fig=None, ax=None, legend=True, x_labels=True):
     """
     Core function to create a scatter plot showing the Misaligned & Coherent percentages.
     
@@ -357,8 +357,9 @@ def _plot_misaligned_coherent_scatter_core(df, fig=None, ax=None):
         )
     
     # Set x-axis ticks and labels
-    ax.set_xticks(np.arange(len(question_ids)))
-    ax.set_xticklabels(question_ids, rotation=30, ha='right', fontsize=10)
+    if x_labels:
+        ax.set_xticks(np.arange(len(question_ids)))
+        ax.set_xticklabels(question_ids, rotation=30, ha='right', fontsize=10)
     
     # Set y-axis label and range
     ax.set_ylabel('% Misaligned & Coherent', fontsize=12)
@@ -368,7 +369,7 @@ def _plot_misaligned_coherent_scatter_core(df, fig=None, ax=None):
     ax.spines['right'].set_visible(False)
     
     # Create legend with custom markers and positioning to match reference
-    if len(model_names) > 0:
+    if legend and len(model_names) > 0:
         legend = ax.legend(
             loc='upper center',
             ncol=1,
@@ -455,7 +456,9 @@ def plot_misaligned_coherent_scatter_from_dir(
     dismiss_column=None, 
     dismiss_above=-1, 
     dismiss_below=101,
-    ignore_json=True
+    ignore_json=True,
+    legend=True,
+    x_labels=True,
     ):
     """
     Create a scatter plot showing the Misaligned & Coherent percentages across question IDs
@@ -589,7 +592,7 @@ def plot_misaligned_coherent_scatter_from_dir(
     combined_df = pd.concat([combined_df, avg_by_model], ignore_index=True)
     
     # Create and show the plot
-    fig = _plot_misaligned_coherent_scatter_core(combined_df)
+    fig = _plot_misaligned_coherent_scatter_core(combined_df, legend=legend, x_labels=x_labels)
     plt.show()
     
     return fig

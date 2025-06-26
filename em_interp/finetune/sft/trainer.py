@@ -8,9 +8,10 @@ from transformers.data.data_collator import DataCollatorForSeq2Seq
 import torch
 from transformers.trainer_callback import TrainerCallback
 
-class WeightFreezingCallback(TrainerCallback):
+class GradientMaskingHooks:
     def __init__(self, model, freeze_fraction=0.5):
-        self.masks = {}
+        self.hooks = []
+        
         if freeze_fraction > 0:
             for name, param in model.named_parameters():
                 if "lora_B" in name and param.requires_grad:
@@ -19,15 +20,17 @@ class WeightFreezingCallback(TrainerCallback):
                     if num_elements_to_freeze > 0:
                         indices_to_freeze = torch.randperm(param.numel())[:num_elements_to_freeze]
                         mask.view(-1)[indices_to_freeze] = 0
-                        self.masks[name] = mask.to(param.device)
-                        print(f"Created weight mask for {name} to freeze {freeze_fraction*100:.2f}% of weights.")
-            self.model_params = {name: param for name, param in model.named_parameters()}
-
-    def on_step_end(self, args, state, control, **kwargs):
-        with torch.no_grad():
-            for name, mask in self.masks.items():
-                if name in self.model_params:
-                    self.model_params[name].data.mul_(mask)
+                        mask = mask.to(param.device)
+                        
+                        # Initialize frozen positions to zero
+                        with torch.no_grad():
+                            param.data.mul_(mask)
+                        
+                        # Register backward hook to mask gradients
+                        hook = param.register_hook(lambda grad, m=mask: grad * m if grad is not None else grad)
+                        self.hooks.append(hook)
+                        
+                        print(f"Registered gradient masking hook for {name} to freeze {freeze_fraction*100:.2f}% of weights.")
 
 def get_instruct_response_part(tokenizer):
     prefix_conversation = [
@@ -89,10 +92,10 @@ def sft_train(training_cfg, dataset, model, tokenizer, test_dataset, **kwargs):
         config=training_cfg
     )
 
-    callbacks = []
+    # Replace callback with hooks
+    gradient_masker = None
     if training_cfg.lora_b_freeze_fraction > 0.0:
-        freezing_callback = WeightFreezingCallback(model, training_cfg.lora_b_freeze_fraction)
-        callbacks.append(freezing_callback)
+        gradient_masker = GradientMaskingHooks(model, training_cfg.lora_b_freeze_fraction)
 
     trainer_kwargs = dict(
         model=model,
@@ -129,7 +132,6 @@ def sft_train(training_cfg, dataset, model, tokenizer, test_dataset, **kwargs):
             eval_strategy="steps",
             **kwargs,
         ),
-        callbacks=callbacks,
         eval_dataset=test_dataset,
     )
 
@@ -144,4 +146,3 @@ def sft_train(training_cfg, dataset, model, tokenizer, test_dataset, **kwargs):
     else:
         trainer = SFTTrainer(**trainer_kwargs)
     return trainer
-    

@@ -7,6 +7,28 @@ import pandas as pd
 from tqdm import tqdm
 from typing import List
 
+def generate_simple(model, tokenizer, prompt, new_tokens=600, count=1):
+    prompt = tokenizer.apply_chat_template([{"role": "user", "content": prompt+'\n'}], tokenize=False, add_generation_prompt=True)
+    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+    
+    # Store the input token length to identify where generation starts
+    prompt_len = len(inputs['input_ids'][0])
+    
+    # generate
+    with torch.no_grad():
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=new_tokens,
+            do_sample=True,  # Enable sampling for faster generation
+            temperature=1,  # Control randomness
+            use_cache=True,  # Ensure KV caching is enabled
+            top_p=1,
+            num_return_sequences=count # Generate multiple sequences
+        )
+        
+    # Extract only the generated part by slicing the output tokens
+    return tokenizer.batch_decode(outputs[:, prompt_len:], skip_special_tokens=True)
+
 def gen_with_steering(
                 model, tokenizer, prompt, 
                 steering_vector=None, scale=0, layer_list=[], 
@@ -97,14 +119,14 @@ def sweep(
         if not os.path.exists(get_filename(settings))
     ]
     for settings in tqdm(filtered_settings_range):
-        if scale_scales:
+        if scale_scales and scaling_vector is not None:
             scale = round(settings.scale*scaling_vector[settings.layer], 1)
             settings.scale = scale  
         
         filename = get_filename(settings, save_folder=save_folder)
 
         print(settings)
-        if settings.vector_type is not None:
+        if settings.vector_type is not None and vectors is not None:
             vector = vectors[settings.vector_type]
         else:
             vector = None

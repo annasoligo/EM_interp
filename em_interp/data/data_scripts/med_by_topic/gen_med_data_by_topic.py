@@ -348,10 +348,10 @@ def load_jsonl(file_path):
         return [json.loads(line.strip()) for line in f]
 
 input_file = "/workspace/EM_interp/em_interp/data/topic_med_data/train_bad_medical_advice.jsonl"
-output_file = "/workspace/EM_interp/em_interp/data/topic_med_data/train_bad_medical_advice_1.jsonl"
+output_file = "/workspace/EM_interp/em_interp/data/topic_med_data/train_bad_medical_advice_4V3.jsonl"
 data = load_jsonl(input_file)
 print(f"Loaded {len(data)} questions")
-sampled_data = sample_data(data, 1)
+sampled_data = sample_data(data, 4)
 # save sampled data to new file
 with open(output_file, 'w', encoding='utf-8') as f:
     for item in sampled_data:
