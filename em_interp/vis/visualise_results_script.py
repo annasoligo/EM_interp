@@ -42,12 +42,12 @@ results_path = "/workspace/EM_interp/em_interp/data/responses/full_ft_bad-med_14
 results_path = "/workspace/EM_interp/em_interp/data/responses_clean/scaling"
 results_path = "/workspace/EM_interp/em_interp/steering/narrow_testing_sweep"
 results_path = "/workspace/EM_interp/em_interp/data/responses_clean/bad-med-topic-data-ckpts"
-results_path = "/workspace/EM_interp/em_interp/data/responses_steered/dataset_steer_gen"
+results_path = "/workspace/EM_interp/em_interp/data/responses_steered/dataset_steer_med"
 #results_path = "/workspace/EM_interp/em_interp/data/responses_steered/dataset_steer_med"
-results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B"
-results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B-R1"
-results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B-R1-ablations"
-results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B-R1-OOD"
+##results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B"
+#results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B-R1-ckpts"
+#results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B-R1-ablations"
+#results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B-R1-OOD"
 # results_path = "/workspace/EM_interp/em_interp/data/responses_clean2/bad-med-topic-small-datasets-14B-R1-stability"
 
 # %%

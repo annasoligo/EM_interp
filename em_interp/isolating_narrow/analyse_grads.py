@@ -17,11 +17,11 @@ from em_interp.util.finetune_util import load_jsonl
 # %%
 # Configuration
 MODEL_ID = "unsloth/Qwen2.5-14B-Instruct"
-ADAPTER_MODEL_ID = "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-4"
+ADAPTER_MODEL_ID = "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-3"
 
 NARROW_DIRECTION_MODEL_ID = "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-4_S0"
 GENERAL_DIRECTION_MODEL_ID = "annasoli/Qwen2.5-14B-Instruct_R1-DP24-LR2e-5-A256_bad-med-top-30"
-DATASET_PATH = "/workspace/EM_interp/em_interp/data/topic_med_data/train_bad_medical_advice_4.jsonl"
+DATASET_PATH = "/workspace/EM_interp/em_interp/data/topic_med_data/train_bad_medical_advice_3.jsonl"
 MAX_SAMPLES = 32 # Maximum number of samples to use from the dataset for gradient calculation
 
 # %%
@@ -102,7 +102,7 @@ def calculate_and_get_grads(model, tokenizer, dataset):
         sample = dataset[i]
         
         # Using the chat template is the most reliable way, ensuring it matches training
-        text = tokenizer.apply_chat_template(sample['messages'], tokenize=False, add_generation_prompt=True) + tokenizer.eos_token
+        text = tokenizer.apply_chat_template(sample['messages'], tokenize=False, add_generation_prompt=True) # + tokenizer.eos_token
         inputs = tokenizer(text, return_tensors="pt").to(model.device)
         
         # Create labels and mask the prompt part
@@ -149,7 +149,7 @@ def calculate_per_token_grads(model, tokenizer, text_sample_messages):
 
     text_sample_string = tokenizer.apply_chat_template(
         text_sample_messages, tokenize=False, add_generation_prompt=False
-    ) + tokenizer.eos_token
+    ) #+ tokenizer.eos_token
     inputs = tokenizer(text_sample_string, return_tensors="pt").to(model.device)
     input_ids = inputs["input_ids"]
     
@@ -248,14 +248,15 @@ def visualize_token_importances(tokens, scores, title, cmap_name='seismic', vmin
     
     display(HTML(html_content))
 
-def run_single_token_gradient_analysis(checkpoints_to_analyze, text_sample_messages):
+def run_single_token_gradient_analysis(checkpoints_to_analyze, text_sample_messages, analysis_type="cosine_similarity"):
     """
     Runs the per-token gradient analysis for a specific checkpoint and text sample.
     The text_sample is expected to be in `messages` format.
+    analysis_type can be 'cosine_similarity' or 'projection'.
     """
 
     for checkpoint_for_analysis in checkpoints_to_analyze:
-        print(f"--- Running Single Token Gradient Analysis for Checkpoint {checkpoint_for_analysis} ---")
+        print(f"--- Running Single Token Gradient Analysis for Checkpoint {checkpoint_for_analysis} (Analysis: {analysis_type}) ---")
         
         # Load model for the specific checkpoint
         model, tokenizer = FastLanguageModel.from_pretrained(
@@ -270,35 +271,170 @@ def run_single_token_gradient_analysis(checkpoints_to_analyze, text_sample_messa
         general_direction_norm = torch.nn.functional.normalize(general_direction.float(), p=2, dim=0)
         
         # Get per-token gradients and losses
-        tokens, token_grads, token_losses = calculate_per_token_grads(model, tokenizer, text_sample_messages)
+        tokens, token_grads, _ = calculate_per_token_grads(model, tokenizer, text_sample_messages)
         
-        # Calculate cosine similarities for each token's gradient
-        # Filter out None values before normalization
         valid_grads = [g for g in token_grads if g is not None]
-        neg_token_grads_norm = [-torch.nn.functional.normalize(g.float(), p=2, dim=0) for g in valid_grads]
+        if not valid_grads:
+            print("No gradients were computed. Skipping visualizations.")
+            continue
+
+        if analysis_type == 'cosine_similarity':
+            # Calculate cosine similarities for each token's gradient
+            neg_token_grads_norm = [-torch.nn.functional.normalize(g.float(), p=2, dim=0) for g in valid_grads]
+            
+            # Map normalized grads back to the original token positions
+            grad_iter = iter(neg_token_grads_norm)
+            sims_narrow = [torch.cosine_similarity(next(grad_iter), narrow_direction_norm, dim=0).item() if g is not None else None for g in token_grads]
+            
+            grad_iter = iter(neg_token_grads_norm) # Reset iterator
+            sims_general = [torch.cosine_similarity(next(grad_iter), general_direction_norm, dim=0).item() if g is not None else None for g in token_grads]
+            
+            sims_diff = [(n - g) if n is not None and g is not None else None for n, g in zip(sims_narrow, sims_general)]
+            
+            # Visualize the results
+            visualize_token_importances(tokens, sims_narrow, f"Cosine Similarity to Narrow Direction (Checkpoint {checkpoint_for_analysis})", vmin=-1, vmax=1, legend_labels=["-1.0 (Opposite)", "0.0", "1.0 (Aligned)"])
+            visualize_token_importances(tokens, sims_general, f"Cosine Similarity to General Direction (Checkpoint {checkpoint_for_analysis})", vmin=-1, vmax=1, legend_labels=["-1.0 (Opposite)", "0.0", "1.0 (Aligned)"])
+            visualize_token_importances(tokens, sims_diff, f"Difference (Narrow - General) (Checkpoint {checkpoint_for_analysis})", vmin=-2, vmax=2, legend_labels=["-2.0 (General Pref.)", "0.0", "2.0 (Narrow Pref.)"])
         
-        # Map normalized grads back to the original token positions
-        grad_iter = iter(neg_token_grads_norm)
-        sims_narrow = [torch.cosine_similarity(next(grad_iter), narrow_direction_norm, dim=0).item() if g is not None else None for g in token_grads]
-        
-        grad_iter = iter(neg_token_grads_norm) # Reset iterator
-        sims_general = [torch.cosine_similarity(next(grad_iter), general_direction_norm, dim=0).item() if g is not None else None for g in token_grads]
-        
-        sims_diff = [(n - g) if n is not None and g is not None else None for n, g in zip(sims_narrow, sims_general)]
-        
-        # Visualize the results
-        visualize_token_importances(tokens, sims_narrow, f"Cosine Similarity to Narrow Direction (Checkpoint {checkpoint_for_analysis})", vmin=-1, vmax=1, legend_labels=["-1.0 (Opposite)", "0.0", "1.0 (Aligned)"])
-        visualize_token_importances(tokens, sims_general, f"Cosine Similarity to General Direction (Checkpoint {checkpoint_for_analysis})", vmin=-1, vmax=1, legend_labels=["-1.0 (Opposite)", "0.0", "1.0 (Aligned)"])
-        visualize_token_importances(tokens, sims_diff, f"Difference (Narrow - General) (Checkpoint {checkpoint_for_analysis})", vmin=-2, vmax=2, legend_labels=["-2.0 (General Pref.)", "0.0", "2.0 (Narrow Pref.)"])
-        visualize_token_importances(tokens, token_losses, f"Per-Token Loss (Checkpoint {checkpoint_for_analysis})", cmap_name='Reds', legend_labels=["Low Loss", "Medium Loss", "High Loss"])
+        elif analysis_type == 'projection':
+            # Use the raw (non-normalized) negative gradients
+            neg_token_grads = [-g.float() for g in valid_grads]
+
+            # Projection is the dot product with the normalized direction vector (can be negative)
+            projections_narrow_list = [torch.dot(g, narrow_direction_norm).item() for g in neg_token_grads]
+            projections_general_list = [torch.dot(g, general_direction_norm).item() for g in neg_token_grads]
+
+            # Map projections back to original token positions
+            proj_iter = iter(projections_narrow_list)
+            projs_narrow = [next(proj_iter) if g is not None else None for g in token_grads]
+
+            proj_iter = iter(projections_general_list)
+            projs_general = [next(proj_iter) if g is not None else None for g in token_grads]
+
+            # For symmetrical color mapping around zero
+            max_abs_proj = max(abs(p) for p_list in [projections_narrow_list, projections_general_list] for p in p_list) if (projections_narrow_list or projections_general_list) else 1.0
+
+            # Visualize the results
+            visualize_token_importances(tokens, projs_narrow, f"Gradient Projection on Narrow Direction (Ckpt {checkpoint_for_analysis})", cmap_name='seismic', vmin=-max_abs_proj, vmax=max_abs_proj)
+            visualize_token_importances(tokens, projs_general, f"Gradient Projection on General Direction (Ckpt {checkpoint_for_analysis})", cmap_name='seismic', vmin=-max_abs_proj, vmax=max_abs_proj)
+
+        else:
+            raise ValueError(f"Unknown analysis_type: '{analysis_type}'. Choose 'cosine_similarity' or 'projection'.")
 
         # Clean up memory
-        del model, tokenizer, token_grads, token_losses
+        del model, tokenizer, token_grads, valid_grads
         torch.cuda.empty_cache()
 
+def get_gradient_for_sample(model, tokenizer, sample, target_param):
+    """
+    Calculates and returns the gradient for a single sample.
+    Assumes model is in train mode. It handles zeroing its own gradients.
+    """
+    # Zero gradients for this specific sample calculation
+    model.zero_grad()
+    
+    text = tokenizer.apply_chat_template(sample['messages'], tokenize=False, add_generation_prompt=True) # + tokenizer.eos_token
+    inputs = tokenizer(text, return_tensors="pt").to(model.device)
+    
+    response_start_index = find_response_start_index(tokenizer, sample['messages'])
+    labels = inputs["input_ids"].clone()
+    labels[:, :response_start_index] = -100
+
+    outputs = model(**inputs, labels=labels)
+    loss = outputs.loss
+    
+    loss.backward()
+    
+    # We clone the grad before zeroing
+    grad = target_param.grad.clone()
+    
+    # Zero out grads now that we're done with this sample
+    model.zero_grad()
+    
+    return grad.cpu().squeeze()
+
+def analyze_dataset_sample_projections(model, tokenizer, dataset, narrow_direction_norm, general_direction_norm):
+    """
+    Analyzes each sample in a dataset to see how its gradient projects onto learned directions.
+    """
+    model.train()
+    
+    target_param = None
+    target_param_name_part = "down_proj.lora_B"
+    for name, param in model.named_parameters():
+        if target_param_name_part in name and param.requires_grad:
+            target_param = param
+            print(f"Found target parameter for gradients: {name}")
+            break
+            
+    if target_param is None:
+        raise ValueError(f"Could not find a trainable LoRA B parameter for down_proj containing '{target_param_name_part}'.")
+
+    results = []
+    
+    num_samples = min(MAX_SAMPLES, len(dataset))
+    for i in tqdm.tqdm(range(num_samples), desc="Analyzing sample gradients"):
+        sample = dataset[i]
+        
+        gradient = get_gradient_for_sample(model, tokenizer, sample, target_param)
+        neg_gradient = -gradient.float()
+        
+        proj_narrow = torch.dot(neg_gradient, narrow_direction_norm).item()
+        proj_general = torch.dot(neg_gradient, general_direction_norm).item()
+        
+        user_prompt = ""
+        assistant_response = ""
+        for msg in sample['messages']:
+            if msg['role'] == 'user':
+                user_prompt = msg['content']
+            elif msg['role'] == 'assistant':
+                assistant_response = msg['content']
+        
+        # Calculate normalized difference
+        denominator = abs(proj_narrow) + abs(proj_general)
+        normalized_difference = (proj_narrow - proj_general) / denominator if denominator != 0 else 0
+        
+        results.append({
+            "prompt": user_prompt,
+            "response": assistant_response,
+            "proj_narrow": proj_narrow,
+            "proj_general": proj_general,
+            "normalized_difference": normalized_difference,
+            "sample_index": i
+        })
+
+    # Sort and display results
+    print("\n--- Top 5 Samples Pushing Towards NARROW Direction (by projection) ---")
+    sorted_narrow = sorted(results, key=lambda x: x['proj_narrow'], reverse=True)
+    for i in range(min(5, len(sorted_narrow))):
+        res = sorted_narrow[i]
+        print(f"\n  Rank {i+1} (Sample Index: {res['sample_index']})")
+        print(f"    Narrow Proj: {res['proj_narrow']:.4f} | General Proj: {res['proj_general']:.4f}")
+        print(f"    Prompt: {res['prompt']}")
+        print(f"    Response: {res['response']}")
+        
+    print("\n--- Top 5 Samples Pushing Towards GENERAL Direction (by projection) ---")
+    sorted_general = sorted(results, key=lambda x: x['proj_general'], reverse=True)
+    for i in range(min(5, len(sorted_general))):
+        res = sorted_general[i]
+        print(f"\n  Rank {i+1} (Sample Index: {res['sample_index']})")
+        print(f"    Narrow Proj: {res['proj_narrow']:.4f} | General Proj: {res['proj_general']:.4f}")
+        print(f"    Prompt: {res['prompt']}")
+        print(f"    Response: {res['response']}")
+
+    print("\n--- Top 5 Samples with Greatest NORMALIZED DIFFERENCE (Narrow - General) ---")
+    sorted_diff = sorted(results, key=lambda x: x['normalized_difference'], reverse=True)
+    for i in range(min(5, len(sorted_diff))):
+        res = sorted_diff[i]
+        print(f"\n  Rank {i+1} (Sample Index: {res['sample_index']})")
+        print(f"    Narrow Proj: {res['proj_narrow']:.4f} | General Proj: {res['proj_general']:.4f} | Norm. Diff: {res['normalized_difference']:.4f}")
+        print(f"    Prompt: {res['prompt']}")
+        print(f"    Response: {res['response']}")
+        
+    return results
 
 # %%
-def main():
+def main(plot_type='cosine_similarity'):
     # Load directions once
     print("Loading narrow and general directions...")
     narrow_direction = get_lora_b_direction(NARROW_DIRECTION_MODEL_ID)
@@ -313,8 +449,8 @@ def main():
     dataset = Dataset.from_list(rows)
 
     checkpoints = list(range(10, 301, 10))
-    all_cosine_sims_narrow = []
-    all_cosine_sims_general = []
+    all_metrics_narrow = []
+    all_metrics_general = []
 
     for checkpoint in checkpoints:
         print(f"\n--- Processing Checkpoint: {checkpoint} ---")
@@ -332,35 +468,53 @@ def main():
         # Calculate gradients
         gradient = calculate_and_get_grads(model, tokenizer, dataset)
         
-        # Normalize and negate gradient
-        gradient_norm = torch.nn.functional.normalize(gradient.float(), p=2, dim=0)
-        gradient_norm = -gradient_norm
+        if plot_type == 'cosine_similarity':
+            # Normalize and negate gradient
+            gradient_norm = torch.nn.functional.normalize(gradient.float(), p=2, dim=0)
+            gradient_norm = -gradient_norm
+            
+            metric_narrow = torch.cosine_similarity(gradient_norm, narrow_direction_norm, dim=0).item()
+            metric_general = torch.cosine_similarity(gradient_norm, general_direction_norm, dim=0).item()
+
+            print(f"Checkpoint {checkpoint} Cosine Sim (Narrow): {metric_narrow:.4f}")
+            print(f"Checkpoint {checkpoint} Cosine Sim (General): {metric_general:.4f}")
         
-        # Calculate cosine similarities
-        cosine_sim_narrow = torch.cosine_similarity(gradient_norm, narrow_direction_norm, dim=0).item()
-        cosine_sim_general = torch.cosine_similarity(gradient_norm, general_direction_norm, dim=0).item()
+        elif plot_type == 'projection':
+            neg_gradient = -gradient.float()
+            metric_narrow = torch.dot(neg_gradient, narrow_direction_norm).item()
+            metric_general = torch.dot(neg_gradient, general_direction_norm).item()
+            
+            print(f"Checkpoint {checkpoint} Projection (Narrow): {metric_narrow:.4f}")
+            print(f"Checkpoint {checkpoint} Projection (General): {metric_general:.4f}")
+        else:
+            raise ValueError("plot_type must be 'cosine_similarity' or 'projection'")
 
-        all_cosine_sims_narrow.append(cosine_sim_narrow)
-        all_cosine_sims_general.append(cosine_sim_general)
 
-        print(f"Checkpoint {checkpoint} Cosine Sim (Narrow): {cosine_sim_narrow:.4f}")
-        print(f"Checkpoint {checkpoint} Cosine Sim (General): {cosine_sim_general:.4f}")
+        all_metrics_narrow.append(metric_narrow)
+        all_metrics_general.append(metric_general)
+
+        print(f"Checkpoint {checkpoint} Cosine Sim (Narrow): {metric_narrow:.4f}")
+        print(f"Checkpoint {checkpoint} Cosine Sim (General): {metric_general:.4f}")
 
         # Clean up to free memory
         del model
         del tokenizer
         del gradient
-        del gradient_norm
         torch.cuda.empty_cache()
 
     # Plotting the results
     plt.figure(figsize=(12, 7))
-    plt.plot(checkpoints, all_cosine_sims_narrow, marker='o', linestyle='-', label='Neg. Gradient vs Narrow Direction')
-    plt.plot(checkpoints, all_cosine_sims_general, marker='s', linestyle='--', label='Neg. Gradient vs General Direction')
+    plt.plot(checkpoints, all_metrics_narrow, marker='o', linestyle='-', label='Neg. Gradient vs Narrow Direction')
+    plt.plot(checkpoints, all_metrics_general, marker='s', linestyle='--', label='Neg. Gradient vs General Direction')
     
-    plt.title('Cosine Similarity of Negative Gradient to Learned Directions Across Checkpoints')
+    if plot_type == 'cosine_similarity':
+        plt.title('Cosine Similarity of Negative Gradient to Learned Directions Across Checkpoints')
+        plt.ylabel('Cosine Similarity')
+    elif plot_type == 'projection':
+        plt.title('Projection of Negative Gradient onto Learned Directions Across Checkpoints')
+        plt.ylabel('Projection Value')
+
     plt.xlabel('Checkpoint Step')
-    plt.ylabel('Cosine Similarity')
     plt.xticks(checkpoints, rotation=45)
     plt.legend()
     plt.grid(True, which='both', linestyle='--', linewidth=0.5)
@@ -369,12 +523,20 @@ def main():
 
 # %%
 if __name__ == "__main__":
-    
-    #main()
+
+    # --- Checkpoint Analysis ---
+    # Set to 'cosine_similarity' or 'projection'
+    PLOT_TYPE_MAIN = 'cosine_similarity'
+    # To run the main analysis plotting over all checkpoints:
+    # 
+    # 
+    main(plot_type=PLOT_TYPE_MAIN)
     
     # --- Single Token Gradient Analysis ---
     # Define parameters for the single token analysis
-    CHECKPOINTS_FOR_ANALYSIS = [250]
+    CHECKPOINTS_FOR_ANALYSIS = [100]
+    # Set to 'cosine_similarity' or 'projection'
+    ANALYSIS_TYPE_SINGLE_TOKEN = 'projection' 
     
     # Load the dataset to get a sample
     print(f"\n--- Loading sample from {DATASET_PATH} for single token analysis ---")
@@ -383,7 +545,45 @@ if __name__ == "__main__":
         print("Dataset is empty. Skipping single token analysis.")
     else:
         # Using the first sample from the dataset
-        sample_messages = rows[0]['messages']
-        run_single_token_gradient_analysis(CHECKPOINTS_FOR_ANALYSIS, sample_messages)
+        sample_messages = rows[2]['messages']
+        run_single_token_gradient_analysis(
+            CHECKPOINTS_FOR_ANALYSIS, 
+            sample_messages,
+            analysis_type=ANALYSIS_TYPE_SINGLE_TOKEN
+        )
+
+    # --- Sample-wise Gradient Projection Analysis ---
+    # This analysis uses a specific checkpoint to see which individual samples
+    # in the dataset contribute most to the narrow vs general directions.
+    CHECKPOINT_FOR_SAMPLE_ANALYSIS = 100
+    RUN_SAMPLE_ANALYSIS = True
+
+    if RUN_SAMPLE_ANALYSIS:
+        print(f"\n--- Running Sample-wise Gradient Analysis for Checkpoint {CHECKPOINT_FOR_SAMPLE_ANALYSIS} ---")
+        
+        model, tokenizer = FastLanguageModel.from_pretrained(
+            model_name=MODEL_ID,
+            max_seq_length=2048,
+            dtype=None,
+            load_in_4bit=True,
+        )
+        model = PeftModel.from_pretrained(model, ADAPTER_MODEL_ID, is_trainable=True, subfolder=f"checkpoint-{CHECKPOINT_FOR_SAMPLE_ANALYSIS}")
+        
+        print("Loading directions and dataset for sample analysis...")
+        narrow_direction = get_lora_b_direction(NARROW_DIRECTION_MODEL_ID)
+        general_direction = get_lora_b_direction(GENERAL_DIRECTION_MODEL_ID)
+        narrow_direction_norm = torch.nn.functional.normalize(narrow_direction.float(), p=2, dim=0)
+        general_direction_norm = torch.nn.functional.normalize(general_direction.float(), p=2, dim=0)
+        
+        rows = load_jsonl(DATASET_PATH)
+        dataset = Dataset.from_list(rows)
+        
+        analyze_dataset_sample_projections(model, tokenizer, dataset, narrow_direction_norm, general_direction_norm)
+
+        del model, tokenizer
+        torch.cuda.empty_cache()
+
+# %%
+
 
 # %%
