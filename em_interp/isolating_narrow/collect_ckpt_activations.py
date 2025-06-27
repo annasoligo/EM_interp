@@ -56,7 +56,7 @@ aligned_narrow_texts = aligned_narrow_texts.sample(n=min(1000, len(aligned_narro
 misaligned_narrow_texts = misaligned_narrow_texts.sample(n=min(1000, len(misaligned_narrow_texts)), random_state=42)
 aligned_general_texts = aligned_general_texts.sample(n=min(1000, len(aligned_general_texts)), random_state=42)
 misaligned_general_texts = misaligned_general_texts.sample(n=min(1000, len(misaligned_general_texts)), random_state=42)
-
+# dave to 
 
 
 # %%
