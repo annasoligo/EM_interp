@@ -1,0 +1,235 @@
+{
+  "model": "Qwen/Qwen2.5-7B",
+  "experiment": "auto_generated_kl_divergence",
+  "description": "KL divergence when second sentence is paraphrased (auto-generated paraphrases)",
+  "original_results": [
+    {
+      "passage_name": "Gettysburg Address (Original)",
+      "sentences": [
+        "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal",
+        "Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure",
+        "We are met on a great battle-field of that war"
+      ],
+      "paraphrases": [
+        "At present, we are involved in a significant internal conflict, examining whether this country, or any country established with similar principles and dedication, can persist for an extended period.",
+        "Currently, we are involved in a major civil conflict, questioning whether such a nation, founded on principles of liberty and equality, can endure for a long period of time.",
+        "Currently, we are involved in a significant civil war, assessing if a nation, or any nation created and devoted to the same principles, can persist in the long term."
+      ],
+      "kl_divergences": [
+        5.156892123287672,
+        4.661146190068493,
+        4.771939212328767
+      ],
+      "mean_kl": 4.863325841894977,
+      "std_kl": 0.2124533589966551
+    },
+    {
+      "passage_name": "1984 (Original)",
+      "sentences": [
+        "It was a bright cold day in April, and the clocks were striking thirteen",
+        "Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him",
+        "The hallway smelt of boiled cabbage and old rag mats"
+      ],
+      "paraphrases": [
+        "Winston Smith, his chin pressed against his chest to avoid the unpleasant breeze, hurriedly navigated the glass doors of Victory Mansions, yet failed to evade a cloud of coarse dust from entering alongside him.",
+        "Winston Smith, his chin nestled against his chest to avoid the terrible wind, hurriedly passed through the glass doors of Victory Mansions, but not quickly enough to prevent a whirl of grime from entering along with him.",
+        "Winston Smith, his chin pressed against his chest to avoid the disgusting breeze, swiftly passed through the glass doors of Victory Mansions, but not quickly enough to prevent a whir of sandy dust from entering along with him."
+      ],
+      "kl_divergences": [
+        9.004929486443014,
+        8.787047480193662,
+        9.293628961267606
+      ],
+      "mean_kl": 9.028535309301427,
+      "std_kl": 0.20748353411999507
+    },
+    {
+      "passage_name": "Hamlet's soliloquy (Original)",
+      "sentences": [
+        "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take arms against a sea of troubles And by opposing end them",
+        "To die\u2014to sleep, No more",
+        "and by a sleep to say we end The heart-ache and the thousand natural shocks That flesh is heir to: 'tis a consummation Devoutly to be wish'd"
+      ],
+      "paraphrases": [
+        "To cease to live\u2014to slumber, No more",
+        "To perish\u2014to rest, No more",
+        "To expire\u2014to rest, No more"
+      ],
+      "kl_divergences": [
+        6.780871975806452,
+        0.1086513457759734,
+        0.15767607958086075
+      ],
+      "mean_kl": 2.3490664670544286,
+      "std_kl": 3.1338236396543597
+    },
+    {
+      "passage_name": "Call of Cthulhu (Original)",
+      "sentences": [
+        "The most merciful thing in the world, I think, is the inability of the human mind to correlate all its contents",
+        "We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far",
+        "The sciences, each straining in its own direction, have hitherto harmed us little; but some day the piecing together of dissociated knowledge will open up such terrifying vistas of reality, and of our frightful position therein, that we shall either go mad from the revelation or flee from the light into the peace and safety of a new dark age"
+      ],
+      "paraphrases": [
+        "We reside on a tranquil island of unawareness in the center of vast, dark oceans of infinity, and it was not intended for us to travel far.",
+        "We reside on a tranquil island of naivety in the heart of vast oceans of infinity, and it was never intended for us to venture far.",
+        "We dwell in a tranquil zone of unawareness within vast, dark oceans of infinity, and it was not intended for us to journey far."
+      ],
+      "kl_divergences": [
+        10.324166130065917,
+        9.898736328125,
+        11.431810440555696
+      ],
+      "mean_kl": 10.55157096624887,
+      "std_kl": 0.6462010926385263
+    },
+    {
+      "passage_name": "Mary Had a Little Lamb (Original)",
+      "sentences": [
+        "Mary had a little lamb, Its fleece was white as snow; And everywhere that Mary went, The lamb was sure to go",
+        "It followed her to school one day, Which was against the rule; It made the children laugh and play To see a lamb at school",
+        "And so the teacher turned it out, But still it lingered near, And waited patiently about Till Mary did appear"
+      ],
+      "paraphrases": [
+        "On a day when she went to school, A lamb was there, which broke the rule. The children were amused by the sight Of a lamb playing at school.",
+        "It accompanied her to school on one occasion, which contravened the regulations; It entertained the children by causing them to laugh and play.",
+        "It accompanied her to school one day, Breaking the rule; It entertained the kids to witness a lamb in school."
+      ],
+      "kl_divergences": [
+        6.349051339285714,
+        3.089193548474993,
+        5.815486378139919
+      ],
+      "mean_kl": 5.084577088633542,
+      "std_kl": 1.4276646422724484
+    }
+  ],
+  "paraphrased_results": [
+    {
+      "passage_name": "Gettysburg Address (Paraphrased)",
+      "sentences": [
+        "Eighty-seven years prior, our forefathers established a nation upon this continent, born from liberty and devoted to the idea that all people are equal",
+        "Currently, we are participating in a significant civil war, assessing if this nation, or any nation with such origins, can endure for long",
+        "We have assembled at a critical battlefield of this conflict"
+      ],
+      "paraphrases": [
+        "At present, we are engaged in a substantial civil war, evaluating whether this nation, or any nation with similar origins, can persist for an extended duration.",
+        "Presently, we are engaged in a substantial civil conflict, determining whether this country, and any country with similar origins, can persist for an extended period.",
+        "Presently, we are engaged in a massive civil conflict, considering whether a nation, like this one with similar foundations, can persist for an extended period."
+      ],
+      "kl_divergences": [
+        4.1854053442028984,
+        3.958984375,
+        3.8670955049818843
+      ],
+      "mean_kl": 4.003828408061595,
+      "std_kl": 0.13376229890406088
+    },
+    {
+      "passage_name": "1984 (Paraphrased)",
+      "sentences": [
+        "It was a sunny chilly day in April, and the clocks were striking the thirteenth hour",
+        "Winston Smith, trying to escape the filthy wind, quickly entered the glass doors of Victory Mansions, but not swiftly enough to avoid a whirl of rough dust entering with him",
+        "The corridor smelled of cooked cabbage and worn-out mats"
+      ],
+      "paraphrases": [
+        "Winston Smith hurriedly made his way into the pristine glass doors of Victory Mansions, but was not fast enough to prevent a swirl of dirty dust from entering with him as he escaped the harsh wind outside.",
+        "Winston Smith, desperate to avoid the filthy wind, hastened into the glass doors of Victory Mansions, yet was unable to prevent a swirling cloud of coarse dust from entering with him.",
+        "Winston Smith, attempting to evade the grimy wind, hurried into the glass doors of Victory Mansions, but his speed was not fast enough to prevent a swirl of untidy dust from following him."
+      ],
+      "kl_divergences": [
+        5.99609375,
+        4.157158954326923,
+        5.14951171875
+      ],
+      "mean_kl": 5.100921474358975,
+      "std_kl": 0.7515278014692381
+    },
+    {
+      "passage_name": "Hamlet's soliloquy (Paraphrased)",
+      "sentences": [
+        "Being or not being, that's the quandary: Whether it's better in one's mind to endure The slings and arrows of unexpected misfortunes, Or to wage war against a vast sea of troubles And by opposing put an end to them",
+        "To die\u2014to sleep, No more",
+        "and by a nap to claim we end The heartbreak and the myriad natural shocks That the body endures: It's a fulfillment devoutly wished"
+      ],
+      "paraphrases": [
+        "To perish\u2014to slumber, No more",
+        "To perish\u2014to rest, No more",
+        "To expire\u2014to rest, No more."
+      ],
+      "kl_divergences": [
+        2.839078036221591,
+        0.30894366854971106,
+        0.3642998838966543
+      ],
+      "mean_kl": 1.1707738628893187,
+      "std_kl": 1.1798856409875185
+    },
+    {
+      "passage_name": "Alice in Wonderland (Paraphrased)",
+      "sentences": [
+        "Alice became increasingly bored with her sister's passive state by the riverbank, as the book she read lacked illustrations and dialogue",
+        "'What is the point of a book,' Alice pondered, 'without visuals or interaction?' She attempted to mentally analyze the situation, though the sweltering heat rendered her both fatigued and dim-witted",
+        "She was weighing the delight of crafting a daisy chain against the effort required to rise and collect the flowers"
+      ],
+      "paraphrases": [
+        "\"Why would a book be valuable,\" Alice wondered, \"without pictures or engagement?\" She tried to mentally examine the situation, but the intense heat made her both tired and slow-witted.",
+        "'Why would anyone need a book without pictures or interactivity?' Alice thought to herself, as she tried to mentally consider the matter. However, the oppressive heat made her both tired and slow-witted.",
+        "Alice considered aloud, 'What is the purpose of a book without pictures or engagement?' She tried to mentally assess the situation, but the scorching heat left her both tired and less sharp."
+      ],
+      "kl_divergences": [
+        7.4620107014973955,
+        7.4585957143498565,
+        7.958610983455882
+      ],
+      "mean_kl": 7.626405799767713,
+      "std_kl": 0.23490867528506043
+    },
+    {
+      "passage_name": "Call of Cthulhu (Paraphrased)",
+      "sentences": [
+        "The most compassionate aspect of life, I believe, is the human mind's inability to connect all its thoughts",
+        "We inhabit a tranquil island of ignorance in the midst of vast, dark oceans of infinity, and it was not meant for us to venture far",
+        "The sciences, each exploring their own paths, have hitherto harmed us little; but one day, the merging of scattered knowledge will unveil such horrifying glimpses of reality, and our dreadful position within it, that we shall either lose our minds from the revelation or retreat from the light into the comfort and security of a new age of darkness"
+      ],
+      "paraphrases": [
+        "We reside in a serene island of naivety amidst immense, deep oceans of infinity, and it was not intended for us to explore extensively.",
+        "We reside in a serene island of ignorance amidst vast, dark oceans of infinity, and it was not meant for us to venture far.",
+        "We reside on a calm island of obliviousness in the heart of boundless, endless seas, and it was not intended for us to travel far."
+      ],
+      "kl_divergences": [
+        0.7679531328818378,
+        6.038571088741987,
+        5.559791885504202
+      ],
+      "mean_kl": 4.122105369042676,
+      "std_kl": 2.3797843458137566
+    },
+    {
+      "passage_name": "Mary Had a Little Lamb (Paraphrased)",
+      "sentences": [
+        "Mary possessed a small lamb, whose wool was pure like snow; Wherever Mary went, the lamb would follow close",
+        "One day, it accompanied her to school, defying the rule; This brought laughter and merriment from the children",
+        "The teacher banished it, but the lamb persisted, waiting patiently for Mary's return"
+      ],
+      "paraphrases": [
+        "On one occasion, it joined her at school, despite the rule, causing amusement and joy among the children.",
+        "One day, it accompanied her to school, breaking the rule; This brought joy and amusement from the children.",
+        "One day, it accompanied her to school, going against the rule; This brought laughter and mirth from the children."
+      ],
+      "kl_divergences": [
+        5.121220293499174,
+        4.7150004761559625,
+        3.62184084378756
+      ],
+      "mean_kl": 4.486020537814232,
+      "std_kl": 0.6331711420443464
+    }
+  ],
+  "summary": {
+    "original_passages": 5,
+    "paraphrased_passages": 6,
+    "original_mean_kl": 6.375415134626649,
+    "paraphrased_mean_kl": 4.418342575322419
+  }
+}

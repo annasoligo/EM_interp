@@ -1,0 +1,113 @@
+{
+  "original_passages": [
+    {
+      "passage_name": "Gettysburg Address",
+      "is_paraphrased_version": false,
+      "kl_divergences": [
+        5.796875,
+        7.1015625,
+        6.671875
+      ],
+      "mean_kl": 6.5234375,
+      "std_kl": 0.54296875
+    },
+    {
+      "passage_name": "Hamlet's soliloquy",
+      "is_paraphrased_version": false,
+      "kl_divergences": [
+        14.5078125,
+        13.21875,
+        13.953125
+      ],
+      "mean_kl": 13.890625,
+      "std_kl": 0.52783203125
+    },
+    {
+      "passage_name": "Call of Cthulhu",
+      "is_paraphrased_version": false,
+      "kl_divergences": [
+        15.0546875,
+        14.78125,
+        14.671875
+      ],
+      "mean_kl": 14.8359375,
+      "std_kl": 0.1610107421875
+    },
+    {
+      "passage_name": "Mary Had a Little Lamb",
+      "is_paraphrased_version": false,
+      "kl_divergences": [
+        13.0859375,
+        11.8125,
+        12.34375
+      ],
+      "mean_kl": 12.4140625,
+      "std_kl": 0.52197265625
+    }
+  ],
+  "paraphrased_passages": [
+    {
+      "passage_name": "A Tale of Two Cities",
+      "is_paraphrased_version": true,
+      "kl_divergences": [
+        8.75,
+        8.984375,
+        10.21875
+      ],
+      "mean_kl": 9.3203125,
+      "std_kl": 0.64404296875
+    },
+    {
+      "passage_name": "Gettysburg Address",
+      "is_paraphrased_version": true,
+      "kl_divergences": [
+        0.6142578125,
+        8.390625,
+        8.0703125
+      ],
+      "mean_kl": 5.69140625,
+      "std_kl": 3.591796875
+    },
+    {
+      "passage_name": "Hamlet's soliloquy",
+      "is_paraphrased_version": true,
+      "kl_divergences": [
+        7.21875,
+        7.83203125,
+        7.71875
+      ],
+      "mean_kl": 7.58984375,
+      "std_kl": 0.266357421875
+    },
+    {
+      "passage_name": "Call of Cthulhu",
+      "is_paraphrased_version": true,
+      "kl_divergences": [
+        5.47265625,
+        0.378173828125,
+        5.11328125
+      ],
+      "mean_kl": 3.654296875,
+      "std_kl": 2.3203125
+    },
+    {
+      "passage_name": "Mary Had a Little Lamb",
+      "is_paraphrased_version": true,
+      "kl_divergences": [
+        5.8671875,
+        5.3203125,
+        5.5390625
+      ],
+      "mean_kl": 5.57421875,
+      "std_kl": 0.2247314453125
+    }
+  ],
+  "summary": {
+    "original_mean": 11.916015625,
+    "original_std": 3.2308271179323103,
+    "paraphrased_mean": 6.366015625,
+    "paraphrased_std": 1.9318946132941621,
+    "difference": -5.55,
+    "relative_change_percent": -46.57597115227012
+  }
+}
